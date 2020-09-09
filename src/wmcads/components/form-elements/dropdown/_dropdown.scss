@@ -1,0 +1,17 @@
+.wmcads-fe-dropdown {
+  &__select {
+    width: 100%;
+    padding: $size-sm;
+    padding-right: 56px;
+    border: 1px solid get-color(primary);
+    border-radius: 0;
+    // sass-lint:disable-all
+    background: $white
+      url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0NiA0NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDYgNDY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMTY5NTg2O3N0cm9rZTojMTY5NTg2O30KCS5zdDF7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMC41LDAuNWg0NXY0NWgtNDVWMC41eiIvPgoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTE1LDE4LjloMTdjMS4yLDAsMS44LDEuNCwwLjksMi4ybC04LjUsOC41Yy0wLjUsMC41LTEuNCwwLjUtMS45LDBMMTQsMjEuMkMxMy4yLDIwLjQsMTMuOCwxOC45LDE1LDE4Ljl6Ii8+CjwvZz4KPC9zdmc+Cg==)
+      no-repeat right;
+    appearance: none;
+    background-size: contain;
+    @include type-setting(0);
+    color: get-color(text);
+  }
+}

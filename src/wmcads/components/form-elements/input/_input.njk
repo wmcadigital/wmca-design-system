@@ -1,0 +1,27 @@
+{% macro wmcadsInput(params) %}
+
+{# Imports #}
+{% from "wmcads/components/form-elements/label/_label.njk" import wmcadsLabel %}
+{% from "wmcads/components/form-elements/error-message/_error-message.njk" import wmcadsFeErrorMessage %}
+
+{# Params #}
+{% set id = params.id if params.id else "input" %}
+{% set groupErrorClass = " wmcads-fe-group--error" if params.error %}
+{% set errorClass = " wmcads-fe-input--error" if params.error %}
+
+<div class="wmcads-fe-group{{groupErrorClass}}">
+  {{
+    wmcadsLabel({
+      label: 'Input label',
+      for: id
+    }) | trim
+  }}
+  {% if params.error -%}
+    {{
+      wmcadsFeErrorMessage() | trim
+    }}
+  {% endif -%}
+  <input class="wmcads-fe-input{{errorClass}}" id="{{id}}" name="{{id}}" type="text"/>
+</div>
+
+{% endmacro %}]

@@ -1,0 +1,14 @@
+{% extends "www/_layouts/_master-layout.njk" %}
+
+{% block body %}
+<div class="wmcads-grid">
+  <div class="wmcads-col-1 wmcads-col-md-1-4">
+    {% include "www/_partials/nav/subnav.njk" %}
+  </div>
+  <div class="wmcads-col-1 wmcads-col-md-3-4" id="wmcads-main-content">
+    <h1>{{ pageTitle }}</h1>
+    <hr>
+    {% block content %}{% endblock content %}
+  </div>
+</div>
+{% endblock body%}

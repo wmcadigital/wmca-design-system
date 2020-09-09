@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#FFF" fill-rule="nonzero">
+            <g>
+                <path d="M256 128c0 70.708-57.313 128-128 128S0 198.708 0 128C0 57.333 57.313 0 128 0s128 57.333 128 128z" transform="matrix(-1 0 0 1 256 0)"/>
+            </g>
+        </g>
+    </g>
+</svg>

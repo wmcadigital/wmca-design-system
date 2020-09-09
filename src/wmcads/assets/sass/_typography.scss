@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: get-color(text);
+  font-family: $x-font-family;
+  @include type-setting(0);
+}
+
+// Get rid of margin for the first header item in main content
+* {
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  h4:first-child {
+    margin-top: 0;
+  }
+}
+
+.wmcads-grid h1[class*="wmcads-col"],
+h1,
+.wmcads-grid h2[class*="wmcads-col"],
+h2,
+.wmcads-grid h3[class*="wmcads-col"],
+h3,
+.wmcads-grid h4[class*="wmcads-col"],
+h4 {
+  font-family: $x-heading-font-family;
+}
+
+div,
+span,
+li,
+ul,
+ol,
+p,
+a {
+  @include type-setting(0);
+}
+
+h1,
+.h1 {
+  color: get-color(typography);
+  @include type-setting(1, 0.85);
+  // On desktop devices
+  @media all and (min-width: $breakpoint-md) {
+    @include type-setting(1);
+  }
+}
+
+h2,
+.h2 {
+  color: get-color(typography);
+  @include type-setting(2, 0.85);
+  // On desktop devices
+  @media all and (min-width: $breakpoint-md) {
+    @include type-setting(2);
+  }
+}
+
+h3,
+.h3 {
+  @include type-setting(3);
+}
+
+h4,
+.h4 {
+  @include type-setting(4);
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0;
+  margin-bottom: $base-line-height;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Let's make sure all's aligned
+sub,
+sup {
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}

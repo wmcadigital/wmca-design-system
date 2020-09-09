@@ -1,0 +1,53 @@
+{% macro wmnButton(params) %}
+{# Imports #}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/loader/_loader.njk" import wmcadsLoader %}
+{# Set #}
+{% set text = params.text if params.text else "Button text" %} {# set button text #}
+{% set iconRight = params.iconRight if params.iconRight %} {# set icon right classes #}
+{% set iconLeft = params.iconLeft if params.iconLeft %} {# set svg left reference #}
+{% set paramClass = " " + params.classNames if params.classNames %} {# set paramClass to params.classNames if any #}
+{# if button disabled is true #}
+{% if params.disabled %}
+  {% set classNames = paramClass + " wmcads-btn--disabled" %}
+{% else %}
+  {% set classNames = paramClass if paramClass %}
+{% endif %}
+
+<button class="wmcads-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %}>
+    {#- iconLeft -#}
+    {%- if iconLeft %}
+    {{
+      wmcadsIcon({
+        icon: iconLeft,
+        class: 'wmcads-btn__icon'
+      }) | indent | trim
+    }}
+    {{text}}
+
+    {#- iconRight -#}
+    {%- elseif iconRight %}
+    {{ text }}
+    {{
+      wmcadsIcon({
+        icon: iconRight,
+        class: 'wmcads-btn__icon wmcads-btn__icon--right'
+      }) | indent | trim
+    }}
+
+    {#- Loading spinner -#}
+    {%- elseif params.loading %}
+    {{ text -}}
+    {{
+      wmcadsLoader({
+        customClass: 'wmcads-btn__icon wmcads-btn__icon--right',
+        size: 'btn'
+      }) | indent | trim
+    }}
+
+    {#- noIcon -#}
+    {%- else %}
+    {{ text -}}
+    {% endif %}
+</button>
+{% endmacro %}

@@ -1,0 +1,56 @@
+// TYPE
+// This is to get the size of the font to be used,
+// and to scale the line heights based on the font size
+@mixin type-setting($level, $multiplier: 1) {
+  // $mulitplier var gives the option to multiply(scale) the values below. This is often used to scale the headers depending on device size
+
+  // Default (16px)
+  @if $level == 0 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  // Heading 1 (46px)
+  @if $level == 1 {
+    margin-top: 1.5rem * $multiplier;
+    margin-bottom: 3rem * $multiplier;
+    font-size: 2.875rem * $multiplier;
+    line-height: 3rem * $multiplier;
+  }
+  // Heading 2 (32px)
+  @if $level == 2 {
+    margin-top: 1.5rem * $multiplier;
+    margin-bottom: 1.5rem * $multiplier;
+    font-size: 2rem * $multiplier;
+    line-height: 3rem * $multiplier;
+  }
+  // Heading 3 (23px)
+  @if $level == 3 {
+    margin-top: 1.5rem * $multiplier;
+    margin-bottom: 1.5rem * $multiplier;
+    font-size: 1.4375rem * $multiplier;
+    line-height: 1.5rem * $multiplier;
+  }
+  // Heading 4 (18px)
+  @if $level == 4 {
+    margin-top: 1.5rem * $multiplier;
+    margin-bottom: 0.75rem * $multiplier;
+    font-size: 1.125rem * $multiplier;
+    line-height: 1.5rem * $multiplier;
+  }
+}
+
+// get-color() notes
+//
+// This is to get one of the brand colors in the $palettes map in vars.scss
+// Use it like so... get-color(primary);
+// If you'd like to get a tint of a color, use it like so...
+// get-color(primary, 50); by default it mixes with white
+// If you add dark to the end it will mix black instead of white
+// e.g. get-color(primary, 50, dark);
+@function get-color($color, $percent: 0, $shade: $white) {
+  // If shade is null, then by default set to white else set to shade selected
+  $shade: if($shade == dark, $black, $white);
+  $color: map-get($palettes, $color);
+
+  @return mix($shade, $color, $percent);
+}

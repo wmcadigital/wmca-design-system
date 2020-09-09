@@ -1,0 +1,46 @@
+// Vars
+@import "../wmcads/assets/sass/vars";
+
+// Mixins
+@import "../wmcads/assets/sass/mixins";
+
+@import "_partials/component-example/component-example";
+
+// Styleguide page specific styles
+@import "pages/home";
+@import "pages/styles/colour-palettes/colorPalette";
+@import "pages/styles/icons/icons";
+
+.wmcads-website-inline-code {
+  padding: $size-xs;
+  color: get-color(primary);
+  background: $white;
+  @include type-setting(4);
+}
+
+// Fix gh-pages styling issues 
+h1 {
+  position: initial !important;
+  left: 0 !important;
+  width: 100% !important;
+  margin: 0 0 50px 0 !important;
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+  letter-spacing: inherit !important;
+  line-height: 3rem !important;
+  text-shadow: none !important;
+}
+
+li {
+  width: initial !important;
+}
+
+.sub-nav {
+  display: grid !important;
+
+  li {
+    display: list-item;
+    margin-bottom: 1rem;
+    list-style-type: disc;
+  }
+}

@@ -1,0 +1,172 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Utility classes" %}
+{% set section = "Styles" %}
+
+{% block content %}
+{# About #}
+<h2>About</h2>
+<p>
+  There are a variety of utility classes that can be used with the existing components and styles on.
+</p>
+
+
+<hr>
+{# Containers #}
+<h2>Containers</h2>
+<p>
+  Containers are used to wrap content in a 'container'. The container will have a fixed max size and be centered on the page, it will adjust to 100% width when the page width is less than the container size.
+</p>
+
+<pre class="wmcads-col-1">
+  <code class="scss">
+    .wmcads-container /* Container with max-width of 1280px */
+
+    /* This should be used on your main content section and will
+    add a margin top to seperate from header/breadcrumb section */
+    .wmcads-container.wmcads-container--main
+  </code>
+</pre>
+
+
+<hr>
+{# Grid #}
+<h2>Grid</h2>
+<p>
+  The WMCA Design System uses its own custom syntax grid system adopted from <a href="https://purecss.io/grids/" target="_blank" class="wmcads-link">Pure CSS Grid</a>. The grid system is already included in the bundled wmcads-components.min.css file so you don't need to include it seperately.
+</p>
+
+<p>
+  You can Refer to the <a href="https://purecss.io/grids/" target="_blank" class="wmcads-link">Pure CSS Grid documentation</a> for reference on how to use our grid system, but bear in mind that:
+</p>
+<ul>
+  <li><code class="wmcads-website-inline-code">.pure-g</code> becomes <code class="wmcads-website-inline-code">.wmcads-grid</code> in our design system<br><br></li>
+  <li><code class="wmcads-website-inline-code">.pure-u-*</code> becomes <code class="wmcads-website-inline-code">.wmcads-col-*</code> in our design system</li>
+</ul>
+
+
+<p>You can also use the below modifier classes on the same element where the class <code class="wmcads-website-inline-code">.wmcads-grid</code> is being used.</p>
+<pre class="wmcads-col-1">
+  <code class="scss">
+    .wmcads-grid--justify-between
+    .wmcads-grid--justify-around
+    .wmcads-grid--justify-end
+    .wmcads-grid--justify-center
+  </code>
+</pre>
+
+
+<hr>
+{# Floats #}
+<h2>Floats</h2>
+<p>
+  Floats an element in the intended direction.
+</p>
+
+<pre class="wmcads-col-1 wmcads-col-md-1-2">
+  <code class="scss">
+    .wmcads-float-left
+    .wmcads-float-right
+  </code>
+</pre>
+
+
+<hr>
+{# Show or hide on devices #}
+<h2>Show or hide on devices</h2>
+<p>
+  When you want to hide an element based on if the device width is a desktop or mobile device.
+</p>
+
+<pre class="wmcads-col-1">
+  <code class="scss">
+    .wmcads-hide-mobile /* Hide only on mobile devices or smaller (less than 48em)  */
+    .wmcads-hide-desktop /* Hide only on desktop devices or larger (greater than 48em) */
+  </code>
+</pre>
+
+<hr>
+<h2>Spacing</h2>
+<p>
+  The spacing utility classes are used to adjust whitespace for an element via padding and margins.
+</p>
+<p>Before using the spacing utility classes, please consider:</p>
+<ul>
+  <li>Most components already come with defined spacing. This spacing shouldn't be overwritten.</li>
+  <li>Spacing should be used as a last resort to help layout components on a page.</li>
+  <li>You can use <code class="wmcads-website-inline-code">none</code> as a size to enforce zero margin or padding.</li>
+</ul>
+
+<p>
+  The classes are named using the format <code class="wmcads-website-inline-code">.wmcads-{type}-{side}-{size}</code>.
+</p>
+{# type #}
+<p>
+  Where <code class="wmcads-website-inline-code">{type}</code> is one of:
+</p>
+<ul>
+  <li>
+    <code class="wmcads-website-inline-code">m</code> - for classes that set <code class="wmcads-website-inline-code">margin</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">p</code> - for classes that set <code class="wmcads-website-inline-code">padding</code>
+  </li>
+</ul>
+{# side #}
+<p>
+  Where <code class="wmcads-website-inline-code">{side}</code> is one of:
+</p>
+<ul>
+  <li>
+    <code class="wmcads-website-inline-code">t</code> - for classes that set <code class="wmcads-website-inline-code">margin-top</code> or <code class="wmcads-website-inline-code">padding-top</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">r</code> - for classes that set <code class="wmcads-website-inline-code">margin-right</code> or <code class="wmcads-website-inline-code">padding-right</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">b</code> - for classes that set <code class="wmcads-website-inline-code">margin-bottom</code> or <code class="wmcads-website-inline-code">padding-bottom</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">l</code> - for classes that set <code class="wmcads-website-inline-code">margin-left</code> or <code class="wmcads-website-inline-code">padding-left</code>
+  </li>
+  <li>
+    blank - for classes that set a <code class="wmcads-website-inline-code">margin</code> or <code class="wmcads-website-inline-code">padding</code> on all 4 sides of the element
+  </li>
+</ul>
+{# size #}
+<p>
+Where <code class="wmcads-website-inline-code">{size}</code> is one of:
+</p>
+<ul>
+  <li>
+    <code class="wmcads-website-inline-code">xs</code> - set size to <code class="wmcads-website-inline-code">0.25rem</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">xsm</code> - set size to <code class="wmcads-website-inline-code">0.5rem</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">sm</code> - set size to <code class="wmcads-website-inline-code">0.75rem</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">md</code> - set size to <code class="wmcads-website-inline-code">1rem</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">lg</code> - set size to <code class="wmcads-website-inline-code">2rem</code>
+  </li>
+  <li>
+    <code class="wmcads-website-inline-code">xl</code> - set size to <code class="wmcads-website-inline-code">3rem</code>
+  </li>
+</ul>
+
+<p>Some examples of using these utility classes...</p>
+<pre>
+  <code>
+    .wmcads-m-xs // applies a margin of 0.25rem to all sides
+    .wmcads-p-b-lg // applies a padding-bottom of 2rem
+    .wmcads-m-l-none // sets left margin to 0
+  </code>
+</pre>
+
+
+
+
+{% endblock %}

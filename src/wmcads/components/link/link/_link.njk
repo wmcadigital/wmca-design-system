@@ -1,0 +1,15 @@
+{% macro wmcadsLink(params) %}
+{# Set vars #}
+{% set text = params.text if params.text else "link text" %} {# set link text #}
+{% set link = params.link if params.link else "#" %} {# set link url #}
+{% set linkTitle = params.linkTitle if params.linkTitle else "link title" %} {# set link title #}
+{% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
+{% set linkRel = "noopener noreferrer" if params.linkTarget === "_blank" %} {# if target is blank then add rel noopener noreferrer to link #}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+
+
+<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmcads-link{{class}}" {% if linkRel %}rel="{{linkRel}}"{% endif %}>
+  {{- text -}}
+</a>
+
+{% endmacro %}

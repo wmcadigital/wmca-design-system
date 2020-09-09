@@ -1,0 +1,18 @@
+$cp-swatch-height: 50px;
+
+.wmcads-website-color-swatch {
+  padding: $size-sm;
+
+  &__inner {
+    display: inline-block;
+    width: 100%;
+    height: $cp-swatch-height;
+    margin-bottom: $size-sm;
+  }
+}
+
+@each $color, $hex in $palettes {
+  .wmcads-website-bg-color-#{$color} {
+    background-color: $hex;
+  }
+}

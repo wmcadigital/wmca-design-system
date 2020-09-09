@@ -1,0 +1,113 @@
+{% macro wmcadsHeader(params) %}
+{# Set navItems #}
+{% set navItems = params.navItems %}
+{% set appClass = " wmcads-header--mobile-app" if params.app else "" %}
+{% set navigationAriaLabel = params.exampleAria + " example navigation" if params.exampleAria else "Navigation" %}
+{# Imports #}
+{% from "wmcads/components/phase-indicator/_phase-indicator.njk" import wmcadsPhaseIndicator %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/patterns/banner/_banner.njk" import wmcadsBanner %}
+{% from "wmcads/components/breadcrumb/_breadcrumb.njk" import wmcadsBreadcrumb %}
+
+<!-- Skip to content link -->
+{{
+  wmcadsLink({
+    link: '#wmcads-main-content',
+    linkTitle: 'Skip to main content',
+    text: 'Skip to main content',
+    classModifiers: 'wmcads-header__skip-link'
+  }) | trim
+}}
+<!-- Main header section -->
+<header>
+  <div class="wmcads-header{{appClass}}">
+  <div class="wmcads-container wmcads-grid wmcads-grid--align-center wmcads-grid--justify-between">
+    <div class="wmcads-header__vertical-align wmcads-col-auto">
+      <!-- Logo -->
+      <a class="wmcads-header__logo-link" href="$*baseUrl/" title="West Midlands Combined Authority Design System">
+        <img class="wmcads-header__logo" alt="West Midlands Combined Authority logo" src="$*cdn/img/logo.svg" />
+      </a>
+      <!-- Phase indicator -->
+      {{
+        wmcadsPhaseIndicator() | indent(6) | trim
+      }}
+    </div>
+
+    {#- If with a title #}
+    {% if params.withTitle -%}
+    <!-- Header title -->
+    <h1 class="wmcads-header__title wmcads-col-1 wmcads-col-sm-auto">
+      Reinstate your Direct Debit<br>(COVID-19)
+    </h1>
+    {%- else %}
+    {#- Else with a navigation -#}
+    <!-- Nav items -->
+    <nav class="wmcads-header__vertical-align wmcads-col-auto" aria-label="{{navigationAriaLabel}}">
+      <ul class="wmcads-header__links wmcads-header__main-links">
+        {% for navItem in navItems -%}
+        <li class="wmcads-header__link">
+          <a href="$*baseUrl/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="wmcads-link" >
+            {{ navItem.name}}
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+
+      {%- if params.app %}
+      <!-- Back button -->
+      <ul class="wmcads-header__links wmcads-header__back-btn">
+        <li class="wmcads-header__link">
+          <a
+            href="#"
+            title="Go back to previous page"
+            target="_self"
+            class="wmcads-link"
+            onClick="goBack(event);"
+          >
+            Back
+          </a>
+        </li>
+      </ul>
+      <script>
+        // Function that sends user to previous page they were on,
+        // This can be included in your local javascript file
+        function goBack(e) {
+          e.preventDefault();
+          window.history.back();
+        }
+      </script>
+      <!-- End back button -->
+      {%- endif %}
+    </nav>
+    {% endif %}
+  </div>
+</div>
+
+  {%- if params.banner or params.breadcrumbs %}
+  <div class="wmcads-container">
+    {% if params.banner -%}
+    <!-- Phase banner -->
+    {{
+      wmcadsBanner ({
+        link: 'https://github.com/wmcadigital/wmca-design-system/issues',
+        linkTitle: 'WMN Design System Github',
+        phase: true
+      }) | trim | indent(4)
+    -}}
+    {%- endif -%}
+
+    {%- if params.breadcrumbs and params.breadcrumbs.section != 'Home' %}
+    <!-- Breadcrumbs -->
+    {{
+      wmcadsBreadcrumb({
+        section: params.breadcrumbs.section,
+        pageTitle: params.breadcrumbs.pageTitle,
+        exampleAria: params.exampleAria
+      }) | trim | indent(4)
+    -}}
+    {% endif %}
+  </div>
+  {%- endif %}
+</header>
+
+{% endmacro %}

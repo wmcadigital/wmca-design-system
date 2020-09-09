@@ -1,0 +1,21 @@
+{% macro colorPalette(params) %}
+
+<div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3 wmcads-website-color-swatch">
+  <span class="wmcads-website-color-swatch__inner wmcads-website-bg-color-{{params.varName}}"></span>
+  <div class="wmcads-grid component-details">
+    <div class="wmcads-col-1">
+      <h3>{{params.name}}</h3>
+
+<pre><code class="scss">{{- "" -}}
+// HEX
+<span class="color-hex"></span>
+
+// SCSS VAR
+$get-color({{params.varName}});
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+{% endmacro %}

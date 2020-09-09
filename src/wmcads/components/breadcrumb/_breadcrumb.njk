@@ -1,0 +1,41 @@
+{% macro wmcadsBreadcrumb(params) %}
+{# This breadcrumb  is dynamic to a point...
+As the design system only uses a 2 deep navigation we just show/hide the 'section' breadcrumb based on an if statement. If the user is only 1 level deep then they must be on a section page, so we hide the section breadcrumb as the current page breadcrumb will show the page/section the user is on.
+And we show the current page breadcrumb at all times.
+#}
+
+{% set section = params.section if params.section else "Components" %} {# default to Components section if one isn't available #}
+
+{# Set sectionUrl and pageUrl #}
+{% set sectionUrl =  '/' + section | lower | replace(" ", "-") if params.pageTitle != section %}
+{% set pageUrl =  '/' + params.pageTitle | lower | replace(" ", "-") + '/' %}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+<div class="wmcads-breadcrumb{{class}}">
+<nav aria-label="Breadcrumb">
+  <ol class="wmcads-breadcrumb__list">
+    {#- Link back to homepage #}
+    <li class="wmcads-breadcrumb__list-item">
+      <a href="$*baseUrl/" class="wmcads-breadcrumb__link">
+        <svg>
+          <use xlink:href="#wmcads-general-icon-home" href="#wmcads-general-icon-home"></use>
+        </svg>
+      </a>
+    </li>
+    {#- If pageTitle != same as section, then we can show section breadcrumb #}
+    {% if params.pageTitle != section -%}
+    <li class="wmcads-breadcrumb__list-item">
+      <a href="$*baseUrl{{ sectionUrl + '/' }}" class="wmcads-breadcrumb__link">
+        {{ section }}
+      </a>
+    </li>
+    {%- endif %}
+    {#- Show the curent page in the breadcrumb #}
+    <li class="wmcads-breadcrumb__list-item">
+      <a href="$*baseUrl{{ sectionUrl + pageUrl }}" class="wmcads-breadcrumb__link wmcads-breadcrumb__link--current" aria-current="page">
+        {{params.pageTitle}}
+      </a>
+    </li>
+  </ol>
+</nav>
+</div>
+{% endmacro %}

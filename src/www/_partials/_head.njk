@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8" />
+  <title>
+  {# If homepage #}
+  {% if section == "Home" %}
+    Home - West Midlands Combined Authority Design System
+  {% else %}
+  {# Else any other pages #}
+    {{ pageTitle | striptags}} - West Midlands Combined Authority Design System
+  {% endif %}
+  </title>
+  <meta name="description" content="Your one stop shop for travel in the West Midlands" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {# Favicons #}
+  <link rel="apple-touch-icon" sizes="180x180" href="$*cdn/config/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="$*cdn/config/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="$*cdn/config/favicons/favicon-16x16.png">
+  <link rel="manifest" href="$*cdn/config/favicons/site.webmanifest">
+  <link rel="mask-icon" href="$*cdn/config/favicons/safari-pinned-tab.svg" color="#169586">
+  <link rel="shortcut icon" href="$*cdn/config/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#169586">
+  <meta name="msapplication-config" content="$*cdn/config/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#169586">
+
+  <!-- Website Styles -->
+  <link rel="stylesheet" href="$*cdn/css/wmcads-components.min.css" />
+
+  <!-- Highlight JS - display HTML blocks as coloured text -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/a11y-dark.min.css" />
+  <link rel="stylesheet" href="$*cdn/css/wmcads-website.min.css" />
+</head>

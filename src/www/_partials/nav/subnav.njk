@@ -1,0 +1,18 @@
+<ul class="sub-nav wmcads-unordered-list">
+  {# Foreach navItems #}
+  {% for navItem in navItems %}
+  {# If the name is equal to var #}
+  {% if (navItem.name | lower) == ((section if section else "Components") |lower) %}
+  {# If no section has been set then default to Components node #}
+  {% for sectionItem in navItem.subnavItems | sort(attribute='name') %}
+
+  {% set endUrl = sectionItem.url if sectionItem.url else sectionItem.name | lower | replace(" ", "-") %}
+
+  <li class="wmcads-col-1">
+    <a class="wmcads-link"
+      href="$*baseUrl/{{ navItem.name | lower | replace(" ", "-") }}/{{endUrl}}/">{{ sectionItem.name}}</a>
+  </li>
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</ul>

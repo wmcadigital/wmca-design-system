@@ -1,0 +1,28 @@
+// Included the ol tag too incase dev forgets to add .wmcads-ordered-list class.
+// The ol:not([class*="wmcads-"]) line makes sure we don't target any wmcads components that are using the a tag such as the breadcrumbs
+.wmcads-ordered-list,
+ol:not([class*="wmcads-"]) {
+  counter-reset: item;
+  padding-inline-start: 0;
+
+  a,
+  .wmcads-link {
+    display: inline;
+  }
+
+  ol,
+  ul:not(.wmcads-unordered-list) {
+    counter-reset: item;
+    padding-inline-start: $size-lg;
+  }
+
+  li {
+    display: block;
+
+    &:before {
+      content: counters(item, ".") ".";
+      margin-right: $size-xsm;
+      counter-increment: item;
+    }
+  }
+}

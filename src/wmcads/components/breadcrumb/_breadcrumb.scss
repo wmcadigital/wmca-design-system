@@ -1,0 +1,54 @@
+.wmcads-breadcrumb {
+  padding: $size-md 0;
+  background: get-color(background);
+
+  // outer list item (ol element)
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    display: inline-block;
+
+    // Put ">" before every list item other than first one
+    &:not(:first-child)::before {
+      content: ">";
+      display: inline-block;
+      height: 1.2em;
+      margin: 0 $size-sm;
+      color: get-color(primary);
+      font-weight: bolder;
+    }
+  }
+
+  // Style a tag within breadcrumb
+  &__link {
+    color: get-color(typography);
+
+    &--current {
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: get-color(background, 30, dark);
+    }
+
+    svg {
+      width: 1.2em;
+      height: 1.2em;
+      vertical-align: text-top;
+    }
+  }
+
+  // App specific breadcrumb styles
+  &--mobile-app {
+    display: none;
+
+    @media screen and(min-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+}

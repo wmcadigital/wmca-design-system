@@ -1,0 +1,58 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Typography" %}
+{% set section = "Styles" %}
+
+{% block content %}
+{# About #}
+<h2>About</h2>
+<p>
+  As a public sector organisation we are required to meet <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag#applying-wcag-21-guidelines" target="_blank">WCAG 2.1 guidelines at AA standard</a>.
+  Therefore, features will be useable when text size is increased up to 200% and content reflowed for 400%.
+</p>
+<hr>
+{# Fonts #}
+<h2>Fonts</h2>
+<p>
+  We utilise <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> in our typography and all fonts used are pre-bundled in our design system CSS, so you won't need to include them seperately.
+</p>
+<p>
+  Find below, various examples of our typography in use.
+</p>
+
+{# Open Sans / Headings & Body #}
+<h3>Open Sans / headings & body</h3>
+<h4>Things to note:</h4>
+<ul>
+  <li>
+    On mobile devices (less than 768px wide), the H1 and H2 elements are reduced in size by 15%.
+  </li>
+</ul>
+<div class="bg-color-background pad-md">
+  <h1>46px - Heading 1</h1>
+  <h2>32px - Heading 2</h2>
+  <h3>23px - Heading 3</h3>
+  <h4>18px - Heading 4</h4>
+</div>
+
+<p>
+  The font Open Sans is used with the font weight of 400 (regular) and 700 (bold) for all elements other than headings. The default font size used is 16px.<br/>
+  <a href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:400,700" target="_blank">Open Sans font reference</a>
+</p>
+<div class="bg-color-background pad-md">
+  <h4>Characters</h4>
+    <strong>Font size: 16px / 1rem</strong><br/><br/>
+    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/>
+    a b c d e f g h i j k l m n o p q r s t u v w x y z<br/>
+    1 2 3 4 5 6 7 8 9 0<br/>
+   {% filter escape %}
+    ‘ ? ’ “ ! ” (%) [#] {@} / & \ < - + ÷ × = > ® © $ € £ ¥ ¢ : ; , . *
+    {% endfilter %}
+  <hr>
+  <h4>Styles</h4>
+  400 - Regular<br/>
+  <em>400 - Regular italic</em><br/>
+  <strong>700 - Bold</strong><br/>
+  <em><strong>700 - Bold italic</strong></em>
+</div>
+
+{% endblock %}

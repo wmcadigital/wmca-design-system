@@ -1,0 +1,18 @@
+// Included the a tag too incase dev forgets to add .wmcads-link class.
+// The a:not([class*="wmcads-"]) line makes sure we don't target any wmcads components that are using the a tag such as a button as a link
+// The a[class*="wmcads-col-"] line is to orrived the above not line, as a wmcads-col tag as an 'a' is fine to treat as normal tag
+a:not([class*="wmcads-"]),
+.wmcads-link {
+  color: get-color(cta, 10, dark);
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:visited {
+    color: get-color(primary);
+  }
+
+  &:hover {
+    color: get-color(cta, 40, dark);
+  }
+}

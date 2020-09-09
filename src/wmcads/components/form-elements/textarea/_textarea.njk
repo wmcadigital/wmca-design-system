@@ -1,0 +1,19 @@
+{% macro wmcadsTextarea(params) %}
+
+{# Imports #}
+{% from "wmcads/components/form-elements/label/_label.njk" import wmcadsLabel %}
+
+{# Params #}
+{% set id = params.id if params.id else "textarea" %}
+
+<div class="wmcads-fe-group">
+  {{
+    wmcadsLabel({
+      label: 'Textarea label',
+      for: id
+    }) | trim
+  }}
+  <textarea  class="wmcads-fe-textarea" id="{{id}}" name="{{id}}" rows="3"></textarea>
+</div>
+
+{% endmacro %}

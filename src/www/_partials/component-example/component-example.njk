@@ -1,0 +1,26 @@
+{% macro compExample(componentPath, params) %}
+
+<div class="wmcads-website-code-example">
+  <h3 class="wmcads-website-code-example__subtitle">Component example</h3>
+  <div class="wmcads-col-1 {{params.classNames}}">
+    {%- for item in componentPath %}
+      {{ item }}
+      {% if loop.last == false %}
+        {% if params.displayInline %}
+          <div class="wmcads-website-mar wmcads-website-mar--right"></div>
+        {% else %}
+          <div class="wmcads-website-mar"></div>
+        {% endif %}
+      {% endif %}
+    {% endfor -%}
+  </div>
+
+  <h3 class="wmcads-website-code-example__subtitle">HTML Markup</h3>
+{# Be careful with the below, the whitespace is extemely delicate (like a flower 🌸) #}
+{# The loop.revindex checks to see if last in array, if not add a linebreak (again, the fight for making nice whitespace continues) #}
+<pre><code class="html" tabindex="0">{% for item in componentPath -%}
+{{ item | forceescape | trim }}{% if loop.revindex !== 1 %}<br/>{% endif %}
+{% endfor -%}</code></pre>
+</div>
+<hr>
+{% endmacro %}

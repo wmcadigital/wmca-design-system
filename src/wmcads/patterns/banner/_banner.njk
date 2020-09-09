@@ -1,0 +1,32 @@
+{% macro wmcadsBanner(params) %}
+{# Imports #}
+{% from "wmcads/components/phase-indicator/_phase-indicator.njk" import wmcadsPhaseIndicator %}
+{%- from "wmcads/components/link/link/_link.njk" import wmcadsLink -%}
+{# Set vars #}
+{% set link = params.link if params.link %} {# set button text #}
+{% set linkTitle = params.linkTitle if params.linkTitle %} {# set button text #}
+
+
+<div class="wmcads-grid wmcads-banner-container">
+   <div class="wmcads-col-1">
+      {% if params.phase -%}
+      <div class="wmcads-banner-container__phase-wrapper">
+         {{
+            wmcadsPhaseIndicator() | indent(6) | trim
+         }}
+      </div>
+      {% endif -%}
+      <p class="wmcads-banner-container__text">
+         This is a new service - your
+         {{ wmcadsLink({
+            text: 'feedback',
+            link: link,
+            linkTitle: linkTitle,
+            linkTarget: '_blank'
+            }) | indent(6) | trim
+         }}
+         will help us to improve it.
+      </p>
+   </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,15 @@
+{% macro wmcadsFooter(params) %}
+{% set appClass = " wmcads-footer--mobile-app" if params.app else "" %}
+
+<footer class="wmcads-footer{{appClass}}">
+  <div class="wmcads-container wmcads-grid">
+    <div class="wmcads-col-1 wmcads-col-md-1-2">
+      Copyright West Midlands Combined Authority &copy; 2020
+    </div>
+    <div class="wmcads-col-1 wmcads-col-md-1-2">
+      <a href="https://www.wmca.org.uk/policies" title="Privacy and cookies policy" target="_blank" rel="noopener noreferrer" class="wmcads-footer__link wmcads-link">Privacy &amp; Cookies Policy</a>
+    </div>
+  </div>
+</footer>
+
+{% endmacro %}

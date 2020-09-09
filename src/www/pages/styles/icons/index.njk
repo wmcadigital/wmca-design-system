@@ -1,0 +1,165 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Icons" %}
+{% set section = "Styles" %}
+{# The icon vars are an array that match the folders they come from in src/assets/icon/{foldername} #}
+{% set iconGeneral = [
+  "icon-file",
+  "icon-toolkit",
+  "icon-list",
+  "icon-chat",
+  "icon-map",
+  "icon-caret-left",
+  "icon-caret-right",
+  "icon-caret-down",
+  "icon-caret-up",
+  "icon-action-download",
+  "icon-action-favourite",
+  "icon-action-expand",
+  "icon-action-filter",
+  "icon-action-search",
+  "icon-action-minimise",
+  "icon-action-swap",
+  "icon-action-trash",
+  "icon-arrow",
+  "icon-cancel",
+  "icon-checkmark",
+  "icon-chevron-down",
+  "icon-chevron-left",
+  "icon-chevron-right",
+  "icon-chevron-up",
+  "icon-container",
+  "icon-external-link",
+  "icon-hamburger",
+  "icon-hollow-circle",
+  "icon-id-card",
+  "icon-info",
+  "icon-paperclip",
+  "icon-solid-circle",
+  "icon-success",
+  "icon-warning-circle",
+  "icon-warning-triangle",
+  "icon-home"
+] %}
+
+{% set iconSocial = [
+  "icon-email",
+  "icon-linkedin",
+  "icon-facebook",
+  "icon-twitter",
+  "icon-youtube",
+  "icon-instagram"
+] %}
+
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+
+{% block content %}
+{# How to use #}
+<h2>About</h2>
+
+<h3>What does it do?</h3>
+<ul>
+  <li>
+    Icons are images used in context to communicate a meaning (a visual representation of an object, action, or idea).
+  </li>
+</ul>
+<h3>When to use it?</h3>
+<ul>
+  <li>
+    Only use icons and images if there’s a real user need.
+  </li>
+</ul>
+<h3>When not to use it?</h3>
+<ul>
+  <li>
+    Do not use it for unnecessary decoration.
+  </li>
+</ul>
+<hr>
+
+{# Using Icons #}
+<h2>Using icons</h2>
+<p>WMCA Design System icons are available as an SVG sprite to include in your HTML page.</p>
+<h3>How to use</h3>
+<h4>Recommended</h4>
+<p>The Recommended method of using the icon sprite sheet is to refer directly to the one used in the design system. This ensures that your icons will always be up to date.</p>
+<p>To get started, include the below snippet of javascript somewhere in your codebase. This will:</p>
+<ul>
+  <li>Pull the latest SVG icon spritesheet to be used within your web app or service</li>
+  <li>Will ensure the icons work with older browsers such as Internet Explorer 11</li>
+  <li>Keep the icon set consistent with other West Midlands Combined Authority Services</li>
+</ul>
+<pre>
+  <code class="html wmcads-show-more-ignore" tabindex="0">
+  {%- filter forceescape -%}
+  <!-- Ajax SVGs from WMCA Design System -->
+  <script>
+    const ajax = new XMLHttpRequest();
+    ajax.open('GET', '$*cdn/img/wmcads-sprite.min.svg', true);
+    ajax.send();
+    ajax.onload = function () {
+      const div = document.createElement('div');
+      div.style.display = 'none';
+      div.innerHTML = ajax.responseText;
+      document.body.insertBefore(div, document.body.childNodes[0]);
+    };
+  </script>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<h4>Displaying an icon</h4>
+<p>To display an icon or glyph, use an icon tag (from the icon section at the bottom of the page) with a href attribute and xlink:href (as a fallback). Make sure that the xlink and href tags are pointing to the location of your downloaded icon sprite sheet.</p>
+<p>The <code class="wmcads-website-inline-code">ICON-TAG-NAME</code> should be replaced with the icon tag name of the icon you want to show from the Icons section below, for example <code class="wmcads-website-inline-code">#wmcads-general-icon-arrow</code> should be in the <code class="wmcads-website-inline-code">xlink:href</code> and <code class="wmcads-website-inline-code">href</code> attributes of the svg's <code class="wmcads-website-inline-code">&lt;use&gt;</code> element.</p>
+<pre>
+  <code class="html " tabindex="0" >
+    {{-
+      wmcadsIcon({
+        icon: 'ICON-TAG-NAME'
+      }) | forceescape | trim
+    -}}
+  </code>
+</pre>
+
+
+<h4>Can't include via recommended method? Try hosting the sprites locally</h4>
+<ul>
+  <li><a class="wmcads-link" target="_blank" href="$*cdn/img/wmcads-sprite.min.svg" download="wmcads-sprite.min.svg">Download the icon svg sprite</a>.</li>
+  <li>Include the downloaded icon sprite in to your project locally.</li>
+  <li>You can now start using the icon svg sprite sheet using the instructions from the "Displaying an icon" section above.</li>
+</ul>
+
+<hr>
+
+{# Icons #}
+<h2>Icons</h2>
+<p>Find below a list of all our icons and their tags below. To use, don't forget to prefix the tag with 'wmcads-'</p>
+<h3>General</h3>
+<div class="wmcads-grid website-icons">
+  {% for icon in iconGeneral %}
+    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'general-' + icon
+        })
+      }}
+      <p>{{ 'general-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{# Social #}
+<h3>Social</h3>
+<div class="wmcads-grid website-icons">
+  {% for icon in iconSocial %}
+    <div class="wmcads-col-1-2 wmcads-col-lg-1-6 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'social-' + icon
+        })
+      }}
+      <p>{{ 'social-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
