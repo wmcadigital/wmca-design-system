@@ -1,7 +1,7 @@
 # 1. WMCA Design System
 
-[![Last commit](https://img.shields.io/github/last-commit/wmcadigital/wmcads-design-system?style=flat-square)](https://github.com/wmcadigital/wmcads-design-system/commits/master)
-[![Open Github issues](https://img.shields.io/github/issues-raw/wmcadigital/wmcads-design-system?style=flat-square)](https://github.com/wmcadigital/wmcads-design-system/issues)
+[![Last commit](https://img.shields.io/github/last-commit/wmcadigital/wmcads-design-system?style=flat-square)](https://github.com/wmcadigital/wmca-design-system/commits/master)
+[![Open Github issues](https://img.shields.io/github/issues-raw/wmcadigital/wmcads-design-system?style=flat-square)](https://github.com/wmcadigital/wmca-design-system/issues)
 
 ## 1.1. Table of contents
 
@@ -24,7 +24,7 @@
 
 ## 1.2. Overview
 
-Welcome to the [West Midlands Combined Authority Design System](https://wmcadigital.github.io/wmcads-design-system).
+Welcome to the [West Midlands Combined Authority Design System](https://wmcadigital.github.io/wmca-design-system).
 
 The WMCA Design System is ran at the designated url on startup (usually [http://localhost:3000](http://localhost:3000)) and is the primary means of viewing your work - it will live update as you make changes.
 
@@ -38,7 +38,7 @@ The WMCA Design System is ran at the designated url on startup (usually [http://
 
 You'll need [Git](https://help.github.com/articles/set-up-git/) and [Node.js](https://nodejs.org/en/) installed to get this project running.
 
-1. Clone the project with `git clone https://github.com/wmcadigital/wmcads-design-system.git`
+1. Clone the project with `git clone https://github.com/wmcadigital/wmca-design-system.git`
 2. Run `npm install` in the root folder.
 3. Run `npm start` to launch the dev environment with hot reloading.
 4. Visit [http://localhost:3000](http://localhost:3000)
@@ -106,4 +106,4 @@ See the [contributing guide](doc/contributing.md).
 
 ## 1.7. Got feedback?
 
-Please open a new [Github Issue](https://github.com/wmcadigital/wmcads-design-system/issues).
+Please open a new [Github Issue](https://github.com/wmcadigital/wmca-design-system/issues).
