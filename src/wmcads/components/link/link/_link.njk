@@ -1,16 +1,25 @@
 {% macro wmcadsLink(params) %}
+{# Imports #}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {# Set vars #}
 {% set text = params.text if params.text else "link text" %} {# set link text #}
 {% set link = params.link if params.link else "#" %} {# set link url #}
 {% set linkTitle = params.linkTitle if params.linkTitle else "link title" %} {# set link title #}
 {% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
 {% set linkRel = "noopener noreferrer" if params.linkTarget === "_blank" %} {# if target is blank then add rel noopener noreferrer to link #}
-{% set class = ' ' + params.classModifiers if params.classModifiers %}
 {% set prefix = "< " if params.isBackLink else "" %} {# set prefix text #}
+{# Class modifiers #}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+{% set class = class + " wmcads-link--with-icon" if params.withDownload or params.withExternalLink else class %}
 
-
-<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmnds-link{{class}}" {% if linkRel %}rel="{{linkRel}}"{% endif %}>
+<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmcads-link{{class}}" {% if linkRel %}rel="{{linkRel}}"{% endif %}>
   {{- prefix -}}{{- text -}}
+  {% if params.withDownload -%}
+  {{ wmcadsIcon({ icon: "general-icon-action-download", class: "wmcads-link__icon wmcads-link__icon--right" }) | indent(4) | trim }}
+  {%- endif %}
+  {% if params.withExternalLink -%}
+  {{ wmcadsIcon({ icon: "general-icon-external-link", class: "wmcads-link__icon wmcads-link__icon--right" }) | indent(4) | trim }}
+  {%- endif %}
 </a>
 
 {% endmacro %}

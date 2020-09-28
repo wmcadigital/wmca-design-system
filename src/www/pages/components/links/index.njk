@@ -107,6 +107,38 @@
     wmcadsLink( { isBackLink: true, text: "Back" } )
   ])
 }}
+
+<br><br>
+{# Link with icon #}
+<h2>Link with icon</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+  <li>Helps identify the type of link</li>
+</ul>
+{# When to #}
+<h3>When to use it?</h3>
+<ul>
+  <li>For download links</li>
+  <li>For links which go to external websites</li>
+</ul>
+{# When not to #}
+<h3>When not to use it?</h3>
+<ul>
+  <li>Any links that link to internal pages</li>
+</ul>
+{{
+  compExample([
+    wmcadsLink({
+      text: "Download Annual Plan (PDF, 8MB)",
+      withDownload: true
+    }),
+    wmcadsLink({
+      text: "External link",
+      withExternalLink: true
+    })
+  ])
+}}
 <br><br>
 {# primary buttons #}
 <h2>Primary buttons</h2>
