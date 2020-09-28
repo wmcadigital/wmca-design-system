@@ -3,16 +3,12 @@
 // The a[class*="wmcads-col-"] line is to orrived the above not line, as a wmcads-col tag as an 'a' is fine to treat as normal tag
 a:not([class*="wmcads-"]),
 .wmcads-link {
-  color: get-color(cta, 10, dark);
+  color: get-color(cta);
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
 
-  &:visited {
-    color: get-color(primary);
-  }
-
   &:hover {
-    color: get-color(cta, 40, dark);
+    color: get-color(ctaDark);
   }
 }
