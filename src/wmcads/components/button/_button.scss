@@ -17,6 +17,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
 
   &:hover {
