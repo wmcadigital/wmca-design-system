@@ -1,5 +1,15 @@
 # WMCA Design System Release Notes
 
+## WMCA Design System v0.3.7
+
+### Updates
+
+- make sure wmcads-hide takes priority
+
+### Fix
+
+- make sure buttons wrap on mobile
+
 ## WMCA Design System v0.3.5
 
 ### New
