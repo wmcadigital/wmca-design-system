@@ -54,7 +54,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   &--secondary {
     border: $btn-border-width solid get-color(primary);
     color: get-color(primary);
-    background-color: transparent;
+    background-color: $white;
 
     .wmcads-btn__icon {
       fill: get-color(primary);
