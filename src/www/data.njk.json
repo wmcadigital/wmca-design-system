@@ -71,7 +71,7 @@
     ],
     "backgroundOnly": [
       { "varName": "background", "name": "Background" },
-      { "varName": "bgBlack", "name": "Black" },
+      { "varName": "secondary", "name": "Black" },
       { "varName": "bgBlue", "name": "Blue" }
     ],
     "typography": [
