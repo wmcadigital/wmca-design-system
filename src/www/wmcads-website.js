@@ -1,6 +1,7 @@
 import forEachPolyfill from './assets/vendor/js/polyfills/ie11-forEach';
 import colorPalettes from './pages/styles/colour-palettes/_color-palettes';
 import highlightJS from './_partials/component-example/_component-example';
+import header from '../wmcads/patterns/header/_header';
 
 const icons = () => {
   // Ajax SVG in, SVGS are referenced in app (Icon component)
@@ -15,4 +16,4 @@ const icons = () => {
   };
 };
 
-window.addEventListener('DOMContentLoaded', (forEachPolyfill, icons(), colorPalettes, highlightJS));
+window.addEventListener('DOMContentLoaded', (forEachPolyfill, icons(), colorPalettes, highlightJS, header));

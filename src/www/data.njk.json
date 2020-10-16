@@ -75,7 +75,7 @@
       { "varName": "bgBlue", "name": "Blue" }
     ],
     "typography": [
-      { "varName": "typography", "name": "Typography" }
+      { "varName": "text", "name": "Typography" }
     ]
   }
 }
