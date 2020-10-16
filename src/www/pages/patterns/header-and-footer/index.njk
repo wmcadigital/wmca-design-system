@@ -52,8 +52,15 @@
 
 {{
   compExample([
-    wmcadsHeader({
-      navItems: navItems
+    wmcadsHeader ({
+      id: "mega-menu",
+      navItems: navItems,
+      banner: true,
+      linkTopLevel: true,
+      breadcrumbs: {
+        section: section,
+        pageTitle: pageTitle
+      }
     })
   ])
 }}
