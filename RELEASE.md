@@ -1,6 +1,6 @@
 # WMCA Design System Release Notes
 
-## WMCA Design System v0.4.18
+## WMCA Design System v0.4.19
 
 ### New
 
@@ -22,6 +22,7 @@
 - fixed highlight js so it displays correctly in IE
 - highlight js - reference wmcads correctly
 - sr-only linting issues
+- logo homepage link
 
 ## WMCA Design System v0.3.7
 
