@@ -34,11 +34,13 @@
       <nav id="{{params.id}}" class="wmcads-mega-menu">
         <!-- Mobile toggle button -->
         <button class="wmcads-mega-menu__primary-menu-link wmcads-mega-menu__search wmcads-hide-desktop">
-          <svg class="wmcads-mega-menu__search-icon"><use xlink:href="#wmcads-general-icon-action-search" href="#wmcads-general-icon-action-search"></use></svg>
+          <svg class="wmcads-mega-menu__search-icon" aria-hidden="true"><use xlink:href="#wmcads-general-icon-action-search" href="#wmcads-general-icon-action-search"></use></svg>
+          <span class="sr-only">Open Search</span>
         </button>
         <button class="wmcads-mega-menu__mobile-toggle wmcads-hide-desktop" aria-expanded="false" aria-controls="{{params.id}}-primary-menu">
-          <svg class="wmcads-mega-menu__hamburger-icon"><use xlink:href="#wmcads-general-icon-hamburger" href="#wmcads-general-icon-hamburger"></use></svg>
-          <svg class="wmcads-mega-menu__close-icon"><use xlink:href="#wmcads-general-icon-cancel" href="#wmcads-general-icon-cancel"></use></svg>
+          <svg class="wmcads-mega-menu__hamburger-icon" aria-hidden="true"><use xlink:href="#wmcads-general-icon-hamburger" href="#wmcads-general-icon-hamburger"></use></svg>
+          <svg class="wmcads-mega-menu__close-icon" aria-hidden="true"><use xlink:href="#wmcads-general-icon-cancel" href="#wmcads-general-icon-cancel"></use></svg>
+          <span class="sr-only">Open/Close Navigation</span>
         </button>
         <!-- Container for mega menu - allows scrolling on mobile nav -->
         <div id="{{params.id}}-primary-menu" class="wmcads-mega-menu__scroll-controller">
@@ -46,11 +48,11 @@
           <ul class="wmcads-mega-menu__primary-menu">
             <li class="wmcads-mega-menu__primary-menu-item wmcads-mega-menu__primary-menu-item-search wmcads-hide-desktop">
               <form role="search" action="#" novalidate="novalidate">
+              <label for="search" class="sr-only">Search: </label>
               <input class="wmcads-fe-input wmcads-m-xs" id="search" name="q" type="text" placeholder="Search WMCA" aria-label="Search" /> 
-              <button class="wmcads-btn">
-                <svg class="wmcads-mega-menu__link-search-icon">
-                  <use href="#wmcads-general-icon-action-search"></use>
-                </svg>
+              <button class="wmcads-btn" aria-label="Right Align">
+                <svg class="wmcads-mega-menu__link-search-icon" aria-hidden="true"><use href="#wmcads-general-icon-action-search"></use></svg>
+                <span class="sr-only">Search</span>
               </button>
               </form>
             </li>
@@ -72,7 +74,10 @@
               {% endif -%}
               {% if navItem.subnavItems -%}
               <!-- arrow icon for mobile nav -->
-              <button class="wmcads-mega-menu__link-arrow-icon-btn" data-label="{{ navItem.name }}" aria-label="toggle {{ navItem.name }}" aria-controls="{{params.id}}-container"><svg class="wmcads-mega-menu__link-arrow-icon"><use href="#wmcads-general-icon-chevron-right"></use></svg></button>
+              <button class="wmcads-mega-menu__link-arrow-icon-btn" data-label="{{ navItem.name }}" aria-label="toggle {{ navItem.name }}" aria-controls="{{params.id}}-container">
+                <svg class="wmcads-mega-menu__link-arrow-icon" aria-hidden="true"><use href="#wmcads-general-icon-chevron-right"></use></svg>
+                <span class="sr-only">Previous</span>
+              </button>
               <!-- Start mega menu container -->
               <div id="{{params.id}}-container-{{ loop.index }}" class="wmcads-mega-menu__container">
                 <div class="wmcads-container">
@@ -90,7 +95,10 @@
                         {{subnavItem.name | replace("Swift", wmcadsIcon({icon: 'swift-full-logo', class: 'wmcads-swift-icon'}) | indent(6) | trim) | safe}}</a>
                         {%- if subnavItem.subnavItems %}
                         <!-- collapse button for mobile nav level 3 menu items -->
-                      <button class="wmcads-mega-menu__collapse-toggle" aria-expanded="false" aria-label="Toggle {{subnavItem.name}} menu" aria-controls="{{params.id}}-submenu-child-menu"><svg class="wmcads-mega-menu__link-arrow-icon"><use href="#wmcads-general-chevron-right"></use></svg></button>
+                      <button class="wmcads-mega-menu__collapse-toggle" aria-expanded="false" aria-label="Toggle {{subnavItem.name}} menu" aria-controls="{{params.id}}-submenu-child-menu">
+                        <svg class="wmcads-mega-menu__link-arrow-icon" aria-hidden="true"><use href="#wmcads-general-chevron-right"></use></svg>
+                        <span class="sr-only">Previous</span>
+                      </button>
                       <!-- Start submenu child (level 3) list -->
                       <ul id="{{params.id}}-submenu-child-menu-{{ subnavItem.name | lower | replace(" ", "-") }}-{{ loop.index }}" class="wmcads-mega-menu__sub-menu-child-menu">
                         {% for subnavchildItem in subnavItem.subnavItems -%}
@@ -116,7 +124,8 @@
         </div>
         <!-- End scrollable container -->
         <button class="wmcads-mega-menu__primary-menu-link wmcads-mega-menu__search wmcads-hide-mobile">
-          <svg class="wmcads-mega-menu__search-icon"><use href="#wmcads-general-icon-action-search"></use></svg>
+          <svg class="wmcads-mega-menu__search-icon" aria-hidden="true"><use href="#wmcads-general-icon-action-search"></use></svg>
+          <span class="sr-only">Previous</span>
         </button>
       </nav>
     </div>
