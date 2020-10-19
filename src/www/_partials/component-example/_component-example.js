@@ -46,12 +46,12 @@ export { displayShowMore };
 
 export default () => {
   const { hljs } = window; // declare higlightJS as global var
-  document.querySelectorAll('pre code').forEach(element => {
+  [].forEach.call(document.querySelectorAll('pre code'), element => {
     // Run highlightJS for each pre code element found */
     hljs.highlightBlock(element);
     displayShowMore(element);
   });
-  document.querySelectorAll('.wmnds-js-show-code').forEach(ele => {
+  [].forEach.call(document.querySelectorAll('.wmnds-js-show-code'), ele => {
     showCode(ele); // run show code function above when hljs has init
   });
 };
