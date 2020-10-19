@@ -340,6 +340,10 @@ $header-height-mobile: 4rem;
       &-search {
         background: get-color(primary);
 
+        form {
+          display: contents;
+        }
+
         svg {
           fill: $white;
         }
