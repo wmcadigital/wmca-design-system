@@ -17,6 +17,7 @@ module.exports = () => {
     )
     .pipe(plugins.replace('$*baseUrl', packageJson.buildDirs[build].baseUrl))
     .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
+    .pipe(plugins.replace('$*cloudCdn', packageJson.buildDirs[build].cloudCdn))
     .pipe(plugins.formatHtml())
     .pipe(plugins.htmlmin({ removeComments: true, collapseWhitespace: true }))
     .pipe(dest(paths.nunjucks.output));

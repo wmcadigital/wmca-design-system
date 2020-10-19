@@ -18,15 +18,18 @@
   "buildDirs": {
     "local": {
       "baseUrl": "",
-      "cdn": ""
+      "cdn": "",
+      "cloudCdn": ""
     },
     "ghpages": {
       "baseUrl": "https://wmcadigital.github.io/wmca-design-system",
-      "cdn": "https://wmcadigital.github.io/wmca-design-system"
+      "cdn": "https://wmcadigital.github.io/wmca-design-system",
+      "cloudCdn": "https://cloudcdn.wmca.org.uk/wmcabeta/ds/0.4.16"
     },
     "staging": {
       "baseUrl": "https://wmcadigital.github.io/wmca-design-system",
-      "cdn": "https://wmcadigital.github.io/wmca-design-system"
+      "cdn": "https://wmcadigital.github.io/wmca-design-system",
+      "cloudCdn": "https://cloudcdn.wmca.org.uk/wmcabeta/ds/0.4.16"
     }
   },
   "scripts": {
