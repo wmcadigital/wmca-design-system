@@ -71,11 +71,11 @@
     ],
     "backgroundOnly": [
       { "varName": "background", "name": "Background" },
-      { "varName": "bgBlack", "name": "Black" },
+      { "varName": "secondary", "name": "Black" },
       { "varName": "bgBlue", "name": "Blue" }
     ],
     "typography": [
-      { "varName": "typography", "name": "Typography" }
+      { "varName": "text", "name": "Typography" }
     ]
   }
 }

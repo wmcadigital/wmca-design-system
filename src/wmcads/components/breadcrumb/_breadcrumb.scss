@@ -25,7 +25,7 @@
 
   // Style a tag within breadcrumb
   &__link {
-    color: get-color(typography);
+    color: get-color(text);
 
     &--current {
       font-weight: normal;

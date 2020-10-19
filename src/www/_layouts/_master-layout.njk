@@ -17,8 +17,10 @@
     {% from "wmcads/patterns/header/_header.njk" import wmcadsHeader %}
     {{
       wmcadsHeader ({
+        id: "mega-menu",
         navItems: navItems,
         banner: true,
+        linkTopLevel: true,
         breadcrumbs: {
           section: section,
           pageTitle: pageTitle

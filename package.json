@@ -17,8 +17,8 @@
   ],
   "buildDirs": {
     "local": {
-      "baseUrl": "http://localhost:3000",
-      "cdn": "http://localhost:3000"
+      "baseUrl": "",
+      "cdn": ""
     },
     "ghpages": {
       "baseUrl": "https://wmcadigital.github.io/wmca-design-system",

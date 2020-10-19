@@ -40,7 +40,7 @@ a {
 
 h1,
 .h1 {
-  color: get-color(typography);
+  color: get-color(text);
   @include type-setting(1, 0.85);
   // On desktop devices
   @media all and (min-width: $breakpoint-md) {
@@ -50,7 +50,7 @@ h1,
 
 h2,
 .h2 {
-  color: get-color(typography);
+  color: get-color(text);
   @include type-setting(2, 0.85);
   // On desktop devices
   @media all and (min-width: $breakpoint-md) {
