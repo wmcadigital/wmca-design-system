@@ -1,6 +1,6 @@
 {
   "name": "wmcads-design-system",
-  "version": "0.3.7",
+  "version": "0.4.18",
   "description": "A library of typography, visual styles and user interface components which are documented for West Midlands Combined Authority.",
   "homepage": "https://wmcadigital.github.io/wmca-design-system",
   "author": "WMCA",
@@ -24,12 +24,12 @@
     "ghpages": {
       "baseUrl": "https://wmcadigital.github.io/wmca-design-system",
       "cdn": "https://wmcadigital.github.io/wmca-design-system",
-      "cloudCdn": "https://cloudcdn.wmca.org.uk/wmcabeta/ds/0.4.16"
+      "cloudCdn": "https://cloudcdn.wmca.org.uk/wmcabeta/ds/0.4.18"
     },
     "staging": {
       "baseUrl": "https://wmcadigital.github.io/wmca-design-system",
       "cdn": "https://wmcadigital.github.io/wmca-design-system",
-      "cloudCdn": "https://cloudcdn.wmca.org.uk/wmcabeta/ds/0.4.16"
+      "cloudCdn": "https://cloudcdn.wmca.org.uk/wmcabeta/ds/0.4.18"
     }
   },
   "scripts": {

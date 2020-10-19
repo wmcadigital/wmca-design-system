@@ -1,5 +1,28 @@
 # WMCA Design System Release Notes
 
+## WMCA Design System v0.4.18
+
+### New
+
+- screen reader class - sr-only
+
+### Updates
+
+- remove unused vars and update vars that have changed
+- local baseurl and cdn links
+- re-done header navigation
+- header comp link
+- link ds design system to cloudcdn.wmca.org.uk instead of ghpages
+
+### Fixes
+
+- header issues
+- fix issue with highlight js by moving header js
+- mobile search display. button was not displaying inline with input
+- fixed highlight js so it displays correctly in IE
+- highlight js - reference wmcads correctly
+- sr-only linting issues
+
 ## WMCA Design System v0.3.7
 
 ### Updates
