@@ -123,14 +123,35 @@
           <!-- End primary (level 1) navigation -->
         </div>
         <!-- End scrollable container -->
-        <button class="wmcads-mega-menu__primary-menu-link wmcads-mega-menu__search wmcads-hide-mobile">
+        <button class="wmcads-mega-menu__primary-menu-link wmcads-mega-menu__search wmcads-hide-mobile" onclick="openDialog('dialogSearch', this)">
           <svg class="wmcads-mega-menu__search-icon" aria-hidden="true"><use href="#wmcads-general-icon-action-search"></use></svg>
-          <span class="sr-only">Previous</span>
+          <span class="sr-only">Open Search</span>
         </button>
       </nav>
     </div>
   </div>
-
+    <!-- full screen search controls -->
+    <div role="dialog" id="dialogSearch" aria-label="Search Dialog" aria-modal="true" class="hidden control search">
+      <div class="control">
+          <div class="search-input">
+              <form action="/">
+                  <div class="wmcads-grid">
+                      <div class="wmcads-col-4-5">
+                          <input name="searchBox" class="searchBox" placeholder="Search" type="text" aria-label="Search query" />
+                      </div>
+                      <div class="wmcads-col-1-5">
+                          <button type="submit" aria-label="Search submit" class="wmcads-btn">Go</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <button aria-label="Close search" id="closeSearch" onclick="closeDialog(this)" class="icon-close">
+              <svg aria-hidden="true">
+                  <use xlink:href="#wmcads-general-icon-cancel" href="#wmcads-general-icon-cancel"></use>
+              </svg>
+          </button>
+      </div>
+  </div>
 
   {%- if params.banner or params.breadcrumbs %}
   <div class="wmcads-container">

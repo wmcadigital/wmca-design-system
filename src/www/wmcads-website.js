@@ -1,3 +1,4 @@
+import ariaDialog from './assets/vendor/js/aria/dialog';
 import forEachPolyfill from './assets/vendor/js/polyfills/ie11-forEach';
 import colorPalettes from './pages/styles/colour-palettes/_color-palettes';
 import highlight from './_partials/component-example/_component-example';
@@ -269,4 +270,7 @@ const headerJs = () => {
   });
 };
 
-window.addEventListener('DOMContentLoaded', (forEachPolyfill, icons(), headerJs(), colorPalettes, highlight));
+window.addEventListener(
+  'DOMContentLoaded',
+  (forEachPolyfill, ariaDialog, icons(), headerJs(), colorPalettes, highlight)
+);
