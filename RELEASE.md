@@ -1,5 +1,11 @@
 # WMCA Design System Release Notes
 
+## WMCA Design System v0.5.19
+
+### New
+
+- search dialog
+
 ## WMCA Design System v0.4.19
 
 ### New
