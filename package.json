@@ -51,7 +51,7 @@
     "build:ghpages": "npm run build:all --build=ghpages"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.10.4",
     "autoprefixer": "^9.8.4",
     "babel-eslint": "^10.1.0",
