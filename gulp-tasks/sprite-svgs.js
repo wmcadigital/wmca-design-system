@@ -36,6 +36,6 @@ module.exports = () => {
       })
     )
     .pipe(plugins.svgstore())
-    .pipe(plugins.rename({ basename: 'wmcads-sprite', extname: '.min.svg' }))
+    .pipe(plugins.rename({ basename: 'wmcads-icons', extname: '.min.svg' }))
     .pipe(dest(paths.svgs.dest));
 };

@@ -31,4 +31,4 @@ All pages referencing layouts can set global variables using the syntax
 Below are a list of the variables that can be set and what they do.
 
 - `pageTitle`
-  - Sets the page title of the current page whilst appending the suffix "- wmcadsDesign System"
+  - Sets the page title of the current page whilst appending the suffix "- WMCA Design System"

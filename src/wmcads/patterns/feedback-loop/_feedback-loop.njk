@@ -4,7 +4,7 @@
 {% from "wmcads/components/form-elements/checkboxes/_checkboxes.njk" import wmcadsCheckboxes %}
 {% from "wmcads/components/form-elements/input/_input.njk" import wmcadsInput %}
 {% from "wmcads/components/form-elements/textarea/_textarea.njk" import wmcadsTextarea %}
-{% from "wmcads/components/button/_button.njk" import wmnButton as primary %}
+{% from "wmcads/components/button/_button.njk" import wmcadsButton as primary %}
 
 {# Set params #}
 {% set isOpen = " wmcads-is-open" if params.isOpen %}
@@ -27,7 +27,7 @@
 
   <form class="wmcads-container wmcads-feedback-loop__form wmcads-grid">
     <div class="wmcads-grid wmcads-grid--align-center wmcads-grid--justify-between">
-      <legend class="wmcads-col-auto wmcads-m-none">Help us improve West Midlands Network</legend>
+      <legend class="wmcads-col-auto wmcads-m-none">Help us improve West Midlands Combined Authority</legend>
       <a  href="#" class="wmcads-link wmcads-col-auto wmcads-m-l-md">Close</a>
     </div>
     <br>

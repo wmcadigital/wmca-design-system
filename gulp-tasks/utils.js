@@ -1,15 +1,12 @@
 // Gulp requires
 const fs = require('fs');
 
-let build = 'staging';
+let build = 'local';
 // Function that is ran when buildAll is called to determine buildEnv
 // This matches the buildDirs in package.json
 switch (process.env.npm_config_build) {
-  case 'ghpages':
-    build = 'ghpages';
-    break;
-  case 'staging':
-    build = 'staging';
+  case 'netlify':
+    build = 'netlify';
     break;
   default:
     build = 'local';

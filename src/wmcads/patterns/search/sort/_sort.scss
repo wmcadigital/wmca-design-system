@@ -1,0 +1,22 @@
+.wmcads-search-sort {
+  margin-bottom: $size-md;
+
+  .wmcads-fe-label {
+    margin-bottom: $size-sm;
+  }
+
+  @media screen and (max-width: $breakpoint-md - 1) {
+    display: flex;
+    align-items: center;
+
+    .wmcads-fe-label,
+    .wmcads-fe-label h3 {
+      margin: 0;
+    }
+
+    .wmcads-fe-dropdown {
+      margin-left: $size-md;
+      flex-grow: 1;
+    }
+  }
+}

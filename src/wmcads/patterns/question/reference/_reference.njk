@@ -1,0 +1,43 @@
+{% macro wmcadsReference(params) %}
+{# Imports #}
+{% from "wmcads/components/form-elements/radios/_radios.njk" import wmcadsRadios %}
+{% from "wmcads/components/form-elements/question/_question.njk" import wmcadsQuestion %}
+{% from "wmcads/components/form-elements/progress-indicator/_progress-indicator.njk" import wmcadsProgressIndicator %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+
+{# Set vars and defaults #}
+{% set question = params.question if params.question else "How would you...?" %}
+{% set text = params.text if params.text %}
+{% set fields = params.fields if params.fields %}
+{% set actualSection = params.actualSection if params.actualSection else "1" %}
+{% set totalSections = params.totalSections if params.totalSections else "X" %}
+{% set sectionName = params.sectionName if params.sectionName else "Section Name" %}
+
+{{
+    wmcadsLink( { isBackLink: true, text: "Back" } ) | trim | indent(4)
+}}
+<form class="bg-white wmcads-m-t-lg">
+    <div class="wmcads-col-1 wmcads-col-sm-3-4 wmcads-col-lg-2-3  wmcads-p-sm  wmcads-p-b-none">
+        {{
+            wmcadsProgressIndicator({
+                actualSection: actualSection,
+                totalSections: totalSections,
+                sectionName: sectionName
+            }) | trim | indent
+        }}
+        {{
+            wmcadsQuestion({
+                text: question
+            }) | trim | indent
+        }}
+        {{ text | safe | trim }}
+        <div class="wmcads-p-t-md wmcads-col-1-2">
+            {{ fields  | safe | trim | indent(12) }}
+        </div>
+    </div>
+    <div class="wmcads-col-1  wmcads-p-sm">
+        {{ params.button  | safe  | trim | indent }}
+    </div>
+</form>
+
+{% endmacro %}

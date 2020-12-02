@@ -1,6 +1,6 @@
 .wmcads-breadcrumb {
   padding: $size-md 0;
-  background: get-color(background);
+  background: transparent;
 
   // outer list item (ol element)
   &__list {
@@ -16,10 +16,9 @@
     &:not(:first-child)::before {
       content: ">";
       display: inline-block;
-      height: 1.2em;
-      margin: 0 $size-sm;
-      color: get-color(primary);
-      font-weight: bolder;
+      height: 0.8em;
+      margin: 0 $size-xs;
+      color: get-color(information);
     }
   }
 
@@ -28,18 +27,11 @@
     color: get-color(text);
 
     &--current {
-      font-weight: normal;
       text-decoration: none;
     }
 
     &:hover {
-      color: get-color(background, 30, dark);
-    }
-
-    svg {
-      width: 1.2em;
-      height: 1.2em;
-      vertical-align: text-top;
+      color: get-color(text, 30, dark);
     }
   }
 

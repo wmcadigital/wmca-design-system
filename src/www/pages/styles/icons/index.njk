@@ -3,51 +3,78 @@
 {% set section = "Styles" %}
 {# The icon vars are an array that match the folders they come from in src/assets/icon/{foldername} #}
 {% set iconGeneral = [
-  "icon-file",
-  "icon-toolkit",
-  "icon-list",
-  "icon-chat",
-  "icon-map",
-  "icon-caret-left",
-  "icon-caret-right",
-  "icon-caret-down",
-  "icon-caret-up",
-  "icon-action-download",
-  "icon-action-favourite",
-  "icon-action-expand",
-  "icon-action-filter",
-  "icon-action-search",
-  "icon-action-minimise",
-  "icon-action-swap",
-  "icon-action-trash",
-  "icon-arrow",
-  "icon-cancel",
-  "icon-checkmark",
-  "icon-chevron-down",
-  "icon-chevron-left",
-  "icon-chevron-right",
-  "icon-chevron-up",
-  "icon-container",
-  "icon-external-link",
-  "icon-hamburger",
-  "icon-hollow-circle",
-  "icon-id-card",
-  "icon-info",
-  "icon-paperclip",
-  "icon-solid-circle",
-  "icon-success",
-  "icon-warning-circle",
-  "icon-warning-triangle",
-  "icon-home"
+  "arrow",
+  "caret-down",
+  "caret-up",
+  "checkmark",
+  "chevron-right",
+  "circle-hollow",
+  "circle-solid",
+  "clock",
+  "cross",
+  "current-location",
+  "expand",
+  "favourite",
+  "file",
+  "filter",
+  "id-card",
+  "info",
+  "location-arrow",
+  "location-pin",
+  "minimise",
+  "n-ticket",
+  "paperclip",
+  "parking",
+  "route",
+  "search",
+  "share",
+  "star",
+  "star-empty",
+  "success",
+  "swap",
+  "sync",
+  "ticket",
+  "trash",
+  "wallet",
+  "warning-circle",
+  "warning-triangle"
+] %}
+
+{% set iconSwift = [
+  "bird-icon",
+  "card",
+  "card-full-logo",
+  "full-logo"
 ] %}
 
 {% set iconSocial = [
-  "icon-email",
-  "icon-linkedin",
-  "icon-facebook",
-  "icon-twitter",
-  "icon-youtube",
-  "icon-instagram"
+  "facebook",
+  "twitter",
+  "instagram"
+] %}
+
+{% set iconModesIsolated = [
+  "bus",
+  "coach",
+  "cycle",
+  "metro",
+  "plane",
+  "rail",
+  "roads",
+  "walk"
+] %}
+
+{% set iconModesBackground = [
+  "bus",
+  "coach",
+  "cycle",
+  "metro",
+  "p-r",
+  "plane",
+  "rail-nr",
+  "rail",
+  "roads",
+  "walk"
 ] %}
 
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
@@ -94,7 +121,7 @@
   <!-- Ajax SVGs from WMCA Design System -->
   <script>
     const ajax = new XMLHttpRequest();
-    ajax.open('GET', '$*cdn/img/wmcads-sprite.min.svg', true);
+    ajax.open('GET', 'https://unpkg.com/WMCA-design-system@$*version/build/img/wmcads-icons.min.svg', true);
     ajax.send();
     ajax.onload = function () {
       const div = document.createElement('div');
@@ -109,7 +136,7 @@
 
 <h4>Displaying an icon</h4>
 <p>To display an icon or glyph, use an icon tag (from the icon section at the bottom of the page) with a href attribute and xlink:href (as a fallback). Make sure that the xlink and href tags are pointing to the location of your downloaded icon sprite sheet.</p>
-<p>The <code class="wmcads-website-inline-code">ICON-TAG-NAME</code> should be replaced with the icon tag name of the icon you want to show from the Icons section below, for example <code class="wmcads-website-inline-code">#wmcads-general-icon-arrow</code> should be in the <code class="wmcads-website-inline-code">xlink:href</code> and <code class="wmcads-website-inline-code">href</code> attributes of the svg's <code class="wmcads-website-inline-code">&lt;use&gt;</code> element.</p>
+<p>The <code class="wmcads-website-inline-code">ICON-TAG-NAME</code> should be replaced with the icon tag name of the icon you want to show from the Icons section below, for example <code class="wmcads-website-inline-code">#wmcads-general-arrow</code> should be in the <code class="wmcads-website-inline-code">xlink:href</code> and <code class="wmcads-website-inline-code">href</code> attributes of the svg's <code class="wmcads-website-inline-code">&lt;use&gt;</code> element.</p>
 <pre>
   <code class="html " tabindex="0" >
     {{-
@@ -123,7 +150,7 @@
 
 <h4>Can't include via recommended method? Try hosting the sprites locally</h4>
 <ul>
-  <li><a class="wmcads-link" target="_blank" href="$*cdn/img/wmcads-sprite.min.svg" download="wmcads-sprite.min.svg">Download the icon svg sprite</a>.</li>
+  <li><a class="wmcads-link" target="_blank" href="https://unpkg.com/WMCA-design-system@$*version/build/img/wmcads-icons.min.svg" download="wmcads-icons.min.svg">Download the icon svg sprite</a>.</li>
   <li>Include the downloaded icon sprite in to your project locally.</li>
   <li>You can now start using the icon svg sprite sheet using the instructions from the "Displaying an icon" section above.</li>
 </ul>
@@ -147,17 +174,65 @@
   {% endfor %}
 </div>
 
+{# Swift #}
+<h3>Swift</h3>
+<div class="wmcads-grid website-icons">
+  {% for icon in iconSwift %}
+    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'swift-' + icon
+        })
+      }}
+      <p>{{ 'swift-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
 {# Social #}
 <h3>Social</h3>
 <div class="wmcads-grid website-icons">
   {% for icon in iconSocial %}
-    <div class="wmcads-col-1-2 wmcads-col-lg-1-6 text-center">
+    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
       {{
         wmcadsIcon({
           icon: 'social-' + icon
         })
       }}
       <p>{{ 'social-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{# Modal #}
+<h3>Modal</h3>
+
+<strong>Isolated</strong>
+<br><br>
+<div class="wmcads-grid website-icons">
+  {% for icon in iconModesIsolated %}
+    <div class="wmcads-col-1-2 wmcads-col-lg-1-4 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'modes-isolated-' + icon
+        })
+      }}
+      <p>{{ 'modes-isolated-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<strong>With background</strong>
+<br><br>
+<div class="wmcads-grid website-icons">
+  {% for icon in iconModesBackground %}
+    <div class="wmcads-col-1-2 wmcads-col-lg-1-4 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'modes-bg-' + icon
+        })
+      }}
+      <p>{{ 'modes-bg-' + icon }}</p>
     </div>
   {% endfor %}
 </div>

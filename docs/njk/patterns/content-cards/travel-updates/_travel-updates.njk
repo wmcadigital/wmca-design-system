@@ -1,0 +1,60 @@
+{% macro wmcadsContentCardTravelUpdates(params) %}
+{# imports #}
+{% from "components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "components/disruption-indicator/large/_large.njk" import wmcadsDisruptionIndicatorLarge as largeDisruption %}
+{% from "components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium as mediumDisruption %}
+{% from "components/message/help/_help.njk" import wmcadsMsgHelp %}
+{# Set #}
+{% set largeDisruptionsAreas = ["Hagley Road", "Ring Road"] %}
+{% set buses = ["9", "10", "12", "12A", "13", "13A", "126", "X8", "X10", "23"] %}
+
+{% call wmcadsContentCard({ variant: "wmcads-content-card--travel-updates"}) %}
+    <div class="wmcads-p-sm wmcads-col-1">
+        <h2 class="wmcads-content-card__title">Travel updates</h2>
+        <p>All routes through this disruption</p>
+        <!-- Large disruption indicators -->
+        <h3>Roads</h3>
+        {% for area in largeDisruptionsAreas %}
+        <div class="wmcads-m-t-sm">
+            {{
+                largeDisruption({
+                strongText: area,
+                text: "Usual traffic",
+                iconLeft: "modes-isolated-roads",
+                iconRight: "general-success"
+                }) | trim | indent(8)
+            }}
+        </div>
+        {% endfor %}
+        <!-- Medium disruptions indicators -->
+        <h3>Bus routes</h3>
+        <div class="wmcads-grid">
+            {#- Loop through buses -#}
+            {% for bus in buses %}
+            <div class="wmcads-col-auto wmcads-m-r-md">
+                {{
+                    mediumDisruption({
+                    text: bus,
+                    classModifiers: "wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus",
+                    iconLeft: "modes-isolated-bus",
+                    iconRight: "general-success"
+                    }) | trim | indent(12)
+                }}
+                <div class="wmcads-grid wmcads-grid--justify-around wmcads-p-t-sm wmcads-p-b-sm">
+                    <svg class="wmcads-disruption-indicator-medium-star">
+                        <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+                    </svg>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Help message -->
+        {{
+            wmcadsMsgHelp({
+                message: 'Save bus routes to your homepage by pressing the star icon'
+            }) | indent(12) | trim
+        }}
+    </div>
+{% endcall %}
+
+{% endmacro %}
