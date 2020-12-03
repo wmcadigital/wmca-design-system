@@ -37,7 +37,9 @@ module.exports.buildTemplates = () => {
           }
         })
       )
+      .pipe(plugins.replace('$*baseUrl', packageJson.buildDirs[build].baseUrl))
       .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
+      .pipe(plugins.replace('$*cloudCdn', packageJson.buildDirs[build].cloudCdn))
       .pipe(plugins.replace('$*version', versionNumber))
       .pipe(plugins.formatHtml())
       .pipe(plugins.htmlmin({ removeComments: true, collapseWhitespace: true }))
