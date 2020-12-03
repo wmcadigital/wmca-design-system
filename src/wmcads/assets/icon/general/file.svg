@@ -1,1 +1,7 @@
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#FFF" fill-rule="nonzero">
+            <path d="M144 68V0H44c-6.65 0-12 5.35-12 12v232c0 6.65 5.35 12 12 12h168c6.65 0 12-5.35 12-12V80h-68c-6.6 0-12-5.4-12-12zm80-6v3.103h-64V0h3.05c3.2 0 6.25 1.272 8.5 3.56l48.95 49.845c2.25 2.289 3.5 5.392 3.5 8.596z"/>
+        </g>
+    </g>
+</svg>
