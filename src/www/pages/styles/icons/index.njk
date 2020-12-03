@@ -10,9 +10,7 @@
   "chevron-right",
   "circle-hollow",
   "circle-solid",
-  "clock",
   "cross",
-  "current-location",
   "expand",
   "favourite",
   "file",
@@ -20,61 +18,23 @@
   "id-card",
   "info",
   "location-arrow",
-  "location-pin",
   "minimise",
-  "n-ticket",
   "paperclip",
-  "parking",
-  "route",
   "search",
-  "share",
-  "star",
-  "star-empty",
   "success",
   "swap",
-  "sync",
-  "ticket",
   "trash",
-  "wallet",
   "warning-circle",
   "warning-triangle"
-] %}
-
-{% set iconSwift = [
-  "bird-icon",
-  "card",
-  "card-full-logo",
-  "full-logo"
 ] %}
 
 {% set iconSocial = [
   "facebook",
   "twitter",
-  "instagram"
-] %}
-
-{% set iconModesIsolated = [
-  "bus",
-  "coach",
-  "cycle",
-  "metro",
-  "plane",
-  "rail",
-  "roads",
-  "walk"
-] %}
-
-{% set iconModesBackground = [
-  "bus",
-  "coach",
-  "cycle",
-  "metro",
-  "p-r",
-  "plane",
-  "rail-nr",
-  "rail",
-  "roads",
-  "walk"
+  "instagram",
+  "linkedin",
+  "youtube",
+  "email"
 ] %}
 
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
@@ -174,21 +134,6 @@
   {% endfor %}
 </div>
 
-{# Swift #}
-<h3>Swift</h3>
-<div class="wmcads-grid website-icons">
-  {% for icon in iconSwift %}
-    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
-      {{
-        wmcadsIcon({
-          icon: 'swift-' + icon
-        })
-      }}
-      <p>{{ 'swift-' + icon }}</p>
-    </div>
-  {% endfor %}
-</div>
-
 {# Social #}
 <h3>Social</h3>
 <div class="wmcads-grid website-icons">
@@ -200,39 +145,6 @@
         })
       }}
       <p>{{ 'social-' + icon }}</p>
-    </div>
-  {% endfor %}
-</div>
-
-{# Modal #}
-<h3>Modal</h3>
-
-<strong>Isolated</strong>
-<br><br>
-<div class="wmcads-grid website-icons">
-  {% for icon in iconModesIsolated %}
-    <div class="wmcads-col-1-2 wmcads-col-lg-1-4 text-center">
-      {{
-        wmcadsIcon({
-          icon: 'modes-isolated-' + icon
-        })
-      }}
-      <p>{{ 'modes-isolated-' + icon }}</p>
-    </div>
-  {% endfor %}
-</div>
-
-<strong>With background</strong>
-<br><br>
-<div class="wmcads-grid website-icons">
-  {% for icon in iconModesBackground %}
-    <div class="wmcads-col-1-2 wmcads-col-lg-1-4 text-center">
-      {{
-        wmcadsIcon({
-          icon: 'modes-bg-' + icon
-        })
-      }}
-      <p>{{ 'modes-bg-' + icon }}</p>
     </div>
   {% endfor %}
 </div>
