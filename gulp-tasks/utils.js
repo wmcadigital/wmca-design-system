@@ -9,7 +9,7 @@ switch (process.env.npm_config_build) {
     build = 'staging';
     break;
   default:
-    build = 'staging';
+    build = 'local';
     break;
 }
 
