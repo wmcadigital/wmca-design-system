@@ -114,7 +114,7 @@
           </button>
           <div class="wmcads-accordion__content" id="accordion-{{section.letter | lower}}">
             {% for style in section.styles %}
-            <h5 id="{{style.title | replace(r/\W/gi, '') | replace(' ', '-') | lower}}" class="{{"wmcads-m-t-xl" if not loop.first}}">
+            <h5 id="{{style.title | replace(r/\W/gi, '') | replace(' ', '-') | lower}}-{{ loop.index }}" class="{{'wmnds-m-t-xl' if not loop.first}}">
               <span>{{style.title}}<span>
             </h5>
             {{style.content | safe}}
