@@ -1,151 +1,194 @@
 {
-  "navItems": [
-    {
-      "name": "Styles",
-      "subnavItems": [
-        {
-          "name": "A to Z content style guide"
-        },
-        {
-          "name": "Colour palettes"
-        },
-        {
-          "name": "Icons"
-        },
-        {
-          "name": "Images"
-        },
-        {
-          "name": "Layout"
-        },
-        {
-          "name": "Maps"
-        },
-        {
-          "name": "Typography"
-        },
-        {
-          "name": "Utility classes"
-        }
-      ]
-    },
-    {
-      "name": "Components",
-      "subnavItems": [
-        {
-          "name": "Accordion"
-        },
-        {
-          "name": "Breadcrumb"
-        },
-        {
-          "name": "Buttons"
-        },
-        {
-          "name": "Content card"
-        },
-        {
-          "name": "Content tiles"
-        },
-        {
-          "name": "Details"
-        },
-        {
-          "name": "File download"
-        },
-        {
-          "name": "Form elements"
-        },
-        {
-          "name": "Inset text"
-        },
-        {
-          "name": "In-text step"
-        },
-        {
-          "name": "Links"
-        },
-        {
-          "name": "Lists"
-        },
-        {
-          "name": "Loader"
-        },
-        {
-          "name": "Message"
-        },
-        {
-          "name": "Phase indicator"
-        },
-        {
-          "name": "Table"
-        },
-        {
-          "name": "Warning text"
-        }
-      ]
-    },
-    {
-      "name": "Patterns",
-      "subnavItems": [
-        {
-          "name": "Autocomplete"
-        },
-        {
-          "name": "Banner"
-        },
-        {
-          "name": "Cookies"
-        },
-        {
-          "name": "Contact details"
-        },
-        {
-          "name": "Content cards"
-        },
-        {
-          "name": "Feedback loop"
-        },
-        {
-          "name": "Header and footer"
-        },
-        {
-          "name": "Question form"
-        },
-        {
-          "name": "Search"
-        }
-      ]
-    },
-    {
-      "name": "User research"
+    "navItems": [
+      {
+        "name": "Styles",
+        "subnavItems": [
+          {
+            "name": "A to Z content style guide"
+          },
+          {
+            "name": "Colour palettes"
+          },
+          {
+            "name": "Icons"
+          },
+          {
+            "name": "Images"
+          },
+          {
+            "name": "Layout"
+          },
+          {
+            "name": "Maps"
+          },
+          {
+            "name": "Typography"
+          },
+          {
+            "name": "Utility classes"
+          }
+        ]
+      },
+      {
+        "name": "Components",
+        "subnavItems": [
+          {
+            "name": "Accordion"
+          },
+          {
+            "name": "Breadcrumb"
+          },
+          {
+            "name": "Buttons"
+          },
+          {
+            "name": "Content card"
+          },
+          {
+            "name": "Content tiles"
+          },
+          {
+            "name": "Details"
+          },
+          {
+            "name": "Disruption indicators"
+          },
+          {
+            "name": "File download"
+          },
+          {
+            "name": "Form elements"
+          },
+          {
+            "name": "Inset text"
+          },
+          {
+            "name": "In-text step"
+          },
+          {
+            "name": "Links"
+          },
+          {
+            "name": "Lists"
+          },
+          {
+            "name": "Loader"
+          },
+          {
+            "name": "Message"
+          },
+          {
+            "name": "Phase indicator"
+          },
+          {
+            "name": "Table"
+          },
+          {
+            "name": "Warning text"
+          }
+        ]
+      },
+      {
+        "name": "Patterns",
+        "subnavItems": [
+          {
+            "name": "Autocomplete"
+          },
+          {
+            "name": "Banner"
+          },
+          {
+            "name": "Cookies"
+          },
+          {
+            "name": "Contact details"
+          },
+          {
+            "name": "Content cards"
+          },
+          {
+            "name": "Feedback loop"
+          },
+          {
+            "name": "Header and footer"
+          },
+          {
+            "name": "Header v2"
+          },
+          {
+            "name": "Question form"
+          },
+          {
+            "name": "Search"
+          }
+        ]
+      },
+      {
+        "name": "User research"
+      }
+    ],
+    "colors": {
+        "brand": [
+			{ 
+				"varName": "brandFurnaceOrange", 
+				"name": "Furnace Orange" 
+			},
+			{ 
+				"varName": "brandCoolGrey", 
+				"name": "Cool Grey" 
+			},
+			{ 
+				"varName": "brandWmGreen", 
+				"name": "WM Green" 
+			},
+			{ 
+				"varName": "brandWmRed", 
+				"name": "WM Red" 
+			},
+			{ 
+				"varName": "brandWmPurple", 
+				"name": "WM Purple" 
+			},
+			{ 
+				"varName": "brandWmBlue", 
+				"name": "WM Blue" 
+			}
+		],
+        "web": [
+			{
+				"varName": "primary",
+				"name": "Primary Orange"
+			},
+			{
+				"varName": "secondary",
+				"name": "Secondary Grey"
+			},
+			{
+				"varName": "text",
+				"name": "Text"
+			},
+			{
+				"varName": "cta",
+				"name": "Call to Action"
+			},
+			{
+				"varName": "error",
+				"name": "Error"
+			},
+			{
+				"varName": "warning",
+				"name": "Warning"
+			},
+			{
+				"varName": "success",
+				"name": "Success"
+			}
+		],
+        "backgroundOnly": [
+			{
+				"varName": "background",
+				"name": "Background"
+			}
+		]
     }
-  ],
-  "colors": {
-    "brand": [
-      { "varName": "primary", "name": "Primary Orange" },
-      { "varName": "secondary", "name": "Secondary Grey" }
-    ],
-    "modal": [
-      { "varName": "bus", "name": "Bus" },
-      { "varName": "metro", "name": "Metro" },
-      { "varName": "railway", "name": "WM Railway" },
-      { "varName": "susTravel", "name": "Sustainable Travel" },
-      { "varName": "roads", "name": "Roads" },
-      { "varName": "taxi", "name": "Taxi" }
-    ],
-    "web": [
-      { "varName": "text", "name": "Text" },
-      { "varName": "cta", "name": "Call to Action" },
-      { "varName": "error", "name": "Error" },
-      { "varName": "warning", "name": "Warning" },
-      { "varName": "success", "name": "Success" },
-      { "varName": "information", "name": "Information" }
-    ],
-    "backgroundOnly": [
-      { "varName": "plannedDisruption", "name": "Planned Disruption" },
-      { "varName": "disable", "name": "Disabled Elements" },
-      { "varName": "background", "name": "Background" }
-    ]
-  }
-}
+  }  
