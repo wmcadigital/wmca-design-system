@@ -4,21 +4,27 @@
 $palettes: (
   primary: #c05701,
   secondary: #231f20,
+  text: #231f20,
+  cta: #007da8,
+  background: #f3f2f1,
+  brandCoolGrey: #54565b,
+  brandFurnaceOrange: #fe811b,
+  brandWmGreen: #00807b,
+  brandWmRed: #d60037,
+  brandWmPurple: #94368d,
+  brandWmBlue: #007ea8,
+  warning: #cc6900,
+  error: #d4351c,
+  success: #00703c,
+  disable: #676869, // remove below
   bus: #ea0029,
   metro: #0075c9,
   railway: #e07709,
   susTravel: #679500,
   roads: #df1683,
   taxi: #773dbe,
-  text: #231f20,
-  cta: #007da8,
-  error: #d4351c,
-  warning: #b75e00,
-  success: #00703c,
   information: #84329b,
-  disable: #676869,
   plannedDisruption: #ffdd00,
-  background: #f3f2f1
 );
 
 $white: #ffffff;
