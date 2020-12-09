@@ -52,12 +52,13 @@ function minifyJS(jsFile) {
       })
     )
     .pipe(plugins.plumber.stop())
-    .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
     .pipe(dest(paths.scripts.output)); // Spit out concat + minified file in ./build/
 }
 
-// Minify, and concatenate scripts
-module.exports = done => {
+const minifyingJS = done => {
   paths.scripts.minifySrc.map(jsFile => minifyJS(jsFile));
   done();
 };
+
+// Minify, and concatenate scripts
+module.exports = minifyingJS;
