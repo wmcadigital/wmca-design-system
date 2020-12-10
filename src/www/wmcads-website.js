@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/browser';
 import * as polyfills from './assets/vendor/js/polyfills/polyfills';
 import colorPalettes from './pages/styles/colour-palettes/_color-palettes';
 import aToZContentStyleGuide from './pages/styles/a-to-z-content-style-guide/_a-to-z-content-style-guide';
@@ -13,13 +12,6 @@ import {
   componentExampleScript,
   componentExampleIframe
 } from './_partials/component-example';
-
-const isInIframe = window.frameElement && window.frameElement.nodeName === 'IFRAME'; // check if we are in an iframe
-// If not in iframe and we are in prod, then run sentry
-if (!isInIframe && process.env.NODE_ENV === 'production')
-  Sentry.init({
-    dsn: 'https://e86f5320a3e347f4831704b9009e3b6b@o489652.ingest.sentry.io/5552219'
-  });
 
 const icons = () => {
   // Ajax SVG in, SVGS are referenced in app (Icon component)
