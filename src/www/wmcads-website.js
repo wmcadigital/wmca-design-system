@@ -18,7 +18,7 @@ const isInIframe = window.frameElement && window.frameElement.nodeName === 'IFRA
 // If not in iframe and we are in prod, then run sentry
 if (!isInIframe && process.env.NODE_ENV === 'production')
   Sentry.init({
-    dsn: 'https://c72ff3aefb3e4a4585c61e5807411ae9@o378798.ingest.sentry.io/5285374'
+    dsn: 'https://e86f5320a3e347f4831704b9009e3b6b@o489652.ingest.sentry.io/5552219'
   });
 
 const icons = () => {
