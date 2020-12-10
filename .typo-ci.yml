@@ -22,10 +22,8 @@ excluded_files:
 # Any typos we should ignore?
 excluded_words:
   - typoci
-  - wmre
+  - wmnds
   - wmnetwork
-  - wmca
-  - wmcads
   - nwm
   - wmn
   - digital's
@@ -33,6 +31,9 @@ excluded_words:
   - wmca
   - tfwm
   - njk
+  - basemap
+  - ipsum
+  - atozofstyle
 
 # Would you like filenames to also be spellchecked?
 spellcheck_filenames: false

@@ -5,6 +5,7 @@
   "homepage": "https://wmcadigital.github.io/wmca-design-system",
   "author": "WMCA",
   "main": "src/www/pages/index.njk",
+  "private": true,
   "files": [
     "docs/*"
   ],
@@ -24,6 +25,11 @@
       "cdn": "",
       "cloudCdn": ""
     },
+    "netlify": {
+      "baseUrl": "/",
+      "cdn": "https://wmcads.netlify.app",
+      "cloudCdn": "https://wmcads.netlify.app"
+    },
     "ghpages": {
       "baseUrl": "https://wmcadigital.github.io/wmca-design-system",
       "cdn": "https://wmcadigital.github.io/wmca-design-system",
@@ -34,6 +40,16 @@
       "cdn": "https://wmcadigital.github.io/wmca-design-system",
       "cloudCdn": "https://cloudcdn.wmca.org.uk/wmcabeta/ds/0.5.19"
     }
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
   },
   "scripts": {
     "upgrade-packages": "ncu -u",
@@ -52,6 +68,7 @@
     "build:images": "gulp minImages",
     "build:sprites": "gulp buildSprites",
     "build:config": "gulp buildConfig",
+    "build:netlify": "npm run build:all --build=netlify",
     "build:ghpages": "npm run build:all --build=ghpages"
   },
   "devDependencies": {
