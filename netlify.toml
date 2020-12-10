@@ -9,10 +9,3 @@
 
 [[plugins]]
 package = "@netlify/plugin-sitemap"
-
-[[plugins]]
-package = "@sentry/netlify-build-plugin"
-
-[plugins.inputs]
-  sentryOrg = "wmca-dig"
-  sentryProject = "wmca-design-system"
