@@ -3,7 +3,7 @@ name: Propose something new
 about: Propose a style, component or pattern for the West Midlands Combined Authority Design System
 title: ''
 labels: 'feature_request'
-assignees: 'mrmjprice,KaterinaKir'
+assignees: 'sam-wmca, Doodlepaul'
 
 ---
 
