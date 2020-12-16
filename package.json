@@ -7,7 +7,7 @@
   "main": "src/www/pages/index.njk",
   "private": true,
   "files": [
-    "docs/*"
+    "build/*"
   ],
   "repository": "https://github.com/wmcadigital/wmca-design-system.git",
   "copyright": "WMCA",
