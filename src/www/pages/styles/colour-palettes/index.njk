@@ -17,17 +17,17 @@
   <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" title="W3C AA Accessibilty colour contrast" target="_blank">W3C AA Accessibility criteria</a> requires the contrast of test to be enhanced, with a contrast ratio upwards of 3:1.
 </p>
 <p>
-  All brand/web colours meet this criteria.
+  All brand/web colours meet this criteria, though the modal colour 'WM Railway' must only be used for iconography and graphical devices.
 </p>
 <p>The background only colours can only be used as a background colour and they are not intended for any other use.</p>
 <hr>
 
 {# Using in development #}
 <h2>Using in development</h2>
-<h3>WMCA SCSS</h3>
+<h3>wmcads SCSS</h3>
 <p>If you are using WMCA Design System's SCSS in development, you shouldn't use the HEX values! Instead you should always use the scss variables instead, for example use <code class="wmcads-website-inline-code">get-color(primary)</code> instead of <code class="wmcads-website-inline-code">#3c1053</code>. This ensures you are always using the most up-to-date colour. To find out more on how to use the <code class="wmcads-website-inline-code">get-color()</code> function in SCSS, please refer to the notes for <code class="wmcads-website-inline-code">@function get-color()</code> in <a href="https://github.com/wmcadigital/wmca-design-system/blob/master/src/wmcads/assets/sass/_mixins.scss" target="_blank">_mixins.scss</a>.</p>
 
-<h3>Without WMCA SCSS</h3>
+<h3>Without wmcads SCSS</h3>
 <p>If you are not using WMCA Design System's SCSS then it is recommended to use the hex values below. It is highly adviseable to set these up as variables in your development enviornment, this ensures that you can easily change them to keep up-to-date with our colour palettes.</p>
 <p>If you'd like to see how we have set the variables up, you can check out <code class="wmcads-website-inline-code">$palettes</code> in <a href="https://github.com/wmcadigital/wmca-design-system/blob/master/wmcads/src/assets/sass/_vars.scss" target="_blank">_vars.scss</a> and <code class="wmcads-website-inline-code">@function get-color()</code> in <a href="https://github.com/wmcadigital/wmca-design-system/blob/master/src/wmcads/assets/sass/_mixins.scss" target="_blank">_mixins.scss</a>.</p>
 
@@ -45,11 +45,11 @@
   {% endfor %}
 </div>
 
-{# Background Only colours #}
+{# Web colours #}
 <hr>
-<h2>Background only colours</h2>
+<h2>Web colours</h2>
 <div class="wmcads-grid">
-  {% for color in colors.backgroundOnly %}
+  {% for color in colors.web %}
     {{
       colorPalette({
         varName: color.varName,
@@ -59,11 +59,11 @@
   {% endfor %}
 </div>
 
-{# Typography colours #}
+{# Background Only colours #}
 <hr>
-<h2>Typography colours</h2>
+<h2>Background only colours</h2>
 <div class="wmcads-grid">
-  {% for color in colors.typography %}
+  {% for color in colors.backgroundOnly %}
     {{
       colorPalette({
         varName: color.varName,

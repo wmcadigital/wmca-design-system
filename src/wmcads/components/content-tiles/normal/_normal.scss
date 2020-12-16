@@ -1,23 +1,22 @@
 .wmcads-content-tile {
   height: 100%;
+  padding: $size-sm;
+  border-bottom: 5px solid get-color(primary);
   background-color: $white;
-  box-shadow: 0 3px 6px 0 rgba($black, 0.16);
 
-  &--normal {
-    padding: $size-sm;
-  }
-
-  &__category {
-    display: block;
-    padding: $size-md;
-    text-align: right;
+  &__legend {
+    padding-left: $size-sm;
+    border-left: 3px solid get-color(information);
   }
 
   &__copy {
+    // Constraints for iframe
+    iframe {
+      width: 100%;
+    }
+
     .wmcads-link {
-      position: absolute;
-      right: $size-sm;
-      bottom: $size-sm;
+      position: relative;
     }
   }
 
@@ -28,14 +27,25 @@
 
   // One main link modifier
   &--with-one-link {
+    display: flex;
     position: relative;
-    padding: $size-sm $size-sm $size-lg $size-sm;
+    padding-bottom: $size-md;
+    flex-direction: column;
   }
 
   // Nav modifier
   &--nav {
     li {
       margin-top: $size-sm;
+    }
+  }
+
+  // Yellow modifier
+  &--yellow {
+    background-color: get-color(plannedDisruption);
+
+    .wmcads-link {
+      color: get-color(text);
     }
   }
 }

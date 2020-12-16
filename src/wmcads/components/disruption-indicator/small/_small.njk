@@ -1,0 +1,25 @@
+{% macro wmcadsDisruptionIndicatorSmall(params) %}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+
+{% set iconRight = params.iconRight if params.iconRight else 'general-warning-circle' %} {# set icon right classes #}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+
+<!-- map pin for {{params.mode}} -->
+<span class="wmcads-disruption-indicator-small{{class}}">
+  {# Get SVG icon for mode #}
+  {{-
+    wmcadsIcon({
+      icon: 'modes-isolated-' + params.mode,
+      class: 'wmcads-disruption-indicator-small__icon'
+    }) | indent(2) | trim
+  }}
+  {# Get SVG icon for type #}
+  {{-
+    wmcadsIcon({
+      icon: iconRight,
+      class: 'wmcads-disruption-indicator-small__icon'
+    }) | indent(2) | trim
+  }}
+</span>
+
+{% endmacro %}

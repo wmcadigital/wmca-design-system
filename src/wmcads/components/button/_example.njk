@@ -1,0 +1,13 @@
+{% filter trim %}
+{% raw %}
+{% from "wmcads/components/button/_button.njk" import wmcadsButton %}
+
+{{
+   wmcadsButton({
+      classNames: "wmcads-btn--mode",
+      text: "Metro",
+      iconLeft: "modes-isolated-metro"
+    })
+}}
+{% endraw %}
+{% endfilter %}

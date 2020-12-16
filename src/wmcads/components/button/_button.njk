@@ -1,4 +1,4 @@
-{% macro wmnButton(params) %}
+{% macro wmcadsButton(params) %}
 {# Imports #}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {% from "wmcads/components/loader/_loader.njk" import wmcadsLoader %}
@@ -14,7 +14,7 @@
   {% set classNames = paramClass if paramClass %}
 {% endif %}
 
-<button class="wmcads-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %}>
+<button class="wmcads-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %} {% if params.type %}type="{{params.type}}"{% endif %}>
     {#- iconLeft -#}
     {%- if iconLeft %}
     {{

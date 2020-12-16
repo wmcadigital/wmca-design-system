@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+li {
+  margin-bottom: $size-md;
+}
+
 // Images
 img {
   max-width: 100%;
@@ -36,20 +40,4 @@ img {
 // This gets rid of firefox default focus dash-border
 *::-moz-focus-inner {
   border: 0;
-}
-
-// visually hide elements for screen reader use
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-}
-
-.hidden {
-  display: none;
 }

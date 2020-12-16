@@ -1,0 +1,65 @@
+{% macro wmcadsContentTilesNormal(params) %}
+{# Imports #}
+{%- from "components/link/link/_link.njk" import wmcadsLink -%}
+{# Set vars #}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+{% set title = params.title if params.title else "Major Roadworks and events" %} {# set title #}
+{# Link vars #}
+{% set linkText = params.linkText if params.linkText else "Read more" %} {# set link text #}
+{% set link = params.link if params.link else "#" %} {# set link url #}
+{% set linkTitle = params.linkTitle if params.linkTitle else "link title" %} {# set link title #}
+{% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
+
+
+<div class="wmcads-content-tile{{class}}">
+  {#- Title #}
+  {%- if params.smallTitle %}
+    <h3>{{ title }}</h3>
+  {%- else %}
+    <h2>{{ title }}</h2>
+  {%- endif %}
+
+  {#- Legend -#}
+  {%- if params.legend %}
+    <span class="wmcads-content-tile__legend">
+      {{ params.legend }}
+    </span>
+  {%- endif %}
+
+  {%- if params.copy %}
+    {#- Copy #}
+    <div class="wmcads-content-tile__copy">
+      {{ params.copy | safe | trim  -}}
+      {#- Read more -#}
+      {%- if params.readMore %}
+      {{ wmcadsLink({
+        link: link,
+        linkTarget: linkTarget,
+        linkTitle: linkTitle,
+        text: linkText,
+        classModifiers: 'wmcads-float-right'
+        }) | indent(6) | trim
+      }}
+      {%- endif %}
+    </div>
+  {%- else %}
+    <ul class="wmcads-content-tile__list">
+      <li class="wmcads-content-tile__list-item">
+        {{ wmcadsLink({text: 'Information for drivers'}) | indent(8) | trim }}
+      </li>
+      <li class="wmcads-content-tile__list-item">
+        {{ wmcadsLink({text: 'Information for bus passengers'}) | indent(8) | trim }}
+      </li>
+      <li class="wmcads-content-tile__list-item">
+        {{ wmcadsLink({text: 'Information for tram passengers'}) | indent(8) | trim }}
+      </li>
+      <li class="wmcads-content-tile__list-item">
+        {{ wmcadsLink({text: 'Information for pedestrians'}) | indent(8) | trim }}
+      </li>
+      <li class="wmcads-content-tile__list-item">
+        {{ wmcadsLink({text: 'Getting to venues and attractions'}) | indent(8) | trim }}
+      </li>
+    </ul>
+  {%- endif %}
+</div>
+{% endmacro %}

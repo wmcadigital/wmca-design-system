@@ -4,26 +4,57 @@
 $palettes: (
   primary: #c05701,
   secondary: #231f20,
-  bgBlue: #007da8,
-  stdOrange: #bf5600,
-  error: #d4351c,
-  phase: #383435,
-  cta: #007da8,
-  ctaDark: #003e53,
-  disable: #54565b,
   text: #231f20,
+  cta: #007da8,
+  background: #f3f2f1,
+  brandCoolGrey: #54565b,
+  brandFurnaceOrange: #fe811b,
+  brandWmGreen: #00807b,
+  brandWmRed: #d60037,
+  brandWmPurple: #94368d,
+  brandWmBlue: #007ea8,
+  warning: #cc6900,
+  error: #d4351c,
   success: #00703c,
+  disable: #676869, // remove below
+  bus: #ea0029,
+  metro: #0075c9,
+  railway: #e07709,
+  susTravel: #679500,
+  roads: #df1683,
+  taxi: #773dbe,
   information: #84329b,
-  background: #ffffff
+  plannedDisruption: #ffdd00,
 );
 
 $white: #ffffff;
 $black: #000000;
 
+// FONT-FACE
+@font-face {
+  font-family: "Noto Sans Display";
+  font-style: normal;
+  font-weight: normal;
+  // sass-lint:disable-block indentation
+  src: url("../fonts/notosansdisplay-regular-webfont.woff2") format("woff2"),
+    url("../fonts/notosansdisplay-regular-webfont.woff") format("woff");
+  // sass-lint:enable indentation
+}
+
+@font-face {
+  font-family: "Noto Sans Display";
+  font-style: normal;
+  font-weight: bold;
+  // sass-lint:disable-block indentation
+  src: url("../fonts/notosansdisplay-bold-webfont.woff2") format("woff2"),
+    url("../fonts/notosansdisplay-bold-webfont.woff") format("woff");
+  // sass-lint:enable indentation
+}
+
 // TEXT
 $text-color: get-color($black);
-$x-font-family: "Open Sans", sans-serif;
-$x-heading-font-family: "Open Sans", sans-serif;
+$x-font-family: "Noto Sans Display", sans-serif;
+$x-heading-font-family: "DM Sans", sans-serif;
 
 // Base font size and line height
 $base-font-size: 16px; // 16px
@@ -43,5 +74,23 @@ $size-xl: 3rem; // 48px
 $breakpoint-xs: 0; // Extra small screen / phone
 $breakpoint-sm: 568px; // Small screen / phone
 $breakpoint-md: 768px; // Medium screen / tablet
-$breakpoint-lg: 1024px; // Large screen / desktop
-$breakpoint-xl: 1280px; // Extra large screen / wide desktop (this is used for wmcads-container size)
+$breakpoint-lg: 992px; // Large screen / desktop (this is used for wmcads-container size)
+$breakpoint-xl: 1280px; // Extra large screen / wide desktop
+
+// Grid vars
+$cols: 1 2 3 4 5 6 12 24;
+$grid-breakpoint-map: (
+  "sm": 35.5,
+  "md": 48,
+  "lg": 62,
+  "xl": 80
+);
+$grid-max-cols: 5;
+$spacing-map: (
+  "xs": $size-xs,
+  "xsm": $size-xsm,
+  "sm": $size-sm,
+  "md": $size-md,
+  "lg": $size-lg,
+  "xl": $size-xl
+);

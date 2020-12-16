@@ -1,0 +1,25 @@
+{% macro wmcadsLink(params) %}
+{# Imports #}
+{% from "components/icon/_icon.njk" import wmcadsIcon %}
+{# Set vars #}
+{% set text = params.text if params.text else "link text" %} {# set link text #}
+{% set link = params.link if params.link else "#" %} {# set link url #}
+{% set linkTitle = params.linkTitle if params.linkTitle else "link title" %} {# set link title #}
+{% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
+{% set linkRel = "noopener noreferrer" if params.linkTarget === "_blank" %} {# if target is blank then add rel noopener noreferrer to link #}
+{% set prefix = "< " if params.isBackLink else "" %} {# set prefix text #}
+{# Class modifiers #}
+{% set class = ' ' + params.classModifiers if params.classModifiers %}
+{% set class = class + " wmcads-link--with-chevron" if params.withChevronLeft or params.withChevronRight else class %}
+
+<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmcads-link{{class}}" {% if linkRel %}rel="{{linkRel}}"{% endif %}>
+  {% if params.withChevronLeft -%}
+  {{ wmcadsIcon({ icon: "general-chevron-right", class: "wmcads-link__chevron wmcads-link__chevron--left" }) | indent(4) | trim }}
+  {%- endif %}
+  {{- prefix -}}{{- text -}}
+  {% if params.withChevronRight -%}
+  {{ wmcadsIcon({ icon: "general-chevron-right", class: "wmcads-link__chevron wmcads-link__chevron--right" }) | indent(4) | trim }}
+  {%- endif %}
+</a>
+
+{% endmacro %}

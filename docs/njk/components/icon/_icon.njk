@@ -1,0 +1,7 @@
+{% macro wmcadsIcon(params) %}
+
+<svg {% if params.class %}class="{{params.class}}"{% endif %}>
+  <use xlink:href="#wmcads-{{params.icon}}" href="#wmcads-{{params.icon}}"></use>
+</svg>
+
+{% endmacro %}

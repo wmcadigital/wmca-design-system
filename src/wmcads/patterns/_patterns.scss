@@ -1,8 +1,9 @@
 // This file is imported from ./assets/sass/wmcads-components.scss
 
 @import "autocomplete/autocomplete"; // Autocomplete
-@import "banner/banner";  // Banner styles
-@import "feedback-loop/feedback-loop"; // Feedback loop styles
+@import "banner/banner"; // Header styles
+@import "cookies/cookies"; // Cookies styles
+@import "feedback-loop/feedback-loop"; // Feedback loop
 @import "footer/footer"; // Footer styles
 @import "header/header"; // Header styles
-@import "header/header"; // Header styles
+@import "search/search"; // Search pattern styles

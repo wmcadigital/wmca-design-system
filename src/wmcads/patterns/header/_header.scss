@@ -28,6 +28,16 @@ $header-height-mobile: 4rem;
       width: 100%;
       height: 100vh;
       overflow: hidden;
+
+      // row-reverse ensures close icon is on the right
+      .wmcads-mega-menu {
+        flex-direction: row-reverse;
+
+        &__search-btn {
+          margin-right: $size-sm;
+          margin-left: 0;
+        }
+      }
     }
   }
 }
@@ -65,7 +75,7 @@ $header-height-mobile: 4rem;
   // Logo styles
   &__logo-link {
     display: inline-block;
-    width: 38px;
+    width: 34px;
     height: 34px;
     margin-right: $size-sm;
     overflow: hidden;
@@ -187,6 +197,16 @@ $header-height-mobile: 4rem;
     fill: currentColor;
   }
 
+  &__search-close-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+  }
+
+  &__search-close-icon {
+    display: none;
+  }
+
   &__mobile-toggle,
   &__link-arrow-icon,
   &__link-arrow-icon-btn,
@@ -209,20 +229,13 @@ $header-height-mobile: 4rem;
       display: block;
       z-index: 100;
       height: 2.25rem;
-      padding: 0 0.5rem;
-      border: 0;
-      color: get-color(background);
-      background: get-color(secondary);
+      padding: 0 1.35rem;
+      border-color: $white;
+      color: $white;
     }
 
     &__close-icon {
       display: none;
-      width: 1.5rem;
-      height: 1.5rem;
-      fill: currentColor;
-    }
-
-    &__hamburger-icon {
       width: 1.5rem;
       height: 1.5rem;
       fill: currentColor;
@@ -336,18 +349,6 @@ $header-height-mobile: 4rem;
           opacity: 1;
         }
       }
-
-      &-search {
-        background: get-color(primary);
-
-        form {
-          display: contents;
-        }
-
-        svg {
-          fill: $white;
-        }
-      }
     }
 
     &__link-arrow-icon-btn {
@@ -363,16 +364,7 @@ $header-height-mobile: 4rem;
       width: 1.8rem;
       height: 1.8rem;
       transition: $icon-transition;
-      color: get-color(secondary);
-      fill: currentColor;
-    }
-
-    &__link-search-icon {
-      display: block;
-      width: 1.8rem;
-      height: 1.8rem;
-      transition: $icon-transition;
-      color: get-color(secondary);
+      color: get-color(primary);
       fill: currentColor;
     }
 
@@ -462,7 +454,8 @@ $header-height-mobile: 4rem;
       text-decoration: none;
     }
 
-    &__search {
+    &__search-btn {
+      position: relative;
       margin-left: $size-sm;
       padding-right: $size-xsm;
       padding-left: $size-xsm;
@@ -497,10 +490,6 @@ $header-height-mobile: 4rem;
     }
 
     &-open {
-      .wmcads-mega-menu__search {
-        display: none;
-      }
-
       .wmcads-mega-menu__scroll-controller {
         visibility: visible;
         opacity: 1;
@@ -513,10 +502,6 @@ $header-height-mobile: 4rem;
 
         .wmcads-mega-menu__close-icon {
           display: block;
-        }
-
-        .wmcads-mega-menu__hamburger-icon {
-          display: none;
         }
       }
     }
@@ -581,6 +566,7 @@ $header-height-mobile: 4rem;
 
     &__primary-menu-link {
       min-height: 100%;
+      margin: 0;
       padding: 1rem 1.5rem;
       transition: $link-transition;
       color: $white;
@@ -678,6 +664,110 @@ $header-height-mobile: 4rem;
   }
 }
 
+@media screen and (max-width: $breakpoint-md - 1) {
+  .wmcads-mega-menu__search-container {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: visible;
+    opacity: 0;
+  }
+
+  .wmcads-header--search-open {
+    position: fixed;
+    width: 100%;
+
+    .wmcads-mega-menu__search-container {
+      visibility: visible;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .wmcads-mega-menu__search-icon {
+      display: none;
+    }
+
+    .wmcads-mega-menu__search-close-icon {
+      display: block;
+    }
+  }
+}
+
+.wmcads-search-container {
+  margin: 0 auto;
+  padding: $size-md;
+
+  .wmcads-search-heading {
+    margin: $size-lg 0;
+    font-family: $x-heading-font-family;
+    font-weight: 700;
+  }
+
+  .wmcads-search-list {
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      display: block;
+      list-style: none;
+    }
+  }
+
+  .wmcads-link {
+    &__chevron {
+      fill: get-color(secondary);
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-md - 1) {
+    max-height: calc(100vh - #{$header-height-mobile});
+    overflow-y: auto;
+    color: $white;
+    background-color: get-color(primary);
+
+    .wmcads-search-heading {
+      color: currentColor;
+    }
+
+    .wmcads-search-bar__input {
+      border: 0;
+    }
+
+    .wmcads-search-bar__btn {
+      background-color: get-color(secondary);
+    }
+
+    .wmcads-link {
+      color: $white;
+    }
+  }
+  @media screen and (min-width: $breakpoint-sm) {
+    .wmcads-search-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+        padding-right: 1em;
+      }
+    }
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    max-width: 40rem;
+    padding: $size-lg $size-md;
+
+    .wmcads-link {
+      color: get-color(primary);
+      text-decoration: none;
+
+      &:hover {
+        color: get-color(primary);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 .wmcads-swift-icon {
   display: inline-block;
   width: 3.5em;
@@ -705,68 +795,5 @@ $header-height-mobile: 4rem;
 .wmcads-website-code-example {
   .wmcads-mega-menu::before {
     position: absolute;
-  }
-}
-
-// search dialog
-.default__dialog {
-  display: block;
-  position: fixed;
-  z-index: 9999;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  min-height: 50vh;
-  color: $white;
-  background-color: get-color(secondary);
-
-  .search-input {
-    position: absolute;
-    left: $size-lg;
-    height: 80px;
-    margin-top: $size-xl;
-
-    input {
-      @media screen and (min-width: $breakpoint-sm) {
-        font-size: $size-xl;
-      }
-      width: 100%;
-      border: 0 !important;
-      color: get-color(primary);
-      background: transparent;
-
-      &:focus {
-        color: get-color(primary);
-        background: transparent;
-      }
-    }
-
-    button[type="submit"] {
-      margin: 0 $size-xs;
-      font-size: $size-lg;
-    }
-  }
-
-  .icon-close {
-    position: fixed;
-    top: $size-lg;
-    right: $size-lg;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    @media screen and(min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-      right: $size-xs;
-    }
-
-    svg {
-      width: $size-xl;
-      height: $size-xl;
-      fill: $white;
-
-      &:hover {
-        fill: get-color(primary);
-      }
-    }
   }
 }

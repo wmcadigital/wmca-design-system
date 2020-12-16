@@ -4,35 +4,41 @@
 .wmcads-link {
   @at-root a:not([class*="wmcads-"]),
   & {
-    color: get-color(cta);
+    color: get-color(cta, 10, dark);
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
 
+    &:visited {
+      color: get-color(primary);
+    }
+
     &:hover {
-      color: get-color(ctaDark);
+      color: get-color(cta, 40, dark);
     }
   }
 
-  &--with-icon {
+  &--with-chevron {
     display: inline-flex;
+
+    // prevent icon resizing
+    .wmcads-link__chevron {
+      flex: 0 0 1.5rem;
+    }
   }
 
-  &__icon {
-    width: 1rem;
-    height: 1rem;
+  &__chevron {
+    width: 1.5rem;
+    height: 1.5rem;
     fill: get-color(cta, 10, dark);
 
     &--left {
-      margin-top: 0.2rem;
       margin-right: $size-xsm;
+      transform: rotate(180deg);
     }
 
     &--right {
-      margin-top: 0.2rem;
       margin-left: $size-xsm;
     }
   }
 }
-
-

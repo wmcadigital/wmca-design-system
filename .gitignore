@@ -9,3 +9,7 @@ build/
 **/a11y-report.json
 **/.tmp
 .vscode
+
+# Local Netlify folder
+.netlify
+.DS_Store

@@ -1,0 +1,56 @@
+{% macro wmcadsFileUpload(params) %}
+
+{# Imports #}
+{% from "components/icon/_icon.njk" import wmcadsIcon %}
+
+<div class="wmcads-fe-group">
+  <fieldset class="wmcads-fe-fieldset">
+    <legend class="wmcads-fe-fieldset__legend">
+      <h3 class="wmcads-fe-question">
+        Upload a file
+      </h3>
+      <p>
+        Files must be jpeg or png file format and be less than 2mb
+      </p>
+    </legend>
+    {% if params.fileSelected -%}
+      <div class="wmcads-fe-file-upload">
+        <input
+          type="file"
+          name="fileUploaded"
+          id="fileUploaded"
+          class="wmcads-fe-file-upload__input wmcads-fe-file-upload__input--file-selected"
+        />
+        <label for="fileUploaded" class="wmcads-btn wmcads-btn--primary wmcads-fe-file-upload__label">
+          Remove file
+          <svg class="wmcads-btn__icon wmcads-btn__icon--right">
+            <use xlink:href="#wmcads-general-trash" href="#wmcads-general-trash"></use>
+          </svg>
+        </label>
+        <span>
+          test-file.jpg
+        </span>
+      </div>
+    {%- else -%}
+      <div class="wmcads-fe-file-upload">
+        <input
+          type="file"
+          name="fileUpload"
+          id="fileUpload"
+          class="wmcads-fe-file-upload__input"
+        />
+        <label for="fileUpload" class="wmcads-btn wmcads-btn--primary wmcads-fe-file-upload__label">
+          Choose file
+          <svg class="wmcads-btn__icon wmcads-btn__icon--right">
+            <use xlink:href="#wmcads-general-paperclip" href="#wmcads-general-paperclip"></use>
+          </svg>
+        </label>
+        <span>
+          no file selected
+        </span>
+      </div>
+    {%- endif %}
+  </fieldset>
+</div>
+
+{% endmacro %}

@@ -1,0 +1,18 @@
+{% macro wmcadsMsgHelp(params) %}
+{% from "components/icon/_icon.njk" import wmcadsIcon %}
+{# Set vars and defaults #}
+
+<div class="wmcads-msg-help">
+  <button class="wmcads-msg-help__close-btn" aria-label="Close help message">
+    {# Get SVG icon #}
+    {{-
+      wmcadsIcon({
+        icon: 'general-cross',
+        class: 'wmcads-msg-help__close-icon'
+      }) | indent(4) | trim
+    }}
+  </button>
+  {{ params.message | safe }}
+</div>
+
+{% endmacro %}

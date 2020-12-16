@@ -27,8 +27,8 @@
 <br><br>
 
 
-{# primary buttons #}
-<h2>Primary buttons</h2>
+{# Call to action buttons #}
+<h2>Call to action buttons</h2>
 {# What #}
 <h3>What does it do?</h3>
 <ul>
@@ -40,6 +40,7 @@
 <ul>
   <li>When you need a strong visual indicator to help user to complete their journey and do their task.</li>
   <li>When you need action oriented button. Think: 'Done', 'Save', 'Next', 'Submit'.</li>
+  <li>Use the Dark background variant when a Call to action button will be used against a background with a dark colour, such as primary purple.</li>
 </ul>
 {# When not #}
 <h3>When not to use it?</h3>
@@ -48,43 +49,114 @@
   <li>When a button is a destructive action.</li>
   <li>When a button starts a process or journey.</li>
 </ul>
-{%- from "wmcads/components/button/_button.njk" import wmnButton as cta %}
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as cta %}
+{{
+  compExample(
+    [
+      cta({
+        text: "Call to action button"
+      }),
+      cta({
+        classNames: "wmcads-is--active",
+        text: "Call to action active button"
+      }),
+      cta({
+        text: "Call to action disabled button",
+        disabled: true
+      }),
+      cta({
+        text: "Call to action icon button",
+        iconRight: "general-chevron-right"
+      }),
+      cta({
+        text: "Call to action loading button",
+        loading: true
+      }),
+      cta({
+        text: "Call to action icon disabled button",
+        iconRight: "general-chevron-right",
+        disabled: true
+      })
+    ],
+    {
+      componentPath: "wmcads/components/button/",
+      njk: true
+    }
+  )
+}}
+
+{# Dark background variant #}
+<h3>Dark background variant</h3>
 {{
   compExample([
     cta({
-      text: "Call to action button"
-    }),
-     cta({
-      classNames: "wmcads-is--active",
-      text: "Call to action active button"
+      classNames: "wmcads-btn--dark-bg",
+      text: "Call to action dark bg button"
     }),
     cta({
-      text: "Call to action disabled button",
-      disabled: true
-    }),
-    cta({
-      text: "Call to action icon button",
-      iconRight: "general-icon-chevron-right"
-    }),
-    cta({
-      text: "Call to action loading button",
-      loading: true
-    }),
-    cta({
-      text: "Call to action icon disabled button",
-      iconRight: "general-icon-chevron-right",
-      disabled: true
-    }),
-    cta({
-      text: "Long Call to action icon button Lorem ipsum dolor sit amet",
-      iconRight: "general-icon-chevron-right",
-      disabled: false
+      classNames: "wmcads-btn--dark-bg wmcads-is--active",
+      text: "Call to action dark bg active button"
     })
   ])
 }}
 {# end: call to action buttons #}
 <br><br>
 
+{# primary buttons #}
+<h2>Primary buttons</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+  <li>Gives users alternative to the call to action button.</li>
+</ul>
+{# When #}
+<h3>When to use it?</h3>
+<ul>
+  <li>When action is not as important as a call to action so it shouldn’t call as much attention.</li>
+  <li>When a button typically indicates actions that are important but not the call to action on a page.</li>
+  <li>Can be used in isolation or in conjunction with call to action button and secondary.</li>
+</ul>
+{# When not #}
+<h3>When not to use it?</h3>
+<ul>
+  <li>When a button is essential for continuing the user journey</li>
+  <li>When a button is a destructive action</li>
+  <li>When a button starts a process or journey</li>
+</ul>
+
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as primary -%}
+{{
+  compExample([
+    primary({
+      classNames: "wmcads-btn--primary",
+      text: "Primary button"
+    }),
+    primary({
+      classNames: "wmcads-btn--primary wmcads-is--active",
+      text: "Primary active button"
+    }),
+    primary({
+      classNames: "wmcads-btn--primary",
+      text: "Primary disabled button",
+      disabled: true
+    }),
+    primary({
+      classNames: "wmcads-btn--primary",
+      text: "Primary icon button",
+      iconRight: "general-chevron-right"
+    }),
+    primary({
+      classNames: "wmcads-btn--primary",
+      text: "Primary icon disabled button",
+      iconRight: "general-chevron-right",
+      disabled: true
+    })
+  ])
+}}
+{# end: primary buttons #}
+
+
+<br><br>
 {# secondary buttons #}
 <h2>Secondary buttons</h2>
 {# What #}
@@ -100,6 +172,7 @@
   <li>To indicate lower priority than call to action and primary button.</li>
   <li>To create a clear hierarchy of priority and importance of actions.</li>
   <li>When a button is inessential for continuing the user journey.</li>
+  <li>Use the Dark background variant when a Secondary button will be used against a background with a dark colour, such as primary purple.</li>
 </ul>
 {# When not #}
 <h3>When not to use it?</h3>
@@ -110,7 +183,7 @@
   <li>When a button starts a process or journey</li>
 </ul>
 
-{%- from "wmcads/components/button/_button.njk" import wmnButton as secondary -%}
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as secondary -%}
 {{
   compExample([
     secondary({
@@ -129,13 +202,27 @@
     secondary({
       classNames: "wmcads-btn--secondary",
       text: "Secondary icon button",
-      iconRight: "general-icon-chevron-right"
+      iconRight: "general-chevron-right"
     }),
     secondary({
       classNames: "wmcads-btn--secondary",
       text: "Secondary icon disabled button",
-      iconRight: "general-icon-chevron-right",
+      iconRight: "general-chevron-right",
       disabled: true
+    })
+  ])
+}}
+{# Dark background variant #}
+<h3>Dark background variant</h3>
+{{
+  compExample([
+    secondary({
+      classNames: "wmcads-btn--secondary wmcads-btn--dark-bg",
+      text: "Secondary dark bg button"
+    }),
+    secondary({
+      classNames: "wmcads-btn--secondary wmcads-btn--dark-bg wmcads-is--active",
+      text: "Secondary dark bg active button"
     })
   ])
 }}
@@ -163,7 +250,7 @@
   <li>When a button is trying to attract the user's attention</li>
 </ul>
 
-{%- from "wmcads/components/button/_button.njk" import wmnButton as destructive -%}
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as destructive -%}
 {{
   compExample([
     destructive({
@@ -182,12 +269,12 @@
     destructive({
       classNames: "wmcads-btn--destructive",
       text: "Destructive icon button",
-      iconRight: "general-icon-chevron-right"
+      iconRight: "general-chevron-right"
     }),
     destructive({
       classNames: "wmcads-btn--destructive",
       text: "Destructive icon disabled button",
-      iconRight: "general-icon-chevron-right",
+      iconRight: "general-chevron-right",
       disabled: true
     })
   ])
@@ -216,7 +303,7 @@
   <li>When the button is inessential for continuing the user journey</li>
 </ul>
 
-{%- from "wmcads/components/button/_button.njk" import wmnButton as start -%}
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as start -%}
 {{
   compExample([
     start({
@@ -235,16 +322,75 @@
     start({
       classNames: "wmcads-btn--start",
       text: "Start icon button",
-      iconRight: "general-icon-chevron-right"
+      iconRight: "general-chevron-right"
     }),
     start({
       classNames: "wmcads-btn--start",
       text: "Start icon disabled button",
-      iconRight: "general-icon-chevron-right",
+      iconRight: "general-chevron-right",
       disabled: true
     })
   ])
 }}
 {# end: start buttons #}
+<br><br>
 
+
+{# mode buttons #}
+<h2>Mode buttons</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+  <li>Lets the user select a mode of transport by which to filter</li>
+</ul>
+{# When #}
+<h3>When to use it?</h3>
+<ul>
+  <li>Filtering results or data by mode</li>
+  <li>Filtering a map by mode</li>
+</ul>
+{# When not #}
+<h3>When not to use it?</h3>
+<ul>
+  <li>When a button is essential for continuing the user journey</li>
+  <li>When a button is a destructive action</li>
+  <li>When a button starts a process or journey</li>
+</ul>
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as mode -%}
+{{
+  compExample([
+    mode({
+      classNames: "wmcads-btn--mode",
+      text: "Bus",
+      iconLeft: "modes-isolated-bus"
+    }),
+    mode({
+      classNames: "wmcads-btn--mode wmcads-is--active",
+      text: "Bus active",
+      iconLeft: "modes-isolated-bus"
+    }),
+    mode({
+      classNames: "wmcads-btn--mode",
+      text: "Train",
+      iconLeft: "modes-isolated-rail"
+    }),
+    mode({
+      classNames: "wmcads-btn--mode",
+      text: "Metro",
+      iconLeft: "modes-isolated-metro"
+    }),
+    mode({
+      classNames: "wmcads-btn--mode",
+      text: "Roads",
+      iconLeft: "modes-isolated-roads"
+    }),
+    mode({
+      classNames: "wmcads-btn--mode",
+      text: "Disabled mode button",
+      iconLeft: "modes-isolated-bus",
+      disabled: true
+    })
+  ])
+}}
+{# end: mode buttons #}
 {% endblock %}

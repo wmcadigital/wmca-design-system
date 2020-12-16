@@ -3,6 +3,7 @@
 {% macro wmcadsAutocomplete(params) %}
 {# Imports #}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium %}
 {% from "wmcads/components/form-elements/label/_label.njk" import wmcadsLabel %}
 {# Params #}
 {% set query = params.query if params.query else "" %} {# default to x15 as query text if one isn't available #}
@@ -24,7 +25,7 @@
   <!-- Search icon -->
   {{
     wmcadsIcon({
-      icon: 'general-icon-search',
+      icon: 'general-search',
       class: 'wmcads-autocomplete__icon'
     }) | indent(2) | trim
   -}}
@@ -53,7 +54,12 @@
   {%- for i in range(1,6) %}
   <li class="wmcads-autocomplete-suggestions__li wmcads-grid" title="Good service on X15" tabindex="0">
     <div class="wmcads-col-auto" >
-
+      {{
+        wmcadsDisruptionIndicatorMedium({
+          classModifiers: 'wmcads-disruption-indicator-medium',
+          text: query
+        }) | indent(8) | trim
+      }}
     </div>
     <div class="wmcads-col-1-2 wmcads-col-sm-2-3">
       <strong>Oldbury to Dudley {{i}}</strong><br>and return journey

@@ -1,0 +1,27 @@
+{% macro wmcadsContentCardButtons(params) %}
+{# imports #}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "wmcads/components/button/_button.njk" import wmcadsButton %}
+{# Set #}
+{% set buttons = ["I drive", "I use the bus", "I use the train", "I use the tram", "I walk or cycle", "I want to visit an attraction or venue"] %}
+
+{% call wmcadsContentCard() %}
+    <div class="wmcads-p-sm">
+        <h2 class="wmcads-content-card__title">Advice to keep moving</h2>
+        <ul class="wmcads-content-card__list wmcads-m-b-none">
+            {% for buttonText in buttons -%}
+            <li class="wmcads-content-card__list-item">
+                {{
+                    wmcadsButton({
+                        text: buttonText,
+                        classNames: "wmcads-btn--primary wmcads-content-card__list-item-btn",
+                        iconRight: "general-chevron-right"
+                    }) | indent(16) | trim
+                }}
+            </li>
+            {% endfor -%}
+        </ul>
+    </div>
+{% endcall %}
+
+{% endmacro %}
