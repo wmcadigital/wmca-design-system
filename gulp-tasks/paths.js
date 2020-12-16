@@ -1,14 +1,14 @@
 module.exports = {
-  output: 'docs/', // Default output location for code docs
+  output: 'build/', // Default output location for code build
   server: {
     port: 8080,
-    baseDir: './docs/',
-    root: './docs/'
+    baseDir: './build/',
+    root: './build/'
   },
   styles: {
     src: ['src/**/*.scss'], // src of styles to watch
     minifySrc: ['src/wmcads/assets/sass/wmcads.scss', 'src/www/wmcads-website.scss'], // List of scss file(s) which should be processed, linted & minified
-    output: 'docs/css/', // output location of minified styles
+    output: 'build/css/', // output location of minified styles
     reactNativeSrc: 'src/wmcads/assets/sass/wmcads.scss'
   },
   scripts: {
@@ -21,39 +21,39 @@ module.exports = {
         lint: true
       }
     ],
-    output: 'docs/js/' // Output location of minified JS files
+    output: 'build/js/' // Output location of minified JS files
   },
   fonts: {
     src: 'src/wmcads/assets/fonts/**/*',
-    output: 'docs/fonts/'
+    output: 'build/fonts/'
   },
   nunjucks: {
     src: 'src/**/*.{njk,md,html}', // Used for watching njk files
     websiteSrc: 'src/www/pages/**/*.{njk,md,html}',
     componentSrc: 'src/wmcads/**/*.{njk,md,html}',
-    output: 'docs/',
-    componentOutput: 'docs/njk'
+    output: 'build/',
+    componentOutput: 'build/njk'
   },
   njkData: {
     src: 'src/**/*.njk.json',
-    output: 'docs/json/'
+    output: 'build/json/'
   },
   svgs: {
     src: 'src/wmcads/assets/icon/**/*.svg',
-    dest: 'docs/img/'
+    dest: 'build/img/'
   },
   images: {
     src: ['src/wmcads/assets/img/**/*.{png,gif,jpg}'],
     output: 'src/wmcads/assets/img/**/*',
-    dest: 'docs/img/'
+    dest: 'build/img/'
   },
   config: {
     src: 'src/www/assets/config/**/*',
-    output: 'docs/config/'
+    output: 'build/config/'
   },
   netlifyConfig: {
     src: '_redirects',
-    output: 'docs/'
+    output: 'build/'
   },
   logs: {
     sourcemaps: '_sourcemaps/'
