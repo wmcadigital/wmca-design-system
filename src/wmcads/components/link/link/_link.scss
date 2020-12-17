@@ -10,11 +10,11 @@
     cursor: pointer;
 
     &:visited {
-      color: get-color(primary);
+      color: get-color(cta-active);
     }
 
     &:hover {
-      color: get-color(cta, 40, dark);
+      color: get-color(cta-active, 40, dark);
     }
   }
 

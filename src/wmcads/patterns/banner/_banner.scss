@@ -2,6 +2,7 @@
   $self: &;
   padding: $size-md 0;
   border-bottom: 1px solid get-color(text);
+  background-color: $white;
 
   &--emergency {
     padding: $size-md;

@@ -45,14 +45,11 @@
             "name": "Content card"
           },
           {
-            "name": "Content tiles"
-          },
-          {
             "name": "Details"
           },
           {
-            "name": "Disruption indicators"
-          },
+            "name": "Document"
+          },				          
           {
             "name": "File download"
           },
@@ -78,10 +75,25 @@
             "name": "Message"
           },
           {
+            "name": "Page header"
+          },
+          {
             "name": "Phase indicator"
           },
           {
+            "name": "Portfolio dashboard"
+          },
+          {
+            "name": "Portfolio leads"
+          },
+          {
+            "name": "Share"
+          },
+          {
             "name": "Table"
+          },
+          {
+            "name": "Tag"
           },
           {
             "name": "Warning text"
