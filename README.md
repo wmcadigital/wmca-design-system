@@ -1,7 +1,9 @@
 # 1. WMCA Design System
 
-[![Last commit](https://img.shields.io/github/last-commit/wmcadigital/wmcads-design-system?style=flat-square)](https://github.com/wmcadigital/wmca-design-system/commits/master)
-[![Open Github issues](https://img.shields.io/github/issues-raw/wmcadigital/wmcads-design-system?style=flat-square)](https://github.com/wmcadigital/wmca-design-system/issues)
+![Netlify](https://img.shields.io/netlify/04471bb6-9621-4c59-abe8-b4fdf74a3860)
+![David](https://img.shields.io/david/wmcadigital/wmca-design-system?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/wmcadigital/wmca-design-system?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-raw/wmcadigital/wmca-design-system?style=flat-square)
 
 ## 1.1. Table of contents
 

@@ -86,35 +86,4 @@
   })
 }}
 
-<br><br>
-{# Custom #}
-<h2>Custom</h2>
-<p>
-  In the example below, you can see that we have cusomised the summary section of the accordion so that it contains an <a href="/components/disruption-indicator/" title="Disruption indicator component" target="_self" class="wmcads-link"> disruption indicator</a> and some text.
-</p>
-<p>
-  The accordion has been built so that it can easily be customised. You can customise both the summary and the content elements.
-</p>
-<p>
-  To customise the summary (title) section of the accordion, ensure that you nest valid and accessible html within the <code class="wmcads-website-inline-code">.wmcads-accordion__summary</code> element.
-</p>
-<p>
-  To customise the content section of the accordion, ensure that you nest valid and accessible html within the <code class="wmcads-website-inline-code">.wmcads-accordion__content</code> element.
-</p>
-{{
-  compExample([
-    wmcadsAccordion({
-      id: 'accordion-custom-01',
-      isOpen: true,
-      customSummary: true
-    }) | trim
-  ],
-  {
-    componentPath: "wmcads/components/accordion/",
-    njk: false,
-    js: true,
-    iframe: false
-  })
-}}
-
 {% endblock %}
