@@ -1,0 +1,33 @@
+.wmcads-tag {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  color: $white;
+  background: $black;
+  cursor: pointer;
+
+  &-text {
+    font-size: $size-md;
+  }
+
+  &-triangle {
+    position: absolute;
+    top: 0;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid $black;
+  }
+
+  &-dot {
+    position: absolute;
+    top: 14px;
+    right: -9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: $white;
+  }
+}

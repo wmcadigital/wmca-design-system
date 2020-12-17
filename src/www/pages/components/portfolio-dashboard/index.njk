@@ -1,0 +1,12 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Portfolio dashboard" %}
+{% from "wmcads/components/portfolio-dashboard/_portfolio-dashboard.njk" import wmcadsPortfolioDashboard %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+{{
+  compExample([
+    wmcadsPortfolioDashboard()
+  ])  
+}}
+{% endblock %}
