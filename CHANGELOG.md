@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.0.0...v1.1.0) (2020-12-17)
+
+
+### Features
+
+* ds updates ([#68](https://github.com/wmcadigital/wmca-design-system/issues/68)) ([04d0932](https://github.com/wmcadigital/wmca-design-system/commit/04d0932236f4abb7b2c0e2c4c3511415edd99b1d))
+
 # 1.0.0 (2020-12-16)
 
 
