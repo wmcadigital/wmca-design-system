@@ -1,0 +1,35 @@
+{% macro wmcadsCookiesBanner(params) %}
+
+{# Imports of components #}
+{% from "components/button/_button.njk" import wmcadsButton as primary %}
+{%- from "components/link/as-button/_as-button.njk" import wmcadsLinkAsButton as cta %}
+
+
+<div class="bg-white wmcads-p-t-md wmcads-p-b-md wmcads-cookies-banner">
+  <div class="wmcads-container">
+    <div class="wmcads-col-1 wmcads-col-md-3-4 wmcads-col-lg-2-3">
+      <h3>Your privacy settings</h3>
+      <p>
+        If you’re happy with the use of cookies by West Midlands Combined Authority
+        and our selected partners, click ‘Accept all cookies’. Or click ‘Manage cookies’ to learn more.
+      </p>
+      <div class="wmcads-grid wmcads-grid--justify-between wmcads-cookies-banner__group-buttons">
+        {{
+          primary({
+            classNames: "wmcads-btn wmcads-col-1 wmcads-col-sm-1 wmcads-col-md-12-24  wmcads-cookies-banner__accept-all-cookies",
+            text: "Accept all cookies"
+          }) | trim | indent(8)
+        }}
+        {{
+          cta({
+            text: "Manage Cookies",
+            classNames: "wmcads-btn wmcads-col-1 wmcads-col-sm-1 wmcads-col-md-12-24",
+            link: "/patterns/cookies/#cookies_manager"
+          }) | trim | indent(8)
+        }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}

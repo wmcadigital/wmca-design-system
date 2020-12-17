@@ -1,0 +1,60 @@
+{% macro wmcadsAccordion(params) %}
+{# Imports #}
+{% from "components/icon/_icon.njk" import wmcadsIcon %}
+{% from "components/disruption-indicator/small/_small.njk" import wmcadsDisruptionIndicatorSmall %}
+{% from "components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium as wmcadsDisruptionIndicatorNarrow %}
+{% from "components/icon/_icon.njk" import wmcadsIcon %}
+{# Params #}
+{% set isOpen = " wmcads-is--open" if params.isOpen %}
+{% set isExpanded = "true" if params.isOpen else "false" %}
+{% set id = params.id if params.id else "accordion-01" %}
+
+<div class="wmcads-accordion{{isOpen}}">
+  <button aria-controls="{{id}}" class="wmcads-accordion__summary-wrapper" aria-expanded="{{isExpanded}}">
+    <!-- accordion summary -->
+    <div class="wmcads-accordion__summary">
+      {% if params.customSummary -%}
+      <!-- custom summary using grid -->
+      <div class="wmcads-grid wmcads-grid--align-center">
+        {{
+          wmcadsDisruptionIndicatorSmall({
+            classModifiers: 'wmcads-col-auto wmcads-m-r-md',
+            mode: 'bus'
+          }) | indent(10) | trim
+        }}
+        <div class="wmcads-col-auto">
+          Resurfacing Works at <strong>Abbey Street, Lower Gornal</strong>
+        </div>
+      </div>
+      {%- else -%}
+        <h4 class="wmcads-m-b-none">Accordion</h4>
+      {%- endif %}
+    </div>
+    <!-- plus icon -->
+    {{
+      wmcadsIcon({
+        icon: 'general-expand',
+        class: 'wmcads-accordion__icon'
+      }) | indent(4) | trim
+    }}
+    <!-- minus icon -->
+    {{
+      wmcadsIcon({
+        icon: 'general-minimise',
+        class: 'wmcads-accordion__icon wmcads-accordion__icon--minimise'
+      }) | indent(4) | trim
+    }}
+  </button>
+
+  <!-- accordion content -->
+  <div class="wmcads-accordion__content" id="{{id}}">
+    <p>
+      <strong>Some random subtitle</strong>
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur, eius repellat dolor vel corporis eos fugiat. Ut totam, incidunt sequi iusto nesciunt illum natus, dolores velit cumque, excepturi labore!
+    </p>
+  </div>
+</div>
+
+{% endmacro %}
