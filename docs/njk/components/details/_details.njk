@@ -1,0 +1,14 @@
+{% macro wmcadsDetails(params) %}
+{# Imports #}
+{% from "components/icon/_icon.njk" import wmcadsIcon %}
+{# Params  #}
+{% set summary = params.summary or "Type something"%}
+{% set content = params.content or "Type something"%}
+
+<details class="wmcads-details" {%- if params.expanded %} open="true" {%- endif -%}>
+    <summary class="wmcads-link">{{summary}}</summary>
+    <div class="wmcads-details__content">
+        <p>{{content}}</p>
+    </div>
+</details>
+{% endmacro %}

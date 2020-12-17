@@ -28,17 +28,7 @@
 
 {{
     compExample([
-        wmcadsContentCard({src: true}),
-        wmcadsContentCard(),
-        wmcadsContentCard({
-            html: '
-                <div class="wmcads-p-sm">
-                    <h3>Headline</h3>
-                    <p>A short sentence explaining what this is, it can be 2 lines.</p>
-                </div>
-            '
-        })
-
+        wmcadsContentCard()
     ])
 }}
 
@@ -64,13 +54,39 @@
 
 {{
     compExample([
-        wmcadsContentCard({clickable: true, src: true}),        
         wmcadsContentCard({
             clickable: true
-        }),
+        })
+    ])
+}}
+
+<br><br>
+{# Yellow modifier #}
+<h2>Yellow modifier</h2>
+{# What #}
+<h3>What is it?</h3>
+<ul>
+    <li>The styling of the card changes to match disruption yellow branding</li>
+    <li>The styling helps users through their journey to major roadworks and events information</li>
+</ul>
+{# When to #}
+<h3>When to use it?</h3>
+<ul>
+    <li>When you are linking to a disruptions (major roadworks and events) page</li>
+    <li>Only one card should be yellow on a page</li>
+</ul>
+{# When not to #}
+<h3>When not to use it?</h3>
+<ul>
+    <li>When you are not linking to a disruptions (major roadworks and events) page</li>
+    <li>To attract the user's attention to a campaign other than disruptions</li>
+    <li>When there is another yellow card on the page</li>
+</ul>
+
+{{
+    compExample([
         wmcadsContentCard({
-            clickable: true,
-            isCta: true
+            yellow: true
         })
     ])
 }}
