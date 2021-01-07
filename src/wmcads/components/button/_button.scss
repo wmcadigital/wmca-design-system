@@ -12,7 +12,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   border: 1px solid transparent;
   border-radius: $btn-border-radius;
   color: $white;
-  background-color: get-color(cta);
+  background-color: get-color(primary);
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -20,7 +20,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   cursor: pointer;
 
   &:hover {
-    background-color: get-color(cta, 30, dark);
+    background-color: get-color(primary, 30, dark);
   }
 
   &:active,
@@ -28,7 +28,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   &:focus,
   &.wmcads-is--active {
     outline: none;
-    background-color: get-color(cta, 50, dark);
+    background-color: get-color(primary, 50, dark);
     -webkit-appearance: none;
   }
 
@@ -173,43 +173,6 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     &:focus,
     &.wmcads-is--active {
       background-color: get-color(success, 50, dark);
-    }
-  }
-
-  // button mode
-  &--mode {
-    border: $btn-border-width solid get-color(primary);
-    color: get-color(primary);
-    background-color: $white;
-
-    .wmcads-btn__icon {
-      margin-right: $size-xs;
-      fill: get-color(primary);
-    }
-
-    &:hover {
-      background-color: get-color(secondary, 70);
-    }
-
-    &:active,
-    &:target,
-    &:focus {
-      background-color: initial;
-    }
-
-    &.wmcads-is--active {
-      background-color: get-color(secondary, 50);
-    }
-
-    // Modal disabled
-    &.wmcads-btn--disabled:disabled {
-      border-color: get-color(disable);
-      color: get-color(disable);
-      background: $white;
-
-      .wmcads-btn__icon {
-        fill: get-color(disable);
-      }
     }
   }
 

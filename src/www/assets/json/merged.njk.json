@@ -45,13 +45,10 @@
 					"name": "Content card"
 				},
 				{
-					"name": "Content Tiles"
-				},
+					"name": "Document"
+				},				
 				{
 					"name": "Details"
-				},
-				{
-					"name": "Disruption indicators"
 				},
 				{
 					"name": "File download"
@@ -78,14 +75,29 @@
 					"name": "Message"
 				},
 				{
+					"name": "Page header"
+				},
+				{
 					"name": "Phase indicator"
 				},
+				{
+					"name": "Portfolio dashboard"
+				},				
+				{
+					"name": "Portfolio leads"
+				},
+				{
+					"name": "Share"
+				},				
 				{
 					"name": "Table"
 				},
 				{
+					"name": "Tag"
+				},				
+				{
 					"name": "Warning text"
-				}
+				}				
 			]
 		},
 		{
@@ -104,16 +116,10 @@
 					"name": "Contact Details"
 				},
 				{
-					"name": "Content cards"
-				},
-				{
 					"name": "Feedback loop"
 				},
 				{
 					"name": "Header and footer"
-				},
-				{
-					"name": "Header v2"
 				},
 				{
 					"name": "Question Form"

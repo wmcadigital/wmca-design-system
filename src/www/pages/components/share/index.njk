@@ -1,0 +1,12 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Share" %}
+{% from "wmcads/components/share/_share.njk" import wmcadsShare %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+{{
+  compExample([
+    wmcadsShare()
+  ])  
+}}
+{% endblock %}
