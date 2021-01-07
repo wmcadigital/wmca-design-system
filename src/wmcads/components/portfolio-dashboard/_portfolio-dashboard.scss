@@ -1,0 +1,17 @@
+.wmcads-portfolio-dashboard {
+  display: block;
+  width: 275px;
+  padding: 20px;
+  background: get-color(background);
+
+  svg {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+  }
+
+  &-details {
+    vertical-align: top;
+  }
+}

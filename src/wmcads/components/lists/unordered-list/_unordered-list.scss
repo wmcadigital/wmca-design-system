@@ -18,6 +18,7 @@
       content: "●";
       position: absolute;
       left: -1.5rem;
+      color: get-color(primary);
     }
   }
 
@@ -29,6 +30,7 @@
 
     li:before {
       content: "–";
+      color: get-color(primary);
     }
   }
 }

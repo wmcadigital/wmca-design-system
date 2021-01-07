@@ -1,0 +1,20 @@
+.wmcads-document {
+  display: block;
+  padding-bottom: 15px;
+  border-bottom: 1px solid get-color(brandCoolGrey);
+
+  a {
+    display: block;
+    margin-bottom: 15px;
+    color: get-color(cta);
+    font-size: 23px;
+  }
+
+  div {
+    display: inline-block;
+  }
+
+  div:first-of-type {
+    margin-right: 30px;
+  }
+}
