@@ -104,7 +104,6 @@ const buildingTemplates = () => {
         })
       )
       .pipe(plugins.rename({ extname: '.html' }))
-      .pipe(plugins.replace('$*baseUrl', packageJson.buildDirs[build].baseUrl))
       .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
       .pipe(plugins.replace('$*version', versionNumber))
       .pipe(plugins.formatHtml())

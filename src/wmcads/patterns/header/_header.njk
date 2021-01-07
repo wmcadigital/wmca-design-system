@@ -16,7 +16,7 @@
 <!-- Skip to content link -->
 {{
   wmcadsLink({
-    link: '$*baseUrl#wmcads-main-content',
+    link: '#wmcads-main-content',
     linkTitle: 'Skip to main content',
     text: 'Skip to main content',
     classModifiers: 'wmcads-header__skip-link'
@@ -31,8 +31,8 @@
     <div class="wmcads-container wmcads-grid wmcads-grid--align-center wmcads-grid--justify-between">
       <div class="wmcads-header__vertical-align wmcads-col-auto">
         <!-- Logo -->
-        <a class="wmcads-header__logo-link" href="$*baseUrl" title="West Midlands Combined Authority Design System">
-          <img class="wmcads-header__logo" alt="West Midlands Combined Authority logo" src="$*baseUrl/img/logo.svg" />
+        <a class="wmcads-header__logo-link" href="/" title="West Midlands Combined Authority Design System">
+          <img class="wmcads-header__logo" alt="West Midlands Combined Authority logo" src="/img/logo.svg" />
         </a>
       </div>
       {#- If with a title #}
@@ -59,7 +59,7 @@
             {% set navItemContent = " and tickets" if navItem.name === "Swift and tickets" else navItem.name -%}
               <!-- allow primary (level 1) item to link if specified -->
               {% if params.linkTopLevel -%}{{navItemIcon}}
-              <a href="$*baseUrl/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="wmcads-mega-menu__primary-menu-link" >
+              <a href="/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="wmcads-mega-menu__primary-menu-link" >
                 {{navItemIcon}}{{ navItemContent }}
               </a>
               <!-- if not linked use a button -->
@@ -78,7 +78,7 @@
                   <ul class="wmcads-mega-menu__sub-menu">
                     {% for subnavItem in navItem.subnavItems -%}
                     <li class="wmcads-mega-menu__sub-menu-item">
-                      <a href="$*baseUrl/{{ navItem.name | lower | replace(" ", "-") }}/{{ subnavItem.name | lower | replace(" ", "-") }}/" class="wmcads-mega-menu__sub-menu-link">
+                      <a href="/{{ navItem.name | lower | replace(" ", "-") }}/{{ subnavItem.name | lower | replace(" ", "-") }}/" class="wmcads-mega-menu__sub-menu-link">
                         {% if subnavItem.icon -%}
                         <!-- Show submenu (level 2) item icon if specified -->
                         <svg class="wmcads-mega-menu__sub-menu-link-icon">
@@ -177,7 +177,7 @@
     <!-- Phase banner -->
     {{
       wmcadsBanner ({
-        link: '$*baseUrlhttps://github.com/wmcadigital/wmca-design-system/issues',
+        link: 'https://github.com/wmcadigital/wmca-design-system/issues',
         linkTitle: 'WMCA Design System Github',
         phase: true
       }) | trim | indent(4)
@@ -201,7 +201,7 @@
 {% if params.megaMenuDemo %}
 <!-- Content space for example purposes only. DO NOT INCLUDE -->
 <div class="demo-content">
-  <p>Example content <br> <a href="$*baseUrl/patterns/header-demo" target="_blank">View full page example (opens in new window)</a></p>
+  <p>Example content <br> <a href="/patterns/header-demo" target="_blank">View full page example (opens in new window)</a></p>
 </div>
 <!-- END DO NOT INCLUDE -->
 {% endif %}
