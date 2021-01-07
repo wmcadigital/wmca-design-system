@@ -8,6 +8,7 @@ $wmcads-msg-close-btn-width: 5rem;
   position: relative;
   padding: $size-sm;
   border: 1px solid get-color(information);
+  background: $white;
 
   &__header {
     display: block;
