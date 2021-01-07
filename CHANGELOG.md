@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/wmcadigital/wmca-design-system/compare/v1.1.0...v1.1.1) (2021-01-07)
+
+
+### Reverts
+
+* Revert "Release (#75)" (#76) ([e23037c](https://github.com/wmcadigital/wmca-design-system/commit/e23037c8432fa0beb55f9134d0c41e961d56569e)), closes [#75](https://github.com/wmcadigital/wmca-design-system/issues/75) [#76](https://github.com/wmcadigital/wmca-design-system/issues/76)
+
 # [1.1.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.0.0...v1.1.0) (2020-12-17)
 
 
