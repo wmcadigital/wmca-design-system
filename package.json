@@ -27,14 +27,6 @@
     "netlify": {
       "baseUrl": "/",
       "cdn": "https://wmcads.netlify.app"
-    },
-    "ghpages": {
-      "baseUrl": "https://wmcadigital.github.io/wmca-design-system",
-      "cdn": "https://wmcadigital.github.io/wmca-design-system"
-    },
-    "staging": {
-      "baseUrl": "https://wmcadigital.github.io/wmca-design-system",
-      "cdn": "https://wmcadigital.github.io/wmca-design-system"
     }
   },
   "release": {
@@ -64,8 +56,7 @@
     "build:images": "gulp minImages",
     "build:sprites": "gulp buildSprites",
     "build:config": "gulp buildConfig",
-    "build:netlify": "npm run build:all --build=netlify",
-    "build:ghpages": "npm run build:all --build=ghpages"
+    "build:netlify": "npm run build:all --build=netlify"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
