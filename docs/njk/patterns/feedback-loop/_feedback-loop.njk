@@ -1,0 +1,65 @@
+{% macro wmcadsFeedbackLoop(params) %}
+
+{# Imports of components #}
+{% from "components/form-elements/checkboxes/_checkboxes.njk" import wmcadsCheckboxes %}
+{% from "components/form-elements/input/_input.njk" import wmcadsInput %}
+{% from "components/form-elements/textarea/_textarea.njk" import wmcadsTextarea %}
+{% from "components/button/_button.njk" import wmcadsButton as primary %}
+
+{# Set params #}
+{% set isOpen = " wmcads-is-open" if params.isOpen %}
+{% set id = params.id if params.id else "feedback-loop" %} {# this is to pass unique id to this macro, to stop clashing of duplicate IDs with the preview page and the ACTUAL feedback loop in the footer #}
+
+
+
+<div class="wmcads-feedback-loop{{isOpen}}">
+  <div class="wmcads-container wmcads-feedback-loop__questions">
+    <div class="wmcads-feedback-loop__useful">
+      Is this page useful?
+
+      <a href="#" title="link title" target="_self" class="wmcads-link wmcads-m-l-sm">Yes</a>
+      <a href="#" title="link title" target="_self" class="wmcads-link wmcads-m-l-sm">No</a>
+    </div>
+    <div class="wmcads-feedback-loop__wrong">
+      <a href="#" title="link title" target="_self" class="wmcads-link">Is there anything wrong with this page?</a>
+    </div>
+  </div>
+
+  <form class="wmcads-container wmcads-feedback-loop__form wmcads-grid">
+    <div class="wmcads-grid wmcads-grid--align-center wmcads-grid--justify-between">
+      <legend class="wmcads-col-auto wmcads-m-none">Help us improve West Midlands Combined Authority</legend>
+      <a  href="#" class="wmcads-link wmcads-col-auto wmcads-m-l-md">Close</a>
+    </div>
+    <br>
+    <div class="wmcads-col-1 wmcads-col-md-1-2">
+      {{
+        wmcadsTextarea({
+          id: (id + '-textarea')
+        }) | trim | indent(4)
+      }}
+    </div>
+    <br><br>
+    <div class="wmcads-col-1 wmcads-col-md-1-3">
+      {{
+        wmcadsInput({
+          id: (id + '-input')
+        }) | trim | indent(4)
+      }}
+    </div>
+    <br><br>
+    <div class="wmcads-col-1">
+      {{
+        wmcadsCheckboxes() | trim | indent(4)
+      }}
+    </div>
+    <br><br>
+    {{
+      primary({
+        classNames: "wmcads-btn",
+        text: "Submit feedback"
+      }) | trim | indent(4)
+    }}
+  </form>
+</div>
+
+{% endmacro %}

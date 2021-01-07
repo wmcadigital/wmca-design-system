@@ -1,0 +1,73 @@
+{# Uses the components: wmcads-loader, wmcads-icon #}
+
+{% macro wmcadsAutocomplete(params) %}
+{# Imports #}
+{% from "components/icon/_icon.njk" import wmcadsIcon %}
+{% from "components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium %}
+{% from "components/form-elements/label/_label.njk" import wmcadsLabel %}
+{# Params #}
+{% set query = params.query if params.query else "" %} {# default to x15 as query text if one isn't available #}
+{% set placeholder = params.placeholder if params.placeholder else "Tap to search" %}
+{% set isLoading = " wmcads-is--loading" if params.loading %}
+{% set id = params.id if params.id else "genericInput" %}
+
+{# Label #}
+{{
+  wmcadsLabel({
+    for: id,
+    label: 'Autocomplete label'
+  }) | trim
+}}
+
+<div class="wmcads-autocomplete wmcads-grid{{isLoading}}">
+  {% from "components/loader/_loader.njk" import wmcadsLoader %}
+  {#- Get SVG icon and pass class -#}
+  <!-- Search icon -->
+  {{
+    wmcadsIcon({
+      icon: 'general-search',
+      class: 'wmcads-autocomplete__icon'
+    }) | indent(2) | trim
+  -}}
+
+  {# Loading spinner #}
+  {{
+    wmcadsLoader() | indent(2) | trim
+  }}
+  <!-- Autocomplete input box -->
+  <input class="wmcads-fe-input wmcads-autocomplete__input wmcads-col-1" value="{{ query }}" placeholder="{{ placeholder }}" name="searchExample" aria-label="{{ placeholder }}"  type="text" id="{{id}}">
+</div>
+
+{#- If showSuggestions is true #}
+{% if params.showSuggestions %}
+<!-- Autocomplete suggestions -->
+<ul class="wmcads-autocomplete-suggestions">
+{#- If textOnly suggestions -#}
+{% if params.textSuggestions -%}
+  {%- for i in range(1,4) %}
+  <li class="wmcads-autocomplete-suggestions__li" title="Search result {{i}}" tabindex="0">
+    This is <strong>my query</strong> result {{i}}
+  </li>
+  {%- endfor %}
+{% else -%}
+  {# Disruption indicator suggestions #}
+  {%- for i in range(1,6) %}
+  <li class="wmcads-autocomplete-suggestions__li wmcads-grid" title="Good service on X15" tabindex="0">
+    <div class="wmcads-col-auto" >
+      {{
+        wmcadsDisruptionIndicatorMedium({
+          classModifiers: 'wmcads-disruption-indicator-medium',
+          text: query
+        }) | indent(8) | trim
+      }}
+    </div>
+    <div class="wmcads-col-1-2 wmcads-col-sm-2-3">
+      <strong>Oldbury to Dudley {{i}}</strong><br>and return journey
+    </div>
+  </li>
+  {%- endfor %}
+{% endif -%}
+</ul>
+{%- endif %}
+
+{% endmacro %}
