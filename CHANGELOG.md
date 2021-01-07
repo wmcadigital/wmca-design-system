@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.1.1...v1.2.0) (2021-01-07)
+
+
+### Features
+
+* wmcads updates inline with wmnds ([#77](https://github.com/wmcadigital/wmca-design-system/issues/77)) ([81b6d52](https://github.com/wmcadigital/wmca-design-system/commit/81b6d52749494825a90ddf48cf561a04305090b8)), closes [#74](https://github.com/wmcadigital/wmca-design-system/issues/74)
+
 ## [1.1.1](https://github.com/wmcadigital/wmca-design-system/compare/v1.1.0...v1.1.1) (2021-01-07)
 
 
