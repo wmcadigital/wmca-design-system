@@ -1,0 +1,176 @@
+{% macro wmcadsContentTileTravelUpdates(params) %}
+{# Imports #}
+{%- from "components/disruption-indicator/large/_large.njk" import wmcadsDisruptionIndicatorLarge as large -%}
+{%- from "components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium as medium -%}
+{%- from "components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium as star -%}
+
+<div class="wmcads-content-tile wmcads-content-tile__container">
+   <h2 class="wmcads-content-tile__title">Travel updates</h2>
+   <div class="wmcads-content-tile__copy">
+      <p>All routes through this disruption.</p>
+   </div>
+   <h3>Roads</h3>
+
+   <div class="wmcads-content-tile__container-wrapper">
+      {{
+         large({
+         strongText: "Hagley Road",
+         text: 'Usual traffic',
+         iconLeft: "modes-isolated-roads",
+         iconRight: 'general-success'
+         }) | trim | indent(4)
+      }}
+   </div>
+   <div class="wmcads-content-tile__container-wrapper">
+      {{
+         large({
+         strongText: "Ring Road",
+         text: 'Usual traffic',
+         iconLeft: "modes-isolated-roads",
+         iconRight: 'general-success'
+         }) | trim | indent(4)
+      }}
+   </div>
+   <h3>Bus Routes</h3>
+   <div class="wmcads-col-1-3 wmcads-col-md-auto">
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '9',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '12',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '13',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '126',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: 'X10',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+   </div>
+   <div class="wmcads-col-1-3 wmcads-col-md-auto">
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '10',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '12A',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '13A',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: 'X8',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+      <div class="wmcads-content-tile__container-bus">
+         {{
+            medium({
+            classModifiers: 'wmcads-disruption-indicator-medium--success wmcads-disruption-indicator-medium--narrow-travel-updates wmcads-disruption-indicator-medium--narrow-travel-updates-bus',
+            text: '23',
+            iconLeft: "modes-isolated-bus",
+            iconRight: 'general-success'
+            }) | trim | indent(4)
+         }}
+         <svg class="wmcads-content-tile__container-star">
+            <use xlink:href="/img/wmcads-icons.min.svg#wmcads-general-star-empty" href="/img/wmcads-icons.min.svg#wmcads-general-star-empty"></use>
+         </svg>
+      </div>
+   </div>
+   {% from "components/message/help/_help.njk" import wmcadsMsgHelp %}
+   {{
+   wmcadsMsgHelp({
+   message: 'Save bus routes to your homepage by pressing the star icon'
+   })
+      }}
+</div>
+{% endmacro %}

@@ -1,0 +1,21 @@
+{% macro wmcadsContactDetails(params) %}
+{# Imports #}
+{%- from "components/warning-text/_warning-text.njk" import wmcadsWarningText -%}
+{# Set vars #}
+{% set title = params.title if params.title else "Transport for West Midlands" %} {# set title #}
+{% set warningText = params.warningText if params.warningText %} {# set warning text #}
+{% set warningIcon = params.warningIcon if params.warningIcon %} {# set warning text #}
+{% set content = params.content if params.content %} {# set content #}
+
+<div class="wmcads-contact-details">
+    <p>{{title}}</p>
+    {{
+        wmcadsWarningText({
+            text: warningText,
+            icon: warningIcon, 
+            class: "wmcads-p-b-sm"
+        }) | indent(6) | trim | safe
+    }}
+    {{content | safe}}
+</div>
+{% endmacro %}
