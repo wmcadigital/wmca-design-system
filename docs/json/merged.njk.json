@@ -45,7 +45,7 @@
 					"name": "Content card"
 				},
 				{
-					"name": "Content Tiles"
+					"name": "Document"
 				},
 				{
 					"name": "Details"
@@ -75,10 +75,25 @@
 					"name": "Message"
 				},
 				{
+					"name": "Page header"
+				},
+				{
 					"name": "Phase indicator"
 				},
 				{
+					"name": "Portfolio dashboard"
+				},
+				{
+					"name": "Portfolio leads"
+				},
+				{
+					"name": "Share"
+				},
+				{
 					"name": "Table"
+				},
+				{
+					"name": "Tag"
 				},
 				{
 					"name": "Warning text"
@@ -110,6 +125,9 @@
 					"name": "Header and footer"
 				},
 				{
+					"name": "Header v2"
+				},
+				{
 					"name": "Question Form"
 				},
 				{
@@ -124,41 +142,39 @@
 	"colors": {
 		"brand": [
 			{
+				"varName": "brandFurnaceOrange",
+				"name": "Furnace Orange"
+			},
+			{
+				"varName": "brandCoolGrey",
+				"name": "Cool Grey"
+			},
+			{
+				"varName": "brandWmGreen",
+				"name": "WM Green"
+			},
+			{
+				"varName": "brandWmRed",
+				"name": "WM Red"
+			},
+			{
+				"varName": "brandWmPurple",
+				"name": "WM Purple"
+			},
+			{
+				"varName": "brandWmBlue",
+				"name": "WM Blue"
+			}
+		],
+		"web": [
+			{
 				"varName": "primary",
 				"name": "Primary Orange"
 			},
 			{
 				"varName": "secondary",
 				"name": "Secondary Grey"
-			}
-		],
-		"modal": [
-			{
-				"varName": "bus",
-				"name": "Bus"
 			},
-			{
-				"varName": "metro",
-				"name": "Metro"
-			},
-			{
-				"varName": "railway",
-				"name": "WM Railway"
-			},
-			{
-				"varName": "susTravel",
-				"name": "Sustainable Travel"
-			},
-			{
-				"varName": "roads",
-				"name": "Roads"
-			},
-			{
-				"varName": "taxi",
-				"name": "Taxi"
-			}
-		],
-		"web": [
 			{
 				"varName": "text",
 				"name": "Text"
@@ -178,21 +194,9 @@
 			{
 				"varName": "success",
 				"name": "Success"
-			},
-			{
-				"varName": "information",
-				"name": "Information"
 			}
 		],
 		"backgroundOnly": [
-			{
-				"varName": "plannedDisruption",
-				"name": "Planned Disruption"
-			},
-			{
-				"varName": "disable",
-				"name": "Disabled Elements"
-			},
 			{
 				"varName": "background",
 				"name": "Background"
