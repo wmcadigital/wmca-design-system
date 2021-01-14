@@ -53,6 +53,7 @@
 {{
   compExample([
     wmcadsHeader({
+      id:"header1",
       navItems: navItems,
       banner: true,
       breadcrumbs: {
@@ -77,6 +78,7 @@
 {{
   compExample([
     wmcadsHeader({
+      id: "header2",
       navItems: navItems,
       withTitle: true
     })
@@ -112,6 +114,7 @@
 {{
   compExample([
     wmcadsHeader({
+      id: "header3",
       navItems: navItems,
       app: true,
       exampleAria: "Mobile app header"
@@ -130,23 +133,25 @@
   compExample([
     wmcadsFooter({
       menu1: {
+        name: "Governance",
+        menuItems: [{
+          name: "Committee meetings"
+        }, {
+          name: "Freedom of information"
+        }, {
+          name: "Procurement"
+        }]
+      },      
+      menu2: {
         name: "Resources & support",
         menuItems: [{
-          name: "Businesses"
+          name: "Contact us"
         },{
-          name: "Education"
+          name: "Media assets"
         },{
-          name: "Job centres"
+          name: "Careers"
         },{
-          name: "Young people"
-        }]
-      },
-      menu2: {
-        name: "About us",
-        menuItems: [{
-          name: "About West Midlands Combined Authority"
-        }, {
-          name: "WMCA Apps"
+          name: "Documents"
         }]
       },
       bottomMenu: [{
