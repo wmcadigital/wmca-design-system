@@ -8,9 +8,6 @@ switch (process.env.npm_config_build) {
   case 'netlify':
     build = 'netlify';
     break;
-  case 'staging':
-    build = 'staging';
-    break;
   default:
     build = 'local';
     break;
