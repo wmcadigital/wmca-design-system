@@ -3,19 +3,24 @@
   padding: 10px;
   background: get-color(background);
 
+  h4 {
+    margin-bottom: 0;
+  }
+
   img {
     display: inline-block;
     height: 100px;
-    margin-right: 20px;
+    margin-right: 10px;
     object-fit: cover;
   }
 
-  img:first-child {
-    margin-bottom: 20px;
+  div {
+    font-size: 14px;
   }
 
   &-details {
     display: inline-block;
+    width: calc(100% - 98px);
     vertical-align: top;
   }
 }
