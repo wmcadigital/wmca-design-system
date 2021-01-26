@@ -6,6 +6,11 @@
   background-color: $white;
   text-decoration: none;
 
+  img {
+    min-height: 168px;
+    object-fit: cover;
+  }
+
   svg {
     width: 60px;
     height: 60px;
