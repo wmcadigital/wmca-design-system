@@ -5,16 +5,27 @@
 {% set tag = "a" if params.clickable else "div" %}
 {% set attributes = " href=\"#\" target=\"_self\"" if params.clickable else "" %}
 {# HTML content #}
+{% if params.html %}
+{% set html = params.html %}
+{% elseif params.clickable %}
+{% set html = "
+    <div class=\"wmcads-p-sm\">
+    <h2>Headline</h2>
+    <p>A short sentence explaining what this is, it can be 2 lines.</p>
+    </div>" 
+%}
+{% else %}
 {% set html = params.html if params.html else "
     <div class=\"wmcads-p-sm\">
-    <h3>Where the adventure starts</h3>
-    <p>Whatever your plans this holiday, get there with our great range of family tickets and discount vouchers.</p>
+    <h3>Headline</h3>
+    <p>A short sentence explaining what this is, it can be 2 lines.</p>
     </div>
 " %}
+{% endif %}
 
 {# This macro checks if it's being called inside a {% call %} tag #}
 {# It's an easier way to pass in larger html content  #}
-<{{tag}}{{attributes | safe}} class="wmcads-content-card{{" blue" if params.isCta else "" }}">
+<{{tag}}{{attributes | safe}} class="wmcads-content-card{{"" if params.src else " no-image"}}{{" blue" if params.isCta else "" }}">
     {% if(params.src) %}
         <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=590&height=150&rnd=132122595620000000" alt="content image">
     {% endif %}
@@ -23,7 +34,7 @@
             <svg>
                 <use xlink:href="#wmcads-general-toolkit" href="#wmcads-general-toolkit"></use>
             </svg>
-            <h3>Where the adventure starts</h3>
+            <h2>Headline</h2>
         </div>
     {% else %}
         {%- if caller -%}
