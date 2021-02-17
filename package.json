@@ -59,7 +59,7 @@
     "build:netlify": "npm run build:all --build=netlify"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
+    "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.7",
     "@babel/standalone": "^7.12.9",
     "@semantic-release/changelog": "^5.0.1",
