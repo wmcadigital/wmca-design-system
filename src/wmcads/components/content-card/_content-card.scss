@@ -1,3 +1,15 @@
+//accessibility styles
+@mixin accessibility-hover {
+  h2 {
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 1px get-color(primary);
+  }
+}
+
 .wmcads-content-card {
   display: block;
   min-height: 150px;
@@ -6,15 +18,29 @@
   background-color: $white;
   text-decoration: none;
 
-  svg {
-    width: 60px;
-    height: 60px;
-    fill: $white;
+  @at-root a#{&} {
+    display: block;
+    color: get-color(text);
+    text-decoration: none;
+    @include accessibility-hover;
   }
-}
 
-.wmcads-content-card.blue {
-  border-bottom: 0;
-  color: $white;
-  background: get-color(cta);
+  // Modifiers
+  &--blue {
+    display: block;
+    border-bottom: 0;
+    color: $white;
+    background: get-color(cta);
+
+    h2 {
+      color: $white;
+    }
+
+    svg {
+      width: 60px;
+      height: 60px;
+      fill: $white;
+    }
+  }
+
 }
