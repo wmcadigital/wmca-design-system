@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.2.0...v1.3.0) (2021-02-17)
+
+
+### Features
+
+* content card updates ([#95](https://github.com/wmcadigital/wmca-design-system/issues/95)) ([92454c4](https://github.com/wmcadigital/wmca-design-system/commit/92454c4f461dd1785eb513ab660fc296f1872b15)), closes [#74](https://github.com/wmcadigital/wmca-design-system/issues/74) [#80](https://github.com/wmcadigital/wmca-design-system/issues/80) [#94](https://github.com/wmcadigital/wmca-design-system/issues/94)
+
 # [1.2.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.1.1...v1.2.0) (2021-01-07)
 
 
