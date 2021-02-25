@@ -9,13 +9,9 @@
   box-sizing: border-box;
 }
 
-li {
-  margin-bottom: $size-md;
-}
-
 // Images
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

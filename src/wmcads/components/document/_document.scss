@@ -18,3 +18,31 @@
     margin-right: 30px;
   }
 }
+
+.wmcads-documents {
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom: 3px solid get-color(text);
+
+  div {
+    margin: 20px 0 10px;
+    border-bottom: 1px solid get-color(brandCoolGrey);
+  }
+
+  div:last-child {
+    border-bottom: 0;
+  }
+
+  a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  span {
+    font-size: 13px;
+  }
+
+  span:first-of-type {
+    margin-right: 10px;
+  }
+}

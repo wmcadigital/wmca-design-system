@@ -33,13 +33,10 @@
 .wmcads-container {
   display: block;
   width: 100%;
-  max-width: $breakpoint-xl;
+  max-width: 927px;
   margin: auto;
-  padding: 0 $size-sm;
-
-  @media screen and (min-width: $breakpoint-lg) {
-    padding: 0 $size-md;
-  }
+  padding: 0 10px;
+  overflow: auto;
 
   &--main {
     margin-top: $size-md;

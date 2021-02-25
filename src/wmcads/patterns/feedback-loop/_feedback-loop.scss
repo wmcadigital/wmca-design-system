@@ -10,7 +10,7 @@
 
   // Override container defaults
   .wmcads-container {
-    padding: $size-xs $size-md;
+    padding-top: 5px;
     overflow: hidden;
     color: $white;
     background-color: get-color(cta);

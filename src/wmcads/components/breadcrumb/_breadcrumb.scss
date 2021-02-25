@@ -25,6 +25,7 @@
   // Style a tag within breadcrumb
   &__link {
     color: get-color(text);
+    vertical-align: top;
 
     &--current {
       text-decoration: none;
