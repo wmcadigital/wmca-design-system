@@ -1,0 +1,84 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Homepage Template" %} {% set section = "Templates" %} 
+{# Imports #} 
+{% from "wmcads/components/page-header/_page-header.njk" import wmcadsPageHeader %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{# Set array of tiles #} 
+{% block content %} 
+
+{# About the style guide #}
+{{
+    wmcadsPageHeader({
+      title: true,
+      text: "Building a healthier, happier, better connected and more prosperous West Midlands",
+      home: true
+    })
+}}
+<div class="wmcads-container wmcads-m-t-lg homepage">
+<div class="wmcads-grid">
+  <div class="wmcads-col-md-1-2 wmcads-p-r-lg">
+    <a class="wmcads-link" href="#"><h2>What is the Combined Authority?</h2></a>
+    <p>Combined Authorites are set up to improve their region’s economies. We invest in the region through collaboration with our partners, but we don’t replace local councils.</p>
+  </div>
+  <div class="wmcads-col-md-1-2">
+    <a href="#"><h2>The Mayor</h2></a>
+    <p>We’re led by the Mayor of the West Midlands. The current mayor is Andy Street, who is in office until May 2021.</p>
+    <p>The Mayor chairs the WMCA Board and acts as a voice for the region, nationally and globally.</p>
+  </div>
+</div>
+<h2>What we do</h2>
+<div class="wmcads-grid what-we-do">
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Culture and Digital</a>
+    </div>
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Economy and Innovation</a>
+    </div>
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Environment</a>
+    </div>
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Housing and Land</a>
+    </div>
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Inclusive Communities</a>
+    </div>
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Productivity and Skills</a>
+    </div>
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Transport</a>
+    </div>
+    <div class="wmcads-col-sm-1-2 wmcads-col-md-1-6">      
+        <svg>
+            <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+        </svg>
+        <a href="">Wellbeing</a>
+    </div>
+</div>
+
+</div>
+{% endblock %}

@@ -9,8 +9,13 @@
 {% block content %} 
 
 {# About the style guide #}
+<div class="wmcads-page-header wmcads-m-b-lg">
+  <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000" alt="header image"/>
+</div>
+<div class="wmcads-container ">
 <div class="wmcads-grid">
   <div class="wmcads-col-1 wmcads-col-md-3-4">
+    <h1 id="wmcads-main-content">{{ pageTitle | safe}}</h1>
     <p>From 2018, we’re responsible for the region's Adult Education Budget (AEB).</p>
     <p>We target priority growth sectors from the Local Industrial Strategy. This improves skills and secure jobs in communities. It also helps to improve productivity in the region.</p>
     <h2>What the budget is</h2>
@@ -83,4 +88,5 @@
   </div>
 </div>
 <br />
+</div>
 {% endblock %}
