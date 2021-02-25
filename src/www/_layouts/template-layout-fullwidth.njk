@@ -1,10 +1,5 @@
-{% extends "www/_layouts/_master-layout.njk" %}
+{% extends "www/_layouts/_template-master-layout.njk" %}
 
 {% block body %}
-<h1 id="wmcads-main-content">{{ pageTitle | safe}}</h1>
-<div class="wmcads-grid" >
-  <div class="wmcads-col-1">
     {% block content %}{% endblock content %}
-  </div>
-</div>
 {% endblock body%}
