@@ -5,6 +5,7 @@
 
 <div class="wmcads-page-header">
   <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000" alt="header image"/>
+  {% if(params.title) %}
   <div class="wmcads-page-header-box">
       {% if iconName !== "" %}
         {{ wmcadsIcon({
@@ -15,5 +16,6 @@
       {% endif %}
     <h1>{{text}}</h1>
   </div>
+  {% endif %}
 </div>
 {% endmacro %}

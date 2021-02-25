@@ -4,10 +4,29 @@
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
 {% block content %}
+<h2>Header with page name</h2>
 {{
   compExample([
-    wmcadsPageHeader(),
-    wmcadsPageHeader({icon:'general-info'})
+    wmcadsPageHeader({
+      title: true
+    })
+  ])  
+}}
+<h2>Header with page name and icon</h2>
+{{
+  compExample([
+    wmcadsPageHeader({
+      title: true,
+      icon:'general-info'
+    })
+  ])  
+}}
+<h2>Plain Header</h2>
+{{
+  compExample([
+    wmcadsPageHeader({
+      title: false
+    })
   ])  
 }}
 {% endblock %}
