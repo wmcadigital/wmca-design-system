@@ -4,6 +4,7 @@
 .wmcads-link {
   @at-root a:not([class*="wmcads-"]),
   & {
+    display: inline-block;
     color: get-color(cta);
     font-weight: bold;
     text-decoration: underline;
