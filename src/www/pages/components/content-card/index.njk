@@ -31,12 +31,6 @@
 {{
     compExample([
         wmcadsContentCard({
-            html: '
-                <div class="wmcads-p-sm">
-                    <h2>Headline</h2>
-                    <p>A short sentence explaining what this is, it can be 2 lines.</p>
-                </div>
-            '
         })
 
     ])
@@ -46,8 +40,10 @@
 
 {{
     compExample([
-        wmcadsContentCard({src: true})
-
+        wmcadsContentCard({
+            src: true,
+            isSrcDefault: true
+        })
     ])
 }}
 
@@ -95,7 +91,11 @@
 
 {{
     compExample([
-        wmcadsContentCard({clickable: true, src: true})
+        wmcadsContentCard({
+            clickable: true, 
+            src: true,
+            isSrcDefault: true
+        })
     ])
 }}
 
@@ -117,6 +117,18 @@
         wmcadsContentCard({
             clickable: true,
             isEvent: true
+        })
+    ])
+}}
+
+<h4>News Card</h4>
+
+{{
+    compExample([
+        wmcadsContentCard({
+            src: true,
+            clickable: true,
+            isNews: true
         })
     ])
 }}
