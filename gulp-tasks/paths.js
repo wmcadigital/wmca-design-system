@@ -7,7 +7,11 @@ module.exports = {
   },
   styles: {
     src: ['src/**/*.scss'], // src of styles to watch
-    minifySrc: ['src/wmcads/assets/sass/wmcads.scss', 'src/www/wmcads-website.scss', 'src/www/pages/templates/templates.scss'], // List of scss file(s) which should be processed, linted & minified
+    minifySrc: [
+      'src/wmcads/assets/sass/wmcads.scss',
+      'src/www/wmcads-website.scss',
+      'src/www/pages/templates/templates.scss'
+    ], // List of scss file(s) which should be processed, linted & minified
     output: 'build/css/', // output location of minified styles
     reactNativeSrc: 'src/wmcads/assets/sass/wmcads.scss'
   },
