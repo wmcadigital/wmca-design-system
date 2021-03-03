@@ -1,5 +1,6 @@
 .wmcads-accordion {
   display: block;
+  margin-bottom: 30px;
   background-color: $white;
 
   &--with-border {
@@ -25,6 +26,7 @@
   &__summary {
     display: inline-block;
     width: calc(100% - 32px);
+    margin: 0;
     padding-right: $size-md;
     vertical-align: middle;
   }

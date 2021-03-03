@@ -1,0 +1,31 @@
+.wmcads-page-contents {
+  width: 288px;
+  min-height: 57px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom: 3px solid $black;
+  background: $white;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: get-color(cta);
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  div {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid get-color(primary);
+  }
+
+  a {
+    display: block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

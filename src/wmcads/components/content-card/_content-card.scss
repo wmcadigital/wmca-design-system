@@ -1,7 +1,7 @@
 .wmcads-content-card {
   display: inline-block;
   width: 288px;
-  height: 289px;
+  height: 302px;
   border-bottom: 5px solid get-color(primary);
   color: get-color(text);
   background-color: $white;
@@ -14,6 +14,10 @@
     min-width: 288px;
     height: 167px;
     object-fit: cover;
+  }
+
+  div {
+    min-height: 130px;
   }
 
   svg {
@@ -33,7 +37,10 @@
   }
 
   p {
+    height: 40px;
     margin-bottom: 0;
+    overflow: hidden;
+    line-height: 20px;
   }
 }
 

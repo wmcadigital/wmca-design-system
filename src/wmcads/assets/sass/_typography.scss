@@ -7,6 +7,11 @@ body {
   @include type-setting(0);
 }
 
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 // Get rid of margin for the first header item in main content
 * {
   h1:first-child,

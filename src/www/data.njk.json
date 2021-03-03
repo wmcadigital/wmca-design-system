@@ -75,6 +75,9 @@
             "name": "Message"
           },
           {
+            "name": "Page contents"
+          },
+          {
             "name": "Page header"
           },
           {
