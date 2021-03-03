@@ -59,7 +59,8 @@ h2,
 }
 
 h3,
-.h3 {
+.h3,
+h3 a {
   @include type-setting(3);
 }
 
