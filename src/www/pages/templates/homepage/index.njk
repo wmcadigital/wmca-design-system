@@ -5,6 +5,7 @@
 {% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
 {% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
 {# Set array of tiles #} 
 {% block content %} 
 
@@ -20,7 +21,7 @@
 <div class="wmcads-container wmcads-m-t-lg homepage">
 <div class="wmcads-grid">
   <div class="wmcads-col-md-1-2 wmcads-p-r-lg">
-    <a class="wmcads-link" href="#"><h2>What is the Combined Authority?</h2></a>
+    <a href="#"><h2>What is the Combined Authority?</h2></a>
     <p>Combined Authorites are set up to improve their region’s economies. We invest in the region through collaboration with our partners, but we don’t replace local councils.</p>
   </div>
   <div class="wmcads-col-md-1-2">
@@ -82,17 +83,131 @@
 </div>
 
 <h2>Latest News</h2>
-<div class="wmcads-grid">
-    <div class="wmcads-col-md-2-4">
-        1
+<div class="wmcads-grid wmcads-grid--spacing-sm-3-lg">
+    <div class="wmcads-col-1 wmcads-col-sm-1 wmcads-col-md-12-24">
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'Wednesbury to Brierley Hill tram extension opens',
+                copy: 'The new line opens today, linking passengers to Dudley and Merry Hill. The extension was originally proposed in 1990, and was funded through the historic Devolution Deal in 2016.',
+                isNews: true,
+                isNewsFirst: true
+            })
+        }}
     </div>
-    <div class="wmcads-col-md-1-4">
-        2
+    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-6-24">
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'WMCA donates computers to school children to tackle digital divide',
+                copy: '150 old staff laptops will be donated to Wowdot',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
     </div>
-    <div class="wmcads-col-md-1-4">
-        3
+    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-6-24">
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
     </div>
 </div>
+<a href="#" class="wmcads-link wmcads-m-t-lg wmcads-m-b-lg">See all news stories</a>
+
+<div class="wmcads-grid wmcads-grid--spacing-sm-2-lg  wmcads-m-b-lg">
+    <div class="wmcads-col-1 wmcads-col-sm-1-2">
+    {{
+        wmcadsContentCard({
+            src: true,
+            isSrcDefault: true,
+            title: 'Coronavirus support',
+            copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+            clickable: true
+        })
+    }}
+    </div>
+    <div class="wmcads-col-1 wmcads-col-sm-1-2">
+    {{
+        wmcadsContentCard({
+            src: true,
+            isSrcDefault: true,
+            title: '2021 Mayoral election',
+            copy: 'Find out what the Mayor is reponsible for and how to vote.',
+            clickable: true
+        })
+    }}
+    </div>
+</div>
+<div class="wmcads-grid wmcads-grid--spacing-sm-3-lg wmcads-m-b-lg">
+    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
+    {{
+        wmcadsContentCard({
+            title: 'Upskill yourself in lockdown',
+            copy: 'Find out what the Mayor is reponsible for and how to vote.',
+            clickable: true
+        })
+    }}
+    </div>
+    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
+    {{
+        wmcadsContentCard({
+            title: 'Thrive at Work',
+            copy: 'Join our free workplace wellbeing scheme to keep staff healthy, motivated and productive.',
+            clickable: true
+        })
+    }}
+    </div>
+    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
+    {{
+        wmcadsContentCard({
+            title: 'Annual Plan 2021 - 2022',
+            copy: 'We’ve set our ambitions for each of our priorities over the next year.',
+            clickable: true
+        })
+    }}
+    </div>
+</div>
+
+<h2>Upcoming events</h2>
+<div class="wmcads-grid wmcads-grid--spacing-sm-3-md">
+    <div class="wmcads-col-md-1-3">
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Mayors Mentors',
+      eventCopy: 'Find out about the Mayor’s Mentors scheme and how it can help you grow.',
+      clickable: true,
+      isEvent: true
+    })
+    }}
+    </div>
+    <div class="wmcads-col-md-1-3">
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Greater Birmingham LEP Skills Day',
+      eventCopy: 'Hear from employers and training providers on upskilling opportunities available.',
+      clickable: true,
+      isEvent: true
+    })
+    }}
+    </div>
+    <div class="wmcads-col-md-1-3">
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Sprint exhibition - Walsall',
+      eventCopy: 'Learn and ask questions about the upcoming Sprint works in the region.',
+      clickable: true,
+      isEvent: true
+    })
+    }}
+    </div>
+</div>
+<a href="#" class="wmcads-link wmcads-m-t-lg">See all WMCA events</a>
 
 </div>
 {% endblock %}
