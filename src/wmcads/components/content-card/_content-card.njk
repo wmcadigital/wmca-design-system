@@ -14,7 +14,7 @@
 
 {# This macro checks if it's being called inside a {% call %} tag #}
 {# It's an easier way to pass in larger html content  #}
-<{{tag}}{{attributes | safe}} class="wmcads-content-card{{"--blue" if params.isCta else "" }}">
+<{{tag}}{{attributes | safe}} class="wmcads-content-card{{"--blue" if params.isCta else "" }} {{"wmcads-content-card--event" if params.isEvent else "" }}">
     {% if(params.src) %}
         <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=1180&height=300&rnd=132122595620000000" alt="content image">
     {% endif %}
@@ -26,10 +26,18 @@
             <h2>Lorem ipsum dolor sit amet</h2>
         </div>
     {% else %}
+    {% if(params.isEvent) %}
+        <div class="wmcads-p-sm">
+            <h2>Event</h2>
+            <p>24 January 2021<p>
+            <p>A short sentence explaining what this is, it can be 2 lines.</p>
+        </div>
+    {% else %}
         {%- if caller -%}
             {{ caller() }}
             {%- else -%}
             {{ html | safe }}
+        {%- endif -%}
         {%- endif -%}
     {% endif %}
 </{{tag}}>
