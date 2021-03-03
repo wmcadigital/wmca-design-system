@@ -12,6 +12,7 @@ And we show the current page breadcrumb at all times.
 {% set class = ' ' + params.classModifiers if params.classModifiers %}
 {% set ariaLabel = params.exampleAria + " example breadcrumbs" if params.exampleAria else "Breadcrumbs" %}
 
+{% if params.pageTitle != "Homepage Template" -%}
 <nav aria-label="{{ariaLabel}}" class="wmcads-breadcrumb{{class}}">
   <ol class="wmcads-breadcrumb__list">
     {#- Link back to homepage #}
@@ -36,5 +37,6 @@ And we show the current page breadcrumb at all times.
     </li>
   </ol>
 </nav>
+{%- endif %}
 
 {% endmacro %}
