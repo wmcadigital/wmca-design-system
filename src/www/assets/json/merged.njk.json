@@ -57,6 +57,9 @@
 					"name": "Form elements"
 				},
 				{
+					"name": "Hub header"
+				},				
+				{
 					"name": "Inset text"
 				},
 				{
@@ -75,8 +78,8 @@
 					"name": "Message"
 				},
 				{
-					"name": "Page header"
-				},
+					"name": "Page contents"
+				},				
 				{
 					"name": "Phase indicator"
 				},
