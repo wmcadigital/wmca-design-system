@@ -130,7 +130,15 @@
 			]
 		},
 		{
-			"name": "User research"
+			"name": "Templates",
+			"subnavItems": [
+				{
+					"name": "Homepage"
+				},
+				{
+					"name": "Content Template"
+				}
+			]
 		}
 	],
 	"colors": {
