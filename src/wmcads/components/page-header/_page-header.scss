@@ -1,9 +1,39 @@
 .wmcads-page-header {
   display: block;
-  position: relative;
-  height: 150px;
+  height: 300px;
   color: $white;
   background: $black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__home {
+    height: 420px;
+
+    .wmcads-page-header {
+      &-box {
+        width: 75%;
+        background-color: get-color(primary);
+
+        @media all and (max-width: 400px) {
+          width: 90%;
+        }
+
+        h1 {
+          padding: 20px 20px 20px 30px;
+          color: $white;
+
+          @media all and (max-width: 400px) {
+            font-size: 2rem;
+          }
+        }
+    }
+
+      &-container {
+        height: 420px;
+      }
+    }
+  }
 
   img {
     display: block;
@@ -12,30 +42,39 @@
     object-fit: cover;
   }
 
+  &-container {
+    display: flex;
+    min-height: 300px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
   &-box {
-    position: relative;
-    height: calc(100% - 105px);
-    padding: 6px 10px;
-    color: $black;
+    height: fit-content;
+    padding: 5px 10px;
     background: $white;
+    align-self: center;
+
+    h1 {
+      margin: 0;
+      padding: 15px;
+    }
+
   }
 
   &__icon {
     display: block;
     position: absolute;
-    top: -35px;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    padding: 5px;
+    width: 46px;
+    height: 46px;
+    margin: 8px 0 0 8px;
     background: $white;
+    fill: get-color(primary);
   }
 
-  h1 {
-    margin: 0;
-    color: $black;
-    font-size: 28px;
-  }
 }
 
 @media (min-width: 400px) {
@@ -46,10 +85,13 @@
     }
 
     &-box {
-      position: absolute;
-      top: 41px;
-      left: 8%;
+      top: 120px;
+      left: 0;
       height: auto;
+
+      &__home {
+        top: 110px;
+      }
     }
 
     &__icon {

@@ -12,11 +12,14 @@
 
 .wmcads-content-card {
   display: block;
-  min-height: 150px;
+  height: 100%;
   border-bottom: 5px solid get-color(primary);
   color: get-color(text);
-  background-color: $white;
   text-decoration: none;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    margin: 0 0 $size-lg 0;
+  }
 
   @at-root a#{&} {
     display: block;
@@ -43,4 +46,32 @@
     }
   }
 
+  &--event {
+    h2,
+    h3 {
+      margin: 0 0 $size-sm 0;
+    }
+  }
+
+  &--news {
+    border: 0;
+
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      a {
+        margin: $size-sm 0;
+      }
+    }
+  }
+
+  h3 {
+    margin: $size-sm 0;
+  }
+
+  img {
+    padding: 1px;
+  }
 }

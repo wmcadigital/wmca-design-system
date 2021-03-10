@@ -3,17 +3,20 @@
 {% set text = params.text if params.text else "Page header" %}
 {% set iconName = params.icon if params.icon else "" %}
 
-<div class="wmcads-page-header">
-  <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000" alt="header image"/>
-  <div class="wmcads-page-header-box">
-      {% if iconName !== "" %}
+<div class="wmcads-page-header {% if(params.home) %} wmcads-page-header__home {% endif %} {% if(params.topm) %} wmcads-m-t-md {% endif %}" style="background-image:url('https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000')">
+  {% if(params.title) %}
+  <div class="wmcads-container wmcads-page-header-container">
+        <div class="wmcads-page-header-box">
+              {% if iconName !== "" %}
         {{ wmcadsIcon({
             icon: iconName,
             class: 'wmcads-page-header__icon'
           }) | trim
         }}
       {% endif %}
-    <h1>{{text}}</h1>
+         <h1>{{text}}</h1>
+    </div>
   </div>
+  {% endif %}
 </div>
 {% endmacro %}

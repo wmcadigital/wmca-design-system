@@ -4,7 +4,8 @@
 .wmcads-link {
   @at-root a:not([class*="wmcads-"]),
   & {
-    color: get-color(cta, 10, dark);
+    display: inline-block;
+    color: get-color(cta);
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
@@ -16,6 +17,12 @@
     &:hover {
       color: get-color(cta-active, 40, dark);
     }
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: get-color(cta, 10, dark);
   }
 
   &--with-chevron {
@@ -40,5 +47,13 @@
     &--right {
       margin-left: $size-xsm;
     }
+  }
+}
+
+a {
+  h1,
+  h2,
+  h3 {
+    color: get-color(cta);
   }
 }

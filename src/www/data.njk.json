@@ -57,6 +57,9 @@
             "name": "Form elements"
           },
           {
+            "name": "Hub header"
+          },
+          {
             "name": "Inset text"
           },
           {
@@ -130,7 +133,7 @@
         ]
       },
       {
-        "name": "User research"
+        "name": "Templates"
       }
     ],
     "colors": {

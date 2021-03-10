@@ -1,0 +1,35 @@
+.homepage {
+  .what-we-do {
+    svg {
+      display: block;
+      width: 50px;
+      height: 50px;
+      fill: get-color(primary);
+    }
+
+    a {
+      display: block;
+      width: 90%;
+    }
+
+    div {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  h2,
+  h3,
+  p,
+  .what-we-do,
+  .wmcads-link {
+    @media screen and (max-width: $breakpoint-sm) {
+      padding: 0 $size-sm;
+    }
+  }
+}
+
+.wmcads-container.homepage {
+  @media screen and (max-width: $breakpoint-sm) {
+    padding: 0;
+  }
+}

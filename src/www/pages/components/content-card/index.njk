@@ -26,21 +26,36 @@
     <li>When it is used in a set of cards for navigation purposes. Instead, use a Navigation card.</li>
 </ul>
 
+<h4>Regular Card</h4>
+
 {{
     compExample([
-        wmcadsContentCard({src: true}),
-        wmcadsContentCard(),
         wmcadsContentCard({
-            html: '
-                <div class="wmcads-p-sm">
-                    <h3>Headline</h3>
-                    <p>A short sentence explaining what this is, it can be 2 lines.</p>
-                </div>
-            '
         })
 
     ])
 }}
+
+<h4>With Image</h4>
+
+{{
+    compExample([
+        wmcadsContentCard({
+            src: true,
+            isSrcDefault: true
+        })
+    ])
+}}
+
+<h4>Without Image</h4>
+
+{{
+    compExample([
+        wmcadsContentCard()
+    ])
+}}
+
+
 
 <br><br>
 {# Navigation card #}
@@ -62,15 +77,58 @@
     <li>When multiple interactive components within the card are used. Instead, use a Content card.</li>
 </ul>
 
+<h4>Navigation Card</h4>
+
 {{
-    compExample([
-        wmcadsContentCard({clickable: true, src: true}),        
+    compExample([   
         wmcadsContentCard({
             clickable: true
-        }),
+        })
+    ])
+}}
+
+<h4>With Image</h4>
+
+{{
+    compExample([
+        wmcadsContentCard({
+            clickable: true, 
+            src: true,
+            isSrcDefault: true
+        })
+    ])
+}}
+
+<h4>Call To Action Card</h4>
+
+{{
+    compExample([
         wmcadsContentCard({
             clickable: true,
             isCta: true
+        })
+    ])
+}}
+
+<h4>Event Card</h4>
+
+{{
+    compExample([
+        wmcadsContentCard({
+            clickable: true,
+            isEvent: true
+        })
+    ])
+}}
+
+<h4>News Card</h4>
+
+{{
+    compExample([
+        wmcadsContentCard({
+            src: true,
+            clickable: true,
+            isNews: true
         })
     ])
 }}
