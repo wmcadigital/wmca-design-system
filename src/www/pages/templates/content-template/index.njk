@@ -5,6 +5,7 @@
 {% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
 {% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
 {# Set array of tiles #} 
 {% block content %} 
 
@@ -41,50 +42,55 @@
   </div>
 </div>
 <div class="wmcads-grid wmcads-grid--justify-between">
-<div class="wmcads-col-1-3 wmcads-p-r-sm wmcads-m-b-sm"">
-    <a href="#" target="_self" class="wmcads-content-card">
-      <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=576&height=336&rnd=132122595620000000" alt="content image">
-      <div class="wmcads-p-sm">
-        <h2>Who we've funded </h2>
-        <p>See which councils and providers we've funded, and what for. </p>
-      </div>
-    </a>
+  <div class="wmcads-col-1-3 wmcads-p-r-sm wmcads-m-b-sm"">
+  {{
+    wmcadsContentCard({
+      src: true,
+      isThirdCard: true,
+      title: 'Who weve funded',
+      copy: 'See which councils and providers weve funded, and what for.'
+    })
+  }}
   </div>
   <div class="wmcads-col-1-3 wmcads-p-r-sm wmcads-m-b-sm">
-    <a href="#" target="_self" class="wmcads-content-card">
-      <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=576&height=336&rnd=132122595620000000" alt="content image">
-      <div class="wmcads-p-sm">
-        <h2>Find training schemes </h2>
-        <p>You can find training and education providers we've funded online. </p>
-      </div>
-    </a>
+  {{
+    wmcadsContentCard({
+      src: true,
+      isThirdCard: true,
+      title: 'Find training schemes',
+      copy: 'You can find training and education providers weve funded online.'
+    })
+  }}
   </div>
   <div class="wmcads-col-1-3 wmcads-p-r-sm wmcads-m-b-sm">
-    <a href="#" target="_self" class="wmcads-content-card">
-      <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=576&height=336&rnd=132122595620000000" alt="content image">
-      <div class="wmcads-p-sm">
-        <h2>Contact us </h2>
-        <p>Get in touch if you want to know more about the budget. </p>
-      </div>
-    </a>
+  {{
+    wmcadsContentCard({
+      src: true,
+      isThirdCard: true,
+      title: 'Contact us',
+      copy: 'Get in touch if you want to know more about the budget.'
+    })
+  }}
   </div>
   <div class="wmcads-col-1-3 wmcads-p-r-sm">
-    <a href="#" target="_self" class="wmcads-content-card">
-      <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=576&height=336&rnd=132122595620000000" alt="content image">
-      <div class="wmcads-p-sm">
-        <h2>Pharetra Sollicitudin</h2>
-        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornareleo. </p>
-      </div>
-    </a>
+  {{
+    wmcadsContentCard({
+      src: true,
+      isThirdCard: true,
+      title: 'Pharetra Sollicitudin',
+      copy: 'Donec sed odio dui. Nullam quis risus eget urna mollis ornareleo.'
+    })
+  }}
   </div>
   <div class="wmcads-col-2-3 wmcads-p-r-sm">
-    <a href="#" target="_self" class="wmcads-content-card">
-      <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=640&height=185&rnd=132122595620000000" alt="content image">
-      <div class="wmcads-p-sm">
-        <h2>Pharetra Sollicitudin Bibendum</h2>
-        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. </p>
-      </div>
-    </a>
+  {{
+    wmcadsContentCard({
+      src: true,
+      isDoubleCard: true,
+      title: 'Pharetra Sollicitudin Bibendum',
+      copy: 'Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.'
+    })
+  }}
   </div>
 </div>
 <br />
