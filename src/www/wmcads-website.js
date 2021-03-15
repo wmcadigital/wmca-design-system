@@ -5,6 +5,7 @@ import cookies from '../wmcads/patterns/cookies/_example';
 import headerJs from '../wmcads/patterns/header/_example';
 import footerJs from '../wmcads/patterns/footer/_example';
 import accordionsJS from '../wmcads/components/accordion/_example';
+import linkJS from '../wmcads/components/link/_example';
 import searchFilterJs from '../wmcads/patterns/search/search-filter/_example';
 
 import {
@@ -35,6 +36,7 @@ window.addEventListener(
   headerJs(),
   footerJs(),
   accordionsJS(),
+  linkJS(),
   cookies(),
   searchFilterJs(),
   componentExampleIframe(),

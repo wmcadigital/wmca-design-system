@@ -1,0 +1,194 @@
+{% macro wmcadsBoardMembers(params) %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+
+<h2>Meet the board members</h2>
+<div class="wmcads-grid">
+<div class="wmcads-col-1 wmcads-col-md-1-4 sidebar-bdr-right-grey mar-vertial-15">
+  <div class="wdgt-toggle-links wdgt">
+  <ul class="pure-menu-list wdgt-tab-labels">
+      <li class="pure-menu-item">
+        <a href="#profile1">
+          Link goes here
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="#profile2">
+          Link goes here
+        </a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="#profile3">
+          Link goes here
+        </a>
+      </li>
+    </ul>
+    {{
+    wmcadsLink({
+      text: "View more",
+      withReadMore: true,
+      btnSeeMoreRevealClass: "example",
+      copyName: "navigation",
+      copy: '<ul class="pure-menu-list wdgt-tab-labels">
+        <li class="pure-menu-item">
+          <a href="#profile4">
+            Link goes here
+          </a>
+        </li>
+      </ul>'
+      })
+    }}
+  </div>
+</div>
+
+<div class="wmcads-col-1 wmcads-col-md-3-4 mar-vertial-15">
+  <div class="wdgt-mentor-profile wdgt-single-panel active" id="profile1">
+    <div class="wmcads-grid">
+      <div class="wmcads-col-1 wmcads-col-md-2-3 wdgt-mentor-profile-content">
+        
+        <h3>Name Surname 1</h3>
+        
+        <p>
+          Powder ice cream jujubes jelly beans. Cotton candy chocolate cake dragée ice cream jelly
+          beans lemon drops sweet. Jujubes candy canes jujubes liquorice croissant pie liquorice
+          liquorice. Cookie marzipan lollipop tiramisu cake cake. Wafer cupcake jelly muffin cupcake
+          tart sweet.
+        </p>
+        <p>
+          Donut candy canes carrot cake. Jelly-o wafer lemon drops cookie icing cheesecake. Tiramisu
+          chocolate donut chocolate cake liquorice. Liquorice pudding gingerbread halvah topping
+          chocolate bar topping pastry sweet.
+        </p>
+        
+        {{
+    wmcadsLink({
+      text: "View more",
+      withReadMore: true,
+      btnSeeMoreRevealClass: "example",
+      copyName: "exampleone",
+      copy: ' <p>
+            Cupcake halvah wafer chocolate bar jujubes chocolate bar muffin. Gummi bears soufflé
+            bear claw. Chocolate cake muffin toffee toffee. Croissant dragée pastry. Caramels cookie
+            jelly beans danish.
+          </p>
+          <p>
+            Croissant danish gingerbread sugar plum icing biscuit tiramisu icing chocolate bar.
+            Gummies candy candy canes powder gummies. Jelly carrot cake chocolate carrot cake
+            liquorice sugar plum oat cake. Ice cream ice cream jelly.
+          </p>
+          <p>
+            Candy halvah gummi bears cheesecake jelly pudding bear claw. Jelly cookie jelly icing
+            jelly-o. Cake ice cream caramels wafer fruitcake oat cake.
+          </p>'
+      })
+    }}
+
+      </div>
+      <div class="wmcads-col-1 wmcads-col-md-1-3">
+        <img src="http://placekitten.com/200/300" alt="" class="pure-img">
+      </div>
+    </div>
+  </div>
+  <div class="wdgt-mentor-profile wdgt-single-panel" id="profile2">
+    <div class="wmcads-grid">
+    
+      <div class="wmcads-col-1 wmcads-col-md-2-3 wdgt-mentor-profile-content">
+        
+        <h3>Name Surname 2</h3>
+        
+        <p>
+          Powder ice cream jujubes jelly beans. Cotton candy chocolate cake dragée ice cream jelly
+          beans lemon drops sweet. Jujubes candy canes jujubes liquorice croissant pie liquorice
+          liquorice. Cookie marzipan lollipop tiramisu cake cake. Wafer cupcake jelly muffin cupcake
+          tart sweet.
+        </p>
+        <p>
+          Donut candy canes carrot cake. Jelly-o wafer lemon drops cookie icing cheesecake. Tiramisu
+          chocolate donut chocolate cake liquorice. Liquorice pudding gingerbread halvah topping
+          chocolate bar topping pastry sweet.
+        </p>
+        <div class="collapse continue-reading-1">
+          <p>
+            Cupcake halvah wafer chocolate bar jujubes chocolate bar muffin. Gummi bears soufflé
+            bear claw. Chocolate cake muffin toffee toffee. Croissant dragée pastry. Caramels cookie
+            jelly beans danish.
+          </p>
+          <p>
+            Croissant danish gingerbread sugar plum icing biscuit tiramisu icing chocolate bar.
+            Gummies candy candy canes powder gummies. Jelly carrot cake chocolate carrot cake
+            liquorice sugar plum oat cake. Ice cream ice cream jelly.
+          </p>
+          <p>
+            Candy halvah gummi bears cheesecake jelly pudding bear claw. Jelly cookie jelly icing
+            jelly-o. Cake ice cream caramels wafer fruitcake oat cake.
+          </p>
+        </div>
+        
+        
+        
+
+
+
+<button class="hvr-icon-hang wdgt-button-see-more" data-toggle="collapse" data-target=".collapse.continue-reading-1" data-text="collapse" aria-expanded="false" data-html-text="Contine reading">
+  <i class="fal fa-chevron-down hvr-icon" aria-hidden="true"></i>
+</button>
+
+      </div>
+        <div class="wmcads-col-1 wmcads-col-md-1-3">
+        <img src="http://placekitten.com/200/300" alt="" class="pure-img">
+      </div>
+    </div>
+  </div>
+  <div class="wdgt-mentor-profile wdgt-single-panel" id="profile3">
+    <div class="wmcads-grid">
+      
+      <div class="wmcads-col-1 wmcads-col-md-2-3 wdgt-mentor-profile-content">
+        
+        <h3>Name Surname 3</h3>
+        
+        <p>
+          Powder ice cream jujubes jelly beans. Cotton candy chocolate cake dragée ice cream jelly
+          beans lemon drops sweet. Jujubes candy canes jujubes liquorice croissant pie liquorice
+          liquorice. Cookie marzipan lollipop tiramisu cake cake. Wafer cupcake jelly muffin cupcake
+          tart sweet.
+        </p>
+        <p>
+          Donut candy canes carrot cake. Jelly-o wafer lemon drops cookie icing cheesecake. Tiramisu
+          chocolate donut chocolate cake liquorice. Liquorice pudding gingerbread halvah topping
+          chocolate bar topping pastry sweet.
+        </p>
+      </div>
+      <div class="wmcads-col-1 wmcads-col-md-1-3">
+        <img src="http://placekitten.com/200/300" alt="" class="pure-img">
+      </div>
+    </div>
+  </div>
+  <div class="wdgt-mentor-profile wdgt-single-panel" id="profile4">
+    <div class="wmcads-grid">
+      
+      <div class="wmcads-col-1 wmcads-col-md-2-3 wdgt-mentor-profile-content">
+        
+        <h3>Name Surname 4</h3>
+        
+        <p>
+          Powder ice cream jujubes jelly beans. Cotton candy chocolate cake dragée ice cream jelly
+          beans lemon drops sweet. Jujubes candy canes jujubes liquorice croissant pie liquorice
+          liquorice. Cookie marzipan lollipop tiramisu cake cake. Wafer cupcake jelly muffin cupcake
+          tart sweet.
+        </p>
+        <p>
+          Donut candy canes carrot cake. Jelly-o wafer lemon drops cookie icing cheesecake. Tiramisu
+          chocolate donut chocolate cake liquorice. Liquorice pudding gingerbread halvah topping
+          chocolate bar topping pastry sweet.
+        </p>
+      </div>
+      <div class="wmcads-col-1 wmcads-col-md-1-3">
+        <img src="http://placekitten.com/200/300" alt="" class="pure-img">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+{% endmacro %}

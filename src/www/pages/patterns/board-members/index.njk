@@ -1,0 +1,49 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Board Members" %}
+{% set section="Patterns" %}
+{# Imports #}
+{% from "wmcads/patterns/board-members/_board-members.njk" import wmcadsBoardMembers %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+{# About #}
+<h2>About</h2>
+{# What #}
+<h3>What does it do?</h3>
+<p>
+  The autocomplete component is an input field that offers the user text suggestions as they type.<br/>
+  This is often done by hitting an API endpoint with the users query when the user has finished typing.
+</p>
+<p>
+  The autocomplete pattern is a combination of the <a href="/components/form-elements/" title="Input component" target="_self" class="wmcads-link">input</a> and <a href="/components/loader/" title="Loader component" target="_self" class="wmcads-link">loader</a> components.
+</p>
+{# When #}
+<h3>When to use it?</h3>
+<ul>
+  <li>As a progressive enhancement to make a users journey shorter/easier when searching</li>
+  <li>When you have a smaller data set/list that is quick to query</li>
+  <li>When you want to ensure the user submits a relevant query/value</li>
+</ul>
+{# When not #}
+<h3>When not to use it?</h3>
+<ul>
+  <li>When you have a massive set of data, instead you should have an input/search that shows results after submission.</li>
+  <li>Don't use this component as if it is a search box. Autocomplete is to suggest a value to a user via it's results not act as a results page for a search.</li>
+</ul>
+
+<hr><br><br>
+{# Default #}
+<h2>Default state</h2>
+<p>In its default state, the autcomplete component is made up of a text input with a search icon.</p>
+<p>For best practice, ensure that the placeholder and aria-label describes what the autocompletes intended purpose is.</p>
+<p>Notice that there is also a <code class="wmcads-website-inline-code">wmcads-loader</code> component nested within the autocomplete, more on that in the next section.</p>
+
+{{
+  compExample([
+    wmcadsBoardMembers({
+      
+    })
+  ])
+}}
+
+{% endblock %}
