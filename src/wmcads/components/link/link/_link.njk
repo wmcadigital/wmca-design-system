@@ -3,6 +3,8 @@
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {# Set vars #}
 {% set text = params.text if params.text else "link text" %} {# set link text #}
+{% set copy = params.copy if params.copy else "<p>Reveal some hidden content</p>" %} {# set link copy #}
+{% set copyName = params.copyName if params.copyName else "example" %} {# set link copy id #}
 {% set link = params.link if params.link else "#" %} {# set link url #}
 {% set linkTitle = params.linkTitle if params.linkTitle else "link title" %} {# set link title #}
 {% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
@@ -12,11 +14,18 @@
 {% set class = ' ' + params.classModifiers if params.classModifiers %}
 {% set class = class + " wmcads-link--with-chevron" if params.withChevronLeft or params.withChevronRight else class %}
 
-<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmcads-link{{class}}" {% if linkRel %}rel="{{linkRel}}"{% endif %}>
+<div class="collapse {{params.copyName}}">
+  {{copy | safe}}
+</div>
+
+<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmcads-link{{class}} {% if params.withReadMore %}hvr-icon-hang{% endif %}" {% if linkRel %}rel="{{linkRel}}"{% endif %} {% if params.withReadMore %}data-toggle="collapse" data-target=".collapse.{{params.copyName}}" data-text="collapse" aria-expanded="false" data-html-text="View more" {% endif %}>
   {% if params.withChevronLeft -%}
   {{ wmcadsIcon({ icon: "general-chevron-right", class: "wmcads-link__chevron wmcads-link__chevron--left" }) | indent(4) | trim }}
   {%- endif %}
-  {{- prefix -}}{{- text -}}
+  {% if params.withReadMore -%}
+  {{ wmcadsIcon({ icon: "general-chevron-right", class: "wmcads-link__chevron wmcads-link__chevron--down hvr-icon" }) | indent(4) | trim }}
+  {%- endif %}
+  {{- prefix -}}{% if not params.withReadMore %}{{- text -}}{% endif %}
   {% if params.withChevronRight -%}
   {{ wmcadsIcon({ icon: "general-chevron-right", class: "wmcads-link__chevron wmcads-link__chevron--right" }) | indent(4) | trim }}
   {%- endif %}
