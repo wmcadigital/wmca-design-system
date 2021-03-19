@@ -102,6 +102,42 @@
   ])
 }}
 
+{# Bare list #}
+<h2>Bare List</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+  <li>Shows a list of items without bullet point</li>
+</ul>
+{# When #}
+<h3>When to use it?</h3>
+<ul>
+  <li>When you need to use a list without bullet syles.</li>
+</ul>
+{# When not #}
+<h3>When not to use it?</h3>
+<ul>
+  <li>When a bullet point will be beneficial to the presentation.</li>
+</ul>
+{# How to #}
+<h3>How to use it?</h3>
+<ul>
+    <li>List items should have similar line lengths, doesn’t overpower another.</li>
+    <li>Include related items that are a similar level of importance.</li>
+</ul>
 
+{% from "wmcads/components/lists/bare-list/_bare-list.njk" import wmcadsBareList %}
+{{
+  compExample([
+    wmcadsBareList(
+        {
+            html: 
+              "<li>Text</li>
+              <li>Text</li>
+              <li><a href=''>Link</a></li>"
+        }
+    ) | trim
+  ])
+}}
 
 {% endblock %}

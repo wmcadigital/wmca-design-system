@@ -30,14 +30,14 @@
 
     // prevent icon resizing
     .wmcads-link__chevron {
-      flex: 0 0 1.5rem;
+      flex: 0 0 1rem;
     }
   }
 
   &__chevron {
     width: 1.5rem;
-    height: 1.5rem;
-    fill: get-color(cta, 10, dark);
+    height: 1rem;
+    fill: get-color(primary);
 
     &--left {
       margin-right: $size-xsm;
@@ -47,6 +47,11 @@
     &--right {
       margin-left: $size-xsm;
     }
+
+    &--down {
+      margin-left: $size-xsm;
+      transform: rotate(90deg);
+    }
   }
 }
 
@@ -55,5 +60,53 @@ a {
   h2,
   h3 {
     color: get-color(cta);
+  }
+}
+
+
+// red more icon
+.hvr-icon-hang {
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  border: 0;
+  color: get-color(secondary);
+  background: none;
+  vertical-align: middle;
+
+  .hvr-icon {
+    color: get-color(primary);
+  }
+
+}
+
+.hvr-icon-hang[aria-expanded="false"] {
+  &:after {
+    content: attr(data-html-text);
+    color: get-color(cta);
+  }
+
+  &:hover::after {
+    color: get-color(cta-active, 40, dark);
+  }
+}
+
+.hvr-icon-hang[aria-expanded="true"] {
+
+  .hvr-icon {
+    transform: rotate(270deg);
+  }
+
+  &:after {
+    content: "View less";
+  }
+}
+
+.collapse {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+
+  &.show {
+    max-height: 99em;
   }
 }

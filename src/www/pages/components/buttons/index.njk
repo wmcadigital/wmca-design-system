@@ -256,5 +256,38 @@
     })
   ])
 }}
-{# end: mode buttons #}
+{# end: start buttons #}
+
+{# read more buttons #}
+<h2>Read more button</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+  <li>Shows that the button starts a process or journey</li>
+</ul>
+{# When #}
+<h3>When to use it?</h3>
+<ul>
+  <li>When a button starts a process or journey</li>
+</ul>
+{# When not #}
+<h3>When not to use it?</h3>
+<ul>
+  <li>When a button is a destructive action</li>
+  <li>When a button is trying to attract the user's attention</li>
+  <li>When the button is inessential for continuing the user journey</li>
+</ul>
+
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{{
+  compExample([
+    wmcadsLink({
+      text: "View more",
+      withReadMore: true,
+      btnSeeMoreRevealClass: "example"
+    })
+  ])
+}}
+{# end: read more buttons #}
+
 {% endblock %}
