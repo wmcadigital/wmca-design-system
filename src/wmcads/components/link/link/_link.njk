@@ -14,9 +14,11 @@
 {% set class = ' ' + params.classModifiers if params.classModifiers %}
 {% set class = class + " wmcads-link--with-chevron" if params.withChevronLeft or params.withChevronRight else class %}
 
+{% if params.withReadMore -%}
 <div class="collapse {{params.copyName}}">
   {{copy | safe}}
 </div>
+{%- endif %}
 
 <a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmcads-link{{class}} {% if params.withReadMore %}hvr-icon-hang{% endif %}" {% if linkRel %}rel="{{linkRel}}"{% endif %} {% if params.withReadMore %}data-toggle="collapse" data-target=".collapse.{{params.copyName}}" data-text="collapse" aria-expanded="false" data-html-text="View more" {% endif %}>
   {% if params.withChevronLeft -%}
