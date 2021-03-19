@@ -1,110 +1,104 @@
 const boardMembersJS = () => {
-// get all the 'trigger' elements on the page
-const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+  // get all the 'trigger' elements on the page
+  const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 
-// listen to click events that occuor
-// only on our triggers
-window.addEventListener(
-  'click',
-  ev => {
-    const elm = ev.target;
-    if (triggers.includes(elm)) {
-      ev.preventDefault();
-      const selector = elm.getAttribute('data-target');
-      collapse(selector, 'toggle');
-      if (elm.getAttribute('aria-expanded') === 'false') {
-        elm.setAttribute('aria-expanded', 'true');
-      } else {
-        elm.setAttribute('aria-expanded', 'false');
+  // listen to click events that occuor
+  // only on our triggers
+  window.addEventListener(
+    'click',
+    ev => {
+      const elm = ev.target;
+      if (triggers.includes(elm)) {
+        ev.preventDefault();
+        const selector = elm.getAttribute('data-target');
+        collapse(selector, 'toggle');
+        if (elm.getAttribute('aria-expanded') === 'false') {
+          elm.setAttribute('aria-expanded', 'true');
+        } else {
+          elm.setAttribute('aria-expanded', 'false');
+        }
       }
-    }
-  },
-  false
-);
+    },
+    false
+  );
 
-// map commands to the classList methods
-const fnmap = {
-  toggle: 'toggle',
-  show: 'add',
-  hide: 'remove'
-};
-const collapse = (selector, cmd) => {
-  const targets = Array.from(document.querySelectorAll(selector));
-  targets.forEach(target => {
-    target.classList[fnmap[cmd]]('show');
-  });
-};
+  // map commands to the classList methods
+  const fnmap = {
+    toggle: 'toggle',
+    show: 'add',
+    hide: 'remove'
+  };
+  const collapse = (selector, cmd) => {
+    const targets = Array.from(document.querySelectorAll(selector));
+    targets.forEach(target => {
+      target.classList[fnmap[cmd]]('show');
+    });
+  };
 
+  const tabs = document.querySelectorAll('ul.wmcads-board-members-tab-labels > li');
+  const panelQuestions = document.querySelectorAll('.wmcads-board-members-panel-question');
 
+  const onTabClick = e => {
+    e.preventDefault();
 
-const tabs = document.querySelectorAll('ul.wmcads-board-members-tab-labels > li');
-const panelQuestions = document.querySelectorAll('.wmcads-board-members-panel-question');
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
 
-const onTabClick = e => {
-  e.preventDefault();
+    const clickedTab = e.currentTarget;
+    clickedTab.classList.add('active');
 
-  tabs.forEach(tab => {
-    tab.classList.remove('active');
-  });
+    const tabsPanel = document.querySelectorAll('.wmcads-board-members-single-panel');
 
-  const clickedTab = e.currentTarget;
-  clickedTab.classList.add('active');
+    tabsPanel.forEach(panel => {
+      panel.classList.remove('active');
+    });
 
-  const tabsPanel = document.querySelectorAll('.wmcads-board-members-single-panel');
+    const anchorRef = e.target;
+    const activePanelId = anchorRef.getAttribute('href');
+    const activePanel = document.querySelector(activePanelId);
 
-  tabsPanel.forEach(panel => {
-    panel.classList.remove('active');
-  });
+    activePanel.classList.add('active');
+  };
 
-  const anchorRef = e.target;
-  const activePanelId = anchorRef.getAttribute('href');
-  const activePanel = document.querySelector(activePanelId);
+  const onQuestionClick = e => {
+    e.preventDefault();
 
-  activePanel.classList.add('active');
-};
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
 
-const onQuestionClick = e => {
-  e.preventDefault();
+    tabs[1].classList.add('active');
 
-  tabs.forEach(tab => {
-    tab.classList.remove('active');
-  });
+    const tabsPanel = document.querySelectorAll('.wmcads-board-members-single-panel');
+    const tab2 = document.querySelector('#tab-2');
 
-  tabs[1].classList.add('active');
+    tabsPanel.forEach(panel => {
+      panel.classList.remove('active');
+    });
 
-  const tabsPanel = document.querySelectorAll('.wmcads-board-members-single-panel');
-  const tab2 = document.querySelector('#tab-2');
+    tab2.classList.add('active');
 
-  tabsPanel.forEach(panel => {
-    panel.classList.remove('active');
-  });
+    const tabQuestion = document.querySelectorAll('.wmcads-board-members-panel-content');
 
-  tab2.classList.add('active');
+    tabQuestion.forEach(question => {
+      question.classList.remove('active');
+    });
 
-  const tabQuestion = document.querySelectorAll('.wmcads-board-members-panel-content');
+    const questionAnchor = e.target;
+    const activeQuestion = questionAnchor.getAttribute('href');
+    const AnswerPanel = document.querySelector(activeQuestion);
 
-  tabQuestion.forEach(question => {
-    question.classList.remove('active');
-  });
+    AnswerPanel.classList.add('active');
+  };
 
-  const questionAnchor = e.target;
-  const activeQuestion = questionAnchor.getAttribute('href');
-  const AnswerPanel = document.querySelector(activeQuestion);
+  for (const tab of tabs) {
+    tab.addEventListener('click', onTabClick);
+  }
 
-  AnswerPanel.classList.add('active');
-};
-
-for (const tab of tabs) {
-  tab.addEventListener('click', onTabClick);
-}
-
-for (const question of panelQuestions) {
-  question.addEventListener('click', onQuestionClick);
-}
-
-
+  for (const question of panelQuestions) {
+    question.addEventListener('click', onQuestionClick);
+  }
 };
 
 export default boardMembersJS;
-
-
