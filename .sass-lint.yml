@@ -135,7 +135,7 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/nesting-depth.md
   nesting-depth:
     - 2
-    - max-depth: 3
+    - max-depth: 4
 
   # TODO: no-attribute-selectors
   # Rule no-attribute-selectors will warn against the use of attribute selectors.
