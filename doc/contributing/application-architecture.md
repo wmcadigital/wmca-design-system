@@ -22,15 +22,15 @@
 
         - `components/`
 
-          Examples of components usage in various contexts. See [README.md](../../src/components/README.md) in the components directory for more details. You can access these examples from [WMCA Design System components](http://localhost:3000/components/).
+          Examples of components usage in various contexts. See [README.md](../../src/components/README.md) in the components directory for more details. You can access these examples from [WMCA Design System components](http://localhost:8080/components/).
 
         - `patterns/`
 
-          Examples of pattern usage in various contexts. See [README.md](../../src/components/README.md) in the components directory for more details. You can access these examples from [WMCA Design System patterns](http://localhost:3000/patterns/).
+          Examples of pattern usage in various contexts. See [README.md](../../src/components/README.md) in the components directory for more details. You can access these examples from [WMCA Design System patterns](http://localhost:8080/patterns/).
 
     - `www/`
 
-      Anything that is specific for the [WMCA Design System website](http://localhost:3000) goes in this folder. It also contains generic layout templates used to render preview and content pages.
+      Anything that is specific for the [WMCA Design System website](http://localhost:8080) goes in this folder. It also contains generic layout templates used to render preview and content pages.
 
       - `assets/`
 
