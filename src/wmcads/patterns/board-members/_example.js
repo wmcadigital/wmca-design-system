@@ -2,26 +2,6 @@ const boardMembersJS = () => {
   // get all the 'trigger' elements on the page
   const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 
-  // listen to click events that occuor
-  // only on our triggers
-  window.addEventListener(
-    'click',
-    ev => {
-      const elm = ev.target;
-      if (triggers.includes(elm)) {
-        ev.preventDefault();
-        const selector = elm.getAttribute('data-target');
-        collapse(selector, 'toggle');
-        if (elm.getAttribute('aria-expanded') === 'false') {
-          elm.setAttribute('aria-expanded', 'true');
-        } else {
-          elm.setAttribute('aria-expanded', 'false');
-        }
-      }
-    },
-    false
-  );
-
   // map commands to the classList methods
   const fnmap = {
     toggle: 'toggle',
@@ -92,12 +72,14 @@ const boardMembersJS = () => {
     AnswerPanel.classList.add('active');
   };
 
-  for (const tab of tabs) {
+  tabs.forEach(tab => {
     tab.addEventListener('click', onTabClick);
-  }
+  });
 
-  for (const question of panelQuestions) {
+  panelQuestions.forEach(question => {
     question.addEventListener('click', onQuestionClick);
+  });
+
   // listen to click events that occuor
   // only on our triggers
   window.addEventListener(
@@ -113,7 +95,7 @@ const boardMembersJS = () => {
         } else {
           elm.setAttribute('aria-expanded', 'false');
         }
-  }
+      }
     },
     false
   );
