@@ -2,7 +2,7 @@
 
 ## Class naming convention
 
-## `wmre` namespacing
+## `wmca` namespacing
 
 All class names start with a `.wmcads-` namespace to reduce the likelihood of
 conflicting with existing classes in your application. It also helps to identify
@@ -112,12 +112,12 @@ This makes it easier to keep track of different contexts.
 # Linting
 
 To ensure code quality and consistency in our Sass files we check that certain
-style rules are followed using a project [YAML file](../../../config/.sass-lint.yml)
+style rules are followed using a project [YAML file](../../../master/.sass-lint.yml)
 
 As we're using node-sass parser to parse our scss files, the package of choice
 is [sass-lint](https://github.com/sasstools/sass-lint).
 
-See [testing and linting](../testing-and-linting.md) for more information.
+See [linting](../contributing/testing-and-linting.md) for more information.
 
 ## Running the lint task
 
@@ -126,7 +126,7 @@ or check linting directly in [Sublime Text](https://github.com/skovhus/SublimeLi
 [Atom](https://atom.io/packages/linter-sass-lint)
 or other [IDE's](https://github.com/sasstools/sass-lint#ide-integration)
 
-See also [testing and linting](../testing-and-linting.md).
+See also [Linting](../testing-and-linting.md).
 
 ## Linting rules
 
@@ -492,12 +492,4 @@ Good:
 
 ### Remove trailing whitespace
 
-More write up on [supported rules](https://github.com/sasstools/sass-lint/tree/master/doc/rules).
-
-## SassDoC
-
-We document SCSS using [SassDoc](http://sassdoc.com/file-level-annotations/). This includes most of the settings, helpers and tools layers, with variables, functions and mixins being marked as private or public.
-
-The syntax is used to generate a [SassDoc application](http://wmcads-frontend-review.herokuapp.com/doc/) that documents SCSS in a readable format.
-
-See [colour.scss](../../../src/wmre/helpers/_colour.scss) for an example of SassDoc syntax.
+More write up on [supported rules](https://github.com/sasstools/sass-lint/tree/master/docs/rules).

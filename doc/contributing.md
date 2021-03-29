@@ -14,7 +14,7 @@ These docs are to help you understand our contribution guidelines and standards.
   - [CSS](#css)
   - [JavaScript](#javascript)
   - [Components and Nunjucks API](#components-and-nunjucks-api)
-- [Testing and linting](#testing-and-linting)
+- [Linting](#testing-and-linting)
 - [Supported browsers](#supported-browsers)
 - [Commit hygiene](#commit-hygiene)
 - [Updating Changelog](#updating-changelog)
@@ -47,23 +47,23 @@ See [running locally](/doc/contributing/running-locally.md).
 
 ### CSS
 
-See our [coding standards for CSS](/doc/contributing/coding-standards/css.md) and [testing and linting](/doc/contributing/testing-and-linting.md).
+See our [coding standards for CSS](/doc/contributing/css.md) and [Linting](/doc/contributing/testing-and-linting.md).
 
 ### JavaScript
 
-See our [coding standards for JavaScript](/doc/contributing/coding-standards/js.md) and [testing and linting](/doc/contributing/testing-and-linting.md).
+See our [coding standards for JavaScript](/doc/contributing/js.md) and [Linting](/doc/contributing/testing-and-linting.md).
 
 ### Components and Nunjucks API
 
-See our [coding standards for components](/doc/contributing/coding-standards/components.md), [coding standards for Nunjucks macros](/doc/contributing/coding-standards/nunjucks-api.md) and [testing and linting](/doc/contributing/testing-and-linting.md).
+See our [coding standards for components](/doc/contributing/coding-standards.md), [coding standards for Nunjucks macros](/doc/contributing/coding-standards.md) and [Linting](/doc/contributing/testing-and-linting.md).
 
-## Testing and linting
+## linting
 
-See [testing and linting](/doc/contributing/testing-and-linting.md).
+See [Linting](/doc/contributing/testing-and-linting.md).
 
 ## Supported browsers
 
-Your contribution needs to work with certain browsers as set out in [README](README.md#browser-support). See also [supporting Internet Explorer 8](/doc/installation/supporting-internet-explorer-8.md).
+Your contribution needs to work with certain browsers as set out in [README](README.md#browser-support).
 
 ## Supported assistive technology
 
