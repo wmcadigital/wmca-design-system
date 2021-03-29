@@ -98,7 +98,25 @@ const boardMembersJS = () => {
 
   for (const question of panelQuestions) {
     question.addEventListener('click', onQuestionClick);
+  // listen to click events that occuor
+  // only on our triggers
+  window.addEventListener(
+    'click',
+    ev => {
+      const elm = ev.target;
+      if (triggers.includes(elm)) {
+        ev.preventDefault();
+        const selector = elm.getAttribute('data-target');
+        collapse(selector, 'toggle');
+        if (elm.getAttribute('aria-expanded') === 'false') {
+          elm.setAttribute('aria-expanded', 'true');
+        } else {
+          elm.setAttribute('aria-expanded', 'false');
+        }
   }
+    },
+    false
+  );
 };
 
 export default boardMembersJS;
