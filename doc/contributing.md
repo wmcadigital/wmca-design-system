@@ -92,4 +92,4 @@ See [deploying](/doc/contributing/deploying.md).
 
 ## Releasing a new version
 
-See [publishing](/doc/contributing/publishing.md).
+See [versioning](/doc/contributing/versioning.md).
