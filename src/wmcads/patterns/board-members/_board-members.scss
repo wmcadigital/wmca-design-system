@@ -1,0 +1,37 @@
+.wmcads-board-members {
+  &-contents {
+    border-right: 1px solid get-color(text);
+
+    @media all and (max-width: $breakpoint-md) {
+      margin-bottom: $size-lg;
+      padding-bottom: $size-lg;
+      border-right: 0;
+      border-bottom: 1px solid get-color(text);
+    }
+
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .wmcads-p-l-lg {
+    @media all and (max-width: $breakpoint-md) {
+      padding-left: 0;
+    }
+  }
+
+  &-single-panel,
+  &-panel-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &-panels {
+    padding-top: 30px;
+    border-top: 1px solid get-color(secondary, 40);
+  }
+}

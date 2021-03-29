@@ -1,0 +1,10 @@
+.wmcads-bare-list {
+  list-style: none;
+  padding-inline-start: $size-xs;
+
+  a,
+  .wmcads-link {
+    display: inline;
+  }
+
+}

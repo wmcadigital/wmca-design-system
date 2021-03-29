@@ -1,0 +1,73 @@
+.wmcads-hub-header {
+  display: flex;
+  position: relative;
+  height: 230px;
+  color: $white;
+  background: get-color(primary);
+
+  .left-pane {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+  }
+
+  .left-pane:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 33px;
+    right: -92px;
+    width: 164px;
+    height: 164px;
+    margin-right: 10px;
+    transform: rotate(45deg);
+    border-radius: 0 120px 0 0;
+    background-color: get-color(primary);
+  }
+
+  img {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-pane {
+    position: absolute;
+    left: calc((100% - 927px) / 2);
+    max-width: 468px;
+    overflow: auto;
+  }
+
+  h1 {
+    margin: 56px 0 0;
+    color: $white;
+  }
+
+  .text {
+    max-width: 448px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 927px) {
+  .wmcads-hub-header {
+    .left-pane {
+      width: 100%;
+    }
+
+    .left-pane:after {
+      display: none;
+    }
+
+    img {
+      display: none;
+    }
+
+    .text-pane {
+      left: 0;
+      max-width: 100%;
+    }
+  }
+}

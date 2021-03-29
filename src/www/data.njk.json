@@ -57,6 +57,9 @@
             "name": "Form elements"
           },
           {
+            "name": "Hub header"
+          },
+          {
             "name": "Inset text"
           },
           {
@@ -73,6 +76,9 @@
           },
           {
             "name": "Message"
+          },
+          {
+            "name": "Page contents"
           },
           {
             "name": "Page header"
@@ -110,6 +116,9 @@
             "name": "Banner"
           },
           {
+            "name": "Board Members"
+          },
+          {
             "name": "Cookies"
           },
           {
@@ -130,7 +139,7 @@
         ]
       },
       {
-        "name": "User research"
+        "name": "Templates"
       }
     ],
     "colors": {

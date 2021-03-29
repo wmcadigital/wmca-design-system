@@ -57,7 +57,7 @@
       @if $breakpoint-name == "" or $breakpoint-value == "" {
         &.wmcads-col-1,
         &.wmcads-col-1-1 {
-          padding-right: 0;
+          // padding-right: 0;
           padding-left: 0;
         }
       } @else {
