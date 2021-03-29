@@ -26,7 +26,7 @@
 
 ## 1.2. Overview
 
-Welcome to the [West Midlands Combined Authority Design System](https://wmcadigital.github.io/wmca-design-system).
+Welcome to the [West Midlands Combined Authority Design System](https://wmcads.netlify.app/).
 
 The WMCA Design System is ran at the designated url on startup (usually [http://localhost:8080](http://localhost:8080)) and is the primary means of viewing your work - it will live update as you make changes.
 
