@@ -47,7 +47,9 @@ Only when the template has been signed off by the lead developer and design can 
   - If the template requires extra styles or scripts these should be added into the `src/www/pages/templates/template-name` folder so they can go through [Linting](../contributing/testing-and-linting.md) and the build process.
     - If the code is concidered useful for other pages it should be added to the base Design System.
 - Templates pass accessibility checks
-- Sprint goal is met
-- Acceptance criteria met
 - Approved by lead developer
 - Approved by Design
+
+## CMS Integration
+
+When the template has been signed off it can be integrated into our [CMS](../contributing/cms/cms-integration.md).
