@@ -30,7 +30,7 @@
 
     - `www/`
 
-      Anything that is specific for the [WMCA Design System website](https://wmcads.netlify.app) goes in this folder. It also contains generic layout templates used to render preview and content pages.
+      Anything that is specific for the [WMCA Design System website](https://wmcads.netlify.app) goes in this folder. It also contains generic layout templates used to render preview, content pages and template mockups.
 
       - `assets/`
 
