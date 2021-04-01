@@ -23,6 +23,10 @@
   &.wmcads-grid--justify-even {
     justify-content: space-evenly;
   }
+
+  &.wmcads-grid--align-center {
+    align-items: center;
+  }
 }
 
 // ensures sticky footer
