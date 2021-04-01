@@ -16,8 +16,12 @@
     justify-content: flex-end;
   }
 
-  &.wmcads-grid--align-center {
-    align-items: center;
+  &.wmcads-grid--justify-center {
+    justify-content: center;
+  }
+
+  &.wmcads-grid--justify-even {
+    justify-content: space-evenly;
   }
 }
 
