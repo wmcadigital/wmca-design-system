@@ -1,6 +1,7 @@
 {% extends "www/_layouts/layout-left-pane.njk" %}
 {% set pageTitle = "Utility classes" %}
 {% set section = "Styles" %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
 
 {% block content %}
 {# About #}
@@ -53,6 +54,14 @@
     .wmcads-grid--justify-center
   </code>
 </pre>
+
+{{
+    wmcadsLink( { 
+      link: "/styles/examples/grid-examples.html",
+      text: "Grid examples" 
+      } 
+    )
+}}
 
 <h3>Information for designers</h3>
 <p>
@@ -236,6 +245,15 @@ Where <code class="wmcads-website-inline-code">{size}</code> is one of:
   </code>
 </pre>
 
+{{
+    wmcadsLink( { 
+      link: "/styles/examples/grid-column-spacing.html",
+      text: "Grid column spacing examples" 
+      } 
+    )
+}}
+<br><br>
+
 <hr>
 {# Background #}
 <h2>Background Colour</h2>
@@ -248,7 +266,6 @@ Where <code class="wmcads-website-inline-code">{size}</code> is one of:
     .bg-default
     .bg-white
     .bg-disabled-elements
-    .bg-planned-disruption
     .bg-transparent
   </code>
 </pre>
