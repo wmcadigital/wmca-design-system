@@ -9,6 +9,7 @@ build/
 **/a11y-report.json
 **/.tmp
 .vscode
+.history
 
 # Local Netlify folder
 .netlify
