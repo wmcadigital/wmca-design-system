@@ -1,12 +1,8 @@
 // Vars
 @import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
 @import "../vars";
-// Mixins
-@import "../mixins";
-
-// Global styles
-@import "../utilities";
-@import "../typography";
 
 // Button Styles
-@import "../../../components/button/button"; // Import all pattern styles
+.umb-row-inner {
+  @import "../../../components/button/button"; // Import all pattern styles
+}
