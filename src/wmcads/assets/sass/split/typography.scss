@@ -6,7 +6,8 @@
 @import "../mixins";
 
 
-// Button Styles
-.umb-grid {
-  @import "../../../components/button/button"; // Import all pattern styles
+// Typography Styles
+#umb-grid {
+  @import "../typography";
 }
+

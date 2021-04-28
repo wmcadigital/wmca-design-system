@@ -12,7 +12,9 @@ module.exports = {
       'src/www/wmcads-website.scss',
       'src/www/pages/templates/templates.scss',
       'src/wmcads/assets/sass/wmcads-grid/grid.scss',
-      'src/wmcads/assets/sass/split/buttons.scss'
+      'src/wmcads/assets/sass/split/buttons.scss',
+      'src/wmcads/assets/sass/split/accordion.scss',
+      'src/wmcads/assets/sass/split/typography.scss'
     ], // List of scss file(s) which should be processed, linted & minified
     output: 'build/css/', // output location of minified styles
     reactNativeSrc: 'src/wmcads/assets/sass/wmcads.scss'

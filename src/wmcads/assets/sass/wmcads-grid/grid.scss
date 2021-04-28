@@ -4,7 +4,7 @@
 // with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
 // specific font stacks to ensure the greatest OS/browser compatibility.
 
-.umb-row-inner {
+.umb-grid {
   button,
   input,
   select,
@@ -40,4 +40,7 @@
   // Import grid components
   @import "grid-cols";
   @import "grid-spacing";
+
+  // Import utilities
+  @import "../utilities";
 }
