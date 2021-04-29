@@ -25,7 +25,7 @@ The process of versioning The West Midlands Combined Authority Design System is 
   - [1.5 Extra information](#15-extra-information)
     - [1.5.1 Bumping the version number](#151-bumping-the-version-number)
     - [1.5.2 Updating the changelog](#152-updating-the-changelog)
-    - [1.5.3 Add to CDN](#153-npm-package)
+    - [1.5.3 Add to CDN](#153-add-to-cdn)
 
 ## 1.2 Branches
 
@@ -209,4 +209,4 @@ For example:
 
 ### 1.5.3 Add to CDN
 
-Once built and cleaned the app needs to be added to the wmca cdn within a folder named the version number. E.g. https://cloudcdn.wmca.org.uk/wmcaassets/1.4.0
+Once built and cleaned the app needs to be added to the wmca cdn within a folder named the version number. E.g. https://cloudcdn.wmca.org.uk/wmcaassets/ds/1.4.0
