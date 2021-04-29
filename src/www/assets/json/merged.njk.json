@@ -45,11 +45,14 @@
 					"name": "Content card"
 				},
 				{
-					"name": "Document"
-				},				
-				{
 					"name": "Details"
 				},
+				{
+					"name": "Document"
+				},
+				{
+					"name": "Divider"
+				},				
 				{
 					"name": "File download"
 				},
