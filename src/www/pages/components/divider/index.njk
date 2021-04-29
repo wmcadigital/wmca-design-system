@@ -1,0 +1,67 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Divider" %}
+{% from "wmcads/components/divider/_divider.njk" import wmcadsDivider %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+<h2>Default divider</h2>
+{{
+  compExample([
+    wmcadsDivider()
+  ])
+}}
+
+<h2>Primary divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'primary'
+    })
+  ])
+}}
+
+<h2>Cool Grey divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'grey'
+    })
+  ])
+}}
+
+<h2>WM Green divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmgreen'
+    })
+  ])
+}}
+
+<h2>WM Red divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmred'
+    })
+  ])
+}}
+
+<h2>WM Purple divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmpurple'
+    })
+  ])
+}}
+
+<h2>WM Blue divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmblue'
+    })
+  ])
+}}
+{% endblock %}
