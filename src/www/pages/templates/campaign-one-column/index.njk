@@ -11,6 +11,12 @@
 {# Set array of tiles #} 
 {% block content %} 
 
+<div class="template-campaign-1-col">
+
+<div class="wmcads-container wmcads-hide-desktop">
+    <h1 id="wmcads-main-content">Roll &amp; Stroll</h1>
+</div>
+
 {{
  wmcadsPageHeader({
       title: false,
@@ -20,7 +26,7 @@
 <div class="wmcads-container">
   <div class="wmcads-grid">
     <div class="wmcads-col-1 wmcads-col-md-3-4 wmcads-p-t-lg">
-      <h1 id="wmcads-main-content">Roll &amp; Stroll</h1>
+      <h1 id="wmcads-main-content" class="wmcads-hide-mobile">Roll &amp; Stroll</h1>
       <h2>Have your say on cycling &amp; walking changes in your local area.</h2>
       <p>Lockdown has been quite a journey but cycling and walking is more popular than ever.</p>
       <p>After marking this year the Big Summer of Cycling &amp; Walking, let’s not stop now. We're continuing to invest in creating a region that supports healthy, greener and safer travelling. We want to help you get started or keep going.</p>
@@ -183,5 +189,7 @@
 
 <div class="wmcads-grid wmcads-grid--justify-center">
     <img src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=1280&height=400&rnd=132122595620000000" />
+</div>
+
 </div>
 {% endblock %}

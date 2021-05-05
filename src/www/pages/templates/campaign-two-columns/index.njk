@@ -10,9 +10,14 @@
 {%- from "wmcads/components/button/_button.njk" import wmcadsButton as start -%}
 {% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
 {# Set array of tiles #} 
-{% block content %} 
+{% block content %}
 
-{# About the style guide #}
+<div class="template-campaign-2-col">
+
+<div class="wmcads-container wmcads-hide-desktop">
+    <h1 id="wmcads-main-content">Roll &amp; Stroll</h1>
+</div>
+
 {{
  wmcadsPageHeader({
       title: false,
@@ -31,7 +36,7 @@
     </aside>
 
     <div class="main wmcads-col-1 wmcads-col-md-2-3 wmcads-m-b-xl">
-      <h1 id="wmcads-main-content wmcads-m-t-md">Roll &amp; Stroll</h1>
+      <h1 id="wmcads-main-content" class="wmcads-hide-mobile">Roll &amp; Stroll</h1>
       <h2>Have your say on cycling &amp; walking changes in your local area.</h2>
       <p>Lockdown has been quite a journey but cycling and walking is more popular than ever.</p>
       <p>After marking this year the Big Summer of Cycling &amp; Walking, let’s not stop now. We're continuing to invest in creating a region that supports healthy, greener and safer travelling. We want to help you get started or keep going.</p>
@@ -194,5 +199,7 @@
 
 <div class="wmcads-grid wmcads-grid--justify-center">
     <img src="/img/examples/roll-stroll-bottom.png" />
+</div>
+
 </div>
 {% endblock %}
