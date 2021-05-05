@@ -1,7 +1,9 @@
 {% macro wmcadsPageContents(params) %}
-  <div class="wmcads-page-contents">
+{% set title = params.title if params.title else "Page title" %}
+
+  <div class="wmcads-page-contents {% if(params.rightMargin) %} wmcads-m-r-lg {% endif %}">
       <h3>Page contents</h3>
-      <div>Page title</div>
+      <div>{{title}}</div>
       <a>link 1</a>
       <a>link 2</a>
       <a>link 3</a>
