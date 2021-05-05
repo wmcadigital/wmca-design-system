@@ -4,19 +4,10 @@
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
 {% block content %}
-<h2>Default divider</h2>
+<h2>Default divider (Primary)</h2>
 {{
   compExample([
     wmcadsDivider()
-  ])
-}}
-
-<h2>Primary divider</h2>
-{{
-  compExample([
-    wmcadsDivider({
-      class: 'primary'
-    })
   ])
 }}
 

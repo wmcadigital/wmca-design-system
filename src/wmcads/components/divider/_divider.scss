@@ -1,29 +1,27 @@
 hr,
 .wmcads-divider {
-  border: 3px solid get-color(primary);
-
-  &-primary {
-    border-color: get-color(primary);
-  }
+  height: 5px;
+  border: 0;
+  background-color: get-color(primary);
 
   &-grey {
-    border-color: get-color(brandCoolGrey);
+    background-color: get-color(brandCoolGrey);
   }
 
   &-wmgreen {
-    border-color: get-color(brandWmGreen);
+    background-color: get-color(brandWmGreen);
   }
 
   &-wmred {
-    border-color: get-color(brandWmRed);
+    background-color: get-color(brandWmRed);
   }
 
   &-wmpurple {
-    border-color: get-color(brandWmPurple);
+    background-color: get-color(brandWmPurple);
   }
 
   &-wmblue {
-    border-color: get-color(brandWmBlue);
+    background-color: get-color(brandWmBlue);
   }
 
 }
