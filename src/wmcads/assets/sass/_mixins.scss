@@ -12,7 +12,7 @@
   // Heading 1 (46px)
   @if $level == 1 {
     margin-top: 1.5rem * $multiplier;
-    margin-bottom: 3rem * $multiplier;
+    margin-bottom: 2rem * $multiplier;
     font-size: 2.875rem * $multiplier;
     line-height: 3rem * $multiplier;
   }
