@@ -1,0 +1,11 @@
+.wmcads-page-contents {
+  @media screen and (max-width: $breakpoint-md) {
+    margin: 0 !important;
+  }
+}
+
+h1 {
+    @media screen and (max-width: $breakpoint-md) {
+        margin-top: $size-md !important;
+      }
+}
