@@ -148,6 +148,12 @@
 					"name": "Homepage"
 				},
 				{
+					"name": "Campaign One Column"
+				},
+				{
+					"name": "Campaign Two Columns"
+				},
+				{
 					"name": "Content Template"
 				}
 			]

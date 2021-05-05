@@ -30,8 +30,9 @@
     {# header #}
 
     {# main #}
-    <main class="wmcads-container--main">
+    <main class="wmcads-container--main {% if(params.tempCampaign) %} wmcads-m-r-lg {% endif %}">
       {% block body %}{% endblock %}
+      {{params}}
     </main>
     {# main #}
 
