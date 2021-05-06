@@ -63,14 +63,11 @@
     }
 
     h3 {
+      margin: $size-xs 0;
       a {
-        margin: $size-sm 0;
+        margin: $size-xs 0;
       }
     }
-  }
-
-  h3 {
-    margin: $size-sm 0;
   }
 
   img {
