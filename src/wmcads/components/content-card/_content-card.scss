@@ -74,6 +74,9 @@
   }
 
   img {
+    height: 180px;
     padding: 1px;
-  }
+    object-fit: cover;
+}
+
 }
