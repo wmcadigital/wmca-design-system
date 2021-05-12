@@ -4,9 +4,11 @@
   <div class="wmcads-page-contents {% if(params.rightMargin) %} wmcads-m-r-lg {% endif %}">
       <h3>Page contents</h3>
       <div>{{title}}</div>
-      <a>link 1</a>
-      <a>link 2</a>
-      <a>link 3</a>
-      <a>link 4</a>
+      {% if(params.example) %}
+        <a>link 1</a>
+        <a>link 2</a>
+        <a>link 3</a>
+        <a>link 4</a>
+      {% endif %}
   </div>
 {% endmacro %}

@@ -6,7 +6,9 @@
 {% block content %}
 {{
   compExample([
-    wmcadsPageContents()
+    wmcadsPageContents({
+      example: true
+    })
   ])  
 }}
 {% endblock %} 
