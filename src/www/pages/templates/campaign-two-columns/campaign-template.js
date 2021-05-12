@@ -27,7 +27,6 @@ const pageContents = () => {
     const menu = document.querySelector('.wmcads-page-contents');
     // add page contents link
     menu.appendChild(createMenuItem());
-
   });
 };
 
