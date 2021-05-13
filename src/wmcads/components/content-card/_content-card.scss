@@ -75,5 +75,9 @@
     height: 180px;
     padding: 1px;
     object-fit: cover;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      height: auto;
+    }
   }
 }
