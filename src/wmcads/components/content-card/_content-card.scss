@@ -1,6 +1,7 @@
 //accessibility styles
 @mixin accessibility-hover {
-  h2 {
+  h2,
+  h3 {
     text-decoration: underline;
   }
 
@@ -76,8 +77,12 @@
     padding: 1px;
     object-fit: cover;
 
-    @media screen and (max-width: $breakpoint-sm) {
+    @media screen and (max-width: $breakpoint-md) {
       height: auto;
     }
+  }
+
+  h3 {
+    margin-top: 0;
   }
 }

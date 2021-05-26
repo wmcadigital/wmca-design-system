@@ -8,6 +8,7 @@ import accordionsJS from '../wmcads/components/accordion/_example';
 import boardMembersJS from '../wmcads/patterns/board-members/_example';
 import searchFilterJs from '../wmcads/patterns/search/search-filter/_example';
 import pageContents from './pages/templates/campaign-two-columns/campaign-template';
+import contentPage from './pages/templates/content-two-columns/content-template';
 
 import {
   componentExample,
@@ -43,5 +44,6 @@ window.addEventListener(
   componentExampleIframe(),
   componentExampleScript(),
   pageContents(),
+  contentPage(),
   componentExample)
 );

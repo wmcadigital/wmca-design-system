@@ -12,7 +12,7 @@
 {# Set array of tiles #} 
 {% block content %}
 
-<div class="template-campaign-2-col">
+<div class="template-campaign">
 
 <div class="wmcads-container wmcads-hide-desktop">
     <h1 id="wmcads-main-content">Roll &amp; Stroll</h1>
@@ -34,9 +34,6 @@
         example: false
       })
     }}
-
-    <div id="test">
-    </div>
     </aside>
 
     <div class="main wmcads-col-1 wmcads-col-md-2-3 wmcads-m-b-xl">
@@ -55,55 +52,43 @@
 
       <hr class="wmcads-divider-wmgreen wmcads-m-t-lg" aria-hidden="true">
       <h2>Cycling &amp; walking in your area</h2>
-      <div class="wmcads-grid wmcads-grid--justify-between">
-        <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-p-r-sm wmcads-m-b-sm"">
+      <div class="wmcads-css-grid-2-col wmcads-m-b-xl">
         {{
           wmcadsContentCard({
             clickable: true,
             src: true,
-            isThirdCard: false,
+            isSrcDefault: true,
             title: 'Get Going Continue Rolling',
-            isDefault: true,
             copy: 'Whether youre rolling to work or school, or catching some fresh air, theres always safe and new ways to get there.'
           })
         }}
-        </div>
-        <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-p-l-sm wmcads-m-b-sm">
         {{
           wmcadsContentCard({
             clickable: true,
             src: true,
-            isThirdCard: false,
+            isSrcDefault: true,
             title: 'All things strolling',
-            isDefault: true,
             copy: 'Wherever youre heading, theres always new and safe ways to get there on foot. '
           })
         }}
-        </div>
-        <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-p-r-sm wmcads-m-t-sm wmcads-m-b-sm">
         {{
           wmcadsContentCard({
             clickable: true,
             src: true,
-            isThirdCard: false,
+            isSrcDefault: true,
             title: 'Changes in your area',
-            isDefault: true,
             copy: 'Understand what changes are being made in your area to help you travel safely'
           })
         }}
-        </div>
-        <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-p-l-sm wmcads-m-t-sm wmcads-m-b-sm">
         {{
           wmcadsContentCard({
             clickable: true,
             src: true,
-            isThirdCard: false,
+            isSrcDefault: true,
             title: 'Get active and travel safely',
-            isDefault: true,
             copy: 'Enjoy being physically active and travelling outdoors responsibly and safely. '
           })
         }}
-        </div>
       </div>
 
       <hr class="wmcads-divider-wmgreen  wmcads-m-t-lg" aria-hidden="true">
@@ -136,60 +121,54 @@
       </div>
 
       <div class="wmcads-accordion wmcads-m-b-sm">
-          <button aria-controls="accordion-01" class="wmcads-accordion__summary-wrapper" aria-expanded="false">
-            <!-- accordion summary -->
-            <div class="wmcads-accordion__summary">
-              <h4 class="wmcads-m-b-none">Love your bike</h4>
-            </div>
-            <!-- plus icon -->
-            <svg class="wmcads-accordion__icon">
-              <use xlink:href="#wmcads-general-expand" href="#wmcads-general-expand"></use>
-            </svg>
-            <!-- minus icon -->
-            <svg class="wmcads-accordion__icon wmcads-accordion__icon--minimise">
-              <use xlink:href="#wmcads-general-minimise" href="#wmcads-general-minimise"></use>
-            </svg>
-          </button>
-
-          <!-- accordion content -->
-          <div class="wmcads-accordion__content" id="accordion-01">
-            <p>
-              <strong>Some random subtitle</strong>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur, eius repellat dolor vel corporis eos fugiat. Ut totam, incidunt sequi iusto nesciunt illum natus, dolores velit cumque, excepturi labore!
-            </p>
+        <button aria-controls="accordion-01" class="wmcads-accordion__summary-wrapper" aria-expanded="false">
+           <!-- accordion summary -->
+          <div class="wmcads-accordion__summary">
+             <h4 class="wmcads-m-b-none">Love your bike</h4>
           </div>
+          <!-- plus icon -->
+          <svg class="wmcads-accordion__icon">
+            <use xlink:href="#wmcads-general-expand" href="#wmcads-general-expand"></use>
+          </svg>
+          <!-- minus icon -->
+          <svg class="wmcads-accordion__icon wmcads-accordion__icon--minimise">
+            <use xlink:href="#wmcads-general-minimise" href="#wmcads-general-minimise"></use>
+          </svg>
+        </button>
+
+        <!-- accordion content -->
+        <div class="wmcads-accordion__content" id="accordion-01">
+          <p>
+            <strong>Some random subtitle</strong>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur, eius repellat dolor vel corporis eos fugiat. Ut totam, incidunt sequi iusto nesciunt illum natus, dolores velit cumque, excepturi labore!
+          </p>
         </div>
+      </div>
 
-        <hr class="wmcads-divider-wmgreen wmcads-m-t-lg" aria-hidden="true">
+      <hr class="wmcads-divider-wmgreen wmcads-m-t-lg" aria-hidden="true">
 
-        <h2>Additional Information</h2>
-        <div class="wmcads-grid wmcads-grid--justify-between">
-          <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-p-r-sm wmcads-m-b-sm"">
-          {{
-            wmcadsContentCard({
-              clickable: true,
-              src: true,
-              isThirdCard: false,
-              title: 'Support for businesses',
-              isDefault: true,
-              copy: 'We have a wide range of options to support your business and employees at work and at home'
-            })
-          }}
-          </div>
-          <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-p-l-sm wmcads-m-b-sm">
-          {{
-            wmcadsContentCard({
-              clickable: true,
-              src: true,
-              isThirdCard: false,
-              title: 'Be Aware and Share',
-              isDefault: true,
-              copy: 'If you drive in the West Midlands be prepared to share the road space with more Rollers and Strollers.'
-            })
-          }}
-          </div>
+      <h2>Additional Information</h2>
+      <div class="wmcads-css-grid-2-col wmcads-m-b-xl">
+        {{
+          wmcadsContentCard({
+            clickable: true,
+            src: true,
+            isSrcDefault: true,
+            title: 'Support for businesses',
+            copy: 'We have a wide range of options to support your business and employees at work and at home'
+          })
+        }}
+        {{
+          wmcadsContentCard({
+            clickable: true,
+            src: true,
+            isSrcDefault: true,
+            title: 'Be Aware and Share',
+            copy: 'If you drive in the West Midlands be prepared to share the road space with more Rollers and Strollers.'
+          })
+        }}
         </div>
 
         <hr class="wmcads-divider-wmgreen wmcads-m-t-lg" aria-hidden="true">
@@ -212,4 +191,5 @@
 </div>
 
 </div>
+
 {% endblock %}

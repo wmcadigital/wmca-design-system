@@ -4,8 +4,11 @@
 // Mixins
 @import "../../../wmcads/assets/sass/mixins";
 
+// General styles
+@import "general";
+
 // Template specific styles
 @import "homepage/homepage"; // Homepage
 @import "campaign-one-column/campaign-template"; // Campaign page
-@import "campaign-two-columns/campaign-template"; // Campaign page
-
+@import "content-one-column/content-template"; // Content page
+@import "content-two-columns/content-template"; // Content page
