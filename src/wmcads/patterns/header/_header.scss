@@ -75,7 +75,7 @@ $header-height-mobile: 4rem;
   // Logo styles
   &__logo-link {
     display: inline-block;
-    width: 34px;
+    width: 37px;
     height: 34px;
     margin-right: $size-sm;
     overflow: hidden;
@@ -216,6 +216,10 @@ $header-height-mobile: 4rem;
     &:hover {
       background: transparent;
     }
+  }
+
+  button {
+    font: caption;
   }
 }
 

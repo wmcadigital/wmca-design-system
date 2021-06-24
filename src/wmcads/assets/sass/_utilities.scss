@@ -165,13 +165,13 @@ body {
 // Show/hide on desktop devices only
 .wmcads-hide-mobile {
   @media screen and (max-width: $breakpoint-md) {
-    display: none;
+    display: none !important;
   }
 }
 
 .wmcads-hide-desktop {
   @media screen and (min-width: $breakpoint-md) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -231,5 +231,23 @@ body {
 
   &-transparent {
     background-color: transparent;
+  }
+}
+
+//Hide visually apart from screen readers
+.visible-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+
+  &:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    clip: auto;
   }
 }
