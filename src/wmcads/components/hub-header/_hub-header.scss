@@ -38,6 +38,10 @@
     left: calc((100% - 927px) / 2);
     max-width: 468px;
     overflow: auto;
+
+    @media (max-width: $breakpoint-lg) {
+      margin: $size-md;
+    }
   }
 
   h1 {

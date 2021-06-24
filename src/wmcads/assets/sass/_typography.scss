@@ -9,10 +9,7 @@ body {
 
 // Get rid of margin for the first header item in main content
 * {
-  h1:first-child,
-  h2:first-child,
-  h3:first-child,
-  h4:first-child {
+  h1:first-child {
     margin-top: 0;
   }
 }
