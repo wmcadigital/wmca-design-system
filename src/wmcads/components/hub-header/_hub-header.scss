@@ -6,7 +6,8 @@
   background: get-color(primary);
 
   @media (max-width: $breakpoint-md) {
-    height: 300px;
+    display: block;
+    height: 100%;
   }
 
   img:not(.icon) {
@@ -27,7 +28,7 @@
     height: 100%;
 
     @media (max-width: $breakpoint-md) {
-      width: 100%;
+      display: none;
     }
 
     &:after {
@@ -44,7 +45,7 @@
       background-color: get-color(primary);
 
       @media (max-width: $breakpoint-md) {
-       display: none;
+        display: none;
       }
     }
   }
@@ -57,8 +58,13 @@
     align-self: center;
 
     @media (max-width: $breakpoint-lg) {
-      margin: $size-md;
       left: $size-sm;
+      margin: $size-md;
+      padding: $size-md $size-xs;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      position: relative;
     }
 
     .icon {
@@ -67,6 +73,10 @@
 
     img {
       height: 34px;
+
+      @media (max-width: $breakpoint-sm) {
+        max-height: 34px;
+      }
     }
 
     h1 {
@@ -80,4 +90,3 @@
     }
   }
 }
-
