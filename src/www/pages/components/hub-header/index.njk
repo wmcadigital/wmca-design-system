@@ -4,9 +4,35 @@
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
 {% block content %}
+
+{# primary hub header #}
+<h2>Primary hub header</h2>
+
 {{
   compExample([
     wmcadsHubHeader()
-  ],{iframe:true})
+  ],{iframe:false})
+}}
+
+{# primary hub header with icon #}
+<h2>Primary hub header with Icon</h2>
+
+{{
+  compExample([
+    wmcadsHubHeader({
+      icon: true
+    })
+  ],{iframe:false})
+}}
+
+{# primary hub header with image #}
+<h2>Primary hub header with Image</h2>
+
+{{
+  compExample([
+    wmcadsHubHeader({
+      image: true
+    })
+  ],{iframe:false})
 }}
 {% endblock %} 

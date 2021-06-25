@@ -5,73 +5,88 @@
   color: $white;
   background: get-color(primary);
 
-  .left-pane {
-    display: inline-block;
-    position: relative;
-    width: 50%;
+  @media (max-width: $breakpoint-md) {
+    display: block;
     height: 100%;
   }
 
-  .left-pane:after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 33px;
-    right: -92px;
-    width: 164px;
-    height: 164px;
-    margin-right: 10px;
-    transform: rotate(45deg);
-    border-radius: 0 120px 0 0;
-    background-color: get-color(primary);
-  }
-
-  img {
+  img:not(.icon) {
     display: inline-block;
     width: 50%;
     height: 100%;
     object-fit: cover;
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
   }
 
-  .text-pane {
+  &-left-pane {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 33px;
+      right: -92px;
+      width: 164px;
+      height: 164px;
+      margin-right: 10px;
+      transform: rotate(45deg);
+      border-radius: 0 120px 0 0;
+      background-color: get-color(primary);
+
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+  }
+
+  &-text-pane {
     position: absolute;
     left: calc((100% - 927px) / 2);
     max-width: 468px;
     overflow: auto;
+    align-self: center;
 
     @media (max-width: $breakpoint-lg) {
+      left: $size-sm;
       margin: $size-md;
-    }
-  }
-
-  h1 {
-    margin: 56px 0 0;
-    color: $white;
-  }
-
-  .text {
-    max-width: 448px;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 927px) {
-  .wmcads-hub-header {
-    .left-pane {
-      width: 100%;
+      padding: $size-md $size-xs;
     }
 
-    .left-pane:after {
-      display: none;
+    @media (max-width: $breakpoint-md) {
+      position: relative;
+    }
+
+    .icon {
+      margin-bottom: 10px;
     }
 
     img {
-      display: none;
+      height: 34px;
+
+      @media (max-width: $breakpoint-sm) {
+        max-height: 34px;
+      }
     }
 
-    .text-pane {
-      left: 0;
-      max-width: 100%;
+    h1 {
+      margin: 0;
+      color: $white;
+    }
+
+    .text {
+      max-width: 400px;
+      margin-top: 10px;
     }
   }
 }

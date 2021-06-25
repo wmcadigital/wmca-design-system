@@ -1,10 +1,19 @@
 {% macro wmcadsHubHeader(params) %}
+{% set title = params.title if params.title else "Lorem ipsum dolor" %} {# set title text #}
+{% set subtitle = params.copy if params.copy else "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %} {# set copy text #}
+
   <div class="wmcads-hub-header">
-      <div class="left-pane"></div>
+      <div class="wmcads-hub-header-left-pane"></div>
       <img class="banner" src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000" alt="page title"/>
-      <div class="text-pane">
-          <h1>Page title</h1>
-          <div class="text">Subtext</div>
+      <div class="wmcads-hub-header-text-pane">
+      {% if(params.icon) %}
+          <i class="fal fa-home-alt fa-3x" aria-hidden="true"></i>
+      {% endif %}
+      {% if(params.image) %}
+          <img class="icon" src="/img/examples/logos-mayor-of-the-west-midlands.png">
+      {% endif %}
+          <h1>{{title}}</h1>
+          <div class="text">{{subtitle}}</div>
       </div>        
   </div>
 {% endmacro %}
