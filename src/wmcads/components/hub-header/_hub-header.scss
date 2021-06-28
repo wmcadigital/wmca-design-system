@@ -52,19 +52,19 @@
 
   &-text-pane {
     position: absolute;
-    left: calc((100% - 927px) / 2);
+    left: calc((100% - 955px) / 2);
     max-width: 468px;
     overflow: auto;
     align-self: center;
 
     @media (max-width: $breakpoint-lg) {
       left: $size-sm;
-      margin: $size-md;
       padding: $size-md $size-xs;
     }
 
     @media (max-width: $breakpoint-md) {
       position: relative;
+      width: 95%;
     }
 
     .icon {
@@ -87,6 +87,10 @@
     .text {
       max-width: 400px;
       margin-top: 10px;
+
+      @media (max-width: $breakpoint-lg) {
+        margin-right: 10px;
+      }
     }
   }
 }
