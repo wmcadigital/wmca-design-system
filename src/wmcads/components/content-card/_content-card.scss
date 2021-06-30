@@ -76,7 +76,7 @@
     height: 180px;
     object-fit: cover;
 
-    @media screen and (max-width: $breakpoint-sm) {
+    @media screen and (max-width: $breakpoint-lg) {
       height: auto;
     }
   }
