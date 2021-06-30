@@ -2,7 +2,7 @@ const headerJs = () => {
   // get mega menu elements
   const megaMenus = document.querySelectorAll('.wmcads-mega-menu');
 
-  const mobileMenu = window.matchMedia('(max-width: 767px)');
+  const mobileMenu = window.matchMedia('(max-width: 992px)');
 
   /* 
       Mega menu helper functions
@@ -120,6 +120,7 @@ const headerJs = () => {
 
     // mobile nav function
     function handleMobileMenu(mq) {
+      console.log("mobile nav");
       if (mq.matches) {
         const mobileToggle = menu.querySelector('.wmcads-mega-menu__mobile-toggle');
         const headerEl = menu.parentNode.parentNode;
