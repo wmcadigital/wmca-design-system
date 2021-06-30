@@ -82,19 +82,7 @@
 </div>
 
 <h2>Latest News</h2>
-<div class="wmcads-grid news">
-    <div class="wmcads-col-1 wmcads-col-sm-1 wmcads-col-md-12-24">
-        {{
-            wmcadsContentCard({
-                src: true,
-                title: 'Wednesbury to Brierley Hill tram extension opens',
-                copy: 'The new line opens today, linking passengers to Dudley and Merry Hill. The extension was originally proposed in 1990, and was funded through the historic Devolution Deal in 2016.',
-                isNews: true,
-                isNewsFirst: true
-            })
-        }}
-    </div>
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-6-24">
+<div class="wmcads-css-grid-4-col">
         {{
             wmcadsContentCard({
                 src: true,
@@ -104,8 +92,15 @@
                 isNewsSub: true
             })
         }}
-    </div>
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-6-24">
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'WMCA donates computers to school children to tackle digital divide',
+                copy: '150 old staff laptops will be donated to Wowdot',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
         {{
             wmcadsContentCard({
                 src: true,
@@ -115,12 +110,19 @@
                 isNewsSub: true
             })
         }}
-    </div>
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
 </div>
-<a href="#" class="wmcads-link wmcads-m-t-lg wmcads-m-b-lg">See all news stories</a>
+<a href="#" class="wmcads-link wmcads-m-t-lg wmcads-m-b-xl see-more">See all news stories</a>
 
-<div class="wmcads-grid wmcads-grid--spacing-sm-2-lg wmcads-m-b-lg">
-    <div class="wmcads-col-1 wmcads-col-sm-1-2">
+<div class="wmcads-css-grid-2-col wmcads-m-b-lg">
     {{
         wmcadsContentCard({
             src: true,
@@ -130,8 +132,6 @@
             clickable: true
         })
     }}
-    </div>
-    <div class="wmcads-col-1 wmcads-col-sm-1-2">
     {{
         wmcadsContentCard({
             src: true,
@@ -141,10 +141,8 @@
             clickable: true
         })
     }}
-    </div>
 </div>
-<div class="wmcads-grid wmcads-grid--spacing-sm-2-lg wmcads-grid--spacing-md-3-lg wmcads-m-b-lg thirds">
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
+<div class="wmcads-css-grid-3-col">
     {{
         wmcadsContentCard({
             title: 'Upskill yourself in lockdown',
@@ -152,8 +150,6 @@
             clickable: true
         })
     }}
-    </div>
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
     {{
         wmcadsContentCard({
             title: 'Thrive at Work',
@@ -161,8 +157,6 @@
             clickable: true
         })
     }}
-    </div>
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
     {{
         wmcadsContentCard({
             title: 'Annual Plan 2021 - 2022',
@@ -170,12 +164,10 @@
             clickable: true
         })
     }}
-    </div>
 </div>
 
 <h2>Upcoming events</h2>
-<div class="wmcads-grid wmcads-grid--spacing-sm-2-lg wmcads-grid--spacing-md-3-lg thirds">
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
+<div class="wmcads-css-grid-3-col">
     {{
     wmcadsContentCard({
       eventTitle: 'Mayors Mentors',
@@ -184,8 +176,6 @@
       isEvent: true
     })
     }}
-    </div>
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
     {{
     wmcadsContentCard({
       eventTitle: 'Greater Birmingham LEP Skills Day',
@@ -194,8 +184,6 @@
       isEvent: true
     })
     }}
-    </div>
-    <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-md-1-3">
     {{
     wmcadsContentCard({
       eventTitle: 'Sprint exhibition - Walsall',
@@ -204,9 +192,34 @@
       isEvent: true
     })
     }}
+</div>
+<a href="#" class="wmcads-link wmcads-m-t-lg wmcads-m-b-lg see-more">See all WMCA events</a>
+
+<div class="social">
+ <h2>Social Media</h2>
+
+    <div class="wmcads-css-grid-3-col wmcads-m-b-xl">
+        <div>
+            <h3>WMCA twitter feed</h3><br />
+            <a class="twitter-timeline" data-height="433" href="https://twitter.com/WestMids_CA?ref_src=twsrc%5Etfw">Tweets by WestMids_CA</a>
+        </div>
+        <div>
+            <h3>Mayor of the West Midlands twitter feed</h3>
+            <a class="twitter-timeline" data-height="433" href="https://twitter.com/MayorWestMids?ref_src=twsrc%5Etfw">Tweets by MayorWestMids</a>
+        </div>
+        <div>
+            <h3>Follow us</h3><br />
+            <ul class="wmcads-bare-list">
+                <li><a href="https://www.facebook.com/westmidlandsca" target="_blank">Facebook - @@WestMidsCA</a></li>
+                <li><a href="https://twitter.com/WestMids_CA" target="_blank">Twitter - @@WestMidsCA</a></li>
+                <li><a href="https://www.instagram.com/westmids_ca" target="_blank">Instagram - @@WestMidsCA</a></li>
+                <li><a href="https://www.youtube.com/user/CentroNWM" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/company/westmidsca/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
     </div>
 </div>
-<a href="#" class="wmcads-link wmcads-m-t-lg">See all WMCA events</a>
 
-</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endblock %}

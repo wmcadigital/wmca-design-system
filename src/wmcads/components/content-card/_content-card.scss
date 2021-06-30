@@ -19,10 +19,6 @@
   background-color: $white;
   text-decoration: none;
 
-  @media screen and (max-width: $breakpoint-sm) {
-    margin: 0 0 $size-lg 0;
-  }
-
   @at-root a#{&} {
     display: block;
     color: get-color(text);
