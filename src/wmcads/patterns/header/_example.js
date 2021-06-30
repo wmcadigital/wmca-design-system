@@ -120,7 +120,6 @@ const headerJs = () => {
 
     // mobile nav function
     function handleMobileMenu(mq) {
-      console.log("mobile nav");
       if (mq.matches) {
         const mobileToggle = menu.querySelector('.wmcads-mega-menu__mobile-toggle');
         const headerEl = menu.parentNode.parentNode;
