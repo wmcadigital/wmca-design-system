@@ -106,7 +106,7 @@
     "gulp-uglify-es": "^2.0.0",
     "marked": "^2.0.1",
     "node-sass": "^5.0.0",
-    "npm-check-updates": "^11.3.0",
+    "npm-check-updates": "^11.7.1",
     "nunjucks": "^3.2.3",
     "nunjucks-markdown": "^2.0.1",
     "prettier": "^2.2.1",
