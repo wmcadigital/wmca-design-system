@@ -15,12 +15,11 @@
         width: 75%;
         background-color: get-color(primary);
 
-        @media all and (max-width: 400px) {
-          width: 90%;
+        @media all and (max-width: $breakpoint-md) {
+          width: 85%;
         }
 
         h1 {
-          padding: 20px 20px 20px 30px;
           color: $white;
 
           @media all and (max-width: 400px) {
@@ -31,6 +30,7 @@
 
       &-container {
         height: 420px;
+        padding: 0 !important;
       }
     }
   }
