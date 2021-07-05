@@ -2,7 +2,7 @@ const headerJs = () => {
   // get mega menu elements
   const megaMenus = document.querySelectorAll('.wmcads-mega-menu');
 
-  const mobileMenu = window.matchMedia('(max-width: 767px)');
+  const mobileMenu = window.matchMedia('(max-width: 992px)');
 
   /* 
       Mega menu helper functions
@@ -272,8 +272,9 @@ const headerJs = () => {
 
       // if top level link doesn't have a mega-menu child add class to menu to hide overlay when hovered
       // has to be added/removed on mouseover to cover menus that have a mix of items with/without mega menus
-      const isTopLevelWithMenu = topLevelListItem.querySelectorAll('.wmcads-mega-menu__container')
-        .length;
+      const isTopLevelWithMenu = topLevelListItem.querySelectorAll(
+        '.wmcads-mega-menu__container'
+      ).length;
 
       if (isTopLevelWithMenu) {
         topLevelLink.addEventListener('mouseover', () => {

@@ -27,6 +27,11 @@ module.exports = {
         src: 'src/www/wmcads-website.js',
         minName: 'wmcads-website.min.js',
         lint: true
+      },
+      {
+        src: 'src/www/wmcads-templates.js',
+        minName: 'wmcads-templates.min.js',
+        lint: true
       }
     ],
     output: 'build/js/' // Output location of minified JS files

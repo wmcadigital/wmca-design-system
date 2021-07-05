@@ -1,5 +1,5 @@
 const pageContents = () => {
-  const headings = document.querySelectorAll('.main h2');
+  const headings = document.querySelectorAll('main h2');
 
   headings.forEach(heading => {
     const str = heading.innerHTML;

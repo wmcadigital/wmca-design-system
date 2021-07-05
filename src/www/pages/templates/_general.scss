@@ -19,37 +19,3 @@
     }
   }
 }
-
-// Creates a css-grid layout for content cards
-.wmcads-css-grid {
-  display: inline;
-
-  &-3-col {
-    @media screen and (min-width: $breakpoint-sm) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: $size-lg;
-      grid-auto-flow: row dense;
-    }
-
-    @media (min-width: $breakpoint-md) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  &-2-col {
-    @media screen and (min-width: $breakpoint-sm) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: $size-lg;
-      grid-auto-flow: row dense;
-    }
-  }
-
-  &-block {
-    &--double {
-      grid-column: auto / span 2;
-    }
-  }
-
-}

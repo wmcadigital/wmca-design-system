@@ -81,7 +81,7 @@ $header-height-mobile: 4rem;
     overflow: hidden;
     vertical-align: middle;
 
-    @media screen and(min-width: $breakpoint-md) {
+    @media screen and(min-width: $breakpoint-sm) {
       width: auto;
     }
   }
@@ -218,13 +218,10 @@ $header-height-mobile: 4rem;
     }
   }
 
-  button {
-    font: caption;
-  }
 }
 
 // mobile only mega menu styles
-@media screen and (max-width: $breakpoint-md - 1) {
+@media screen and (max-width: $breakpoint-lg - 1) {
   .wmcads-mega-menu {
     padding: $size-xs 0;
     align-items: center;
@@ -480,7 +477,7 @@ $header-height-mobile: 4rem;
   z-index: 1000;
   padding: 0;
 
-  @media screen and (max-width: $breakpoint-md - 1) {
+  @media screen and (max-width: $breakpoint-lg - 1) {
     height: $header-height-mobile;
 
     .wmcads-mega-menu {
