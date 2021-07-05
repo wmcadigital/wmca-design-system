@@ -42,12 +42,36 @@
     {% from "wmcads/patterns/footer/_footer.njk" import wmcadsFooter %}
     {{
       wmcadsFooter({
-        feedback: true,
-        bottomMenu: [{
-          name: "Privacy & Cookies Policy",
-          link: "https://www.wmca.org.uk/policies"
+      menu1: {
+        name: "Resources & support",
+        menuItems: [{
+          name: "Businesses"
+        },{
+          name: "Education"
+        },{
+          name: "Job centres"
+        },{
+          name: "Young people"
         }]
-      })
+      },
+      menu2: {
+        name: "About us",
+        menuItems: [{
+          name: "About West Midlands Combined Authority"
+        }, {
+          name: "WMCA Apps"
+        }]
+      },
+      bottomMenu: [{
+        name: "Accessibility"
+      },
+      {
+        name: "Terms and Conditions"
+      },
+      {
+        name: "Policies"
+      }]
+    })
     }}
     <!-- footer -->
 
