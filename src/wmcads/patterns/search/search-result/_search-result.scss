@@ -13,6 +13,11 @@
     }
   }
 
+  &__date {
+    margin: 0;
+    padding-top: $size-xs;
+  }
+
   &__excerpt {
     padding-top: $size-md;
   }
