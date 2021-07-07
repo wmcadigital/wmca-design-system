@@ -112,6 +112,18 @@ $transition-fade-in: opacity 0.2s ease-out;
     }
   }
 
+  @media screen and (max-width: $breakpoint-md) {
+    .wmcads-search-filter__clear-all {
+      display: none;
+    }
+
+    &--has-inputs-checked {
+      .wmcads-search-filter__clear-all.wmcads-hide-desktop {
+        display: flex;
+      }
+    }
+  }
+
   @media screen and (min-width: $breakpoint-md) {
     border-bottom: 5px solid get-color(primary);
 
@@ -149,4 +161,5 @@ $transition-fade-in: opacity 0.2s ease-out;
       }
     }
   }
+
 }
