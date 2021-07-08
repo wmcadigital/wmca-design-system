@@ -12,7 +12,7 @@
   // Heading 1 (46px)
   @if $level == 1 {
     margin-top: 1.5rem * $multiplier;
-    margin-bottom: 3rem * $multiplier;
+    margin-bottom: 2rem * $multiplier;
     font-size: 2.875rem * $multiplier;
     line-height: 3rem * $multiplier;
   }
@@ -21,7 +21,7 @@
     margin-top: 1.5rem * $multiplier;
     margin-bottom: 1.5rem * $multiplier;
     font-size: 2rem * $multiplier;
-    line-height: 3rem * $multiplier;
+    line-height: 2.3rem * $multiplier;
   }
   // Heading 3 (23px)
   @if $level == 3 {

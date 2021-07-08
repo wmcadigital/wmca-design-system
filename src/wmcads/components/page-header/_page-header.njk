@@ -3,7 +3,7 @@
 {% set text = params.text if params.text else "Page header" %}
 {% set iconName = params.icon if params.icon else "" %}
 
-<div class="wmcads-page-header {% if(params.home) %} wmcads-page-header__home {% endif %} {% if(params.topm) %} wmcads-m-t-md {% endif %}" style="background-image:url('https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000')">
+<div class="wmcads-page-header {% if(params.home) %} wmcads-page-header__home {% endif %} {% if(params.topm) %} wmcads-m-t-md {% endif %} {% if(params.large) %} wmcads-page-header__large {% endif %}" style="background-image:url('https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000')">
   {% if(params.title) %}
   <div class="wmcads-container wmcads-page-header-container">
         <div class="wmcads-page-header-box">

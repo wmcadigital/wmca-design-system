@@ -1,0 +1,27 @@
+hr,
+.wmcads-divider {
+  height: 5px;
+  border: 0;
+  background-color: get-color(primary);
+
+  &-grey {
+    background-color: get-color(brandCoolGrey);
+  }
+
+  &-wmgreen {
+    background-color: get-color(brandWmGreen);
+  }
+
+  &-wmred {
+    background-color: get-color(brandWmRed);
+  }
+
+  &-wmpurple {
+    background-color: get-color(brandWmPurple);
+  }
+
+  &-wmblue {
+    background-color: get-color(brandWmBlue);
+  }
+
+}

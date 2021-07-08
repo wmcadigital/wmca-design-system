@@ -16,6 +16,14 @@
     justify-content: flex-end;
   }
 
+  &.wmcads-grid--justify-center {
+    justify-content: center;
+  }
+
+  &.wmcads-grid--justify-even {
+    justify-content: space-evenly;
+  }
+
   &.wmcads-grid--align-center {
     align-items: center;
   }
@@ -42,7 +50,6 @@
   }
 
   &--main {
-    margin-bottom: $size-lg;
     flex-grow: 1;
   }
 }
@@ -74,7 +81,7 @@
 }
 
 // MARGINS AND PADDINGS
-// Helper mixin used to generate various sizes of margin/padding
+// Helper mixin used to generate various sizes of margin/padding -  wmcads-m-b-sm - wmcads-grid--spacing-lg-4-lg
 @mixin x-mar-pad($side, $type: "margin") {
   &-xs {
     #{$type}#{$side}: $size-xs;
@@ -86,6 +93,10 @@
 
   &-sm {
     #{$type}#{$side}: $size-sm;
+
+    &-sm-none {
+      #{$type}#{$side}: $breakpoint-xs;
+    }
   }
 
   &-md {
@@ -220,5 +231,23 @@ body {
 
   &-transparent {
     background-color: transparent;
+  }
+}
+
+//Hide visually apart from screen readers
+.visible-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+
+  &:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    clip: auto;
   }
 }

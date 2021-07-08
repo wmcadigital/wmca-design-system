@@ -1,6 +1,6 @@
 .wmcads-page-contents {
-  width: 288px;
-  min-height: 57px;
+  position: sticky;
+  top: 0;
   margin-bottom: 30px;
   padding: 10px;
   border-bottom: 3px solid $black;
@@ -24,8 +24,7 @@
   a {
     display: block;
     margin-bottom: 10px;
-    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: wrap;
   }
 }

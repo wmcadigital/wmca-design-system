@@ -1,6 +1,6 @@
 # Components
 
-Find components in `src/wmre/components`.
+Find components in `src/wmcads/components`.
 
 Components must use the `.wmcads-` namespace.
 
@@ -24,10 +24,9 @@ Component folder and files should be singular, except in cases where they are mo
 The folder structure should be:
 
     component-name
+      - `component-name.njk`
       - `_component-name.scss`
-      - `component-name.html`
-      - `component-name.js`
-      - `README.md`
+      - `component-name.js` (optional)
 
 ## Nunjucks template API
 

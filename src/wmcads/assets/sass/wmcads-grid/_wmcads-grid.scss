@@ -27,7 +27,6 @@ textarea,
   [class*="wmcads-col-"] {
     display: inline-block;
     zoom: 1;
-    letter-spacing: normal;
     word-spacing: normal;
     text-rendering: auto;
     vertical-align: top;
@@ -35,5 +34,6 @@ textarea,
 }
 
 // Import grid components
+@import "grid-css-grid";
 @import "grid-cols";
 @import "grid-spacing";

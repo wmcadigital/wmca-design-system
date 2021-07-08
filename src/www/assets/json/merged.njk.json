@@ -45,11 +45,14 @@
 					"name": "Content card"
 				},
 				{
-					"name": "Document"
-				},				
-				{
 					"name": "Details"
 				},
+				{
+					"name": "Document"
+				},
+				{
+					"name": "Divider"
+				},				
 				{
 					"name": "File download"
 				},
@@ -145,9 +148,38 @@
 					"name": "Homepage"
 				},
 				{
-					"name": "Content Template"
+					"name": "Campaign One Column"
+				},
+				{
+					"name": "Campaign Two Columns"
+				},
+				{
+					"name": "Content One Column"
+				},
+				{
+					"name": "Content Two Columns"
+				},
+				{
+					"name": "Search"
 				}
 			]
+		}
+	],
+	"templateNavItems": [
+		{
+			"name": "The Mayor"
+		},
+		{
+			"name": "Who we are"
+		},
+		{
+			"name": "What we do"
+		},
+		{
+			"name": "In my area"
+		},
+		{
+			"name": "Contact us"
 		}
 	],
 	"colors": {

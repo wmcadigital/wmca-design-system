@@ -12,10 +12,10 @@
 
 {# This macro checks if it's being called inside a {% call %} tag #}
 {# It's an easier way to pass in larger html content  #}
-<{{tag}}{{attributes | safe}} class="wmcads-content-card{{"--blue" if params.isCta else "" }} {{"wmcads-content-card--event" if params.isEvent else "" }} {{"wmcads-content-card--news" if params.isNews else "" }} ">
+<{{tag}}{{attributes | safe}} class="wmcads-content-card{{"--blue" if params.isCta else "" }} {{"wmcads-content-card--event" if params.isEvent else "" }} {{"wmcads-content-card--news" if params.isNews else "" }} {{"wmcads-css-grid-block--double" if params.isDoubleCard else "" }} ">
     {% if(params.src) %}
         <img 
-        src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg{{"?anchor=center&mode=crop&width=920&height=300&rnd=132122595620000000" if params.isNewsFirst else "" }}{{"?anchor=center&mode=crop&width=480&height=357&rnd=132122595620000000" if params.isNewsSub else "" }}{{"?anchor=center&mode=crop&width=896&height=334&rnd=132122595620000000" if params.isSrcDefault else "" }}{{"?anchor=center&mode=crop&width=1216&height=345&rnd=132122595620000000" if params.isDoubleCard else "" }}{{"?anchor=center&mode=crop&width=576&height=334&rnd=132122595620000000" if params.isThirdCard else "" }}" alt="content image">
+        src="https://www.wmca.org.uk/media/3415/wmca-bournville-131.jpg{{"?anchor=center&mode=crop&width=920&height=300&rnd=132122595620000000" if params.isNewsFirst else "" }}{{"?anchor=center&mode=crop&width=480&height=357&rnd=132122595620000000" if params.isNewsSub else "" }}{{"?anchor=center&mode=crop&width=896&height=334&rnd=132122595620000000" if params.isSrcDefault else "" }}{{"?anchor=center&mode=crop&width=1500&height=393&rnd=132122595620000000" if params.isDoubleCard else "" }}{{"?anchor=center&mode=crop&width=600&height=334&rnd=132122595620000000" if params.isThirdCard else "" }}{{"?anchor=center&mode=crop&width=700&height=334&rnd=132122595620000000" if params.isDefault else "" }}" alt="content image">
     {% endif %}
     {% if(params.isCta) %}
         <div class="wmcads-p-sm">

@@ -1,0 +1,21 @@
+.wmcads-html {
+  .wmcads-grid--justify-between {
+    .wmcads-p-r-sm {
+      @media screen and (max-width: $breakpoint-sm) {
+        padding: 0 !important;
+      }
+    }
+
+    .wmcads-p-l-sm {
+      @media screen and (max-width: $breakpoint-sm) {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .wmcads-page-contents {
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 0 !important;
+    }
+  }
+}

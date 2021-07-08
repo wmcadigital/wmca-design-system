@@ -7,6 +7,10 @@
       fill: get-color(primary);
     }
 
+    i {
+      color: get-color(primary) !important;
+    }
+
     a {
       display: block;
       width: 90%;
@@ -17,19 +21,42 @@
     }
   }
 
-  h2,
-  h3,
-  p,
-  .what-we-do,
-  .wmcads-link {
-    @media screen and (max-width: $breakpoint-sm) {
-      padding: 0 $size-sm;
+  .news {
+    .wmcads-col-md-12-24 {
+      padding-right: $size-lg;
+      @media screen and (max-width: $breakpoint-md) {
+        margin-bottom: $size-lg;
+        padding-right: 0;
+      }
+    }
+
+    .wmcads-col-sm-1-2:nth-child(2) {
+      padding-right: $size-md;
+      @media screen and (max-width: $breakpoint-md) {
+        padding-right: 0;
+      }
+    }
+
+    .wmcads-col-sm-1-2:nth-child(3) {
+      padding-left: $size-md;
+      @media screen and (max-width: $breakpoint-md) {
+        padding-left: 0;
+      }
     }
   }
-}
 
-.wmcads-container.homepage {
-  @media screen and (max-width: $breakpoint-sm) {
-    padding: 0;
+  .social {
+    h2 {
+      @media screen and (max-width: $breakpoint-sm) {
+        padding: 0;
+      }
+    }
+
+    h3 {
+      @media screen and (max-width: $breakpoint-sm) {
+        height: initial;
+        padding: 0;
+      }
+    }
   }
 }
