@@ -18,7 +18,7 @@
     display: grid;
     grid-gap: $size-lg;
     grid-template-columns: repeat(auto-fit, minmax(448px, 1fr));
-    
+
     @media (max-width: $breakpoint-sm) {
       grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     }

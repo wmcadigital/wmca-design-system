@@ -3,7 +3,7 @@
 {# Imports #}
 {% from "../../../components/breadcrumb/_breadcrumb.njk" import wmcadsBreadcrumb %}
 
-<div class="wmcads-pagination">
+<div class="wmcads-pagination wmcads-m-t-xl">
     <ol class="wmcads-pagination__nav">
     {% for i in range(1, params.pageCount + 1) -%}
     {% if(i == params.activePage - 1) %}
