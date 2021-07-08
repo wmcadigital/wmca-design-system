@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.3.0...v1.4.0) (2021-03-29)
+
+
+### Features
+
+* component and template updates ([#124](https://github.com/wmcadigital/wmca-design-system/issues/124)) ([e4bd2a8](https://github.com/wmcadigital/wmca-design-system/commit/e4bd2a8b1108dc0785ef81066ce4982ef85c9e42)), closes [#80](https://github.com/wmcadigital/wmca-design-system/issues/80) [#94](https://github.com/wmcadigital/wmca-design-system/issues/94) [#103](https://github.com/wmcadigital/wmca-design-system/issues/103) [#115](https://github.com/wmcadigital/wmca-design-system/issues/115) [#105](https://github.com/wmcadigital/wmca-design-system/issues/105) [#116](https://github.com/wmcadigital/wmca-design-system/issues/116) [#105](https://github.com/wmcadigital/wmca-design-system/issues/105) [#120](https://github.com/wmcadigital/wmca-design-system/issues/120) [#119](https://github.com/wmcadigital/wmca-design-system/issues/119) [#121](https://github.com/wmcadigital/wmca-design-system/issues/121) [#123](https://github.com/wmcadigital/wmca-design-system/issues/123)
+
 # [1.3.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.2.0...v1.3.0) (2021-02-17)
 
 
