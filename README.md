@@ -1,15 +1,15 @@
 # 1. WMCA Design System
 
-![Netlify](https://img.shields.io/netlify/04471bb6-9621-4c59-abe8-b4fdf74a3860)
-![David](https://img.shields.io/david/wmcadigital/wmca-design-system?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/wmcadigital/wmca-design-system?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues-raw/wmcadigital/wmca-design-system?style=flat-square)
+[![Netlify Status](https://img.shields.io/netlify/04471bb6-9621-4c59-abe8-b4fdf74a3860)](https://app.netlify.com/sites/wmcads/deploys)
+[![David](https://img.shields.io/david/dev/wmcadigital/wmca-design-system?style=flat-square)](https://github.com/wmcadigital/wmn-design-system/blob/master/package.json)
+[![Last commit](https://img.shields.io/github/last-commit/wmcadigital/wmca-design-system?style=flat-square)](https://github.com/wmcadigital/wmca-design-system/commits/master)
+[![Open Github issues](https://img.shields.io/github/issues-raw/wmcadigital/wmca-design-systemstyle=flat-square)](https://github.com/wmcadigital/wmca-design-system/issues)
 
 ## 1.1. Table of contents
 
 <!-- TOC -->
 
-- [1. WMCA Design System](#1-wmcads-design-system)
+- [1. WMCA Design System](#1-wmca-design-system)
   - [1.1. Table of contents](#11-table-of-contents)
   - [1.2. Overview](#12-overview)
   - [1.3. Quick start](#13-quick-start)
