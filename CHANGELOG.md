@@ -1,3 +1,33 @@
+# [1.5.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.4.0...v1.5.0) (2021-07-08)
+
+
+### Bug Fixes
+
+* banner alignment ([#121](https://github.com/wmcadigital/wmca-design-system/issues/121)) ([f75c907](https://github.com/wmcadigital/wmca-design-system/commit/f75c907800b969f2ee57e816c0bbb74be7dd3790))
+* build directory ([#80](https://github.com/wmcadigital/wmca-design-system/issues/80)) ([761ee8a](https://github.com/wmcadigital/wmca-design-system/commit/761ee8a64dffd1adb108f7b91721355a2ad674f0))
+* cdn link ([#134](https://github.com/wmcadigital/wmca-design-system/issues/134)) ([802b837](https://github.com/wmcadigital/wmca-design-system/commit/802b8374d1f6f6d4dc656f5d3b56f486d6cc6f03))
+* deploy preview ([#205](https://github.com/wmcadigital/wmca-design-system/issues/205)) ([5abd556](https://github.com/wmcadigital/wmca-design-system/commit/5abd5568ffb61d163c272dfea17f61f0408598c4))
+* js lints ([#123](https://github.com/wmcadigital/wmca-design-system/issues/123)) ([5db4adc](https://github.com/wmcadigital/wmca-design-system/commit/5db4adca1b75417c386042ec2d3f129c59cdc185))
+* netlify action update version ([#215](https://github.com/wmcadigital/wmca-design-system/issues/215)) ([47f2a9a](https://github.com/wmcadigital/wmca-design-system/commit/47f2a9a82ba1a1086c82bd2edd63c729ab9186da))
+* resolves issues from issues list ([#164](https://github.com/wmcadigital/wmca-design-system/issues/164)) ([a6a1340](https://github.com/wmcadigital/wmca-design-system/commit/a6a1340291df67aac326eb82be5d90a6009e16a3)), closes [#165](https://github.com/wmcadigital/wmca-design-system/issues/165)
+
+
+### Features
+
+* board bios ([#120](https://github.com/wmcadigital/wmca-design-system/issues/120)) ([6bb198c](https://github.com/wmcadigital/wmca-design-system/commit/6bb198c9e8c4d5e75283e3d29a5f047dd91c5bfd)), closes [#119](https://github.com/wmcadigital/wmca-design-system/issues/119)
+* campaign templates ([#146](https://github.com/wmcadigital/wmca-design-system/issues/146)) ([6ad80c6](https://github.com/wmcadigital/wmca-design-system/commit/6ad80c6ad96444b2a54752746ef8cf49f127e40f))
+* content template sidebar ([#180](https://github.com/wmcadigital/wmca-design-system/issues/180)) ([0533c4b](https://github.com/wmcadigital/wmca-design-system/commit/0533c4b3ce8f0de881c378c4ebafa3d1b77e6c1b))
+* docs update ([#133](https://github.com/wmcadigital/wmca-design-system/issues/133)) ([9c85db5](https://github.com/wmcadigital/wmca-design-system/commit/9c85db518247361d841841f7d6d72e54ab428bbb))
+* ds updates ([#197](https://github.com/wmcadigital/wmca-design-system/issues/197)) ([1d56b58](https://github.com/wmcadigital/wmca-design-system/commit/1d56b586371ade09c548b964079bd1a379224be6)), closes [#198](https://github.com/wmcadigital/wmca-design-system/issues/198)
+* grid examples ([#129](https://github.com/wmcadigital/wmca-design-system/issues/129)) ([7ff3f01](https://github.com/wmcadigital/wmca-design-system/commit/7ff3f0111f95a781d4ff821c3a23b6f23e26e0c3))
+* hub header ([#115](https://github.com/wmcadigital/wmca-design-system/issues/115)) ([09298b1](https://github.com/wmcadigital/wmca-design-system/commit/09298b110fe57f018fdbc066c3233fce1524b67b)), closes [#105](https://github.com/wmcadigital/wmca-design-system/issues/105)
+* hub header amends ([#184](https://github.com/wmcadigital/wmca-design-system/issues/184)) ([64942cb](https://github.com/wmcadigital/wmca-design-system/commit/64942cba2c1a02a0c38960a79be2f3c09dcbc133))
+* large page header ([#132](https://github.com/wmcadigital/wmca-design-system/issues/132)) ([e7eaf0f](https://github.com/wmcadigital/wmca-design-system/commit/e7eaf0f69eade8eff131465f9a0df3d38f34e27f))
+* page contents ([#116](https://github.com/wmcadigital/wmca-design-system/issues/116)) ([c625a7a](https://github.com/wmcadigital/wmca-design-system/commit/c625a7acfd49ec6b306f3bb45503fd595783bcc1)), closes [#105](https://github.com/wmcadigital/wmca-design-system/issues/105)
+* search template ([#199](https://github.com/wmcadigital/wmca-design-system/issues/199)) ([0687c44](https://github.com/wmcadigital/wmca-design-system/commit/0687c44942b1555bb8d7580c39fb9f3c43482a6d))
+* search template amends ([#200](https://github.com/wmcadigital/wmca-design-system/issues/200)) ([956347b](https://github.com/wmcadigital/wmca-design-system/commit/956347b0fc63a0d451f4c870d9ddbd8f3eb174ff))
+* styles for cms grid ([#131](https://github.com/wmcadigital/wmca-design-system/issues/131)) ([95f44b4](https://github.com/wmcadigital/wmca-design-system/commit/95f44b4c1b7d54afb249752ace2cf0d36c5bc8fc))
+
 # [1.4.0](https://github.com/wmcadigital/wmca-design-system/compare/v1.3.0...v1.4.0) (2021-03-29)
 
 
