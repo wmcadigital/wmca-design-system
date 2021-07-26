@@ -42,24 +42,27 @@
     {% from "wmcads/patterns/footer/_footer.njk" import wmcadsFooter %}
     {{
       wmcadsFooter({
+      social: true,
       menu1: {
-        name: "Resources & support",
+        name: "Governance",
         menuItems: [{
-          name: "Businesses"
+          name: "Committee meetings"
         },{
-          name: "Education"
+          name: "Freedom of information"
         },{
-          name: "Job centres"
-        },{
-          name: "Young people"
+          name: "Procurement"
         }]
       },
       menu2: {
-        name: "About us",
+        name: "Resources and support ",
         menuItems: [{
-          name: "About West Midlands Combined Authority"
+          name: "Contact us"
         }, {
-          name: "WMCA Apps"
+          name: "Media assets"
+        }, {
+          name: "Careers"
+        }, {
+          name: "Documents"
         }]
       },
       bottomMenu: [{

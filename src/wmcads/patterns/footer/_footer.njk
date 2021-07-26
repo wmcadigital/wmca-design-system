@@ -19,7 +19,7 @@
       {# loop through footer menus and get items #}
       {% if(params.menu1) %}
       {% set menu1Name = params.menu1.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
-        <div class="wmcads-col-1 wmcads-col-lg-1-3">
+        <div class="wmcads-col-1 wmcads-col-md-1-2 wmcads-col-lg-1-3 wmcads-p-r-lg">
           <h3 class="wmcads-footer__heading wmcads-collapse-heading" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
             {{params.menu1.name}}
             {{wmcadsIcon({class: 'wmcads-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
@@ -33,7 +33,7 @@
       {% endif %}
       {% if(params.menu2) %}
       {% set menu2Name = params.menu2.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
-        <div class="wmcads-col-1 wmcads-col-lg-1-3">
+        <div class="wmcads-col-1 wmcads-col-md-1-2 wmcads-col-lg-1-3 wmcads-p-r-lg">
           <h3 class="wmcads-footer__heading wmcads-collapse-heading" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
             {{params.menu2.name}}
             {{wmcadsIcon({class: 'wmcads-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
@@ -43,10 +43,16 @@
             <li><a class="wmcads-footer__link" href="#">{{menuItem.name}}</a></li>
           {% endfor -%}
           </ul>
+        </div>
+      {% endif %}
+      {% if(params.social) %}
+        <div class="wmcads-col-1 wmcads-col-lg-1-3">
           <h3 class="wmcads-footer__heading">Social media</h3>
           <ul class="wmcads-footer__social-media">
-            <li><a href="https://www.facebook.com/westmidlandsca" title="Facebook">{{wmcadsIcon({icon: 'social-facebook'}) | trim}}</a></li>
-            <li><a href="https://twitter.com/WestMids_CA" title="Twitter">{{wmcadsIcon({icon: 'social-twitter'}) | trim}}</a></li>
+            <li><a href="https://www.facebook.com/westmidlandsca" title="Facebook">{{wmcadsIcon({icon: 'social-facebook-hex'}) | trim}}</a></li>
+            <li><a href="https://twitter.com/WestMids_CA" title="Twitter">{{wmcadsIcon({icon: 'social-twitter-hex'}) | trim}}</a></li>
+            <li><a href="https://www.instagram.com/westmids_ca" title="Follow us on Instagram">{{wmcadsIcon({icon: 'social-instagram-hex'}) | trim}}</a></li>
+            <li><a href="https://www.linkedin.com/company/westmidsca/" title="Follow us on Linkedin">{{wmcadsIcon({icon: 'social-linkedin-hex'}) | trim}}</a></li>
           </ul>
         </div>
       {% endif %}
