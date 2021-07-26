@@ -58,6 +58,12 @@
     border: 0;
     background-color: transparent;
 
+    img {
+      display: block;
+      height: 180px!important;
+      width: 100%;
+    }
+
     p {
       margin: 0;
     }
@@ -72,6 +78,7 @@
   }
 
   img {
+    display: block;
     height: 180px;
     object-fit: cover;
 
