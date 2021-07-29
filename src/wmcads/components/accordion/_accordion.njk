@@ -10,7 +10,7 @@
 {% set id = params.id if params.id else "accordion-01" %}
 
 <div class="wmcads-accordion{{isOpen}}">
-  <button aria-controls="{{id}}" class="wmcads-accordion__summary-wrapper" aria-expanded="{{isExpanded}}">
+  <div aria-controls="{{id}}" class="wmcads-accordion__summary-wrapper" aria-expanded="{{isExpanded}}">
     <!-- accordion summary -->
     <div class="wmcads-accordion__summary">
       {% if params.customSummary -%}
@@ -44,7 +44,7 @@
         class: 'wmcads-accordion__icon wmcads-accordion__icon--minimise'
       }) | indent(4) | trim
     }}
-  </button>
+  </div>
 
   <!-- accordion content -->
   <div class="wmcads-accordion__content" id="{{id}}">
