@@ -1,27 +1,52 @@
 {% macro wmcadsFileDownload(params) %}
 {# Imports #}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+
 {# Set #}
 {% set fileName = params.fileName or 'file name' %}
+{% set dlName = params.dlName or 'Download fileName (fileType), (fileSize)' %}
 {% set fileType = params.fileType or 'filetype' %}
 {% set fileSize = params.fileSize or 'filesize' %}
-{% set accessibleClass = " wmcads-file-download--non-accessible" if params.accessible === false else "" %}
 
-<div class="wmcads-file-download{{accessibleClass}}">
+<div class="wmcads-file-download">
+    {% if params.default === true -%}
     {{
         wmcadsIcon({
             class: "wmcads-file-download__icon",
             icon: "general-file"
         }) | trim | indent(4)
     }}
+    {%- endif %}
+    {% if params.htmlDoc === true -%}
+    {{
+        wmcadsIcon({
+            class: "wmcads-file-download__icon",
+            icon: "general-html"
+        }) | trim | indent(4)
+    }}
+    {%- endif %}
+    {% if params.pdfDoc === true -%}
+    {{
+        wmcadsIcon({
+            class: "wmcads-file-download__icon",
+            icon: "general-pdf"
+        }) | trim | indent(4)
+    }}
+    {%- endif %}
     <div class="wmcads-file-download__desc">
         <a href="#" download="{{ fileName|replace(' ', '_') + '.' + fileType|lower }}" class="wmcads-link">
-            {% if params.html === false -%} Download '{{fileName}}' ({{fileType}}, {{fileSize}}) {%- endif %}  {% if params.html === true -%} HTML document link {%- endif %}
+            {% if params.html === false -%} {{dlName}} {%- endif %}  {% if params.html === true -%} HTML document link {%- endif %}
         </a>
         {% if params.accessible === true -%}
         <p class="wmcads-file-download__warning">
             This file may not be suitable for users of assistive technology. <br>
             <a href="#" class="wmcads-link">Request an accessible format.</a>
+        </p>
+        {%- endif %}
+        {% if params.htmlInfo === true -%}
+        <p class="wmcads-file-download__warning">
+            Published 10 July 2021 {% if params.pdfDoc === false -%}<br>
+            Updated 12 July 2021 - <a href="#" class="wmcads-link">see all updates</a>{%- endif %}
         </p>
         {%- endif %}
     </div>

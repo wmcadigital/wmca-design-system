@@ -35,7 +35,8 @@
 {{
     compExample([
         wmcadsFileDownload({
-            html: false
+            html: false,
+            default: true
         })
     ])
 }}
@@ -66,7 +67,8 @@
     compExample([
         wmcadsFileDownload({
             accessible: true,
-            html: false
+            html: false,
+            default: true
         })
     ])
 }}
@@ -93,7 +95,39 @@
 {{
     compExample([
         wmcadsFileDownload({
-            html: true
+            html: true,
+            default: true
+        })
+    ])
+}}
+
+{# Document link #}
+<h2>HTML & PDF links</h2>
+
+{{
+    compExample([
+        wmcadsFileDownload({
+            html: false,
+            htmlInfo: true,
+            default: false,
+            htmlDoc: true,
+            pdfDoc: false,
+            dlName: 'Document name'
+        })
+    ])
+}}
+
+
+
+{{
+    compExample([
+        wmcadsFileDownload({
+            html: false,
+            htmlInfo: true,
+            default: false,
+            htmlDoc: false,
+            pdfDoc: true,
+            dlName: 'Download Document name (pdf, 7.88MB)'
         })
     ])
 }}
