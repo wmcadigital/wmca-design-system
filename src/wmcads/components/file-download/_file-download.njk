@@ -16,15 +16,23 @@
     }}
     <div class="wmcads-file-download__desc">
         <a href="#" download="{{ fileName|replace(' ', '_') + '.' + fileType|lower }}" class="wmcads-link">
-            Download '{{fileName}}' ({{fileType}}, {{fileSize}})
+            {% if params.html === false -%} Download '{{fileName}}' ({{fileType}}, {{fileSize}}) {%- endif %}  {% if params.html === true -%} HTML document link {%- endif %}
         </a>
-        {% if params.accessible === false -%}
+        {% if params.accessible === true -%}
         <p class="wmcads-file-download__warning">
             This file may not be suitable for users of assistive technology. <br>
             <a href="#" class="wmcads-link">Request an accessible format.</a>
         </p>
         {%- endif %}
     </div>
+    {% if params.html === true -%}
+    {{
+        wmcadsIcon({
+            class: "wmcads-file-download__chevron-icon",
+            icon: "general-chevron-right"
+        }) | trim | indent(4)
+    }}
+    {%- endif %}
 </div>
 
 {% endmacro %}

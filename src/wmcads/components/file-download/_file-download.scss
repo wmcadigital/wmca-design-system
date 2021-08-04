@@ -12,6 +12,12 @@
     fill: get-color(primary);
   }
 
+  &__chevron-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: get-color(cta);
+  }
+
   &__desc {
     padding-left: $size-sm;
   }
