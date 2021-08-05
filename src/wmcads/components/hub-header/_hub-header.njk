@@ -12,8 +12,8 @@
       {% if(params.image) %}
           <img class="icon" src="/img/examples/logos-mayor-of-the-west-midlands.png">
       {% endif %}
-          <h1>{{title}}</h1>
-          <div class="text">{{subtitle}}</div>
+          <h1 class="hub">{{title}}</h1>
+          {% if params.showSubtitle === true -%}<div class="text">{{subtitle}}</div>{%- endif %}
       </div>        
   </div>
 {% endmacro %}

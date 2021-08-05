@@ -10,8 +10,12 @@
 
 {{
   compExample([
-    wmcadsHubHeader()
-  ],{iframe:false})
+    wmcadsHubHeader({
+      showSubtitle: true,
+      icon: false
+    })
+  ],{iframe:false
+  })
 }}
 
 {# primary hub header with icon #}
@@ -20,7 +24,8 @@
 {{
   compExample([
     wmcadsHubHeader({
-      icon: true
+      icon: true,
+      showSubtitle: true
     })
   ],{iframe:false})
 }}
@@ -31,7 +36,19 @@
 {{
   compExample([
     wmcadsHubHeader({
-      image: true
+      image: true,
+      showSubtitle: true
+    })
+  ],{iframe:false})
+}}
+
+{# primary hub header without subtitle #}
+<h2>Primary hub header without subtitle</h2>
+
+{{
+  compExample([
+    wmcadsHubHeader({
+      image: false
     })
   ],{iframe:false})
 }}
