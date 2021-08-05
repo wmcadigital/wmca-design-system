@@ -94,7 +94,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &:hover {
-      background-color: get-color(secondary, 70);
+      background-color: get-color(primary, 90);
     }
 
     &:active,
@@ -104,7 +104,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &.wmcads-is--active {
-      background-color: get-color(secondary, 50);
+      background-color: get-color(primary, 75);
     }
 
     // Secondary (disabled)
@@ -117,28 +117,21 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
         fill: get-color(disable);
       }
     }
+  }
 
-    // Dark background variant
-    &.wmcads-btn--dark-bg {
-      border: 0;
-      color: $white;
-      background-color: get-color(primary);
+  // button cta styles
+  &--cta {
+    background-color: get-color(cta);
 
-      &:hover {
-        background-color: get-color(primary, 10);
-      }
+    &:hover {
+      background-color: get-color(cta, 30, dark);
+    }
 
-      &:active,
-      &:target,
-      &:focus {
-        color: get-color(primary);
-        background-color: get-color(plannedDisruption);
-      }
-
-      &.wmcads-is--active {
-        color: $white;
-        background-color: get-color(primary, 30);
-      }
+    &:active,
+    &:target,
+    &:focus,
+    &.wmcads-is--active {
+      background-color: get-color(cta, 50, dark);
     }
   }
 

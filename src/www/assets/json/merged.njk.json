@@ -66,6 +66,9 @@
 					"name": "Inset text"
 				},
 				{
+					"name": "Images"
+				},
+				{
 					"name": "In-text step"
 				},
 				{
@@ -100,6 +103,9 @@
 				},
 				{
 					"name": "Tag"
+				},
+				{
+					"name": "Video embed"
 				},				
 				{
 					"name": "Warning text"
@@ -155,6 +161,15 @@
 				},
 				{
 					"name": "Content Two Columns"
+				},
+				{
+					"name": "Document Paper"
+				},
+				{
+					"name": "Document Hub"
+				},
+				{
+					"name": "Document Foreword"
 				},
 				{
 					"name": "Search"
