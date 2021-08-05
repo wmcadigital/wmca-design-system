@@ -103,10 +103,11 @@
 				},
 				{
 					"name": "Tag"
-				},				
+				},
 				{
 					"name": "Video embed"
 				},				
+				{
 					"name": "Warning text"
 				}				
 			]
@@ -160,6 +161,12 @@
 				},
 				{
 					"name": "Content Two Columns"
+				},
+				{
+					"name": "Document Paper"
+				},
+				{
+					"name": "Document Hub"
 				},
 				{
 					"name": "Search"

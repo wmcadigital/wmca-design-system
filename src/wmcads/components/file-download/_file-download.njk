@@ -5,10 +5,11 @@
 {# Set #}
 {% set fileName = params.fileName or 'file name' %}
 {% set dlName = params.dlName or 'Download fileName (fileType), (fileSize)' %}
+{% set htmlName = params.htmlName or 'HTML document link ' %}
 {% set fileType = params.fileType or 'filetype' %}
 {% set fileSize = params.fileSize or 'filesize' %}
 
-<div class="wmcads-file-download">
+<div class="wmcads-file-download {% if params.htmlInfo === true -%}wmcads-file-download--document{%- endif %}">
     {% if params.default === true -%}
     {{
         wmcadsIcon({
@@ -35,7 +36,7 @@
     {%- endif %}
     <div class="wmcads-file-download__desc">
         <a href="#" download="{{ fileName|replace(' ', '_') + '.' + fileType|lower }}" class="wmcads-link">
-            {% if params.html === false -%} {{dlName}} {%- endif %}  {% if params.html === true -%} HTML document link {%- endif %}
+            {% if params.html === false -%} {{dlName}} {%- endif %}  {% if params.html === true -%} {{htmlName}} {%- endif %}
         </a>
         {% if params.accessible === true -%}
         <p class="wmcads-file-download__warning">

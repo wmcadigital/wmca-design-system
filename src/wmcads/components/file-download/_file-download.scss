@@ -6,6 +6,11 @@
     align-items: flex-start;
   }
 
+  &--document {
+    padding-bottom: $size-lg;
+    border-bottom: 1px solid get-color(brandCoolGrey);
+  }
+
   &__icon {
     width: 2.5rem;
     height: 2.5rem;
