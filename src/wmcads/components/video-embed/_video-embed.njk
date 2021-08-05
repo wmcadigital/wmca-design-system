@@ -1,0 +1,8 @@
+{% macro wmcadsVideoEmbed(params) %} 
+{% set video = " " + params.text if params.text else "https://www.youtube.com/embed/BzMpSNh6CcU" %}
+
+<div class='wmcads-video-embed'>
+  <iframe src='{{video}}' frameborder='0' allowfullscreen></iframe>
+</div>
+
+{% endmacro %}
