@@ -10,4 +10,10 @@
       mask-mode: alpha;
     }
   }
+
+  &__summary {
+    margin-bottom: $size-lg;
+    padding: $size-sm;
+    background: $white;
+  }
 }

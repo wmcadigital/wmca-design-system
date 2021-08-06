@@ -172,6 +172,9 @@
 					"name": "Document Foreword"
 				},
 				{
+					"name": "Document Section"
+				},
+				{
 					"name": "Search"
 				}
 			]
