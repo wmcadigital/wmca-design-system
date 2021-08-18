@@ -1,14 +1,65 @@
 {% macro wmcadsPageContents(params) %}
+{% from "wmcads/components/accordion/_accordion.njk" import wmcadsAccordion %}
 {% set title = params.title if params.title else "Page title" %}
 
-  <div class="wmcads-page-contents {% if(params.rightMargin) %} wmcads-m-r-lg {% endif %}">
+  <div class="wmcads-page-contents {% if(params.dynamic) %} wmcads-dynamic-page-contents {% endif %}  {% if(params.rightMargin) %} wmcads-m-r-lg {% endif %} {% if(params.sections) %}wmcads-page-contents--with-accordion{% endif %}">
       <h3>Page contents</h3>
-      <div>{{title}}</div>
+      <div class="{% if(params.sections) %}current{% endif %}">{{title}}</div>
       {% if(params.example) %}
         <a>link 1</a>
         <a>link 2</a>
         <a>link 3</a>
         <a>link 4</a>
       {% endif %}
+      {% if(params.sections) %}
+      <div class="wmcads-accordion">
+        <div aria-controls="accordion-01" class="wmcads-accordion__summary-wrapper" aria-expanded="false">
+        <!-- accordion summary -->
+        <div class="wmcads-accordion__summary">
+          <p class="wmcads-m-b-none"><a href="#">Section 1</a></p>
+        </div>
+        <!-- plus icon -->
+        <svg class="wmcads-accordion__icon">
+          <use xlink:href="#wmcads-general-expand" href="#wmcads-general-expand"></use>
+        </svg>
+        <!-- minus icon -->
+        <svg class="wmcads-accordion__icon wmcads-accordion__icon--minimise">
+          <use xlink:href="#wmcads-general-minimise" href="#wmcads-general-minimise"></use>
+        </svg>
+      </div>
+
+      <!-- accordion content -->
+      <div class="wmcads-accordion__content" id="accordion-01">
+        <ul class="wmcads-bare-list">
+          <li class="current"><a href="#">Sub section 1</a></li>
+          <li><a href="#">Sub section 2</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wmcads-accordion">
+        <div aria-controls="accordion-01" class="wmcads-accordion__summary-wrapper" aria-expanded="false">
+        <!-- accordion summary -->
+        <div class="wmcads-accordion__summary">
+          <p class="wmcads-m-b-none"><a href="#">Section 2</a></p>
+        </div>
+        <!-- plus icon -->
+        <svg class="wmcads-accordion__icon">
+          <use xlink:href="#wmcads-general-expand" href="#wmcads-general-expand"></use>
+        </svg>
+        <!-- minus icon -->
+        <svg class="wmcads-accordion__icon wmcads-accordion__icon--minimise">
+          <use xlink:href="#wmcads-general-minimise" href="#wmcads-general-minimise"></use>
+        </svg>
+      </div>
+
+      <!-- accordion content -->
+      <div class="wmcads-accordion__content" id="accordion-01">
+        <ul class="wmcads-bare-list">
+          <li><a href="#">Sub section 1</a></li>
+          <li><a href="#">Sub section 2</a></li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
   </div>
 {% endmacro %}

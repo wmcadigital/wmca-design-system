@@ -27,4 +27,43 @@
     text-overflow: ellipsis;
     white-space: wrap;
   }
+
+  &--with-accordion {
+    div {
+      margin-bottom: 0;
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .current {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 3px solid get-color(primary);
+    }
+
+    .wmcads-accordion__summary-wrapper {
+      padding-top: 0.5rem;
+      padding-right: 0;
+      padding-bottom: 0.5rem;
+
+      .wmcads-accordion__icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .wmcads-accordion__content {
+      padding: 0;
+    }
+
+    ul {
+      li {
+        padding-left: $size-lg;
+
+        &.current {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
 }
