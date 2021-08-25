@@ -9,7 +9,6 @@
 {# Set array of tiles #} 
 {% block content %}
 
-<div>
   <div class="wmcads-container">
     <div class="wmcads-grid wmcads-grid--justify-between wmcads-grid--spacing-2-lg wmcads-grid--spacing-md-2-lg">
       <div class="main wmcads-col-1 wmcads-col-md-2-3 wmcads-m-b-xl">
@@ -19,22 +18,11 @@
           wmcadsFileDownload({
             html: false,
             htmlInfo: true,
-            default: false,
-            htmlDoc: true,
+            default: true,
+            htmlDoc: false,
             pdfDoc: false,
             dlName: 'Local Transport Plan Green Paper'
           ])
-        }}
-        <h3>Alternative formats</h3>
-        {{
-          wmcadsFileDownload({
-            html: false,
-            htmlInfo: true,
-            default: false,
-            htmlDoc: false,
-            pdfDoc: true,
-            dlName: 'Download Local Transport Plan Green Paper (pdf, 7.88MB)'
-          })
         }}
 
         <h2>Details</h2>
@@ -48,6 +36,18 @@
           <li>Tackling the climate emergency</li> 
           <li>Sustaining economic success</li>
         </ul>
+        <hr>
+        <h3>Alternative formats</h3>
+        {{
+          wmcadsFileDownload({
+            html: false,
+            htmlInfo: true,
+            default: false,
+            htmlDoc: false,
+            pdfDoc: true,
+            dlName: 'Download Local Transport Plan Green Paper (pdf, 7.88MB)'
+          })
+        }}
       </div>
       <aside class="wmcads-col-1 wmcads-col-md-1-3 wmcads-m-b-lg">
         <div class="wmcads-page-contents">
@@ -59,5 +59,4 @@
       </aside>
     </div>
   </div>
-</div>
 {% endblock %}
