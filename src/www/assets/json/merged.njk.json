@@ -176,6 +176,12 @@
 				},
 				{
 					"name": "Search"
+				},
+				{
+					"name": "Newsroom"
+				},
+				{
+					"name": "News Article"
 				}
 			]
 		}

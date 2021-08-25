@@ -5,6 +5,7 @@
 
 <div class="wmcads-search-result">
     <h2 class="wmcads-m-b-none"><a href="#" class="h2 wmcads-search-result__title">{{params.pageTitle}}</a></h2>
+    {% if params.breadcrumbs === true -%}
     {{
         wmcadsBreadcrumb({
             section: 'Swift and Tickets',
@@ -13,6 +14,7 @@
             classModifiers: "wmcads-hide-mobile"
         }) | trim
     }}
+    {%- endif %}
     <p class="wmcads-search-result__date">{{params.date | safe}}</p>
     <p class="wmcads-search-result__excerpt">{{params.excerpt | safe}}</p>
 </div>
