@@ -1,5 +1,5 @@
 {% extends "www/_layouts/template-layout-fullwidth.njk" %} 
-{% set pageTitle="Search" %} {% set section = "Templates" %} 
+{% set pageTitle="News" %} {% set section = "Templates" %} 
 {# Imports #} 
 {% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
@@ -14,11 +14,13 @@
 {# Set array of tiles #} 
 {% block content %}
 
-<div class="template-search">
+<div class="template-newsroom">
   <div class="wmcads-container wmcads-m-b-lg">
-    <h1 id="wmcads-main-content" class="wmcads-hide-mobile">Search results</h1>
+    <h1 id="wmcads-main-content" class="wmcads-hide-mobile">News</h1>
     <div class="wmcads-col-1 wmcads-col-md-2-3 wmcads-p-r-xl">
-     {{wmcadsSearchbar()}}
+     {{wmcadsSearchbar({
+       placeHolder: "News search..."
+     })}}
     </div>
   </div>
   <div class="wmcads-container">
@@ -27,47 +29,42 @@
         <p>Found <strong>20</strong> matching results</p>
         {{wmcadsSearchResult(
           {
-            pageTitle: "HS2 Ltd",
-            breadcrumbs: true,
-            date: "Thursday 23 August 2018",
-            excerpt: "High Speed Two (HS2) is the new railway that will be the backbone of Britain’s <strong>transport</strong> network. High Speed Two Limited (HS2 Ltd) is the company developing..."
-          }
-        )}}
-        {{wmcadsSearchResult(
-          {
-            pageTitle: "Connectivity",
-            breadcrumbs: true,
-            date: "Thursday 23 August 2018",
-            excerpt: "HS2 will place the West Midlands at the heart of the UK’s <strong>transport</strong> network, with two new stations in the region, the interchange at Solihull and the new Curzon Street..."
-          }
-        )}}
-        {{wmcadsSearchResult(
-          {
             pageTitle: "New transport system will be sprinting for success at Commonwealth Games",
-            breadcrumbs: true,
             date: "Thursday 23 August 2018",
-            excerpt: "Top athletes are not the only ones aiming to be in peak condition for the 2022 Commonwealth Games in Birmingham – the region’s <strong>transport</strong> system is also..."
+            excerpt: "Top athletes are not the only ones aiming to be in peak condition for the 2022 Commonwealth Games in Birmingham – the region’s transport system is also..."
           }
         )}}
         {{wmcadsSearchResult(
           {
-            pageTitle: "Our Vision",
-            breadcrumbs: true,
+            pageTitle: "Mayor tells business leaders why the West Midlands should be seen as a leading net zero region",
             date: "Thursday 23 August 2018",
-            excerpt: "High Speed 2 (HS2) will have a truly transformational impact on the West Midlands. As well as the economic benefits of investment in high speed rail infrastructure..."
+            excerpt: "Mayor of the West Midlands Andy Street has told a cross-sector audience of local decision makers why the West Midlands should be seen as one of the UK’s leading regions in supporting the race to net zero."
           }
         )}}
         {{wmcadsSearchResult(
           {
-            pageTitle: "Network Resilience",
-            breadcrumbs: true,
+            pageTitle: "First of the new generation of bus shelters unveiled as work continues on the Sprint rapid bus route",
             date: "Thursday 23 August 2018",
-            excerpt: "We are experiencing an unprecedented level of investment in bringing much needed improvements to the way that people and goods are able to move around the West..."
+            excerpt: "The first of a new generation of bus shelters has been unveiled in Perry Barr, Birmingham ready for the introduction of the Sprint rapid bus route next year."
+          }
+        )}}
+        {{wmcadsSearchResult(
+          {
+            pageTitle: "First of the new generation of bus shelters unveiled as work continues on the Sprint rapid bus route",
+            date: "Thursday 23 August 2018",
+            excerpt: "The first of a new generation of bus shelters has been unveiled in Perry Barr, Birmingham ready for the introduction of the Sprint rapid bus route next year."
+          }
+        )}}
+        {{wmcadsSearchResult(
+          {
+            pageTitle: "First of the new generation of bus shelters unveiled as work continues on the Sprint rapid bus route",
+            date: "Thursday 23 August 2018",
+            excerpt: "The first of a new generation of bus shelters has been unveiled in Perry Barr, Birmingham ready for the introduction of the Sprint rapid bus route next year."
           }
         )}}
 
         {{wmcadsPagination({
-          pageCount: 8,
+          pageCount: 6,
           activePage: 1
         })}}
       </div>
