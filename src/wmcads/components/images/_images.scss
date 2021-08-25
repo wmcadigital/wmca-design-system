@@ -1,5 +1,8 @@
 .wmcads-image {
   &__hex {
+    display: inline-flex;
+    height: 300px;
+
     img {
       display: block;
       width: 100%;
