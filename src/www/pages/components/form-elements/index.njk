@@ -1,5 +1,6 @@
 {% extends "www/_layouts/layout-left-pane.njk" %}
 {% set pageTitle = "Form elements" %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
 {% block content %}
@@ -234,6 +235,37 @@
     compExample([wmcadsTextarea()])
   }}
   {# End Textarea #}
+
+  <br><br>
+  {# Date input #}
+  {% from "wmcads/components/form-elements/date-input/_date-input.njk" import wmcadsDateInput %}
+  <h2>Date Input</h2>
+  <h3>What does it do?</h3>
+  <ul>
+    <li>Help users enter a memorable date or one they can easily look up.</li>
+  </ul>
+  <h3>When to use it?</h3>
+  <ul>
+    <li>Use the date input component when you’re asking users for a date they’ll already know, or can look up without using a calendar.</li>
+  </ul>
+  <h3>When not to use it?</h3>
+  <ul>
+    <li>Do not use the date input component if users are unlikely to know the exact date of the event you’re asking about.</li>
+  </ul>
+  {{
+    wmcadsInsetText ({
+      contentHTML: "If you are looking for how to format the date within content i.e. \"4 June 2017\", check the <a href=\"/styles/a-to-z-content-style-guide/#dates\" class=\"wmcads-link\">dates section within the A to Z content style guide</a>."
+    })
+  }}
+
+  {{
+    compExample([
+      wmcadsDateInput({
+
+      })
+    ])
+  }}
+{# End Date input #}
 
 
   <br><br>
