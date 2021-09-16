@@ -1,9 +1,9 @@
 .wmcads-portfolio-leads {
   display: block;
+  max-width: 374px;
   padding: 15px;
   border-bottom: 5px solid get-color(primary);
   background: $white;
-  max-width: 374px;
 
   img {
     display: inline-block;
@@ -12,15 +12,18 @@
     object-position: top;
   }
 
-  h4,
-  p {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-
-
   &-details {
     display: inline-block;
     margin-bottom: 24px;
+
+    h4,
+    p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  &-details:last-of-type {
+    margin-bottom: 9px;
   }
 }
