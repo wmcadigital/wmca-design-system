@@ -175,6 +175,10 @@ body {
   }
 }
 
+.wmcads-hide {
+  display: none !important;
+}
+
 // Borders
 // Border generator mixin
 @mixin x-default-border($border-color) {
