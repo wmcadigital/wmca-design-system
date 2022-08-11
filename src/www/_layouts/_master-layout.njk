@@ -14,16 +14,17 @@
     <![endif]-->
 
     {# header #}
-    {% from "wmcads/patterns/header/_header.njk" import wmcadsHeader %}
+    {% from "wmcads/patterns/header-v2/_header-v2.njk" import wmcadsHeaderV2 %}
     {{
-      wmcadsHeader ({
+      wmcadsHeaderV2 ({
         id: "mega-menu",
         navItems: navItems,
-        banner: true,
+        banner: false,
         linkTopLevel: true,
         breadcrumbs: {
           section: section,
-          pageTitle: pageTitle
+          pageTitle: pageTitle,
+          hideBreadcrumb: hideBreadcrumb
         }
       })
     }}
