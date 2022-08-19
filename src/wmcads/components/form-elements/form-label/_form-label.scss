@@ -1,0 +1,6 @@
+.wmcads-fe-label {
+  display: block;
+  margin-bottom: $size-sm;
+  @include type-setting(0);
+  color: inherit;
+}

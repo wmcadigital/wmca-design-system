@@ -134,7 +134,10 @@
 					"name": "Feedback loop"
 				},
 				{
-					"name": "Header and footer"
+					"name": "Footer"
+				},
+				{
+					"name": "Header"
 				},
 				{
 					"name": "Question Form"
@@ -191,7 +194,22 @@
 			"name": "The Mayor"
 		},
 		{
-			"name": "Who we are"
+			"name": "Who we are",
+			"subnavItems": [{
+				"name": "Sub title",
+				"subnavItems": [{
+				  "name": "Sub link 1"
+				},
+				{
+				  "name": "Sub link 2"
+				},
+				{
+				  "name": "Sub link 3"
+				},
+				{
+				  "name": "Sub link 4"
+				}]
+			}]
 		},
 		{
 			"name": "What we do"
