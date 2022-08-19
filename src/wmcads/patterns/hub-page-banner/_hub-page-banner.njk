@@ -1,0 +1,45 @@
+{% macro wmcadsHubPageBanner(params) %}
+
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% set mode = params.mode if params.mode %} {# Fallback for mode is set in the if/else statment below #}
+
+{# Set the logo and alt text to the correct mode based on mode: WM Bus Ring and Ride #}
+{% set _logoFolder = "examples" %}
+  {% set _logoAlt = "Mayor of the West Midlands" %} {# "logo" is added after logoAlt automatically #}
+  {# {% set mode = "bus ring and ride" %} #} {# Fallback for mode #}
+
+{# These variables are set after the if statement to make sure we get the fallback mode: bus if the user hasn't selected a mode or misstyped the mode param #}
+{% set _logo = "/img/examples/logos-mayor-of-the-west-midlands.png" if params.logo else null %} {# Set logo to the correct one based on if statements above. #}
+{% set title = params.title if params.title else "Hub Header" %} {# Set title else fallback to "mode in West Midlands") #}
+{% set contentHTML = params.contentHTML | safe if params.contentHTML else null %}
+{% set image = params.image if params.image else "/img/examples/curzon-street.png" %}
+{# {% set _modeClass = " wmcads-hub-page-banner--" + mode | lower if mode %} #} {# Set correct modifier class #}
+
+<div class="wmcads-hub-page-banner{{_modeClass}}">
+  <div class="wmcads-container">
+    <div class="wmcads-hub-page-banner__content">
+      {% if _logo %}
+        <div class="wmcads-hub-page-banner__logos">
+          <img src="{{_logo}}" alt="{{_logoAlt}} logo">
+        </div>
+      {% endif %}
+      <div class="wmcads-hub-page-banner__copy wmcads-p-t-md">
+        <h1>{{ title }}</h1>
+        {% if contentHTML %}
+          <p>{{ contentHTML }}</p>
+        {% else %}
+
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {# The arrow indent shape in the desktop banner #}
+  <div class="wmcads-hub-page-banner__image wmcads-hide-mobile" style="background-image: url({{image}});">
+    <svg class="wmcads-hub-page-banner__svg-background" viewBox="0 0 40 200">
+      <path d="M0,0v200h6.03l32.87-93.5c1.48-4.21,1.48-8.79,0-12.99L6.03,0H0z"/>
+    </svg>
+  </div>
+</div>
+
+{% endmacro %}
