@@ -4,21 +4,44 @@
 {# Imports #}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {% from "wmcads/components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium %}
-{% from "wmcads/components/form-elements/label/_label.njk" import wmcadsLabel %}
+{% from "wmcads/components/form-elements/form-label/_form-label.njk" import wmcadsFormLabel %}
 {# Params #}
 {% set query = params.query if params.query else "" %} {# default to x15 as query text if one isn't available #}
 {% set placeholder = params.placeholder if params.placeholder else "Tap to search" %}
 {% set isLoading = " wmcads-is--loading" if params.loading %}
 {% set id = params.id if params.id else "genericInput" %}
+{% set label = params.label.contentText if params.label.contentText else "Autocomplete label" %}
+{% set name = params.name if params.name else id %}
+{% set isRequired = params.isRequired if params.isRequired else false %}
+{% set selected = params.selected if params.selected else false %}
+{% set selectedItem = params.selectedItem if params.selectedItem else 'Selected item' %}
 
 {# Label #}
+{% if not params.hideLabel %}
 {{
-  wmcadsLabel({
+  wmcadsFormLabel({
     for: id,
-    label: 'Autocomplete label'
-  }) | trim
+    contentText: label,
+    classes: params.label.classes
+  })
 }}
+{% endif %}
 
+{% if params.selected %}
+<div
+    class="wmcads-autocomplete__selected-item wmcads-grid wmcads-grid--justify-between wmcads-m-t-xs wmcads-m-b-md"
+  >
+    <strong class="wmcads-col-auto wmcads-autocomplete__selected-item-summary">{{selectedItem}}</strong>
+    <button type="button" class="wmcads-autocomplete__selected-item-close">
+      {{
+        wmcadsIcon({
+          icon: 'general-cross',
+          class: 'wmcads-autocomplete__selected-item-close-icon'
+        })
+      }}
+    </button>
+  </div>
+{% else %}
 <div class="wmcads-autocomplete wmcads-grid{{isLoading}}">
   {% from "wmcads/components/loader/_loader.njk" import wmcadsLoader %}
   {#- Get SVG icon and pass class -#}
@@ -27,16 +50,17 @@
     wmcadsIcon({
       icon: 'general-search',
       class: 'wmcads-autocomplete__icon'
-    }) | indent(2) | trim
-  -}}
+    })
+  }}
 
   {# Loading spinner #}
   {{
-    wmcadsLoader() | indent(2) | trim
+    wmcadsLoader()
   }}
   <!-- Autocomplete input box -->
-  <input class="wmcads-fe-input wmcads-autocomplete__input wmcads-col-1" value="{{ query }}" placeholder="{{ placeholder }}" name="searchExample" aria-label="{{ placeholder }}"  type="text" id="{{id}}">
+  <input class="wmcads-fe-input wmcads-autocomplete__input wmcads-col-1" value="{{ query }}" placeholder="{{ placeholder }}" name="{{ name }}" aria-label="{{ placeholder }}"  type="text" id="{{id}}" required="{{isRequired}}" autocomplete="off">
 </div>
+{% endif %}
 
 {#- If showSuggestions is true #}
 {% if params.showSuggestions %}
@@ -58,7 +82,7 @@
         wmcadsDisruptionIndicatorMedium({
           classModifiers: 'wmcads-disruption-indicator-medium',
           text: query
-        }) | indent(8) | trim
+        })
       }}
     </div>
     <div class="wmcads-col-1-2 wmcads-col-sm-2-3">
@@ -69,5 +93,6 @@
 {% endif -%}
 </ul>
 {%- endif %}
+
 
 {% endmacro %}

@@ -1,9 +1,11 @@
 {% macro wmcadsSearchbar(params) %}
-{% set placeHolder = params.placeHolder or 'Site search...' %}
 
-<form class="wmcads-search-bar">
-    <input aria-label="Search" type="search" class="wmcads-search-bar__input wmcads-fe-input" placeholder="{{placeHolder}}">
-    <button class="wmcads-search-bar__btn" types="submit">
+{% set id = params.id if params.id else "searchBar" %}
+{% set placeholder = params.placeholder if params.placeholder else "Search for news, campaigns, events…" %}
+
+<form id="{{id}}_form" class="wmcads-search-bar">
+    <input id="{{id}}_input" aria-label="Search" type="text" class="wmcads-search-bar__input wmcads-fe-input" placeholder="{{placeholder}}">
+    <button class="wmcads-search-bar__btn" type="submit">
         <svg><title>Search</title><use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use></svg>
     </button>
 </form>

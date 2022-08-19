@@ -1,0 +1,241 @@
+{% macro wmcadsHeaderV2(params) %}
+{# Set navItems #}
+{% set navItems = params.navItems %}
+{% set appClass = " wmcads-header--mobile-app" if params.app else "" %}
+{% set menuClass = "" if params.legacyMenu else " wmcads-header--mega-menu" %}
+
+{% set navigationAriaLabel = params.exampleAria + " example navigation" if params.exampleAria else "Navigation" %}
+{# Imports #}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/patterns/banner/_banner.njk" import wmcadsBanner %}
+{% from "wmcads/components/breadcrumb/_breadcrumb.njk" import wmcadsBreadcrumb %}
+{% from "wmcads/patterns/cookies/cookies-banner/_cookies-banner.njk" import wmcadsCookiesBanner %}
+{% from "wmcads/patterns/search/search-bar/_search-bar.njk" import wmcadsSearchbar %}
+{% from "wmcads/patterns/autocomplete/_autocomplete.njk" import wmcadsAutocomplete %}
+
+<!-- Skip to content link -->
+{{
+  wmcadsLink({
+    link: '#wmcads-main-content',
+    linkTitle: 'Skip to main content',
+    text: 'Skip to main content',
+    contentText: 'Skip to main content',
+    classes: 'wmcads-link wmcads-header__skip-link'
+  })
+}}
+<!-- Main header section -->
+<header>
+  {{
+    wmcadsCookiesBanner()
+  }}
+  <div class="wmcads-header{{appClass}}{{menuClass}}">
+    <div class="wmcads-container wmcads-grid wmcads-grid--align-center wmcads-grid--justify-between">
+      <div class="wmcads-header__vertical-align wmcads-col-auto">
+        <!-- Logo -->
+        <a class="wmcads-header__logo-link" href="/" title="Transport for West Midlands Design System">
+          <img class="wmcads-header__logo" alt="Transport for West Midlands logo" src="/img/logo.svg" />
+        </a>
+      </div>
+      {#- If with a title #}
+      {% if params.withTitle %}
+        <!-- Header title -->
+        <h1 class="wmcads-header__title wmcads-col-1 wmcads-col-sm-auto">
+          Contact us
+        </h1>
+      {% else %}
+        <!-- Mega menu nav items-->
+        <nav id="{{params.id}}" class="wmcads-mega-menu">
+          <!-- Mobile toggle button -->
+          <button class="wmcads-mega-menu__mobile-toggle wmcads-btn wmcads-btn--secondary wmcads-hide-desktop" aria-expanded="false" aria-controls="{{params.id}}-primary-menu">Menu
+            <svg class="wmcads-mega-menu__close-icon"><use xlink:href="#wmcads-general-cross" href="#wmcads-general-cross"></use></svg>
+          </button>
+          <!-- Container for mega menu - allows scrolling on mobile nav -->
+          <div id="{{params.id}}-primary-menu" class="wmcads-mega-menu__scroll-controller">
+            <!-- Start primary (level 1) navigation -->
+            <ul class="wmcads-mega-menu__primary-menu">
+              {% for navItem in navItems %}
+                <li class="wmcads-mega-menu__primary-menu-item">
+                <!-- Show swift logo in nav if is swift & tickets link -->
+                {% set navItemIcon = wmcadsIcon({icon: 'swift-full-logo', class: 'wmcads-swift-icon', title: 'Swift'}) if navItem.name === "Swift and tickets" else "" %}
+                {% set navItemContent = " and tickets" if navItem.name === "Swift and tickets" else navItem.name %}
+                  <!-- allow primary (level 1) item to link if specified -->
+                  {% if params.linkTopLevel %}{{navItemIcon}}
+                    <a href="/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="wmcads-mega-menu__primary-menu-link" >
+                      {{navItemIcon}}{{ navItemContent }}
+                    </a>
+                  <!-- if not linked use a button -->
+                  {% else %}
+                    <button target="_self" class="wmcads-mega-menu__primary-menu-link" >
+                      {{navItemIcon}}{{ navItemContent }}
+                    </button>
+                  {% endif %}
+                  {% if navItem.subnavItems %}
+                    <!-- arrow icon for mobile nav -->
+                    <button class="wmcads-mega-menu__link-arrow-icon-btn" data-label="{{ navItem.name }}" aria-label="toggle {{ navItem.name }}" aria-controls="{{params.id}}-container"><svg class="wmcads-mega-menu__link-arrow-icon"><use xlink-href="#wmcads-general-chevron-right" href="#wmcads-general-chevron-right"></use></svg></button>
+                    <!-- Start mega menu container -->
+                    <div id="{{params.id}}-container-{{ loop.index }}" class="wmcads-mega-menu__container">
+                      <div class="wmcads-container">
+                        <!-- Start submenu (level 2) -->
+                        <ul class="wmcads-mega-menu__sub-menu">
+                          {% for subnavItem in navItem.subnavItems %}
+                            {% if subnavItem.unlinked %}
+                              {% set _tag = 'button' %}
+                              {% set _classes = " wmcads-btn wmcads-btn--link" %}
+                            {% else %}
+                              {% set _tag = 'a' %}
+                              {# Set href if specified, else set an auto generated href #}
+                              {% set _hrefSubnav = subnavItem.href if subnavItem.href else "/" + navItem.name + "/" + subnavItem.name  + "/"%}
+                              {# Set href attribute for link #}
+                              {% set _attributes = " href=\"" + _hrefSubnav | lower | replace(" ", "-") + "\"" if _hrefSubnav else "" %}
+                            {% endif %}
+                            <li class="wmcads-mega-menu__sub-menu-item">
+                              <{{_tag}}{{_attributes | safe}} class="wmcads-mega-menu__sub-menu-link{{_classes}}">
+                                {% if subnavItem.icon %}
+                                <!-- Show submenu (level 2) item icon if specified -->
+                                <svg class="wmcads-mega-menu__sub-menu-link-icon">
+                                  <use xlink:href="#wmcads-{{subnavItem.icon}}" href="#wmcads-{{subnavItem.icon}}"></use>
+                                </svg>
+                                {% endif %}
+                                {{subnavItem.name| replace("Swift", wmcadsIcon({icon: 'swift-full-logo', class: 'wmcads-swift-icon', title: 'Swift'}) | indent(6) | trim) | safe}}</{{_tag}}>
+                                {% if subnavItem.subnavItems %}
+                                <!-- collapse button for mobile nav level 3 menu items -->
+                              <button class="wmcads-mega-menu__collapse-toggle" aria-expanded="false" aria-label="Toggle {{subnavItem.name}} menu" aria-controls="{{params.id}}-submenu-child-menu"><svg class="wmcads-mega-menu__link-arrow-icon"><use xlink-href="#wmcads-general-chevron-right" href="#wmcads-general-chevron-right"></use></svg></button>
+                              <!-- Start submenu child (level 3) list -->
+                              <ul id="{{params.id}}-submenu-child-menu-{{ subnavItem.name | lower | replace(" ", "-") }}-{{ loop.index }}" class="wmcads-mega-menu__sub-menu-child-menu">
+                                {% for subnavChildItem in subnavItem.subnavItems %}
+                                {# Set auto generated href string for fallback - ignore 2nd level nav name if it is unlinked #}
+                                {% set _hrefString = "/" + navItem.name + "/" + subnavChildItem.name + "/" if subnavItem.unlinked else "/" + navItem.name + "/" + subnavItem.name + "/" + subnavChildItem.name + "/" %}
+                                {# Set href if it is set else fallback to auto generated link #}
+                                {% set _hrefSubnavChild = subnavChildItem.href if subnavChildItem.href else _hrefString | lower | replace(" ", "-") %}
+                                <li class="wmcads-mega-menu__sub-menu-child-item">
+                                  <a href="{{_hrefSubnavChild}}" class="wmcads-mega-menu__sub-menu-child-link">{{subnavChildItem.name | capitalize}}</a>
+                                </li>
+                                {% endfor %}
+                              </ul>
+                              <!-- End submenu child (level 3) list -->
+                              {% endif %}
+                            </li>
+                          {% endfor %}
+                        </ul>
+                        <!-- End submenu (level 2) -->
+                      </div>
+                    </div>
+                    <!-- End mega menu container -->
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+            <!-- End primary (level 1) navigation -->
+          </div>
+          <!-- End scrollable container -->
+          {% if(params.search) %}
+          <div class="wmcads-mega-menu__primary-menu-item wmcads-mega-menu__search">
+            <button class="wmcads-mega-menu__primary-menu-link wmcads-mega-menu__search-btn">
+              <svg class="wmcads-mega-menu__search-icon">
+                <title>Search</title>
+                <use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use>
+              </svg>
+              <svg class="wmcads-mega-menu__search-close-icon">
+                <title>Close</title>
+                <use xlink:href="#wmcads-general-cross" href="#wmcads-general-cross"></use>
+              </svg>
+            </button>
+            <div class="wmcads-mega-menu__container wmcads-mega-menu__search-container">
+              <div class="wmcads-search-container">
+                {% if params.wmcadsSearch %}
+                  {{
+                    wmcadsAutocomplete(
+                      params.wmcadsSearch
+                    )
+                  }}
+                  <div id="wmcadsSearchSuggestions" class="wmcads-autocomplete-suggestions" style="display: none;">
+                  </div>
+                {% else %}
+                  {{
+                    wmcadsSearchbar(params.search)
+                  }}
+                {% endif %}
+                {% if(params.searchSuggestions) %}
+                  <p class="wmcads-search-heading wmcads-h1">I want to...</p>
+                  <div class="wmcads-grid">
+                    <div class="wmcads-col-1-2">
+                      <ul class="wmcads-search-list">
+                      {% for i in range(0, 4) %}
+                        <li class="wmcads-search-list__item">
+                          <a href="#" class="wmcads-link wmcads-link--with-chevron">{{params.searchSuggestions[i]}}
+                            {{wmcadsIcon({
+                              class: 'wmcads-link__chevron wmcads-link__chevron--right',
+                              icon: 'general-chevron-right'
+                            })}}
+                          </a>
+                        </li>
+                      {% endfor %}
+                      </ul>
+                    </div>
+                    <div class="wmcads-col-1-2">
+                      <ul class="wmcads-search-list">
+                      {% for i in range(4, params.searchSuggestions.length) %}
+                        <li class="wmcads-search-list__item">
+                          <a href="#" class="wmcads-link wmcads-link--with-chevron">{{params.searchSuggestions[i]}}
+                            {{wmcadsIcon({
+                              class: 'wmcads-link__chevron wmcads-link__chevron--right',
+                              icon: 'general-chevron-right'
+                            })}}
+                          </a>
+                        </li>
+                      {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </nav>
+        {% endif %}
+      </div>
+    </div>
+
+
+    {% if params.banner or params.breadcrumbs %}
+      <div class="wmcads-container">
+        {% if params.banner %}
+          <!-- Phase banner -->
+          {{
+            wmcadsBanner ({
+              link: 'https://github.com/wmcadigital/wmn-design-system/issues',
+              linkTitle: 'WMN Design System Github',
+              phase: true
+            })
+          }}
+        {% endif %}
+
+        {% if params.breadcrumbs and params.breadcrumbs.hideBreadcrumb != true and params.breadcrumbs.section != 'Home' %}
+        {% set breadcrumbList = null if params.breadcrumbs.section === params.breadcrumbs.pageTitle else {
+              contentText: params.breadcrumbs.pageTitle
+            } %}
+        <!-- Breadcrumbs -->
+        {{
+          wmcadsBreadcrumb({
+            items: [{
+              contentText: params.breadcrumbs.section or "Components",
+              unlinkedItem: false if breadcrumbList else true
+            }, breadcrumbList],
+            label: params.label
+          })
+        }}
+      {% endif %}
+    </div>
+  {% endif %}
+</header>
+
+{% if params.megaMenuDemo %}
+  <!-- Content space for example purposes only. DO NOT INCLUDE -->
+  <div class="demo-content">
+    <p>Example content <br> <a href="/patterns/header-demo" target="_blank">View full page example (opens in new window)</a></p>
+  </div>
+  <!-- END DO NOT INCLUDE -->
+{% endif %}
+{% endmacro %}

@@ -13,8 +13,31 @@
       </p>
     <![endif]-->
 
+        {# header #}
+    {% from "wmcads/patterns/header-v2/_header-v2.njk" import wmcadsHeaderV2 %}
+    {{
+      wmcadsHeaderV2 ({
+        id: "mega-menu",
+        navItems: templateNavItems,
+        banner: true,
+        linkTopLevel: true,
+        breadcrumbs: {
+          section: section,
+          pageTitle: pageTitle,
+          hideBreadcrumb: hideBreadcrumb
+        },
+        search: true,
+        wmcadsSearch: {
+          id: "wmcadsMegaMenuSearch",
+          placeholder: 'Search...',
+          hideLabel: true
+        }
+      })
+    }}
     {# header #}
-    {% from "wmcads/patterns/header/_header.njk" import wmcadsHeader %}
+
+    {# header #}
+    {# {% from "wmcads/patterns/header/_header.njk" import wmcadsHeader %}
     {{
       wmcadsHeader ({
         id: "mega-menu",
@@ -28,7 +51,7 @@
           pageTitle: pageTitle
         }
       })
-    }}
+    }} #}
     {# header #}
 
     {# main #}
