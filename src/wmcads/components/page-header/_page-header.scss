@@ -1,6 +1,6 @@
 .wmcads-page-header {
   display: block;
-  height: 300px;
+  min-height: 300px;
   color: $white;
   background: $black;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   background-size: cover;
 
   &__home {
-    height: 420px;
+    min-height: 420px;
 
     .wmcads-page-header {
       &-box {
@@ -29,16 +29,16 @@
     }
 
       &-container {
-        height: 420px;
+        min-height: 420px;
         padding: 0 !important;
       }
     }
   }
 
   &__large {
-    height: 600px;
+    min-height: 600px;
     @media screen and (max-width: $breakpoint-md) {
-      height: 300px;
+      min-height: 300px;
     }
   }
 

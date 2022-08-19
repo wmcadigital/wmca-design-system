@@ -1,7 +1,7 @@
 .wmcads-hub-header {
   display: flex;
   position: relative;
-  height: 230px;
+  min-height: 230px;
   color: $white;
   background: get-color(primary);
 
