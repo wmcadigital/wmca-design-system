@@ -66,6 +66,9 @@
 					"name": "Inset text"
 				},
 				{
+					"name": "Images"
+				},
+				{
 					"name": "In-text step"
 				},
 				{
@@ -88,9 +91,6 @@
 				},
 				{
 					"name": "Phase indicator"
-				},
-				{
-					"name": "Portfolio dashboard"
 				},				
 				{
 					"name": "Portfolio leads"
@@ -103,6 +103,9 @@
 				},
 				{
 					"name": "Tag"
+				},
+				{
+					"name": "Video embed"
 				},				
 				{
 					"name": "Warning text"
@@ -131,7 +134,10 @@
 					"name": "Feedback loop"
 				},
 				{
-					"name": "Header and footer"
+					"name": "Footer"
+				},
+				{
+					"name": "Header"
 				},
 				{
 					"name": "Question Form"
@@ -160,7 +166,25 @@
 					"name": "Content Two Columns"
 				},
 				{
+					"name": "Document Paper"
+				},
+				{
+					"name": "Document Hub"
+				},
+				{
+					"name": "Document Foreword"
+				},
+				{
+					"name": "Document Section"
+				},
+				{
 					"name": "Search"
+				},
+				{
+					"name": "Newsroom"
+				},
+				{
+					"name": "News Article"
 				}
 			]
 		}
@@ -170,7 +194,22 @@
 			"name": "The Mayor"
 		},
 		{
-			"name": "Who we are"
+			"name": "Who we are",
+			"subnavItems": [{
+				"name": "Sub title",
+				"subnavItems": [{
+				  "name": "Sub link 1"
+				},
+				{
+				  "name": "Sub link 2"
+				},
+				{
+				  "name": "Sub link 3"
+				},
+				{
+				  "name": "Sub link 4"
+				}]
+			}]
 		},
 		{
 			"name": "What we do"

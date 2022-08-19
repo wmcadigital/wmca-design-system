@@ -34,7 +34,10 @@
 
 {{
     compExample([
-        wmcadsFileDownload()
+        wmcadsFileDownload({
+            html: false,
+            default: true
+        })
     ])
 }}
 <br><br>
@@ -63,7 +66,68 @@
 {{
     compExample([
         wmcadsFileDownload({
-            accessible: false
+            accessible: true,
+            html: false,
+            default: true
+        })
+    ])
+}}
+
+
+{# Document link #}
+<h2>Document link</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+    <li>Links to a html document</li>
+</ul>
+{# When to #}
+<h3>When to use it?</h3>
+<ul>
+    <li>When you have an html version of a document available.</li>
+</ul>
+{# When not to #}
+<h3>When not to use it?</h3>
+<ul>
+    <li>When linking to a non html document e.g. pdf, doc, docx</li>
+</ul>
+
+{{
+    compExample([
+        wmcadsFileDownload({
+            html: true,
+            default: true
+        })
+    ])
+}}
+
+{# Document link #}
+<h2>HTML & PDF links</h2>
+
+{{
+    compExample([
+        wmcadsFileDownload({
+            html: false,
+            htmlInfo: true,
+            default: false,
+            htmlDoc: true,
+            pdfDoc: false,
+            dlName: 'Document name'
+        })
+    ])
+}}
+
+
+
+{{
+    compExample([
+        wmcadsFileDownload({
+            html: false,
+            htmlInfo: true,
+            default: false,
+            htmlDoc: false,
+            pdfDoc: true,
+            dlName: 'Download Document name (pdf, 7.88MB)'
         })
     ])
 }}

@@ -165,14 +165,18 @@ body {
 // Show/hide on desktop devices only
 .wmcads-hide-mobile {
   @media screen and (max-width: $breakpoint-md) {
-    display: none;
+    display: none !important;
   }
 }
 
 .wmcads-hide-desktop {
   @media screen and (min-width: $breakpoint-md) {
-    display: none;
+    display: none !important;
   }
+}
+
+.wmcads-hide {
+  display: none !important;
 }
 
 // Borders

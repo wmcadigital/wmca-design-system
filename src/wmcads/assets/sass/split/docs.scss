@@ -1,0 +1,13 @@
+// Vars
+@import "../vars";
+
+// Mixins
+@import "../mixins";
+
+// Image Styles
+.umb-grid {
+  @import "../../../components/file-download/file-download"; // Import file download styles
+  // Import grid components
+  @import "../wmcads-grid/wmcads-grid";
+  @import "../wmcads-grid/grid-cols";
+}

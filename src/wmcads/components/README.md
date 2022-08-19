@@ -28,7 +28,6 @@ See [Coding standards](../../../doc/contributing/coding-standards.md)
 - Message
 - Page header
 - Phase indicators
-- Portfolio dashboard
 - Portfolio leads
 - Share
 - Table

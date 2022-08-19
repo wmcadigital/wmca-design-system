@@ -4,10 +4,21 @@
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
 {% block content %}
+<h2>Page contents</h2>
 {{
   compExample([
     wmcadsPageContents({
       example: true
+    })
+  ])  
+}}
+
+<h2>Page contents with sections</h2>
+{{
+  compExample([
+    wmcadsPageContents({
+      example: false,
+      sections: true
     })
   ])  
 }}

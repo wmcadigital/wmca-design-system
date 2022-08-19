@@ -1,5 +1,5 @@
 const pageContents = () => {
-  const contents = document.querySelector('.wmcads-page-contents');
+  const contents = document.querySelector('.wmcads-dynamic-page-contents');
 
   if (contents != null) {
     const headings = document.querySelectorAll('main h2');

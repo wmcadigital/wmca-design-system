@@ -136,24 +136,92 @@
     })
   ])
 }}
-{# Dark background variant #}
-<h3>Dark background variant</h3>
+<br><br>
+
+{# cta buttons #}
+<h2>Call to action buttons</h2>
+
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as cta -%}
 {{
   compExample([
-    secondary({
-      classNames: "wmcads-btn--secondary wmcads-btn--dark-bg",
-      text: "Secondary dark bg button"
+    cta({
+      classNames: "wmcads-btn--cta",
+      text: "Secondary button"
     }),
-    secondary({
-      classNames: "wmcads-btn--secondary wmcads-btn--dark-bg wmcads-is--active",
-      text: "Secondary dark bg active button"
+    cta({
+      classNames: "wmcads-btn--cta wmcads-is--active",
+      text: "Secondary active button"
+    }),
+    cta({
+      classNames: "wmcads-btn--cta",
+      text: "Secondary disabled button",
+      disabled: true
+    }),
+    cta({
+      classNames: "wmcads-btn--cta",
+      text: "Secondary icon button",
+      iconRight: "general-chevron-right"
+    }),
+    cta({
+      classNames: "wmcads-btn--cta",
+      text: "Secondary icon disabled button",
+      iconRight: "general-chevron-right",
+      disabled: true
     })
   ])
 }}
-{# end: secondary buttons #}
 <br><br>
+{# start buttons #}
+<h2>Start buttons</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+  <li>Shows that the button starts a process or journey</li>
+</ul>
+{# When #}
+<h3>When to use it?</h3>
+<ul>
+  <li>When a button starts a process or journey</li>
+</ul>
+{# When not #}
+<h3>When not to use it?</h3>
+<ul>
+  <li>When a button is a destructive action</li>
+  <li>When a button is trying to attract the user's attention</li>
+  <li>When the button is inessential for continuing the user journey</li>
+</ul>
 
-
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as start -%}
+{{
+  compExample([
+    start({
+      classNames: "wmcads-btn--start",
+      text: "Start button"
+    }),
+    start({
+      classNames: "wmcads-btn--start wmcads-is--active",
+      text: "Start active button"
+    }),
+    start({
+      classNames: "wmcads-btn--start",
+      text: "Start disabled button",
+      disabled: true
+    }),
+    start({
+      classNames: "wmcads-btn--start",
+      text: "Start icon button",
+      iconRight: "general-chevron-right"
+    }),
+    start({
+      classNames: "wmcads-btn--start",
+      text: "Start icon disabled button",
+      iconRight: "general-chevron-right",
+      disabled: true
+    })
+  ])
+}}
+{# end: start buttons #}
+<br><br>
 {# destructive buttons #}
 <h2>Destructive buttons</h2>
 {# What #}
@@ -205,58 +273,6 @@
 }}
 {# end: destructive buttons #}
 <br><br>
-
-
-{# start buttons #}
-<h2>Start buttons</h2>
-{# What #}
-<h3>What does it do?</h3>
-<ul>
-  <li>Shows that the button starts a process or journey</li>
-</ul>
-{# When #}
-<h3>When to use it?</h3>
-<ul>
-  <li>When a button starts a process or journey</li>
-</ul>
-{# When not #}
-<h3>When not to use it?</h3>
-<ul>
-  <li>When a button is a destructive action</li>
-  <li>When a button is trying to attract the user's attention</li>
-  <li>When the button is inessential for continuing the user journey</li>
-</ul>
-
-{%- from "wmcads/components/button/_button.njk" import wmcadsButton as start -%}
-{{
-  compExample([
-    start({
-      classNames: "wmcads-btn--start",
-      text: "Start button"
-    }),
-    start({
-      classNames: "wmcads-btn--start wmcads-is--active",
-      text: "Start active button"
-    }),
-    start({
-      classNames: "wmcads-btn--start",
-      text: "Start disabled button",
-      disabled: true
-    }),
-    start({
-      classNames: "wmcads-btn--start",
-      text: "Start icon button",
-      iconRight: "general-chevron-right"
-    }),
-    start({
-      classNames: "wmcads-btn--start",
-      text: "Start icon disabled button",
-      iconRight: "general-chevron-right",
-      disabled: true
-    })
-  ])
-}}
-{# end: start buttons #}
 
 {# read more buttons #}
 <h2>Read more button</h2>

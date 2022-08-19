@@ -11,6 +11,7 @@
 
   &__list-item {
     display: inline-block;
+    margin-bottom: 0;
 
     // Put ">" before every list item other than first one
     &:not(:first-child)::before {
@@ -18,7 +19,7 @@
       display: inline-block;
       height: 0.8em;
       margin: 0 $size-xs;
-      color: get-color(primary);
+      color: get-color(information);
     }
   }
 

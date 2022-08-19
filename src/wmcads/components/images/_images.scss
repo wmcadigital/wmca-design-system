@@ -1,0 +1,22 @@
+.wmcads-image {
+  &__hex {
+    display: inline-flex;
+    height: 300px;
+
+    img {
+      display: block;
+      width: 100%;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: 100%;
+      mask-image: url("../img/mask/hexagon.svg");
+      mask-mode: alpha;
+    }
+  }
+
+  &__summary {
+    margin-bottom: $size-lg;
+    padding: $size-sm;
+    background: $white;
+  }
+}

@@ -20,6 +20,8 @@
   "location-arrow",
   "minimise",
   "paperclip",
+  "pdf",
+  "html",
   "search",
   "success",
   "swap",
@@ -30,12 +32,29 @@
 
 {% set iconSocial = [
   "facebook",
+  "facebook-hex",
   "twitter",
+  "twitter-hex",
   "instagram",
+  "instagram-hex",
   "linkedin",
+  "linkedin-hex",
   "youtube",
+  "youtube-hex",
   "email"
 ] %}
+
+{% set iconPortfolio = [
+  "culture-and-digital",
+  "economy",
+  "environment",
+  "housing-and-land",
+  "inclusive-communities",
+  "skills",
+  "transport",
+  "wellbeing"
+] %}
+
 
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 
@@ -130,6 +149,21 @@
         })
       }}
       <p>{{ 'general-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{# Portfolios #}
+<h3>Portfolios</h3>
+<div class="wmcads-grid website-icons">
+  {% for icon in iconPortfolio %}
+    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'portfolio-' + icon
+        })
+      }}
+      <p>{{ 'portfolio-' + icon }}</p>
     </div>
   {% endfor %}
 </div>
