@@ -105,7 +105,6 @@ const headerJs = () => {
     // handle setting the active class on menu and list items
     const setMenuActive = (element, active = true, onCloseFocusElement) => {
       if (active) {
-        console.log(element);
         menu.classList.add('active');
         clearActiveListItems();
         // add active class to current item

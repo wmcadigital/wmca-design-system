@@ -36,24 +36,6 @@
     }}
     {# header #}
 
-    {# header #}
-    {# {% from "wmcads/patterns/header/_header.njk" import wmcadsHeader %}
-    {{
-      wmcadsHeader ({
-        id: "mega-menu",
-        navItems: templateNavItems,
-        banner: true,
-        linkTopLevel: true,
-        search: true,
-        template: true,
-        breadcrumbs: {
-          section: section,
-          pageTitle: pageTitle
-        }
-      })
-    }} #}
-    {# header #}
-
     {# main #}
     <main class="wmcads-container--main {% if(params.tempCampaign) %} wmcads-m-r-lg {% endif %}">
       {% block body %}{% endblock %}
