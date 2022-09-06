@@ -172,6 +172,7 @@
   &__social-media {
     display: flex;
     padding: 0;
+    flex-wrap: wrap;
 
     li {
       display: block;
