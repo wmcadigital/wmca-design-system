@@ -28,6 +28,30 @@ const footerJs = () => {
           toggleActive = !toggleActive;
           handleToggle();
         });
+
+        // if tab is used automaticaly open collapse headings
+        const handleKeydown = (e, key) => {
+          e.stopPropagation();
+          if (key === 9) {
+            const collapseToggleButton = document.querySelectorAll('.wmcads-collapse-heading');
+            const handleToggleButton = () => {
+              collapseToggleButton[0].setAttribute('aria-expanded', 'true');
+              collapseToggleButton[1].setAttribute('aria-expanded', 'true');
+              panel.style.maxHeight = `${panel.scrollHeight}px`;
+            };
+
+            handleToggleButton();
+          }
+        };
+
+        // if tab is used open menu
+        const collapseButton = document.querySelectorAll('.wmcads-footer__collapse-button');
+
+        for (const i of collapseButton) {
+          i.addEventListener('keydown', e => {
+            handleKeydown(e, e.keyCode);
+          });
+        }
       });
     }
   };

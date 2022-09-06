@@ -17,6 +17,11 @@
     }
   }
 
+  button {
+    background: none;
+    border: 0;
+  }
+
   // App specific footer styles
   &--mobile-app {
     display: none;
