@@ -8,9 +8,9 @@
   }
 
   &__copy {
-    max-width: 100%;
     position: relative;
     z-index: 999;
+    max-width: 100%;
 
     h1 {
       margin-bottom: $size-md;
