@@ -8,6 +8,8 @@
   }
 
   &__copy {
+    position: relative;
+    z-index: 999;
     max-width: 100%;
 
     h1 {
