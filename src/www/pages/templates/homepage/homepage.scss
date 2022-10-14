@@ -45,18 +45,4 @@
     }
   }
 
-  .social {
-    h2 {
-      @media screen and (max-width: $breakpoint-sm) {
-        padding: 0;
-      }
-    }
-
-    h3 {
-      @media screen and (max-width: $breakpoint-sm) {
-        height: initial;
-        padding: 0;
-      }
-    }
-  }
 }

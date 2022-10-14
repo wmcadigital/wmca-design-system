@@ -78,7 +78,7 @@ const manageEnv = env => {
     smartypants: false
   });
 
-  markdown.register(env, marked);
+  markdown.register(env, marked.parse);
 };
 
 // Build nunjucks templates with compiled data above
