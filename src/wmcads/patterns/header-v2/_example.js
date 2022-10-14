@@ -146,19 +146,28 @@ const headerJs = () => {
           }
         });
 
+        const showSearch = () => {
+          mobileMenuIsOpen.search = !mobileMenuIsOpen.search;
+          if (mobileMenuIsOpen.search) {
+            mobileMenuIsOpen.menu = false;
+            headerEl.classList.remove(
+              'wmcads-header--mega-menu-open',
+              'wmcads-header--mega-menu-submenu-open'
+            );
+            document.querySelector('html').classList.remove('mobile-menu-open');
+            headerEl.classList.add('wmcads-header--search-open');
+          } else {
+            headerEl.classList.remove('wmcads-header--search-open');
+          }
+        };
+
         if (searchBtn) {
           searchBtn.addEventListener('click', () => {
-            mobileMenuIsOpen.search = !mobileMenuIsOpen.search;
-            if (mobileMenuIsOpen.search) {
-              mobileMenuIsOpen.menu = false;
-              headerEl.classList.remove(
-                'wmcads-header--mega-menu-open',
-                'wmcads-header--mega-menu-submenu-open'
-              );
-              document.querySelector('html').classList.remove('mobile-menu-open');
-              headerEl.classList.add('wmcads-header--search-open');
-            } else {
-              headerEl.classList.remove('wmcads-header--search-open');
+            showSearch();
+          });
+          searchBtn.addEventListener('keyup', event => {
+            if (event.key === 'Enter') {
+              showSearch();
             }
           });
         }
