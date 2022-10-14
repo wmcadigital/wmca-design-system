@@ -146,19 +146,28 @@ const headerJs = () => {
           }
         });
 
+        const showSearch = () => {
+          mobileMenuIsOpen.search = !mobileMenuIsOpen.search;
+          if (mobileMenuIsOpen.search) {
+            mobileMenuIsOpen.menu = false;
+            headerEl.classList.remove(
+              'wmcads-header--mega-menu-open',
+              'wmcads-header--mega-menu-submenu-open'
+            );
+            document.querySelector('html').classList.remove('mobile-menu-open');
+            headerEl.classList.add('wmcads-header--search-open');
+          } else {
+            headerEl.classList.remove('wmcads-header--search-open');
+          }
+        };
+
         if (searchBtn) {
           searchBtn.addEventListener('click', () => {
-            mobileMenuIsOpen.search = !mobileMenuIsOpen.search;
-            if (mobileMenuIsOpen.search) {
-              mobileMenuIsOpen.menu = false;
-              headerEl.classList.remove(
-                'wmcads-header--mega-menu-open',
-                'wmcads-header--mega-menu-submenu-open'
-              );
-              document.querySelector('html').classList.remove('mobile-menu-open');
-              headerEl.classList.add('wmcads-header--search-open');
-            } else {
-              headerEl.classList.remove('wmcads-header--search-open');
+            showSearch();
+          });
+          searchBtn.addEventListener('keyup', event => {
+            if (event.key === 'Enter') {
+              showSearch();
             }
           });
         }
@@ -251,28 +260,32 @@ const headerJs = () => {
 
       const handleKeydown = (e, key) => {
         e.stopPropagation();
-        // if key pressed is enter, space bar or down arrow
-        if (key === 13 || key === 32 || key === 40) {
-          // enter
-          // check if link exists
-          if (key === 13) {
-            if (!topLevelLink.tagName === 'a' || !topLevelLink.getAttribute('href')) {
+        // enable keyboard navigation only when search input is not active
+        const searchInput = document.querySelector('.wmcads-search-bar__input');
+        if (searchInput !== document.activeElement) {
+          // if key pressed is enter, space bar or down arrow
+          if (key === 13 || key === 32 || key === 40) {
+            // enter
+            // check if link exists
+            if (key === 13) {
+              if (!topLevelLink.tagName === 'a' || !topLevelLink.getAttribute('href')) {
+                openSubMenu(e);
+              }
+            } else {
               openSubMenu(e);
             }
-          } else {
-            openSubMenu(e);
+          } else if (key === 37) {
+            // left arrow
+            const prevLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'prev');
+            if (prevLink) prevLink.focus();
+          } else if (key === 39) {
+            // right arrow
+            const nextLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'next');
+            if (nextLink) nextLink.focus();
+          } else if (key === 27) {
+            // if escape pressed
+            setMenuActive(topLevelListItem, false, topLevelLink);
           }
-        } else if (key === 37) {
-          // left arrow
-          const prevLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'prev');
-          if (prevLink) prevLink.focus();
-        } else if (key === 39) {
-          // right arrow
-          const nextLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'next');
-          if (nextLink) nextLink.focus();
-        } else if (key === 27) {
-          // if escape pressed
-          setMenuActive(topLevelListItem, false, topLevelLink);
         }
       };
 
