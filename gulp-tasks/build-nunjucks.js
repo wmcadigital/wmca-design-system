@@ -10,7 +10,7 @@ const beautifyJS = require('js-beautify');
 const fs = require('fs');
 const markdown = require('nunjucks-markdown');
 const marked = require('marked');
-const paths = require('./paths.js');
+const paths = require('./paths');
 const { packageJson, build } = require('./utils');
 // Check for upcoming version number in node env (will be set during release workflow)
 const versionNumber = process.env.VERSION_NUMBER || packageJson.version;
