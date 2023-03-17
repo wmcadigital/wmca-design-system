@@ -1,0 +1,110 @@
+.wmcads-page-header {
+  display: block;
+  min-height: 300px;
+  color: $white;
+  background: $black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: greyscale(100%);
+  filter: grayscale(100%);
+
+  &__home {
+    min-height: 420px;
+
+    .wmcads-page-header {
+      &-box {
+        width: 75%;
+        background-color: get-color(primary);
+
+        @media all and (max-width: $breakpoint-md) {
+          width: 85%;
+        }
+
+        h1 {
+          color: $white;
+
+          @media all and (max-width: 400px) {
+            font-size: 2rem;
+          }
+        }
+    }
+
+      &-container {
+        min-height: 420px;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  &__large {
+    min-height: 600px;
+    @media screen and (max-width: $breakpoint-md) {
+      min-height: 300px;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+  }
+
+  &-container {
+    display: flex;
+    min-height: 300px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &-box {
+    height: fit-content;
+    padding: 5px 10px;
+    background: $white;
+    align-self: center;
+
+    h1 {
+      margin: 0;
+      padding: 15px;
+    }
+
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    margin: 8px 0 0 8px;
+    background: $white;
+    fill: get-color(secondary);
+  }
+
+}
+
+@media (min-width: 400px) {
+  .wmcads-page-header {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-box {
+      top: 120px;
+      left: 0;
+      height: auto;
+
+      &__home {
+        top: 110px;
+      }
+    }
+
+    &__icon {
+      position: static;
+    }
+  }
+}

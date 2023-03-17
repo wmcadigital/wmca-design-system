@@ -1,0 +1,37 @@
+// Included the ol tag too incase dev forgets to add .wmcads-unordered-list class.
+// The ul:not([class*="wmcads-"]) line makes sure we don't target any wmcads components that are using the a tag such as the breadcrumbs
+
+.wmcads-unordered-list,
+.wmcads-html ul:not([class*="wmcads-"]) {
+  list-style: none;
+  padding-inline-start: $size-lg;
+
+  a,
+  .wmcads-link {
+    display: inline;
+    font-family: $x-font-family-bold;
+  }
+
+  li {
+    position: relative;
+
+    &:before {
+      content: "●";
+      position: absolute;
+      left: -1.5rem;
+      color: get-color(secondary);
+    }
+  }
+
+  ul:not([class*="wmcads-"]),
+  ol {
+    margin-top: $size-md;
+    list-style: none;
+    padding-inline-start: $size-lg;
+
+    li:before {
+      content: "–";
+      color: get-color(secondary);
+    }
+  }
+}

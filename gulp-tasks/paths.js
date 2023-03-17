@@ -9,6 +9,7 @@ module.exports = {
     src: ['src/**/*.scss'], // src of styles to watch
     minifySrc: [
       'src/wmcads/assets/sass/wmcads.scss',
+      'src/wmcads/assets/sass/wmcads-dark.scss', // dark theme sheet
       'src/www/wmcads-website.scss',
       'src/www/pages/templates/templates.scss',
       'src/wmcads/assets/sass/wmcads-grid/grid.scss',

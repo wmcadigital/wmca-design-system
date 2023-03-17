@@ -48,6 +48,10 @@ $header-height-mobile: 4rem;
   background-color: get-color(secondary);
   text-align: left;
 
+  &-grey {
+    background-color: get-color(primary);
+  }
+
   // Skip link styling
   &__skip-link {
     display: block;
@@ -91,11 +95,7 @@ $header-height-mobile: 4rem;
     max-width: 165px;
     height: 34px;
     float: left;
-    filter: none;
-
-    &-grey {
-      filter: grayscale(100);
-    }
+    filter: grayscale(100);
   }
 
   // To vertical align the logo's and nav
@@ -535,7 +535,7 @@ $header-height-mobile: 4rem;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: get-color(secondary);
+      background-color: get-color(primary);
     }
 
     // page overlay for when mega menu is open
@@ -586,7 +586,8 @@ $header-height-mobile: 4rem;
 
       &:hover,
       &:focus {
-        background-color: get-color(primary);
+        color: get-color(text);
+        background-color: $white;
       }
     }
 
