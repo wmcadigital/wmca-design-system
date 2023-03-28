@@ -20,29 +20,4 @@
       margin: 0 0 20px 0;
     }
   }
-
-  .news {
-    .wmcads-col-md-12-24 {
-      padding-right: $size-lg;
-      @media screen and (max-width: $breakpoint-md) {
-        margin-bottom: $size-lg;
-        padding-right: 0;
-      }
-    }
-
-    .wmcads-col-sm-1-2:nth-child(2) {
-      padding-right: $size-md;
-      @media screen and (max-width: $breakpoint-md) {
-        padding-right: 0;
-      }
-    }
-
-    .wmcads-col-sm-1-2:nth-child(3) {
-      padding-left: $size-md;
-      @media screen and (max-width: $breakpoint-md) {
-        padding-left: 0;
-      }
-    }
-  }
-
 }

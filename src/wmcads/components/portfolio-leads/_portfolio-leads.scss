@@ -1,13 +1,11 @@
 .wmcads-portfolio-leads {
   display: block;
-  max-width: 374px;
   padding: 15px;
   border-bottom: 5px solid get-color(primary);
   background: $white;
 
   img {
     display: inline-block;
-    max-height: 100px;
     object-fit: contain;
     object-position: top;
   }
