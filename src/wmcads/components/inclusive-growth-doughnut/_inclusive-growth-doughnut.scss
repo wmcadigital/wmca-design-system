@@ -1,0 +1,135 @@
+.wmcads-ig-doughnut {
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+
+  &-preload {
+    display: none;
+  }
+
+  &-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-fundamentals {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    width: 13%;
+    height: 13%;
+    transition: ease-in-out 0.5;
+    background-size: contain;
+  }
+
+  &-framework {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-inclusive-growth-framework.svg") no-repeat;
+    background-size: contain;
+  }
+
+  &-climate-resilience {
+    top: 10%;
+    left: 35%;
+    width: 27%;
+    height: 5%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-climate-resilience.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-inclusive-economy {
+    top: 30%;
+    left: 50%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-inclusive-economy.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-power-and-participation {
+    top: 40%;
+    left: 60%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-power-and-participation.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-affordable-and-safe-places {
+    top: 53%;
+    left: 55%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-affordable-and-safe-places.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-connected-communities {
+    top: 58%;
+    left: 44%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-connected-communities.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-education-and-learning {
+    top: 53%;
+    left: 33%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-education-and-learning.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-health-and-wellbeing {
+    top: 40%;
+    left: 28%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-health-and-wellbeing.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-equality {
+    top: 30%;
+    left: 37%;
+
+    &:hover ~ .wmcads-ig-doughnut-framework {
+      width: 100%;
+      height: 100%;
+      background: url("https://cdnpremium.blob.core.windows.net/cdn/wmcaassets/img/igDoughnut/igf-equality.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+}
