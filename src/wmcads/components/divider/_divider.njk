@@ -1,6 +1,6 @@
 {% macro wmcadsDivider(params) %} 
 {% set class = " " + params.class if params.class else "wmcads-divider-primary" %}
 
-<hr{% if(params.class) %} class="wmcads-divider-{{params.class}}"{% endif %} aria-hidden="true">
+<hr{% if(params.class) %} class="wmcads-divider-{{params.class}} {% if(params.half) %}wmcads-divider-half{% endif %}"{% endif %} aria-hidden="true">
 
 {% endmacro %}
