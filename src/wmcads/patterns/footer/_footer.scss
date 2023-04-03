@@ -1,7 +1,7 @@
 // footer
 .wmcads-footer {
   padding: $size-lg;
-  color: $white;
+  color: get-color(help);
   background-color: get-color(secondary);
   box-shadow: 0 100vh 0 100vh get-color(secondary);
 
@@ -10,7 +10,7 @@
   }
 
   &__link.wmcads-link {
-    color: $white;
+    color: get-color(help);
 
     @media screen and (min-width: $breakpoint-lg) {
       float: right;
@@ -38,7 +38,7 @@
     .wmcads-btn {
       width: 100%;
       color: get-color(primary);
-      background-color: $white;
+      background-color: get-color(help);
     }
 
     .wmcads-footer__link {
@@ -72,7 +72,7 @@
     margin-bottom: $size-md;
     padding-bottom: $size-md;
     border-bottom: 1px solid get-color(secondary, 70);
-    color: $white;
+    color: get-color(help);
 
     @media screen and (max-width: $breakpoint-md - 1) {
       margin-bottom: $size-md;
@@ -192,7 +192,7 @@
       svg {
         width: 3rem;
         height: 3rem;
-        fill: $white;
+        fill: get-color(help);
       }
     }
   }
@@ -235,18 +235,18 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
     padding-left: $size-md;
     overflow: hidden;
     transition: $collapse-transition;
-    border-left: 1px solid $white;
+    border-left: 1px solid get-color(help);
   }
 }
 
 // Text highlighting color
 .wmcads-footer *::-moz-selection {
   // Code for Firefox
-  color: $white;
+  color: get-color(help);
   background: get-color(secondary);
 }
 
 .wmcads-footer *::selection {
-  color: $white;
+  color: get-color(help);
   background: get-color(secondary);
 }
