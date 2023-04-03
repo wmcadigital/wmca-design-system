@@ -19,7 +19,7 @@ function minifyJS(jsFile) {
       })
     )
     .pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn))
-    /*.pipe(
+    .pipe(
       webpack({
         config: {
           module: {
@@ -50,7 +50,7 @@ function minifyJS(jsFile) {
           output: { filename: jsFile.minName } // output name of the bundled js
         }
       })
-    )*/
+    )
     .pipe(plugins.plumber.stop())
     .pipe(dest(paths.scripts.output)); // Spit out concat + minified file in ./build/
 }
