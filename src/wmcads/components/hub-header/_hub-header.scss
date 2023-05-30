@@ -44,6 +44,7 @@
       content: "";
       display: inline-block;
       position: absolute;
+      z-index: 10;
       top: 33px;
       right: -92px;
       width: 164px;
@@ -61,6 +62,7 @@
 
   &-text-pane {
     position: absolute;
+    z-index: 15;
     left: calc((100% - 955px) / 2);
     max-width: 468px;
     overflow: auto;

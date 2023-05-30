@@ -3,7 +3,7 @@
   position: relative;
   min-height: 230px;
   color: $white;
-  background: get-color(secondary);
+  background: get-color(primary);
 
   @media (max-width: $breakpoint-md) {
     display: block;
@@ -22,10 +22,10 @@
   }
 
   .banner {
-    &-grey {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-    }
+    //&-grey {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    //}
   }
 
   &-left-pane {
@@ -50,7 +50,7 @@
       margin-right: 10px;
       transform: rotate(45deg);
       border-radius: 0 120px 0 0;
-      background-color: get-color(secondary);
+      background-color: get-color(primary);
 
       @media (max-width: $breakpoint-md) {
         display: none;

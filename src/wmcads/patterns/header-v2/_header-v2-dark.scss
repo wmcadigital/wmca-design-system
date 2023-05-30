@@ -45,12 +45,12 @@ $header-height-mobile: 4rem;
 .wmcads-header {
   display: block;
   padding: $size-md 0;
-  background-color: get-color(secondary);
+  background-color: get-color(primary);
   text-align: left;
 
-  &-grey {
-    background-color: get-color(primary);
-  }
+  //&-grey {
+  //  background-color: get-color(primary);
+  //}
 
   // Skip link styling
   &__skip-link {
@@ -95,7 +95,6 @@ $header-height-mobile: 4rem;
     max-width: 165px;
     height: 34px;
     float: left;
-    filter: grayscale(100);
   }
 
   // To vertical align the logo's and nav
@@ -730,7 +729,7 @@ $header-height-mobile: 4rem;
 
   .wmcads-link {
     &__chevron {
-      fill: get-color(secondary);
+      fill: get-color(primary);
     }
   }
 
@@ -749,7 +748,7 @@ $header-height-mobile: 4rem;
     }
 
     [class*="wmcads-"].wmcads-search-bar__btn {
-      background-color: get-color(secondary);
+      background-color: get-color(primary);
     }
 
     [class*="wmcads-"].wmcads-link {
@@ -801,7 +800,7 @@ $header-height-mobile: 4rem;
   display: flex;
   height: 50vh;
   min-height: 400px;
-  background-color: get-color(secondary, 80);
+  background-color: get-color(primary, 80);
   justify-content: center;
   align-items: center;
 }

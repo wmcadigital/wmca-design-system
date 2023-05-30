@@ -12,6 +12,7 @@ module.exports = {
       'src/wmcads/assets/sass/wmcads-dark.scss', // dark theme sheet
       'src/www/wmcads-website.scss',
       'src/www/pages/templates/templates.scss',
+      'src/www/pages/templates/templates-dark.scss',
       'src/wmcads/assets/sass/wmcads-grid/grid.scss',
       'src/wmcads/assets/sass/split/buttons.scss',
       'src/wmcads/assets/sass/split/accordion.scss',

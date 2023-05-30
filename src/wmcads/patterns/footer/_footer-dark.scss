@@ -1,21 +1,21 @@
 // footer
 .wmcads-footer {
   padding: $size-lg;
-  color: get-color(help);
-  background-color: get-color(secondary);
-  box-shadow: 0 100vh 0 100vh get-color(secondary);
+  color: get-color(background);
+  background-color: get-color(primary);
+  box-shadow: 0 100vh 0 100vh get-color(primary);
 
-  &-grey {
-    background-color: get-color(primary);
-    box-shadow: 0 100vh 0 100vh get-color(primary);
-  }
+  //&-grey {
+  //  background-color: get-color(primary);
+  //  box-shadow: 0 100vh 0 100vh get-color(primary);
+  //}
 
   * {
     color: inherit;
   }
 
   &__link.wmcads-link {
-    color: get-color(help);
+    color: get-color(background);
 
     @media screen and (min-width: $breakpoint-lg) {
       float: right;
@@ -43,7 +43,7 @@
     .wmcads-btn {
       width: 100%;
       color: get-color(primary);
-      background-color: get-color(help);
+      background-color: get-color(background);
     }
 
     .wmcads-footer__link {
@@ -64,7 +64,7 @@
 
       &:not(:last-child) {
         margin-bottom: $size-xsm;
-        border-bottom: 1px solid get-color(help, 70);
+        border-bottom: 1px solid get-color(background, 70);
       }
 
       p {
@@ -76,8 +76,8 @@
   .wmcads-footer__heading {
     margin-bottom: $size-md;
     padding-bottom: $size-md;
-    border-bottom: 1px solid get-color(help, 70);
-    color: get-color(help);
+    border-bottom: 1px solid get-color(background, 70);
+    color: get-color(background);
 
     @media screen and (max-width: $breakpoint-md - 1) {
       margin-bottom: $size-md;
@@ -140,7 +140,7 @@
     }
     margin-top: $size-xsm;
     padding-top: $size-md;
-    border-top: 1px solid get-color(help, 70);
+    border-top: 1px solid get-color(background, 70);
 
     .wmcads-footer__link,
     .wmcads-footer__copyright {
@@ -197,7 +197,7 @@
       svg {
         width: 3rem;
         height: 3rem;
-        fill: get-color(help);
+        fill: get-color(background);
       }
     }
   }
@@ -240,7 +240,7 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
     padding-left: $size-md;
     overflow: hidden;
     transition: $collapse-transition;
-    border-left: 1px solid get-color(help);
+    border-left: 1px solid get-color(background);
   }
 }
 
@@ -248,10 +248,10 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
 .wmcads-footer *::-moz-selection {
   // Code for Firefox
   color: get-color(text);
-  background: get-color(help);
+  background: get-color(background);
 }
 
 .wmcads-footer *::selection {
   color: get-color(text);
-  background: get-color(help);
+  background: get-color(background);
 }
