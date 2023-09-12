@@ -1,0 +1,14 @@
+{
+    "globalPrefix": "token",
+    "transforms": [
+      {
+        "from": "src/wmcads/assets/tokens/ds",
+        "to": [
+          {
+            "as": "scss",
+            "to": "src/wmcads/assets/tokens/scss"
+          } 
+        ]
+      }
+    ]
+  }
