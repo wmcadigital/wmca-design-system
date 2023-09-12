@@ -33,7 +33,7 @@
 		"$type": "color"
 	  },
 	  "off-white": {
-		"$value": "#F5F5F5",
+		"$value": "#f5f5f5",
 		"$type": "color",
 		"$description": "Date picker weekends"
 	  },
@@ -43,12 +43,12 @@
 		"$description": "Rules"
 	  },
 	  "mid-grey": {
-		"$value": "#6E7172",
+		"$value": "#6e7172",
 		"$type": "color",
 		"$description": "Date picker text"
 	  },
 	  "dark-grey": {
-		"$value": "#54565B",
+		"$value": "#54565b",
 		"$type": "color",
 		"$description": "Logo text"
 	  },
@@ -57,19 +57,19 @@
 		"$type": "color"
 	  },
 	  "blue": {
-		"$value": "#2C498A",
+		"$value": "#2c498a",
 		"$type": "color",
 		"$description": "Park and Ride"
 	  }
 	},
 	"global-tints": {
 	  "green": {
-		"$value": "#004E2A",
+		"$value": "#004e2a",
 		"$type": "color",
 		"$description": "Start hover"
 	  },
 	  "dark-green": {
-		"$value": "#00381E",
+		"$value": "#00381e",
 		"$type": "color",
 		"$description": "Start active"
 	  },
@@ -79,7 +79,7 @@
 		"$description": "Destructive hover"
 	  },
 	  "dark-red": {
-		"$value": "#6A1B0E",
+		"$value": "#6a1b0e",
 		"$type": "color",
 		"$description": "Destructive active"
 	  }
@@ -113,17 +113,17 @@
 	},
 	"tfwm": {
 	  "purple": {
-		"$value": "#3C1053",
+		"$value": "#3c1053",
 		"$type": "color",
 		"$description": "Primary"
 	  },
 	  "lilac": {
-		"$value": "#9D5BAF",
+		"$value": "#9d5baf",
 		"$type": "color",
 		"$description": "Secondary"
 	  },
 	  "blue": {
-		"$value": "#1D7BBF",
+		"$value": "#1d7bbf",
 		"$type": "color",
 		"$description": "CTA"
 	  },
@@ -133,19 +133,19 @@
 		"$description": "Text"
 	  },
 	  "off-white": {
-		"$value": "#F3F2F1",
+		"$value": "#f3f2f1",
 		"$type": "color",
 		"$description": "Background"
 	  }
 	},
 	"tfwm-tints": {
 	  "purple": {
-		"$value": "#5C236E",
+		"$value": "#5c236e",
 		"$type": "color",
 		"$description": "Primary hover"
 	  },
 	  "dark-purple": {
-		"$value": "#42194F",
+		"$value": "#42194f",
 		"$type": "color",
 		"$description": "Primary active"
 	  },
@@ -155,7 +155,7 @@
 		"$description": "Secondary hover"
 	  },
 	  "purple-50": {
-		"$value": "#CEADD8",
+		"$value": "#ceadd8",
 		"$type": "color",
 		"$description": "Secondary active"
 	  },
@@ -165,7 +165,7 @@
 		"$description": "CTA hover"
 	  },
 	  "dark-teal": {
-		"$value": "#0F3F62",
+		"$value": "#0f3f62",
 		"$type": "color",
 		"$description": "CTA active"
 	  }
@@ -216,17 +216,17 @@
 	},
 	"wmca": {
 	  "orange": {
-		"$value": "#C05701",
+		"$value": "#c05701",
 		"$type": "color",
 		"$description": "Primary"
 	  },
 	  "grey": {
-		"$value": "#231F20",
+		"$value": "#231f20",
 		"$type": "color",
 		"$description": "Secondary"
 	  },
 	  "blue": {
-		"$value": "#007Da8",
+		"$value": "#007da8",
 		"$type": "color",
 		"$description": "CTA"
 	  },
@@ -243,22 +243,22 @@
 	},
 	"wmca-tints": {
 	  "brown": {
-		"$value": "#843B00",
+		"$value": "#843b00",
 		"$type": "color",
 		"$description": "Primary hover"
 	  },
 	  "dark-brown": {
-		"$value": "#5F2B00",
+		"$value": "#5f2b00",
 		"$type": "color",
 		"$description": "Primary active"
 	  },
 	  "orange-30": {
-		"$value": "#F8F0E5",
+		"$value": "#f8f0e5",
 		"$type": "color",
 		"$description": "Secondary hover"
 	  },
 	  "orange-50": {
-		"$value": "#F2E1CC",
+		"$value": "#f2e1cc",
 		"$type": "color",
 		"$description": "Secondary active"
 	  },
@@ -268,14 +268,14 @@
 		"$description": "CTA hover"
 	  },
 	  "dark-teal": {
-		"$value": "#003E53",
+		"$value": "#003e53",
 		"$type": "color",
 		"$description": "CTA active"
 	  }
 	},
 	"wmca-brand": {
 	  "grey": {
-		"$value": "#54565B",
+		"$value": "#54565b",
 		"$type": "color",
 		"$description": "WM Gunmetal grey"
 	  },
@@ -285,7 +285,7 @@
 		"$description": "WM Furnace orange"
 	  },
 	  "blue": {
-		"$value": "#008FBF",
+		"$value": "#008fbf",
 		"$type": "color",
 		"$description": "WM Blue"
 	  },
@@ -295,12 +295,12 @@
 		"$description": "WM Green"
 	  },
 	  "purple": {
-		"$value": "#94368D",
+		"$value": "#94368d",
 		"$type": "color",
 		"$description": "WM Purple"
 	  },
 	  "red": {
-		"$value": "#D60037",
+		"$value": "#d60037",
 		"$type": "color",
 		"$description": "WM Red"
 	  }
