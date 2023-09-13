@@ -1,8 +1,8 @@
 .wmcads-search-result {
-  border-bottom: 1px solid get-color(text, 40);
+  border-bottom: 1px solid get-color(text, 40%);
 
   &__title {
-    color: get-color(cta, 10, dark);
+    color: get-color(cta, 10%, dark);
   }
 
   .wmcads-breadcrumb {

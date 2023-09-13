@@ -425,7 +425,7 @@ $header-height-mobile: 4rem;
         top: 0;
         left: 0;
         height: calc(100% - #{$size-sm});
-        border-left: 1px solid get-color(text, 80);
+        border-left: 1px solid get-color(text, 80%);
       }
     }
 
@@ -635,7 +635,7 @@ $header-height-mobile: 4rem;
       flex-grow: 0;
 
       &:not(:nth-child(4n)) {
-        border-right: 1px solid get-color(text, 80);
+        border-right: 1px solid get-color(text, 80%);
       }
     }
 
@@ -795,7 +795,7 @@ $header-height-mobile: 4rem;
   display: flex;
   height: 50vh;
   min-height: 400px;
-  background-color: get-color(secondary, 80);
+  background-color: get-color(secondary, 80%);
   justify-content: center;
   align-items: center;
 }

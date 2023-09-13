@@ -21,7 +21,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   cursor: pointer;
 
   &:hover {
-    background-color: get-color(primary, 30, dark);
+    background-color: get-color(primary, 30%, dark);
   }
 
   &:active,
@@ -29,7 +29,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   &:focus,
   &.wmcads-is--active {
     outline: none;
-    background-color: get-color(primary, 50, dark);
+    background-color: get-color(primary, 50%, dark);
     -webkit-appearance: none;
   }
 
@@ -53,7 +53,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     background-color: $white;
 
     &:hover {
-      background-color: get-color(primary, 90);
+      background-color: get-color(primary, 90%);
     }
 
     &:active,
@@ -63,7 +63,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &.wmcads-is--active {
-      background-color: get-color(primary, 80);
+      background-color: get-color(primary, 80%);
     }
   }
 
@@ -72,14 +72,14 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     background-color: get-color(primary);
 
     &:hover {
-      background-color: get-color(primary, 30, dark);
+      background-color: get-color(primary, 30%, dark);
     }
 
     &:active,
     &:target,
     &:focus,
     &.wmcads-is--active {
-      background-color: get-color(primary, 50, dark);
+      background-color: get-color(primary, 50%, dark);
     }
   }
 
@@ -94,7 +94,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &:hover {
-      background-color: get-color(primary, 90);
+      background-color: get-color(primary, 90%);
     }
 
     &:active,
@@ -104,7 +104,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &.wmcads-is--active {
-      background-color: get-color(primary, 75);
+      background-color: get-color(primary, 75%);
     }
 
     // Secondary (disabled)
@@ -124,14 +124,14 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     background-color: get-color(cta);
 
     &:hover {
-      background-color: get-color(cta, 30, dark);
+      background-color: get-color(cta, 30%, dark);
     }
 
     &:active,
     &:target,
     &:focus,
     &.wmcads-is--active {
-      background-color: get-color(cta, 50, dark);
+      background-color: get-color(cta, 50%, dark);
     }
   }
 
@@ -140,14 +140,14 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     background-color: get-color(error);
 
     &:hover {
-      background-color: get-color(error, 30, dark);
+      background-color: get-color(error, 30%, dark);
     }
 
     &:active,
     &:target,
     &:focus,
     &.wmcads-is--active {
-      background-color: get-color(error, 50, dark);
+      background-color: get-color(error, 50%, dark);
     }
   }
 
@@ -159,14 +159,14 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &:hover {
-      background-color: get-color(success, 30, dark);
+      background-color: get-color(success, 30%, dark);
     }
 
     &:active,
     &:target,
     &:focus,
     &.wmcads-is--active {
-      background-color: get-color(success, 50, dark);
+      background-color: get-color(success, 50%, dark);
     }
   }
 
@@ -198,7 +198,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     display: inline;
     padding: 0;
     border-radius: 0;
-    color: get-color(cta, 10, dark);
+    color: get-color(cta, 10%, dark);
     background: none;
     font-weight: bold;
     text-decoration: underline;

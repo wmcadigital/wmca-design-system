@@ -18,7 +18,7 @@
 
     // On mouse-over, add a grey background color
     &:hover .wmcads-fe-radios__checkmark {
-      background-color: get-color(secondary, 70);
+      background-color: get-color(secondary, 70%);
     }
   }
 
@@ -39,7 +39,7 @@
     opacity: 0;
 
     &:focus ~ .wmcads-fe-radios__checkmark {
-      background-color: get-color(secondary, 70);
+      background-color: get-color(secondary, 70%);
     }
 
     // Show the checkmark when checked

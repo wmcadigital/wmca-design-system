@@ -15,14 +15,14 @@
     }
 
     &:hover {
-      color: get-color(cta-active, 40, dark);
+      color: get-color(cta-active, 40%, dark);
     }
   }
 
   h1,
   h2,
   h3 {
-    color: get-color(cta, 10, dark);
+    color: get-color(cta, 10%, dark);
   }
 
   &--with-chevron {
@@ -86,7 +86,7 @@ a {
   }
 
   &:hover::after {
-    color: get-color(cta-active, 40, dark);
+    color: get-color(cta-active, 40%, dark);
   }
 }
 
