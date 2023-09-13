@@ -8,6 +8,7 @@ module.exports = {
   styles: {
     src: ['src/**/*.scss'], // src of styles to watch
     minifySrc: [
+      'src/wmcads/assets/sass/stds.scss',
       'src/wmcads/assets/sass/wmcads.scss',
       'src/www/wmcads-website.scss',
       'src/www/pages/templates/templates.scss',

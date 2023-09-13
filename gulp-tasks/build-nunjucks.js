@@ -1,3 +1,4 @@
+const fs = require('fs');
 const babel = require('@babel/standalone');
 const DOMPurify = require('dompurify');
 // Gulp requires
@@ -7,7 +8,6 @@ const beautify = require('js-beautify').html;
 const beautifyJS = require('js-beautify');
 
 // Local requires
-const fs = require('fs');
 const markdown = require('nunjucks-markdown');
 const marked = require('marked');
 const paths = require('./paths');

@@ -2,7 +2,7 @@
 const { src, dest } = require('gulp');
 
 // Local requires
-const paths = require('./paths.js');
+const paths = require('./paths');
 
 const movingOldCSS = () => {
   return src('src/wmcads/assets/old/css/wmcads-components.min.css').pipe(dest(paths.styles.output));
