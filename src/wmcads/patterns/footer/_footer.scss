@@ -59,7 +59,7 @@
 
       &:not(:last-child) {
         margin-bottom: $size-xsm;
-        border-bottom: 1px solid get-color(secondary, 70);
+        border-bottom: 1px solid get-color(secondary, 70%);
       }
 
       p {
@@ -71,7 +71,7 @@
   .wmcads-footer__heading {
     margin-bottom: $size-md;
     padding-bottom: $size-md;
-    border-bottom: 1px solid get-color(secondary, 70);
+    border-bottom: 1px solid get-color(secondary, 70%);
     color: $white;
 
     @media screen and (max-width: $breakpoint-md - 1) {
@@ -135,7 +135,7 @@
     }
     margin-top: $size-xsm;
     padding-top: $size-md;
-    border-top: 1px solid get-color(secondary, 70);
+    border-top: 1px solid get-color(secondary, 70%);
 
     .wmcads-footer__link,
     .wmcads-footer__copyright {

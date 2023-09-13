@@ -47,6 +47,7 @@ const footerJs = () => {
         // if tab is used open menu
         const collapseButton = document.querySelectorAll('.wmcads-footer__collapse-button');
 
+        // eslint-disable-next-line no-restricted-syntax
         for (const i of collapseButton) {
           i.addEventListener('keydown', e => {
             handleKeydown(e, e.keyCode);
