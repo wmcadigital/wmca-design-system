@@ -3,7 +3,7 @@
   <title>
   {# If homepage #}
   {% if section == "Home" %}
-    Home - West Midlands Combined Authority Design System
+    Home - {{pageTitle}}
   {% else %}
   {# Else any other pages #}
     {{ pageTitle | striptags}} - West Midlands Combined Authority Design System
@@ -24,7 +24,12 @@
   <meta name="theme-color" content="#3c1053">
 
   <!-- Website Styles -->
+  {% if ds == "wmca" %}
   <link rel="stylesheet" href="$*cdn/css/wmcads.min.css" />
+  {% endif %}
+  {% if ds == "st" %}
+  <link rel="stylesheet" href="$*cdn/css/stds.min.css" />
+  {% endif %}
 
   <!-- Highlight JS - display HTML blocks as coloured text -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/a11y-dark.min.css"/>

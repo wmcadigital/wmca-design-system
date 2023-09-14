@@ -1,36 +1,36 @@
-.wmcads-grid {
+.#{$ds}-grid {
   & > * {
     box-sizing: border-box;
   }
 
   // How to align child flex items of a grid
-  &.wmcads-grid--justify-between {
+  &.#{$ds}-grid--justify-between {
     justify-content: space-between;
   }
 
-  &.wmcads-grid--justify-around {
+  &.#{$ds}-grid--justify-around {
     justify-content: space-around;
   }
 
-  &.wmcads-grid--justify-end {
+  &.#{$ds}-grid--justify-end {
     justify-content: flex-end;
   }
 
-  &.wmcads-grid--justify-center {
+  &.#{$ds}-grid--justify-center {
     justify-content: center;
   }
 
-  &.wmcads-grid--justify-even {
+  &.#{$ds}-grid--justify-even {
     justify-content: space-evenly;
   }
 
-  &.wmcads-grid--align-center {
+  &.#{$ds}-grid--align-center {
     align-items: center;
   }
 }
 
 // ensures sticky footer
-.wmcads-body {
+.#{$ds}-body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -38,7 +38,7 @@
 }
 
 // Container sizes
-.wmcads-container {
+.#{$ds}-container {
   display: block;
   width: 100%;
   max-width: $breakpoint-lg;
@@ -55,7 +55,7 @@
 }
 
 //Text align
-.wmcads-text-align {
+.#{$ds}-text-align {
   &-left {
     text-align: left;
   }
@@ -70,7 +70,7 @@
 }
 
 // Floats
-.wmcads-float {
+.#{$ds}-float {
   &-left {
     float: left;
   }
@@ -117,7 +117,7 @@
 }
 
 body {
-  .wmcads {
+  .#{$ds} {
     // Generate all margin classes
     &-m {
       @include x-mar-pad("");
@@ -163,19 +163,19 @@ body {
 }
 
 // Show/hide on desktop devices only
-.wmcads-hide-mobile {
+.#{$ds}-hide-mobile {
   @media screen and (max-width: $breakpoint-md) {
     display: none !important;
   }
 }
 
-.wmcads-hide-desktop {
+.#{$ds}-hide-desktop {
   @media screen and (min-width: $breakpoint-md) {
     display: none !important;
   }
 }
 
-.wmcads-hide {
+.#{$ds}-hide {
   display: none !important;
 }
 

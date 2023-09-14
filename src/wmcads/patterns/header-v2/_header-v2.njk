@@ -36,6 +36,9 @@
         <a class="wmcads-header__logo-link" href="/" title="Transport for West Midlands Design System">
           <img class="wmcads-header__logo" alt="Transport for West Midlands logo" src="/img/logo.svg" />
         </a>
+          {% if ds == "wmca" %}
+            yes  
+          {% endif %}
       </div>
       {#- If with a title #}
       {% if params.withTitle %}

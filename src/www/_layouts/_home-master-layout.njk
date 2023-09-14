@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="wmcads-html">
+  <!-- Head -->
+  {% include "www/_partials/_head.njk" %}
+  <!-- end: Head -->
+
+  <body class="wmcads-body">
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and
+        security.
+      </p>
+    <![endif]-->
+
+    {# main #}
+    <main class="wmcads-container wmcads-container--main">
+      {% block body %}{% endblock %}
+    </main>
+    {# main #}
+
+    <!-- Scripts -->
+    {% include "www/_partials/_scripts.njk" %}
+    <!-- end: Scripts -->
+  </body>
+
+</html>

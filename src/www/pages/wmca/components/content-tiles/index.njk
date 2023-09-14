@@ -1,0 +1,129 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Content tiles (deprecated)" %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+{# Content tile small 1 #}
+{%- from "wmcads/components/content-tiles/normal/_normal.njk" import wmcadsContentTilesNormal -%}
+
+{# Content tile travel tips #}
+{%- from "wmcads/components/content-tiles/travel-tips/travel-tips.njk" import wmcadsContentTileTravelTips -%}
+
+{# Content tile travel updates #}
+{%- from "wmcads/components/content-tiles/travel-updates/travel-updates.njk" import wmcadsContentTileTravelUpdates -%}
+
+{# Content tile advice moving #}
+{%- from "wmcads/components/content-tiles/advice-moving/advice-moving.njk" import wmcadsContentTileAdviceMoving -%}
+
+
+<h2>Normal</h2>
+<h3>General </h3>
+{{
+  compExample([
+    wmcadsContentTilesNormal({
+      copy: '<p>See all major roadworks and events. These could affect your journey, plan ahead.</p>'
+    })
+  ])
+}}
+
+<h3>General with one link</h3>
+{{
+  compExample([
+    wmcadsContentTilesNormal({
+      classModifiers: 'wmcads-content-tile--with-one-link',
+      copy: '<p>See all major roadworks and events. These could affect your journey, plan ahead.</p>',
+      readMore: true
+    })
+  ])
+}}
+
+<h3>Yellow modifier</h3>
+{{
+  compExample([
+    wmcadsContentTilesNormal({
+      classModifiers: 'wmcads-content-tile--yellow wmcads-content-tile--with-one-link',
+      copy: '<p>See all major roadworks and events. These could affect your journey, plan ahead.</p>',
+      readMore: true
+    })
+  ])
+}}
+
+<h3>Major Works</h3>
+{{
+  compExample([
+    wmcadsContentTilesNormal({
+      classModifiers: 'wmcads-content-tile--with-one-link',
+      copy: '
+      <ul class="wmcads-content-tile__list">
+        <li><strong>Location:</strong> Birmingham city centre</li>
+        <li><strong>Lasts until:</strong> December 2019</li>
+      </ul>
+      ',
+      readMore: true
+    })
+  ])
+}}
+
+<h3>Iframe (map)</h3>
+{{
+  compExample([
+    wmcadsContentTilesNormal({
+      copy: '
+      <p>Consider using City Road and Dudley Road, past City Hospital to head into Birmingham city centre or connect with the ring road.</p>
+      <iframe width="100%" height="500" src="https://www.arcgis.com/apps/View/index.html?appid=1b6f79c50c81421d92da2bd1ccee27e8" frameborder="0" scrolling="no" ></iframe>
+      '
+    })
+  ])
+}}
+
+<h3>Nav</h3>
+{{
+  compExample([
+   wmcadsContentTilesNormal({
+    classModifiers: 'wmcads-content-tile--nav',
+    title: 'Related content',
+    smallTitle: true
+   })
+  ])
+}}
+
+<h3>Nav with legend</h3>
+{{
+  compExample([
+   wmcadsContentTilesNormal({
+    classModifiers: 'wmcads-content-tile--nav',
+    title: 'Related content',
+    smallTitle: true,
+    legend: 'Overview'
+   })
+  ])
+}}
+
+<h2>Content tile travel tips</h2>
+<h3>When to use it?</h3>
+<ul>
+  <li>Use it for travel tips only.</li>
+  <li>Keep your sentences short, max 40 words.</li>
+  <li>You can add and remove travel tips, but do notcreate more than 6 tips in order to make sure that content is accessible and easy to read.</li>
+</ul>
+{{
+  compExample([
+    wmcadsContentTileTravelTips()
+  ])
+}}
+
+<h2>Content tile travel updates</h2>
+{{
+  compExample([
+    wmcadsContentTileTravelUpdates()
+  ])
+}}
+
+<h2>Content tile advice to keep moving</h2>
+{{
+  compExample([
+    wmcadsContentTileAdviceMoving()
+  ])
+}}
+
+{% endblock %}

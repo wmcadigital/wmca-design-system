@@ -1,0 +1,12 @@
+{% extends "www/_layouts/_home-master-layout.njk" %}
+
+{% block body %}
+<br>
+<h1 id="wmcads-main-content">{{ pageTitle | safe}}</h1>
+<hr>
+<div class="wmcads-grid" >
+  <div class="wmcads-col-1">
+    {% block content %}{% endblock content %}
+  </div>
+</div>
+{% endblock body%}
