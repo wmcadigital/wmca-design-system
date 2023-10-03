@@ -1,14 +1,12 @@
 const cookies = () => {
-  const cookiesBanner = document.querySelector('header .wmcads-cookies-banner');
+  const cookiesBanner = document.querySelector('header .ds-cookies-banner');
 
   if (cookiesBanner) {
     const hideCookieBanner = () => {
       cookiesBanner.style.display = 'none';
     };
     const showCookieBanner = () => {
-      const codeExample = document.querySelector(
-        '.wmcads-website-code-example .wmcads-cookies-banner'
-      );
+      const codeExample = document.querySelector('.ds-website-code-example .ds-cookies-banner');
 
       cookiesBanner.style.display = 'block';
       if (codeExample) codeExample.style.display = 'block'; // Ensure the cookie banner in the component example stays visible even if the user has already accepted cookies
@@ -51,11 +49,11 @@ const cookies = () => {
     const getCookiePolicy = () => JSON.parse(getCookie('cookies-policy'));
 
     const updateCookiePreferences = () => {
-      if (document.querySelector('.wmcads-cookies-manager__preferences')) {
+      if (document.querySelector('.ds-cookies-manager__preferences')) {
         hideCookieBanner();
         const cookiesOptions = document
-          .querySelector('.wmcads-cookies-manager__preferences')
-          .querySelectorAll('.wmcads-fe-checkboxes__input');
+          .querySelector('.ds-cookies-manager__preferences')
+          .querySelectorAll('.ds-fe-checkboxes__input');
         const currentOptions = [
           getCookiePolicy().essential,
           getCookiePolicy().functional,
@@ -84,10 +82,10 @@ const cookies = () => {
     };
 
     const savePreferences = () => {
-      if (document.querySelector('.wmcads-cookies-manager__form')) {
+      if (document.querySelector('.ds-cookies-manager__form')) {
         const elements = document
-          .querySelector('.wmcads-cookies-manager__form')
-          .querySelectorAll('.wmcads-fe-checkboxes__input');
+          .querySelector('.ds-cookies-manager__form')
+          .querySelectorAll('.ds-fe-checkboxes__input');
         const selectedOptions = [];
         for (let i = 0; i < elements.length; i += 1) {
           selectedOptions[i] = elements.item(i).checked;
@@ -114,9 +112,7 @@ const cookies = () => {
     if (!isInIframe) document.addEventListener('DOMContentLoaded', cookiesScan);
 
     // When Accept all cookies button is triggered
-    const acceptAllCookiesBtn = document.querySelector(
-      '.wmcads-cookies-banner__accept-all-cookies'
-    );
+    const acceptAllCookiesBtn = document.querySelector('.ds-cookies-banner__accept-all-cookies');
 
     if (!isInIframe) {
       acceptAllCookiesBtn.addEventListener('click', acceptAllCookies);
@@ -129,7 +125,7 @@ const cookies = () => {
     }
 
     // When Safe Preferences button is triggered
-    const cookieForm = document.querySelector('.wmcads-cookies-manager__form');
+    const cookieForm = document.querySelector('.ds-cookies-manager__form');
     if (cookieForm) cookieForm.addEventListener('submit', savePreferences);
   }
 };

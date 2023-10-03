@@ -1,7 +1,7 @@
 {% macro wmcadsRadios(params) %}
 
 {# Set vars #}
-{% set class = ' wmcads-fe-radios--inline' if params.inline %}
+{% set class = ' ds-fe-radios--inline' if params.inline %}
 {% set text = params.text if params.text %}
 
 {# Imports #}
@@ -9,24 +9,24 @@
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {% from "wmcads/components/form-elements/question/_question.njk" import wmcadsQuestion %}
 
-<div class="wmcads-fe-group">
-  <fieldset class="wmcads-fe-fieldset">
-    <legend class="wmcads-fe-fieldset__legend">
+<div class="ds-fe-group">
+  <fieldset class="ds-fe-fieldset">
+    <legend class="ds-fe-fieldset__legend">
       {{ wmcadsQuestion({
           text: text
       }) | indent(6) | trim }}
     </legend>
-    <div class="wmcads-fe-radios{{class}}">
-      <span class="wmcads-fe-radios__desc">
+    <div class="ds-fe-radios{{class}}">
+      <span class="ds-fe-radios__desc">
         Select one option
       </span>
       {%- for i in range(1,4) %}
       {#- Set checked state on first item in loop #}
       {%- set isChecked = (' checked="checked"' | safe) if i === 1 %}
-      <label class="wmcads-fe-radios__container">
+      <label class="ds-fe-radios__container">
         Option {{i}}
-        <input class="wmcads-fe-radios__input" value="Option {{i}}"{{isChecked}} name="radio-example" type="radio"/>
-        <span class="wmcads-fe-radios__checkmark">
+        <input class="ds-fe-radios__input" value="Option {{i}}"{{isChecked}} name="radio-example" type="radio"/>
+        <span class="ds-fe-radios__checkmark">
         </span>
       </label>
       {%- endfor %}

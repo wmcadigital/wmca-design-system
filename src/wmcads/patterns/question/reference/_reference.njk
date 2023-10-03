@@ -16,8 +16,8 @@
 {{
     wmcadsLink( { isBackLink: true, text: "Back" } ) | trim | indent(4)
 }}
-<form class="bg-white wmcads-m-t-lg">
-    <div class="wmcads-col-1 wmcads-col-sm-3-4 wmcads-col-lg-2-3  wmcads-p-sm  wmcads-p-b-none">
+<form class="bg-white ds-m-t-lg">
+    <div class="ds-col-1 ds-col-sm-3-4 ds-col-lg-2-3  ds-p-sm  ds-p-b-none">
         {{
             wmcadsProgressIndicator({
                 actualSection: actualSection,
@@ -31,11 +31,11 @@
             }) | trim | indent
         }}
         {{ text | safe | trim }}
-        <div class="wmcads-p-t-md wmcads-col-1-2">
+        <div class="ds-p-t-md ds-col-1-2">
             {{ fields  | safe | trim | indent(12) }}
         </div>
     </div>
-    <div class="wmcads-col-1  wmcads-p-sm">
+    <div class="ds-col-1  ds-p-sm">
         {{ params.button  | safe  | trim | indent }}
     </div>
 </form>

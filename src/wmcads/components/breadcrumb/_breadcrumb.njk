@@ -1,16 +1,16 @@
 {% macro wmcadsBreadcrumb(params) %}
 
 {% set items = params.items if params.items else [{ contentText: "Components" }] %}
-{% set _isMobile = ' wmcads-breadcrumb--mobile-app' if params.isMobileApp %}
+{% set _isMobile = ' ds-breadcrumb--mobile-app' if params.isMobileApp %}
 {% set classes = ' ' + params.classes if params.classes %}
 {% set label = params.label + " example breadcrumbs" if params.label else "Breadcrumbs" %}
 
-<nav aria-label="{{label}}" class="wmcads-breadcrumb{{_isMobile}}{{classes}}">
+<nav aria-label="{{label}}" class="ds-breadcrumb{{_isMobile}}{{classes}}">
 
-  <ol class="wmcads-breadcrumb__list">
+  <ol class="ds-breadcrumb__list">
     {#- Link back to homepage #}
-    <li class="wmcads-breadcrumb__list-item">
-      <a href="/" class="wmcads-breadcrumb__link">
+    <li class="ds-breadcrumb__list-item">
+      <a href="/" class="ds-breadcrumb__link">
         Home
       </a>
     </li>
@@ -24,11 +24,11 @@
       {% set isCurrentPage = loop.index === items.length %}
     
       {% if breadcrumb.contentText.length > 0 %} 
-      <li class="wmcads-breadcrumb__list-item">
+      <li class="ds-breadcrumb__list-item">
         {% if breadcrumb.unlinkedItem === true %} 
           {{ breadcrumb.contentText }}
         {% else %}
-          <a href="{{ _href }}" class="wmcads-breadcrumb__link{% if isCurrentPage %} wmcads-breadcrumb__link--current{% endif %}" {% if isCurrentPage %}aria-current="page"{% endif %}>
+          <a href="{{ _href }}" class="ds-breadcrumb__link{% if isCurrentPage %} ds-breadcrumb__link--current{% endif %}" {% if isCurrentPage %}aria-current="page"{% endif %}>
             {{ breadcrumb.contentText }}
           </a>
         {% endif %}

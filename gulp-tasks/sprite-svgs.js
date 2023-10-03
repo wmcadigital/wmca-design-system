@@ -36,7 +36,7 @@ const spritingSVGs = () => {
       })
     )
     .pipe(plugins.svgstore())
-    .pipe(plugins.rename({ basename: 'wmcads-icons', extname: '.min.svg' }))
+    .pipe(plugins.rename({ basename: 'ds-icons', extname: '.min.svg' }))
     .pipe(dest(path.svgs.dest));
 };
 

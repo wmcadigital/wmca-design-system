@@ -5,11 +5,11 @@
 {% set caption = params.caption if params.caption %}
 {% set noHeaders = params.noHeaders if params.noHeaders else false %}
 {% set classNames = " " + params.classNames if params.classNames %}
-{% set noHeadersClass = " wmcads-table--without-header" if params.noHeaders else "" %}
+{% set noHeadersClass = " ds-table--without-header" if params.noHeaders else "" %}
 
 
 
-<table class="wmcads-table {{classNames}} {{noHeadersClass}}">
+<table class="ds-table {{classNames}} {{noHeadersClass}}">
   {%- if title %}
   <h3>
     {{title}}
@@ -17,7 +17,7 @@
   {% endif -%}
 
   {%- if caption %}
-    <caption class="wmcads-table__caption">
+    <caption class="ds-table__caption">
       {{- caption -}}
     </caption>
   {%- endif -%}

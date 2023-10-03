@@ -3,20 +3,20 @@
 {# Imports #}
 {% from "../../../components/breadcrumb/_breadcrumb.njk" import wmcadsBreadcrumb %}
 
-<div class="wmcads-search-result">
-    <h2 class="wmcads-m-b-none"><a href="#" class="h2 wmcads-search-result__title">{{params.pageTitle}}</a></h2>
+<div class="ds-search-result">
+    <h2 class="ds-m-b-none"><a href="#" class="h2 ds-search-result__title">{{params.pageTitle}}</a></h2>
     {% if params.breadcrumbs === true -%}
     {{
         wmcadsBreadcrumb({
             section: 'Swift and Tickets',
             pageTitle: "Swift",
             exampleAria: "Main",
-            classModifiers: "wmcads-hide-mobile"
+            classModifiers: "ds-hide-mobile"
         }) | trim
     }}
     {%- endif %}
-    <p class="wmcads-search-result__date">{{params.date | safe}}</p>
-    <p class="wmcads-search-result__excerpt">{{params.excerpt | safe}}</p>
+    <p class="ds-search-result__date">{{params.date | safe}}</p>
+    <p class="ds-search-result__excerpt">{{params.excerpt | safe}}</p>
 </div>
 
 {% endmacro %}

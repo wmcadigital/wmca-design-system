@@ -10,7 +10,7 @@
 {% set button = params.button if params.button %}
 
 
-<div class="bg-white wmcads-p-md">
+<div class="bg-white ds-p-md">
     {{
         wmcadsQuestion({
             text: question
@@ -27,33 +27,33 @@
             wmcadsTable({
                 rows: 3,
                 cols: 3,
-                cellClasses: ["", "", "wmcads-text-align-right"],
+                cellClasses: ["", "", "ds-text-align-right"],
                 title: "Personal Details",
                 noHeaders: true,
-                classNames: "wmcads-m-b-xl",
+                classNames: "ds-m-b-xl",
                 values: [
-                    ["Name", "Andy Street", "<a href=\"#\" title=\"link title\" target=\"_self'\" class=\"wmcads-link\">Change</a>"],
-                    ["Date of Birth", "1 January 2020", "<a href=\"#\" title=\"link title\" target=\"_self'\" class=\"wmcads-link\">Change</a>"],
-                    ["Contact Details", "07700 900 457<br>andy.street@example.com", "<a href=\"#\" title=\"link title\" target=\"_self'\" class=\"wmcads-link\">Change</a>"]
+                    ["Name", "Andy Street", "<a href=\"#\" title=\"link title\" target=\"_self'\" class=\"ds-link\">Change</a>"],
+                    ["Date of Birth", "1 January 2020", "<a href=\"#\" title=\"link title\" target=\"_self'\" class=\"ds-link\">Change</a>"],
+                    ["Contact Details", "07700 900 457<br>andy.street@example.com", "<a href=\"#\" title=\"link title\" target=\"_self'\" class=\"ds-link\">Change</a>"]
                 ]
             }) | trim | indent(4),
 
             wmcadsTable({
                 rows: 3,
                 cols: 3,
-                cellClasses: ["", "", "wmcads-text-align-right"],
+                cellClasses: ["", "", "ds-text-align-right"],
                 title: "Ticket Details",
                 noHeaders: true,
-                classNames: "wmcads-m-b-xl"
+                classNames: "ds-m-b-xl"
             }) | trim | indent(4),
 
             wmcadsTable({
                 rows: 5,
                 cols: 3,
-                cellClasses: ["", "", "wmcads-text-align-right"],
+                cellClasses: ["", "", "ds-text-align-right"],
                 title: "Direct Debit",
                 noHeaders: true,
-                classNames: "wmcads-m-b-xl"
+                classNames: "ds-m-b-xl"
             }) | trim | indent(4)
         ] | join("\n    ") | safe
     }}

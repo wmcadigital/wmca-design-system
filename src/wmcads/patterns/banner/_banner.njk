@@ -11,44 +11,44 @@
 {% set contentHTML = params.contentHTML if params.contentHTML else null %}
 {% set _content = contentHTML | safe if contentHTML else contentText %} {# change content based on what user has input #}
 {# Emergency vars #}
-{% set emergencyModifier = " wmcads-banner-container--emergency" if params.emergency %}
+{% set emergencyModifier = " ds-banner-container--emergency" if params.emergency %}
 {% set emergencyTitle = params.emergencyTitle or "Emergency notification title" %}
-{% set titleColClass = "wmcads-col-xl-20-24" if params.onPage else "wmcads-col-xl-10-24" %}
+{% set titleColClass = "ds-col-xl-20-24" if params.onPage else "ds-col-xl-10-24" %}
 
 
-<div class="wmcads-banner-container{{emergencyModifier}}">
+<div class="ds-banner-container{{emergencyModifier}}">
    {% if params.emergency -%}
-   <div class="wmcads-container wmcads-grid wmcads-grid--align-center">
-      <div class="wmcads-col-xl-1-24 wmcads-col-1-2 wmcads-banner-container__emergency-icon-col">
+   <div class="ds-container ds-grid ds-grid--align-center">
+      <div class="ds-col-xl-1-24 ds-col-1-2 ds-banner-container__emergency-icon-col">
       {{
          wmcadsIcon({
-            class: "wmcads-banner-container__emergency-icon-error",
+            class: "ds-banner-container__emergency-icon-error",
             icon: "general-warning-triangle"
          })
       }}
       </div>
-      <div class="{{titleColClass}} wmcads-col-1 wmcads-banner-container__emergency-title-col">
-         <h2 class="wmcads-h4 wmcads-m-b-none">{{_content}}</h2>
+      <div class="{{titleColClass}} ds-col-1 ds-banner-container__emergency-title-col">
+         <h2 class="ds-h4 ds-m-b-none">{{_content}}</h2>
       </div>
       {% if not params.onPage -%}
-      <div class="wmcads-col-xl-10-24 wmcads-col-1 wmcads-banner-container__emergency-link-col">
-         <a href="#" target="_self" class="wmcads-link wmcads-banner-container__emergency-link">
+      <div class="ds-col-xl-10-24 ds-col-1 ds-banner-container__emergency-link-col">
+         <a href="#" target="_self" class="ds-link ds-banner-container__emergency-link">
             Read our latest advice
             {{
                wmcadsIcon({
-                  class: "wmcads-banner-container__emergency-icon wmcads-m-l-sm",
+                  class: "ds-banner-container__emergency-icon ds-m-l-sm",
                   icon: "general-chevron-right"
                })
             }}
          </a>
       </div>
       {%- endif %}
-      <div class="wmcads-col-xl-3-24 wmcads-col-1-2 wmcads-banner-container__emergency-close-col">
-         <button class="wmcads-banner-container__emergency-close">
+      <div class="ds-col-xl-3-24 ds-col-1-2 ds-banner-container__emergency-close-col">
+         <button class="ds-banner-container__emergency-close">
          Close
          {{
             wmcadsIcon({
-               class: "wmcads-banner-container__emergency-icon wmcads-m-l-sm",
+               class: "ds-banner-container__emergency-icon ds-m-l-sm",
                icon: "general-cross"
             })
          }}
@@ -56,9 +56,9 @@
       </div>
    </div>
    {% else -%}
-   <div class="wmcads-col-1">
+   <div class="ds-col-1">
       {% if params.phase -%}
-      <div class="wmcads-banner-container__phase-wrapper">
+      <div class="ds-banner-container__phase-wrapper">
          {{
             wmcadsPhaseIndicator({
                indicatorText: params.phaseText
@@ -70,7 +70,7 @@
       {% if params.html -%}
       {{- html | safe -}}
       {%- else -%}
-      <p class="wmcads-banner-container__text">
+      <p class="ds-banner-container__text">
          This is a new service - your
          {{ wmcadsLink({
                contentText: 'feedback',

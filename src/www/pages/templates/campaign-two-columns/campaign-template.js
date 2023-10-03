@@ -1,5 +1,5 @@
 const pageContents = () => {
-  const contents = document.querySelector('.wmcads-dynamic-page-contents');
+  const contents = document.querySelector('.ds-dynamic-page-contents');
 
   if (contents != null) {
     const headings = document.querySelectorAll('main h2');
@@ -27,7 +27,7 @@ const pageContents = () => {
       }
 
       // get the page contents
-      const menu = document.querySelector('.wmcads-page-contents');
+      const menu = document.querySelector('.ds-page-contents');
       // add page contents link
       menu.appendChild(createMenuItem());
     });

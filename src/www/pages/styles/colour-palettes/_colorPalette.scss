@@ -1,6 +1,6 @@
 $cp-swatch-height: 50px;
 
-.wmcads-website-color-swatch {
+.ds-website-color-swatch {
   padding: $size-sm;
 
   &__inner {
@@ -12,7 +12,7 @@ $cp-swatch-height: 50px;
 }
 
 @each $color, $hex in $palettes {
-  .wmcads-website-bg-color-#{$color} {
+  .ds-website-bg-color-#{$color} {
     background-color: $hex;
   }
 }

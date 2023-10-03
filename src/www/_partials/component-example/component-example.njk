@@ -10,28 +10,28 @@
 {% set js = params.js if params.js else false %}
 {% set njkProps = params.njkProps if params.njkProps else false %}
 
-<div class="wmcads-website-code-example">
+<div class="ds-website-code-example">
   {# Show a button to allow the user to see the component fullscreen #}
   {{
     wmcadsButton({
-      classNames: 'wmcads-btn--link wmcads-m-md wmcads-website-code-example__view-fullscreen',
+      classNames: 'ds-btn--link ds-m-md ds-website-code-example__view-fullscreen',
       text: 'See this example in fullscreen'
     })
   }}
-  <hr class="wmcads-m-none" />
+  <hr class="ds-m-none" />
 
 
   {# PREVIEW COMPONENT #}
-  <div class="wmcads-website-code-example__inner-wrap">
+  <div class="ds-website-code-example__inner-wrap">
     {# Loop through components passed in and collect in componentsToRender var #}
     {% set componentsToRender %}
       {%- for item in components %}
         {{item | trim}}
         {% if loop.last == false %}
           {% if params.displayInline %}
-            <div class="wmcads-m-b-md wmcads-website-mar--right"></div>
+            <div class="ds-m-b-md ds-website-mar--right"></div>
           {% else %}
-            <div class="wmcads-m-b-md"></div>
+            <div class="ds-m-b-md"></div>
           {% endif %}
         {% endif %}
       {% endfor -%}
@@ -39,10 +39,10 @@
 
     {# If iframe var set the show components in iframe #}
     {% if showAsIframe %}
-      <iframe sandbox="allow-same-origin allow-scripts" title="Component example" class="wmcads-website-code-example__iframe wmcads-col-1" src="about:blank" data-src="{{componentsToRender | e | trim}}" frameBorder="0" loading="lazy" allowtransparency="true" scrolling="no" allow="fullscreen" width="100%" data-path="{{componentPath}}"></iframe>
+      <iframe sandbox="allow-same-origin allow-scripts" title="Component example" class="ds-website-code-example__iframe ds-col-1" src="about:blank" data-src="{{componentsToRender | e | trim}}" frameBorder="0" loading="lazy" allowtransparency="true" scrolling="no" allow="fullscreen" width="100%" data-path="{{componentPath}}"></iframe>
     {% else %}
     {# Else show components like normal #}
-      <div class="wmcads-website-code-example__njk wmcads-col-1">
+      <div class="ds-website-code-example__njk ds-col-1">
         {{componentsToRender | safe}}
       </div>
     {% endif %}
@@ -54,9 +54,9 @@
   {# SHOW DETAIL TAB(S) #}
 
   {# HTML markup #}
-  <hr class="wmcads-m-none" />
-  <details class="wmcads-details">
-    <summary class="wmcads-link wmcads-p-md">HTML markup</summary>
+  <hr class="ds-m-none" />
+  <details class="ds-details">
+    <summary class="ds-link ds-p-md">HTML markup</summary>
     {# Be careful with the below, the whitespace is extremely delicate (like a flower 🌸) #}
     {# The loop.revindex checks to see if last in array, if not add a linebreak (again, the fight for making nice whitespace continues) #}
 <pre><code class="html" tabindex="0">{% for item in components -%}{{ item | forceescape | trim }}{% if loop.revindex !== 1 %}<br/>{% endif %}{% endfor -%}</code></pre>
@@ -64,9 +64,9 @@
 
   {# Njk markup #}
   {% if njk and componentPath %}
-    <hr class="wmcads-m-none" />
-    <details class="wmcads-details">
-      <summary class="wmcads-link wmcads-p-md">Nunjucks markup</summary>
+    <hr class="ds-m-none" />
+    <details class="ds-details">
+      <summary class="ds-link ds-p-md">Nunjucks markup</summary>
 {# Be careful with the below, the whitespace is extremely delicate (like a flower 🌸) #}
 <pre><code class="njk" tabindex="0">{%- include componentPath + "_example.njk" -%}</code></pre>
     </details>
@@ -74,11 +74,11 @@
 
   {# Njk props #}
   {% if njkProps %}
-    <hr class="wmcads-m-none" />
-    <details class="wmcads-details">
-      <summary class="wmcads-link wmcads-p-md">Nunjucks properties</summary>
-      <div class="wmcads-p-md">
-        <table class="wmcads-table wmcads-p-md">
+    <hr class="ds-m-none" />
+    <details class="ds-details">
+      <summary class="ds-link ds-p-md">Nunjucks properties</summary>
+      <div class="ds-p-md">
+        <table class="ds-table ds-p-md">
           <thead>
             <tr>
               <th scope="col">Name</th>
@@ -102,23 +102,23 @@
 
   {# JS markup #}
   {% if js and componentPath %}
-    <div class="wmcads-website-code-example__js">
+    <div class="ds-website-code-example__js">
       {# HIDING THIS SECTION until we can compile ES5 for IE11 #}
       {# Show recommended JS (ES2015) #}
-      {# <hr class="wmcads-m-none" />
-      <details class="wmcads-details wmcads-details--js">
-        <summary class="wmcads-link wmcads-p-md">Recommended javascript (browser compatible)</summary>
+      {# <hr class="ds-m-none" />
+      <details class="ds-details ds-details--js">
+        <summary class="ds-link ds-p-md">Recommended javascript (browser compatible)</summary>
 <pre><code class="js" tabindex="0"></code></pre>
       </details> #}
 
       {# Show recommended JS (ES6) #}
-      <hr class="wmcads-m-none" />
-      <details class="wmcads-details wmcads-details--es6">
-        <summary class="wmcads-link wmcads-p-md">Recommended javascript (ES6)</summary>
+      <hr class="ds-m-none" />
+      <details class="ds-details ds-details--es6">
+        <summary class="ds-link ds-p-md">Recommended javascript (ES6)</summary>
 <pre><code class="js" tabindex="0"></code></pre>
       </details>
 
-      <script type="text/plain" class="wmcads-website-code-example__script">
+      <script type="text/plain" class="ds-website-code-example__script">
         {%- include componentPath + "_example.js" -%}
       </script>
     </div>

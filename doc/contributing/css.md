@@ -4,7 +4,7 @@
 
 ## `wmca` namespacing
 
-All class names start with a `.wmcads-` namespace to reduce the likelihood of
+All class names start with a `.ds-` namespace to reduce the likelihood of
 conflicting with existing classes in your application. It also helps to identify
 where the styling for a particular element is coming from.
 
@@ -24,9 +24,9 @@ The naming convention follows this pattern:
 .block__element {}
 .block--modifier {}
 
-.wmcads-card               // Block - the root of a component
-.wmcads-card__body         // Element - a part of the block
-.wmcads-card--active       // Modifier - a variant of the block
+.ds-card               // Block - the root of a component
+.ds-card__body         // Element - a part of the block
+.ds-card--active       // Modifier - a variant of the block
 ```
 
 It uses double hyphens (`--`) and underscores (`__`) so that the block, element
@@ -35,9 +35,9 @@ or modifiers themselves can be hyphen delimited without causing ambiguity.
 For example:
 
 ```scss
-.wmcads-phase-banner
-.wmcads-phase-banner__phase-tag
-.wmcads-phase-banner__phase-tag--light-blue
+.ds-phase-banner
+.ds-phase-banner__phase-tag
+.ds-phase-banner__phase-tag--light-blue
 ```
 
 ### Further reading:
@@ -57,7 +57,7 @@ given class name. It also discourages excessive nesting.
 Bad:
 
 ```
-.wmcads-breadcrumb {
+.ds-breadcrumb {
   ...
   &__item {
     ...
@@ -68,11 +68,11 @@ Bad:
 Good:
 
 ```
-.wmcads-breadcrumb {
+.ds-breadcrumb {
   ...
 }
 
-.wmcads-breadcrumb__item {
+.ds-breadcrumb__item {
   ...
 }
 ```
@@ -98,11 +98,11 @@ other components.
 
 Keep all of the variants of a component in the same place.
 
-`.wmcads-error-summary` modifies the `.wmcads-list` component.
+`.ds-error-summary` modifies the `.ds-list` component.
 
 Component modifiers use an extra class, scoped to the component:
 
-`.wmcads-error-summary__list`
+`.ds-error-summary__list`
 
 This class is part of the component, rather than a parent of a component.
 
@@ -165,7 +165,7 @@ Good:
 
 ```
 .selector {
-  color: $wmcads-blue;
+  color: $ds-blue;
 }
 ```
 
@@ -214,7 +214,7 @@ Bad:
 Good:
 
 ```
-.wmcads-wrapper {
+.ds-wrapper {
   ...
 }
 ```
@@ -256,7 +256,7 @@ a {
 Bad:
 
 ```
-.wmcads-breadcrumb {
+.ds-breadcrumb {
   ...
   &__item {
     ...
@@ -267,11 +267,11 @@ Bad:
 Good:
 
 ```
-.wmcads-breadcrumb {
+.ds-breadcrumb {
   ...
 }
 
-.wmcads-breadcrumb__item {
+.ds-breadcrumb__item {
   ...
 }
 ```
@@ -420,7 +420,7 @@ Bad:
 
 ```
 @mixin FONT_STACK() {
-  font-family: $wmcads-font-stack;
+  font-family: $ds-font-stack;
 }
 ```
 
@@ -428,7 +428,7 @@ Good:
 
 ```
 @mixin font-stack() {
-  font-family: $wmcads-font-stack;
+  font-family: $ds-font-stack;
 }
 ```
 

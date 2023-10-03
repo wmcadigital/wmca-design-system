@@ -2,9 +2,9 @@
 
 Find components in `src/wmcads/components`.
 
-Components must use the `.wmcads-` namespace.
+Components must use the `.ds-` namespace.
 
-For example, `.wmcads-button`.
+For example, `.ds-button`.
 
 ## Writing CSS for components
 

@@ -4,7 +4,7 @@ linear-gradient(-45deg, get-color(background, 20%, dark) 25%, transparent 25%),
 linear-gradient(45deg, transparent 75%, get-color(background, 20%, dark) 75%),
 linear-gradient(-45deg, transparent 75%, get-color(background, 20%, dark) 75%);
 
-.wmcads-website-code-example {
+.ds-website-code-example {
   margin-top: $size-xl;
   overflow: hidden;
   border: 1px solid get-color(primary, 20%);
@@ -21,7 +21,7 @@ linear-gradient(-45deg, transparent 75%, get-color(background, 20%, dark) 75%);
     background-position: 0 0, 0 10px, 10px -10px, -10px 0;
     background-size: 20px 20px;
 
-    & > .wmcads-col-1 {
+    & > .ds-col-1 {
       padding: $size-md;
       overflow: hidden;
     }
@@ -49,7 +49,7 @@ linear-gradient(-45deg, transparent 75%, get-color(background, 20%, dark) 75%);
     margin: 0;
   }
 
-  & + .wmcads-website-code-example {
+  & + .ds-website-code-example {
     margin-top: 0;
     border-top: 0;
   }
@@ -78,7 +78,7 @@ span[class^="hljs-"] {
 }
 
 // These classes are used to display components better
-.wmcads-website-mar {
+.ds-website-mar {
   &--right {
     display: inline-block;
     margin-right: 10px;
@@ -86,22 +86,22 @@ span[class^="hljs-"] {
   }
 }
 
-.wmcads-js-show-code {
+.ds-js-show-code {
   margin: $size-md;
   float: right;
 }
 
-.wmcads-code-toggle {
+.ds-code-toggle {
   display: block;
   padding: $size-xsm $size-md;
   color: $white;
   background: get-color(secondary);
 
-  .wmcads-btn {
+  .ds-btn {
     margin-left: $size-sm;
   }
 
-  .wmcads-btn:not(.wmcads-btn--dark-bg) {
+  .ds-btn:not(.ds-btn--dark-bg) {
     border: 0;
     color: currentColor;
     background-color: transparent;

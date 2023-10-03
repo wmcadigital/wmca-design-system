@@ -1,4 +1,4 @@
-.wmcads-page-contents {
+.ds-page-contents {
   position: sticky;
   top: 0;
   margin-bottom: 30px;
@@ -41,18 +41,18 @@
       border-left: 3px solid get-color(primary);
     }
 
-    .wmcads-accordion__summary-wrapper {
+    .ds-accordion__summary-wrapper {
       padding-top: 0.5rem;
       padding-right: 0;
       padding-bottom: 0.5rem;
 
-      .wmcads-accordion__icon {
+      .ds-accordion__icon {
         width: 24px;
         height: 24px;
       }
     }
 
-    .wmcads-accordion__content {
+    .ds-accordion__content {
       padding: 0;
     }
 

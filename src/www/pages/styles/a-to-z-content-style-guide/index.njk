@@ -9,8 +9,8 @@
 {% block content %} 
 
 {# About the style guide #}
-<div class="wmcads-grid">
-  <div class="wmcads-col-1 wmcads-col-md-3-4">
+<div class="ds-grid">
+  <div class="ds-col-1 ds-col-md-3-4">
     <h2>Writing content for West Midlands Combined Authority</h2>
     <p>
       You should create all content with user-focused content design principles. This means content has an identified
@@ -81,40 +81,40 @@
     <br />
     <br />
     {# A to Z accordions #}
-    <div class="wmcads-grid wmcads-grid--justify-between wmcads-grid--align-center">
-      <div class="wmcads-col-1 wmcads-col-md-1-2">
+    <div class="ds-grid ds-grid--justify-between ds-grid--align-center">
+      <div class="ds-col-1 ds-col-md-1-2">
         <h3 id="atozofstyle">A to Z of style</h3> 
       </div>
-      <div class="wmcads-col-1 wmcads-col-md-auto wmcads-m-b-md js-accordion-controls">
-        <button class="wmcads-btn wmcads-btn--primary js-accordion-controls-open">Open all</button>
-        <button class="wmcads-btn wmcads-btn--primary js-accordion-controls-close wmcads-m-l-xs">Close all</button>
+      <div class="ds-col-1 ds-col-md-auto ds-m-b-md js-accordion-controls">
+        <button class="ds-btn ds-btn--primary js-accordion-controls-open">Open all</button>
+        <button class="ds-btn ds-btn--primary js-accordion-controls-close ds-m-l-xs">Close all</button>
       </div>
     </div>
-    <div class="wmcads-col-1">
+    <div class="ds-col-1">
       {% for section in aToZOfStyles %}
-        <div class="wmcads-accordion wmcads-m-b-sm">
-          <button id="{{section.letter | lower}}" aria-controls="{{section.letter | lower}}" class="wmcads-accordion__summary-wrapper" aria-expanded="false">
-            <div class="wmcads-accordion__summary">
-              <h4 class="wmcads-m-b-none">{{section.letter}}</h4>
+        <div class="ds-accordion ds-m-b-sm">
+          <button id="{{section.letter | lower}}" aria-controls="{{section.letter | lower}}" class="ds-accordion__summary-wrapper" aria-expanded="false">
+            <div class="ds-accordion__summary">
+              <h4 class="ds-m-b-none">{{section.letter}}</h4>
             </div>
             <!-- plus icon -->
             {{
               wmcadsIcon({
                 icon: 'general-expand',
-                class: 'wmcads-accordion__icon'
+                class: 'ds-accordion__icon'
               }) | indent(4) | trim
             }}
             <!-- minus icon -->
             {{
               wmcadsIcon({
                 icon: 'general-minimise',
-                class: 'wmcads-accordion__icon wmcads-accordion__icon--minimise'
+                class: 'ds-accordion__icon ds-accordion__icon--minimise'
               }) | indent(4) | trim
             }}
           </button>
-          <div class="wmcads-accordion__content" id="accordion-{{section.letter | lower}}">
+          <div class="ds-accordion__content" id="accordion-{{section.letter | lower}}">
             {% for style in section.styles %}
-            <h5 id="{{style.title | replace(r/\W/gi, '') | replace(' ', '-') | lower}}-{{ loop.index }}" class="{{'wmcads-m-t-xl' if not loop.first}}">
+            <h5 id="{{style.title | replace(r/\W/gi, '') | replace(' ', '-') | lower}}-{{ loop.index }}" class="{{'ds-m-t-xl' if not loop.first}}">
               <span>{{style.title}}<span>
             </h5>
             {{style.content | safe}}

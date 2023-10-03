@@ -1,15 +1,15 @@
-.wmcads-feedback-loop {
+.ds-feedback-loop {
   // Add full-width blue border on desktop large display
   @media all and (min-width: $breakpoint-xl) {
     border-bottom: $size-sm solid get-color(cta);
   }
 
-  .wmcads-link {
+  .ds-link {
     color: $white;
   }
 
   // Override container defaults
-  .wmcads-container {
+  .ds-container {
     position: absolute;
     right: 0;
     left: 0;
@@ -31,8 +31,8 @@
     display: none;
   }
 
-  &.wmcads-is-open {
-    .wmcads-container {
+  &.ds-is-open {
+    .ds-container {
       padding: $size-md;
       border-top: $size-sm solid get-color(cta);
       border-right: 1px solid get-color(cta);
@@ -42,11 +42,11 @@
       text-align: center;
     }
 
-    .wmcads-link {
+    .ds-link {
       color: get-color(cta);
     }
 
-    .wmcads-feedback-loop {
+    .ds-feedback-loop {
       &__questions {
         display: none;
       }
@@ -60,7 +60,7 @@
 
 // When on desktop then the feedback-loop should appear on one line
 @media all and (min-width: $breakpoint-md) {
-  .wmcads-feedback-loop {
+  .ds-feedback-loop {
     &__useful {
       margin: 0;
       float: left;

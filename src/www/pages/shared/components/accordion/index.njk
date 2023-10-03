@@ -39,13 +39,13 @@
 <hr><br><br>
 {# Closed #}
 <h2>Closed</h2>
-<p>In its closed state, the accordions <code class="wmcads-website-inline-code">.wmcads-accordion__content</code> is hidden from view.</p>
-<p>Everything you can see whilst the accordion is in this state is nested within the <code class="wmcads-website-inline-code">button.wmcads-accordion-summary-wrapper</code> element.</p>
+<p>In its closed state, the accordions <code class="ds-website-inline-code">.ds-accordion__content</code> is hidden from view.</p>
+<p>Everything you can see whilst the accordion is in this state is nested within the <code class="ds-website-inline-code">button.ds-accordion-summary-wrapper</code> element.</p>
 <p>Take note that:</p>
 <ul>
-  <li>The attribute <code class="wmcads-website-inline-code">aria-controls</code> is equal to the id set on the <code class="wmcads-website-inline-code">.wmcads-accordion__content</code> element. This helps with accessibility, so that screen readers understand that x button controls x content.</li>
-  <li>The attribute <code class="wmcads-website-inline-code">aria-expanded</code> is set to "false" when in the closed state. Again, this helps with accessibility.</li>
-  <li>The only thing not visible in the <code class="wmcads-website-inline-code">button.wmcads-accordion-summary-wrapper</code> is the minimise icon.</li>
+  <li>The attribute <code class="ds-website-inline-code">aria-controls</code> is equal to the id set on the <code class="ds-website-inline-code">.ds-accordion__content</code> element. This helps with accessibility, so that screen readers understand that x button controls x content.</li>
+  <li>The attribute <code class="ds-website-inline-code">aria-expanded</code> is set to "false" when in the closed state. Again, this helps with accessibility.</li>
+  <li>The only thing not visible in the <code class="ds-website-inline-code">button.ds-accordion-summary-wrapper</code> is the minimise icon.</li>
 </ul>
 {% from "wmcads/components/accordion/_accordion.njk" import wmcadsAccordion %}
 {{
@@ -64,11 +64,11 @@
 <br><br>
 {# Open #}
 <h2>Open</h2>
-<p>In the open state, the accordion shows all of the content it was initially hiding in the <code class="wmcads-website-inline-code">.wmcads-accordion__content</code> element.</p>
-<p>To change the accordion to this state, you need to add the modifier class <code class="wmcads-website-inline-code">wmcads-is--open</code> to the main <code class="wmcads-website-inline-code">.wmcads-accordion</code> element as shown in the code snippet.</p>
+<p>In the open state, the accordion shows all of the content it was initially hiding in the <code class="ds-website-inline-code">.ds-accordion__content</code> element.</p>
+<p>To change the accordion to this state, you need to add the modifier class <code class="ds-website-inline-code">ds-is--open</code> to the main <code class="ds-website-inline-code">.ds-accordion</code> element as shown in the code snippet.</p>
 <p>Take note that:</p>
 <ul>
-  <li>The attribute <code class="wmcads-website-inline-code">aria-expanded</code> is set to "true" when in the open state. Again, this helps with accessibility.</li>
+  <li>The attribute <code class="ds-website-inline-code">aria-expanded</code> is set to "true" when in the open state. Again, this helps with accessibility.</li>
   <li>The minus icon becomes visible in this state, whilst the plus icon is hidden.</li>
 </ul>
 {{

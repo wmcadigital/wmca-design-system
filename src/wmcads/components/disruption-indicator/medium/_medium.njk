@@ -7,27 +7,27 @@
 {% set text = params.text if params.text else 'X15' %} {# set text, or default to X15 #}
 
 {% set class = ' ' + params.classModifiers if params.classModifiers %}
-{% set iconClassModifier = ' wmcads-disruption-indicator-medium--with-icon' if ( params.iconLeft or params.iconRight ) %}
+{% set iconClassModifier = ' ds-disruption-indicator-medium--with-icon' if ( params.iconLeft or params.iconRight ) %}
 
 {{params.comment | safe}}
-<div class="wmcads-disruption-indicator-medium{{iconClassModifier}}{{class}}">
+<div class="ds-disruption-indicator-medium{{iconClassModifier}}{{class}}">
   {%- if iconLeft %}
   {# Get SVG icon -#}
   {{
     wmcadsIcon({
       icon: iconLeft,
-      class: 'wmcads-disruption-indicator-medium__icon wmcads-disruption-indicator-medium__icon--left'
+      class: 'ds-disruption-indicator-medium__icon ds-disruption-indicator-medium__icon--left'
     }) | indent(2) | trim
   }}
   {%- endif %}
   {{ text }}
   {% if iconRight === 'general-trash' -%}
-  <button class="wmcads-disruption-indicator-medium__btn" aria-label="Delete favourite - bus - {{ text }}">
+  <button class="ds-disruption-indicator-medium__btn" aria-label="Delete favourite - bus - {{ text }}">
     {#- Get SVG icon -#}
     {{
       wmcadsIcon({
         icon: iconRight,
-        class: 'wmcads-disruption-indicator-medium__icon'
+        class: 'ds-disruption-indicator-medium__icon'
       }) | indent(4) | trim
     }}
   </button>
@@ -36,7 +36,7 @@
   {{
     wmcadsIcon({
       icon: iconRight,
-      class: 'wmcads-disruption-indicator-medium__icon wmcads-disruption-indicator-medium__icon--right'
+      class: 'ds-disruption-indicator-medium__icon ds-disruption-indicator-medium__icon--right'
     }) | indent(2) | trim
   }}
   {%- endif %}

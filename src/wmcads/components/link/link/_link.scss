@@ -1,8 +1,8 @@
-// Included the a tag too incase dev forgets to add .wmcads-link class.
-// The a:not([class*="wmcads-"]) line makes sure we don't target any wmcads components that are using the a tag such as a button as a link
-// The a[class*="wmcads-col-"] line is to orrived the above not line, as a wmcads-col tag as an 'a' is fine to treat as normal tag
-.wmcads-link {
-  @at-root a:not([class*="wmcads-"]),
+// Included the a tag too incase dev forgets to add .ds-link class.
+// The a:not([class*="ds-"]) line makes sure we don't target any wmcads components that are using the a tag such as a button as a link
+// The a[class*="ds-col-"] line is to orrived the above not line, as a ds-col tag as an 'a' is fine to treat as normal tag
+.ds-link {
+  @at-root a:not([class*="ds-"]),
   & {
     display: inline-block;
     color: get-color(cta);
@@ -29,7 +29,7 @@
     display: inline-flex;
 
     // prevent icon resizing
-    .wmcads-link__chevron {
+    .ds-link__chevron {
       flex: 0 0 1.5rem;
     }
   }

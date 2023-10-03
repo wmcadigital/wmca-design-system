@@ -9,18 +9,18 @@
 {% set paramClass = " " + params.classNames if params.classNames %} {# set paramClass to params.classNames if any #}
 {# if button disabled is true #}
 {% if params.disabled %}
-  {% set classNames = paramClass + " wmcads-btn--disabled" %}
+  {% set classNames = paramClass + " ds-btn--disabled" %}
 {% else %}
   {% set classNames = paramClass if paramClass %}
 {% endif %}
 
-<button class="wmcads-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %} {% if params.type %}type="{{params.type}}"{% endif %}>
+<button class="ds-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %} {% if params.type %}type="{{params.type}}"{% endif %}>
     {#- iconLeft -#}
     {%- if iconLeft %}
     {{
       wmcadsIcon({
         icon: iconLeft,
-        class: 'wmcads-btn__icon'
+        class: 'ds-btn__icon'
       }) | indent | trim
     }}
     {{text}}
@@ -31,7 +31,7 @@
     {{
       wmcadsIcon({
         icon: iconRight,
-        class: 'wmcads-btn__icon wmcads-btn__icon--right'
+        class: 'ds-btn__icon ds-btn__icon--right'
       }) | indent | trim
     }}
 
@@ -40,7 +40,7 @@
     {{ text -}}
     {{
       wmcadsLoader({
-        customClass: 'wmcads-btn__icon wmcads-btn__icon--right',
+        customClass: 'ds-btn__icon ds-btn__icon--right',
         size: 'btn'
       }) | indent | trim
     }}

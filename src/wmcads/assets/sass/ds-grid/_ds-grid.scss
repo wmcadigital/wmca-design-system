@@ -6,12 +6,12 @@ button,
 input,
 select,
 textarea,
-.wmcads-grid [class*="wmcads-col-"] {
+.ds-grid [class*="ds-col-"] {
   font-family: $x-font-family;
   -webkit-font-smoothing: antialiased;
 }
 
-.wmcads-grid {
+.ds-grid {
   display: flex;
   width: 100%;
   text-rendering: optimizespeed;
@@ -24,7 +24,7 @@ textarea,
   -ms-flex-line-pack: start;
   align-content: flex-start;
 
-  [class*="wmcads-col-"] {
+  [class*="ds-col-"] {
     display: inline-block;
     zoom: 1;
     word-spacing: normal;

@@ -1,4 +1,4 @@
-.wmcads-board-members {
+.ds-board-members {
   &-contents {
     border-right: 1px solid get-color(text);
 
@@ -15,7 +15,7 @@
     }
   }
 
-  .wmcads-p-l-lg {
+  .ds-p-l-lg {
     @media all and (max-width: $breakpoint-md) {
       padding-left: 0;
     }

@@ -1,4 +1,4 @@
-.wmcads-fe-radios {
+.ds-fe-radios {
   &__desc {
     display: block;
     margin-bottom: $size-sm;
@@ -17,13 +17,13 @@
     user-select: none;
 
     // On mouse-over, add a grey background color
-    &:hover .wmcads-fe-radios__checkmark {
+    &:hover .ds-fe-radios__checkmark {
       background-color: get-color(secondary, 70%);
     }
   }
 
   &--inline {
-    .wmcads-fe-radios__container {
+    .ds-fe-radios__container {
       display: inline-flex;
       margin-right: $size-xl;
       align-items: center;
@@ -38,12 +38,12 @@
     @include type-setting(0);
     opacity: 0;
 
-    &:focus ~ .wmcads-fe-radios__checkmark {
+    &:focus ~ .ds-fe-radios__checkmark {
       background-color: get-color(secondary, 70%);
     }
 
     // Show the checkmark when checked
-    &:checked ~ .wmcads-fe-radios__checkmark:after {
+    &:checked ~ .ds-fe-radios__checkmark:after {
       display: block;
     }
   }

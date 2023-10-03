@@ -1,4 +1,4 @@
-.wmcads-fe-checkboxes {
+.ds-fe-checkboxes {
   &__desc {
     display: block;
     margin-bottom: $size-sm;
@@ -18,7 +18,7 @@
     user-select: none;
 
     // On mouse-over, add a grey background color
-    &:hover .wmcads-fe-checkboxes__checkmark {
+    &:hover .ds-fe-checkboxes__checkmark {
       background-color: get-color(secondary, 70%);
     }
   }
@@ -48,12 +48,12 @@
     opacity: 0;
     color: get-color(text);
 
-    &:focus ~ .wmcads-fe-checkboxes__checkmark {
+    &:focus ~ .ds-fe-checkboxes__checkmark {
       background-color: get-color(secondary, 70%);
     }
 
     // Show the checkmark when checked
-    &:checked ~ .wmcads-fe-checkboxes__checkmark > .wmcads-fe-checkboxes__icon {
+    &:checked ~ .ds-fe-checkboxes__checkmark > .ds-fe-checkboxes__icon {
       display: block;
     }
   }

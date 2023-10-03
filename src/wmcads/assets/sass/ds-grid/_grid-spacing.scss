@@ -1,4 +1,4 @@
-// CREATES .wmcads-grid--spacing classes
+// CREATES .ds-grid--spacing classes
 
 //  HOW IT WORKS
 //
@@ -25,8 +25,8 @@
   $breakpoint-name: "",
   $breakpoint-value: ""
 ) {
-  .wmcads-grid--spacing#{$prefix}-#{$spacing-name} {
-    > [class*="wmcads-col-"] {
+  .ds-grid--spacing#{$prefix}-#{$spacing-name} {
+    > [class*="ds-col-"] {
       // The first and last items in the list will always have no padding on the outer facing sides
       &:first-child,
       &:nth-child(#{$col-count}n + 1) {
@@ -51,19 +51,19 @@
       }
 
       // To achieve the pattern of 2 in a row and 1 full width below
-      // we give the parent: .wmcads-grid--spacing-{breakpoint}-2-sm
-      // then we give the first two columns: .wmcads-col-{breakpoint}-1-2
-      // and the final column: .wmcads-col-1 or .wmcads-col-{breakpoint}-1-1
+      // we give the parent: .ds-grid--spacing-{breakpoint}-2-sm
+      // then we give the first two columns: .ds-col-{breakpoint}-1-2
+      // and the final column: .ds-col-1 or .ds-col-{breakpoint}-1-1
       @if $breakpoint-name == "" or $breakpoint-value == "" {
-        &.wmcads-col-1,
-        &.wmcads-col-1-1 {
+        &.ds-col-1,
+        &.ds-col-1-1 {
           // padding-right: 0;
           padding-left: 0;
         }
       } @else {
         @media screen and (min-width: #{$breakpoint-value}em) {
-          &.wmcads-col-#{$breakpoint-name}-1,
-          &.wmcads-col-#{$breakpoint-name}-1-1 {
+          &.ds-col-#{$breakpoint-name}-1,
+          &.ds-col-#{$breakpoint-name}-1-1 {
             padding-right: 0;
             padding-left: 0;
           }
@@ -73,14 +73,14 @@
   }
 }
 
-// Creates standard spacing classes: .wmcads-grid--spacing-{cols}-{size}
+// Creates standard spacing classes: .ds-grid--spacing-{cols}-{size}
 @each $sp-name, $sp-value in $spacing-map {
   @for $i from 2 through $grid-max-cols {
     @include grid-spacing-class("-#{$i}", $i, $sp-name, $sp-value);
   }
 }
 
-// Creates responsive spacing classes: .wmcads-grid--spacing-{breakpoint}-{cols}-{size}
+// Creates responsive spacing classes: .ds-grid--spacing-{breakpoint}-{cols}-{size}
 @each $bp-name, $bp-value in $grid-breakpoint-map {
   @media screen and (min-width: #{$bp-value}em) {
     @each $sp-name, $sp-value in $spacing-map {

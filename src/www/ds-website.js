@@ -17,7 +17,7 @@ import {
 const icons = () => {
   // Ajax SVG in, SVGS are referenced in app (Icon component)
   const ajax = new XMLHttpRequest();
-  ajax.open('GET', '/img/wmcads-icons.min.svg', true);
+  ajax.open('GET', '/img/ds-icons.min.svg', true);
   ajax.send();
   ajax.onload = () => {
     const div = document.createElement('div');

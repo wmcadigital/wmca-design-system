@@ -1,6 +1,6 @@
 @import "./homepage-banner/homepage-banner";
 
-.wmcads-banner-container {
+.ds-banner-container {
   $self: &;
   padding: $size-md 0;
   border-bottom: 1px solid get-color(text);
@@ -12,9 +12,9 @@
     background-color: get-color(text);
 
     *,
-    .wmcads-link:hover,
-    .wmcads-link:focus,
-    .wmcads-link:visited {
+    .ds-link:hover,
+    .ds-link:focus,
+    .ds-link:visited {
       color: currentColor;
     }
   }

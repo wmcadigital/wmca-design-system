@@ -8,11 +8,13 @@ module.exports = {
   styles: {
     src: ['src/**/*.scss'], // src of styles to watch
     minifySrc: [
-      'src/wmcads/assets/sass/stds.scss',
       'src/wmcads/assets/sass/wmcads.scss',
-      'src/www/wmcads-website.scss',
+      'src/wmcads/assets/sass/tfwmds.scss',
+      'src/wmcads/assets/sass/stds.scss',
+      'src/wmcads/assets/sass/mcds.scss',
+      'src/www/ds-website.scss',
       'src/www/pages/templates/templates.scss',
-      'src/wmcads/assets/sass/wmcads-grid/grid.scss',
+      'src/wmcads/assets/sass/ds-grid/grid.scss',
       'src/wmcads/assets/sass/split/buttons.scss',
       'src/wmcads/assets/sass/split/accordion.scss',
       'src/wmcads/assets/sass/split/typography.scss',
@@ -27,13 +29,13 @@ module.exports = {
     // List of JS folders to concatenate, lint and minified to one file (DON'T LINT ASSETS AS IT WILL TAKE TOO LONG TO SCAN MINIFIED LIBS)
     minifySrc: [
       {
-        src: 'src/www/wmcads-website.js',
-        minName: 'wmcads-website.min.js',
+        src: 'src/www/ds-website.js',
+        minName: 'ds-website.min.js',
         lint: true
       },
       {
-        src: 'src/www/wmcads-templates.js',
-        minName: 'wmcads-templates.min.js',
+        src: 'src/www/ds-templates.js',
+        minName: 'ds-templates.min.js',
         lint: true
       }
     ],

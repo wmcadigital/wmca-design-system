@@ -1,5 +1,5 @@
 const seeExampleFullScreen = () => {
-  const fullScreenBtns = document.querySelectorAll('.wmcads-website-code-example__view-fullscreen');
+  const fullScreenBtns = document.querySelectorAll('.ds-website-code-example__view-fullscreen');
   const { style } = document.documentElement;
 
   fullScreenBtns.forEach(btn => {
@@ -8,7 +8,7 @@ const seeExampleFullScreen = () => {
 
     // Func on what to do when closing full screen
     const closeFullScreen = () => {
-      codeExampleDiv.classList.remove('wmcads-website-code-example--fullscreen'); // Remove full screen class
+      codeExampleDiv.classList.remove('ds-website-code-example--fullscreen'); // Remove full screen class
       btnEle.innerHTML = 'See this example in fullscreen'; // Change button text
       style.overflow = 'initial'; // Set body overflow back to initial, so we enable scrolling again
       style.overscrollBehaviorY = 'initial'; // Enables pull down to refresh in chrome on android
@@ -55,14 +55,14 @@ const seeExampleFullScreen = () => {
     const handleClick = () => {
       // Func on what to do when opening full screen
       const openFullScreen = () => {
-        codeExampleDiv.classList.add('wmcads-website-code-example--fullscreen'); // Add full screen class
+        codeExampleDiv.classList.add('ds-website-code-example--fullscreen'); // Add full screen class
         btnEle.innerHTML = 'Close this fullscreen example'; // Change button text
         style.overflow = 'hidden'; // Set body overflow to hidden, so we don't snap to body scrollbar
         style.overscrollBehaviorY = 'none'; // Stops pull down to refresh in chrome on android
         document.addEventListener('keydown', handleFullScreenKeyDown); // Add listener to key events for full screen
       };
       // If we are in fullscreen mode
-      if (codeExampleDiv.classList.contains('wmcads-website-code-example--fullscreen')) {
+      if (codeExampleDiv.classList.contains('ds-website-code-example--fullscreen')) {
         closeFullScreen(); // Close full screen
         document.removeEventListener('keydown', handleFullScreenKeyDown); /// Remove listener as we want to go back to normal keyboard events
       }

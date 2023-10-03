@@ -2,12 +2,12 @@
 // All of our palette colours with their respective tints (mix white in at 10% intervals)
 // All brand colours, see styles/colour-palettes page for more...
 $palettes: (
-  primary: #353b48,
-  secondary: #353b48,
+  primary: #1d7bbf,
+  secondary: #3c1053,
   text: #231f20,
   cta: #007da8,
   cta-active: #003e53,
-  background: #fcfcfc,
+  background: #f3f2f1,
   brandCoolGrey: #54565b,
   brandFurnaceOrange: #fe811b,
   brandWmGreen: #00807b,
@@ -81,7 +81,7 @@ $size-xl: 3rem; // 48px
 $breakpoint-xs: 0; // Extra small screen / phone
 $breakpoint-sm: 568px; // Small screen / phone
 $breakpoint-md: 768px; // Medium screen / tablet
-$breakpoint-lg: 992px; // Large screen / desktop (this is used for wmcads-container size)
+$breakpoint-lg: 992px; // Large screen / desktop (this is used for ds-container size)
 $breakpoint-xl: 1280px; // Extra large screen / wide desktop
 
 // Grid vars

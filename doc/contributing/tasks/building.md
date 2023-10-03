@@ -43,9 +43,9 @@ Build commands are used for when code is to be compiled to an output that is sui
 - Uses [autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) to parse CSS and add vendor prefixes
 - Minifies CSS
 - Creates two files in `{root}/doc/css/`
-  - `wmcads-website.min.css`
+  - `ds-website.min.css`
     - For styleguide specific styling
-  - `wmcads-components.min.css`
+  - `ds-components.min.css`
     - For any styling related to WMRE components
 - Creates sourcemaps in `{route}/_sourcemaps/`
 
@@ -74,8 +74,8 @@ Build commands are used for when code is to be compiled to an output that is sui
 - Concatenates all smaller javascript files together into one file
 - Mangles and minifies the file
 - Creates three files in `{root}/doc/js/`
-  - `wmcads-website.min.js`
-    - Created from any javascript files found in `{root}/src/wmcads-website/**/*.js`
+  - `ds-website.min.js`
+    - Created from any javascript files found in `{root}/src/ds-website/**/*.js`
     - For styleguide specific items only
   - `vendor.min.js`
     - Created from any javascript files found in `{root}/src/assets/js/vendor/**/*.js`

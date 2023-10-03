@@ -9,20 +9,20 @@
 
 {% block content %}
 
-<div class="wmcads-grid wmcads-grid--align-center wmcads-grid--spacing-lg-2-xl">
+<div class="ds-grid ds-grid--align-center ds-grid--spacing-lg-2-xl">
   {# Overview #}
-  <div class="wmcads-col-1 wmcads-col-lg-2-3">
+  <div class="ds-col-1 ds-col-lg-2-3 ds-m-b-lg">
     Design Systems used within the West Midlands Combined Authority.
   </div>
 </div>
 {# Internal navigation #}
 
-<div class="wmcads-grid wmcads-grid--align-stretch wmcads-grid--spacing-sm-2-xsm wmcads-grid--spacing-lg-4-xsm">
+<div class="ds-grid ds-grid--align-stretch ds-grid--spacing-sm-2-xsm ds-grid--spacing-lg-4-xsm">
   {# WMCA #}
-  <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-lg-1-4 wmcads-p-b-xsm">
+  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
     {{
       wmcadsContentTilesNormal({
-        classModifiers: 'wmcads-content-tile--with-one-link',
+        classModifiers: 'ds-content-tile--with-one-link',
         title: "West Midlands Combined Authority",
         copy: "<p></p>",
         smallTitle: true,
@@ -33,11 +33,26 @@
       })
     }}
   </div>
-  {# Safer Travel #}
-  <div class="wmcads-col-1 wmcads-col-sm-1-2 wmcads-col-lg-1-4 wmcads-p-b-xsm">
+  {# TfWM #}
+  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
     {{
       wmcadsContentTilesNormal({
-        classModifiers: 'wmcads-content-tile--with-one-link',
+        classModifiers: 'ds-content-tile--with-one-link',
+        title: "Transport For West Midlands",
+        copy: "<p></p>",
+        smallTitle: true,
+        readMore: true,
+        link: '/tfwm/',
+        linkText: 'View the TfWM Design System',
+        linkTitle: 'View the TfWM Design System'
+      })
+    }}
+  </div>
+  {# Safer Travel #}
+  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
+    {{
+      wmcadsContentTilesNormal({
+        classModifiers: 'ds-content-tile--with-one-link',
         title: "Safer Travel",
         copy: "<p></p>",
         smallTitle: true,
@@ -45,6 +60,21 @@
         link: '/st/',
         linkText: 'View the Safer Travel Design System',
         linkTitle: 'View the Safer Travel Design System'
+      })
+    }}
+  </div>
+  {# Midlands Connect #}
+  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
+    {{
+      wmcadsContentTilesNormal({
+        classModifiers: 'ds-content-tile--with-one-link',
+        title: "Midlands Connect",
+        copy: "<p></p>",
+        smallTitle: true,
+        readMore: true,
+        link: '/mc/',
+        linkText: 'View the Midlands Connect Design System',
+        linkTitle: 'View the Midlands Connect Design System'
       })
     }}
   </div>

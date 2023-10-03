@@ -1,20 +1,20 @@
-// Included the ol tag too incase dev forgets to add .wmcads-ordered-list class.
-// The ol:not([class*="wmcads-"]) line makes sure we don't target any wmcads components that are using the a tag such as the breadcrumbs
+// Included the ol tag too incase dev forgets to add .ds-ordered-list class.
+// The ol:not([class*="ds-"]) line makes sure we don't target any wmcads components that are using the a tag such as the breadcrumbs
 
-.wmcads-ordered-list,
-.wmcads-html ol:not([class*="wmcads-"]) {
+.ds-ordered-list,
+.ds-html ol:not([class*="ds-"]) {
   position: relative;
   counter-reset: item;
   padding-inline-start: $size-lg;
 
   a,
-  .wmcads-link {
+  .ds-link {
     display: inline;
     font-family: $x-font-family-bold;
   }
 
   ol,
-  ul:not(.wmcads-unordered-list) {
+  ul:not(.ds-unordered-list) {
     position: relative;
     margin-top: $size-md;
     counter-reset: item;
@@ -35,7 +35,7 @@
   }
 
   // Create correct spacing for indent allowing for increase in counter length
-  $selector: "ol:not([class*='wmcads-']) li";
+  $selector: "ol:not([class*='ds-']) li";
   @for $i from 0 through 5 {
     #{repeater($selector, $i, " > ")}:before {
       left: -#{1.25 + (($i + 1) * 0.8rem)};

@@ -1,5 +1,5 @@
 const footerJs = () => {
-  const collapseMenus = document.querySelectorAll('.wmcads-collapse-heading');
+  const collapseMenus = document.querySelectorAll('.ds-collapse-heading');
   let eventListenersAdded = false;
 
   const handleMobileFooter = () => {
@@ -33,7 +33,7 @@ const footerJs = () => {
         const handleKeydown = (e, key) => {
           e.stopPropagation();
           if (key === 9) {
-            const collapseToggleButton = document.querySelectorAll('.wmcads-collapse-heading');
+            const collapseToggleButton = document.querySelectorAll('.ds-collapse-heading');
             const handleToggleButton = () => {
               collapseToggleButton[0].setAttribute('aria-expanded', 'true');
               collapseToggleButton[1].setAttribute('aria-expanded', 'true');
@@ -45,7 +45,7 @@ const footerJs = () => {
         };
 
         // if tab is used open menu
-        const collapseButton = document.querySelectorAll('.wmcads-footer__collapse-button');
+        const collapseButton = document.querySelectorAll('.ds-footer__collapse-button');
 
         // eslint-disable-next-line no-restricted-syntax
         for (const i of collapseButton) {

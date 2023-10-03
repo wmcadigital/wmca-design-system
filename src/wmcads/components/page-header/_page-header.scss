@@ -1,4 +1,4 @@
-.wmcads-page-header {
+.ds-page-header {
   display: block;
   min-height: 300px;
   color: $white;
@@ -10,7 +10,7 @@
   &__home {
     min-height: 420px;
 
-    .wmcads-page-header {
+    .ds-page-header {
       &-box {
         width: 75%;
         background-color: get-color(primary);
@@ -85,7 +85,7 @@
 }
 
 @media (min-width: 400px) {
-  .wmcads-page-header {
+  .ds-page-header {
     img {
       width: 100%;
       height: 100%;

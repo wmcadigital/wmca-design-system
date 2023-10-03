@@ -13,17 +13,17 @@
 {% set title = params.title if params.title else "Hub Header" %} {# Set title else fallback to "mode in West Midlands") #}
 {% set contentHTML = params.contentHTML | safe if params.contentHTML else null %}
 {% set image = params.image if params.image else "/img/examples/curzon-street.png" %}
-{# {% set _modeClass = " wmcads-hub-page-banner--" + mode | lower if mode %} #} {# Set correct modifier class #}
+{# {% set _modeClass = " ds-hub-page-banner--" + mode | lower if mode %} #} {# Set correct modifier class #}
 
-<div class="wmcads-hub-page-banner{{_modeClass}}">
-  <div class="wmcads-container">
-    <div class="wmcads-hub-page-banner__content">
+<div class="ds-hub-page-banner{{_modeClass}}">
+  <div class="ds-container">
+    <div class="ds-hub-page-banner__content">
       {% if _logo %}
-        <div class="wmcads-hub-page-banner__logos">
+        <div class="ds-hub-page-banner__logos">
           <img src="{{_logo}}" alt="{{_logoAlt}} logo">
         </div>
       {% endif %}
-      <div class="wmcads-hub-page-banner__copy wmcads-p-t-md">
+      <div class="ds-hub-page-banner__copy ds-p-t-md">
         <h1>{{ title }}</h1>
         {% if contentHTML %}
           <p>{{ contentHTML }}</p>
@@ -35,8 +35,8 @@
   </div>
 
   {# The arrow indent shape in the desktop banner #}
-  <div class="wmcads-hub-page-banner__image wmcads-hide-mobile" style="background-image: url({{image}});">
-    <svg class="wmcads-hub-page-banner__svg-background" viewBox="0 0 40 200">
+  <div class="ds-hub-page-banner__image ds-hide-mobile" style="background-image: url({{image}});">
+    <svg class="ds-hub-page-banner__svg-background" viewBox="0 0 40 200">
       <path d="M0,0v200h6.03l32.87-93.5c1.48-4.21,1.48-8.79,0-12.99L6.03,0H0z"/>
     </svg>
   </div>

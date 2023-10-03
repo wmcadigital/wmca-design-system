@@ -1,0 +1,20 @@
+// Vars
+$ds: "stds";
+@import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
+@import "mc/vars";
+// Mixins
+@import "mixins";
+
+// Global styles
+@import "utilities";
+@import "typography";
+@import "general";
+
+// Grid
+@import "ds-grid/ds-grid";
+
+// Component Styles
+@import "../../components/components"; // Import all pattern styles
+
+// Pattern Styles
+@import "../../patterns/patterns"; // Import all pattern styles

@@ -1,15 +1,15 @@
 // footer
-.wmcads-footer {
+.ds-footer {
   padding: $size-lg;
   color: $white;
-  background-color: get-color(secondary);
-  box-shadow: 0 100vh 0 100vh get-color(secondary);
+  background-color: get-color(primary, 50, dark);
+  box-shadow: 0 100vh 0 100vh get-color(primary, 50, dark);
 
   * {
     color: inherit;
   }
 
-  &__link.wmcads-link {
+  &__link.ds-link {
     color: $white;
 
     @media screen and (min-width: $breakpoint-lg) {
@@ -35,13 +35,13 @@
   &--v2 {
     padding: $size-lg $size-xs;
 
-    .wmcads-btn {
+    .ds-btn {
       width: 100%;
       color: get-color(primary);
       background-color: $white;
     }
 
-    .wmcads-footer__link {
+    .ds-footer__link {
       color: currentColor;
       font-weight: normal;
       text-decoration: none;
@@ -54,7 +54,7 @@
   }
 
   @media screen and (max-width: $breakpoint-md - 1) {
-    .wmcads-footer__updates-col {
+    .ds-footer__updates-col {
       padding-bottom: $size-md;
 
       &:not(:last-child) {
@@ -68,7 +68,7 @@
     }
   }
 
-  .wmcads-footer__heading {
+  .ds-footer__heading {
     margin-bottom: $size-md;
     padding-bottom: $size-md;
     border-bottom: 1px solid get-color(secondary, 70%);
@@ -78,7 +78,7 @@
       margin-bottom: $size-md;
       font-weight: 700;
 
-      &.wmcads-collapse-heading {
+      &.ds-collapse-heading {
         margin: 0;
         padding: $size-xsm 0;
         border: 0;
@@ -91,7 +91,7 @@
   }
 
   //
-  .wmcads-footer__menu {
+  .ds-footer__menu {
     margin: 0;
     padding: 0;
 
@@ -110,11 +110,11 @@
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    .wmcads-grid {
+    .ds-grid {
       justify-content: space-between;
     }
 
-    .wmcads-col-lg-1-3 {
+    .ds-col-lg-1-3 {
       margin-bottom: $size-lg;
       padding: 0 $size-sm;
 
@@ -129,7 +129,7 @@
   }
 
   // styles for the bottom section of the footer
-  .wmcads-footer__bottom {
+  .ds-footer__bottom {
     @media screen and (max-width: $breakpoint-md - 1) {
       flex-direction: column-reverse;
     }
@@ -137,8 +137,8 @@
     padding-top: $size-md;
     border-top: 1px solid get-color(secondary, 70%);
 
-    .wmcads-footer__link,
-    .wmcads-footer__copyright {
+    .ds-footer__link,
+    .ds-footer__copyright {
       margin: 0;
       font-family: $x-heading-font-family;
       font-weight: 700;
@@ -146,7 +146,7 @@
   }
 
   // menu styling for the bottom section
-  .wmcads-footer__bottom-menu {
+  .ds-footer__bottom-menu {
     margin: 0 0 $size-lg;
     padding: 0;
 
@@ -202,8 +202,8 @@
 $collapse-transition: max-height 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-.wmcads-collapse-heading {
-  .wmcads-collapse-heading__indicator {
+.ds-collapse-heading {
+  .ds-collapse-heading__indicator {
     display: none;
   }
   @media screen and (max-width: $breakpoint-md - 1) {
@@ -211,7 +211,7 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
     justify-content: space-between;
     align-items: center;
 
-    .wmcads-collapse-heading__indicator {
+    .ds-collapse-heading__indicator {
       display: block;
       width: $size-lg;
       height: $size-lg;
@@ -222,14 +222,14 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
     }
 
     &[aria-expanded="true"] {
-      .wmcads-collapse-heading__indicator {
+      .ds-collapse-heading__indicator {
         transform: rotate(-90deg);
       }
     }
   }
 }
 
-.wmcads-collapse-panel {
+.ds-collapse-panel {
   @media screen and (max-width: $breakpoint-md - 1) {
     max-height: 0;
     padding-left: $size-md;
@@ -240,13 +240,13 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
 }
 
 // Text highlighting color
-.wmcads-footer *::-moz-selection {
+.ds-footer *::-moz-selection {
   // Code for Firefox
   color: $white;
   background: get-color(secondary);
 }
 
-.wmcads-footer *::selection {
+.ds-footer *::selection {
   color: $white;
   background: get-color(secondary);
 }

@@ -306,7 +306,7 @@
 				},
 				{
 					"title": "Addresses",
-					"content": "<p>Use the <a href='/patterns/contact-details/' class='wmcads-link'>contact details design pattern</a>. This shows you how to format addresses.</p>"
+					"content": "<p>Use the <a href='/patterns/contact-details/' class='ds-link'>contact details design pattern</a>. This shows you how to format addresses.</p>"
 				},
 				{
 					"title": "Addressing the user",
@@ -400,7 +400,7 @@
 				},
 				{
 					"title": "contact details",
-					"content": "<p>Use the <a href='/patterns/contact-details/' class='wmcads-link'>contact details design pattern</a>.</p>"
+					"content": "<p>Use the <a href='/patterns/contact-details/' class='ds-link'>contact details design pattern</a>.</p>"
 				},
 				{
 					"title": "contactless",
@@ -457,7 +457,7 @@
 				},
 				{
 					"title": "disabled people",
-					"content": "<p>Not 'the disabled' or 'people with disabilities'.</p><p><a href='https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability' class='wmcads-link'>Read GOV.UK advice on words to use and avoid when talking about disability</a>.</p>"
+					"content": "<p>Not 'the disabled' or 'people with disabilities'.</p><p><a href='https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability' class='ds-link'>Read GOV.UK advice on words to use and avoid when talking about disability</a>.</p>"
 				},
 				{
 					"title": "district council",
@@ -474,7 +474,7 @@
 				},
 				{
 					"title": "email",
-					"content": "<p>Not e-mail.</p><p>Always give the full email address when providing a hyperlink. For example, 'email <a href='mailto:#' class='wmcads-link'>ticketing@twfm.org.uk</a>' not '<a href='mailto:#' class='wmcads-link'>email the ticketing team</a>'</p>"
+					"content": "<p>Not e-mail.</p><p>Always give the full email address when providing a hyperlink. For example, 'email <a href='mailto:#' class='ds-link'>ticketing@twfm.org.uk</a>' not '<a href='mailto:#' class='ds-link'>email the ticketing team</a>'</p>"
 				}
 			]
 		},
@@ -517,7 +517,7 @@
 			"styles": [
 				{
 					"title": "Hyphenation",
-					"content": "<p>Hyphenate:<ul><li>re- words starting with e, like re-evaluate</li><li>co-ordinate</li><li>co-operate</li></ul></p><p>Do not hyphenate:</p><p><ul><li>reuse</li><li>reinvent</li><li>reorder</li><li>reopen</li><li>email</li></ul></p><p>Do not use a hyphen unless it's confusing without it, for example, a little used-car is different from a little-used car. You can also refer to <a href='https://www.theguardian.com/guardian-observer-style-guide-h' class='wmcads-link'>The Guardian style guide</a> for advice on hyphenation.</p><p>Use 'to' for time and date ranges, not hyphens.</p>"
+					"content": "<p>Hyphenate:<ul><li>re- words starting with e, like re-evaluate</li><li>co-ordinate</li><li>co-operate</li></ul></p><p>Do not hyphenate:</p><p><ul><li>reuse</li><li>reinvent</li><li>reorder</li><li>reopen</li><li>email</li></ul></p><p>Do not use a hyphen unless it's confusing without it, for example, a little used-car is different from a little-used car. You can also refer to <a href='https://www.theguardian.com/guardian-observer-style-guide-h' class='ds-link'>The Guardian style guide</a> for advice on hyphenation.</p><p>Use 'to' for time and date ranges, not hyphens.</p>"
 				}
 			]
 		},
@@ -526,7 +526,7 @@
 			"styles": [
 				{
 					"title": "ie",
-					"content": "<p>see <a href='#egetcandie' class='wmcads-link'>eg, etc and ie</a></p>"
+					"content": "<p>see <a href='#egetcandie' class='ds-link'>eg, etc and ie</a></p>"
 				},
 				{
 					"title": "Italics",
@@ -556,7 +556,7 @@
 				},
 				{
 					"title": "Lists",
-					"content": "<p>Lists should be bulleted to make them easier to read. See <a href='#bulletpointsandnumberedsteps' class='wmcads-link'>bullets and steps</a>.</p><p>Very long lists can be written as a paragraph with a lead-in sentence if it looks better: 'The following countries are in the EU: Spain, France, Italy...'</p>"
+					"content": "<p>Lists should be bulleted to make them easier to read. See <a href='#bulletpointsandnumberedsteps' class='ds-link'>bullets and steps</a>.</p><p>Very long lists can be written as a paragraph with a lead-in sentence if it looks better: 'The following countries are in the EU: Spain, France, Italy...'</p>"
 				},
 				{
 					"title": "log in",
@@ -602,7 +602,7 @@
 				},
 				{
 					"title": "NXWM",
-					"content": "<p>see <a href='#operatornames' class='wmcads-link'>operator names</a>.</p>"
+					"content": "<p>see <a href='#operatornames' class='ds-link'>operator names</a>.</p>"
 				}
 			]
 		},
@@ -664,11 +664,11 @@
 				},
 				{
 					"title": "plain English",
-					"content": "<p>Lower case plain and upper case English unless in a title: the Plain English Campaign.</p><p>All content should be written in plain English. You should also make sure you use language your audience will understand. Use the <a href='http://www.plainenglish.co.uk/the-a-z-of-alternative-words.html' class='wmcads-link'>Plain English Campaign’s A to Z of alternative words</a> to avoid complex language.</p>"
+					"content": "<p>Lower case plain and upper case English unless in a title: the Plain English Campaign.</p><p>All content should be written in plain English. You should also make sure you use language your audience will understand. Use the <a href='http://www.plainenglish.co.uk/the-a-z-of-alternative-words.html' class='ds-link'>Plain English Campaign’s A to Z of alternative words</a> to avoid complex language.</p>"
 				},
 				{
 					"title": "phone numbers",
-					"content": "<p>Phone numbers should be split into at least three groups of digits for readability, ideally with no more than four digits in any single group. For example: 020 7378 1705; 0343 222 6666; 0762 480 4299. See also the <a href='/patterns/contact-details/' class='wmcads-link'>design pattern for contact details</a>.</p>"
+					"content": "<p>Phone numbers should be split into at least three groups of digits for readability, ideally with no more than four digits in any single group. For example: 020 7378 1705; 0343 222 6666; 0762 480 4299. See also the <a href='/patterns/contact-details/' class='ds-link'>design pattern for contact details</a>.</p>"
 				}
 			]
 		},
@@ -744,7 +744,7 @@
 				},
 				{
 					"title": "TfWM",
-					"content": "<p>See entry on <a href='#transportforwestmidlands' class='wmcads-link'>Transport for West Midlands</a>.</p>"
+					"content": "<p>See entry on <a href='#transportforwestmidlands' class='ds-link'>Transport for West Midlands</a>.</p>"
 				},
 				{
 					"title": "Times",
@@ -806,7 +806,7 @@
 				},
 				{
 					"title": "WMCA",
-					"content": "<p>See entry on <a href='#westmidlandscombinedauthority' class='wmcads-link'>West Midlands Combined Authority</a>.</p>"
+					"content": "<p>See entry on <a href='#westmidlandscombinedauthority' class='ds-link'>West Midlands Combined Authority</a>.</p>"
 				},
 				{
 					"title": "wmnetwork.co.uk",
@@ -814,7 +814,7 @@
 				},
 				{
 					"title": "www.",
-					"content": "<p>See entry on <a href='#wmnetworkcouk' class='wmcads-link'>wmnetwork.co.uk</a>.</p>"
+					"content": "<p>See entry on <a href='#wmnetworkcouk' class='ds-link'>wmnetwork.co.uk</a>.</p>"
 				}
 			]
 		},

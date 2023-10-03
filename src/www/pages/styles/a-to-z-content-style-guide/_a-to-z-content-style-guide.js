@@ -2,19 +2,19 @@ function aToZContentStyleGuide() {
   // FUNCTIONS
   // Change accordion state
   const changeAccordionState = (accordionElem, changeStateToOpen = true) => {
-    const accordionBtn = accordionElem.querySelector('.wmcads-accordion__summary-wrapper');
+    const accordionBtn = accordionElem.querySelector('.ds-accordion__summary-wrapper');
     if (changeStateToOpen) {
-      accordionElem.classList.add('wmcads-is--open');
+      accordionElem.classList.add('ds-is--open');
       accordionBtn.setAttribute('aria-expanded', true);
     } else {
-      accordionElem.classList.remove('wmcads-is--open');
+      accordionElem.classList.remove('ds-is--open');
       accordionBtn.setAttribute('aria-expanded', false);
     }
   };
 
   // Change all accordion states at once
   const changeAllAccordionStates = changeStateToOpen => {
-    const accordions = document.querySelectorAll('main .wmcads-accordion');
+    const accordions = document.querySelectorAll('main .ds-accordion');
     accordions.forEach(accordion => changeAccordionState(accordion, changeStateToOpen));
   };
 
@@ -22,7 +22,7 @@ function aToZContentStyleGuide() {
   const scrollToAnchor = idWithHash => {
     // Check if element is on the page
     const elem = document.querySelector(idWithHash);
-    if (!elem || elem.classList.contains('wmcads-accordion__summary-wrapper')) {
+    if (!elem || elem.classList.contains('ds-accordion__summary-wrapper')) {
       return;
     }
     // Open accordion and scroll to element

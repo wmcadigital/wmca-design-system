@@ -4,21 +4,21 @@
 {% set strongText = params.strongText if params.strongText else "Indicator text" %} {# set button text #}
 {% set iconRight = params.iconRight if params.iconRight %} {# set icon right classes #}
 {% set iconLeft = params.iconLeft if params.iconLeft %} {# set svg left reference #}
-{% set classModifier = ' wmcads-disruption-indicator-large--' + params.classModifier if params.classModifier else "" %}
+{% set classModifier = ' ds-disruption-indicator-large--' + params.classModifier if params.classModifier else "" %}
 
 {{params.comment | safe}}
-<div class="wmcads-disruption-indicator-large{{classModifier}}">
-  <div class="wmcads-disruption-indicator-large__left-wrapper">
-    <span class="wmcads-disruption-indicator-large__left-icon-wrapper">
+<div class="ds-disruption-indicator-large{{classModifier}}">
+  <div class="ds-disruption-indicator-large__left-wrapper">
+    <span class="ds-disruption-indicator-large__left-icon-wrapper">
       {# Get SVG icon for mode #}
       {{-
         wmcadsIcon({
           icon: iconLeft,
-          class: 'wmcads-disruption-indicator-large__icon'
+          class: 'ds-disruption-indicator-large__icon'
         }) | indent(2) | trim
       }} <br>{{params.mode}}
     </span>
-    <span class="wmcads-disruption-indicator-large__text">
+    <span class="ds-disruption-indicator-large__text">
       <strong>{{strongText}}</strong><br>
       {{- params.text }}
     </span>
@@ -26,12 +26,12 @@
 
   {#- If params.iconRightBtn is true -#}
   {% if params.iconRightBtn %}
-  <button class="wmcads-disruption-indicator-large__btn" aria-label="Delete favourite - {{params.mode}} - {{ params.text }}">
+  <button class="ds-disruption-indicator-large__btn" aria-label="Delete favourite - {{params.mode}} - {{ params.text }}">
     {# Get SVG icon #}
     {{-
       wmcadsIcon({
         icon: iconRight,
-        class: 'wmcads-disruption-indicator-large__icon'
+        class: 'ds-disruption-indicator-large__icon'
       }) | indent(4) | trim
     }}
   </button>
@@ -41,7 +41,7 @@
   {{
     wmcadsIcon({
       icon: iconRight,
-      class: 'wmcads-disruption-indicator-large__icon wmcads-disruption-indicator-large__icon--right'
+      class: 'ds-disruption-indicator-large__icon ds-disruption-indicator-large__icon--right'
     }) | indent(2) | trim
   -}}
   {% endif %}

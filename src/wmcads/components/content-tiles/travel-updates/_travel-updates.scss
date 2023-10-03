@@ -1,4 +1,4 @@
-.wmcads-content-tile__container {
+.ds-content-tile__container {
   &-wrapper {
     width: 335px;
     margin-bottom: $size-sm;
@@ -17,28 +17,28 @@
     margin-bottom: $size-sm;
   }
 
-  .wmcads-disruption-indicator-medium--narrow-travel-updates {
+  .ds-disruption-indicator-medium--narrow-travel-updates {
     &-bus {
       width: 150px;
       margin-bottom: 10px;
       padding: 0.7rem;
 
-      .wmcads-disruption-indicator-medium__icon--right {
+      .ds-disruption-indicator-medium__icon--right {
         float: right;
       }
 
-      .wmcads-disruption-indicator-medium__icon--left {
+      .ds-disruption-indicator-medium__icon--left {
         margin-right: 25px;
       }
     }
   }
 
-  .wmcads-msg-help {
+  .ds-msg-help {
     display: block;
     width: 335px;
   }
 
-  .wmcads-grid__bus {
+  .ds-grid__bus {
     width: 100%;
   }
 }

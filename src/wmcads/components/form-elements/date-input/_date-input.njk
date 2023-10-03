@@ -10,8 +10,8 @@
 {% set required = params.required if params.required else false %}
 {% set classes = " " + params.classes if params.classes %} {# set paramClass to params.classNames if any #}
 {# Error Message Params #}
-{% set groupErrorClass = " wmcads-fe-group--error" if params.error %}
-{% set inputErrorClass = " wmcads-fe-input--error" if params.error %}
+{% set groupErrorClass = " ds-fe-group--error" if params.error %}
+{% set inputErrorClass = " ds-fe-input--error" if params.error %}
 {% set errorContentText = params.errorMessage.contentText if params.errorMessage.contentText else "Please enter a valid date" %}
 {% set errorContentHTML = params.errorMessage.contentHTML if params.errorMessage.contentHTML else null %}
 {% set errorClasses = " " + params.errorMessage.classes if params.errorMessage.classes else null %}
@@ -24,8 +24,8 @@
 {% set placeholder = params.attributes.placeholder if params.attributes.placeholder else null %}
 {% set value = params.attributes.value if params.attributes.value else null %}
 
-<div id="{{id}}" class="wmcads-fe-group{{groupErrorClass}}{{formGroupClasses}}">
-  <div class="wmcads-fe-date-input">
+<div id="{{id}}" class="ds-fe-group{{groupErrorClass}}{{formGroupClasses}}">
+  <div class="ds-fe-date-input">
     {# Error message #}
     {% if params.error %}
       {{
@@ -40,34 +40,34 @@
       }}
     {% endif %}
     {# Day #}
-    <div class="wmcads-fe-date-input__day">
+    <div class="ds-fe-date-input__day">
       {{
         wmcadsLabel({
           contentText: "Day",
           for: "LastUsedDateDay"
         })
       }}
-      <input autocomplete="day" class="wmcads-fe-input {{inputErrorClass}}" id="{{id}}_LastUsedDateDay" inputmode="numeric" name="{{name}}" type="text" value="" maxLength="2" pattern="[0-9]*" {% if required %} required="true" {% endif %}>
+      <input autocomplete="day" class="ds-fe-input {{inputErrorClass}}" id="{{id}}_LastUsedDateDay" inputmode="numeric" name="{{name}}" type="text" value="" maxLength="2" pattern="[0-9]*" {% if required %} required="true" {% endif %}>
     </div>
     {# Month #}
-    <div class="wmcads-fe-date-input__month">
+    <div class="ds-fe-date-input__month">
       {{
         wmcadsLabel({
           contentText: "Month",
           for: "LastUsedDateMonth"
         })
       }}
-      <input autocomplete="month" class="wmcads-fe-input {{inputErrorClass}}" id="{{id}}_LastUsedDateMonth" inputmode="numeric" name="{{name}}" type="text" value="" maxLength="2" pattern="[0-9]*" {% if required %} required="true" {% endif %}>
+      <input autocomplete="month" class="ds-fe-input {{inputErrorClass}}" id="{{id}}_LastUsedDateMonth" inputmode="numeric" name="{{name}}" type="text" value="" maxLength="2" pattern="[0-9]*" {% if required %} required="true" {% endif %}>
     </div>
     {# Year #}
-    <div class="wmcads-fe-date-input__year">
+    <div class="ds-fe-date-input__year">
       {{
         wmcadsLabel({
           contentText: "Year",
           for: "LastUsedDateYear"
         })
       }}
-      <input autocomplete="year" class="wmcads-fe-input {{inputErrorClass}}" id="{{id}}_LastUsedDateYear" inputmode="numeric" name="{{name}}" type="text" value="" maxLength="4" pattern="[0-9]*" {% if required %} required="true" {% endif %}>
+      <input autocomplete="year" class="ds-fe-input {{inputErrorClass}}" id="{{id}}_LastUsedDateYear" inputmode="numeric" name="{{name}}" type="text" value="" maxLength="4" pattern="[0-9]*" {% if required %} required="true" {% endif %}>
     </div>
 
   </div>

@@ -12,10 +12,10 @@
 {% set ctaButton = params.ctaButton %}
 {% set transportModals = params.transportModals %}
 
-<div class="wmcads-branded-banner">
-   <div class="wmcads-container">
-      <div class="wmcads-grid wmcads-grid--spacing-lg-2-xl wmcads-m-t-sm wmcads-m-b-sm">
-         <div class="wmcads-col-1 wmcads-col-md-2-3">
+<div class="ds-branded-banner">
+   <div class="ds-container">
+      <div class="ds-grid ds-grid--spacing-lg-2-xl ds-m-t-sm ds-m-b-sm">
+         <div class="ds-col-1 ds-col-md-2-3">
          {% if breadcrumbItems %}
             {{
                wmcadsBreadcrumb({
@@ -24,7 +24,7 @@
             }}
          {% endif %}
          {% if titleHTML %}
-            <h1 class="wmcads-branded-banner__title">
+            <h1 class="ds-branded-banner__title">
                {{ titleHTML | safe }}
             </h1>
          {% endif %}
@@ -32,47 +32,47 @@
             {{ contentCol1 | safe }}
          {% else %}
             {% if titleHtml !== null %}
-               <h1 class="wmcads-branded-banner__title">
+               <h1 class="ds-branded-banner__title">
                   {{
                      wmcadsIcon({
                         icon: 'swift-full-logo',
-                        class: 'wmcads-swift-logo-inline'
+                        class: 'ds-swift-logo-inline'
                      })
                   }} and tickets
                </h1>
             {% endif %}
-            <p class="wmcads-h3">We sell lots of tickets for bus, train and tram travel in the West Midlands</p>
+            <p class="ds-h3">We sell lots of tickets for bus, train and tram travel in the West Midlands</p>
             <p>You can also combine different modes of travel to suit your needs. <br>Tickets can last from 1 day to a year.</p>
          {% endif %}
 
          {% if transportModals %}
-            <div class="wmcads-branded-banner__modals wmcads-m-b-lg">
+            <div class="ds-branded-banner__modals ds-m-b-lg">
                {% for modal in transportModals %}
                   {% if modal === "Train" %}
-                     <div class="wmcads-branded-banner__modal">
-                        <svg class="wmcads-branded-banner__icon  wmcads-branded-banner__icon--train">
-                           <use xlink:href="#wmcads-modes-bg-rail" href="#wmcads-modes-bg-rail"></use>
+                     <div class="ds-branded-banner__modal">
+                        <svg class="ds-branded-banner__icon  ds-branded-banner__icon--train">
+                           <use xlink:href="#ds-modes-bg-rail" href="#ds-modes-bg-rail"></use>
                         </svg>
                         Train
                      </div>
                   {% elif modal === "Tram" %}
-                     <div class="wmcads-branded-banner__modal">
-                        <svg class="wmcads-branded-banner__icon  wmcads-branded-banner__icon--tram">
-                           <use xlink:href="#wmcads-modes-bg-metro" href="#wmcads-modes-bg-metro"></use>
+                     <div class="ds-branded-banner__modal">
+                        <svg class="ds-branded-banner__icon  ds-branded-banner__icon--tram">
+                           <use xlink:href="#ds-modes-bg-metro" href="#ds-modes-bg-metro"></use>
                         </svg>
                         {{modal}}
                      </div>
                   {% elif modal === "Park and ride" %}
-                     <div class="wmcads-branded-banner__modal wmcads-branded-banner__icon--p-r">
-                        <svg class="wmcads-branded-banner__icon">
-                           <use xlink:href="#wmcads-modes-bg-p-r" href="#wmcads-modes-bg-p-r"></use>
+                     <div class="ds-branded-banner__modal ds-branded-banner__icon--p-r">
+                        <svg class="ds-branded-banner__icon">
+                           <use xlink:href="#ds-modes-bg-p-r" href="#ds-modes-bg-p-r"></use>
                         </svg>
                         Park and ride
                      </div>
                   {% else %}
-                     <div class="wmcads-branded-banner__modal">
-                        <svg class="wmcads-branded-banner__icon  wmcads-branded-banner__icon--{{ modal | lower }}">
-                           <use xlink:href="#wmcads-modes-bg-{{ modal | lower }}" href="#wmcads-modes-bg-{{ modal | lower }}"></use>
+                     <div class="ds-branded-banner__modal">
+                        <svg class="ds-branded-banner__icon  ds-branded-banner__icon--{{ modal | lower }}">
+                           <use xlink:href="#ds-modes-bg-{{ modal | lower }}" href="#ds-modes-bg-{{ modal | lower }}"></use>
                         </svg>
                         {{ modal }}
                      </div>
@@ -84,8 +84,8 @@
          </div>
 
          {% if contentCol2 %}
-         <div class="wmcads-col-1 wmcads-col-md-1-3">
-            <div class="wmcads-col-1">
+         <div class="ds-col-1 ds-col-md-1-3">
+            <div class="ds-col-1">
                {{ contentCol2 | safe }}
             </div>
          </div>
@@ -94,7 +94,7 @@
 
 
       {% if ctaButton %}
-         <div class="wmcads-col-1">
+         <div class="ds-col-1">
             {{
                wmcadsLinkAsButton({
                   contentText: ctaButton.contentText if ctaButton.contentText else "Button text",
@@ -102,18 +102,18 @@
                   linkTitle: ctaButton.linkTitle if ctaButton.linkTitle else ctaButton.contentText,
                   linkTarget: ctaButton.linkTarget if ctaButton.linkTarget else "_self",
                   iconRight: 'general-chevron-right',
-                  classes: 'wmcads-btn--dark-bg'
+                  classes: 'ds-btn--dark-bg'
                })
             }}
          </div>
       {% else %}
-         <div class="wmcads-col-1">
+         <div class="ds-col-1">
             {{
                wmcadsLinkAsButton({
                   contentText: 'Find a ticket',
                   iconRight: 'general-chevron-right',
                   iconRight: 'general-chevron-right',
-                  classes: 'wmcads-btn--dark-bg'
+                  classes: 'ds-btn--dark-bg'
                })
             }}
          </div>

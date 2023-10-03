@@ -6,15 +6,15 @@
 {% set buttons = ["I drive", "I use the bus", "I use the train", "I use the tram", "I walk or cycle", "I want to visit an attraction or venue"] %}
 
 {% call wmcadsContentCard() %}
-    <div class="wmcads-p-sm">
-        <h2 class="wmcads-content-card__title">Advice to keep moving</h2>
-        <ul class="wmcads-content-card__list wmcads-m-b-none">
+    <div class="ds-p-sm">
+        <h2 class="ds-content-card__title">Advice to keep moving</h2>
+        <ul class="ds-content-card__list ds-m-b-none">
             {% for buttonText in buttons -%}
-            <li class="wmcads-content-card__list-item">
+            <li class="ds-content-card__list-item">
                 {{
                     wmcadsButton({
                         text: buttonText,
-                        classNames: "wmcads-btn--primary wmcads-content-card__list-item-btn",
+                        classNames: "ds-btn--primary ds-content-card__list-item-btn",
                         iconRight: "general-chevron-right"
                     }) | indent(16) | trim
                 }}

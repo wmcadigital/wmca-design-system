@@ -1,4 +1,4 @@
-.wmcads-accordion {
+.ds-accordion {
   display: block;
   background-color: $white;
 
@@ -50,15 +50,15 @@
   }
 
   // When accordion open
-  &.wmcads-is--open {
+  &.ds-is--open {
     // hide + icon
-    .wmcads-accordion__icon {
+    .ds-accordion__icon {
       display: none;
     }
 
     // show - icon and content
-    .wmcads-accordion__content,
-    .wmcads-accordion__icon--minimise {
+    .ds-accordion__content,
+    .ds-accordion__icon--minimise {
       display: block;
     }
   }

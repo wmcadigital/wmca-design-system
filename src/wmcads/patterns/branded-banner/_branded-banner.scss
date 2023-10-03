@@ -1,9 +1,9 @@
-&.wmcads-branded-banner {
+&.ds-branded-banner {
   padding: $size-lg 0;
   color: $white;
   background-color: get-color(primary);
 
-  .wmcads-breadcrumb {
+  .ds-breadcrumb {
     padding: 0;
 
     &__link,
@@ -78,7 +78,7 @@
   }
 
   // helper class for aligning swift logo icon
-  .wmcads-swift-logo-inline {
+  .ds-swift-logo-inline {
     width: 3.6em;
     height: 1.3em;
     margin-top: -0.175em;

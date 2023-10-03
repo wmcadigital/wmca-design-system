@@ -30,7 +30,7 @@ $header-height-mobile: 4rem;
       overflow: hidden;
 
       // row-reverse ensures close icon is on the right
-      .wmcads-mega-menu {
+      .ds-mega-menu {
         flex-direction: row-reverse;
 
         &__search-btn {
@@ -42,7 +42,7 @@ $header-height-mobile: 4rem;
   }
 }
 
-.wmcads-header {
+.ds-header {
   display: block;
   padding: $size-md 0;
   background-color: get-color(secondary);
@@ -95,7 +95,7 @@ $header-height-mobile: 4rem;
 
   // To vertical align the logo's and nav
   &__vertical-align,
-  .wmcads-phase-indicator {
+  .ds-phase-indicator {
     vertical-align: middle;
   }
 
@@ -132,14 +132,14 @@ $header-height-mobile: 4rem;
       margin: 0 $size-sm;
     }
 
-    .wmcads-link {
+    .ds-link {
       color: $white;
     }
   }
 
   // App specific header styles
   &--mobile-app {
-    .wmcads-header__main-links {
+    .ds-header__main-links {
       display: none;
 
       @media screen and (min-width: $breakpoint-md) {
@@ -147,7 +147,7 @@ $header-height-mobile: 4rem;
       }
     }
 
-    .wmcads-header__back-btn {
+    .ds-header__back-btn {
       @media screen and (min-width: $breakpoint-md) {
         display: none;
       }
@@ -156,7 +156,7 @@ $header-height-mobile: 4rem;
 }
 
 // mega menu styling
-.wmcads-mega-menu {
+.ds-mega-menu {
   // all sizes navigation styles
   display: flex;
   letter-spacing: normal;
@@ -222,7 +222,7 @@ $header-height-mobile: 4rem;
 
 // mobile only mega menu styles
 @media screen and (max-width: $breakpoint-lg - 1) {
-  .wmcads-mega-menu {
+  .ds-mega-menu {
     padding: $size-xs 0;
     align-items: center;
 
@@ -262,8 +262,8 @@ $header-height-mobile: 4rem;
       background-color: $white;
       flex-direction: column;
 
-      .wmcads-mega-menu__primary-menu-item,
-      .wmcads-mega-menu__sub-menu-item {
+      .ds-mega-menu__primary-menu-item,
+      .ds-mega-menu__sub-menu-item {
         border-bottom: 1px solid get-color(background);
       }
     }
@@ -281,7 +281,7 @@ $header-height-mobile: 4rem;
       opacity: 0;
       background-color: $white;
 
-      .wmcads-container {
+      .ds-container {
         padding: 0;
       }
     }
@@ -304,7 +304,7 @@ $header-height-mobile: 4rem;
     &__primary-menu-link {
       width: 100%;
 
-      .wmcads-mega-menu__link-arrow-icon {
+      .ds-mega-menu__link-arrow-icon {
         pointer-events: none;
       }
     }
@@ -318,7 +318,7 @@ $header-height-mobile: 4rem;
       &.open {
         z-index: 100;
 
-        .wmcads-mega-menu__link-arrow-icon-btn {
+        .ds-mega-menu__link-arrow-icon-btn {
           display: flex;
           position: absolute;
           z-index: 100;
@@ -338,14 +338,14 @@ $header-height-mobile: 4rem;
             margin: 0;
           }
 
-          .wmcads-mega-menu__link-arrow-icon {
+          .ds-mega-menu__link-arrow-icon {
             margin-right: $size-sm;
             transform: rotate(180deg);
             color: currentColor;
           }
         }
 
-        .wmcads-mega-menu__container {
+        .ds-mega-menu__container {
           transform: translateX(-100%);
           opacity: 1;
         }
@@ -375,11 +375,11 @@ $header-height-mobile: 4rem;
       flex-wrap: wrap;
       align-items: center;
 
-      .wmcads-mega-menu__sub-menu-link {
+      .ds-mega-menu__sub-menu-link {
         flex-grow: 1;
       }
 
-      .wmcads-mega-menu__collapse-toggle {
+      .ds-mega-menu__collapse-toggle {
         display: block;
         height: 3.5rem;
         margin-right: 0.25rem;
@@ -388,11 +388,11 @@ $header-height-mobile: 4rem;
         background-color: transparent;
       }
 
-      .wmcads-mega-menu__link-arrow-icon {
+      .ds-mega-menu__link-arrow-icon {
         transform: rotate(90deg);
       }
 
-      .wmcads-mega-menu__sub-menu-child-menu {
+      .ds-mega-menu__sub-menu-child-menu {
         flex-basis: 100%;
         flex-grow: 0;
         flex-shrink: 0;
@@ -428,11 +428,11 @@ $header-height-mobile: 4rem;
 
     &__collapse-toggle {
       &.open {
-        & + .wmcads-mega-menu__sub-menu-child-menu {
+        & + .ds-mega-menu__sub-menu-child-menu {
           display: block;
         }
 
-        .wmcads-mega-menu__link-arrow-icon {
+        .ds-mega-menu__link-arrow-icon {
           transform: rotate(-90deg);
         }
       }
@@ -472,7 +472,7 @@ $header-height-mobile: 4rem;
 }
 
 // mega menu header modifier
-.wmcads-header--mega-menu {
+.ds-header--mega-menu {
   position: relative;
   z-index: 1000;
   padding: 0;
@@ -480,35 +480,35 @@ $header-height-mobile: 4rem;
   @media screen and (max-width: $breakpoint-lg - 1) {
     height: $header-height-mobile;
 
-    .wmcads-mega-menu {
+    .ds-mega-menu {
       height: $header-height-mobile;
     }
 
-    &:not(.wmcads-header--mega-menu-open) {
-      .wmcads-mega-menu__scroll-controller {
+    &:not(.ds-header--mega-menu-open) {
+      .ds-mega-menu__scroll-controller {
         overflow: hidden;
       }
     }
 
     &-open {
-      .wmcads-mega-menu__scroll-controller {
+      .ds-mega-menu__scroll-controller {
         visibility: visible;
         opacity: 1;
       }
 
-      .wmcads-mega-menu__mobile-toggle {
+      .ds-mega-menu__mobile-toggle {
         padding: 0 0.5rem;
         border: 0;
         font-size: 0;
 
-        .wmcads-mega-menu__close-icon {
+        .ds-mega-menu__close-icon {
           display: block;
         }
       }
     }
 
     &-submenu-open {
-      .wmcads-header__logo-link {
+      .ds-header__logo-link {
         display: none;
       }
     }
@@ -517,7 +517,7 @@ $header-height-mobile: 4rem;
 
 // desktop navigation styles
 @media screen and (min-width: $breakpoint-md) {
-  .wmcads-mega-menu {
+  .ds-mega-menu {
     &::after {
       content: "";
       display: block;
@@ -555,11 +555,11 @@ $header-height-mobile: 4rem;
 
     &__primary-menu-item {
       &.active {
-        .wmcads-mega-menu__primary-menu-link {
+        .ds-mega-menu__primary-menu-link {
           background-color: get-color(primary);
         }
 
-        .wmcads-mega-menu__container {
+        .ds-mega-menu__container {
           @include menu-visible(true);
         }
       }
@@ -602,11 +602,11 @@ $header-height-mobile: 4rem;
       &--has-child-menus {
         padding: 2.5rem 0 1.5rem;
 
-        .wmcads-mega-menu__sub-menu-item {
+        .ds-mega-menu__sub-menu-item {
           margin: 0 0 $size-md;
         }
 
-        .wmcads-mega-menu__sub-menu-link {
+        .ds-mega-menu__sub-menu-link {
           position: relative;
           margin-bottom: $size-sm;
           padding-left: $size-lg;
@@ -616,7 +616,7 @@ $header-height-mobile: 4rem;
           text-decoration: none;
         }
 
-        .wmcads-mega-menu__sub-menu-link-icon {
+        .ds-mega-menu__sub-menu-link-icon {
           display: block;
         }
       }
@@ -666,7 +666,7 @@ $header-height-mobile: 4rem;
 }
 
 @media screen and (max-width: $breakpoint-md - 1) {
-  .wmcads-mega-menu__search-container {
+  .ds-mega-menu__search-container {
     visibility: hidden;
     position: absolute;
     top: 100%;
@@ -675,37 +675,37 @@ $header-height-mobile: 4rem;
     opacity: 0;
   }
 
-  .wmcads-header--search-open {
+  .ds-header--search-open {
     position: fixed;
     width: 100%;
 
-    .wmcads-mega-menu__search-container {
+    .ds-mega-menu__search-container {
       visibility: visible;
       transform: translateY(0);
       opacity: 1;
     }
 
-    .wmcads-mega-menu__search-icon {
+    .ds-mega-menu__search-icon {
       display: none;
     }
 
-    .wmcads-mega-menu__search-close-icon {
+    .ds-mega-menu__search-close-icon {
       display: block;
     }
   }
 }
 
-.wmcads-search-container {
+.ds-search-container {
   margin: 0 auto;
   padding: $size-md;
 
-  .wmcads-search-heading {
+  .ds-search-heading {
     margin: $size-lg 0;
     font-family: $x-heading-font-family;
     font-weight: 700;
   }
 
-  .wmcads-search-list {
+  .ds-search-list {
     margin: 0;
     padding: 0;
 
@@ -715,7 +715,7 @@ $header-height-mobile: 4rem;
     }
   }
 
-  .wmcads-link {
+  .ds-link {
     &__chevron {
       fill: get-color(secondary);
     }
@@ -727,24 +727,24 @@ $header-height-mobile: 4rem;
     color: $white;
     background-color: get-color(primary);
 
-    .wmcads-search-heading {
+    .ds-search-heading {
       color: currentColor;
     }
 
-    .wmcads-search-bar__input {
+    .ds-search-bar__input {
       border: 0;
     }
 
-    .wmcads-search-bar__btn {
+    .ds-search-bar__btn {
       background-color: get-color(secondary);
     }
 
-    .wmcads-link {
+    .ds-link {
       color: $white;
     }
   }
   @media screen and (min-width: $breakpoint-sm) {
-    .wmcads-search-list {
+    .ds-search-list {
       display: flex;
       flex-wrap: wrap;
 
@@ -757,7 +757,7 @@ $header-height-mobile: 4rem;
     max-width: 40rem;
     padding: $size-lg $size-md;
 
-    .wmcads-link {
+    .ds-link {
       color: get-color(primary);
       text-decoration: none;
 
@@ -769,7 +769,7 @@ $header-height-mobile: 4rem;
   }
 }
 
-.wmcads-swift-icon {
+.ds-swift-icon {
   display: inline-block;
   width: 3.5em;
   height: 1.35em;
@@ -793,8 +793,8 @@ $header-height-mobile: 4rem;
 }
 
 // code example fix for overlay
-.wmcads-website-code-example {
-  .wmcads-mega-menu::before {
+.ds-website-code-example {
+  .ds-mega-menu::before {
     position: absolute;
   }
 }

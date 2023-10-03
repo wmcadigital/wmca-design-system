@@ -95,12 +95,12 @@
   <li>Keep the icon set consistent with other West Midlands Combined Authority Services</li>
 </ul>
 <pre>
-  <code class="html wmcads-show-more-ignore" tabindex="0">
+  <code class="html ds-show-more-ignore" tabindex="0">
   {%- filter forceescape -%}
   <!-- Ajax SVGs from WMCA Design System -->
   <script>
     const ajax = new XMLHttpRequest();
-    ajax.open('GET', 'https://unpkg.com/WMCA-design-system@$*version/build/img/wmcads-icons.min.svg', true);
+    ajax.open('GET', 'https://unpkg.com/WMCA-design-system@$*version/build/img/ds-icons.min.svg', true);
     ajax.send();
     ajax.onload = function () {
       const div = document.createElement('div');
@@ -115,7 +115,7 @@
 
 <h4>Displaying an icon</h4>
 <p>To display an icon or glyph, use an icon tag (from the icon section at the bottom of the page) with a href attribute and xlink:href (as a fallback). Make sure that the xlink and href tags are pointing to the location of your downloaded icon sprite sheet.</p>
-<p>The <code class="wmcads-website-inline-code">ICON-TAG-NAME</code> should be replaced with the icon tag name of the icon you want to show from the Icons section below, for example <code class="wmcads-website-inline-code">#wmcads-general-arrow</code> should be in the <code class="wmcads-website-inline-code">xlink:href</code> and <code class="wmcads-website-inline-code">href</code> attributes of the svg's <code class="wmcads-website-inline-code">&lt;use&gt;</code> element.</p>
+<p>The <code class="ds-website-inline-code">ICON-TAG-NAME</code> should be replaced with the icon tag name of the icon you want to show from the Icons section below, for example <code class="ds-website-inline-code">#ds-general-arrow</code> should be in the <code class="ds-website-inline-code">xlink:href</code> and <code class="ds-website-inline-code">href</code> attributes of the svg's <code class="ds-website-inline-code">&lt;use&gt;</code> element.</p>
 <pre>
   <code class="html " tabindex="0" >
     {{-
@@ -129,7 +129,7 @@
 
 <h4>Can't include via recommended method? Try hosting the sprites locally</h4>
 <ul>
-  <li><a class="wmcads-link" target="_blank" href="https://unpkg.com/WMCA-design-system@$*version/build/img/wmcads-icons.min.svg" download="wmcads-icons.min.svg">Download the icon svg sprite</a>.</li>
+  <li><a class="ds-link" target="_blank" href="https://unpkg.com/WMCA-design-system@$*version/build/img/ds-icons.min.svg" download="ds-icons.min.svg">Download the icon svg sprite</a>.</li>
   <li>Include the downloaded icon sprite in to your project locally.</li>
   <li>You can now start using the icon svg sprite sheet using the instructions from the "Displaying an icon" section above.</li>
 </ul>
@@ -138,11 +138,11 @@
 
 {# Icons #}
 <h2>Icons</h2>
-<p>Find below a list of all our icons and their tags below. To use, don't forget to prefix the tag with 'wmcads-'</p>
+<p>Find below a list of all our icons and their tags below. To use, don't forget to prefix the tag with 'ds-'</p>
 <h3>General</h3>
-<div class="wmcads-grid website-icons">
+<div class="ds-grid website-icons">
   {% for icon in iconGeneral %}
-    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
+    <div class="ds-col-1-2 ds-col-sm-1-6 text-center">
       {{
         wmcadsIcon({
           icon: 'general-' + icon
@@ -155,9 +155,9 @@
 
 {# Portfolios #}
 <h3>Portfolios</h3>
-<div class="wmcads-grid website-icons">
+<div class="ds-grid website-icons">
   {% for icon in iconPortfolio %}
-    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
+    <div class="ds-col-1-2 ds-col-sm-1-6 text-center">
       {{
         wmcadsIcon({
           icon: 'portfolio-' + icon
@@ -170,9 +170,9 @@
 
 {# Social #}
 <h3>Social</h3>
-<div class="wmcads-grid website-icons">
+<div class="ds-grid website-icons">
   {% for icon in iconSocial %}
-    <div class="wmcads-col-1-2 wmcads-col-sm-1-6 text-center">
+    <div class="ds-col-1-2 ds-col-sm-1-6 text-center">
       {{
         wmcadsIcon({
           icon: 'social-' + icon

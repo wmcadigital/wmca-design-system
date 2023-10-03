@@ -1,23 +1,23 @@
 .template-search {
-  .wmcads-grid {
+  .ds-grid {
     @media screen and (max-width: $breakpoint-md) {
       flex-direction: column-reverse;
     }
   }
 
-  .wmcads-p-r-xl {
+  .ds-p-r-xl {
     @media screen and (max-width: $breakpoint-md) {
       padding: 0;
     }
   }
 
-  .wmcads-hide-mobile {
+  .ds-hide-mobile {
     @media screen and (max-width: $breakpoint-sm) {
       display: none;
     }
   }
 
-  .wmcads-search-sort {
+  .ds-search-sort {
     @media screen and (max-width: $breakpoint-sm) {
       margin-top: $size-md;
     }
@@ -29,7 +29,7 @@
       flex-direction: column-reverse;
     }
 
-    .wmcads-search-sort {
+    .ds-search-sort {
       @media screen and (max-width: $breakpoint-md) {
         margin-top: $size-lg;
         padding-top: $size-lg;

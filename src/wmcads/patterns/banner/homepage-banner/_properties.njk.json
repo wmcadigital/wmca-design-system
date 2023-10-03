@@ -8,7 +8,7 @@
     {
       "name": "titleHTML",
       "type": "string",
-      "description": "HTML title content to use in the banner. If <code class='wmcads-website-inline-code'>titleText</code> is provided, the <code class='wmcads-website-inline-code'>titleHTML</code>  argument will be ignored."
+      "description": "HTML title content to use in the banner. If <code class='ds-website-inline-code'>titleText</code> is provided, the <code class='ds-website-inline-code'>titleHTML</code>  argument will be ignored."
     },
     {
       "name": "image",

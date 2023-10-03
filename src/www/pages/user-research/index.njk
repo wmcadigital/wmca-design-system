@@ -84,8 +84,8 @@
 
 {% block content %}
 {# User research #}
-<div class="wmcads-grid">
-  <div class="wmcads-col-1 wmcads-col-md-3-4">
+<div class="ds-grid">
+  <div class="ds-col-1 ds-col-md-3-4">
     <h2>Introduction</h2>
       <p>User research helps teams learn about users and create services that meet their needs.</p>
       <p>Without it, you won’t know what problems you’re trying to solve, what to build or if the service you create will work well for users.</p>
@@ -151,10 +151,10 @@
 
 <h2>Research method toolbox</h2>
 
-<div class="wmcads-grid">
+<div class="ds-grid">
   {# Loop through each of the title/copy set at top of file and display in content tile component #}
   {% for method in userResearchMethods %}
-    <div class="wmcads-col-1 wmcads-col-md-1-3 wmcads-col-lg-1-4 wmcads-p-sm">
+    <div class="ds-col-1 ds-col-md-1-3 ds-col-lg-1-4 ds-p-sm">
         {{
           wmcadsContentTilesNormal({
             title: method.title,

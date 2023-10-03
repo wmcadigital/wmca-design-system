@@ -5,19 +5,19 @@
 {% block content %}
 <h2>Introduction to wmcads Grid column spacing</h2>
 <p>
-  Spacing can be applied in between <code class="wmcads-website-inline-code">.wmcads-col-*</code> elements by adding a class to the parent <code class="wmcads-website-inline-code">.wmcads-grid</code>.
+  Spacing can be applied in between <code class="ds-website-inline-code">.ds-col-*</code> elements by adding a class to the parent <code class="ds-website-inline-code">.ds-grid</code>.
 </p>
 <p>
-  The classes are named using the format <code class="wmcads-website-inline-code">.wmcads-grid--spacing-{col-count}-{size}</code>.
+  The classes are named using the format <code class="ds-website-inline-code">.ds-grid--spacing-{col-count}-{size}</code>.
 </p>
 <p>
-  Where <code class="wmcads-website-inline-code">{col-count}</code> is the number of columns per row and <code class="wmcads-website-inline-code">{size}</code> is the same as in the spacing utility classes above.
+  Where <code class="ds-website-inline-code">{col-count}</code> is the number of columns per row and <code class="ds-website-inline-code">{size}</code> is the same as in the spacing utility classes above.
 </p>
 <p>
-  Spacing can also be applied responsively using the format <code class="wmcads-website-inline-code">.wmcads-grid--spacing-{breakpoint}-{col-count}-{size}</code>.
+  Spacing can also be applied responsively using the format <code class="ds-website-inline-code">.ds-grid--spacing-{breakpoint}-{col-count}-{size}</code>.
 </p>
 <p>
-  Where <code class="wmcads-website-inline-code">{breakpoint}</code> is one of breakpoint sizes described in the grid section.
+  Where <code class="ds-website-inline-code">{breakpoint}</code> is one of breakpoint sizes described in the grid section.
 </p>
 
 <h3>When to use Grid column spacing</h3>
@@ -29,31 +29,31 @@
 <h2>Examples</h2>
 
 <h3>Example 1</h3>
-<p>This example shows the use of the wmcads-content-card component displayed in a grid of thirds with spacing of 1rem. </p>
+<p>This example shows the use of the ds-content-card component displayed in a grid of thirds with spacing of 1rem. </p>
 
-<div class="wmcads-grid wmcads-grid--spacing-3-md">
-    <div class="wmcads-col-1-3">
-        <div class="wmcads-content-card">
+<div class="ds-grid ds-grid--spacing-3-md">
+    <div class="ds-col-1-3">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Who weve funded</h3>
                 <p>See which councils and providers weve funded, and what for.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-3">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-3">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Find training schemes</h3>
                 <p>You can find training and education providers weve funded online.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-3">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-3">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Contact us</h3>
                 <p>Get in touch if you want to know more about the budget.</p>
             </div>
@@ -62,31 +62,31 @@
 </div>
 
 <pre>
-  <code class="html wmcads-show-more-ignore" tabindex="0">
+  <code class="html ds-show-more-ignore" tabindex="0">
   {%- filter forceescape %}
-  <div class="wmcads-grid wmcads-grid--spacing-3-md">
-    <div class="wmcads-col-1-3">
-        <div class="wmcads-content-card">
+  <div class="ds-grid ds-grid--spacing-3-md">
+    <div class="ds-col-1-3">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Who weve funded</h3>
                 <p>See which councils and providers weve funded, and what for.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-3">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-3">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Find training schemes</h3>
                 <p>You can find training and education providers weve funded online.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-3">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-3">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Contact us</h3>
                 <p>Get in touch if you want to know more about the budget.</p>
             </div>
@@ -99,22 +99,22 @@
 
 <hr>
 <h3>Example 2</h3>
-<p>This example shows the use of the wmcads-content-card component displayed in a half grid with spacing of 2rem. </p>
+<p>This example shows the use of the ds-content-card component displayed in a half grid with spacing of 2rem. </p>
 
-<div class="wmcads-grid wmcads-grid--spacing-2-lg">
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+<div class="ds-grid ds-grid--spacing-2-lg">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Who weve funded</h3>
                 <p>See which councils and providers weve funded, and what for.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Find training schemes</h3>
                 <p>You can find training and education providers weve funded online.</p>
             </div>
@@ -123,22 +123,22 @@
 </div>
 
 <pre>
-  <code class="html wmcads-show-more-ignore" tabindex="0">
+  <code class="html ds-show-more-ignore" tabindex="0">
   {%- filter forceescape %}
-  <div class="wmcads-grid wmcads-grid--spacing-2-lg">
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+  <div class="ds-grid ds-grid--spacing-2-lg">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Who weve funded</h3>
                 <p>See which councils and providers weve funded, and what for.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Find training schemes</h3>
                 <p>You can find training and education providers weve funded online.</p>
             </div>
@@ -151,22 +151,22 @@
 
 <hr>
 <h3>Example 3</h3>
-<p>This example shows the use of the wmcads-content-card component displayed in a half grid with spacing controlled by breakpoints. </p>
+<p>This example shows the use of the ds-content-card component displayed in a half grid with spacing controlled by breakpoints. </p>
 
-<div class="wmcads-grid wmcads-grid--spacing-2-lg wmcads-grid--spacing-md-2-md">
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+<div class="ds-grid ds-grid--spacing-2-lg ds-grid--spacing-md-2-md">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Who weve funded</h3>
                 <p>See which councils and providers weve funded, and what for.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Find training schemes</h3>
                 <p>You can find training and education providers weve funded online.</p>
             </div>
@@ -175,22 +175,22 @@
 </div>
 
 <pre>
-  <code class="html wmcads-show-more-ignore" tabindex="0">
+  <code class="html ds-show-more-ignore" tabindex="0">
   {%- filter forceescape %}
-  <div class="wmcads-grid wmcads-grid--spacing-2-lg wmcads-grid--spacing-md-2-md">
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+  <div class="ds-grid ds-grid--spacing-2-lg ds-grid--spacing-md-2-md">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Who weve funded</h3>
                 <p>See which councils and providers weve funded, and what for.</p>
             </div>
         </div>
     </div>
-    <div class="wmcads-col-1-2">
-        <div class="wmcads-content-card">
+    <div class="ds-col-1-2">
+        <div class="ds-content-card">
             <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
-            <div class="wmcads-p-sm">
+            <div class="ds-p-sm">
                 <h3>Find training schemes</h3>
                 <p>You can find training and education providers weve funded online.</p>
             </div>
@@ -201,7 +201,7 @@
   </code>
 </pre>
 
-<p>The default spacing is 0.75rem (wmcads-grid--spacing-2-sm). Once the page width goes over 768px the spacing changes to 1rem (wmcads-grid--spacing-md-2-md).</p>
+<p>The default spacing is 0.75rem (ds-grid--spacing-2-sm). Once the page width goes over 768px the spacing changes to 1rem (ds-grid--spacing-md-2-md).</p>
 
 
 

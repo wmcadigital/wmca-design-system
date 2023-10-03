@@ -18,13 +18,13 @@
   Containers are used to wrap content in a 'container'. The container will have a fixed max size and be centered on the page, it will adjust to 100% width when the page width is less than the container size.
 </p>
 
-<pre class="wmcads-col-1">
+<pre class="ds-col-1">
   <code class="scss" tabindex="0">
-    .wmcads-container /* Container with max-width of 1280px */
+    .ds-container /* Container with max-width of 1280px */
 
     /* This should be used on your main content section and will
     add a margin top to seperate from header/breadcrumb section */
-    .wmcads-container.wmcads-container--main
+    .ds-container.ds-container--main
   </code>
 </pre>
 
@@ -33,25 +33,25 @@
 {# Grid #}
 <h2>Grid</h2>
 <p>
-  The WMCA Design System uses its own custom syntax grid system adopted from <a href="https://purecss.io/grids/" target="_blank" class="wmcads-link">Pure CSS Grid</a>. The grid system is already included in the bundled wmcads-components.min.css file so you don't need to include it seperately.
+  The WMCA Design System uses its own custom syntax grid system adopted from <a href="https://purecss.io/grids/" target="_blank" class="ds-link">Pure CSS Grid</a>. The grid system is already included in the bundled ds-components.min.css file so you don't need to include it seperately.
 </p>
 
 <p>
-  You can Refer to the <a href="https://purecss.io/grids/" target="_blank" class="wmcads-link">Pure CSS Grid documentation</a> for reference on how to use our grid system, but bear in mind that:
+  You can Refer to the <a href="https://purecss.io/grids/" target="_blank" class="ds-link">Pure CSS Grid documentation</a> for reference on how to use our grid system, but bear in mind that:
 </p>
 <ul>
-  <li><code class="wmcads-website-inline-code">.pure-g</code> becomes <code class="wmcads-website-inline-code">.wmcads-grid</code> in our design system<br><br></li>
-  <li><code class="wmcads-website-inline-code">.pure-u-*</code> becomes <code class="wmcads-website-inline-code">.wmcads-col-*</code> in our design system</li>
+  <li><code class="ds-website-inline-code">.pure-g</code> becomes <code class="ds-website-inline-code">.ds-grid</code> in our design system<br><br></li>
+  <li><code class="ds-website-inline-code">.pure-u-*</code> becomes <code class="ds-website-inline-code">.ds-col-*</code> in our design system</li>
 </ul>
 
 
-<p>You can also use modifier classes on the same element where the class <code class="wmcads-website-inline-code">.wmcads-grid</code> is being used.</p>
-<pre class="wmcads-col-1">
+<p>You can also use modifier classes on the same element where the class <code class="ds-website-inline-code">.ds-grid</code> is being used.</p>
+<pre class="ds-col-1">
   <code class="scss" tabindex="0">
-    .wmcads-grid--justify-between
-    .wmcads-grid--justify-around
-    .wmcads-grid--justify-end
-    .wmcads-grid--justify-center
+    .ds-grid--justify-between
+    .ds-grid--justify-around
+    .ds-grid--justify-end
+    .ds-grid--justify-center
   </code>
 </pre>
 
@@ -65,7 +65,7 @@
 
 <h3>Information for designers</h3>
 <p>
-  The grid is part of the Design System Sketch library or as a <a href="https://github.com/jokinL/Purecss-grid-Sketch" target="_blank" title="Standalone grid Sketch file" class="wmcads-link">standalone template file</a>.
+  The grid is part of the Design System Sketch library or as a <a href="https://github.com/jokinL/Purecss-grid-Sketch" target="_blank" title="Standalone grid Sketch file" class="ds-link">standalone template file</a>.
 </p>
 <h4>Screen sizes</h4>
 <p>
@@ -98,10 +98,10 @@
   Floats an element in the intended direction.
 </p>
 
-<pre class="wmcads-col-1 wmcads-col-md-1-2">
+<pre class="ds-col-1 ds-col-md-1-2">
   <code class="scss" tabindex="0">
-    .wmcads-float-left
-    .wmcads-float-right
+    .ds-float-left
+    .ds-float-right
   </code>
 </pre>
 
@@ -113,11 +113,11 @@
   Aligns text in the intended direction.
 </p>
 
-<pre class="wmcads-col-1 wmcads-col-md-1-2">
+<pre class="ds-col-1 ds-col-md-1-2">
   <code class="scss" tabindex="0">
-    .wmcads-text-align-left
-    .wmcads-text-align-center
-    .wmcads-text-align-right
+    .ds-text-align-left
+    .ds-text-align-center
+    .ds-text-align-right
   </code>
 </pre>
 
@@ -129,11 +129,11 @@
   When you want to hide an element based on if the device width is a desktop or mobile device.
 </p>
 
-<pre class="wmcads-col-1">
+<pre class="ds-col-1">
   <code class="scss" tabindex="0">
-    .wmcads-hide-mobile /* Hide only on mobile devices or smaller (less than 48em)  */
-    .wmcads-hide-desktop /* Hide only on desktop devices or larger (greater than 48em) */
-    .wmcads-hide /* Hide on all devices */
+    .ds-hide-mobile /* Hide only on mobile devices or smaller (less than 48em)  */
+    .ds-hide-desktop /* Hide only on desktop devices or larger (greater than 48em) */
+    .ds-hide /* Hide on all devices */
   </code>
 </pre>
 
@@ -146,76 +146,76 @@
 <ul>
   <li>Most components already come with defined spacing. This spacing shouldn't be overwritten.</li>
   <li>Spacing should be used as a last resort to help layout components on a page.</li>
-  <li>You can use <code class="wmcads-website-inline-code">none</code> as a size to enforce zero margin or padding.</li>
+  <li>You can use <code class="ds-website-inline-code">none</code> as a size to enforce zero margin or padding.</li>
 </ul>
 
 <p>
-  The classes are named using the format <code class="wmcads-website-inline-code">.wmcads-{type}-{side}-{size}</code>.
+  The classes are named using the format <code class="ds-website-inline-code">.ds-{type}-{side}-{size}</code>.
 </p>
 {# type #}
 <p>
-  Where <code class="wmcads-website-inline-code">{type}</code> is one of:
+  Where <code class="ds-website-inline-code">{type}</code> is one of:
 </p>
 <ul>
   <li>
-    <code class="wmcads-website-inline-code">m</code> - for classes that set <code class="wmcads-website-inline-code">margin</code>
+    <code class="ds-website-inline-code">m</code> - for classes that set <code class="ds-website-inline-code">margin</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">p</code> - for classes that set <code class="wmcads-website-inline-code">padding</code>
+    <code class="ds-website-inline-code">p</code> - for classes that set <code class="ds-website-inline-code">padding</code>
   </li>
 </ul>
 {# side #}
 <p>
-  Where <code class="wmcads-website-inline-code">{side}</code> is one of:
+  Where <code class="ds-website-inline-code">{side}</code> is one of:
 </p>
 <ul>
   <li>
-    <code class="wmcads-website-inline-code">t</code> - for classes that set <code class="wmcads-website-inline-code">margin-top</code> or <code class="wmcads-website-inline-code">padding-top</code>
+    <code class="ds-website-inline-code">t</code> - for classes that set <code class="ds-website-inline-code">margin-top</code> or <code class="ds-website-inline-code">padding-top</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">r</code> - for classes that set <code class="wmcads-website-inline-code">margin-right</code> or <code class="wmcads-website-inline-code">padding-right</code>
+    <code class="ds-website-inline-code">r</code> - for classes that set <code class="ds-website-inline-code">margin-right</code> or <code class="ds-website-inline-code">padding-right</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">b</code> - for classes that set <code class="wmcads-website-inline-code">margin-bottom</code> or <code class="wmcads-website-inline-code">padding-bottom</code>
+    <code class="ds-website-inline-code">b</code> - for classes that set <code class="ds-website-inline-code">margin-bottom</code> or <code class="ds-website-inline-code">padding-bottom</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">l</code> - for classes that set <code class="wmcads-website-inline-code">margin-left</code> or <code class="wmcads-website-inline-code">padding-left</code>
+    <code class="ds-website-inline-code">l</code> - for classes that set <code class="ds-website-inline-code">margin-left</code> or <code class="ds-website-inline-code">padding-left</code>
   </li>
   <li>
-    blank - for classes that set a <code class="wmcads-website-inline-code">margin</code> or <code class="wmcads-website-inline-code">padding</code> on all 4 sides of the element
+    blank - for classes that set a <code class="ds-website-inline-code">margin</code> or <code class="ds-website-inline-code">padding</code> on all 4 sides of the element
   </li>
 </ul>
 {# size #}
 <p>
-Where <code class="wmcads-website-inline-code">{size}</code> is one of:
+Where <code class="ds-website-inline-code">{size}</code> is one of:
 </p>
 <ul>
   <li>
-    <code class="wmcads-website-inline-code">xs</code> - set size to <code class="wmcads-website-inline-code">0.25rem</code>
+    <code class="ds-website-inline-code">xs</code> - set size to <code class="ds-website-inline-code">0.25rem</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">xsm</code> - set size to <code class="wmcads-website-inline-code">0.5rem</code>
+    <code class="ds-website-inline-code">xsm</code> - set size to <code class="ds-website-inline-code">0.5rem</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">sm</code> - set size to <code class="wmcads-website-inline-code">0.75rem</code>
+    <code class="ds-website-inline-code">sm</code> - set size to <code class="ds-website-inline-code">0.75rem</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">md</code> - set size to <code class="wmcads-website-inline-code">1rem</code>
+    <code class="ds-website-inline-code">md</code> - set size to <code class="ds-website-inline-code">1rem</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">lg</code> - set size to <code class="wmcads-website-inline-code">2rem</code>
+    <code class="ds-website-inline-code">lg</code> - set size to <code class="ds-website-inline-code">2rem</code>
   </li>
   <li>
-    <code class="wmcads-website-inline-code">xl</code> - set size to <code class="wmcads-website-inline-code">3rem</code>
+    <code class="ds-website-inline-code">xl</code> - set size to <code class="ds-website-inline-code">3rem</code>
   </li>
 </ul>
 
 <p>Some examples of using these utility classes...</p>
 <pre>
   <code>
-    .wmcads-m-xs // applies a margin of 0.25rem to all sides
-    .wmcads-p-b-lg // applies a padding-bottom of 2rem
-    .wmcads-m-l-none // sets left margin to 0
+    .ds-m-xs // applies a margin of 0.25rem to all sides
+    .ds-p-b-lg // applies a padding-bottom of 2rem
+    .ds-m-l-none // sets left margin to 0
   </code>
 </pre>
 
@@ -223,26 +223,26 @@ Where <code class="wmcads-website-inline-code">{size}</code> is one of:
 <h3>Grid column spacing</h3>
 
 <p>
-  Spacing can be applied in between <code class="wmcads-website-inline-code">.wmcads-col-*</code> elements by adding a class to the parent <code class="wmcads-website-inline-code">.wmcads-grid</code>.
+  Spacing can be applied in between <code class="ds-website-inline-code">.ds-col-*</code> elements by adding a class to the parent <code class="ds-website-inline-code">.ds-grid</code>.
 </p>
 <p>
-  The classes are named using the format <code class="wmcads-website-inline-code">.wmcads-grid--spacing-{col-count}-{size}</code>.
+  The classes are named using the format <code class="ds-website-inline-code">.ds-grid--spacing-{col-count}-{size}</code>.
 </p>
 <p>
-  Where <code class="wmcads-website-inline-code">{col-count}</code> is the number of columns per row and <code class="wmcads-website-inline-code">{size}</code> is the same as in the spacing utility classes above.
+  Where <code class="ds-website-inline-code">{col-count}</code> is the number of columns per row and <code class="ds-website-inline-code">{size}</code> is the same as in the spacing utility classes above.
 </p>
 <p>
-  Spacing can also be applied responsively using the format <code class="wmcads-website-inline-code">.wmcads-grid--spacing-{breakpoint}-{col-count}-{size}</code>.
+  Spacing can also be applied responsively using the format <code class="ds-website-inline-code">.ds-grid--spacing-{breakpoint}-{col-count}-{size}</code>.
 </p>
 <p>
-  Where <code class="wmcads-website-inline-code">{breakpoint}</code> is one of breakpoint sizes described in the grid section.
+  Where <code class="ds-website-inline-code">{breakpoint}</code> is one of breakpoint sizes described in the grid section.
 </p>
 
 <p>Some examples of using these utility classes...</p>
 <pre>
   <code>
-    .wmcads-grid--spacing-2-md // applies a 1rem spacing between 2 columns
-    .wmcads-grid--spacing-lg-4-lg // applies a 2rem spacing between 4 columns above a screen width of 1024px
+    .ds-grid--spacing-2-md // applies a 1rem spacing between 2 columns
+    .ds-grid--spacing-lg-4-lg // applies a 2rem spacing between 4 columns above a screen width of 1024px
   </code>
 </pre>
 
@@ -262,8 +262,8 @@ Where <code class="wmcads-website-inline-code">{size}</code> is one of:
   Changes background to the intended colour.
 </p>
 
-<pre class="wmcads-col-1 wmcads-col-md-1-2">
-  <code class="wmcads-show-more-ignore scss" tabindex="0">
+<pre class="ds-col-1 ds-col-md-1-2">
+  <code class="ds-show-more-ignore scss" tabindex="0">
     .bg-default
     .bg-white
     .bg-disabled-elements

@@ -15,8 +15,8 @@ const boardMembersJS = () => {
     });
   };
 
-  const tabs = document.querySelectorAll('ul.wmcads-board-members-tab-labels > li');
-  const panelQuestions = document.querySelectorAll('.wmcads-board-members-panel-question');
+  const tabs = document.querySelectorAll('ul.ds-board-members-tab-labels > li');
+  const panelQuestions = document.querySelectorAll('.ds-board-members-panel-question');
 
   const onTabClick = e => {
     e.preventDefault();
@@ -28,7 +28,7 @@ const boardMembersJS = () => {
     const clickedTab = e.currentTarget;
     clickedTab.classList.add('active');
 
-    const tabsPanel = document.querySelectorAll('.wmcads-board-members-single-panel');
+    const tabsPanel = document.querySelectorAll('.ds-board-members-single-panel');
 
     tabsPanel.forEach(panel => {
       panel.classList.remove('active');
@@ -50,7 +50,7 @@ const boardMembersJS = () => {
 
     tabs[1].classList.add('active');
 
-    const tabsPanel = document.querySelectorAll('.wmcads-board-members-single-panel');
+    const tabsPanel = document.querySelectorAll('.ds-board-members-single-panel');
     const tab2 = document.querySelector('#tab-2');
 
     tabsPanel.forEach(panel => {
@@ -59,7 +59,7 @@ const boardMembersJS = () => {
 
     tab2.classList.add('active');
 
-    const tabQuestion = document.querySelectorAll('.wmcads-board-members-panel-content');
+    const tabQuestion = document.querySelectorAll('.ds-board-members-panel-content');
 
     tabQuestion.forEach(question => {
       question.classList.remove('active');
