@@ -232,7 +232,7 @@
           }}
         {% endif %}
 
-        {% if (params.breadcrumbs.pageTitle != 'West Midlands Combined Authority Design System') and (params.breadcrumbs.pageTitle != 'Transport for West Midlands Design System') and (params.breadcrumbs.pageTitle != 'Safer Travel Design System') %}
+        {% if (params.breadcrumbs.pageTitle != 'West Midlands Combined Authority Design System') and (params.breadcrumbs.pageTitle != 'Transport for West Midlands Design System') and (params.breadcrumbs.pageTitle != 'Safer Travel Design System') and (params.breadcrumbs.pageTitle != 'Midlands Connect Design System') %}
         {% set breadcrumbList = null if params.breadcrumbs.section === params.breadcrumbs.pageTitle else {
               contentText: params.breadcrumbs.pageTitle
             } %}

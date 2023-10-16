@@ -12,7 +12,7 @@ const spritingSVGs = () => {
         const newName = file;
         const name = file.dirname.split(path.sep);
         name.push(file.basename);
-        name.unshift('wmcads');
+        name.unshift('ds');
         newName.basename = name.join('-');
       })
     )
