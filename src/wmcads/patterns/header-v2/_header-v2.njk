@@ -5,19 +5,19 @@
 {% set appClass = " ds-header--mobile-app" if params.app else "" %}
 {% set menuClass = "" if params.legacyMenu else " ds-header--mega-menu" %}
 
-{% if (params.breadcrumbs.ds == "wmca") %}
+{% if (params.brand == "wmca") %}
     {% set logoSrc =  "/img/logo/wmca-logo.svg" %}
 {% endif %}
 
-{% if (params.breadcrumbs.ds == "tfwm") %}
+{% if (params.brand == "tfwm") %}
     {% set logoSrc =  "/img/logo/tfwm-logo.svg" %}
 {% endif %}
 
-{% if (params.breadcrumbs.ds == "st") %}
+{% if (params.brand == "st") %}
     {% set logoSrc =  "/img/logo/st-logo.svg" %}
 {% endif %}
 
-{% if (params.breadcrumbs.ds == "mc") %}
+{% if (params.brand == "mc") %}
     {% set logoSrc =  "/img/logo/mc-logo.svg" %}
 {% endif %}
 
@@ -43,7 +43,7 @@
 }}
 <!-- Main header section -->
 <header>
-    ds - {{params.breadcrumbs.pageTitle}} - {{params.breadcrumbs.ds}} - {{logoSrc}}
+    ds - {{params.breadcrumbs.pageTitle}} - {{params.breadcrumbs.ds}} - {{logoSrc}} - {{params.brand}}
   {{
     wmcadsCookiesBanner()
   }}
