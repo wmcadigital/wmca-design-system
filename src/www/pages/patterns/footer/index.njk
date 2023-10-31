@@ -31,6 +31,7 @@
 {{
   compExample([
     wmcadsFooter({
+      columns: 3,
       menu1: {
         name: "Resources & support",
         menuItems: [{
@@ -62,6 +63,50 @@
       }]
     })
   ], {
+    componentPath: "wmcads/patterns/footer/",
+    njk: false,
+    js: true,
+    iframe: true
+  })
+}}
+<br><br>
+<h3>2 Columnn Variant</h3>
+
+{{
+  compExample([
+    wmcadsFooter({
+      columns: 2,
+        menu1: {
+          name: "Resources & support",
+          menuItems: [{
+            name: "Businesses"
+          },{
+            name: "Education"
+          },{
+            name: "Job centres"
+          },{
+            name: "Young people"
+          }]
+        },
+        menu2: {
+          name: "About us",
+          menuItems: [{
+            name: "About Transport for West Midlands"
+          }, {
+            name: "WMN Apps"
+          }]
+        },
+        bottomMenu: [{
+        name: "Accessibility"
+        },
+        {
+        name: "Terms and Conditions"
+        },
+        {
+        name: "Policies"
+      }]
+    })],
+    {
     componentPath: "wmcads/patterns/footer/",
     njk: false,
     js: true,
