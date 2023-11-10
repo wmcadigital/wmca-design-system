@@ -1,0 +1,104 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Reimagining transport in the West Midlands - WMLTP5 Green Paper" %} {% set section = "Templates" %} 
+{# Imports #} 
+{%- from "wmcads/components/content-tiles/normal/_normal.njk" import wmcadsContentTilesNormal -%}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
+{% from "wmcads/components/file-download/_file-download.njk" import wmcadsFileDownload %}
+{% from "wmcads/components/video-embed/_video-embed.njk" import wmcadsVideoEmbed %}
+{# Set array of tiles #} 
+{% block content %}
+
+<div>
+  <div class="ds-container">
+  <div class="ds-grid">
+    <div class="ds-col-1 ds-col-md-2-3">
+      <h1 id="ds-main-content">Reimagining transport in the West Midlands - WMLTP5 Green Paper</h1>
+    </div>
+  </div>
+    <div class="ds-grid ds-grid--justify-between ds-grid--spacing-2-lg ds-grid--spacing-md-2-lg">
+      <div class="main ds-col-1 ds-col-md-2-3 ds-m-b-xl">
+        {{
+          wmcadsVideoEmbed({
+        })
+        }}
+
+        <p>TfWM is in the process of supporting the WMCA to update its current Local Transport Plan (LTP). This is a document that sets out the policies to promote safe, integrated, efficient and economic transport to, from and within our area as well as plans to implement those policies.</p>
+        <p>Publishing and reviewing the LTP is one of WMCA’s core statutory duties as the Local Transport Authority for the area covered by the West Midlands seven metropolitan districts/boroughs.</p>
+
+        <h2>Why do we need a Green Paper?</h2>
+        <p>Getting transport right in our region requires us to have a plan for the future that balances the needs to provide access for everyone with the harmful impacts that transport can have on people and places. We’ve published a Green Paper to start a conversation about what a new Local Transport Plan should look like.</p>
+        <p>We will use the Green Paper to drive engagement with people, businesses and other key stakeholders across the region. We want you to get involved and work with us together, so we can get it right for where you live and work.</p>
+        <p>The COVID-19 pandemic has hit our region hard but it has also shown us how adaptable we can be and that change can bring new opportunities and benefits. We want to build back better from the pandemic. Doing so will need us to think about how transport can better support a prosperous and well-connected West Midlands which is fairer, greener and healthier.</p>
+
+        <h2>Our Motives for Change</h2>
+        <p>We think there are some big challenges that we need to address if we want transport to drive Inclusive Growth; sustainable and equitable growth where all citizens can shape, contribute and benefit from the advancement of the region. We’ve framed these challenges in our 5 Motives for Change.</p>
+        <ul>
+          <li>Creating a fairer society</li> 
+          <li>Supporting local communities and places</li>
+          <li>Becoming more active</li>
+          <li>Tackling the climate emergency</li> 
+          <li>Sustaining economic success</li>
+        </ul>
+        <p>The Motives for Change are all important, but the need to tackle the climate emergency has a particular urgency that the other Motives for Change lack. Current predictions suggest that if we don’t rapidly reduce our carbon emissions, by 2030 we could face a global scenario in which we lose the ability to prevent escalating climate change and the harm it will cause around the world and in the West Midlands. That is why WMCA has declared a climate emergency and set a zero-carbon target for the West Midlands by 2041, with the first of four 5-year plans already published.</p>
+        <p>This suggests a new LTP could have a much stronger focus on achieving transformational change within the next 10 years, rather than focussing on a longer-term vision and more gradual change. This presents us with the opportunity to rapidly reimagine transport to deliver transformative improvement in the lives of millions of people across our region, and for the West Midlands to demonstrate leadership in tackling global and local problems.</p>
+        <div class="ds-m-b-lg">
+        {{
+          wmcadsFileDownload({
+            html: true,
+            default: true,
+            htmlName: 'Long Term Plan Summary'
+          })
+        }}
+        </div>
+        <div>
+        {{
+          wmcadsFileDownload({
+            html: true,
+            default: true,
+            htmlName: 'Local Transport Plan Green Paper'
+          })
+        }}
+        </div>
+      </div>
+      <aside class="ds-col-1 ds-col-md-1-3 ds-m-b-lg">
+        <div class="ds-content-card ds-m-b-lg">
+          <div class="ds-p-sm">
+            <h3>Stay up to date</h3>
+            <p>Sign up to our mailing list to receive updates on our Green Paper and Local Transport Plan!</p>
+            <a href="#" class="ds-btn ds-btn--cta ds-col-1">
+              Sign up for updates
+            </a>
+          </div>
+        </div>
+
+        <div class="ds-content-card ds-m-b-lg">
+          <div class="ds-p-sm">
+            <a href="#"><h3>Take part in our public engagement survey</h3></a>
+            <p>Do you live, work or travel in the West Midlands? Take part in our public engagements survey to help us to reimagine transport in the West Midlands.</p>
+          </div>
+        </div>
+
+        <div class="ds-content-card ds-m-b-lg">
+          <div class="ds-p-sm">
+            <a href="#"><h3>Business and Community group engagement survey</h3></a>
+            <p>Are you part of a community organisation, local interest group or own a business in the West Midlands? Take part in our survey ot help to shape our transport network.</p>
+          </div>
+        </div>
+
+        <div class="ds-content-card ds-m-b-lg">
+          <div class="ds-p-sm">
+            <h3>Join our online community!</h3>
+            <p>Sign up to our online community to help to shape the West Midlands!</p>
+            <a href="#" class="ds-btn ds-btn--cta ds-col-1">
+              Join our community
+            </a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</div>
+{% endblock %}

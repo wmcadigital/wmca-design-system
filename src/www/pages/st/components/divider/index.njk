@@ -1,0 +1,114 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Divider" %}
+{% from "wmcads/components/divider/_divider.njk" import wmcadsDivider %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+{% set ds = 'st' %}
+
+{% block content %}
+<h2>Default divider (Primary)</h2>
+{{
+  compExample([
+    wmcadsDivider()
+  ])
+}}
+
+<h2>Cool Grey divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'grey'
+    })
+  ])
+}}
+
+<h2>WM Green divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmgreen'
+    })
+  ])
+}}
+
+<h2>WM Red divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmred'
+    })
+  ])
+}}
+
+<h2>WM Purple divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmpurple'
+    })
+  ])
+}}
+
+<h2>WM Blue divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmblue'
+    })
+  ])
+}}
+
+<h2>WM Furnace Orange divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmfurnaceorange'
+    })
+  ])
+}}
+
+<h2>WM Green Tint divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmtintsgreen'
+    })
+  ])
+}}
+
+<h2>WM Brown Tint divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmtintsbrown'
+    })
+  ])
+}}
+
+<h2>TfWM Pink divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'tfwmpink'
+    })
+  ])
+}}
+
+<h2>TfWM Yellow divider</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'tfwmyellow'
+    })
+  ])
+}}
+
+<h2>WM Blue divider - Half width</h2>
+{{
+  compExample([
+    wmcadsDivider({
+      class: 'wmblue',
+      half: 'true'
+    })
+  ])
+}}
+{% endblock %}

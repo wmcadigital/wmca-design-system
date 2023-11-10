@@ -1,0 +1,22 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Board Members" %}
+{% set section="Patterns" %}
+{% set ds = 'wmca' %}
+
+{# Imports #}
+{% from "wmcads/patterns/board-members/_board-members.njk" import wmcadsBoardMembers %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+{# Board members #}
+<h2>Board Members</h2>
+
+{{
+  compExample([
+    wmcadsBoardMembers({
+      
+    })
+  ])
+}}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Tag" %}
+{% from "wmcads/components/tag/_tag.njk" import wmcadsTag %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+{% set ds = 'st' %}
+
+{% block content %}
+{{
+  compExample([
+    wmcadsTag({
+      text: 'info'
+    })
+  ])
+}}
+{% endblock %}

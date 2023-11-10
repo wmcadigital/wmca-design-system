@@ -1,0 +1,335 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Grid Examples" %}
+{% set section = "Styles" %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+<h2>Introduction to wmcads Grids</h2>
+<h3>Grid classes vs. unit classes</h3>
+<p>wmcads Grids consist of two types of classes: the grid class (ds-grid) and unit classes (ds-col-*)</p>
+<h3>The widths of the units are fractions</h3>
+<p>Units have various class names that represent their widths. For example, ds-u-1-2 has a width of 50%, whereas ds-u-1-5 would have a width of 20%.</p>
+<h3>All child elements of a grid must be units</h3>
+<p>Child elements contained within an element with a ds-grid classname must be a grid unit with a ds-col-* classname.</p>
+<h3>Content goes inside grid units</h3>
+<p>All content which is visible to people needs to be contained inside a grid unit. This ensures that the content will be rendered properly.</p>
+
+<h2>Examples</h2>
+<p>Let's start with a simple example. Here's a grid with three columns:</p>
+
+<div class="ds-grid">
+    <div class="ds-col-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1-3"><p>Thirds</p></div>
+</div>
+
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape %}
+  <div class="ds-grid">
+    <div class="ds-col-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1-3"><p>Thirds</p></div>
+  </div>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<p>The above example will keep the columns the same width no matter the page width.</p>
+
+<h3>Adding responsive classes</h3>
+<p>We can control the width by adding responsive classes.</p>
+
+<p>When using Responsive Grids, you can control how the grid behaves at specific breakpoints by adding class names. wmcads default responsive grids comes with the following class names and media query breakpoints.</p>
+
+<table class="ds-table  ">
+    <caption class="ds-table__caption">Default Media Queries</caption>
+      <thead>
+        <tr>
+            <th scope="col">Key</th>
+            <th scope="col">CSS Media Query</th>
+            <th scope="col">Applies</th>
+            <th scope="col">Classname</th>
+        </tr>
+      </thead>
+    <tbody>
+    <tr>
+      <th scope="row" class="" data-header="Key">None</th>
+        <td class="" data-header="CSS Media Query">None</td>
+        <td class="" data-header="Applies">Always</td>
+        <td class="" data-header="Classname">.ds-col-*</td>
+    </tr>
+    <tr>
+      <th scope="row" class="" data-header="Key">sm</th>
+        <td class="" data-header="CSS Media Query">@media screen and (min-width: 35.5em)</td>
+        <td class="" data-header="Applies">≥ 568px</td>
+        <td class="" data-header="Classname">.ds-col-sm-*</td>
+    </tr>
+    <tr>
+      <th scope="row" class="" data-header="Key">md</th>
+        <td class="" data-header="CSS Media Query">@media screen and (min-width: 48em)</td>
+        <td class="" data-header="Applies">≥ 768px</td>
+        <td class="" data-header="Classname">.ds-col-md-*</td>
+    </tr>
+    <tr>
+      <th scope="row" class="" data-header="Key">lg</th>
+        <td class="" data-header="CSS Media Query">@media screen and (min-width: 64em)</td>
+        <td class="" data-header="Applies">≥ 1024px</td>
+        <td class="" data-header="Classname">.ds-col-lg-*</td>
+    </tr>
+    <tr>
+      <th scope="row" class="" data-header="Key">xl</th>
+        <td class="" data-header="CSS Media Query">@media screen and (min-width: 80em)</td>
+        <td class="" data-header="Applies">≥ 1280px</td>
+        <td class="" data-header="Classname">.ds-col-xl-*</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Let's modify the example so the columns become full width on mobile:</p>
+
+<div class="ds-grid">
+    <div class="ds-col-1 ds-col-sm-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1 ds-col-sm-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1 ds-col-sm-1-3"><p>Thirds</p></div>
+</div>
+
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape %}
+  <div class="ds-grid">
+    <div class="ds-col-1 ds-col-sm-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1 ds-col-sm-1-3"><p>Thirds</p></div>
+    <div class="ds-col-1 ds-col-sm-1-3"><p>Thirds</p></div>
+  </div>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<p>The above example has a default width of 1 (ds-col-1) so when the page is viewed below 586px the columns will display full width. When the page is viewed over 586px the columns will appear in 3 coloumns (ds-col-sm-1-3).
+
+
+<h2>Justify Content</h2>
+
+<p>You can justify the grid content bby adding these classes:</p>
+
+<h3>ds-grid--justify-between</h3>
+<p>Items will have space between them</p>
+
+<div class="ds-grid ds-grid--justify-between">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Find training schemes</h3>
+                <p>You can find training and education providers weve funded online.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape %}
+  <div class="ds-grid ds-grid--justify-between">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Find training schemes</h3>
+                <p>You can find training and education providers weve funded online.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<hr>
+<h3>ds-grid--justify-around</h3>
+<p>Items will have space before, between, and after them</p>
+<div class="ds-grid ds-grid--justify-around">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Find training schemes</h3>
+                <p>You can find training and education providers weve funded online.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape %}
+  <div class="ds-grid ds-grid--justify-around">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Find training schemes</h3>
+                <p>You can find training and education providers weve funded online.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<hr>
+<h3>ds-grid--justify-end</h3>
+<p>Items are positioned at the end of the container </p>
+<div class="ds-grid ds-grid--justify-end">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape %}
+  <div class="ds-grid ds-grid--justify-end">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<hr>
+<h3>ds-grid--justify-center</h3>
+<p>Items are positioned in the center of the container</p>
+<div class="ds-grid ds-grid--justify-center">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape %}
+  <div class="ds-grid ds-grid--justify-center">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<hr>
+<h3>ds-grid--justify-even</h3>
+<p>Items will have equal space around them</p>
+<div class="ds-grid ds-grid--justify-even">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Find training schemes</h3>
+                <p>You can find training and education providers weve funded online.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape %}
+  <div class="ds-grid ds-grid--justify-even">
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Who weve funded</h3>
+                <p>See which councils and providers weve funded, and what for.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ds-col-1-3 ds-p-r-sm ds-m-b-sm">
+        <div class="ds-content-card">
+            <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=576&amp;height=334&amp;rnd=132122595620000000" alt="content image">
+            <div class="ds-p-sm">
+                <h3>Find training schemes</h3>
+                <p>You can find training and education providers weve funded online.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  {%- endfilter %}
+  </code>
+</pre>
+
+{% endblock %}

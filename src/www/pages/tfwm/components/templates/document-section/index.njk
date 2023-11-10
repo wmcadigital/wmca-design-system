@@ -1,0 +1,60 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Local Transport Plan Green Paper" %} {% set section = "Templates" %} 
+{# Imports #} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
+{% from "wmcads/components/hub-header/_hub-header.njk" import wmcadsHubHeader %}
+{% from "wmcads/patterns/search/pagination/_pagination.njk" import wmcadsPagination %}
+{% from "wmcads/components/images/_image-with-summary.njk" import wmcadsImageWithSummary %}
+{# Set array of tiles #} 
+{% block content %}
+
+<div>
+{{
+wmcadsHubHeader({
+      image: false,
+      title: "Local Transport Plan Green Paper"
+    })
+}}
+  <div class="ds-container ds-m-t-xl">
+    <div class="ds-grid ds-grid--justify-between ds-grid--spacing-2-lg ds-grid--spacing-md-2-lg">
+      <aside class="ds-col-1 ds-col-md-1-3 ds-m-b-lg">
+      {{
+        wmcadsPageContents({
+          title: "Foreword",
+          rightMargin: true,
+          example: true
+        })
+      }}
+      </aside>
+      <div class="main ds-col-1 ds-col-md-2-3 ds-m-b-xl">
+        <h1>Section 3: Our Motives for Change</h1>
+        <p>Inclusive Growth in the West Midlands means that all citizens can shape, contribute and benefit from the advancement of the region.</p>
+        <p>It is a deliberate and socially purposeful model of economic growth – measured not only by how fast or aggressive it is; but also by how well it is shared across the whole population and place, and the capacity of our environment to sustain it.</p>
+        <p>WMCA’s goal for Inclusive Growth is to occupy a space where social need, economic ambition and our responsibilities to the environment are in balance.</p>
+
+        {{
+          wmcadsImageWithSummary({
+            img: "/img/examples/diagram.png",
+            title: "Inclusive Growth Framework",
+            summary: "The space for a balanced, inclusive economy is where social challenges can be met without degrading the environment"
+          })
+        }}
+
+        <p>Transport’s relationship with Inclusive Growth is complex:</p>
+        <ul>
+          <li>Meeting many of our needs and ambitions relies on transport connections</li>
+          <li>But those same transport connections have impacts that the environment can’t sustain and which are detrimental to other social and economic outcomes; and</li>
+          <li>Improving connections for a particular group of people, by a particular mode, to particular places can limit and even worsen connectivity elsewhere for others.</li>
+        </ul>
+        {{
+          wmcadsPagination({
+            pageCount: 8,
+            activePage: 5
+          })
+        }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

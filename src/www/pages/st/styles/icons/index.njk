@@ -1,0 +1,188 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Icons" %}
+{% set section = "Styles" %}
+{% set ds = 'st' %}
+
+{# The icon vars are an array that match the folders they come from in src/assets/icon/{foldername} #}
+{% set iconGeneral = [
+  "arrow",
+  "caret-down",
+  "caret-up",
+  "checkmark",
+  "chevron-right",
+  "circle-hollow",
+  "circle-solid",
+  "cross",
+  "expand",
+  "favourite",
+  "file",
+  "filter",
+  "id-card",
+  "info",
+  "location-arrow",
+  "minimise",
+  "paperclip",
+  "pdf",
+  "html",
+  "search",
+  "success",
+  "swap",
+  "trash",
+  "warning-circle",
+  "warning-triangle"
+] %}
+
+{% set iconSocial = [
+  "facebook",
+  "facebook-hex",
+  "twitter",
+  "twitter-hex",
+  "instagram",
+  "instagram-hex",
+  "linkedin",
+  "linkedin-hex",
+  "youtube",
+  "youtube-hex",
+  "email"
+] %}
+
+{% set iconPortfolio = [
+  "culture-and-digital",
+  "economy",
+  "environment",
+  "housing-and-land",
+  "inclusive-communities",
+  "skills",
+  "transport",
+  "wellbeing"
+] %}
+
+
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+
+{% block content %}
+{# How to use #}
+<h2>About</h2>
+
+<h3>What does it do?</h3>
+<ul>
+  <li>
+    Icons are images used in context to communicate a meaning (a visual representation of an object, action, or idea).
+  </li>
+</ul>
+<h3>When to use it?</h3>
+<ul>
+  <li>
+    Only use icons and images if there’s a real user need.
+  </li>
+</ul>
+<h3>When not to use it?</h3>
+<ul>
+  <li>
+    Do not use it for unnecessary decoration.
+  </li>
+</ul>
+<hr>
+
+{# Using Icons #}
+<h2>Using icons</h2>
+<p>WMCA Design System icons are available as an SVG sprite to include in your HTML page.</p>
+<h3>How to use</h3>
+<h4>Recommended</h4>
+<p>The Recommended method of using the icon sprite sheet is to refer directly to the one used in the design system. This ensures that your icons will always be up to date.</p>
+<p>To get started, include the below snippet of javascript somewhere in your codebase. This will:</p>
+<ul>
+  <li>Pull the latest SVG icon spritesheet to be used within your web app or service</li>
+  <li>Will ensure the icons work with older browsers such as Internet Explorer 11</li>
+  <li>Keep the icon set consistent with other West Midlands Combined Authority Services</li>
+</ul>
+<pre>
+  <code class="html ds-show-more-ignore" tabindex="0">
+  {%- filter forceescape -%}
+  <!-- Ajax SVGs from WMCA Design System -->
+  <script>
+    const ajax = new XMLHttpRequest();
+    ajax.open('GET', 'https://unpkg.com/WMCA-design-system@$*version/build/img/ds-icons.min.svg', true);
+    ajax.send();
+    ajax.onload = function () {
+      const div = document.createElement('div');
+      div.style.display = 'none';
+      div.innerHTML = ajax.responseText;
+      document.body.insertBefore(div, document.body.childNodes[0]);
+    };
+  </script>
+  {%- endfilter %}
+  </code>
+</pre>
+
+<h4>Displaying an icon</h4>
+<p>To display an icon or glyph, use an icon tag (from the icon section at the bottom of the page) with a href attribute and xlink:href (as a fallback). Make sure that the xlink and href tags are pointing to the location of your downloaded icon sprite sheet.</p>
+<p>The <code class="ds-website-inline-code">ICON-TAG-NAME</code> should be replaced with the icon tag name of the icon you want to show from the Icons section below, for example <code class="ds-website-inline-code">#ds-general-arrow</code> should be in the <code class="ds-website-inline-code">xlink:href</code> and <code class="ds-website-inline-code">href</code> attributes of the svg's <code class="ds-website-inline-code">&lt;use&gt;</code> element.</p>
+<pre>
+  <code class="html " tabindex="0" >
+    {{-
+      wmcadsIcon({
+        icon: 'ICON-TAG-NAME'
+      }) | forceescape | trim
+    -}}
+  </code>
+</pre>
+
+
+<h4>Can't include via recommended method? Try hosting the sprites locally</h4>
+<ul>
+  <li><a class="ds-link" target="_blank" href="https://unpkg.com/WMCA-design-system@$*version/build/img/ds-icons.min.svg" download="ds-icons.min.svg">Download the icon svg sprite</a>.</li>
+  <li>Include the downloaded icon sprite in to your project locally.</li>
+  <li>You can now start using the icon svg sprite sheet using the instructions from the "Displaying an icon" section above.</li>
+</ul>
+
+<hr>
+
+{# Icons #}
+<h2>Icons</h2>
+<p>Find below a list of all our icons and their tags below. To use, don't forget to prefix the tag with 'ds-'</p>
+<h3>General</h3>
+<div class="ds-grid website-icons">
+  {% for icon in iconGeneral %}
+    <div class="ds-col-1-2 ds-col-sm-1-6 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'general-' + icon
+        })
+      }}
+      <p>{{ 'general-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{# Portfolios #}
+<h3>Portfolios</h3>
+<div class="ds-grid website-icons">
+  {% for icon in iconPortfolio %}
+    <div class="ds-col-1-2 ds-col-sm-1-6 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'portfolio-' + icon
+        })
+      }}
+      <p>{{ 'portfolio-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{# Social #}
+<h3>Social</h3>
+<div class="ds-grid website-icons">
+  {% for icon in iconSocial %}
+    <div class="ds-col-1-2 ds-col-sm-1-6 text-center">
+      {{
+        wmcadsIcon({
+          icon: 'social-' + icon
+        })
+      }}
+      <p>{{ 'social-' + icon }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

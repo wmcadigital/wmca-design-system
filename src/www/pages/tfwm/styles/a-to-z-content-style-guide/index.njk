@@ -1,0 +1,131 @@
+{% extends "www/_layouts/layout-fullwidth.njk" %} 
+{% set pageTitle="A to Z content style guide" %} {% set section = "Styles" %}
+{% set ds = 'wmca' %}
+
+{# Imports #} 
+{%- from "wmcads/components/content-tiles/normal/_normal.njk" import wmcadsContentTilesNormal -%}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{# Set array of tiles #} 
+{% block content %} 
+
+{# About the style guide #}
+<div class="ds-grid">
+  <div class="ds-col-1 ds-col-md-3-4">
+    <h2>Writing content for West Midlands Combined Authority</h2>
+    <p>
+      You should create all content with user-focused content design principles. This means content has an identified
+      user need and is written in plain English.
+    </p>
+    <p>
+      Do not use marketing speak - users will be visiting your website to perform a task (for example, buy a train ticket or find out about Swift cards). Your content shouldn’t try to sell them anything - instead, tell them the information they need to know in the simplest way possible. 
+    </p>
+    <p>
+      Research has shown that both high literacy and low literacy users prefer plain English because it takes less time to read. Users won’t be on your website for fun - so make the experience quick and easy.
+    </p>
+    <p>
+      To find out more about why plain language is important, read:
+    <ul>
+      <li>
+        {{
+          wmcadsLink({
+            link: 'https://readabilityguidelines.co.uk/clear-language/',
+            linkTitle: 'advice about clear language',
+            contentText: 'advice about clear language'
+          })
+        }}
+        from the Readability Guidelines project
+      </li>
+      <li>
+        the
+        {{
+          wmcadsLink({
+            link: 'http://www.plainenglish.co.uk/the-a-z-of-alternative-words.html',
+            linkTitle: 'plain English Campaign’s A to Z of alternative words',
+            contentText: 'plain English Campaign’s A to Z of alternative words'
+          })
+        }}
+         - this helps you find a simple replacement for a complicated word
+      </li>
+    </ul>
+  </p>
+    <p>
+      Read the
+      {{
+        wmcadsLink({
+          link: 'https://www.gov.uk/guidance/content-design/what-is-content-design',
+          linkTitle: 'GOV.UK introduction to content design',
+          contentText: 'GOV.UK introduction to content design'
+        })
+      }}
+      to find out more about content design principles.
+    </p>
+    <p>Design Team can help you to test your content with user research.</p>
+    <br />
+    <h3>About the A-Z of style guide</h3>
+    <p>This style guide will help you to use consistent words across West Midlands Combined Authority services.</p>
+    <p>
+      If something is not covered by this style guide, check the
+      {{
+        wmcadsLink({
+          link: 'https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style',
+          linkTitle: 'GOV.UK Style Guide',
+          contentText: 'GOV.UK style guide'
+        })
+      }}
+      . You can also email Samresha Purewal if you think something is missing from this guidance.</p>
+      <br />
+      <h3>Introducing West Midlands Combined Authority</h3>
+    <p>If you’re talking about day-to-day services (bus, train or tram), you
+      may need to make it clear that West Midlands Combined Authority does not run these.<br /><br />For example, you could say: "We don’t run the buses, trains or trams. We can point you in the right direction if you need help."
+    </p>
+    <br />
+    <br />
+    {# A to Z accordions #}
+    <div class="ds-grid ds-grid--justify-between ds-grid--align-center">
+      <div class="ds-col-1 ds-col-md-1-2">
+        <h3 id="atozofstyle">A to Z of style</h3> 
+      </div>
+      <div class="ds-col-1 ds-col-md-auto ds-m-b-md js-accordion-controls">
+        <button class="ds-btn ds-btn--primary js-accordion-controls-open">Open all</button>
+        <button class="ds-btn ds-btn--primary js-accordion-controls-close ds-m-l-xs">Close all</button>
+      </div>
+    </div>
+    <div class="ds-col-1">
+      {% for section in aToZOfStyles %}
+        <div class="ds-accordion ds-m-b-sm">
+          <button id="{{section.letter | lower}}" aria-controls="{{section.letter | lower}}" class="ds-accordion__summary-wrapper" aria-expanded="false">
+            <div class="ds-accordion__summary">
+              <h4 class="ds-m-b-none">{{section.letter}}</h4>
+            </div>
+            <!-- plus icon -->
+            {{
+              wmcadsIcon({
+                icon: 'general-expand',
+                class: 'ds-accordion__icon'
+              }) | indent(4) | trim
+            }}
+            <!-- minus icon -->
+            {{
+              wmcadsIcon({
+                icon: 'general-minimise',
+                class: 'ds-accordion__icon ds-accordion__icon--minimise'
+              }) | indent(4) | trim
+            }}
+          </button>
+          <div class="ds-accordion__content" id="accordion-{{section.letter | lower}}">
+            {% for style in section.styles %}
+            <h5 id="{{style.title | replace(r/\W/gi, '') | replace(' ', '-') | lower}}-{{ loop.index }}" class="{{'ds-m-t-xl' if not loop.first}}">
+              <span>{{style.title}}<span>
+            </h5>
+            {{style.content | safe}}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<br />
+{% endblock %}
