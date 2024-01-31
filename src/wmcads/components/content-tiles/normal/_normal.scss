@@ -1,4 +1,4 @@
-.wmcads-content-tile {
+.ds-content-tile {
   height: 100%;
   padding: $size-sm;
   border-bottom: 5px solid get-color(primary);
@@ -15,7 +15,7 @@
       width: 100%;
     }
 
-    .wmcads-link {
+    .ds-link {
       position: relative;
     }
   }
@@ -44,7 +44,7 @@
   &--yellow {
     background-color: get-color(plannedDisruption);
 
-    .wmcads-link {
+    .ds-link {
       color: get-color(text);
     }
   }

@@ -1,0 +1,156 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Footer" %}
+{% set section="Patterns" %}
+{% set ds = 'st' %}
+
+{# Imports #}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+{% from "wmcads/patterns/footer/_footer.njk" import wmcadsFooter %}
+{%- from "wmcads/components/link/link/_link.njk" import wmcadsLink -%}
+
+{% block content %}
+{# About #}
+<h2>About</h2>
+{# What #}
+<h3>What does it do?</h3>
+<ul>
+  <li>The primary way of navigating the website</li>
+  <li>Standardised pattern</li>
+</ul>
+{# When #}
+<h3>When to use it?</h3>
+<ul>
+  <li>Every page must have a footer</li>
+</ul>
+
+<br><br>
+{# Full footer #}
+<h3>Full variant of footer</h3>
+<p>The full variant of the footer may include menus which become collapsible on smaller devices.</p>
+<p>To enable the collapsible footer menus on smaller screens you can include the recommended javascript below:</p>
+{{
+  compExample([
+    wmcadsFooter({
+      columns: 3,
+      menu1: {
+        name: "Resources & support",
+        menuItems: [{
+          name: "Businesses"
+        },{
+          name: "Education"
+        },{
+          name: "Job centres"
+        },{
+          name: "Young people"
+        }]
+      },
+      menu2: {
+        name: "About us",
+        menuItems: [{
+          name: "About Transport for West Midlands"
+        }, {
+          name: "WMN Apps"
+        }]
+      },
+      bottomMenu: [{
+        name: "Accessibility"
+      },
+      {
+        name: "Terms and Conditions"
+      },
+      {
+        name: "Policies"
+      }]
+    })
+  ], {
+    componentPath: "wmcads/patterns/footer/",
+    njk: false,
+    js: true,
+    iframe: true
+  })
+}}
+<br><br>
+<h3>2 Column Variant</h3>
+
+{{
+  compExample([
+    wmcadsFooter({
+      columns: 2,
+        menu1: {
+          name: "Resources & support",
+          menuItems: [{
+            name: "Businesses"
+          },{
+            name: "Education"
+          },{
+            name: "Job centres"
+          },{
+            name: "Young people"
+          }]
+        },
+        menu2: {
+          name: "About us",
+          menuItems: [{
+            name: "About Transport for West Midlands"
+          }, {
+            name: "WMN Apps"
+          }]
+        },
+        bottomMenu: [{
+        name: "Accessibility"
+        },
+        {
+        name: "Terms and Conditions"
+        },
+        {
+        name: "Policies"
+      }]
+    })],
+    {
+    componentPath: "wmcads/patterns/footer/",
+    njk: false,
+    js: true,
+    iframe: true
+  })
+}}
+<br>
+
+
+{# Mobile app variant #}
+<h3 id="mobile-app-footer">Mobile app variant of Footer</h3>
+<p>When developing a mobile app, if you are limited for space and need extra room then it is recommended to use the mobile app variant of the Transport for West Midlands footer.</p>
+
+<p>The mobile app version of the footer ensures that it will not show on devices with a screen width less than 768px. This means the footer will only show on devices with a screen resolution bigger than 768px.</p>
+
+<p>To use the mobile app variant:</p>
+<ul>
+  <li>Add the modifier class <code class="ds-website-inline-code">ds-footer--mobile-app</code> to the ds-footer element</li>
+</ul>
+
+<p>
+  You will most likely want to use this with the mobile variants of the
+  {{ wmcadsLink({
+    contentText: 'breadcrumb component',
+    link: '/components/breadcrumb/#mobile-app-breadcrumb'
+    })
+  }} and
+  {{ wmcadsLink({
+    contentText: 'header pattern',
+    link: '#mobile-app-header'
+    })
+  }} .
+</p>
+
+{{
+  compExample([
+    wmcadsFooter({
+      app: true
+    })
+  ], {
+    componentPath: "wmcads/patterns/footer/",
+    njk: false,
+    js: true
+  })
+}}
+
+{% endblock %}

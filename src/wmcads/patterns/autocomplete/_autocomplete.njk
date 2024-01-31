@@ -1,4 +1,4 @@
-{# Uses the components: wmcads-loader, wmcads-icon #}
+{# Uses the components: ds-loader, ds-icon #}
 
 {% macro wmcadsAutocomplete(params) %}
 {# Imports #}
@@ -8,7 +8,7 @@
 {# Params #}
 {% set query = params.query if params.query else "" %} {# default to x15 as query text if one isn't available #}
 {% set placeholder = params.placeholder if params.placeholder else "Tap to search" %}
-{% set isLoading = " wmcads-is--loading" if params.loading %}
+{% set isLoading = " ds-is--loading" if params.loading %}
 {% set id = params.id if params.id else "genericInput" %}
 {% set label = params.label.contentText if params.label.contentText else "Autocomplete label" %}
 {% set name = params.name if params.name else id %}
@@ -29,27 +29,27 @@
 
 {% if params.selected %}
 <div
-    class="wmcads-autocomplete__selected-item wmcads-grid wmcads-grid--justify-between wmcads-m-t-xs wmcads-m-b-md"
+    class="ds-autocomplete__selected-item ds-grid ds-grid--justify-between ds-m-t-xs ds-m-b-md"
   >
-    <strong class="wmcads-col-auto wmcads-autocomplete__selected-item-summary">{{selectedItem}}</strong>
-    <button type="button" class="wmcads-autocomplete__selected-item-close">
+    <strong class="ds-col-auto ds-autocomplete__selected-item-summary">{{selectedItem}}</strong>
+    <button type="button" class="ds-autocomplete__selected-item-close">
       {{
         wmcadsIcon({
           icon: 'general-cross',
-          class: 'wmcads-autocomplete__selected-item-close-icon'
+          class: 'ds-autocomplete__selected-item-close-icon'
         })
       }}
     </button>
   </div>
 {% else %}
-<div class="wmcads-autocomplete wmcads-grid{{isLoading}}">
+<div class="ds-autocomplete ds-grid{{isLoading}}">
   {% from "wmcads/components/loader/_loader.njk" import wmcadsLoader %}
   {#- Get SVG icon and pass class -#}
   <!-- Search icon -->
   {{
     wmcadsIcon({
       icon: 'general-search',
-      class: 'wmcads-autocomplete__icon'
+      class: 'ds-autocomplete__icon'
     })
   }}
 
@@ -58,34 +58,34 @@
     wmcadsLoader()
   }}
   <!-- Autocomplete input box -->
-  <input class="wmcads-fe-input wmcads-autocomplete__input wmcads-col-1" value="{{ query }}" placeholder="{{ placeholder }}" name="{{ name }}" aria-label="{{ placeholder }}"  type="text" id="{{id}}" required="{{isRequired}}" autocomplete="off">
+  <input class="ds-fe-input ds-autocomplete__input ds-col-1" value="{{ query }}" placeholder="{{ placeholder }}" name="{{ name }}" aria-label="{{ placeholder }}"  type="text" id="{{id}}" required="{{isRequired}}" autocomplete="off">
 </div>
 {% endif %}
 
 {#- If showSuggestions is true #}
 {% if params.showSuggestions %}
 <!-- Autocomplete suggestions -->
-<ul class="wmcads-autocomplete-suggestions">
+<ul class="ds-autocomplete-suggestions">
 {#- If textOnly suggestions -#}
 {% if params.textSuggestions -%}
   {%- for i in range(1,4) %}
-  <li class="wmcads-autocomplete-suggestions__li" title="Search result {{i}}" tabindex="0">
+  <li class="ds-autocomplete-suggestions__li" title="Search result {{i}}" tabindex="0">
     This is <strong>my query</strong> result {{i}}
   </li>
   {%- endfor %}
 {% else -%}
   {# Disruption indicator suggestions #}
   {%- for i in range(1,6) %}
-  <li class="wmcads-autocomplete-suggestions__li wmcads-grid" title="Good service on X15" tabindex="0">
-    <div class="wmcads-col-auto" >
+  <li class="ds-autocomplete-suggestions__li ds-grid" title="Good service on X15" tabindex="0">
+    <div class="ds-col-auto" >
       {{
         wmcadsDisruptionIndicatorMedium({
-          classModifiers: 'wmcads-disruption-indicator-medium',
+          classModifiers: 'ds-disruption-indicator-medium',
           text: query
         })
       }}
     </div>
-    <div class="wmcads-col-1-2 wmcads-col-sm-2-3">
+    <div class="ds-col-1-2 ds-col-sm-2-3">
       <strong>Oldbury to Dudley {{i}}</strong><br>and return journey
     </div>
   </li>

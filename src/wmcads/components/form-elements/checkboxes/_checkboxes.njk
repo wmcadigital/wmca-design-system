@@ -13,9 +13,9 @@
 {% set groupClass = params.groupClass if params.groupClass %}
 
 
-<div class="wmcads-fe-group {{groupClass}}">
-  <fieldset class="wmcads-fe-fieldset">
-    <legend class="wmcads-fe-fieldset__legend">
+<div class="ds-fe-group {{groupClass}}">
+  <fieldset class="ds-fe-fieldset">
+    <legend class="ds-fe-fieldset__legend">
     {%- if hasQuestion %}
     {{ 
       wmcadsQuestion({
@@ -24,8 +24,8 @@
     }}
     {% endif -%}
     </legend>
-    <div class="wmcads-fe-checkboxes">
-      <span class="wmcads-fe-checkboxes__desc">
+    <div class="ds-fe-checkboxes">
+      <span class="ds-fe-checkboxes__desc">
       {%- if hasDesc %}
       {{ desc | safe}}
       {% endif -%}
@@ -36,21 +36,21 @@
           {%- set isChecked = (' checked="checked"' | safe) if option.checked === true  else "" %}
           {%- set isNotEditable = (' disabled="disabled"' | safe) if option.editable === false else "" %}
           {% endif -%}
-          <label class="wmcads-fe-checkboxes__container">
-            <div class="wmcads-m-b-lg">
+          <label class="ds-fe-checkboxes__container">
+            <div class="ds-m-b-lg">
               {%- if option.title %}
-              <h3 class="wmcads-m-none wmcads-p-b-sm">{{option.title}}</h3>
+              <h3 class="ds-m-none ds-p-b-sm">{{option.title}}</h3>
               {%- endif -%}
               {%- if option.desc -%}
               {{ option.desc }}
               {% endif -%}
             </div>
-            <input class="wmcads-fe-checkboxes__input" value="{{option.title}}" {{isChecked}} type="checkbox" {{isNotEditable}}/>
-            <span class="wmcads-fe-checkboxes__checkmark">
+            <input class="ds-fe-checkboxes__input" value="{{option.title}}" {{isChecked}} type="checkbox" {{isNotEditable}}/>
+            <span class="ds-fe-checkboxes__checkmark">
               {{
                 wmcadsIcon({
                   icon: 'general-checkmark',
-                  class: 'wmcads-fe-checkboxes__icon'
+                  class: 'ds-fe-checkboxes__icon'
                 }) | indent(8) | trim
               }}
             </span>
@@ -60,15 +60,15 @@
         {%- for i in range(1,4) %}
         {#- Set checked state on first item in loop #}
         {%- set isChecked = (' checked="checked"' | safe) if i === 1 %}
-        <label class="wmcads-fe-checkboxes__container">
+        <label class="ds-fe-checkboxes__container">
           Option {{i}}
-          <input class="wmcads-fe-checkboxes__input" value="Option {{i}}"{{isChecked}} type="checkbox"/>
-          <span class="wmcads-fe-checkboxes__checkmark">
+          <input class="ds-fe-checkboxes__input" value="Option {{i}}"{{isChecked}} type="checkbox"/>
+          <span class="ds-fe-checkboxes__checkmark">
             {# Get SVG icon and pass class #}
             {{
               wmcadsIcon({
                 icon: 'general-checkmark',
-                class: 'wmcads-fe-checkboxes__icon'
+                class: 'ds-fe-checkboxes__icon'
               }) | indent(8) | trim
             }}
           </span>

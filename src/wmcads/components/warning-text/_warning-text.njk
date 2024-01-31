@@ -8,11 +8,11 @@
 {% set icon = params.icon if params.icon %} {# set svg icon #}
 {% set class = params.class if params.class %} {# set svg icon #}
 
-<div class="wmcads-warning-text {{class}}">
+<div class="ds-warning-text {{class}}">
     {{
       wmcadsIcon({
         icon: icon,
-        class: 'wmcads-warning-text__icon'
+        class: 'ds-warning-text__icon'
       }) | indent | trim
     }}
     {{ text | safe }}

@@ -3,35 +3,35 @@
 {# Imports #}
 {% from "../../../components/breadcrumb/_breadcrumb.njk" import wmcadsBreadcrumb %}
 
-<div class="wmcads-pagination wmcads-m-t-xl">
-    <ol class="wmcads-pagination__nav">
+<div class="ds-pagination ds-m-t-xl">
+    <ol class="ds-pagination__nav">
     {% for i in range(1, params.pageCount + 1) -%}
     {% if(i == params.activePage - 1) %}
-        <li class="wmcads-pagination__item wmcads-pagination__item--previous">
-            <a class="wmcads-link" href="#">{{ i }}</a>
+        <li class="ds-pagination__item ds-pagination__item--previous">
+            <a class="ds-link" href="#">{{ i }}</a>
         </li>
     {% elseif(i == params.activePage) %}
-        <li class="wmcads-pagination__item wmcads-pagination__item--active">
+        <li class="ds-pagination__item ds-pagination__item--active">
             {{ i }}
         </li>
     {% else %}
-        <li class="wmcads-pagination__item">
-            <a class="wmcads-link" href="#">{{ i }}</a>
+        <li class="ds-pagination__item">
+            <a class="ds-link" href="#">{{ i }}</a>
         </li>
     {% endif %}
     {% endfor -%}
     </ol>
     {% if(params.activePage > 1) %}
-    <a href="#" target="_self" class="wmcads-pagination__prev wmcads-link wmcads-link--with-chevron" >
-        <svg class="wmcads-link__chevron wmcads-link__chevron--left">
-            <use xlink:href="#wmcads-general-chevron-right" href="#wmcads-general-chevron-right"></use>
+    <a href="#" target="_self" class="ds-pagination__prev ds-link ds-link--with-chevron" >
+        <svg class="ds-link__chevron ds-link__chevron--left">
+            <use xlink:href="#ds-general-chevron-right" href="#ds-general-chevron-right"></use>
         </svg> Previous page
     </a>
     {% endif %}
     {% if(params.activePage < params.pageCount) %}
-    <a href="#" target="_self" class="wmcads-pagination__next wmcads-link wmcads-link--with-chevron" >
-        Next page <svg class="wmcads-link__chevron wmcads-link__chevron--right">
-        <use xlink:href="#wmcads-general-chevron-right" href="#wmcads-general-chevron-right"></use>
+    <a href="#" target="_self" class="ds-pagination__next ds-link ds-link--with-chevron" >
+        Next page <svg class="ds-link__chevron ds-link__chevron--right">
+        <use xlink:href="#ds-general-chevron-right" href="#ds-general-chevron-right"></use>
         </svg>
     </a>
     {% endif %}

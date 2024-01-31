@@ -1,0 +1,52 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Page header" %}
+{% from "wmcads/components/page-header/_page-header.njk" import wmcadsPageHeader %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+<h2>Header with page name</h2>
+{{
+  compExample([
+    wmcadsPageHeader({
+      title: true
+    })
+  ])  
+}}
+<h2>Header with page name and icon</h2>
+{{
+  compExample([
+    wmcadsPageHeader({
+      title: true,
+      icon:'general-info'
+    })
+  ])  
+}}
+<h2>Plain Header</h2>
+{{
+  compExample([
+    wmcadsPageHeader({
+      title: false
+    })
+  ])  
+}}
+<h2>Plain Header - Large</h2>
+<p>Where a larger page header is needed you can use the following which will modify the height to 600px.</p>
+{{
+  compExample([
+    wmcadsPageHeader({
+      title: false,
+      large: true
+    })
+  ])  
+}}
+<h2>Homepage Header</h2>
+{{
+  compExample([
+    wmcadsPageHeader({
+      title: true,
+      text: "Building a healthier, happier, better connected and more prosperous West Midlands",
+      home: true
+    })
+  ])  
+}}
+{% endblock %}

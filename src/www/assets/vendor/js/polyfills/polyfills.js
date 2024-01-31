@@ -2,7 +2,7 @@
 // Make sure that the file is exporting the function running like
 // export default forEachPolyFill();
 
-// This file is then included as the first import in the main wmcads-website.js file so our polyfills get loaded
+// This file is then included as the first import in the main ds-website.js file so our polyfills get loaded
 export * from './ie11-forEach';
 export * from './includes';
 export * from './details-element'

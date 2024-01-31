@@ -10,7 +10,7 @@
 
 $transition-fade-in: opacity 0.2s ease-out;
 
-.wmcads-search-filter {
+.ds-search-filter {
   &__header {
     display: flex;
     position: relative;
@@ -33,10 +33,10 @@ $transition-fade-in: opacity 0.2s ease-out;
     }
   }
 
-  .wmcads-accordion {
+  .ds-accordion {
     position: relative;
 
-    & + .wmcads-accordion {
+    & + .ds-accordion {
       &::before {
         content: "";
         @include top-border;
@@ -44,7 +44,7 @@ $transition-fade-in: opacity 0.2s ease-out;
     }
   }
 
-  .wmcads-accordion__content {
+  .ds-accordion__content {
     padding-top: $size-xsm;
   }
 
@@ -77,14 +77,14 @@ $transition-fade-in: opacity 0.2s ease-out;
       color: get-color(primary);
     }
 
-    .wmcads-accordion__summary {
-      .wmcads-accordion__summary-title {
+    .ds-accordion__summary {
+      .ds-accordion__summary-title {
         @include type-setting(3, 1);
         margin-top: 0;
       }
     }
 
-    .wmcads-accordion {
+    .ds-accordion {
       &::before {
         content: "";
         @include top-border;
@@ -105,7 +105,7 @@ $transition-fade-in: opacity 0.2s ease-out;
     }
 
     &--has-inputs-checked {
-      .wmcads-search-filter__mobile-filter-update {
+      .ds-search-filter__mobile-filter-update {
         visibility: visible;
         opacity: 1;
       }
@@ -113,12 +113,12 @@ $transition-fade-in: opacity 0.2s ease-out;
   }
 
   @media screen and (max-width: $breakpoint-md) {
-    .wmcads-search-filter__clear-all {
+    .ds-search-filter__clear-all {
       display: none;
     }
 
     &--has-inputs-checked {
-      .wmcads-search-filter__clear-all.wmcads-hide-desktop {
+      .ds-search-filter__clear-all.ds-hide-desktop {
         display: flex;
       }
     }
@@ -132,7 +132,7 @@ $transition-fade-in: opacity 0.2s ease-out;
       display: none;
     }
 
-    .wmcads-search-filter__clear-all {
+    .ds-search-filter__clear-all {
       display: none;
       position: relative;
       padding: $size-md;
@@ -156,7 +156,7 @@ $transition-fade-in: opacity 0.2s ease-out;
     }
 
     &--has-inputs-checked {
-      .wmcads-search-filter__clear-all.wmcads-hide-mobile {
+      .ds-search-filter__clear-all.ds-hide-mobile {
         display: flex;
       }
     }

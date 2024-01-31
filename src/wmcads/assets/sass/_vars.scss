@@ -7,7 +7,7 @@ $palettes: (
   text: #231f20,
   cta: #007da8,
   cta-active: #003e53,
-  background: #fcfcfc,
+  background: #f3f2f1,
   brandCoolGrey: #54565b,
   brandFurnaceOrange: #fe811b,
   brandWmGreen: #00807b,
@@ -58,7 +58,7 @@ $black: #000000;
 }
 
 // TEXT
-$text-color: get-color($black);
+$text-color: $black;
 $x-font-family: "Noto Sans Display", sans-serif;
 $x-font-family-bold: "Noto Sans Display Bold", sans-serif;
 $x-heading-font-family: "DM Sans", sans-serif;
@@ -81,7 +81,7 @@ $size-xl: 3rem; // 48px
 $breakpoint-xs: 0; // Extra small screen / phone
 $breakpoint-sm: 568px; // Small screen / phone
 $breakpoint-md: 768px; // Medium screen / tablet
-$breakpoint-lg: 992px; // Large screen / desktop (this is used for wmcads-container size)
+$breakpoint-lg: 992px; // Large screen / desktop (this is used for ds-container size)
 $breakpoint-xl: 1280px; // Extra large screen / wide desktop
 
 // Grid vars

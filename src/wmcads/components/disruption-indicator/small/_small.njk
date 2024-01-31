@@ -5,19 +5,19 @@
 {% set class = ' ' + params.classModifiers if params.classModifiers %}
 
 <!-- map pin for {{params.mode}} -->
-<span class="wmcads-disruption-indicator-small{{class}}">
+<span class="ds-disruption-indicator-small{{class}}">
   {# Get SVG icon for mode #}
   {{-
     wmcadsIcon({
       icon: 'modes-isolated-' + params.mode,
-      class: 'wmcads-disruption-indicator-small__icon'
+      class: 'ds-disruption-indicator-small__icon'
     }) | indent(2) | trim
   }}
   {# Get SVG icon for type #}
   {{-
     wmcadsIcon({
       icon: iconRight,
-      class: 'wmcads-disruption-indicator-small__icon'
+      class: 'ds-disruption-indicator-small__icon'
     }) | indent(2) | trim
   }}
 </span>

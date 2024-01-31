@@ -2,13 +2,13 @@
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {# Set vars and defaults #}
 
-<div class="wmcads-msg-help">
-  <button class="wmcads-msg-help__close-btn" aria-label="Close help message">
+<div class="ds-msg-help">
+  <button class="ds-msg-help__close-btn" aria-label="Close help message">
     {# Get SVG icon #}
     {{-
       wmcadsIcon({
         icon: 'general-cross',
-        class: 'wmcads-msg-help__close-icon'
+        class: 'ds-msg-help__close-icon'
       }) | indent(4) | trim
     }}
   </button>

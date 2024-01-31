@@ -1,5 +1,7 @@
 {% extends "www/_layouts/layout-left-pane.njk" %}
 {% set pageTitle="Page header" %}
+{% set ds = 'wmca' %}
+
 {% from "wmcads/components/page-header/_page-header.njk" import wmcadsPageHeader %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
@@ -45,7 +47,8 @@
     wmcadsPageHeader({
       title: true,
       text: "Building a healthier, happier, better connected and more prosperous West Midlands",
-      home: true
+      home: true,
+      contentHTML: "testing"
     })
   ])  
 }}

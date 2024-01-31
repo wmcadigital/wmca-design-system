@@ -18,7 +18,7 @@
     {
       "name": "breadcrumbItems",
       "type": "array",
-      "description": "Array of breadcrumb items to show in the banner. See the <code class='wmcads-website-inline-code'>items</code> property under <a href='/components/breadcrumb/'>Breadcrumb</a>."
+      "description": "Array of breadcrumb items to show in the banner. See the <code class='ds-website-inline-code'>items</code> property under <a href='/components/breadcrumb/'>Breadcrumb</a>."
     },
     {
       "name": "ctaButton",

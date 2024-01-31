@@ -30,7 +30,7 @@ Find out more about the [Nunjucks templating language](https://github.com/mozill
     {% macro wmcadsComponentName(params) %}
     {# Component description/ comments here #}
 
-    <div class="wmcads-componentName">
+    <div class="ds-componentName">
 
     </div>
 

@@ -2,7 +2,7 @@
 const { src } = require('gulp');
 const plugins = require('gulp-load-plugins')();
 // Local requires
-const paths = require('./paths.js');
+const paths = require('./paths');
 
 const lintingStyles = () => {
   return src(paths.styles.src)

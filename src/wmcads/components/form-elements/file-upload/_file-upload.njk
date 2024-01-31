@@ -3,10 +3,10 @@
 {# Imports #}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 
-<div class="wmcads-fe-group">
-  <fieldset class="wmcads-fe-fieldset">
-    <legend class="wmcads-fe-fieldset__legend">
-      <h3 class="wmcads-fe-question">
+<div class="ds-fe-group">
+  <fieldset class="ds-fe-fieldset">
+    <legend class="ds-fe-fieldset__legend">
+      <h3 class="ds-fe-question">
         Upload a file
       </h3>
       <p>
@@ -14,17 +14,17 @@
       </p>
     </legend>
     {% if params.fileSelected -%}
-      <div class="wmcads-fe-file-upload">
+      <div class="ds-fe-file-upload">
         <input
           type="file"
           name="fileUploaded"
           id="fileUploaded"
-          class="wmcads-fe-file-upload__input wmcads-fe-file-upload__input--file-selected"
+          class="ds-fe-file-upload__input ds-fe-file-upload__input--file-selected"
         />
-        <label for="fileUploaded" class="wmcads-btn wmcads-btn--primary wmcads-fe-file-upload__label">
+        <label for="fileUploaded" class="ds-btn ds-btn--primary ds-fe-file-upload__label">
           Remove file
-          <svg class="wmcads-btn__icon wmcads-btn__icon--right">
-            <use xlink:href="#wmcads-general-chevron-right" href="#wmcads-general-chevron-right"></use>
+          <svg class="ds-btn__icon ds-btn__icon--right">
+            <use xlink:href="#ds-general-chevron-right" href="#ds-general-chevron-right"></use>
           </svg>
         </label>
         <span>
@@ -32,17 +32,17 @@
         </span>
       </div>
     {%- else -%}
-      <div class="wmcads-fe-file-upload">
+      <div class="ds-fe-file-upload">
         <input
           type="file"
           name="fileUpload"
           id="fileUpload"
-          class="wmcads-fe-file-upload__input"
+          class="ds-fe-file-upload__input"
         />
-        <label for="fileUpload" class="wmcads-btn wmcads-btn--primary wmcads-fe-file-upload__label">
+        <label for="fileUpload" class="ds-btn ds-btn--primary ds-fe-file-upload__label">
           Choose file
-          <svg class="wmcads-btn__icon wmcads-btn__icon--right">
-            <use xlink:href="#wmcads-general-paperclip" href="#wmcads-general-paperclip"></use>
+          <svg class="ds-btn__icon ds-btn__icon--right">
+            <use xlink:href="#ds-general-paperclip" href="#ds-general-paperclip"></use>
           </svg>
         </label>
         <span>

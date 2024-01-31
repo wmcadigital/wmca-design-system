@@ -1,7 +1,7 @@
 import 'iframe-resizer/js/iframeResizer'; // Import iframe resizer logic
 
 const componentExampleIframe = () => {
-  const iframeExamples = document.querySelectorAll('.wmcads-website-code-example__iframe');
+  const iframeExamples = document.querySelectorAll('.ds-website-code-example__iframe');
 
   iframeExamples.forEach(iframeElement => {
     const ifrm = iframeElement;
@@ -14,7 +14,7 @@ const componentExampleIframe = () => {
     const host = `//${window.location.host}`;
 
     const ajax = new XMLHttpRequest();
-    ajax.open('GET', `${host}/img/wmcads-icons.min.svg`, true); // Fire off ajax to get spritesheet
+    ajax.open('GET', `${host}/img/ds-icons.min.svg`, true); // Fire off ajax to get spritesheet
     ajax.send();
     // When spritesheet has loaded
     ajax.onload = () => {
@@ -27,16 +27,16 @@ const componentExampleIframe = () => {
           <head>
             <base href="${host}" target="_blank">
             <link rel="stylesheet" type="text/css" href="${host}/css/wmcads.min.css" />
-            <link rel="stylesheet" type="text/css" href="${host}/css/wmcads-website.min.css" />
+            <link rel="stylesheet" type="text/css" href="${host}/css/ds-website.min.css" />
           </head>
           <body>
-            <div class="wmcads-p-md wmcads-iframe-content">
+            <div class="ds-p-md ds-iframe-content">
               ${svgSprite}
               ${html || ''}
             </div>
             <script src="https://unpkg.com/iframe-resizer@3.5.7/js/iframeResizer.contentWindow.min.js"></script>
             <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CObject.assign%2CString.prototype.includes%2CNumber.isNaN"></script>
-            <script src="${host}/js/wmcads-website.min.js"></script>
+            <script src="${host}/js/ds-website.min.js"></script>
           </body>
         </html>
       `;

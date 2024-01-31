@@ -1,4 +1,4 @@
-.wmcads-fe-file-upload {
+.ds-fe-file-upload {
   display: flex;
   align-items: flex-start;
 
@@ -10,13 +10,13 @@
     overflow: hidden;
     opacity: 0;
 
-    &:focus ~ .wmcads-fe-file-upload__label {
+    &:focus ~ .ds-fe-file-upload__label {
       outline: 0;
       box-shadow: 0 0 0 2px $white, 0 0 0 4px get-color(secondary);
     }
 
     &--file-selected {
-      & ~ .wmcads-fe-file-upload__label {
+      & ~ .ds-fe-file-upload__label {
         background-color: get-color(error);
       }
     }

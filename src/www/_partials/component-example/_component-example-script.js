@@ -2,7 +2,7 @@
 // import * as babel from '@babel/standalone';
 
 const componentExampleScript = () => {
-  const exampleScripts = document.querySelectorAll('.wmcads-website-code-example__js'); // Get all code examples that have the js tab enabled
+  const exampleScripts = document.querySelectorAll('.ds-website-code-example__js'); // Get all code examples that have the js tab enabled
 
   exampleScripts.forEach(exampleScript => {
     const parentEle = exampleScript; // get parent element for easier querying
@@ -27,11 +27,11 @@ const componentExampleScript = () => {
     // const compileJs = input => babel.transform(input, { presets: ['env'] }).code;
     // const escapedCharScriptES5 = escapeCharacters(compileJs(scriptTag));
 
-    // parentEle.querySelector('.wmcads-details--js .js').innerHTML = escapedCharScriptES5;
+    // parentEle.querySelector('.ds-details--js .js').innerHTML = escapedCharScriptES5;
 
     // *** END BABEL ES6 => ES5 ***
 
-    parentEle.querySelector('.wmcads-details--es6 .js').innerHTML = escapeCharScriptES6; // The find the es6 pre/code block and drop our formatted code in there
+    parentEle.querySelector('.ds-details--es6 .js').innerHTML = escapeCharScriptES6; // The find the es6 pre/code block and drop our formatted code in there
   });
 };
 

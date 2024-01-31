@@ -5,49 +5,49 @@
 {% from "wmcads/components/disruption-indicator/medium/_medium.njk" import wmcadsDisruptionIndicatorMedium as wmcadsDisruptionIndicatorNarrow %}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {# Params #}
-{% set isOpen = " wmcads-is--open" if params.isOpen %}
+{% set isOpen = " ds-is--open" if params.isOpen %}
 {% set isExpanded = "true" if params.isOpen else "false" %}
 {% set id = params.id if params.id else "accordion-01" %}
 
-<div class="wmcads-accordion{{isOpen}}">
-  <button aria-controls="{{id}}" class="wmcads-accordion__summary-wrapper" aria-expanded="{{isExpanded}}">
+<div class="ds-accordion{{isOpen}}">
+  <button aria-controls="{{id}}" class="ds-accordion__summary-wrapper" aria-expanded="{{isExpanded}}">
     <!-- accordion summary -->
-    <div class="wmcads-accordion__summary">
+    <div class="ds-accordion__summary">
       {% if params.customSummary -%}
       <!-- custom summary using grid -->
-      <div class="wmcads-grid wmcads-grid--align-center">
+      <div class="ds-grid ds-grid--align-center">
         {{
           wmcadsDisruptionIndicatorSmall({
-            classModifiers: 'wmcads-col-auto wmcads-m-r-md',
+            classModifiers: 'ds-col-auto ds-m-r-md',
             mode: 'bus'
           }) | indent(10) | trim
         }}
-        <div class="wmcads-col-auto">
+        <div class="ds-col-auto">
           Resurfacing Works at <strong>Abbey Street, Lower Gornal</strong>
         </div>
       </div>
       {%- else -%}
-        <h4 class="wmcads-m-b-none">Accordion</h4>
+        <h4 class="ds-m-b-none">Accordion</h4>
       {%- endif %}
     </div>
     <!-- plus icon -->
     {{
       wmcadsIcon({
         icon: 'general-expand',
-        class: 'wmcads-accordion__icon'
+        class: 'ds-accordion__icon'
       }) | indent(4) | trim
     }}
     <!-- minus icon -->
     {{
       wmcadsIcon({
         icon: 'general-minimise',
-        class: 'wmcads-accordion__icon wmcads-accordion__icon--minimise'
+        class: 'ds-accordion__icon ds-accordion__icon--minimise'
       }) | indent(4) | trim
     }}
   </button>
 
   <!-- accordion content -->
-  <div class="wmcads-accordion__content" id="{{id}}">
+  <div class="ds-accordion__content" id="{{id}}">
     <p>
       <strong>Some random subtitle</strong>
     </p>

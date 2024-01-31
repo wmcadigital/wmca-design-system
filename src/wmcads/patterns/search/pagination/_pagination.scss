@@ -1,4 +1,4 @@
-.wmcads-pagination {
+.ds-pagination {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -35,7 +35,7 @@
     &--active {
       display: block;
 
-      & + .wmcads-pagination__item:not(:last-child) {
+      & + .ds-pagination__item:not(:last-child) {
         display: block;
         padding-right: $size-xs;
 

@@ -1,15 +1,15 @@
 const accordionsJS = () => {
-  const accordions = document.querySelectorAll('.wmcads-accordion');
+  const accordions = document.querySelectorAll('.ds-accordion');
 
   accordions.forEach(accordion => {
-    const accordionBtn = accordion.querySelector('.wmcads-accordion__summary-wrapper');
+    const accordionBtn = accordion.querySelector('.ds-accordion__summary-wrapper');
 
     const toggleAccordion = () => {
-      if (accordion.classList.contains('wmcads-is--open')) {
-        accordion.classList.remove('wmcads-is--open');
+      if (accordion.classList.contains('ds-is--open')) {
+        accordion.classList.remove('ds-is--open');
         accordionBtn.setAttribute('aria-expanded', false);
       } else {
-        accordion.classList.add('wmcads-is--open');
+        accordion.classList.add('ds-is--open');
         accordionBtn.setAttribute('aria-expanded', true);
       }
     };

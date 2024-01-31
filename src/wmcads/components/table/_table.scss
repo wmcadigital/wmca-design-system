@@ -1,6 +1,6 @@
 $border: #979797;
 
-.wmcads-table {
+.ds-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
@@ -80,7 +80,7 @@ $border: #979797;
       }
     }
 
-    &.wmcads-table--without-header {
+    &.ds-table--without-header {
       // shorten table
       tr > th,
       tr > td {

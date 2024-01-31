@@ -1,6 +1,6 @@
 const headerJs = () => {
   // get mega menu elements
-  const megaMenus = document.querySelectorAll('.wmcads-mega-menu');
+  const megaMenus = document.querySelectorAll('.ds-mega-menu');
 
   const mobileMenu = window.matchMedia('(max-width: 767px)');
 
@@ -97,7 +97,7 @@ const headerJs = () => {
   megaMenus.forEach(menu => {
     const clearActiveListItems = () => {
       // remove active classes from other list items
-      menu.querySelectorAll('.wmcads-mega-menu__primary-menu-item').forEach(menuItem => {
+      menu.querySelectorAll('.ds-mega-menu__primary-menu-item').forEach(menuItem => {
         menuItem.classList.remove('active');
       });
     };
@@ -121,11 +121,11 @@ const headerJs = () => {
     // mobile nav function
     function handleMobileMenu(mq) {
       if (mq.matches) {
-        const mobileToggle = menu.querySelector('.wmcads-mega-menu__mobile-toggle');
+        const mobileToggle = menu.querySelector('.ds-mega-menu__mobile-toggle');
         const headerEl = menu.parentNode.parentNode;
 
-        const topLevelMenuBtn = menu.querySelectorAll('.wmcads-mega-menu__link-arrow-icon-btn');
-        const searchBtn = menu.querySelector('.wmcads-mega-menu__search-btn');
+        const topLevelMenuBtn = menu.querySelectorAll('.ds-mega-menu__link-arrow-icon-btn');
+        const searchBtn = menu.querySelector('.ds-mega-menu__search-btn');
         // object to see which menu/menu level is open
         const mobileMenuIsOpen = { menu: false, primary: false, search: false };
 
@@ -134,13 +134,13 @@ const headerJs = () => {
           mobileMenuIsOpen.menu = !mobileMenuIsOpen.menu;
           if (mobileMenuIsOpen.menu) {
             mobileMenuIsOpen.search = false;
-            headerEl.classList.remove('wmcads-header--search-open');
-            headerEl.classList.add('wmcads-header--mega-menu-open');
+            headerEl.classList.remove('ds-header--search-open');
+            headerEl.classList.add('ds-header--mega-menu-open');
             document.querySelector('html').classList.add('mobile-menu-open');
           } else {
             headerEl.classList.remove(
-              'wmcads-header--mega-menu-open',
-              'wmcads-header--mega-menu-submenu-open'
+              'ds-header--mega-menu-open',
+              'ds-header--mega-menu-submenu-open'
             );
             document.querySelector('html').classList.remove('mobile-menu-open');
           }
@@ -151,13 +151,13 @@ const headerJs = () => {
           if (mobileMenuIsOpen.search) {
             mobileMenuIsOpen.menu = false;
             headerEl.classList.remove(
-              'wmcads-header--mega-menu-open',
-              'wmcads-header--mega-menu-submenu-open'
+              'ds-header--mega-menu-open',
+              'ds-header--mega-menu-submenu-open'
             );
             document.querySelector('html').classList.remove('mobile-menu-open');
-            headerEl.classList.add('wmcads-header--search-open');
+            headerEl.classList.add('ds-header--search-open');
           } else {
-            headerEl.classList.remove('wmcads-header--search-open');
+            headerEl.classList.remove('ds-header--search-open');
           }
         };
 
@@ -179,11 +179,11 @@ const headerJs = () => {
             const targetListItem = menuBtn.parentNode;
             if (mobileMenuIsOpen.primary) {
               targetListItem.classList.add('open');
-              targetListItem.querySelector('.wmcads-mega-menu__sub-menu-link').focus();
-              headerEl.classList.add('wmcads-header--mega-menu-submenu-open');
+              targetListItem.querySelector('.ds-mega-menu__sub-menu-link').focus();
+              headerEl.classList.add('ds-header--mega-menu-submenu-open');
             } else {
               targetListItem.classList.remove('open');
-              headerEl.classList.remove('wmcads-header--mega-menu-submenu-open');
+              headerEl.classList.remove('ds-header--mega-menu-submenu-open');
             }
           };
           menuBtn.previousElementSibling.addEventListener('click', handleSubMenus);
@@ -192,7 +192,7 @@ const headerJs = () => {
 
         // mobile collapse for third level menus
         const collapseMenus = menu.querySelectorAll(
-          '.wmcads-mega-menu__sub-menu-item .wmcads-mega-menu__collapse-toggle'
+          '.ds-mega-menu__sub-menu-item .ds-mega-menu__collapse-toggle'
         );
         collapseMenus.forEach(collapseToggle => {
           const handleThirdLevelMenus = () => {
@@ -217,7 +217,7 @@ const headerJs = () => {
     handleMobileMenu(mobileMenu);
     mobileMenu.addListener(handleMobileMenu);
 
-    const topLevelLinks = menu.querySelectorAll('.wmcads-mega-menu__primary-menu-link');
+    const topLevelLinks = menu.querySelectorAll('.ds-mega-menu__primary-menu-link');
     let menuDelay = false;
     let enterTimeOut;
     let leaveTimeOut;
@@ -228,32 +228,32 @@ const headerJs = () => {
       // return list item parent of the current link if it exists else return the link
       const topLevelListItem =
         topLevelLink.parentNode.tagName === 'LI' ||
-        topLevelLink.parentNode.className.includes('wmcads-mega-menu__search')
+        topLevelLink.parentNode.className.includes('ds-mega-menu__search')
           ? topLevelLink.parentNode
           : topLevelLink;
 
-      const subMenuLinks = topLevelListItem.querySelectorAll('.wmcads-mega-menu__sub-menu-link');
+      const subMenuLinks = topLevelListItem.querySelectorAll('.ds-mega-menu__sub-menu-link');
 
       // check if level 3 menus are present, if so add modifier class
       const hasSubmenuChildren =
-        topLevelListItem.querySelectorAll('.wmcads-mega-menu__sub-menu-child-menu').length !== 0;
+        topLevelListItem.querySelectorAll('.ds-mega-menu__sub-menu-child-menu').length !== 0;
       if (hasSubmenuChildren) {
-        topLevelListItem.querySelectorAll('.wmcads-mega-menu__sub-menu').forEach(subMenu => {
-          subMenu.classList.add('wmcads-mega-menu__sub-menu--has-child-menus');
+        topLevelListItem.querySelectorAll('.ds-mega-menu__sub-menu').forEach(subMenu => {
+          subMenu.classList.add('ds-mega-menu__sub-menu--has-child-menus');
         });
       }
 
       const openSubMenu = e => {
         // check if list item has a mega menu
-        if (topLevelListItem.querySelectorAll('.wmcads-mega-menu__container').length) {
+        if (topLevelListItem.querySelectorAll('.ds-mega-menu__container').length) {
           e.preventDefault();
           // remove keyFocus to allow menu to show
           setMenuActive(topLevelListItem, true);
           // focus first menu item
           if (topLevelListItem.contains(subMenuLinks[0])) {
             subMenuLinks[0].focus();
-          } else if (topLevelListItem.querySelector('.wmcads-search-bar__input')) {
-            topLevelListItem.querySelector('.wmcads-search-bar__input').focus();
+          } else if (topLevelListItem.querySelector('.ds-search-bar__input')) {
+            topLevelListItem.querySelector('.ds-search-bar__input').focus();
           }
         }
       };
@@ -261,7 +261,7 @@ const headerJs = () => {
       const handleKeydown = (e, key) => {
         e.stopPropagation();
         // enable keyboard navigation only when search input is not active
-        const searchInput = document.querySelector('.wmcads-search-bar__input');
+        const searchInput = document.querySelector('.ds-search-bar__input');
         if (searchInput !== document.activeElement) {
           // if key pressed is enter, space bar or down arrow
           if (key === 13 || key === 32 || key === 40) {
@@ -292,7 +292,7 @@ const headerJs = () => {
       // if top level link doesn't have a mega-menu child add class to menu to hide overlay when hovered
       // has to be added/removed on mouseover to cover menus that have a mix of items with/without mega menus
       const isTopLevelWithMenu = topLevelListItem.querySelectorAll(
-        '.wmcads-mega-menu__container'
+        '.ds-mega-menu__container'
       ).length;
 
       if (isTopLevelWithMenu) {
@@ -313,7 +313,7 @@ const headerJs = () => {
           }
         });
         topLevelListItem
-          .querySelector('.wmcads-mega-menu__container')
+          .querySelector('.ds-mega-menu__container')
           .addEventListener('mouseover', () => {
             if (menuDelay) {
               // if container is rehovered before timeout is done, clear all timeouts kill the delay
@@ -351,12 +351,12 @@ const headerJs = () => {
       });
 
       // set up keyboard navigation for sub menu links
-      const subMenuContainer = topLevelListItem.querySelector('.wmcads-mega-menu__sub-menu');
+      const subMenuContainer = topLevelListItem.querySelector('.ds-mega-menu__sub-menu');
 
       if (subMenuContainer) {
         setKeyboardNavigation(
           subMenuContainer,
-          '.wmcads-mega-menu__sub-menu-item',
+          '.ds-mega-menu__sub-menu-item',
           // what to do on first link
           () => topLevelLink.focus(),
           // what to do on last link
@@ -371,19 +371,19 @@ const headerJs = () => {
     });
 
     // set up keyboard navigation for search menu links
-    const searchMenuContainer = menu.querySelector('.wmcads-search-container');
+    const searchMenuContainer = menu.querySelector('.ds-search-container');
     if (searchMenuContainer) {
       setKeyboardNavigation(
         searchMenuContainer,
-        '.wmcads-search-list',
+        '.ds-search-list',
         // what to do on first link
-        () => menu.querySelector('.wmcads-search-bar__input').focus(),
+        () => menu.querySelector('.ds-search-bar__input').focus(),
         // what to do on last link
         () =>
           setMenuActive(
-            menu.querySelector('.wmcads-mega-menu__search'),
+            menu.querySelector('.ds-mega-menu__search'),
             false,
-            menu.querySelector('.wmcads-mega-menu__search-btn')
+            menu.querySelector('.ds-mega-menu__search-btn')
           )
       );
     }

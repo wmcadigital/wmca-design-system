@@ -7,13 +7,13 @@
 {% set warningIcon = params.warningIcon if params.warningIcon %} {# set warning text #}
 {% set content = params.content if params.content %} {# set content #}
 
-<div class="wmcads-contact-details">
+<div class="ds-contact-details">
     <p>{{title}}</p>
     {{
         wmcadsWarningText({
             text: warningText,
             icon: warningIcon, 
-            class: "wmcads-p-b-sm"
+            class: "ds-p-b-sm"
         }) | indent(6) | trim | safe
     }}
     {{content | safe}}

@@ -1,4 +1,4 @@
-<ul class="wmcads-unordered-list">
+<ul class="ds-unordered-list">
   {# Foreach navItems #}
   {% for navItem in navItems %}
   {# If the name is equal to var #}
@@ -9,7 +9,7 @@
   {% set endUrl = sectionItem.url if sectionItem.url else sectionItem.name | lower | replace(" ", "-") %}
 
   <li>
-    <a class="wmcads-col-1 wmcads-link"
+    <a class="ds-col-1 ds-link"
       href="/{{ navItem.name | lower | replace(" ", "-") }}/{{endUrl}}/">{{ sectionItem.name | capitalize}}</a>
   </li>
   {% endfor %}

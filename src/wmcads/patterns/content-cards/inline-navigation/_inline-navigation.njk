@@ -8,12 +8,12 @@
 {% set navLinks = ["Information for drivers", "Information for bus passengers", "Information for tram passengers", "Information for pedestrians", "Getting  to venues and attractions"] %}
 
 {% call wmcadsContentCard() %}
-    <nav class="wmcads-p-sm">
-        <h3 class="wmcads-content-card__title">{{title}}</h3>
-        <ul class="wmcads-content-card__list wmcads-m-b-none">
+    <nav class="ds-p-sm">
+        <h3 class="ds-content-card__title">{{title}}</h3>
+        <ul class="ds-content-card__list ds-m-b-none">
             {#- Current page -#}
             {% if params.withCurrentPage %}
-            <li class="wmcads-content-card__list-item">
+            <li class="ds-content-card__list-item">
                 {{
                     wmcadsInsetText({
                         html: "
@@ -27,8 +27,8 @@
             {% endif -%}
             {#- Loop through links  -#}
             {% for link in navLinks %}
-            <li class="wmcads-content-card__list-item">
-                <a href="#" target="_self" title="Link title" class="wmcads-link">{{link}}</a>
+            <li class="ds-content-card__list-item">
+                <a href="#" target="_self" title="Link title" class="ds-link">{{link}}</a>
             </li>
             {% endfor %}
         </ul>

@@ -3,7 +3,7 @@ $btn-border-width: 1px;
 $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
 
 // default button styles aka cta btn
-.wmcads-btn {
+.ds-btn {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -27,7 +27,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   &:active,
   &:target,
   &:focus,
-  &.wmcads-is--active {
+  &.ds-is--active {
     outline: none;
     background-color: get-color(primary, 50%, dark);
     -webkit-appearance: none;
@@ -62,7 +62,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
       background-color: get-color(plannedDisruption);
     }
 
-    &.wmcads-is--active {
+    &.ds-is--active {
       background-color: get-color(primary, 80%);
     }
   }
@@ -78,7 +78,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     &:active,
     &:target,
     &:focus,
-    &.wmcads-is--active {
+    &.ds-is--active {
       background-color: get-color(primary, 50%, dark);
     }
   }
@@ -89,7 +89,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     color: get-color(primary);
     background-color: transparent;
 
-    .wmcads-btn__icon {
+    .ds-btn__icon {
       fill: get-color(primary);
     }
 
@@ -103,17 +103,17 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
       background-color: initial;
     }
 
-    &.wmcads-is--active {
+    &.ds-is--active {
       background-color: get-color(primary, 75%);
     }
 
     // Secondary (disabled)
-    &.wmcads-btn--disabled:disabled {
+    &.ds-btn--disabled:disabled {
       border-color: get-color(disable);
       color: get-color(disable);
       background: transparent;
 
-      .wmcads-btn__icon {
+      .ds-btn__icon {
         fill: get-color(disable);
       }
     }
@@ -130,7 +130,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     &:active,
     &:target,
     &:focus,
-    &.wmcads-is--active {
+    &.ds-is--active {
       background-color: get-color(cta, 50%, dark);
     }
   }
@@ -146,7 +146,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     &:active,
     &:target,
     &:focus,
-    &.wmcads-is--active {
+    &.ds-is--active {
       background-color: get-color(error, 50%, dark);
     }
   }
@@ -165,7 +165,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     &:active,
     &:target,
     &:focus,
-    &.wmcads-is--active {
+    &.ds-is--active {
       background-color: get-color(success, 50%, dark);
     }
   }
@@ -175,14 +175,14 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     background-color: get-color(disable);
     cursor: not-allowed;
 
-    .wmcads-btn__icon {
+    .ds-btn__icon {
       fill: $white;
     }
 
     &:active,
     &:target,
     &:focus,
-    &.wmcads-is--active {
+    &.ds-is--active {
       background-color: get-color(disable);
     }
   }
@@ -208,7 +208,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     &:target,
     &:hover,
     &:focus,
-    &.wmcads-is--active {
+    &.ds-is--active {
       background: none;
     }
   }

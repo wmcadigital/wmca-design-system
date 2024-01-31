@@ -42,7 +42,7 @@
 
         - `js/`
 
-          Any javascript files located in here will be concatenated and compiled into `docs/js/wmcads-vendor.min.js` via the [javascript build task](tasks.md#markdown-header-141-scripts-javascript).
+          Any javascript files located in here will be concatenated and compiled into `docs/js/ds-vendor.min.js` via the [javascript build task](tasks.md#markdown-header-141-scripts-javascript).
 
 - `build/` **contains auto-generated files**
 

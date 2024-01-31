@@ -1,9 +1,9 @@
-.wmcads-hub-page-banner {
+.ds-hub-page-banner {
   position: relative;
   color: $white;
   background-color: get-color(primary);
 
-  .wmcads-hub-page-banner__svg-background {
+  .ds-hub-page-banner__svg-background {
     fill: get-color(primary);
   }
 
@@ -83,7 +83,7 @@
 
   // only for IE 11
   @media all and (-ms-high-contrast: none) {
-    .wmcads-hub-page-banner__svg-background {
+    .ds-hub-page-banner__svg-background {
       left: calc(-50% + 30px);
     }
   }

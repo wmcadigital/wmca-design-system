@@ -1,6 +1,6 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 
-const paths = require('./gulp-tasks/paths.js'); // List of all paths in a config
+const paths = require('./gulp-tasks/paths'); // List of all paths in a config
 
 // STYLES
 const lintStyles = require('./gulp-tasks/lint-styles'); // Lint styles
@@ -30,8 +30,6 @@ const { minImages, moveImages } = require('./gulp-tasks/min-images'); // Optimis
 const cleanBuild = require('./gulp-tasks/clean'); // Clean the current build & _sourcemaps dir
 
 const cacheBust = require('./gulp-tasks/cache-bust'); // This function checks index.html for cb=123 and replaces with current dateTime to bust cache
-
-const { moveOldCSS, moveOldReactNative, moveOldIcons } = require('./gulp-tasks/move-old-files');
 
 const { startBrowserSync, reload } = require('./gulp-tasks/browser-sync'); // BrowserSync server
 
@@ -69,10 +67,7 @@ const buildAll = series(
   buildConfig,
   lintStyles,
   lintTemplates,
-  lintScripts,
-  moveOldCSS,
-  moveOldReactNative,
-  moveOldIcons
+  lintScripts
 );
 
 // run buildStyles, buildFonts,& minifyJS on start, series so () => run in an order and parallel so () => can run at same time

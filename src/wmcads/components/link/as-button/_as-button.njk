@@ -10,13 +10,13 @@
 {% set linkTitle = params.linkTitle if params.linkTitle else "link title" %} {# set link title #}
 {% set linkTarget = params.linkTarget if params.linkTarget else "_self" %} {# set link target #}
 
-<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="wmcads-btn{{ classNames }}">
+<a href="{{ link }}" title="{{ linkTitle }}" target="{{ linkTarget }}" class="ds-btn{{ classNames }}">
   {#- iconLeft -#}
   {% if iconLeft %}
   {{
     wmcadsIcon({
       icon: iconLeft,
-      class: 'wmcads-btn__icon'
+      class: 'ds-btn__icon'
     }) | indent(2) | trim
   }}
   {{ text -}}
@@ -26,7 +26,7 @@
   {{
     wmcadsIcon({
       icon: iconRight,
-      class: 'wmcads-btn__icon wmcads-btn__icon--right'
+      class: 'ds-btn__icon ds-btn__icon--right'
     }) | indent(2) | trim
   }}
 

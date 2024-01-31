@@ -3,13 +3,13 @@
 
 {# If size is defined then append that to the class modifier and use below.
 Only two size modifiers are 'large' and 'small' #}
-{% set size = " wmcads-loader--" + params.size if params.size %}
+{% set size = " ds-loader--" + params.size if params.size %}
 {% set commentSize = params.size if params.size else "normal" %}
 {% set customClass = " " + params.customClass if params.customClass %} {# Allows custom classes to be added to loader #}
 
 <!-- {{commentSize}} sized loader -->
-<div class="wmcads-loader{{size}}{{customClass}}" role="alert" aria-live="assertive">
-  <p class="wmcads-loader__content">Content is loading...</p>
+<div class="ds-loader{{size}}{{customClass}}" role="alert" aria-live="assertive">
+  <p class="ds-loader__content">Content is loading...</p>
 </div>
 
 {% endmacro %}

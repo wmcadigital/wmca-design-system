@@ -5,24 +5,24 @@ const searchFilterJs = () => {
   const searchFilter = document.getElementById('search_filter');
 
   if (searchFilter) {
-    const filterOptions = searchFilter.querySelectorAll('.wmcads-fe-checkboxes__input');
+    const filterOptions = searchFilter.querySelectorAll('.ds-fe-checkboxes__input');
 
     filterOptions.forEach(option => {
       option.addEventListener('change', () => {
         if ([...filterOptions].some(input => input.checked)) {
-          searchFilter.classList.add('wmcads-search-filter--has-inputs-checked');
+          searchFilter.classList.add('ds-search-filter--has-inputs-checked');
         } else {
-          searchFilter.classList.remove('wmcads-search-filter--has-inputs-checked');
+          searchFilter.classList.remove('ds-search-filter--has-inputs-checked');
         }
       });
     });
 
     const showFilter = (show = true) => {
       if (show) {
-        searchFilter.classList.add('wmcads-search-filter--is-open');
+        searchFilter.classList.add('ds-search-filter--is-open');
         searchFilter.setAttribute('aria-expanded', 'true');
       } else {
-        searchFilter.classList.remove('wmcads-search-filter--is-open');
+        searchFilter.classList.remove('ds-search-filter--is-open');
         searchFilter.setAttribute('aria-expanded', 'false');
       }
     };
@@ -31,7 +31,7 @@ const searchFilterJs = () => {
       filterOptions.forEach(option => {
         option.checked = false; // eslint-disable-line no-param-reassign
       });
-      searchFilter.classList.remove('wmcads-search-filter--has-inputs-checked');
+      searchFilter.classList.remove('ds-search-filter--has-inputs-checked');
     };
 
     showBtn.addEventListener('click', e => {
@@ -44,7 +44,7 @@ const searchFilterJs = () => {
       showFilter(false);
     });
 
-    document.querySelectorAll('.wmcads-search-filter__clear-all').forEach(clearBtn => {
+    document.querySelectorAll('.ds-search-filter__clear-all').forEach(clearBtn => {
       clearBtn.addEventListener('click', e => {
         e.preventDefault();
         clearFilters();

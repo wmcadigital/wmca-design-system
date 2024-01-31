@@ -1,6 +1,6 @@
 // Local requires
 const browserSync = require('browser-sync').create();
-const paths = require('./paths.js'); // List of all paths in a config
+const paths = require('./paths'); // List of all paths in a config
 
 const startingBrowserSync = () => {
   return browserSync.init({

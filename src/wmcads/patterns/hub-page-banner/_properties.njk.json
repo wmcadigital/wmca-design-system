@@ -18,7 +18,7 @@
     {
       "name": "logo",
       "type": "string",
-      "description": "Transport mode the banner relates to. This will determine the icon and background colour which is displayed. Accepted values are <code class='wmcads-website-inline-code'>bus</code>, <code class='wmcads-website-inline-code'>rail</code>, <code class='wmcads-website-inline-code'>metro</code>, <code class='wmcads-website-inline-code'>roads</code>, <code class='wmcads-website-inline-code'>walk</code>, <code class='wmcads-website-inline-code'>cycle</code> and <code class='wmcads-website-inline-code'>eScooter</code>. If not set, will default to <code class='wmcads-website-inline-code'>bus</code>."
+      "description": "Transport mode the banner relates to. This will determine the icon and background colour which is displayed. Accepted values are <code class='ds-website-inline-code'>bus</code>, <code class='ds-website-inline-code'>rail</code>, <code class='ds-website-inline-code'>metro</code>, <code class='ds-website-inline-code'>roads</code>, <code class='ds-website-inline-code'>walk</code>, <code class='ds-website-inline-code'>cycle</code> and <code class='ds-website-inline-code'>eScooter</code>. If not set, will default to <code class='ds-website-inline-code'>bus</code>."
     }
   ]
 }

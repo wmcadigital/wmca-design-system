@@ -5,14 +5,14 @@
 {% set text = params.text if params.text %}
 {% set link = params.link if params.link %} {# set button text #}
 {% set linkTitle = params.linkTitle if params.linkTitle %} {# set button text #}
-<div class="wmcads-grid wmcads-banner-container">
-  <div class="wmcads-col-auto wmcads-float-left wmcads-m-r-xsm">
+<div class="ds-grid ds-banner-container">
+  <div class="ds-col-auto ds-float-left ds-m-r-xsm">
     {{
       wmcadsPhaseIndicator() | indent(6) | trim
    }}
   </div>
-  <div class="wmcads-col-auto">
-     <p class="wmcads-banner-container__text">
+  <div class="ds-col-auto">
+     <p class="ds-banner-container__text">
       {{ wmcadsLink({
         text: text,
         link: link,

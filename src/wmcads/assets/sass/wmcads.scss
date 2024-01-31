@@ -1,4 +1,5 @@
 // Vars
+$ds: "wmcads";
 @import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
 @import "vars";
 // Mixins
@@ -10,7 +11,7 @@
 @import "general";
 
 // Grid
-@import "wmcads-grid/wmcads-grid";
+@import "ds-grid/ds-grid";
 
 // Component Styles
 @import "../../components/components"; // Import all pattern styles
