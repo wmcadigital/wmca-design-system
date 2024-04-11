@@ -13,7 +13,7 @@ module.exports = {
       'src/wmcads/assets/sass/stds.scss',
       'src/wmcads/assets/sass/mcds.scss',
       'src/www/ds-website.scss',
-      'src/www/pages/templates/templates.scss',
+      'src/www/pages/wmca/templates/templates.scss',
       'src/wmcads/assets/sass/ds-grid/grid.scss',
       'src/wmcads/assets/sass/split/buttons.scss',
       'src/wmcads/assets/sass/split/accordion.scss',
