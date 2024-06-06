@@ -24,7 +24,6 @@ const cia = () => {
     // If page is == to any area homepages or splashpage (only pages with area select menus)
     if (anyAreaPage || pagePath === splashUrl) {
       // const changeAreaNav = document.querySelectorAll('.area-select'); // Get all a tags in change area menu(s)
-      console.log('testing');
       localStorage.setItem('selectedArea', window.location.pathname);
       // On click
       // changeAreaNav.addEventListener('click', event => {
