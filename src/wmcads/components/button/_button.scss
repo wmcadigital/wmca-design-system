@@ -5,23 +5,25 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
 // default button styles aka cta btn
 .ds-btn {
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
-  padding: $size-sm;
+  min-height: 50px;
+  padding: $size-xs $size-xsm;
   transition: $btn-transition;
   border: 1px solid transparent;
   border-radius: $btn-border-radius;
   color: $white;
-  background-color: get-color(primary);
-  font-family: $x-font-family-bold;
+  background-color: get-color(cta);
   font-size: 1rem;
   font-weight: bold;
-  text-align: center;
+  line-height: 1.3rem;
   text-decoration: none;
   cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
 
   &:hover {
-    background-color: get-color(primary, 30%, dark);
+    background-color: get-color(cta, 30%, dark);
   }
 
   &:active,
@@ -29,7 +31,7 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
   &:focus,
   &.ds-is--active {
     outline: none;
-    background-color: get-color(primary, 50%, dark);
+    background-color: get-color(cta, 50%, dark);
     -webkit-appearance: none;
   }
 
@@ -38,19 +40,32 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     width: 22px;
     height: 22px;
     fill: $white;
-    vertical-align: top;
+    flex: 0 0 22px;
+  }
+
+  // button icon left style
+  &__icon--left {
+    margin-right: $size-xs;
+  }
+
+  .ds-swift-logo-inline {
+    fill: $white;
   }
 
   // button icon right style
   &__icon--right {
     margin-left: $size-sm;
-    float: right;
   }
 
   // Dark background variant
   &--dark-bg {
     color: get-color(primary);
     background-color: $white;
+
+    .ds-btn__icon,
+    .ds-swift-logo-inline {
+      fill: get-color(primary);
+    }
 
     &:hover {
       background-color: get-color(primary, 90%);
@@ -89,12 +104,13 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     color: get-color(primary);
     background-color: transparent;
 
-    .ds-btn__icon {
+    .ds-btn__icon,
+    .ds-swift-logo-inline {
       fill: get-color(primary);
     }
 
     &:hover {
-      background-color: get-color(primary, 90%);
+      background-color: get-color(secondary, 70%);
     }
 
     &:active,
@@ -104,34 +120,48 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
 
     &.ds-is--active {
-      background-color: get-color(primary, 75%);
+      background-color: get-color(secondary, 50%);
     }
 
     // Secondary (disabled)
+    &.ds-btn--disabled,
     &.ds-btn--disabled:disabled {
       border-color: get-color(disable);
       color: get-color(disable);
       background: transparent;
 
-      .ds-btn__icon {
+      .ds-btn__icon,
+      .ds-swift-logo-inline {
         fill: get-color(disable);
       }
     }
-  }
 
-  // button cta styles
-  &--cta {
-    background-color: get-color(cta);
+    // Dark background variant
+    &.ds-btn--dark-bg {
+      border: 0;
+      color: $white;
+      background-color: get-color(primary);
 
-    &:hover {
-      background-color: get-color(cta, 30%, dark);
-    }
+      .ds-btn__icon,
+      .ds-swift-logo-inline {
+        fill: $white;
+      }
 
-    &:active,
-    &:target,
-    &:focus,
-    &.ds-is--active {
-      background-color: get-color(cta, 50%, dark);
+      &:hover {
+        background-color: get-color(primary, 10%);
+      }
+
+      &:active,
+      &:target,
+      &:focus {
+        color: get-color(primary);
+        background-color: get-color(plannedDisruption);
+      }
+
+      &.ds-is--active {
+        color: $white;
+        background-color: get-color(primary, 30%);
+      }
     }
   }
 
@@ -170,12 +200,83 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
   }
 
+  // button mode
+  &--mode {
+    border: $btn-border-width solid get-color(primary);
+    color: get-color(primary);
+    background-color: $white;
+
+    .ds-btn__icon,
+    .ds-swift-logo-inline {
+      margin-right: $size-xs;
+      fill: get-color(primary);
+    }
+
+    &:not(.ds-text-align-left),
+    &:not(.ds-text-align-center),
+    &:not(.ds-text-align-right) {
+      justify-content: flex-start;
+
+      .ds-btn__icon--right {
+        margin-left: auto;
+      }
+    }
+
+    .ds-btn__coloured-icon {
+      &--bus {
+        fill: get-color(bus);
+      }
+
+      &--train,
+      &--rail {
+        fill: get-color(railway);
+      }
+
+      &--tram,
+      &--metro {
+        fill: get-color(metro);
+      }
+
+      &--cycle,
+      &--walk {
+        fill: get-color(susTravel);
+      }
+    }
+
+    &:hover {
+      background-color: get-color(secondary, 70%);
+    }
+
+    &:active,
+    &:target,
+    &:focus {
+      background-color: initial;
+    }
+
+    &.ds-is--active {
+      background-color: get-color(secondary, 50%);
+    }
+
+    // Modal disabled
+    &.ds-btn--disabled:disabled {
+      border-color: get-color(disable);
+      color: get-color(disable);
+      background: $white;
+
+      .ds-btn__icon,
+      .ds-swift-logo-inline {
+        fill: get-color(disable);
+      }
+    }
+  }
+
   // Disabled modifier (goes last to override above classes) for default btn
   &--disabled:disabled {
     background-color: get-color(disable);
     cursor: not-allowed;
 
-    .ds-btn__icon {
+    .ds-btn__icon,
+    .ds-swift-logo-inline {
       fill: $white;
     }
 
@@ -187,15 +288,58 @@ $btn-transition: ease-in-out background-color 0.2s, ease-in-out border 0.2s;
     }
   }
 
+  &--favourite {
+    min-height: 0;
+    padding: 0;
+    border-radius: 0;
+    color: get-color(text);
+    background: none;
+    font-weight: normal;
+    line-height: 1;
+    cursor: pointer;
+    align-items: center;
+
+    .ds-btn__icon {
+      margin-right: $size-xsm;
+      fill: get-color(information);
+    }
+
+    &:active,
+    &:target,
+    &:hover,
+    &:focus,
+    &.ds-is--active {
+      background: none;
+    }
+  }
+
   // block modifier for full width buttons
   &--block {
-    display: block;
     width: 100%;
+  }
+
+  // block modifier for full width buttons
+  &--align-left {
+    text-align: left;
+  }
+
+  // include helpers for button alignment
+  &.ds-text-align-left {
+    justify-content: flex-start;
+  }
+
+  &.ds-text-align-center {
+    justify-content: center;
+  }
+
+  &.ds-text-align-right {
+    justify-content: flex-end;
   }
 
   // Show button like a normal link modifier
   &--link {
     display: inline;
+    min-height: 0;
     padding: 0;
     border-radius: 0;
     color: get-color(cta, 10%, dark);

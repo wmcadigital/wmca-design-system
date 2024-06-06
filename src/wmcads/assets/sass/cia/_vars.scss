@@ -1,0 +1,35 @@
+// PALETTE COLOURS
+// All of our palette colours with their respective tints (mix white in at 10% intervals)
+// All brand colours, see styles/colour-palettes page for more...
+$palettes: (
+  primary: #007399,
+  secondary: #f8c77c,
+  text: #231f20,
+  cta: #007da8,
+  cta-active: #003e53,
+  background: #f3f2f1,
+  brandCoolGrey: #54565b,
+  brandFurnaceOrange: #fe811b,
+  brandWmGreen: #00807b,
+  brandWmRed: #d60037,
+  brandWmPurple: #94368d,
+  brandWmBlue: #007ea8,
+  brandWmTintGreen: #004e2a,
+  brandWmTintBrown: #843b00,
+  brandTfwmPink: #df1683,
+  brandTfwmYellow: #ffdd00,
+  warning: #cc6900,
+  help: #f2ddcc,
+  error: #d4351c,
+  success: #00703c,
+  disable: #676869, // remove below
+  bus: #ea0029,
+  metro: #0075c9,
+  railway: #e07709,
+  susTravel: #679500,
+  roads: #df1683,
+  taxi: #773dbe,
+  information: #243c50,
+  plannedDisruption: #ffdd00,
+  inset: #009fd4,
+);

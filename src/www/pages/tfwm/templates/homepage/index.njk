@@ -1,0 +1,205 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %}
+{% set pageTitle="Homepage Template" %}
+{% set section = "Templates" %}
+{% set section="Templates" %}
+{% set ds = 'tfwm' %}
+
+{# Imports #} 
+{% from "wmcads/components/page-header/_page-header.njk" import wmcadsPageHeader %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{# Set array of tiles #} 
+{% block content %} 
+
+{# About the style guide #}
+{{
+    wmcadsPageHeader({
+      title: true,
+      text: "Journeys that move us forward",
+      home: true,
+      topm: true
+    })
+}}
+<div class="ds-container ds-m-t-lg homepage">
+<div class="ds-grid">
+  <div class="ds-col-md-1-2 ds-p-r-lg">
+    <a href="#"><h2>What is the Combined Authority?</h2></a>
+    <p>Combined Authorites are set up to improve their region’s economies. We invest in the region through collaboration with our partners, but we don’t replace local councils.</p>
+  </div>
+  <div class="ds-col-md-1-2">
+    <a href="#"><h2>The Mayor</h2></a>
+    <p>We’re led by the Mayor of the West Midlands. The current mayor is Andy Street, who is in office until May 2021.</p>
+    <p>The Mayor chairs the WMCA Board and acts as a voice for the region, nationally and globally.</p>
+  </div>
+</div>
+<a href="#"><h2>What we do</h2></a>
+<div class="ds-grid what-we-do">
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use href="#ds- portfolio-culture-and-digital"></use>
+        </svg>
+        <a href="">Culture and Digital</a>
+    </div>
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use href="#ds-portfolio-economy"></use>
+        </svg>
+        <a href="">Economy and Innovation</a>
+    </div>
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use href="#ds-portfolio-environment"></use>
+        </svg>
+        <a href="">Environment</a>
+    </div>
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use href="#ds-portfolio-housing-and-land"></use>
+        </svg>
+        <a href="">Housing and Land</a>
+    </div>
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use href="#ds-portfolio-inclusive-communities"></use>
+        </svg>
+        <a href="">Inclusive Communities</a>
+    </div>
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use href="#ds-portfolio-skills"></use>
+        </svg>
+        <a href="">Productivity and Skills</a>
+    </div>
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use xlink:href="#ds-general-search" href="#ds-portfolio-transport"></use>
+        </svg>
+        <a href="">Transport</a>
+    </div>
+    <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
+        <svg>
+            <use href="#ds-portfolio-wellbeing"></use>
+        </svg>
+        <a href="">Wellbeing</a>
+    </div>
+</div>
+
+<h2>Latest News</h2>
+<div class="ds-css-grid-4-col">
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'WMCA donates computers to school children to tackle digital divide',
+                copy: '150 old staff laptops will be donated to Wowdot',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'WMCA donates computers to school children to tackle digital divide',
+                copy: '150 old staff laptops will be donated to Wowdot',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                src: true,
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+</div>
+<a href="#" class="ds-link ds-m-t-lg ds-m-b-xl see-more">See all news stories</a>
+
+<div class="ds-css-grid-2-col ds-m-b-lg">
+    {{
+        wmcadsContentCard({
+            src: true,
+            isSrcDefault: true,
+            title: 'Coronavirus support',
+            copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+            clickable: true
+        })
+    }}
+    {{
+        wmcadsContentCard({
+            src: true,
+            isSrcDefault: true,
+            title: '2021 Mayoral election',
+            copy: 'Find out what the Mayor is reponsible for and how to vote.',
+            clickable: true
+        })
+    }}
+</div>
+<div class="ds-css-grid-3-col">
+    {{
+        wmcadsContentCard({
+            title: 'Upskill yourself in lockdown',
+            copy: 'Find out what the Mayor is reponsible for and how to vote.',
+            clickable: true
+        })
+    }}
+    {{
+        wmcadsContentCard({
+            title: 'Thrive at Work',
+            copy: 'Join our free workplace wellbeing scheme to keep staff healthy, motivated and productive.',
+            clickable: true
+        })
+    }}
+    {{
+        wmcadsContentCard({
+            title: 'Annual Plan 2021 - 2022',
+            copy: 'We’ve set our ambitions for each of our priorities over the next year.',
+            clickable: true
+        })
+    }}
+</div>
+
+<h2>Upcoming events</h2>
+<div class="ds-css-grid-3-col">
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Mayors Mentors',
+      eventCopy: 'Find out about the Mayor’s Mentors scheme and how it can help you grow.',
+      clickable: true,
+      isEvent: true
+    })
+    }}
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Greater Birmingham LEP Skills Day',
+      eventCopy: 'Hear from employers and training providers on upskilling opportunities available.',
+      clickable: true,
+      isEvent: true
+    })
+    }}
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Sprint exhibition - Walsall',
+      eventCopy: 'Learn and ask questions about the upcoming Sprint works in the region.',
+      clickable: true,
+      isEvent: true
+    })
+    }}
+</div>
+<a href="#" class="ds-link ds-m-t-lg ds-m-b-lg see-more">See all WMCA events</a>
+
+</div>
+
+{% endblock %}

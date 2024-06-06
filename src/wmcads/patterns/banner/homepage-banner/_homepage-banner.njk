@@ -1,17 +1,55 @@
 {% macro wmcadsHomepageBanner(params) %}
-{# Vars #}
-{% set image = params.image if params.image else "/img/component-images/banner/homepage-banner-img.jpg" %}
-{# Title #}
-{% set titleText = params.titleText if params.titleText else null %}
-{% set titleHTML = params.titleHTML if params.titleHTML else 'Building a better connected, more prosperous, fairer, greener and healthier West Midlands' %}
-{% set _title = titleText if titleText else titleHTML | safe %}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{%- from "wmcads/components/link/as-button/_as-button.njk" import wmcadsLinkAsButton as cta %}
 
-<div class="ds-homepage-banner" style="background-image: url({{image}});">
-    <div class="ds-container">
-        <h1 class="ds-homepage-banner__title">
-            <span class="ds-homepage-banner__title-content">{{_title}}</span>
-        </h1>
+{% set pattern = params.pattern if params.pattern else "pattern-default" %}
+{% set text = params.title if params.title else "Page header" %}
+{% set subtitle = params.subtitle if params.subtitle else "" %}
+{% set iconName = params.icon if params.icon else "" %}
+{% set ds = params.ds %}
+
+<div class="ds-page-header {% if(params.home) %} ds-page-header__home {% endif %} {% if(params.topm) %} ds-m-t-md {% endif %} {% if(params.large) %} ds-page-header__large {% endif %}" style="background-image:url('https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000')">
+  {% if(params.title) %}
+  <div class="ds-container ds-page-header-container ds-page-header-container-{{pattern}}">
+        <div class="ds-page-header-box ds-page-header-box-{{pattern}}">
+        {% if iconName !== "" %}
+        {{ wmcadsIcon({
+            icon: iconName,
+            class: 'ds-page-header__icon'
+          }) | trim
+        }}
+        {% endif %}
+         <h1>{{text}}</h1>
+         {% if(params.subtitle) %}
+            <p>{{subtitle}}</p>
+         {% endif %}
+         {% if(pattern == "pattern-two") %}
+         {{
+            cta({
+                contentText: "Donate to take action",
+                linkTitle: "This is a call to action link",
+                type: "primary",
+                iconRight: "general-thumbs-up"
+            })
+        }}
+        {{
+            cta({
+                contentText: "Locate a rough sleeper",
+                linkTitle: "This is a call to action link",
+                type: "secondary",
+                iconRight: "general-location-pin"
+            })
+        }}
+         {% endif %}
+        </div>
     </div>
+  {% endif %}
 </div>
-
+{% if(pattern == "pattern-two") %}
+<div class="ds-page-header-box ds-page-header-box-{{pattern}}-bottom">
+    <h1>Turn your Change into Action for rough sleepers</h1>
+    <a href="#" title="This is a call to action link" target="_self" class="ds-btn ds-btn--primary">Donate to take action <svg class="ds-btn__icon ds-btn__icon--right"><use xlink:href="#ds-general-thumbs-up" href="#ds-general-thumbs-up"></use></svg></a>
+    <a href="#" title="This is a call to action link" target="_self" class="ds-btn ds-btn--secondary">Locate a rough sleeper <svg class="ds-btn__icon ds-btn__icon--right"><use xlink:href="#ds-general-location-pin" href="#ds-general-location-pin"></use></svg></a>
+</div>
+{% endif %}
 {% endmacro %}

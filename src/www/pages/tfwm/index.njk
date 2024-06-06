@@ -1,151 +1,100 @@
-{% extends "www/_layouts/layout-fullwidth.njk" %}
+{% extends "www/_layouts/layout-homepage.njk" %}
 {% set pageTitle = "Transport for West Midlands Design System" %}
-{% set section = 'Transport for West Midlands Design System' %}
+{% set section = 'Home' %}
 {% set ds = 'tfwm' %}
+
 {# Imports #}
-{%- from "wmcads/components/content-tiles/normal/_normal.njk" import wmcadsContentTilesNormal -%}
+{% from "wmcads/patterns/branded-banner/_branded-banner.njk" import wmcadsBrandedBanner %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
 {%- from "wmcads/components/link/link/_link.njk" import wmcadsLink -%}
 {% from "wmcads/components/warning-text/_warning-text.njk" import wmcadsWarningText %}
 
+{% block summaryContent %}
+
+  {{
+    wmcadsBrandedBanner({
+      title: 'Design and build digital services for Transport for West Midlands',
+      contentCol1: "<p class=\"emphasised\">Use this design system to build consistent, usable services. Learn from the research and experience of other teams.</p><br><p>You can use GitHub to <a href=\"https://github.com/wmcadigital/wmca-design-system/blob/master/doc/contributing.md\" title=\"View and contribute code to the Design System on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ds-link ds-website-summary-content__link\">view and contribute code</a>, <a href=\"https://github.com/wmcadigital/wmca-design-system/issues/new?labels=feature_request&template=feature_proposal.md&title=\" title=\"Give feedback or propose an idea about the Design System on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ds-link ds-website-summary-content__link\">give feedback or propose an idea</a>, or <a href=\"https://github.com/wmcadigital/wmca-design-system/issues/new?assignees=&labels=&template=report_bug.md&title=\" title=\"Report an issue with the Design System on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ds-link ds-website-summary-content__link\">report an issue</a>.</p>",
+      contentCol2: wmcadsContentCard({
+            contentHTML: "<div class=\"ds-p-sm\"><h2>Current release</h2><p>The current release is <a href=\"https://github.com/wmcadigital/wmca-design-system/releases/tag/v$*version\" title=\"View release notes for version $*version on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\">version $*version</a> which was released on $*releaseDate.</p><p>You can get alerts about new releases by <a href=\"https://docs.github.com/en/free-pro-team@latest/github/managing-subscriptions-and-notifications-on-github/viewing-your-subscriptions\" target=\"_blank\" rel=\"noopener noreferrer\">watching the design system on GitHub</a>.</p></div>"
+          }),
+      ctaButton: {
+        contentText: 'Get started',
+        link: '/docs/get-started/',
+        linkTitle: 'Get started with the Transport for West Midlands Design System'
+      }
+    })
+  }}
+{% endblock summaryContent %}
 
 {% block content %}
-<div class="ds-grid ds-grid--align-center ds-grid--spacing-lg-2-xl">
-  {# Overview #}
-  <div class="ds-col-1 ds-col-lg-2-3">
-      <h2>Overview</h2>
-      <p>
-        The Transport for West Midlands (TfWM) Design System is a library of typography, visual styles and user interface components which are documented and updated continuously.
-      </p>
-      <p>
-        Use the ST Design System to make your service or application consistent with ST design and styles.
-      </p>
-      <p>
-        Our design system aims to be platform/framework agnostic. This allows designers and developers from all practices to utilise our design system and avoid repeating work that's already been done.
-      </p>
-  </div>
-  {# Design system links #}
-  <div class="ds-col-1 ds-col-lg-1-3">
 
-  </div>
-</div>
 {# Internal navigation #}
-<h2>Design System</h2>
-<div class="ds-grid ds-grid--align-stretch ds-grid--spacing-sm-2-xsm ds-grid--spacing-lg-4-xsm">
+<div class="ds-css-grid-4-col">
+  {# User research #}
+    {{
+      wmcadsContentCard({
+        link: '/tfwm/user-research/',
+        linkTitle: "User research",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>User research</h2>
+          <p>Start with user needs to build the right thing</p>
+        </div>"
+      })
+    }}
   {# Styles #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
     {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "Styles",
-        copy: "<p>Make your service look and feel like WMCA: colours, icons, typography and utility classes</p>",
-        smallTitle: true,
-        readMore: true,
+      wmcadsContentCard({
         link: '/tfwm/styles/',
-        linkText: 'Read more about styles',
-        linkTitle: 'Styles'
+        linkTitle: "Styles",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Styles</h2>
+          <p>Make your service look and feel like WMCA: colours, icons, typography and utility classes</p>
+        </div>"
       })
     }}
-  </div>
   {# Components #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
     {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "Components",
-        copy: "<p>Reusable parts of the user interface: content, map and form elements; buttons and messages</p>",
-        smallTitle: true,
-        readMore: true,
+      wmcadsContentCard({
         link: '/tfwm/components/',
-        linkText: 'Read more about components',
-        linkTitle: 'Components'
+        linkTitle: "Components",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Components</h2>
+          <p>Reusable parts of the user interface: content, map and form elements; buttons and messages</p>
+        </div>"
       })
     }}
-  </div>
   {# Patterns #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
     {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "Patterns",
-        copy: "<p>Commonly used sets of components</p>",
-        smallTitle: true,
-        readMore: true,
+      wmcadsContentCard({
         link: '/tfwm/patterns/',
-        linkText: 'Read more about patterns',
-        linkTitle: 'Patterns'
+        linkTitle: "Patterns",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Patterns</h2>
+          <p>Commonly used sets of components</p>
+        </div>"
       })
     }}
-  </div>
   {# Templates #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
-    {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "Templates",
-        copy: "<p>Example template layouts</p>",
-        smallTitle: true,
-        readMore: true,
+          {{
+      wmcadsContentCard({
         link: '/tfwm/templates/',
-        linkText: 'Read more about templates',
-        linkTitle: 'Templates'
+        linkTitle: "Templates",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Templates</h2>
+          <p>Example template layouts</p>
+        </div>"
       })
     }}
-  </div>
 </div>
 
 <br>
-{# Quick start #}
-<h2>Quick start</h2>
-<div class="ds-col-auto">
 
-{{
-  wmcadsWarningText({
-    text: 'Sign up to <a href="https://confirmsubscription.com/h/d/2C0102CD1FBC0C5F" class="ds-link" target="_blank" rel="noopener noreferrer">updates about changes to the Design System</a> so you can maintain your services.',
-    icon: "general-warning-circle"
-  })
-}}
-</div>
+{# Get help #}
+<!-- <div class="ds-col-1 ds-col-md-3-4">
+  <h2>Get help with using the design system</h2>
+  <p>The design system is maintained by the Digital and Data team at Transport for West Midlands.</p>
+  <p>You can ask a question using this form.</p>
+</div> -->
 
-
-<h3>Web projects</h3>
-<p class="ds-col-md-3-4">
-  Getting started is as simple as including West Midlands Combined Authority Design System's minified CSS file and adding <code class="ds-website-inline-code">.ds-html</code> to the html element in your service/application.
-</p>
-<pre>
-  <code class="html ds-show-more-ignore" tabindex="0">
-  {%- filter forceescape %}
-  <!DOCTYPE html>
-  <html lang="en-gb" class="ds-html">
-    <head>
-      <!-- CSS for WMCA Design System -->
-      <link rel="stylesheet" href="https://cloudcdn.wmca.org.uk/wmcaassets/ds/$*version/css/wmcads.min.css" />
-    </head>
-    <body>
-      <!-- site content... -->
-    </body>
-  </html>
-  {%- endfilter %}
-  </code>
-</pre>
-
-<h3>Want to use our icons, or using a component that references an icon?</h3>
-<p>Please see the
-  {{
-    wmcadsLink({
-      link: "/styles/icons/",
-      linkTitle: "Using WMCA Design System icons",
-      contentText: "icons page"
-    })
-  }}.
-</p>
-
-<h3>Mobile app projects (React Native)</h3>
-<p>If you are using React Native, you can import our styles like below.</p>
-<pre>
-  <code class="javascript" tabindex="0">
-    {% filter forceescape %}// Import react native styles for WMCA Design System
-    import wmcadsStyles from "https://cloudcdn.wmca.org.uk/wmcaassets/ds/$*version/css/react-native/wmnds.min.js"
-    {%- endfilter %}
-  </code>
-</pre>
 {% endblock %}

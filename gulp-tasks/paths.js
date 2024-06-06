@@ -12,9 +12,15 @@ module.exports = {
       'src/wmcads/assets/sass/tfwmds.scss',
       'src/wmcads/assets/sass/stds.scss',
       'src/wmcads/assets/sass/mcds.scss',
-      'src/www/ds-website.scss',
-      'src/www/pages/templates/templates.scss',
-      'src/wmcads/assets/sass/ds-grid/grid.scss',
+      'src/wmcads/assets/sass/ciads.scss',
+      'src/www/assets/sass/wmcads-website.scss',
+      'src/www/assets/sass/tfwmds-website.scss',
+      'src/www/assets/sass/ciads-website.scss',
+      'src/www/assets/sass/mcds-website.scss',
+      'src/www/assets/sass/stds-website.scss',
+      'src/www/pages/wmca/templates/templates.scss',
+      'src/www/pages/cia/templates/cia-templates.scss',
+      'src/wmcads/assets/sass/shared/ds-grid/grid.scss',
       'src/wmcads/assets/sass/split/buttons.scss',
       'src/wmcads/assets/sass/split/accordion.scss',
       'src/wmcads/assets/sass/split/typography.scss',
@@ -36,6 +42,11 @@ module.exports = {
       {
         src: 'src/www/ds-templates.js',
         minName: 'ds-templates.min.js',
+        lint: true
+      },
+      {
+        src: 'src/www/assets/js/cia-templates.js',
+        minName: 'cia-templates.min.js',
         lint: true
       }
     ],

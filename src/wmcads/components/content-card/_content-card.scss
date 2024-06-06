@@ -2,6 +2,7 @@
 @mixin accessibility-hover {
   h2,
   h3 {
+    color: get-color(primary);
     text-decoration: underline;
   }
 
@@ -88,5 +89,13 @@
 
   h3 {
     margin-top: 0;
+  }
+
+  .material-symbols-outlined {
+    display: inline-block;
+    margin-top: $size-lg;
+    color: get-color(primary);
+    fill: get-color(primary);
+    font-size: 5rem;
   }
 }

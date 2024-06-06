@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentTableCopy(params) %}
 {% set pageTitle="Table" %}
 {% from "wmcads/components/table/_table.njk" import wmcadsTable %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -77,3 +77,4 @@
 
 
 {% endblock %}
+{% endmacro %}

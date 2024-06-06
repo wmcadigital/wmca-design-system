@@ -1,7 +1,7 @@
 # 1. WMCA Design System
 
 [![Netlify Status](https://img.shields.io/netlify/04471bb6-9621-4c59-abe8-b4fdf74a3860)](https://app.netlify.com/sites/wmcads/deploys)
-[![David](https://img.shields.io/david/dev/wmcadigital/wmca-design-system?style=flat-square)](https://github.com/wmcadigital/wmn-design-system/blob/master/package.json)
+[![David](https://img.shields.io/david/dev/wmcadigital/wmca-design-system?style=flat-square)](https://github.com/wmcadigital/wmca-design-system/blob/master/package.json)
 [![Last commit](https://img.shields.io/github/last-commit/wmcadigital/wmca-design-system?style=flat-square)](https://github.com/wmcadigital/wmca-design-system/commits/master)
 [![Open Github issues](https://img.shields.io/github/issues-raw/wmcadigital/wmca-design-systemstyle=flat-square)](https://github.com/wmcadigital/wmca-design-system/issues)
 

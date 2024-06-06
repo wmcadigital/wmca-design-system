@@ -1,0 +1,276 @@
+.ds-grid {
+  & > * {
+    box-sizing: border-box;
+  }
+
+  // How to align child flex items of a grid
+  &.ds-grid--justify-between {
+    justify-content: space-between;
+  }
+
+  &.ds-grid--justify-around {
+    justify-content: space-around;
+  }
+
+  &.ds-grid--justify-end {
+    justify-content: flex-end;
+  }
+
+  &.ds-grid--justify-center {
+    justify-content: center;
+  }
+
+  &.ds-grid--justify-even {
+    justify-content: space-evenly;
+  }
+
+  &.ds-grid--align-center {
+    align-items: center;
+  }
+}
+
+// ensures sticky footer
+.ds-body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+// Container sizes
+.ds-container {
+  display: block;
+  width: 100%;
+  max-width: $breakpoint-lg;
+  margin: auto;
+  padding: 0 $size-sm;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    padding: 0 $size-md;
+  }
+
+  &--main {
+    margin-top: $size-md;
+    margin-bottom: $size-lg;
+    flex-grow: 1;
+  }
+
+  // Positions
+  &.wmnds-sticky {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    @media screen and (max-width: $breakpoint-md) {
+      position: initial;
+      max-height: fit-content;
+    }
+  }
+}
+
+//Text align
+.ds-text-align {
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+// Floats
+.ds-float {
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+}
+
+// MARGINS AND PADDINGS
+// Helper mixin used to generate various sizes of margin/padding -  ds-m-b-sm - ds-grid--spacing-lg-4-lg
+@mixin x-mar-pad($side, $type: "margin") {
+  &-xs {
+    #{$type}#{$side}: $size-xs;
+  }
+
+  &-xsm {
+    #{$type}#{$side}: $size-xsm;
+  }
+
+  &-sm {
+    #{$type}#{$side}: $size-sm;
+
+    &-sm-none {
+      #{$type}#{$side}: $breakpoint-xs;
+    }
+  }
+
+  &-md {
+    #{$type}#{$side}: $size-md;
+  }
+
+  &-lg {
+    #{$type}#{$side}: $size-lg;
+  }
+
+  &-xl {
+    #{$type}#{$side}: $size-xl;
+  }
+
+  &-none {
+    #{$type}#{$side}: 0 !important;
+  }
+}
+
+body {
+  .ds {
+    // Generate all margin classes
+    &-m {
+      @include x-mar-pad("");
+
+      &-t {
+        @include x-mar-pad("-top");
+      }
+
+      &-r {
+        @include x-mar-pad("-right");
+      }
+
+      &-b {
+        @include x-mar-pad("-bottom");
+      }
+
+      &-l {
+        @include x-mar-pad("-left");
+      }
+    }
+
+    // Generate all padding classes
+    &-p {
+      @include x-mar-pad("", "padding");
+
+      &-t {
+        @include x-mar-pad("-top", "padding");
+      }
+
+      &-r {
+        @include x-mar-pad("-right", "padding");
+      }
+
+      &-b {
+        @include x-mar-pad("-bottom", "padding");
+      }
+
+      &-l {
+        @include x-mar-pad("-left", "padding");
+      }
+    }
+  }
+}
+
+// Show/hide on desktop devices only
+.ds-hide-mobile {
+  @media screen and (max-width: $breakpoint-md) {
+    display: none !important;
+  }
+}
+
+.ds-hide-desktop {
+  @media screen and (min-width: $breakpoint-md) {
+    display: none !important;
+  }
+}
+
+.ds-hide {
+  display: none !important;
+}
+
+// Borders
+// Border generator mixin
+@mixin x-default-border($border-color) {
+  border: 2px solid $border-color;
+
+  &-left {
+    border-left: 2px solid $border-color;
+  }
+
+  &-right {
+    border-right: 2px solid $border-color;
+  }
+
+  &-bottom {
+    border-bottom: 2px solid $border-color;
+  }
+}
+
+.bdr {
+  &-primary {
+    @include x-default-border(get-color(primary));
+  }
+
+  &-white {
+    @include x-default-border($white);
+  }
+
+  &-gray {
+    @include x-default-border(get-color(secondary));
+  }
+
+  &-transparent {
+    @include x-default-border(transparent);
+  }
+}
+
+//Background
+.bg {
+  &-default {
+    background-color: get-color(background);
+  }
+
+  &-white {
+    background-color: $white;
+  }
+
+  &-secondary {
+    background-color: get-color(secondary);
+  }
+
+  &-planned-disruption {
+    background-color: get-color(plannedDisruption);
+  }
+
+  &-disabled-elements {
+    background-color: get-color(disable);
+  }
+
+  &-transparent {
+    background-color: transparent;
+  }
+}
+
+//Hide visually apart from screen readers
+.visible-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+
+  &:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    clip: auto;
+  }
+}

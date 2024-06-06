@@ -151,6 +151,9 @@
 			"name": "Templates",
 			"subnavItems": [
 				{
+					"name": "Boilerplate"
+				},
+				{
 					"name": "Homepage"
 				},
 				{

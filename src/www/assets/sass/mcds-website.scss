@@ -1,0 +1,20 @@
+// Vars
+@import "../../../wmcads/assets/sass/shared/vars";
+@import "../../../wmcads/assets/sass/mc/vars";
+
+// Mixins
+@import "../../../wmcads/assets/sass/shared/mixins";
+
+@import "../../_partials/component-example/component-example";
+
+// Styleguide page specific styles
+@import "../../pages/home";
+@import "../../pages/wmca/styles/colour-palettes/colorPalette";
+@import "../../pages/wmca/styles/icons/icons";
+
+.ds-website-inline-code {
+  padding: $size-xs;
+  color: get-color(primary);
+  background: $white;
+  @include type-setting(4);
+}

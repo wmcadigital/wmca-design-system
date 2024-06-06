@@ -2,10 +2,9 @@
   "name": "ds-design-system",
   "version": "1.5.0",
   "description": "A library of typography, visual styles and user interface components which are documented for West Midlands Combined Authority.",
-  "homepage": "https://wmcadigital.github.io/wmca-design-system",
+  "homepage": "https://designsystem.wmca.org.uk",
   "author": "WMCA",
   "main": "src/www/pages/index.njk",
-  "private": true,
   "files": [
     "build/*"
   ],
@@ -24,12 +23,19 @@
       "baseUrl": "",
       "cdn": ""
     },
+    "cloudcdn": {
+      "baseUrl": "https://cloudcdn.wmca.org.uk/staging/ds/new/0/",
+      "cdn": ""
+    },
     "netlify": {
       "baseUrl": "/",
       "cdn": "https://wmcads.netlify.app"
     }
   },
   "release": {
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",

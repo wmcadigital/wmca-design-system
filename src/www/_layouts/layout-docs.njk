@@ -1,0 +1,55 @@
+{% extends "www/_layouts/_master-layout.njk" %}
+{% set section = section if section else "Components" %}
+
+{% if (ds == "wmca") %}
+    {% set nav = navItems %}
+{% endif %}
+
+{% if (ds== "tfwm") %}
+    {% set nav = navItemsTfwm %}
+{% endif %}
+
+{% if (ds == "st") %}
+    {% set nav = navItemsSt %}
+{% endif %}
+
+{% if (ds== "mc") %}
+    {% set nav = navItemsMc %}
+{% endif %}
+
+{% if (ds== "cia") %}
+    {% set nav = navItemsCia %}
+{% endif %}
+
+{% block body %}
+<div class="ds-grid ds-grid--spacing-lg-2-lg">
+  <div class="ds-col-1 ds-col-lg-1-3 ds-p-b-lg">
+    <ul class="ds-unordered-list">
+      {# Foreach nav #}
+      {% for navItem in nav %}
+      {# If the name is equal to var #}
+      {% if (navItem.name | lower) == ((section if section else "Components") |lower) %}
+      {# If no section has been set then default to Components node #}
+      {% for sectionItem in navItem.subnavItems | sort(attribute='name') %}
+      {% set endUrl = sectionItem.url if sectionItem.url else sectionItem.name | lower | replace(" ", "-") %}
+
+      <li>
+        <a class="ds-col-1 ds-link" href="/{{ds}}/{{ navItem.name | lower | replace(" ", "-") }}/{{endUrl}}/">{{ sectionItem.name | capitalize}}</a>
+      </li>
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="ds-col-1 ds-col-lg-2-3" id="ds-main-content">
+    {# Show section as small text above title #}
+    {% if section != pageTitle %}
+      <span class="ds-h3">{{section}}</span>
+    {% endif %}
+
+    <h1>{{ pageTitle }}</h1>
+
+    {% block content %}{% endblock content %}
+  </div>
+</div>
+{% endblock body%}

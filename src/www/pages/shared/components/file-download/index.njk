@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentFileDownloadCopy(params) %}
 {% set pageTitle = "File download" %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 {# Macros #}
@@ -133,3 +133,4 @@
 }}
 
 {% endblock %}
+{% endmacro %}

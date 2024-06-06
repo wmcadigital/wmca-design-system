@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %} 
+{% macro dsComponentMessageCopy(params) %}
 {% set pageTitle="Message" %}
 
 {% from "wmcads/components/message/summary/_summary.njk" import wmcadsMsgSummary %}
@@ -123,3 +123,4 @@
 </ul>
 {{ compExample([ wmcadsMsgHelp({ message: 'Details added what happened and what to do next.<br />
 Lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum.' }) ]) }} {# End Help message #} {% endblock %}
+{% endmacro %}

@@ -1,7 +1,26 @@
 {# <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CObject.assign%2CString.prototype.includes%2CNumber.isNaN"></script> #}
-<script src="$*cdn/js/ds-website.min.js"></script>
-<script src="$*cdn/js/ds-templates.min.js"></script>
-{# <script src="$*cdn/js/example-js-compiler.js"></script> #}
+
+  <!-- Website Scripts -->
+  {% if ds == "wmca" %}
+    <script src="$*cdn/js/ds-website.min.js"></script>
+    <script src="$*cdn/js/ds-templates.min.js"></script>
+  {% endif %}
+  {% if ds == "tfwm" %}
+    <script src="$*cdn/js/ds-website.min.js"></script>
+    <script src="$*cdn/js/ds-templates.min.js"></script>
+  {% endif %}
+  {% if ds == "st" %}
+    <script src="$*cdn/js/ds-website.min.js"></script>
+    <script src="$*cdn/js/ds-templates.min.js"></script>
+  {% endif %}
+  {% if ds == "mc" %}
+    <script src="$*cdn/js/ds-website.min.js"></script>
+    <script src="$*cdn/js/ds-templates.min.js"></script>
+  {% endif %}
+  {% if ds == "cia" %}
+    <script src="$*cdn/js/ds-website.min.js"></script>
+    <script src="$*cdn/js/cia-templates.min.js"></script>
+  {% endif %}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-151672610-1"></script>

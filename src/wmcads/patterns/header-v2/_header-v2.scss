@@ -81,6 +81,10 @@ $header-height-mobile: 4rem;
     overflow: hidden;
     vertical-align: middle;
 
+    &-full {
+      width: initial !important;
+    }
+
     @media screen and (min-width: $breakpoint-md) {
       width: auto;
     }
@@ -102,8 +106,9 @@ $header-height-mobile: 4rem;
   // Title variant
   &__title {
     @include type-setting(3);
-    margin-bottom: 0;
-    color: $white;
+    margin-top: $size-xs !important;
+    margin-bottom: $size-xs !important;
+    color: $white !important;
 
     @media all and (min-width: $breakpoint-sm) {
       max-width: calc(100% - 12.5rem); // Give some padding for the logos on the left
@@ -481,7 +486,7 @@ $header-height-mobile: 4rem;
   padding: 0;
 
   @media screen and (max-width: $breakpoint-md - 1) {
-    height: $header-height-mobile;
+    // height: $header-height-mobile;
 
     [class*="ds-"].ds-mega-menu {
       height: $header-height-mobile;
@@ -581,7 +586,7 @@ $header-height-mobile: 4rem;
 
       &:hover,
       &:focus {
-        background-color: get-color(primary);
+        background-color: get-color(secondary);
       }
     }
 
@@ -805,4 +810,10 @@ $header-height-mobile: 4rem;
   .ds-mega-menu::before {
     position: absolute;
   }
+}
+
+.ds-cia-area {
+  padding: $size-sm;
+  background-color: get-color(secondary);
+  text-align: center;
 }

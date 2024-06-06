@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentPageHeaderCopy(params) %}
 {% set pageTitle="Page header" %}
 {% from "wmcads/components/page-header/_page-header.njk" import wmcadsPageHeader %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -50,3 +50,4 @@
   ])  
 }}
 {% endblock %}
+{% endmacro %}

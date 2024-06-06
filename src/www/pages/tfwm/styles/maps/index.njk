@@ -1,7 +1,7 @@
 {% extends "www/_layouts/layout-left-pane.njk" %}
 {% set pageTitle = "Maps" %}
 {% set section = "Styles" %}
-{% set ds = 'wmca' %}
+{% set ds = 'tfwm' %}
 
 {# Imports #}
 {%- from "wmcads/components/link/link/_link.njk" import wmcadsLink -%}
@@ -13,7 +13,7 @@
 {# About #}
 <h3>About</h3>
 <p>
-  When it comes to mapping, West Midlands Combined Authority uses
+  When it comes to mapping, Transport for West Midlands uses
   {{
   wmcadsLink({
     link: "https://developers.arcgis.com/labs/what-is-arcgis/",
@@ -47,7 +47,7 @@
       linkTarget: "_blank",
       contentText: "WMCA Basemap"
     })
-  }} as your basemap layer. This is to ensure maps are consistent across West Midlands Combined Authority services.
+  }} as your basemap layer. This is to ensure maps are consistent across Transport for West Midlands services.
 </p>
 <p>The WMCA Basemap is a portal item, you can use the
 {{
@@ -125,7 +125,7 @@
     The background/fill colour of the buttons must use the
     {{
       wmcadsLink({
-        link: "/styles/colour-palettes/",
+        link: "/tfwm/styles/colour-palettes/",
         linkTitle: "Information colour",
         linkTarget: "_blank",
         contentText: "Information colour"
@@ -136,7 +136,7 @@
         If it is the location button, the background/fill colour must be transparent and the border/icon colour must use the
         {{
           wmcadsLink({
-            link: "/styles/colour-palettes/",
+            link: "/tfwm/styles/colour-palettes/",
             linkTitle: "Primary Purple colour",
             linkTarget: "_blank",
             contentText: "Primary Purple colour"
@@ -149,7 +149,7 @@
     When hovered, the background/fill colour must be 30% darker (mixed with black) of the
     {{
       wmcadsLink({
-        link: "/styles/colour-palettes/",
+        link: "/tfwm/styles/colour-palettes/",
         linkTitle: "Information colour",
         linkTarget: "_blank",
         contentText: "Information colour"
@@ -161,7 +161,7 @@
         If it is the location button, the background/fill colour must be 70% lighter (mixed with white) of the
          {{
           wmcadsLink({
-            link: "/styles/colour-palettes/",
+            link: "/tfwm/styles/colour-palettes/",
             linkTitle: "Secondary Purple colour",
             linkTarget: "_blank",
             contentText: "Secondary Purple colour"

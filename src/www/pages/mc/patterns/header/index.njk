@@ -1,7 +1,7 @@
 {% extends "www/_layouts/layout-left-pane.njk" %}
 {% set pageTitle="Header" %}
 {% set section="Patterns" %}
-{% set ds = 'wmca' %}
+{% set ds = 'mc' %}
 
 {# Imports #}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -38,7 +38,7 @@
 <p>This must always be the Transport for West Midlands logo.</p>
 {# Phase indicator #}
 <h3>Phase indicator</h3>
-<p>This component must be used if the service is not live, using the <a href="/components/phase-indicator/" target="_self">phase indicator guidance</a>.</p>
+<p>This component must be used if the service is not live, using the <a href="/mc/components/phase-indicator/" target="_self">phase indicator guidance</a>.</p>
 {# Navigation #}
 <h3>Navigation</h3>
 <p>The three top-level navigation items were decided by identifying our user’s <a href="https://medium.com/@gerrymcgovern/identifying-customer-top-tasks-ee228206b6ed" target="_blank">top tasks</a> using Gerry McGovern’s methodology. We overlaid a heatmap of the home page, where we found the same three areas were the most-used areas.</p>
@@ -72,7 +72,7 @@
         pageTitle: pageTitle
       },
       exampleAria: "Full header",
-      brand: "wmca"
+      ds: ds
     })
   ], {
     componentPath: "wmcads/patterns/header-v2/",
@@ -91,7 +91,7 @@
       id: "mega-menu-example",
       search: true,
       placeholder: "fg",
-      brand: "wmca",
+      ds: ds,
       navItems: [{
         name: "The Mayor",
         subnavItems: [{
@@ -290,7 +290,7 @@
     wmcadsHeaderV2({
       withTitle: true,
       legacyMenu: true,
-      brand: "wmca"
+      ds: ds
     })
   ], {
     componentPath: "wmcads/patterns/header-v2/",

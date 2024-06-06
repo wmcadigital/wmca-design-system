@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentDisruptionIndicatorsCopy(params) %}
 {% set pageTitle = "Disruption indicators (deprecated)" %}
 {# Get macros #}
 {% from "wmcads/components/disruption-indicator/small/_small.njk" import wmcadsDisruptionIndicatorSmall %}
@@ -453,5 +453,5 @@
   )
 }}
 
-
 {% endblock %}
+{% endmacro %}

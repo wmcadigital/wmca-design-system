@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentContentCardCopy(params) %}
 {% set pageTitle = "Content card" %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 {# Imports #}
@@ -9,9 +9,7 @@
 <h2>About</h2>
 <p>Content cards contain components and text. Against the page background, they help to draw the users attention to important information and help users to navigate content.</p>
 <p>The cards have many common use cases and applications, all of which can be found on the <a href="/patterns/content-cards" target="_self">content cards pattern page</a>.</p>
-<hr>
 
-<br><br>
 {# Content card #}
 <h2>Content card</h2>
 {# What #}
@@ -26,38 +24,18 @@
     <li>When it is used in a set of cards for navigation purposes. Instead, use a Navigation card.</li>
 </ul>
 
-<h4>Regular Card</h4>
-
-{{
-    compExample([
-        wmcadsContentCard({
-        })
-
-    ])
-}}
-
-<h4>With Image</h4>
-
-{{
-    compExample([
-        wmcadsContentCard({
-            src: true,
-            isSrcDefault: true
-        })
-    ])
-}}
-
-<h4>Without Image</h4>
-
 {{
     compExample([
         wmcadsContentCard()
-    ])
+    ], {
+        componentPath: "wmcads/components/content-card/",
+        njk: true,
+        njkProps: wmcadsContentCardProps,
+        js: false,
+        iframe: false
+    })
 }}
 
-
-
-<br><br>
 {# Navigation card #}
 <h2>Navigation card</h2>
 {# What #}
@@ -80,57 +58,19 @@
 <h4>Navigation Card</h4>
 
 {{
-    compExample([   
-        wmcadsContentCard({
-            clickable: true
-        })
-    ])
-}}
-
-<h4>With Image</h4>
-
-{{
     compExample([
         wmcadsContentCard({
-            clickable: true, 
-            src: true,
-            isSrcDefault: true
+            link: '/'
         })
-    ])
-}}
-
-<h4>Call To Action Card</h4>
-
-{{
-    compExample([
-        wmcadsContentCard({
-            clickable: true,
-            isCta: true
-        })
-    ])
-}}
-
-<h4>Event Card</h4>
-
-{{
-    compExample([
-        wmcadsContentCard({
-            clickable: true,
-            isEvent: true
-        })
-    ])
-}}
-
-<h4>News Card</h4>
-
-{{
-    compExample([
-        wmcadsContentCard({
-            src: true,
-            clickable: false,
-            isNews: true
-        })
-    ])
+    ], {
+        componentPath: "wmcads/components/content-card/",
+        njk: true,
+        njkProps: wmcadsContentCardProps,
+        js: false,
+        iframe: false
+    })
 }}
 
 {% endblock %}
+
+{% endmacro %}

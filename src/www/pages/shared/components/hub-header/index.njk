@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentHubHeaderCopy(params) %}
 {% set pageTitle="Hub header" %}
 {% from "wmcads/components/hub-header/_hub-header.njk" import wmcadsHubHeader %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -53,3 +53,4 @@
   ],{iframe:false})
 }}
 {% endblock %} 
+{% endmacro %}

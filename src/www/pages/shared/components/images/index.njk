@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentImagesCopy(params) %}
 {% set pageTitle = "Images" %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
@@ -67,3 +67,4 @@
   {# End label #}
 
 {% endblock %}
+{% endmacro %}

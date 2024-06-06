@@ -1,0 +1,131 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Content Page Template" %}
+{% set section = "Templates" %}
+{% set ds = 'cia' %}
+
+{# Imports #}
+{% from "wmcads/patterns/banner/_banner.njk" import wmcadsBanner %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "wmcads/components/warning-text/_warning-text.njk" import wmcadsWarningText %}
+{% from "wmcads/components/in-text-step/_in-text-step.njk" import wmcadsInTextStep %}
+
+{% block summaryContent %}
+   <div class="ds-page-header ds-m-b-lg" style="background-image:url('https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=2500&amp;height=800&amp;rnd=132122595620000000');background-position:"></div>
+{% endblock summaryContent %}
+
+{% block content %} 
+<div class="ds-container ">
+<div class="ds-grid ds-grid--spacing-md-2-lg">
+  <div class="ds-col-1 ds-col-md-2-3">
+    <h1 id="ds-main-content">{{ pageTitle | safe}}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <img src="/img/component-images/banner/homepage-banner-img.jpg" alt="Example image">
+
+    <div class="ds-css-grid-2-col ds-m-t-lg ds-m-b-lg">
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><h2>St Basils</h2><p>St Basils works with young people aged 16-25 who are homeless or at risk of homelessness, helping over 5000 young people every year.</p></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><h2>West Midlands Police</h2><p>West Midlands Police is the second largest police force in the country, covering an area of 348 square miles and serving a population of almost 2.8 million. Preventing crime, protecting the public and helping those in need is their vision.</p></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><h2>SIFA Fireside</h2><p>Works with vulnerable adults experiencing homelessness or who are vulnerably housed, providing daily drop-in services, meals, showers and clothes.</p></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><h2>Midland Heart</h2><p>A leading housing organisation, delivering homes and services across the Midlands that enable people to live independently.</p></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><h2>Trident Group</h2><p>Trident Group has almost 60 years’ experience of delivering homes, services and innovation for up to 8,000 people in almost 4,000 homes in some of the most disadvantaged communities in the Midlands. They provide the street-based outreach service in Birmingham and coordinate a multi-disciplinary team working to support and accommodate all rough sleepers in the city.</p></div>"
+        })
+      }}
+    </div>
+    <h2>Sub heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    {{
+      wmcadsInsetText({
+        html: "You can opt-in to be kept updated on what happens to the person next."
+      })
+    }}
+    <br /><br />
+    {{
+      wmcadsWarningText({
+        text: "Donations are processed through JustGiving and held by <a href=\"#\">BVSC</a> before being assigned to individual needs.",
+        icon: "general-info"
+    })
+    }}
+
+    {{
+      wmcadsInTextStep({
+        items: [
+         {
+            contentText: "Locate a person sleeping rough who needs help.",
+            contentHTML: null
+         },
+         {
+            contentText: null,
+            contentHTML: "<a href=\"#\">Open Streetlink</a>"
+         },
+         {
+            contentText: "Enter the street name or postcode of their exact location.",
+            contentHTML: null
+         }
+      ]
+   })
+}}
+
+  <h2>Give once</h2>
+  <div class="ds-css-grid-2-col ds-m-t-lg ds-m-b-lg">
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><span class=\"material-symbols-outlined\">sunny</span><p>Funds a heatwave pack containing sun tan lotion, water, wipes, a sunhat and a handheld fan.</p><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--start ds-col-1 ds-m-b-md\">Donate £5 <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-chevron-right\" href=\"#ds-general-chevron-right\"></use></svg></a></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><span class=\"material-symbols-outlined\">directions_bus</span><p>A day’s bus pass to go to appointments with homelessness services.</p><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--start ds-col-1 ds-m-b-md\">Donate £5 <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-chevron-right\" href=\"#ds-general-chevron-right\"></use></svg></a></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><span class=\"material-symbols-outlined\">local_cafe</span><p>Basic kitchen items when moving into self-catering accommodation.</p><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--start ds-col-1 ds-m-b-md\">Donate £20 <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-chevron-right\" href=\"#ds-general-chevron-right\"></use></svg></a></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><span class=\"material-symbols-outlined\">work</span><p>New clothes that fit and give confidence to their owner.</p><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--start ds-col-1 ds-m-b-md\">Donate £50 <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-chevron-right\" href=\"#ds-general-chevron-right\"></use></svg></a></div>"
+        })
+      }}
+    </div>
+  </div>
+  <div class="ds-col-1 ds-col-md-1-3">
+    {{
+      wmcadsContentCard({
+        src: true,
+        contentHTML: "<div class=\"ds-p-sm\"><h2>Small change into big change</h2><p>Directing your care through our expert teams targets help to maximise its impact.</p><p> <strong>Show you care in two ways:</strong></p><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--primary ds-col-1 ds-m-b-md\">Donate to take action <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-thumbs-up\" href=\"#ds-general-thumbs-up\"></use></svg></a><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--secondary ds-col-1 ds-m-b-md\">Locate a rough sleeper <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-location-pin\" href=\"#ds-general-location-pin\"></use></svg></a></div>"
+      })
+    }}
+  </div>
+</div>
+{% endblock %}

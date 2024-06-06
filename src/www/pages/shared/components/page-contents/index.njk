@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentPageContentsCopy(params) %}
 {% set pageTitle="Page contents" %}
 {% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -23,3 +23,4 @@
   ])  
 }}
 {% endblock %} 
+{% endmacro %}

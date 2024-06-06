@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentListsCopy(params) %}
 {% set pageTitle="Lists" %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
 
@@ -141,3 +141,4 @@
 }}
 
 {% endblock %}
+{% endmacro %}

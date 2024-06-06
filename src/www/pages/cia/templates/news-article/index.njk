@@ -1,0 +1,86 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="News Article" %}
+{% set section = "Templates" %}
+{% set ds = 'cia' %}
+
+{# Imports #} 
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
+{# Set array of tiles #} 
+{% block content %}
+
+<div class="template-content">
+
+  <div class="ds-container">
+    <div class="ds-grid">
+      <div class="main ds-col-1 ds-col-md-2-3 ds-m-b-xl">
+        <h1 id="ds-main-content">Mayor highlights HS2 jobs boost as new contractor for Curzon Street station development is unveiled</h1>
+        <p>Published: Monday 10 May 2021</p>
+        <p>HS2 Ltd today confirmed that a team made up of Mace and Dragados will build Birmingham’s new city centre high speed railway station, in a deal that is set to further boost the West Midlands economy.</p>
+        <p>The deal, which is worth up to £570m, will see Mace Dragados work with HS2 Ltd in two stages to finalise the detailed design and then build the landmark station.</p>
+        <p>The station itself will be net zero carbon in operation and adopt the latest eco-friendly design and sustainable technologies, including capturing rainwater and utilising sustainable power generation, with over 2,800m2 of solar panels located on platform canopies.</p>
+        <img src="/img/examples/curzon-street.png" alt="Curzon Street station development">
+        <p>Mayor of the West Midlands Andy Street welcomed the announcement and the major role HS2 will play in the regional recovery after the pandemic. He said:</p>
+        <p>“HS2 is at the heart of my plans to create 100,000 jobs in just two years to help the West Midlands recover from the coronavirus pandemic, and so I am absolutely thrilled by today’s news.</p>
+        <p>“Not only is this a major shot in the arm for our region’s construction sector that was performing so well pre-Covid, but the building of Curzon Street is also set to create hundreds of jobs.</p>
+        <p>“That’s local jobs for local people at such a difficult time, and I will ensure we continue to run construction training courses so residents can get the skills they need to take on these new roles.</p>
+        <p>“I’m also excited to see the commitment from HS2 ltd that the station will be net-zero, helping the West Midlands in its battle against the climate emergency and in our aim to become carbon neutral by 2041.</p>
+        <p>It is designed to meet a ‘BREEAM excellent’ standard, which is an industry recognised standard for buildings that reduce energy usage and materials waste and minimise their impact on the natural environment.</p>
+        <p>Mace and Dragados have a strong track record delivering some of the world’s most complex and exciting infrastructure projects, including the refurbishment of Birmingham New Street, Battersea Power Station (phase 2) and work on delivering the Spanish high speed rail network, including the major new Madrid Atocha and Barcelona Sants stations. They are also working together in a separate joint venture delivering HS2’s London terminus at Euston.</p>
+        <p>HS2 Ltd’s chief executive, Mark Thurston said:</p>
+        <p>“Birmingham Curzon Street is right at the heart of the HS2 project, providing a fantastic terminus for trains running right into the heart of the city centre.  The station will play a vital role in the long-term economic future of the West Midlands, creating hundreds of jobs during construction and boosting the region after the pandemic.</p>
+        <p>“Mace and Dragados have some incredible experience delivering some of the world’s most challenging and exciting infrastructure projects, and I look forward to welcoming them to the team.</p>
+        <p>HS2 Minister Andrew Stephenson said:</p>
+        <p>“This is a huge moment for Birmingham and for HS2. The brand new, world class HS2 station at Birmingham Curzon Street will place the city at the beating heart of the new HS2 network.</p>
+        <p>“It marks a major investment in Birmingham’s future as we build back better from Covid-19 - breathing new life into the city centre, supporting hundreds of new skilled jobs and helping forge better connections across the whole country.</p>
+        <p>HS2 worked with WSP and Grimshaw Architects LLP on the design for Curzon Street, which is inspired by the great arched roofs built by the Victorian railway pioneers. The design takes that inspiration into the 21st Century, ensuring accessibility and a focus on the open space and landscaping around it.</p>
+        <p>Passengers will also be to access up to nine high speed trains an hour travelling north and south, and the Midland Metro - which runs alongside and underneath the station. Accessible pedestrian routes will connect to local bus services, Sprint rapid transit bus services and local rail services from the neighbouring Moor Street station. Cycle parking has also been incorporated, providing space for more than 550 bicycles.</p>
+        <p>Significant progress has already been made on site at Curzon Street. Site clearance is now complete and a massive archaeological programme, involving 70 archaeologists, has unearthed the world’s oldest railway roundhouse.</p>
+        <h2>Continue reading</h2>
+        <div class="ds-css-grid-2-col ds-m-t-lg ds-m-b-lg">
+          {{
+            wmcadsContentCard({
+            src: true,
+            link: "#",
+            contentHTML: "<img src=\"/img/examples/curzon-street.png\" /><div class=\"ds-p-sm\"><h3>Boosting someone's confidence to enter the job market</h3></div>"
+          })
+        }}
+        {{
+          wmcadsContentCard({
+            src: true,
+            link: "#",
+            contentHTML: "<img src=\"/img/examples/curzon-street.png\" /><div class=\"ds-p-sm\"><h3>Providing the support to turn a rough sleeper's life around</h3></div>"
+          })
+        }}
+        {{
+          wmcadsContentCard({
+            src: true,
+            link: "#",
+            contentHTML: "<img src=\"/img/examples/curzon-street.png\" /><div class=\"ds-p-sm\"><h3>Providing comfort when someone is struggling with homelessness and solitude</h3></div>"
+          })
+        }}
+        {{
+          wmcadsContentCard({
+            src: true,
+            link: "#",
+            contentHTML: "<img src=\"/img/examples/curzon-street.png\" /><div class=\"ds-p-sm\"><h3>Directing your care through our expert teams</h3></div>"
+          })
+        }}
+    </div>
+      </div>
+      <aside class="ds-col-1 ds-col-md-1-3 ds-m-b-lg">
+       {{
+        wmcadsContentCard({
+          src: true,
+          contentHTML: "<div class=\"ds-p-sm\"><h2>Small change into big change</h2><p>Directing your care through our expert teams targets help to maximise its impact.</p><p> <strong>Show you care in two ways:</strong></p><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--primary ds-col-1 ds-m-b-md\">Donate to take action <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-thumbs-up\" href=\"#ds-general-thumbs-up\"></use></svg></a><a href=\"#\" title=\"This is a call to action link\" target=\"_self\" class=\"ds-btn ds-btn--secondary ds-col-1 ds-m-b-md\">Locate a rough sleeper <svg class=\"ds-btn__icon ds-btn__icon--right\"><use xlink:href=\"#ds-general-location-pin\" href=\"#ds-general-location-pin\"></use></svg></a></div>"
+        })
+      }}
+      </aside>
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

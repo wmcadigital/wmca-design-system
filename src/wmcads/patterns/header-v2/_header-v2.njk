@@ -1,24 +1,34 @@
 {% macro wmcadsHeaderV2(params) %}
-{{params.breadcrumbs.ds}}
 {# Set navItems #}
 {% set navItems = params.navItems %}
 {% set appClass = " ds-header--mobile-app" if params.app else "" %}
 {% set menuClass = "" if params.legacyMenu else " ds-header--mega-menu" %}
+{% set ds = params.ds %}
 
-{% if (params.brand == "wmca") %}
+{% if (ds == "wmca") %}
+    {% set name =  "West Midlands Combined Authority" %}
     {% set logoSrc =  "/img/logo/wmca-logo.svg" %}
 {% endif %}
 
-{% if (params.brand == "tfwm") %}
+{% if (ds== "tfwm") %}
+    {% set name =  "Transport for West Midlands" %}
     {% set logoSrc =  "/img/logo/tfwm-logo.svg" %}
 {% endif %}
 
-{% if (params.brand == "st") %}
+{% if (ds == "st") %}
+    {% set name =  "Safer Travel" %}
     {% set logoSrc =  "/img/logo/st-logo.svg" %}
 {% endif %}
 
-{% if (params.brand == "mc") %}
+{% if (ds== "mc") %}
+    {% set name =  "Midlands Connect" %}
     {% set logoSrc =  "/img/logo/mc-logo.svg" %}
+{% endif %}
+
+{% if (ds== "cia") %}
+    {% set name =  "Change into Action" %}
+    {% set logoSrc =  "/img/logo/cit-logo.svg" %}
+    {% set class = 'ds-header__logo-link-full' %}
 {% endif %}
 
 {% set navigationAriaLabel = params.exampleAria + " example navigation" if params.exampleAria else "Navigation" %}
@@ -43,7 +53,6 @@
 }}
 <!-- Main header section -->
 <header>
-    ds - {{params.breadcrumbs.pageTitle}} - {{params.breadcrumbs.ds}} - {{logoSrc}} - {{params.brand}}
   {{
     wmcadsCookiesBanner()
   }}
@@ -51,18 +60,15 @@
     <div class="ds-container ds-grid ds-grid--align-center ds-grid--justify-between">
       <div class="ds-header__vertical-align ds-col-auto">
         <!-- Logo -->
-        <a class="ds-header__logo-link" href="/" title="Transport for West Midlands Design System">
-          <img class="ds-header__logo" alt="Transport for West Midlands logo" src={{logoSrc}} />
+        <a class="ds-header__logo-link {{class}}" href="/{{ds}}" title="{{name}} Design System">
+          <img class="ds-header__logo" alt="{{name}} logo" src={{logoSrc}} />
         </a>
-          {% if ds == "wmca" %}
-            yes  
-          {% endif %}
       </div>
       {#- If with a title #}
       {% if params.withTitle %}
         <!-- Header title -->
         <h1 class="ds-header__title ds-col-1 ds-col-sm-auto">
-          Contact us
+          {{params.title}}
         </h1>
       {% else %}
         <!-- Mega menu nav items-->
@@ -82,7 +88,7 @@
                 {% set navItemContent = " and tickets" if navItem.name === "Swift and tickets" else navItem.name %}
                   <!-- allow primary (level 1) item to link if specified -->
                   {% if params.linkTopLevel %}{{navItemIcon}}
-                    <a href="/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="ds-mega-menu__primary-menu-link" >
+                    <a href="/{{params.ds}}/{{ navItem.name | lower | replace(" ", "-") }}/" title="{{ navItem.name }} page" target="_self" class="ds-mega-menu__primary-menu-link" >
                       {{navItemIcon}}{{ navItemContent }}
                     </a>
                   <!-- if not linked use a button -->
@@ -106,7 +112,7 @@
                             {% else %}
                               {% set _tag = 'a' %}
                               {# Set href if specified, else set an auto generated href #}
-                              {% set _hrefSubnav = subnavItem.href if subnavItem.href else "/" + navItem.name + "/" + subnavItem.name  + "/"%}
+                              {% set _hrefSubnav = subnavItem.href if subnavItem.href else "/" + ds + "/" + navItem.name + "/" + subnavItem.name  + "/"%}
                               {# Set href attribute for link #}
                               {% set _attributes = " href=\"" + _hrefSubnav | lower | replace(" ", "-") + "\"" if _hrefSubnav else "" %}
                             {% endif %}
@@ -130,7 +136,7 @@
                                 {# Set href if it is set else fallback to auto generated link #}
                                 {% set _hrefSubnavChild = subnavChildItem.href if subnavChildItem.href else _hrefString | lower | replace(" ", "-") %}
                                 <li class="ds-mega-menu__sub-menu-child-item">
-                                  <a href="{{_hrefSubnavChild}}" class="ds-mega-menu__sub-menu-child-link">{{subnavChildItem.name | capitalize}}</a>
+                                  <a href="{{ds}}/{{_hrefSubnavChild}}" class="ds-mega-menu__sub-menu-child-link">{{subnavChildItem.name | capitalize}}2</a>
                                 </li>
                                 {% endfor %}
                               </ul>
@@ -219,20 +225,28 @@
       </div>
     </div>
 
+    {% if (params.ciaArea == true) %}
+      {% if (params.ds== "cia") %}
+        <div class="ds-cia-area">
+          This is a Change into Action Birmingham page. <a href="">Change your area</a>
+        </div>
+      {% endif %}
+    {% endif %}
+
     {% if params.banner or params.breadcrumbs %}
       <div class="ds-container">
         {% if params.banner %}
           <!-- Phase banner -->
           {{
             wmcadsBanner ({
-              link: 'https://github.com/wmcadigital/wmn-design-system/issues',
+              link: 'https://github.com/wmcadigital/wmca-design-system/issues',
               linkTitle: 'WMN Design System Github',
               phase: true
             })
           }}
         {% endif %}
 
-        {% if (params.breadcrumbs.pageTitle != 'West Midlands Combined Authority Design System') and (params.breadcrumbs.pageTitle != 'Transport for West Midlands Design System') and (params.breadcrumbs.pageTitle != 'Safer Travel Design System') and (params.breadcrumbs.pageTitle != 'Midlands Connect Design System') %}
+        {% if (params.breadcrumbs.pageTitle != 'Homepage Template') and (params.breadcrumbs.pageTitle != 'West Midlands Combined Authority Design System') and (params.breadcrumbs.pageTitle != 'Transport for West Midlands Design System') and (params.breadcrumbs.pageTitle != 'Safer Travel Design System') and (params.breadcrumbs.pageTitle != 'Midlands Connect Design System') and (params.breadcrumbs.pageTitle != 'Change Into Action Design System') %}
         {% set breadcrumbList = null if params.breadcrumbs.section === params.breadcrumbs.pageTitle else {
               contentText: params.breadcrumbs.pageTitle
             } %}
@@ -243,7 +257,8 @@
               contentText: params.breadcrumbs.section or "Components",
               unlinkedItem: false if breadcrumbList else true
             }, breadcrumbList],
-            label: params.label
+            label: params.label,
+            ds: ds
           })
         }}
       {% endif %}

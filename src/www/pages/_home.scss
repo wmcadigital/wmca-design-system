@@ -7,3 +7,34 @@
     color: $black;
   }
 }
+
+.ds-website-summary-content {
+  margin-top: -1px;
+  color: $white;
+  background: get-color(primary);
+
+  h1 {
+    color: $white;
+  }
+
+  // Make links white in the purple banner
+  &__link.ds-link,
+  &__link.ds-link:visited {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .ds-content-card {
+    border-bottom-color: get-color(secondary);
+    color: get-color(text);
+  }
+
+  .emphasised {
+    font-size: 1.4375rem;
+    line-height: 1.5em;
+  }
+}

@@ -1,7 +1,7 @@
 {
-	"navItems": [
+	"navItemsSt": [
 		{
-			"name": "Styles ST",
+			"name": "Styles",
 			"subnavItems": [
 				{
 					"name": "A to Z content style guide"
@@ -146,47 +146,6 @@
 					"name": "Search"
 				}
 			]
-		},
-		{
-			"name": "Templates",
-			"subnavItems": [
-				{
-					"name": "Homepage"
-				},
-				{
-					"name": "Campaign One Column"
-				},
-				{
-					"name": "Campaign Two Columns"
-				},
-				{
-					"name": "Content One Column"
-				},
-				{
-					"name": "Content Two Columns"
-				},
-				{
-					"name": "Document Paper"
-				},
-				{
-					"name": "Document Hub"
-				},
-				{
-					"name": "Document Foreword"
-				},
-				{
-					"name": "Document Section"
-				},
-				{
-					"name": "Search"
-				},
-				{
-					"name": "Newsroom"
-				},
-				{
-					"name": "News Article"
-				}
-			]
 		}
 	],
 	"templateNavItems": [
@@ -221,41 +180,15 @@
 			"name": "Contact us"
 		}
 	],
-	"colors": {
-		"brand": [
-			{ 
-				"varName": "brandFurnaceOrange", 
-				"name": "Furnace Orange" 
-			},
-			{ 
-				"varName": "brandCoolGrey", 
-				"name": "Cool Grey" 
-			},
-			{ 
-				"varName": "brandWmGreen", 
-				"name": "WM Green" 
-			},
-			{ 
-				"varName": "brandWmRed", 
-				"name": "WM Red" 
-			},
-			{ 
-				"varName": "brandWmPurple", 
-				"name": "WM Purple" 
-			},
-			{ 
-				"varName": "brandWmBlue", 
-				"name": "WM Blue" 
-			}
-		],
+	"colorsSt": {
 		"web": [
 			{
 				"varName": "primary",
-				"name": "Primary Orange"
+				"name": "Primary"
 			},
 			{
 				"varName": "secondary",
-				"name": "Secondary Grey"
+				"name": "Secondary"
 			},
 			{
 				"varName": "text",
