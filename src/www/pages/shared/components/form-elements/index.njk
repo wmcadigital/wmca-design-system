@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentFormElementsCopy(params) %}
 {% set pageTitle = "Form elements" %}
 {% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -315,3 +315,4 @@
   {# End handling errors #}
   
 {% endblock %}
+{% endmacro %}

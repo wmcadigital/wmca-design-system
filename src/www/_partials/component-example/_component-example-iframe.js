@@ -26,7 +26,7 @@ const componentExampleIframe = () => {
         <html>
           <head>
             <base href="${host}" target="_blank">
-            <link rel="stylesheet" type="text/css" href="${host}/css/wmcads.min.css" />
+            <link rel="stylesheet" type="text/css" href="${host}/css/wmnds.min.css" />
             <link rel="stylesheet" type="text/css" href="${host}/css/ds-website.min.css" />
           </head>
           <body>

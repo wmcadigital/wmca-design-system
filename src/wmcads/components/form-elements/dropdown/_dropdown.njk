@@ -5,11 +5,13 @@
 
 {# Params #}
 {% set id = params.id if params.id else "dropdown" %}
+{% set label = params.label if params.label else "Dropdown label" %}
+
 <div class="ds-fe-group">
   <div class="ds-fe-dropdown">
     {{
       wmcadsLabel({
-        label: 'Dropdown label',
+        contentText: label,
         for: id
       }) | trim
     }}

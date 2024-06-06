@@ -3,51 +3,56 @@
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {% from "wmcads/components/loader/_loader.njk" import wmcadsLoader %}
 {# Set #}
-{% set text = params.text if params.text else "Button text" %} {# set button text #}
-{% set iconRight = params.iconRight if params.iconRight %} {# set icon right classes #}
+{% set type = " ds-btn--" + params.type if params.type %}
+{% set contentText = params.contentText if params.contentText else "Button text" %}
+{% set contentHTML = params.contentHTML if params.contentHTML else null %}
+{% set isActive = " ds-is--active" if params.isActive %}
+{% set isDarkBg = " ds-btn--dark-bg" if params.isDarkBg %}
+{% set isDisabled = " ds-btn--disabled" if params.isDisabled %}
+{% set isLoading = params.isLoading %}
+{% set classes = " " + params.classes if params.classes %} {# set svg left reference #}
 {% set iconLeft = params.iconLeft if params.iconLeft %} {# set svg left reference #}
-{% set paramClass = " " + params.classNames if params.classNames %} {# set paramClass to params.classNames if any #}
-{# if button disabled is true #}
-{% if params.disabled %}
-  {% set classNames = paramClass + " ds-btn--disabled" %}
-{% else %}
-  {% set classNames = paramClass if paramClass %}
-{% endif %}
+{% set iconRight = params.iconRight if params.iconRight %} {# set icon right classes #}
+{% set role = params.role if params.role else "button" %}
+{% set _content = contentHTML | safe if contentHTML else contentText %} {# change content based on what user has input #}
+{% set iconClasses = " " + params.iconClasses if params.iconClasses %} 
 
-<button class="ds-btn{{ classNames }}" {% if params.disabled %}disabled="disabled"{% endif %} {% if params.type %}type="{{params.type}}"{% endif %}>
+<button class="ds-btn{{type}}{{classes}}{{isActive}}{{isDarkBg}}{{isDisabled}}" {% if params.isDisabled %}disabled="disabled"{% endif %} type="{{role}}">
     {#- iconLeft -#}
-    {%- if iconLeft %}
-    {{
-      wmcadsIcon({
-        icon: iconLeft,
-        class: 'ds-btn__icon'
-      }) | indent | trim
-    }}
-    {{text}}
+    {% if iconLeft %}
+      {{
+        wmcadsIcon({
+          icon: iconLeft,
+          class: ('ds-btn__icon ds-btn__icon--left '+iconClasses)
+        })
+      }}
+
+      {{ _content }}
 
     {#- iconRight -#}
-    {%- elseif iconRight %}
-    {{ text }}
-    {{
-      wmcadsIcon({
-        icon: iconRight,
-        class: 'ds-btn__icon ds-btn__icon--right'
-      }) | indent | trim
-    }}
+    {% elseif iconRight %}
+      {{ _content }}
+
+      {{
+        wmcadsIcon({
+          icon: iconRight,
+          class: ('ds-btn__icon ds-btn__icon--right ' + iconClasses)
+        })
+      }}
 
     {#- Loading spinner -#}
-    {%- elseif params.loading %}
-    {{ text -}}
-    {{
-      wmcadsLoader({
-        customClass: 'ds-btn__icon ds-btn__icon--right',
-        size: 'btn'
-      }) | indent | trim
-    }}
+    {% elseif isLoading %}
+      {{ _content }}
+      {{
+        wmcadsLoader({
+          classes: 'ds-btn__icon ds-btn__icon--right',
+          size: 'btn'
+        })
+      }}
 
     {#- noIcon -#}
-    {%- else %}
-    {{ text -}}
+    {% else %}
+      {{ _content }}
     {% endif %}
 </button>
 {% endmacro %}

@@ -1,18 +1,15 @@
 import * as polyfills from './assets/vendor/js/polyfills/polyfills';
-import colorPalettes from './pages/styles/colour-palettes/_color-palettes';
-import aToZContentStyleGuide from './pages/styles/a-to-z-content-style-guide/_a-to-z-content-style-guide';
-import cookies from '../wmcads/patterns/cookies/_example';
+import colorPalettes from './pages/wmca/styles/colour-palettes/_color-palettes';
+import aToZContentStyleGuide from './pages/wmca/styles/a-to-z-content-style-guide/_a-to-z-content-style-guide';
+// import cookies from '../wmcads/patterns/cookies/_example';
 import headerJs from '../wmcads/patterns/header-v2/_example';
 import footerJs from '../wmcads/patterns/footer/_example';
 import accordionsJS from '../wmcads/components/accordion/_example';
 import boardMembersJS from '../wmcads/patterns/board-members/_example';
 import searchFilterJs from '../wmcads/patterns/search/search-filter/_example';
+import feedbackLoopsJS from '../wmcads/patterns/feedback-loop/_example';
 
-import {
-  componentExample,
-  componentExampleScript,
-  componentExampleIframe
-} from './_partials/component-example';
+import { componentExample, componentExampleIframe } from './_partials/component-example';
 
 const icons = () => {
   // Ajax SVG in, SVGS are referenced in app (Icon component)
@@ -37,9 +34,9 @@ window.addEventListener(
   footerJs(),
   accordionsJS(),
   boardMembersJS(),
-  cookies(),
+  // cookies(),
   searchFilterJs(),
+  feedbackLoopsJS(),
   componentExampleIframe(),
-  componentExampleScript(),
   componentExample)
 );

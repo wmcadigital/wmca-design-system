@@ -198,7 +198,7 @@
         },
         {
           "title": "first person",
-          "content": "<p>Use \"we'\" and \"us\" when addressing the user where possible. For example, instead of \"West Midlands Combined Authority has…\" say \"We have\" - it’s more personal.</p>"
+          "content": "<p>Use \"we'\" and \"us\" when addressing the user where possible. For example, instead of \"Transport for West Midlands has…\" say \"We have\" - it’s more personal.</p>"
         },
         {
           "title": "fire and rescue service",
@@ -467,7 +467,7 @@
         },
         {
           "title": "Transport for West Midlands",
-          "content": "<p>Avoid referring to Transport for West Midlands (TfWM). Users don't need to know about it while getting travel advice.</p><p>Explaining the relationship between West Midlands Combined Authority, TfWM and West Midlands Combined Authority (WMCA) is complicated. Use \"we\" instead. For example, \"we manage the Key Route Network (KRN)\" with a link to the TfWM policy page.</p>"
+          "content": "<p>Avoid referring to Transport for West Midlands (TfWM). Users don't need to know about it while getting travel advice.</p><p>Explaining the relationship between Transport for West Midlands, TfWM and Transport for West Midlands (WMCA) is complicated. Use \"we\" instead. For example, \"we manage the Key Route Network (KRN)\" with a link to the TfWM policy page.</p>"
         }
       ]
     },
@@ -504,8 +504,8 @@
           "content": "<p>Not web-site or web site.</p>"
         },
         {
-          "title": "West Midlands Combined Authority",
-          "content": "<p>Avoid referring to West Midlands Combined Authority (WMCA). Users don't need to know about it while getting travel advice.</p><p>The exception is if you referring to a statutory responsibility or a contract. For example, concessionary passes or terms and conditions.</p>"
+          "title": "Transport for West Midlands",
+          "content": "<p>Avoid referring to Transport for West Midlands (WMCA). Users don't need to know about it while getting travel advice.</p><p>The exception is if you referring to a statutory responsibility or a contract. For example, concessionary passes or terms and conditions.</p>"
         },
         {
           "title": "wifi",
@@ -513,7 +513,7 @@
         },
         {
           "title": "WMCA",
-          "content": "<p>See entry on <a href='#westmidlandscombinedauthority' class='ds-link'>West Midlands Combined Authority</a>.</p>"
+          "content": "<p>See entry on <a href='#westmidlandscombinedauthority' class='ds-link'>Transport for West Midlands</a>.</p>"
         },
         {
           "title": "wmca.org.uk",

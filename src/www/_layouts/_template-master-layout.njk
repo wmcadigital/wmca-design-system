@@ -1,3 +1,80 @@
+{% if (ds == "wmca") %}
+    {% set nav = templateNavItems %}
+    {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "Governance",
+        menuItems: [{
+          name: "Committee meetings"
+        },{
+          name: "Freedom of information"
+        },{
+          name: "Procurement"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Contact us"
+        }, {
+          name: "Media assets"
+        }, {
+          name: "Careers"
+        }, {
+          name: "Documents"
+        }]
+      } %}
+{% endif %}
+
+{% if (ds== "tfwm") %}
+    {% set nav = templateNavItemsTfwm %}
+        {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Businesses"
+        },{
+          name: "Education"
+        },{
+          name: "Job centres"
+        },{
+          name: "Young people"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "About us",
+        menuItems: [{
+          name: "Who we are"
+        }, {
+          name: "What we do"
+        }, {
+          name: "Our strategy"
+        }, {
+          name: "Our apps"
+        }]
+      } %}
+{% endif %}
+
+{% if (ds == "st") %}
+    {% set nav = templateNavItemsSt %}
+{% endif %}
+
+{% if (ds== "mc") %}
+    {% set nav = templateNavItemsMc %}
+{% endif %}
+
+{% if (ds== "cia") %}
+    {% set nav = templateNavItemsCia %}
+    {% set footerCol = 2 %}
+    {% set footerMenu1 = {
+        name: "Partners",
+        menuItems: []
+      } %}
+      {% set footerMenu2 = {
+        name: "Change your area",
+        menuItems: []
+      } %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en-gb" class="ds-html">
   <!-- Head -->
@@ -13,14 +90,16 @@
       </p>
     <![endif]-->
 
-        {# header #}
+    {# header #}
     {% from "wmcads/patterns/header-v2/_header-v2.njk" import wmcadsHeaderV2 %}
     {{
       wmcadsHeaderV2 ({
         id: "mega-menu",
-        navItems: templateNavItems,
-        banner: true,
+        navItems: nav,
+        banner: false,
         linkTopLevel: true,
+        ciaArea: true,
+        ds: ds,
         breadcrumbs: {
           section: section,
           pageTitle: pageTitle,
@@ -36,6 +115,12 @@
     }}
     {# header #}
 
+    {# summary #}
+    {% block summary %}{% endblock %}
+    {# end:summary #}
+
+    {% block summaryContent %}{% endblock summaryContent %}
+
     {# main #}
     <main class="ds-container--main {% if(params.tempCampaign) %} ds-m-r-lg {% endif %}">
       {% block body %}{% endblock %}
@@ -47,29 +132,11 @@
     {% from "wmcads/patterns/footer/_footer.njk" import wmcadsFooter %}
     {{
       wmcadsFooter({
+      columns: footerCol,
       social: true,
-      menu1: {
-        name: "Governance",
-        menuItems: [{
-          name: "Committee meetings"
-        },{
-          name: "Freedom of information"
-        },{
-          name: "Procurement"
-        }]
-      },
-      menu2: {
-        name: "Resources and support ",
-        menuItems: [{
-          name: "Contact us"
-        }, {
-          name: "Media assets"
-        }, {
-          name: "Careers"
-        }, {
-          name: "Documents"
-        }]
-      },
+      ds: ds,
+      menu1: footerMenu1,
+      menu2: footerMenu2,
       bottomMenu: [{
         name: "Accessibility"
       },

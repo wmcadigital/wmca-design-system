@@ -1,0 +1,16 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Content card" %}
+{% set ds = 'cia' %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+{# Imports #}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+
+{% block content %}
+
+{% from "www/pages/shared/components/content-card/index.njk" import dsComponentContentCardCopy %}
+
+{{
+  dsComponentContentCardCopy({})
+}}
+
+{% endblock %}

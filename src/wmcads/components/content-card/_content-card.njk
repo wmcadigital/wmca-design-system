@@ -1,52 +1,28 @@
 {% macro wmcadsContentCard(params) %}
 {# Set #}
-
+{% set classes = " " + params.classes if params.classes else "" %}
+{% set yellowModifier = " ds-content-card--yellow" if params.yellow else "" %}
 {# Opening & closing tags #}
-{% set tag = "a" if params.clickable else "div" %}
-{% set attributes = " href=\"#\" target=\"_self\"" if params.clickable else "" %}
-{% set title = params.title if params.title else "Lorem ipsum dolor sit amet" %} {# set title text #}
-{% set eventTitle = params.eventTitle if params.eventTitle else "Event" %} {# set eventTitle text #}
-{% set copy = params.copy if params.copy else "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %} {# set copy text #}
-{% set eventCopy = params.eventCopy if params.eventCopy else "A short sentence explaining what this is, it can be 2 lines." %} {# set copy text #}
+{% set _tag = "a" if params.link else "div" %}
+{% set link = params.link if params.link else "#" %}
+{% set linkTitle = params.linkTitle if params.linkTitle else "" %}
+{% set _attributes = " href=\"" + link + "\" title=\""+ linkTitle +"\" target=\"_self\"" if params.link else "" %}
 
+{# HTML content #}
+{% set contentHTML = params.contentHTML if params.contentHTML else "
+    <div class=\"ds-p-sm\">
+        <h2>Where the adventure starts</h2>
+        <p>Whatever your plans this holiday, get there with our great range of family tickets and discount vouchers.</p>
+    </div>
+" %}
 
 {# This macro checks if it's being called inside a {% call %} tag #}
 {# It's an easier way to pass in larger html content  #}
-<{{tag}}{{attributes | safe}} class="ds-content-card{{"--blue" if params.isCta else "" }} {{"ds-content-card--event" if params.isEvent else "" }} {{"ds-content-card--news" if params.isNews else "" }} {{"ds-css-grid-block--double" if params.isDoubleCard else "" }} ">
-    {% if(params.src) %}
-        <img 
-        src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png{{"?anchor=center&mode=crop&width=920&height=300&rnd=132122595620000000" if params.isNewsFirst else "" }}{{"?anchor=center&mode=crop&width=480&height=357&rnd=132122595620000000" if params.isNewsSub else "" }}{{"?anchor=center&mode=crop&width=896&height=334&rnd=132122595620000000" if params.isSrcDefault else "" }}{{"?anchor=center&mode=crop&width=1500&height=393&rnd=132122595620000000" if params.isDoubleCard else "" }}{{"?anchor=center&mode=crop&width=600&height=334&rnd=132122595620000000" if params.isThirdCard else "" }}{{"?anchor=center&mode=crop&width=700&height=334&rnd=132122595620000000" if params.isDefault else "" }}" alt="content image">
-    {% endif %}
-    {% if(params.isCta) %}
-        <div class="ds-p-sm">
-            <svg>
-                <use xlink:href="#ds-general-toolkit" href="#ds-general-toolkit"></use>
-            </svg>
-            <h2>Lorem ipsum dolor sit amet</h2>
-        </div>
-    {% else %}
-    {% if(params.isEvent) %}
-        <div class="ds-p-sm">
-            <h3>{{eventTitle}}</h3>
-            <p>24 January 2021<p>
-            <p>{{eventCopy}}</p>
-        </div>
-    {% else %}
-    {% if(params.isNews) %}
-        <p>24 January 2021<p>
-        <h3><a href="#">{{title}}</a></h3>
-        <p>{{copy}}</p>
-    {% else %}
-        {%- if caller -%}
-            {{ caller() }}
-            {%- else -%}
-            <div class="ds-p-sm">
-                <h3>{{title}}</h3>
-                <p>{{copy}}</p>
-            </div>
-    {%- endif -%}
-    {%- endif -%}
-    {%- endif -%}
-    {% endif %}
-</{{tag}}>
+<{{_tag}}{{_attributes | safe}} {% if params.id %}id="{{ params.id }}"{% endif %} class="ds-content-card{{classes + yellowModifier}}">
+{%- if caller -%}
+    {{ caller() }}
+    {%- else -%}
+    {{ contentHTML | safe }}
+{%- endif -%}
+</{{_tag}}>
 {% endmacro %}

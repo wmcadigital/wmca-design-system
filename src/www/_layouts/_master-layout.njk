@@ -1,3 +1,23 @@
+{% if (ds == "wmca") %}
+    {% set nav = navItems %}
+{% endif %}
+
+{% if (ds== "tfwm") %}
+    {% set nav = navItemsTfwm %}
+{% endif %}
+
+{% if (ds == "st") %}
+    {% set nav = navItemsSt %}
+{% endif %}
+
+{% if (ds== "mc") %}
+    {% set nav = navItemsMc %}
+{% endif %}
+
+{% if (ds== "cia") %}
+    {% set nav = navItemsCia %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en-gb" class="ds-html">
   <!-- Head -->
@@ -18,19 +38,23 @@
     {{
       wmcadsHeaderV2 ({
         id: "mega-menu",
-        navItems: navItems,
+        navItems: nav,
         banner: false,
         linkTopLevel: true,
+        ciaArea: false,
+        ds: ds,
         breadcrumbs: {
           section: section,
           pageTitle: pageTitle,
-          hideBreadcrumb: hideBreadcrumb,
-          ds: ds
-        },
-        brand: "wmca"
+          hideBreadcrumb: hideBreadcrumb
+        }
       })
     }}
     {# header #}
+
+    {# summary #}
+    {% block summary %}{% endblock %}
+    {# end:summary #}
 
     {# main #}
     <main class="ds-container ds-container--main">
@@ -42,10 +66,14 @@
     {% from "wmcads/patterns/footer/_footer.njk" import wmcadsFooter %}
     {{
       wmcadsFooter({
-        feedback: true,
+        feedback: false,
         bottomMenu: [{
           name: "Privacy & Cookies Policy",
           link: "https://www.wmca.org.uk/policies"
+        },
+        {
+          name: "Change brand",
+          link: "/"
         }]
       })
     }}

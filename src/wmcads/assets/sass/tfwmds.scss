@@ -1,17 +1,18 @@
 // Vars
-$ds: "tfwm";
+$ds: "tfwmds";
 @import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
+@import "shared/vars";
 @import "tfwm/vars";
 // Mixins
-@import "mixins";
+@import "shared/mixins";
 
 // Global styles
-@import "utilities";
-@import "typography";
-@import "general";
+@import "shared/utilities";
+@import "shared/typography";
+@import "shared/general";
 
 // Grid
-@import "ds-grid/ds-grid";
+@import "shared/ds-grid/ds-grid";
 
 // Component Styles
 @import "../../components/components"; // Import all pattern styles

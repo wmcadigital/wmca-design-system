@@ -3,7 +3,7 @@
 {% set section = 'Home' %}
 {% set ds = 'wmca' %}
 {# Imports #}
-{%- from "wmcads/components/content-tiles/normal/_normal.njk" import wmcadsContentTilesNormal -%}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
 {%- from "wmcads/components/link/link/_link.njk" import wmcadsLink -%}
 {% from "wmcads/components/warning-text/_warning-text.njk" import wmcadsWarningText %}
 
@@ -12,72 +12,48 @@
 <div class="ds-grid ds-grid--align-center ds-grid--spacing-lg-2-xl">
   {# Overview #}
   <div class="ds-col-1 ds-col-lg-2-3 ds-m-b-lg">
-    Design Systems used within the West Midlands Combined Authority.
+    <p>Design Systems used within the West Midlands Combined Authority.</p>
+    <p>Use these design systems to build consistent, usable services.</p>
   </div>
 </div>
 {# Internal navigation #}
 
-<div class="ds-grid ds-grid--align-stretch ds-grid--spacing-sm-2-xsm ds-grid--spacing-lg-4-xsm">
+<div class="ds-css-grid-4-col">
   {# WMCA #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
-    {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "West Midlands Combined Authority",
-        copy: "<p></p>",
-        smallTitle: true,
-        readMore: true,
-        link: '/wmca/',
-        linkText: 'View the WMCA Design System',
-        linkTitle: 'View the WMCA Design System'
-      })
-    }}
-  </div>
+  {{
+    wmcadsContentCard({
+      link: '/wmca/',
+      contentHTML: '<div class=\"ds-p-sm\"><h3>West Midlands Combined Authority</h3><p>View the WMCA Design System</p></div>'
+    })
+  }}
   {# TfWM #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
-    {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "Transport For West Midlands",
-        copy: "<p></p>",
-        smallTitle: true,
-        readMore: true,
-        link: '/tfwm/',
-        linkText: 'View the TfWM Design System',
-        linkTitle: 'View the TfWM Design System'
-      })
-    }}
-  </div>
+  {{
+    wmcadsContentCard({
+      link: '/tfwm/',
+      contentHTML: '<div class=\"ds-p-sm\"><h3>Transport For West Midlands</h3><p>View the TfWM Design System</p></div>'
+    })
+  }}
   {# Safer Travel #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
-    {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "Safer Travel",
-        copy: "<p></p>",
-        smallTitle: true,
-        readMore: true,
-        link: '/st/',
-        linkText: 'View the Safer Travel Design System',
-        linkTitle: 'View the Safer Travel Design System'
-      })
-    }}
-  </div>
+  {{
+    wmcadsContentCard({
+      link: '/st/',
+      contentHTML: '<div class=\"ds-p-sm\"><h3>Safer Travel</h3><p>View the Safer Travel Design System</p></div>'
+    })
+  }}
   {# Midlands Connect #}
-  <div class="ds-col-1 ds-col-sm-1-2 ds-col-lg-1-4 ds-p-b-xsm">
-    {{
-      wmcadsContentTilesNormal({
-        classModifiers: 'ds-content-tile--with-one-link',
-        title: "Midlands Connect",
-        copy: "<p></p>",
-        smallTitle: true,
-        readMore: true,
-        link: '/mc/',
-        linkText: 'View the Midlands Connect Design System',
-        linkTitle: 'View the Midlands Connect Design System'
-      })
-    }}
-  </div>
+  {{
+    wmcadsContentCard({
+      link: '/mc/',
+      contentHTML: '<div class=\"ds-p-sm\"><h3>Midlands Connect</h3><p>View the Midlands Connect Design System</p></div>'
+    })
+  }}
+  {# Change Into Action #}
+  {{
+    wmcadsContentCard({
+      link: '/cia/',
+      contentHTML: '<div class=\"ds-p-sm\"><h3>Change Into Action</h3><p>View the Change Into Action Design System</p></div>'
+    })
+  }}
 </div>
 
 {% endblock %}

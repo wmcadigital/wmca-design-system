@@ -4,18 +4,13 @@
     border-bottom: $size-sm solid get-color(cta);
   }
 
-  .ds-link {
+  .ds-link,
+  .ds-btn--link {
     color: $white;
   }
 
   // Override container defaults
   .ds-container {
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin-top: -$size-lg;
-    margin-right: auto;
-    margin-left: auto;
     padding: $size-xs $size-md;
     overflow: hidden;
     color: $white;
@@ -25,13 +20,33 @@
   // A bite more spacing on mobile
   &__useful {
     margin-bottom: $size-md;
+    color: $white;
   }
 
   &__form {
     display: none;
+
+    .ds-fe-label {
+      font-weight: bold;
+    }
   }
 
-  &.ds-is-open {
+  // Sent state
+  &__sent-msg {
+    display: none;
+  }
+
+  .ds-is--sent {
+    & > * {
+      display: none;
+    }
+
+    > .ds-feedback-loop__sent-msg {
+      display: block;
+    }
+  }
+
+  &.ds-is--open {
     .ds-container {
       padding: $size-md;
       border-top: $size-sm solid get-color(cta);
@@ -39,10 +54,10 @@
       border-left: 1px solid get-color(cta);
       color: initial;
       background-color: $white;
-      text-align: center;
     }
 
-    .ds-link {
+    .ds-link,
+    .ds-btn--link {
       color: get-color(cta);
     }
 

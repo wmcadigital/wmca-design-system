@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentDividerCopy(params) %}
 {% set pageTitle="Divider" %}
 {% from "wmcads/components/divider/_divider.njk" import wmcadsDivider %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -111,3 +111,4 @@
   ])
 }}
 {% endblock %}
+{% endmacro %}

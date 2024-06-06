@@ -1,23 +1,140 @@
-.ds-homepage-banner {
-  min-height: 325px;
-  padding: $size-lg 0;
+.ds-page-header {
+  display: block;
+  min-height: 400px;
+  color: $white;
+  background: $black;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
   background-size: cover;
 
-  &__title {
-    @include type-setting(2);
-    display: inline;
-    color: $white;
-    background-color: get-color(primary);
-    box-shadow: 5px 0 0 5px get-color(primary), -5px 0 0 5px get-color(primary);
+  @media screen and (max-width: $breakpoint-sm) {
+    min-height: 300px;
   }
 
-  &__title-content {
-    position: relative; // Fix background-color overlapping rows
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+  &__large {
+    min-height: 600px;
+    @media screen and (max-width: $breakpoint-md) {
+      min-height: 300px;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+  }
+
+  &-container {
+    display: flex;
+    min-height: 400px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      min-height: 420px;
+      padding: 0;
+
+      &-pattern-two {
+        min-height: 300px;
+      }
+    }
+  }
+
+  &-box {
+    width: 60%;
+    height: fit-content;
+    padding: 5px 10px;
+    background: get-color(primary);
+    align-self: center;
+
+    &-pattern-one {
+      margin-top: $size-md;
+      align-self: flex-start;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 85%;
+      // align-self: flex-end;
+
+      &-pattern-two {
+        display: none !important;
+      }
+
+      &-pattern-two-bottom {
+        width: 100%;
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+      &-pattern-two-bottom {
+        display: none;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      padding: $size-md;
+      color: $white;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 $size-md $size-md $size-md;
+      color: $white;
+    }
+
+    .ds-btn {
+      margin: 15px;
+
+      @media screen and (max-width: $breakpoint-sm) {
+        width: 90%;
+      }
+    }
+
+    .ds-btn--primary {
+      color: get-color(primary);
+      background: $white;
+
+      svg {
+        fill: get-color(primary);
+      }
+    }
+
+    .ds-btn--secondary {
+      border: 1px solid $white;
+      color: $white;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    margin: 8px 0 0 8px;
+    background: $white;
+    fill: get-color(primary);
+  }
+}
+
+@media (min-width: 400px) {
+  .ds-page-header {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__icon {
+      position: static;
+    }
   }
 }

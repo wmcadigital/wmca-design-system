@@ -1,0 +1,14 @@
+{% extends "www/_layouts/_master-layout.njk" %}
+
+{% block summary %}
+<div class="ds-website-summary-content">
+  {% block summaryContent %}{% endblock summaryContent %}
+</div>
+{% endblock summary %}
+{% block body %}
+<div class="ds-grid">
+  <div class="ds-col-1">
+    {% block content %}{% endblock content %}
+  </div>
+</div>
+{% endblock body%}

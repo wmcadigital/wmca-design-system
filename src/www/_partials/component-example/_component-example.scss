@@ -42,7 +42,7 @@ linear-gradient(-45deg, transparent 75%, get-color(background, 20%, dark) 75%);
   &__iframe {
     max-width: 100%;
     resize: both;
-    background: $white;
+    background: get-color(background);
   }
 
   pre {
@@ -52,6 +52,22 @@ linear-gradient(-45deg, transparent 75%, get-color(background, 20%, dark) 75%);
   & + .ds-website-code-example {
     margin-top: 0;
     border-top: 0;
+  }
+
+  // make background grey on the white table background
+  .ds-website-inline-code {
+    background-color: get-color(background);
+  }
+
+  // Make the table have a bit more room on desktop
+  @media all and (min-width: $breakpoint-md) {
+    th:nth-child(1) {
+      width: 200px;
+    }
+
+    th:nth-child(2) {
+      width: 100px;
+    }
   }
 }
 
@@ -113,4 +129,8 @@ span[class^="hljs-"] {
       text-decoration: none;
     }
   }
+}
+
+.ds-iframe-content > .ds-cookies-banner {
+  display: block !important;
 }

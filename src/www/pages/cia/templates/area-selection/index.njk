@@ -1,0 +1,54 @@
+{% extends "www/_layouts/layout-template-app.njk" %} 
+{% set pageTitle="Area Selection" %}
+{% set section = "Templates" %}
+{% set ds = 'cia' %}
+
+{# Imports #} 
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "wmcads/components/form-elements/dropdown/_dropdown.njk" import wmcadsDropdown %}
+
+{# Set array of tiles #} 
+
+{% block content %}
+
+    <div class="ds-grid ds-area">
+        <div class="ds-col-1 ds-col-md-1-2 ds-area-img" style="background-image:url('/img/examples/cia/cia-outside-on-street-looking-at-bag.jpg')">
+
+        </div>
+        <div class="bg-secondary ds-p-xl ds-col-1 ds-col-md-1-2">
+            <div class="ds-grid">
+            <div class="ds-col-1 ds-col-md-2-3">
+                <h2>Turn your change into action for rough sleepers</h2>
+                <h3>Working with rough sleepers</h3>
+                <p>Change into Action is an alternative giving scheme supporting specialist charities and street teams working to change the circumstances of rough sleepers.</p>
+                <p>Our services are there for rough sleepers on the streets, in day centres and housing, and you can help us do more.</p>
+                <div class="ds-fe-group">
+                    <div class="ds-fe-dropdown">
+                        <label class="ds-fe-label" for="dropdown">Choose your local area</label>
+                            <select class="ds-fe-dropdown__select area-select" id="dropdown" name="dropdown" onchange="if (this.value) window.location.href = this.value;">
+                                <option value="/" selected="selected">Choose from list</option>
+                                <option value="/birmingham/">Birmingham</option>
+                                <option value="/cia/templates/area-selection/coventry/">Coventry</option>
+                                <option value="/cia/templates/area-selection/dudley/">Dudley</option>
+                                <option value="/sandwell/">Sandwell</option>
+                                <option value="/solihull/">Solihull</option>
+                                <option value="/walsall/">Walsall</option>
+                                <option value="/wolverhampton/">Wolverhampton</option>
+                            </select>
+                        </div>
+                    </div>
+
+                <!--{{
+                    wmcadsDropdown({
+                        label: "Choose your local area"
+                    })
+                }}-->
+                </div>
+            </div>    
+            </div>
+    </div>
+
+{% endblock %}

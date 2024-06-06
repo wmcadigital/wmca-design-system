@@ -1,4 +1,4 @@
-{% extends "www/_layouts/layout-left-pane.njk" %}
+{% macro dsComponentWarningTextCopy(params) %}
 {% set pageTitle="Warning Text" %}
 {% from "wmcads/components/warning-text/_warning-text.njk" import wmcadsWarningText %}
 {% from "www/_partials/component-example/component-example.njk" import compExample %}
@@ -98,3 +98,4 @@
 {# End Warning Text #}
 
 {% endblock %}
+{% endmacro %}

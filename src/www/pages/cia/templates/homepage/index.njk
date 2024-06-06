@@ -1,0 +1,106 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %}
+{% set pageTitle="Homepage Template" %}
+{% set section = "Templates" %}
+{% set section="Templates" %}
+{% set ds = 'cia' %}
+
+{# Imports #}
+{% from "wmcads/patterns/banner/homepage-banner/_homepage-banner.njk" import wmcadsHomepageBanner %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{# Set array of tiles #} 
+
+{% block summaryContent %}
+{{
+    wmcadsHomepageBanner({
+      title: "Turn your Change into Action for rough sleepers",
+      pattern: "pattern-two",
+      ds: ds
+    })
+}}
+{% endblock summaryContent %}
+
+{% block content %} 
+<div class="ds-container ds-m-t-lg homepage">
+    <div class="ds-grid">
+        <div class="ds-col-md-2-3">
+            <h2>We are working with rough sleepers</h2>
+            <p>Our services are there for rough sleepers on the streets, in day centres and housing, and you can help us do more.</p>
+
+            {{
+                wmcadsInsetText({
+                 html: "With your help, we’ve raised over £131,652! <a>See how we’re putting your change into action</a>"
+                })
+            }}
+
+            <h2>Together for Change</h2>
+            <p>Our dedicated teams ensure your change makes a personal difference to the life of a rough sleeper.</p>
+            
+            <h2>One Team</h2>
+            <p>Our multi-disciplinary teams get to know and understand the circumstances that lead to rough sleeping, which is how your help is matched to an individual’s needs.</p>
+            <p><a href="">Read more about us</a></p>
+
+        {{
+            wmcadsContentCard({
+                src: true,
+                isSrcDefault: true,
+                copy: '“I kept thinking of how I will cope indoors after being on the streets for over ten years, I am still learning to handle myself and to process things in my head.”',
+                clickable: true
+            })
+        }}
+
+        <h2>Making the change</h2>
+
+        <p>See how your generosity has helped to turn lives around in Birmingham</p>
+
+        <div class="ds-css-grid-2-col ds-m-b-lg">
+        {{
+            wmcadsContentCard({
+                src: true,
+                isSrcDefault: true,
+                title: 'Coronavirus support',
+                copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+                clickable: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                src: true,
+                isSrcDefault: true,
+                title: '2021 Mayoral election',
+                copy: 'Find out what the Mayor is reponsible for and how to vote.',
+                clickable: true
+            })
+        }}
+                {{
+            wmcadsContentCard({
+                src: true,
+                isSrcDefault: true,
+                title: 'Coronavirus support',
+                copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+                clickable: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                src: true,
+                isSrcDefault: true,
+                title: '2021 Mayoral election',
+                copy: 'Find out what the Mayor is reponsible for and how to vote.',
+                clickable: true
+            })
+        }}
+        </div>
+
+        <div class='ds-video-embed'>
+            <iframe src='https://www.youtube.com/embed/CdyAAHXVcA4' frameborder='0' allowfullscreen></iframe>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -2,8 +2,8 @@
 .ds-footer {
   padding: $size-lg;
   color: $white;
-  background-color: get-color(primary, 50, dark);
-  box-shadow: 0 100vh 0 100vh get-color(primary, 50, dark);
+  background-color: get-color(primary, 50%, dark);
+  box-shadow: 0 100vh 0 100vh get-color(primary, 50%, dark);
 
   * {
     color: inherit;
@@ -114,6 +114,7 @@
       justify-content: space-between;
     }
 
+    .ds-col-lg-1-2,
     .ds-col-lg-1-3 {
       margin-bottom: $size-lg;
       padding: 0 $size-sm;
@@ -236,6 +237,20 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
     overflow: hidden;
     transition: $collapse-transition;
     border-left: 1px solid $white;
+  }
+
+  img {
+    margin-bottom: $size-sm;
+  }
+
+  p {
+    a {
+      color: $white !important;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
 

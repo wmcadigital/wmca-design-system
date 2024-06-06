@@ -1,0 +1,208 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Campaign Template - One Column" %}
+{% set section = "Templates" %}
+{% set ds = 'wmca' %}
+
+{# Imports #} 
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "wmcads/components/page-header/_page-header.njk" import wmcadsPageHeader %}
+{%- from "wmcads/components/button/_button.njk" import wmcadsButton as start -%}
+{# Set array of tiles #} 
+{% block content %} 
+
+<div class="template-campaign">
+
+<div class="ds-container ds-hide-desktop">
+    <h1 id="ds-main-content">Roll &amp; Stroll</h1>
+</div>
+
+{{
+ wmcadsPageHeader({
+      title: false,
+      large: true
+    })
+}}
+<div class="ds-container">
+  <div class="ds-grid">
+    <div class="ds-col-1 ds-col-md-3-4 ds-p-t-lg">
+      <h1 id="ds-main-content" class="ds-hide-mobile">Roll &amp; Stroll</h1>
+      <h2>Have your say on cycling &amp; walking changes in your local area.</h2>
+      <p>Lockdown has been quite a journey but cycling and walking is more popular than ever.</p>
+      <p>After marking this year the Big Summer of Cycling &amp; Walking, let’s not stop now. We're continuing to invest in creating a region that supports healthy, greener and safer travelling. We want to help you get started or keep going.</p>
+      <p>Whatever your travel plans - whether it's a cycle around your local streets or a winter walkie - we're here to help you start the adventure before you get there. There’s never been a better time to stay fit and healthy than right now - so, get your roll &amp; stroll on!</p>
+      {{
+        start({
+          classNames: "ds-btn--start",
+          text: "Have your say",
+          iconRight: "general-chevron-right"
+        })
+      }}
+
+      <hr class="ds-divider-wmgreen ds-m-t-lg" aria-hidden="true">
+      <h2>Cycling &amp; walking in your area</h2>
+      <div class="ds-grid ds-grid--justify-between">
+        <div class="ds-col-1 ds-col-sm-1-2 ds-p-r-sm ds-m-b-sm"">
+        {{
+          wmcadsContentCard({
+            clickable: true,
+            src: true,
+            isThirdCard: false,
+            title: 'Get Going Continue Rolling',
+            isDefault: true,
+            copy: 'Whether youre rolling to work or school, or catching some fresh air, theres always safe and new ways to get there.'
+          })
+        }}
+        </div>
+        <div class="ds-col-1 ds-col-sm-1-2 ds-p-l-sm ds-m-b-sm">
+        {{
+          wmcadsContentCard({
+            clickable: true,
+            src: true,
+            isThirdCard: false,
+            title: 'All things strolling',
+            isDefault: true,
+            copy: 'Wherever youre heading, theres always new and safe ways to get there on foot. '
+          })
+        }}
+        </div>
+        <div class="ds-col-1 ds-col-sm-1-2 ds-p-r-sm ds-m-t-sm ds-m-b-sm">
+        {{
+          wmcadsContentCard({
+            clickable: true,
+            src: true,
+            isThirdCard: false,
+            title: 'Changes in your area',
+            isDefault: true,
+            copy: 'Understand what changes are being made in your area to help you travel safely'
+          })
+        }}
+        </div>
+        <div class="ds-col-1 ds-col-sm-1-2 ds-p-l-sm ds-m-t-sm ds-m-b-sm">
+        {{
+          wmcadsContentCard({
+            clickable: true,
+            src: true,
+            isThirdCard: false,
+            title: 'Get active and travel safely',
+            isDefault: true,
+            copy: 'Enjoy being physically active and travelling outdoors responsibly and safely. '
+          })
+        }}
+        </div>
+      </div>
+
+      <hr class="ds-divider-wmgreen  ds-m-t-lg" aria-hidden="true">
+      <h2>Get the best from your bike</h2>
+      <div class="ds-accordion ds-m-b-sm">
+        <button aria-controls="accordion-01" class="ds-accordion__summary-wrapper" aria-expanded="false">
+          <!-- accordion summary -->
+          <div class="ds-accordion__summary">
+            <h4 class="ds-m-b-none">Love to Ride</h4>
+          </div>
+          <!-- plus icon -->
+          <svg class="ds-accordion__icon">
+            <use xlink:href="#ds-general-expand" href="#ds-general-expand"></use>
+          </svg>
+          <!-- minus icon -->
+          <svg class="ds-accordion__icon ds-accordion__icon--minimise">
+              <use xlink:href="#ds-general-minimise" href="#ds-general-minimise"></use>
+          </svg>
+        </button>
+
+        <!-- accordion content -->
+        <div class="ds-accordion__content" id="accordion-01">
+          <p>
+            <strong>Some random subtitle</strong>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur, eius repellat dolor vel corporis eos fugiat. Ut totam, incidunt sequi iusto nesciunt illum natus, dolores velit cumque, excepturi labore!
+          </p>
+        </div>
+      </div>
+
+      <div class="ds-accordion ds-m-b-sm">
+          <button aria-controls="accordion-01" class="ds-accordion__summary-wrapper" aria-expanded="false">
+            <!-- accordion summary -->
+            <div class="ds-accordion__summary">
+              <h4 class="ds-m-b-none">Love your bike</h4>
+            </div>
+            <!-- plus icon -->
+            <svg class="ds-accordion__icon">
+              <use xlink:href="#ds-general-expand" href="#ds-general-expand"></use>
+            </svg>
+            <!-- minus icon -->
+            <svg class="ds-accordion__icon ds-accordion__icon--minimise">
+              <use xlink:href="#ds-general-minimise" href="#ds-general-minimise"></use>
+            </svg>
+          </button>
+
+          <!-- accordion content -->
+          <div class="ds-accordion__content" id="accordion-01">
+            <p>
+              <strong>Some random subtitle</strong>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur, eius repellat dolor vel corporis eos fugiat. Ut totam, incidunt sequi iusto nesciunt illum natus, dolores velit cumque, excepturi labore!
+            </p>
+          </div>
+        </div>
+
+        <hr class="ds-divider-wmgreen ds-m-t-lg" aria-hidden="true">
+
+        <h2>Additional Information</h2>
+        <div class="ds-grid ds-grid--justify-between">
+          <div class="ds-col-1 ds-col-sm-1-2 ds-p-r-sm ds-m-b-sm"">
+          {{
+            wmcadsContentCard({
+              clickable: true,
+              src: true,
+              isThirdCard: false,
+              title: 'Support for businesses',
+              isDefault: true,
+              copy: 'We have a wide range of options to support your business and employees at work and at home'
+            })
+          }}
+          </div>
+          <div class="ds-col-1 ds-col-sm-1-2 ds-p-l-sm ds-m-b-sm">
+          {{
+            wmcadsContentCard({
+              clickable: true,
+              src: true,
+              isThirdCard: false,
+              title: 'Be Aware and Share',
+              isDefault: true,
+              copy: 'If you drive in the West Midlands be prepared to share the road space with more Rollers and Strollers.'
+            })
+          }}
+          </div>
+        </div>
+
+        <hr class="ds-divider-wmgreen ds-m-t-lg" aria-hidden="true">
+
+        <h3>Campaign Funding Partners</h3>
+
+        <div class="ds-grid ds-grid--spacing-2-md">
+          <div class="ds-col-2-3 ds-col-sm-1-2 ds-m-b-md partner">
+            <a href="/">
+              <img src="/img/examples/active-travel-fund.png" alt="Active Travel fund">
+            </a>
+          </div>
+          <div class="ds-col-2-3 ds-col-sm-1-2 ds-m-b-md partner">
+            <a href="/">
+              <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png" alt="Active Travel fund">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="ds-grid ds-grid--justify-center">
+    <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&mode=crop&width=1280&height=400&rnd=132122595620000000" alt="campaign bottom image" />
+</div>
+
+</div>
+{% endblock %}

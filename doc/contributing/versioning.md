@@ -122,7 +122,7 @@ The workflow works in the following way:
 - [semantic-release proper run](#14223-semantic-release-proper-run)
 - [Netlify deploy](#14224-netlify-deploy)
 
-See the [workflow file](https://github.com/wmcadigital/wmn-design-system/blob/master/.github/workflows/semantic-release.yml) for additional information.
+See the [workflow file](https://github.com/wmcadigital/wmca-design-system/blob/master/.github/workflows/semantic-release.yml) for additional information.
 
 ##### 1.4.2.2.1 semantic-release dry run
 
