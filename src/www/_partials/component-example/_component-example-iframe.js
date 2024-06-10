@@ -13,6 +13,11 @@ const componentExampleIframe = () => {
 
     const host = `//${window.location.host}`;
 
+    const url = window.location.pathname;
+    const parts = url.split('/').filter(Boolean);
+    const firstSegment = parts.at(0); // or parts.pop() or parts.slice(-1)[0]
+    const brand = firstSegment;
+
     const ajax = new XMLHttpRequest();
     ajax.open('GET', `${host}/img/ds-icons.min.svg`, true); // Fire off ajax to get spritesheet
     ajax.send();
@@ -26,7 +31,7 @@ const componentExampleIframe = () => {
         <html>
           <head>
             <base href="${host}" target="_blank">
-            <link rel="stylesheet" type="text/css" href="${host}/css/wmnds.min.css" />
+            <link rel="stylesheet" type="text/css" href="${host}/css/${brand}ds.min.css" />
             <link rel="stylesheet" type="text/css" href="${host}/css/ds-website.min.css" />
           </head>
           <body>
