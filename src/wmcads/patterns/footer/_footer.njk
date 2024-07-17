@@ -53,22 +53,22 @@
   <div class="ds-footer{{appClass}} ds-footer--v2">
     <div class="ds-container ds-grid">
       {% if(params.columns == 3) %}
-      <div class="ds-col-1 {{columns}} ds-footer__updates-col">  
-        <h3 class="ds-footer__heading">Stay up to date</h3>
+      <section class="ds-col-1 {{columns}} ds-footer__updates-col">  
+        <h2 class="ds-footer__heading ds-h3">Stay up to date</h2>
         <p>Don’t miss out on vital information, subscribe today and be in the know at all times.</p>
         <a href="#" class="ds-btn ds-footer__btn ds-footer__btn--block">Sign up to updates</a>
-      </div>
+      </section>
       {% endif %}
       {# loop through footer menus and get items #}
       {% if(params.menu1) %}
       {% set menu1Name = params.menu1.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
-        <div class="ds-col-1 {{columns}}">
-          <h3 class="ds-footer__heading ds-collapse-heading" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
+        <section class="ds-col-1 {{columns}}">
+          <h2 class="ds-footer__heading ds-collapse-heading ds-h3" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
             {{params.menu1.name}}
             <button class="ds-footer__collapse-button">
               {{wmcadsIcon({class: 'ds-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
             </button>
-          </h3>
+          </h2>
           <ul class="ds-footer__menu ds-collapse-panel" id="footer-menu-{{menu2Name}}">
           {% if(ds == "cia") %}
           <img src="/img/logo/wmca-mayor-logos.svg" />
@@ -79,17 +79,17 @@
             <li><a class="ds-footer__link" href="#">{{menuItem.name}}</a></li>
           {% endfor -%}
           </ul>
-        </div>
+        </section>
       {% endif %}
       {% if(params.menu2) %}
       {% set menu2Name = params.menu2.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
-        <div class="ds-col-1 {{columns}}">
-          <h3 class="ds-footer__heading ds-collapse-heading" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
+        <section class="ds-col-1 {{columns}}">
+          <h2 class="ds-footer__heading ds-collapse-heading ds-h3" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
             {{params.menu2.name}}
             <button class="ds-footer__collapse-button">
               {{wmcadsIcon({class: 'ds-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
             </button>
-          </h3>
+          </h2>
           <ul class="ds-footer__menu ds-collapse-panel" id="footer-menu-{{menu2Name}}">
           {% if(ds == "cia") %}
           {{
@@ -108,7 +108,7 @@
             <li><a href="https://www.youtube.com/channel/UCadbymPF89E81NQazkfBX0g" title="Youtube">{{wmcadsIcon({icon: 'social-youtube'}) | trim}}</a></li>
             <li><a href="https://www.linkedin.com/company/westmidsca" title="Linkedin">{{wmcadsIcon({icon: 'social-linkedin'}) | trim}}</a></li>
           </ul>
-        </div>
+        </section>
       {% endif %}
       </div>
       <div class="ds-container">
