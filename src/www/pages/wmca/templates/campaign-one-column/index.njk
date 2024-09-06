@@ -3,7 +3,8 @@
 {% set section = "Templates" %}
 {% set ds = 'wmca' %}
 
-{# Imports #} 
+{# Imports #}
+{% from "wmcads/patterns/hub-page-banner/_hub-page-banner.njk" import wmcadsHubPageBanner %}
 {% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
 {% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
@@ -47,7 +48,7 @@
         <div class="ds-col-1 ds-col-sm-1-2 ds-p-r-sm ds-m-b-sm"">
         {{
           wmcadsContentCard({
-            clickable: true,
+            link: "#",
             src: true,
             isThirdCard: false,
             title: 'Get Going Continue Rolling',
@@ -59,7 +60,7 @@
         <div class="ds-col-1 ds-col-sm-1-2 ds-p-l-sm ds-m-b-sm">
         {{
           wmcadsContentCard({
-            clickable: true,
+            link: "#",
             src: true,
             isThirdCard: false,
             title: 'All things strolling',
@@ -71,7 +72,7 @@
         <div class="ds-col-1 ds-col-sm-1-2 ds-p-r-sm ds-m-t-sm ds-m-b-sm">
         {{
           wmcadsContentCard({
-            clickable: true,
+            link: "#",
             src: true,
             isThirdCard: false,
             title: 'Changes in your area',
@@ -83,7 +84,7 @@
         <div class="ds-col-1 ds-col-sm-1-2 ds-p-l-sm ds-m-t-sm ds-m-b-sm">
         {{
           wmcadsContentCard({
-            clickable: true,
+            link: "#",
             src: true,
             isThirdCard: false,
             title: 'Get active and travel safely',
@@ -157,7 +158,7 @@
           <div class="ds-col-1 ds-col-sm-1-2 ds-p-r-sm ds-m-b-sm"">
           {{
             wmcadsContentCard({
-              clickable: true,
+              link: "#",
               src: true,
               isThirdCard: false,
               title: 'Support for businesses',
@@ -169,7 +170,7 @@
           <div class="ds-col-1 ds-col-sm-1-2 ds-p-l-sm ds-m-b-sm">
           {{
             wmcadsContentCard({
-              clickable: true,
+              link: "#",
               src: true,
               isThirdCard: false,
               title: 'Be Aware and Share',

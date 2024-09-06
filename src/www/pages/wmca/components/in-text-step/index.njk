@@ -35,15 +35,30 @@
         </li>
     </ul>
   {% from "wmcads/components/in-text-step/_in-text-step.njk" import wmcadsInTextStep %}
-  {{
-    compExample([wmcadsInTextStep({
-        steps: [
-            "Step text must end with a full stop.",
-            "Step text must end with a full stop.",
-            "Step text must end with a full stop."
-        ]
-    })])
-  }}
+{{
+    compExample([
+        wmcadsInTextStep({
+            items: [
+                {
+                    contentText: "Step text must end with a full stop."
+                },
+                {
+                    contentText: "Step text must end with a full stop."
+                },
+                {
+                    contentText: "Step text must end with a full stop."
+                }
+            ]
+        })
+    ],
+    {
+        componentPath: "wmcads/components/in-text-step/",
+        njk: true,
+        njkProps: wmndsInTextStepProps,
+        js: false,
+        iframe: false
+    })
+}}
 
   {# End label #}
 

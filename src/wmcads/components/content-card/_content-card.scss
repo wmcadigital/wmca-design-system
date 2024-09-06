@@ -27,6 +27,10 @@
     @include accessibility-hover;
   }
 
+  .ds-buttons {
+    margin-top: $size-md;
+  }
+
   // Modifiers
   &--blue {
     display: block;
@@ -97,6 +101,14 @@
     color: get-color(primary);
     fill: get-color(primary);
     font-size: 5rem;
+  }
+
+  .ds__icon {
+    width: 5rem;
+    height: 5rem;
+    color: get-color(primary);
+    fill: get-color(primary);
+    text-align: left;
   }
 
   .ds-btn {

@@ -6,7 +6,7 @@
 {# Imports #} 
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
 {% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
-{% from "wmcads/components/hub-header/_hub-header.njk" import wmcadsHubHeader %}
+{% from "wmcads/patterns/hub-page-banner/_hub-page-banner.njk" import wmcadsHubPageBanner %}
 {% from "wmcads/patterns/search/pagination/_pagination.njk" import wmcadsPagination %}
 {% from "wmcads/components/images/_image-with-summary.njk" import wmcadsImageWithSummary %}
 {# Set array of tiles #} 
@@ -14,10 +14,10 @@
 
 <div>
 {{
-wmcadsHubHeader({
-      image: false,
-      title: "Local Transport Plan Green Paper"
-    })
+  wmcadsHubPageBanner({
+    title: "Local Transport Plan Green Paper",
+    image: "/img/examples/curzon-street.png"
+  })
 }}
   <div class="ds-container ds-m-t-xl">
     <div class="ds-grid ds-grid--justify-between ds-grid--spacing-2-lg ds-grid--spacing-md-2-lg">

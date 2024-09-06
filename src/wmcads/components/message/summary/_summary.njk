@@ -40,12 +40,17 @@
       }) | trim
     -}}
     {%- endif %}
+    {%- if params.title %}
     <h3 class="ds-msg-summary__title">{{ params.title }}</h3>
+    {%- endif %}
     {%- if params.subtitle %}
     <h3>{{ params.subtitle }}</h3>
     {% endif %}
   </div>
   <div class="ds-msg-summary__info">
+   {%- if params.title %}
+    <span></span>
+    {%- endif %}
     {{ params.message | safe }}
   </div>
 </div>

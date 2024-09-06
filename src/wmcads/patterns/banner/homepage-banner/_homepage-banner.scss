@@ -51,6 +51,18 @@
     background: get-color(primary);
     align-self: center;
 
+    a {
+      color: $white;
+
+      &:visited {
+        color: $white;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     &-pattern-one {
       margin-top: $size-md;
       align-self: flex-start;
@@ -97,11 +109,21 @@
     }
 
     .ds-btn--primary {
-      color: get-color(primary);
+      color: get-color(primary) !important;
       background: $white;
 
       svg {
         fill: get-color(primary);
+      }
+
+      &:hover {
+        border: 1px solid $white;
+        color: $white !important;
+        background: get-color(primary);
+
+        svg {
+          fill: $white;
+        }
       }
     }
 
@@ -111,6 +133,15 @@
 
       svg {
         fill: $white;
+      }
+
+      &:hover {
+        color: $black;
+        background: get-color(secondary);
+
+        svg {
+          fill: $black;
+        }
       }
     }
   }
