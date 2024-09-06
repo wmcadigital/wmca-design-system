@@ -826,4 +826,8 @@ $header-height-mobile: 4rem;
   padding: $size-sm;
   background-color: get-color(secondary);
   text-align: center;
+
+  a {
+    color: get-color(text) !important;
+  }
 }

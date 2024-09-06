@@ -16,6 +16,11 @@
 
   p {
     margin-bottom: $size-sm;
+
+    // remove bottom margin from last pargraph
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
 }

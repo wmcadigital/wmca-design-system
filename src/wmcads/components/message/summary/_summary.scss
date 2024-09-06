@@ -8,10 +8,16 @@ $ds-msg-close-btn-width: 5rem;
   position: relative;
   padding: $size-sm;
   border: 1px solid get-color(information);
-  background: $white;
+
+  // modify display if h3 does not exist
+  &:not(:has(h3)) {
+    display: flex;
+  }
 
   &__header {
     display: block;
+    height: 100%;
+    color: inherit;
   }
 
   &__icon {
@@ -23,7 +29,7 @@ $ds-msg-close-btn-width: 5rem;
 
   &__title {
     width: calc(100% - (35px + #{$size-sm}));
-    margin: 0.35rem 0;
+    margin: 0.35rem 0 !important;
 
     @media all and (max-width: $breakpoint-md - 1) {
       width: 100%;
@@ -34,14 +40,24 @@ $ds-msg-close-btn-width: 5rem;
   &__icon,
   &__title {
     display: inline-block;
+    color: inherit;
     vertical-align: middle;
   }
 
   &__info {
     display: block;
-    @media all and (min-width: $breakpoint-md) {
-      padding-left: calc(#{$ds-msg-icon-size} + #{$ds-msg-icon-margin-right});
+    color: inherit;
+
+    p {
+      margin: 0;
     }
+
+    &:has(span) {
+      @media all and (min-width: $breakpoint-md) {
+        padding-left: calc(#{$ds-msg-icon-size} + #{$ds-msg-icon-margin-right});
+      }
+    }
+
   }
 
   &__close {

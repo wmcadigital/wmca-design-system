@@ -5,8 +5,8 @@
   background-color: get-color(primary, 50%, dark);
   box-shadow: 0 100vh 0 100vh get-color(primary, 50%, dark);
 
-  * {
-    color: inherit;
+  a {
+    color: $white !important;
   }
 
   &__link.ds-link {
@@ -197,6 +197,13 @@
       }
     }
   }
+
+  &__partners {
+    img {
+      max-height: 5rem;
+      fill: $white;
+    }
+  }
 }
 
 // collapsible panel styles (kept separate as maybe could be moved to its own reusable component?)
@@ -219,7 +226,7 @@ $collapse-indicator-transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355,
       margin-left: $size-xs;
       transform: rotate(90deg);
       transition: $collapse-indicator-transition;
-      fill: currentColor;
+      fill: $white;
     }
 
     &[aria-expanded="true"] {
