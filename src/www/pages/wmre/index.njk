@@ -1,0 +1,88 @@
+{% extends "www/_layouts/layout-homepage.njk" %}
+{% set pageTitle = "West Midlands Rail Executive Design System" %}
+{% set section = 'Home' %}
+{% set ds = 'wmre' %}
+{# Imports #}
+{% from "wmcads/patterns/branded-banner/_branded-banner.njk" import wmcadsBrandedBanner %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{%- from "wmcads/components/link/link/_link.njk" import wmcadsLink -%}
+{% from "wmcads/components/warning-text/_warning-text.njk" import wmcadsWarningText %}
+
+{% block summaryContent %}
+
+  {{
+    wmcadsBrandedBanner({
+      title: 'Design and build digital services for West Midlands Rail Executive',
+      contentCol1: "<p class=\"emphasised\">Use this design system to build consistent, usable services. Learn from the research and experience of other teams.</p><br><p>You can use GitHub to <a href=\"https://github.com/wmcadigital/wmca-design-system/blob/master/doc/contributing.md\" title=\"View and contribute code to the Design System on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ds-link ds-website-summary-content__link\">view and contribute code</a>, <a href=\"https://github.com/wmcadigital/wmca-design-system/issues/new?labels=feature_request&template=feature_proposal.md&title=\" title=\"Give feedback or propose an idea about the Design System on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ds-link ds-website-summary-content__link\">give feedback or propose an idea</a>, or <a href=\"https://github.com/wmcadigital/wmca-design-system/issues/new?assignees=&labels=&template=report_bug.md&title=\" title=\"Report an issue with the Design System on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ds-link ds-website-summary-content__link\">report an issue</a>.</p>",
+      contentCol2: wmcadsContentCard({
+            contentHTML: "<div class=\"ds-p-sm\"><h2>Current release</h2><p>The current release is <a href=\"https://github.com/wmcadigital/wmca-design-system/releases/tag/v$*version\" title=\"View release notes for version $*version on GitHub\" target=\"_blank\" rel=\"noopener noreferrer\">version $*version</a> which was released on $*releaseDate.</p><p>You can get alerts about new releases by <a href=\"https://docs.github.com/en/free-pro-team@latest/github/managing-subscriptions-and-notifications-on-github/viewing-your-subscriptions\" target=\"_blank\" rel=\"noopener noreferrer\">watching the design system on GitHub</a>.</p></div>"
+          }),
+      ctaButton: {
+        contentText: 'Get started',
+        link: '/docs/get-started/',
+        linkTitle: 'Get started with the West Midlands Rail Executive Design System'
+      }
+    })
+  }}
+{% endblock summaryContent %}
+
+{% block content %}
+
+{# Internal navigation #}
+<div class="ds-css-grid-4-col">
+  {# Styles #}
+    {{
+      wmcadsContentCard({
+        link: '/wmre/styles/',
+        linkTitle: "Styles",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Styles</h2>
+          <p>Make your service look and feel like WMCA: colours, icons, typography and utility classes</p>
+        </div>"
+      })
+    }}
+  {# Components #}
+    {{
+      wmcadsContentCard({
+        link: '/wmre/components/',
+        linkTitle: "Components",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Components</h2>
+          <p>Reusable parts of the user interface: content, map and form elements; buttons and messages</p>
+        </div>"
+      })
+    }}
+  {# Patterns #}
+    {{
+      wmcadsContentCard({
+        link: '/wmre/patterns/',
+        linkTitle: "Patterns",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Patterns</h2>
+          <p>Commonly used sets of components</p>
+        </div>"
+      })
+    }}
+  {# Templates #}
+          {{
+      wmcadsContentCard({
+        link: '/wmre/templates/',
+        linkTitle: "Templates",
+        contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Templates</h2>
+          <p>Example template layouts</p>
+        </div>"
+      })
+    }}
+</div>
+
+<br>
+
+{# Get help #}
+<!-- <div class="ds-col-1 ds-col-md-3-4">
+  <h2>Get help with using the design system</h2>
+  <p>The design system is maintained by the Digital and Data team at Change Into Action.</p>
+  <p>You can ask a question using this form.</p>
+</div> -->
+
+{% endblock %}

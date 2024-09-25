@@ -1,0 +1,32 @@
+.ds-area-template {
+  main {
+    margin: 0;
+  }
+
+  .ds-container--main {
+    flex-grow: initial;
+  }
+
+  .ds-area {
+    &-img {
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      &-img {
+        height: 200px;
+      }
+
+      .ds-p-xl {
+        padding: $size-sm !important;
+      }
+    }
+
+    h2 {
+      @include type-setting(1);
+      color: inherit;
+    }
+  }
+}

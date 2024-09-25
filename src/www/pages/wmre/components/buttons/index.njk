@@ -1,0 +1,13 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Buttons" %}
+{% set ds = 'wmre' %}
+
+{% block content %}
+
+{% from "www/pages/shared/components/buttons/index.njk" import dsButtonsContent %}
+
+{{
+  dsButtonsContent({})
+}}
+
+{% endblock %}

@@ -31,6 +31,11 @@
     {% set class = 'ds-header__logo-link-full' %}
 {% endif %}
 
+{% if (ds== "wmre") %}
+    {% set name =  "West Midlands Rail Executive" %}
+    {% set logoSrc =  "/img/logo/wmre-logo.svg" %}
+{% endif %}
+
 {% set navigationAriaLabel = params.exampleAria + " example navigation" if params.exampleAria else "Navigation" %}
 {# Imports #}
 {% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
@@ -246,7 +251,7 @@
           }}
         {% endif %}
 
-        {% if (params.breadcrumbs.pageTitle != 'Homepage Template') and (params.breadcrumbs.pageTitle != 'West Midlands Combined Authority Design System') and (params.breadcrumbs.pageTitle != 'Transport for West Midlands Design System') and (params.breadcrumbs.pageTitle != 'Safer Travel Design System') and (params.breadcrumbs.pageTitle != 'Midlands Connect Design System') and (params.breadcrumbs.pageTitle != 'Change Into Action Design System') %}
+        {% if (params.breadcrumbs.pageTitle != 'Homepage Template') and (params.breadcrumbs.pageTitle != 'West Midlands Combined Authority Design System') and (params.breadcrumbs.pageTitle != 'Transport for West Midlands Design System') and (params.breadcrumbs.pageTitle != 'Safer Travel Design System') and (params.breadcrumbs.pageTitle != 'Midlands Connect Design System') and (params.breadcrumbs.pageTitle != 'Change Into Action Design System') and (params.breadcrumbs.pageTitle != 'West Midlands Rail Executive Design System') %}
         {% set breadcrumbList = null if params.breadcrumbs.section === params.breadcrumbs.pageTitle else {
               contentText: params.breadcrumbs.pageTitle
             } %}

@@ -1,0 +1,106 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Search" %}
+{% set section = "Templates" %}
+{% set ds = 'wmre' %}
+
+{# Imports #} 
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
+{% from "wmcads/patterns/search/search-bar/_search-bar.njk" import wmcadsSearchbar %}
+{% from "wmcads/patterns/search/search-filter/_search-filter.njk" import wmcadsSearchFilter %}
+{% from "wmcads/patterns/search/sort/_sort.njk" import wmcadsSearchSort %}
+{% from "wmcads/patterns/search/pagination/_pagination.njk" import wmcadsPagination %}
+{% from "wmcads/components/breadcrumb/_breadcrumb.njk" import wmcadsBreadcrumb %}
+{% from "wmcads/patterns/search/search-result/_search-result.njk" import wmcadsSearchResult %}
+
+{# Set array of tiles #} 
+{% block content %}
+
+<div class="template-search">
+  <div class="ds-container ds-m-b-lg">
+    <h1 id="ds-main-content" class="ds-hide-mobile">Search results</h1>
+    <div class="ds-col-1 ds-col-md-2-3 ds-p-r-xl">
+     {{wmcadsSearchbar()}}
+    </div>
+  </div>
+  <div class="ds-container">
+    <div class="ds-grid">
+      <div class="main ds-col-1 ds-col-md-2-3 ds-m-b-xl ds-p-r-lg">
+        <p>Found <strong>20</strong> matching results</p>
+        {{wmcadsSearchResult(
+          {
+            pageTitle: "HS2 Ltd",
+            breadcrumbs: true,
+            date: "Thursday 23 August 2018",
+            excerpt: "High Speed Two (HS2) is the new railway that will be the backbone of Britain’s <strong>transport</strong> network. High Speed Two Limited (HS2 Ltd) is the company developing..."
+          }
+        )}}
+        {{wmcadsSearchResult(
+          {
+            pageTitle: "Connectivity",
+            breadcrumbs: true,
+            date: "Thursday 23 August 2018",
+            excerpt: "HS2 will place the West Midlands at the heart of the UK’s <strong>transport</strong> network, with two new stations in the region, the interchange at Solihull and the new Curzon Street..."
+          }
+        )}}
+        {{wmcadsSearchResult(
+          {
+            pageTitle: "New transport system will be sprinting for success at Commonwealth Games",
+            breadcrumbs: true,
+            date: "Thursday 23 August 2018",
+            excerpt: "Top athletes are not the only ones aiming to be in peak condition for the 2022 Commonwealth Games in Birmingham – the region’s <strong>transport</strong> system is also..."
+          }
+        )}}
+        {{wmcadsSearchResult(
+          {
+            pageTitle: "Our Vision",
+            breadcrumbs: true,
+            date: "Thursday 23 August 2018",
+            excerpt: "High Speed 2 (HS2) will have a truly transformational impact on the West Midlands. As well as the economic benefits of investment in high speed rail infrastructure..."
+          }
+        )}}
+        {{wmcadsSearchResult(
+          {
+            pageTitle: "Network Resilience",
+            breadcrumbs: true,
+            date: "Thursday 23 August 2018",
+            excerpt: "We are experiencing an unprecedented level of investment in bringing much needed improvements to the way that people and goods are able to move around the West..."
+          }
+        )}}
+
+        {{wmcadsPagination({
+          pageCount: 8,
+          activePage: 1
+        })}}
+      </div>
+      <aside class="ds-col-1 ds-col-md-1-3 ds-m-b-lg">
+      <hr class="ds-hide-desktop">
+       {{wmcadsSearchSort()}}
+       {{wmcadsSearchFilter(
+        {
+          accordion: [{
+            summaryTitle: "Topic",
+              options: [
+                "Tickets", "Transport", "Housing and Land", "Economy and Innovation", "Public Service Reform", "Digital and Culture", "Wellbeing", "Environment"
+              ]
+            },
+            {
+              summaryTitle: "Page type",
+              options: [
+                "News articles", "Other/Everything else", "Campaigns", "People’s stories", "Projects/programmes"
+              ]
+            },
+            {
+              summaryTitle: "Date",
+              options: [
+                "Added in the last week", "Added in the last month", "Added in the last year"
+              ]
+            }
+          ]})
+        }}
+      </aside>
+    </div>
+  </div>
+</div>
+{% endblock %}
