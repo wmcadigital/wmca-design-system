@@ -1,0 +1,26 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Page contents" %}
+{% set ds = 'rar' %}
+{% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+<h2>Page contents</h2>
+{{
+  compExample([
+    wmcadsPageContents({
+      example: true
+    })
+  ])  
+}}
+
+<h2>Page contents with sections</h2>
+{{
+  compExample([
+    wmcadsPageContents({
+      example: false,
+      sections: true
+    })
+  ])  
+}}
+{% endblock %} 

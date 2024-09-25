@@ -88,6 +88,19 @@
       } %}
 {% endif %}
 
+{% if (ds== "rar") %}
+    {% set nav = templateNavItemsRar %}
+    {% set footerCol = 2 %}
+    {% set footerMenu1 = {
+        name: "Partners",
+        menuItems: []
+      } %}
+      {% set footerMenu2 = {
+        name: "Change your area",
+        menuItems: []
+      } %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en-gb" class="ds-html">
   <!-- Head -->
