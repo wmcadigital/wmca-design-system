@@ -53,10 +53,15 @@
   <div class="ds-footer{{appClass}} ds-footer--v2">
     <div class="ds-container ds-grid">
       {% if(params.columns == 3) %}
-      <section class="ds-col-1 {{columns}} ds-footer__updates-col">  
+      <section class="ds-col-1 {{columns}} ds-footer__updates-col">
+      {% if(ds == "wmre") %}
+        <span class="ds-h3">Driving a revolution in rail services for West Midlanders</span>
+      {% endif %}
+      {% if(ds != "wmre") %}
         <h2 class="ds-footer__heading ds-h3">Stay up to date</h2>
         <p>Don’t miss out on vital information, subscribe today and be in the know at all times.</p>
         <a href="#" class="ds-btn ds-footer__btn ds-footer__btn--block">Sign up to updates</a>
+      {% endif %}
       </section>
       {% endif %}
       {# loop through footer menus and get items #}

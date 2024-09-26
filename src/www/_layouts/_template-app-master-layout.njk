@@ -75,19 +75,6 @@
       } %}
 {% endif %}
 
-{% if (ds== "wmre") %}
-    {% set nav = templateNavItemsWmre %}
-    {% set footerCol = 2 %}
-    {% set footerMenu1 = {
-        name: "Partners",
-        menuItems: []
-      } %}
-      {% set footerMenu2 = {
-        name: "Change your area",
-        menuItems: []
-      } %}
-{% endif %}
-
 {% if (ds== "rar") %}
     {% set nav = templateNavItemsRar %}
     {% set footerCol = 2 %}
@@ -101,6 +88,31 @@
       } %}
 {% endif %}
 
+{% if (ds == "wmre") %}
+    {% set nav = templateNavItemsWmre %}
+    {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "About us",
+        menuItems: [{
+          name: "Contact us"
+        },{
+          name: "Freedom of information"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Contact us"
+        }, {
+          name: "Media assets"
+        }, {
+          name: "Careers"
+        }, {
+          name: "Documents"
+        }]
+      } %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en-gb" class="ds-html">
   <!-- Head -->
@@ -108,14 +120,6 @@
   <!-- end: Head -->
 
   <body class="ds-body {% if(pageTitle == "Area Selection") %} ds-area-template {% endif %}">
-    <!--[if IE]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and
-        security.
-      </p>
-    <![endif]-->
-
     {# header #}
     {% from "wmcads/patterns/header-v2/_header-v2.njk" import wmcadsHeaderV2 %}
     {{
