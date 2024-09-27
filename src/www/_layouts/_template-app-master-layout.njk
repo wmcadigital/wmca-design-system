@@ -113,6 +113,31 @@
       } %}
 {% endif %}
 
+{% if (ds == "rar") %}
+    {% set nav = templateNavItemsRar %}
+    {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "About us",
+        menuItems: [{
+          name: "Contact us"
+        },{
+          name: "Freedom of information"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Contact us"
+        }, {
+          name: "Media assets"
+        }, {
+          name: "Careers"
+        }, {
+          name: "Documents"
+        }]
+      } %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en-gb" class="ds-html">
   <!-- Head -->

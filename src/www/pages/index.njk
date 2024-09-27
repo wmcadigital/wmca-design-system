@@ -8,7 +8,7 @@
 {% from "wmcads/components/warning-text/_warning-text.njk" import wmcadsWarningText %}
 
 {% block content %}
-
+<main class="ds-container--main">
 <div class="ds-grid ds-grid--align-center ds-grid--spacing-lg-2-xl">
   {# Overview #}
   <div class="ds-col-1 ds-col-lg-2-3 ds-m-b-lg">
@@ -69,5 +69,16 @@
     })
   }}
 </div>
+</main>
+ <!-- footer -->
+    {% from "wmcads/patterns/footer/_footer.njk" import wmcadsFooter %}
+    {{
+      wmcadsFooter({
+      columns: footerCol,
+      social: true,
+      ds: ds
+    })
+    }}
+    <!-- footer -->
 
 {% endblock %}

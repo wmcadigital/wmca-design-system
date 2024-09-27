@@ -145,9 +145,6 @@
 					"name": "Content"
 				},
 				{
-					"name": "Area Selection"
-				},
-				{
 					"name": "Search"
 				},
 				{
@@ -161,16 +158,16 @@
 	],
 	"templateNavItemsRar": [
 		{
-			"name": "About"
+			"name": "About the service"
 		},
 		{
-			"name": "Donate"
+			"name": "Register"
 		},
 		{
-			"name": "Locate"
+			"name": "Book a journey"
 		},
 		{
-			"name": "Making the Change"
+			"name": "Contact us"
 		}
 	],
 	"colorsRar": {

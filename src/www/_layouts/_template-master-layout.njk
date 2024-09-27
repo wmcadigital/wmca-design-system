@@ -88,7 +88,22 @@
       } %}
       {% set footerMenu2 = {
         name: "",
-        menuItems: []
+        menuItems: ""
+      } %}
+{% endif %}
+
+{% if (ds == "rar") %}
+    {% set nav = templateNavItemsRar %}
+    {% set footerCol = 1 %}
+     {% set footerMenu1 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Register"
+        },{
+          name: "Book a journey"
+        },{
+          name: "Contact us"
+        }]
       } %}
 {% endif %}
 

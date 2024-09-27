@@ -5,10 +5,6 @@
   background-color: get-color(primary, 50%, dark);
   box-shadow: 0 100vh 0 100vh get-color(primary, 50%, dark);
 
-  a {
-    color: $white !important;
-  }
-
   &__link.ds-link {
     color: $white;
 
@@ -35,19 +31,13 @@
   &--v2 {
     padding: $size-lg $size-xs;
 
-    .ds-btn {
-      width: 100%;
-      color: get-color(primary);
-      background-color: $white;
-    }
-
     .ds-footer__link {
-      color: currentColor;
+      color: $white;
       font-weight: normal;
       text-decoration: none;
 
       &:hover {
-        color: currentColor;
+        color: $white;
         text-decoration: underline;
       }
     }

@@ -51,7 +51,7 @@
   <!-- End feedback loop -->
   {% endif -%}
   <div class="ds-footer{{appClass}} ds-footer--v2">
-    <div class="ds-container ds-grid">
+    <div class="ds-container">
       {% if(params.columns == 3) %}
       <section class="ds-col-1 {{columns}} ds-footer__updates-col">
       {% if(ds == "wmre") %}
@@ -60,7 +60,7 @@
       {% if(ds != "wmre") %}
         <h2 class="ds-footer__heading ds-h3">Stay up to date</h2>
         <p>Don’t miss out on vital information, subscribe today and be in the know at all times.</p>
-        <a href="#" class="ds-btn ds-footer__btn ds-footer__btn--block">Sign up to updates</a>
+        <a href="#" class="ds-btn ds-btn__center ds-btn--dark-bg ds-btn--dark-bg ds-col-1 ds-m-t-sm">Sign up to updates</a>
       {% endif %}
       </section>
       {% endif %}
@@ -78,21 +78,26 @@
           </div>
           <p>Donations are received and held by <a href="">BVSC</a>.</p>
           {% endif %}
+          <ul class="ds-bare-list">
           {% for menuItem in params.menu1.menuItems-%}
             <li><a class="ds-footer__link" href="#">{{menuItem.name}}</a></li>
           {% endfor -%}
+          </ul>
         </section>
       {% endif %}
       {% if(params.menu2) %}
       {% set menu2Name = params.menu2.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
         <section class="ds-col-1 {{columns}}">
+          {% if(params.menu2.name != "") %}
           <h2 class="ds-footer__heading ds-collapse-heading ds-h3" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
             {{params.menu2.name}}
             <button class="ds-footer__collapse-button">
               {{wmcadsIcon({class: 'ds-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
             </button>
           </h2>
-          <ul class="ds-footer__menu ds-collapse-panel" id="footer-menu-{{menu2Name}}">
+          {% endif %}
+          {% if(params.menu2.menuItems != "") %}
+          <ul class="ds-footer__menu ds-collapse-panel ds-bare-list" id="footer-menu-{{menu2Name}}">
           {% if(ds == "cia") %}
           {{
             wmcadsDropdown()
@@ -102,6 +107,7 @@
             <li><a class="ds-footer__link" href="#">{{menuItem.name}}</a></li>
           {% endfor -%}
           </ul>
+          {% endif %}
           <h3 class="ds-footer__heading">Social media</h3>
           <ul class="ds-footer__social-media">
             <li><a href="https://www.facebook.com/westmidlandsnetwork/" title="Facebook">{{wmcadsIcon({icon: 'social-facebook'}) | trim}}</a></li>

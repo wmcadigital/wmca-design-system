@@ -145,9 +145,6 @@
 					"name": "Content"
 				},
 				{
-					"name": "Area Selection"
-				},
-				{
 					"name": "Search"
 				},
 				{
@@ -161,16 +158,19 @@
 	],
 	"templateNavItemsWmre": [
 		{
-			"name": "About"
+			"name": "About us"
 		},
 		{
-			"name": "Donate"
+			"name": "Partnerships"
 		},
 		{
-			"name": "Locate"
+			"name": "Community rail"
 		},
 		{
-			"name": "Making the Change"
+			"name": "News"
+		},
+		{
+			"name": "Contact us"
 		}
 	],
 	"colorsWmre": {
