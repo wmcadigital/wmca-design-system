@@ -5,6 +5,15 @@
   background-color: get-color(primary, 50%, dark);
   box-shadow: 0 100vh 0 100vh get-color(primary, 50%, dark);
 
+  a {
+    color: $white !important;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__link.ds-link {
     color: $white;
 
@@ -14,6 +23,7 @@
   }
 
   button {
+    margin: 0;
     border: 0;
     background: none;
   }
@@ -63,6 +73,7 @@
     padding-bottom: $size-md;
     border-bottom: 1px solid get-color(secondary, 70%);
     color: $white;
+    text-align: left;
 
     @media screen and (max-width: $breakpoint-md - 1) {
       margin-bottom: $size-md;
@@ -75,9 +86,9 @@
       }
     }
 
-    @media screen and (min-width: $breakpoint-md) {
-      padding-bottom: $size-md;
-    }
+    // @media screen and (min-width: $breakpoint-md) {
+    //   padding-bottom: $size-md;
+    // }
   }
 
   //

@@ -1,6 +1,6 @@
 {% macro wmcadsFooter(params) %}
 {% set appClass = " ds-footer--mobile-app" if params.app else "" %}
-{% set columns = " ds-col-lg-1-2" if params.columns == 2 else " ds-col-lg-1-3" %}
+{% set columns = " ds-col-lg-1-2" if params.columns == 2 else " ds-col-lg-1-3 ds-col-md-1-2" %}
 {% set ds = params.ds %}
 {# Imports #}
 {% from "wmcads/patterns/feedback-loop/_feedback-loop.njk" import wmcadsFeedbackLoop %}
@@ -68,17 +68,32 @@
       {% if(params.menu1) %}
       {% set menu1Name = params.menu1.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
         <section class="ds-col-1 {{columns}}">
-          <h2 class="ds-footer__heading ds-h3">
-            {{params.menu1.name}}
-          </h2>
-          {% if(ds == "cia") %}
-          <div class="ds-footer__partners ds-m-b-md">
-            <img class="ds-m-b-md" src="/img/logo/wmca-mayor-logos.svg" />
-            <img class="ds-m-b-md" src="/img/logo/ccc-logo.svg" />
-          </div>
-          <p>Donations are received and held by <a href="">BVSC</a>.</p>
+
+          {% if(params.menu1.menuItems == "") %}
+            <h2 class="ds-footer__heading ds-h3">{{params.menu1.name}}</h2>
           {% endif %}
-          <ul class="ds-bare-list">
+        
+          {% if(params.menu1.menuItems != "") %}
+            <h2 class="ds-hide-mobile ds-footer__heading ds-h3">{{params.menu1.name}}</h2>
+            <h2 class="ds-hide-desktop">
+            <button class="ds-col-1 ds-footer__heading ds-collapse-heading ds-h3" aria-controls="footer-menu-{{menu1Name}}" aria-expanded="true">
+              {{params.menu1.name}}
+              <span class="ds-footer__collapse-button">
+                {{wmcadsIcon({class: 'ds-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
+              </span>
+            </button>
+          </h2>
+          {% endif %}
+        
+          {% if(ds == "cia") %}
+            <div class="ds-footer__partners ds-m-b-md">
+              <img class="ds-m-b-md" src="/img/logo/wmca-mayor-logos.svg" />
+              <img class="ds-m-b-md" src="/img/logo/ccc-logo.svg" />
+            </div>
+            <p class="ds-m-b-lg">Donations are received and held by <a href="">BVSC</a>.</p>
+          {% endif %}
+        
+          <ul class="ds-footer__menu ds-collapse-panel ds-bare-list" id="footer-menu-{{menu1Name}}">
           {% for menuItem in params.menu1.menuItems-%}
             <li><a class="ds-footer__link" href="#">{{menuItem.name}}</a></li>
           {% endfor -%}
@@ -89,25 +104,41 @@
       {% set menu2Name = params.menu2.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
         <section class="ds-col-1 {{columns}}">
           {% if(params.menu2.name != "") %}
-          <h2 class="ds-footer__heading ds-collapse-heading ds-h3" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
-            {{params.menu2.name}}
-            <button class="ds-footer__collapse-button">
-              {{wmcadsIcon({class: 'ds-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
-            </button>
-          </h2>
+          
+          {% if(params.menu2.menuItems == "") %}
+            <h2 class="ds-footer__heading ds-h3">{{params.menu2.name}}</h2>
           {% endif %}
+          
           {% if(params.menu2.menuItems != "") %}
-          <ul class="ds-footer__menu ds-collapse-panel ds-bare-list" id="footer-menu-{{menu2Name}}">
+            <h2 class="ds-hide-mobile ds-footer__heading ds-h3">{{params.menu2.name}}</h2>
+            <h2 class="ds-hide-desktop">
+              <button class="ds-col-1 ds-footer__heading ds-collapse-heading ds-h3" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
+                {{params.menu2.name}}
+                <span class="ds-footer__collapse-button">
+                  {{wmcadsIcon({class: 'ds-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
+                </span>
+              </button>
+            </h2>
+          {% endif %}
+          
+          {% endif %}
+          
           {% if(ds == "cia") %}
-          {{
-            wmcadsDropdown()
-          }}
+            {{
+              wmcadsDropdown()
+            }}
           {% endif %}
-          {% for menuItem in params.menu2.menuItems-%}
-            <li><a class="ds-footer__link" href="#">{{menuItem.name}}</a></li>
-          {% endfor -%}
-          </ul>
+          
+          {% if(params.menu2.menuItems != "") %}
+          <div class="ds-collapse-panel" id="footer-menu-{{menu2Name}}">
+              <ul class="ds-footer__menu ds-bare-list">
+                {% for menuItem in params.menu2.menuItems-%}
+                <li><a class="ds-footer__link" href="#">{{menuItem.name}}</a></li>
+                {% endfor -%}
+              </ul>
+          </div>
           {% endif %}
+          
           <h3 class="ds-footer__heading">Social media</h3>
           <ul class="ds-footer__social-media">
             <li><a href="https://www.facebook.com/westmidlandsnetwork/" title="Facebook">{{wmcadsIcon({icon: 'social-facebook'}) | trim}}</a></li>
