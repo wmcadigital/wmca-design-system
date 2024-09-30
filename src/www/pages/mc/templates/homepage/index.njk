@@ -1,0 +1,93 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %}
+{% set pageTitle="Homepage Template" %}
+{% set section = "Templates" %}
+{% set section="Templates" %}
+{% set ds = 'mc' %}
+
+{# Imports #} 
+{% from "wmcads/components/page-header/_page-header.njk" import wmcadsPageHeader %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{# Set array of tiles #} 
+{% block content %} 
+
+
+{{
+    wmcadsPageHeader({
+      title: true,
+      text: "Transport. Investment. Growth.",
+      home: true,
+      subtitle: "A transformational transport strategy with economic, social and environmental benefits"
+    })
+}}
+<main class="ds-container ds-m-t-lg homepage">
+
+  <h2>Who we are</h2>
+  <p>We research, develop and progress transport projects that will provide the biggest possible social, economic and environmental benefits for the Midlands region, and the rest of the UK. Backed by evidence, expertise and our Partnership, we can get a better transport deal for the Midlands Engine.</p>
+  <p>
+    <a href="#">Learn more about us</a>
+  </p>
+
+  <div class="ds-video-embed">
+    <iframe src="https://player.vimeo.com/video/510329103?autoplay=1&amp;muted=1" frameborder="0" allowfullscreen="" title="Video highlighting who Midlands Connect are"></iframe>
+  </div>
+
+<h2>Our projects</h2>
+<div class="ds-css-grid-3-col ds-m-b-lg">
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Mayors Mentors',
+      eventCopy: 'Find out about the Mayor’s Mentors scheme and how it can help you grow.',
+      link: "#",
+      isEvent: true
+    })
+    }}
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Greater Birmingham LEP Skills Day',
+      eventCopy: 'Hear from employers and training providers on upskilling opportunities available.',
+      link: "#",
+      isEvent: true
+    })
+    }}
+    {{
+    wmcadsContentCard({
+      eventTitle: 'Sprint exhibition - Walsall',
+      eventCopy: 'Learn and ask questions about the upcoming Sprint works in the region.',
+      link: "#",
+      isEvent: true
+    })
+    }}
+</div>
+
+<h2>Latest News</h2>
+<div class="ds-css-grid-3-col">
+        {{
+            wmcadsContentCard({classes: "ds-content-card--news",
+                contentHTML: ' <img src=\"/img/examples/curzon-street.png\" alt=\"Image alt text\">
+                                <p>14 March 2024</p>
+                                <h3><a href=\"/#\">News article title</a></h3>'
+            })
+        }}
+        {{
+            wmcadsContentCard({classes: "ds-content-card--news",
+                contentHTML: ' <img src=\"/img/examples/curzon-street.png\" alt=\"Image alt text\">
+                                <p>14 March 2024</p>
+                                <h3><a href=\"/#\">News article title</a></h3>'
+            })
+        }}
+        {{
+            wmcadsContentCard({classes: "ds-content-card--news",
+                contentHTML: ' <img src=\"/img/examples/curzon-street.png\" alt=\"Image alt text\">
+                                <p>14 March 2024</p>
+                                <h3><a href=\"/#\">News article title</a></h3>'
+            })
+        }}
+</div>
+<a href="#" class="ds-link ds-m-t-lg ds-m-b-sm see-more">See all news</a>
+
+</main>
+
+{% endblock %}

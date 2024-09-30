@@ -137,9 +137,35 @@
 					"name": "Search"
 				}
 			]
+		},
+		{
+			"name": "Templates",
+			"subnavItems": [
+				{
+					"name": "Boilerplate"
+				},
+				{
+					"name": "Homepage"
+				},
+				{
+					"name": "Content One Column"
+				},
+				{
+					"name": "Content Two Columns"
+				},
+				{
+					"name": "Search"
+				},
+				{
+					"name": "Newsroom"
+				},
+				{
+					"name": "News article"
+				}
+			]
 		}
 	],
-	"templateNavItems": [
+	"templateNavItemsMc": [
 		{
 			"name": "The Mayor"
 		},

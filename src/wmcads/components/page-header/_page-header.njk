@@ -3,8 +3,9 @@
 {% set text = params.text if params.text else "Page header" %}
 {% set iconName = params.icon if params.icon else "" %}
 {% set ciaClass = params.icon if params.icon else "" %}
+{% set subtitle = params.subtitle if params.subtitle else "" %}
 
-<div class="ds-page-header {% if(params.home) %} ds-page-header__home {% endif %} {% if(params.topm) %} ds-m-t-md {% endif %} {% if(params.large) %} ds-page-header__large {% endif %}" style="background-image:url('https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png')">
+<div class="ds-page-header {% if(params.home) %} ds-page-header__home {% endif %} {% if(params.large) %} ds-page-header__large {% endif %}" style="background-image:url('https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png')">
   {% if(params.title) %}
   <div class="ds-container ds-page-header-container">
         <div class="ds-page-header-box ds-page-header-box__cia">
@@ -16,7 +17,9 @@
         }}
       {% endif %}
          <h1>{{text}}</h1>
-         <p>This is a <a href="#">subtitle</a></p>
+         {% if(params.title) %}
+            <p>{{subtitle}}</p>
+         {% endif %}
     </div>
   </div>
   {% endif %}

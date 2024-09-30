@@ -5,7 +5,7 @@
   background-color: get-color(primary, 50%, dark);
   box-shadow: 0 100vh 0 100vh get-color(primary, 50%, dark);
 
-  a {
+  a:not(.ds-btn) {
     color: $white !important;
     text-decoration: none;
 

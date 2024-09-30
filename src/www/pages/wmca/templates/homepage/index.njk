@@ -15,14 +15,15 @@
 {{
     wmcadsPageHeader({
       title: true,
-      text: "Building a healthier, happier, better connected and more prosperous West Midlands",
+      text: "Building a better connected, more prosperous, fairer, greener and healthier West Midlands",
       home: true,
       topm: true
     })
 }}
 {% endblock summaryContent %}
 
-{% block content %} 
+{% block content %}
+<main class="ds-container--main {% if(params.tempCampaign) %} ds-m-r-lg {% endif %}">
 <div class="ds-container ds-m-t-lg homepage">
 <div class="ds-grid">
   <div class="ds-col-md-1-2 ds-p-r-lg">
@@ -39,7 +40,7 @@
 <div class="ds-grid what-we-do">
     <div class="ds-col-1-2 ds-col-sm-1-3 ds-col-md-1-6">      
         <svg>
-            <use href="#ds- portfolio-culture-and-digital"></use>
+            <use href="#ds-portfolio-culture-and-digital"></use>
         </svg>
         <a href="">Culture and Digital</a>
     </div>
@@ -91,7 +92,6 @@
 <div class="ds-css-grid-4-col">
         {{
             wmcadsContentCard({
-                src: true,
                 title: 'WMCA donates computers to school children to tackle digital divide',
                 copy: '150 old staff laptops will be donated to Wowdot',
                 isNews: true,
@@ -100,7 +100,6 @@
         }}
         {{
             wmcadsContentCard({
-                src: true,
                 title: 'WMCA donates computers to school children to tackle digital divide',
                 copy: '150 old staff laptops will be donated to Wowdot',
                 isNews: true,
@@ -109,7 +108,6 @@
         }}
         {{
             wmcadsContentCard({
-                src: true,
                 title: 'Historic devolution agreement reached',
                 copy: 'The Government will contribute 40 million over the next 30 years',
                 isNews: true,
@@ -118,7 +116,6 @@
         }}
         {{
             wmcadsContentCard({
-                src: true,
                 title: 'Historic devolution agreement reached',
                 copy: 'The Government will contribute 40 million over the next 30 years',
                 isNews: true,
@@ -131,7 +128,7 @@
 <div class="ds-css-grid-2-col ds-m-b-lg">
     {{
         wmcadsContentCard({
-            src: true,
+            
             isSrcDefault: true,
             title: 'Coronavirus support',
             copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
@@ -140,7 +137,7 @@
     }}
     {{
         wmcadsContentCard({
-            src: true,
+            
             isSrcDefault: true,
             title: '2021 Mayoral election',
             copy: 'Find out what the Mayor is reponsible for and how to vote.',
@@ -202,5 +199,5 @@
 <a href="#" class="ds-link ds-m-t-lg ds-m-b-lg see-more">See all WMCA events</a>
 
 </div>
-
+</main>
 {% endblock %}

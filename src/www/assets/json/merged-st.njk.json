@@ -140,14 +140,37 @@
 					"name": "Search"
 				}
 			]
-		}
-	],
-	"templateNavItems": [
-		{
-			"name": "The Mayor"
 		},
 		{
-			"name": "Who we are",
+			"name": "Templates",
+			"subnavItems": [
+				{
+					"name": "Boilerplate"
+				},
+				{
+					"name": "Homepage"
+				},
+				{
+					"name": "Content One Column"
+				},
+				{
+					"name": "Content Two Columns"
+				},
+				{
+					"name": "Search"
+				},
+				{
+					"name": "Newsroom"
+				},
+				{
+					"name": "News article"
+				}
+			]
+		}
+	],
+	"templateNavItemsSt": [
+		{
+			"name": "About us",
 			"subnavItems": [{
 				"name": "Sub title",
 				"subnavItems": [{
@@ -165,10 +188,10 @@
 			}]
 		},
 		{
-			"name": "What we do"
+			"name": "Advice and support"
 		},
 		{
-			"name": "In my area"
+			"name": "News"
 		},
 		{
 			"name": "Contact us"

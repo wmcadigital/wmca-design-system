@@ -15,11 +15,12 @@
 <div class="ds-page-header ds-m-b-lg">
   <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000" alt="header image"/>
 </div>
-<div class="ds-container ">
+<main class="ds-container--main {% if(params.tempCampaign) %} ds-m-r-lg {% endif %}">
+<div class="ds-container">
   <div class="ds-grid">
     <div class="ds-col-1 ds-col-md-3-4">
       <h1 id="ds-main-content">Adult Education Budget</h1>
-      <p>From 2018, we’re responsible for the region's Adult Education Budget (AEB).</p>
+      <p>From <a href="">2018</a>, we’re responsible for the region's Adult Education Budget (AEB).</p>
       <p>We target priority growth sectors from the Local Industrial Strategy. This improves skills and secure jobs in communities. It also helps to improve productivity in the region.</p>
       <h2>What the budget is</h2>
       <p>The budget helps residents and employers get the skills needed in the region. This helps people to get the jobs they need and increases the skills of current employees. It unlocks specialist training as well.</p> 
@@ -48,7 +49,7 @@
     {{
       wmcadsContentCard({
         link: "#",
-        src: true,
+        
         isSrcDefault: true,
         title: 'Contact us',
         copy: 'Get in touch if you want to know more about the budget.'
@@ -57,7 +58,7 @@
     {{
       wmcadsContentCard({
         link: "#",
-        src: true,
+        
         isSrcDefault: true,
         title: 'Contact us',
         copy: 'Get in touch if you want to know more about the budget.'
@@ -66,7 +67,7 @@
     {{
       wmcadsContentCard({
         link: "#",
-        src: true,
+        
         isSrcDefault: true,
         title: 'Contact us',
         copy: 'Get in touch if you want to know more about the budget.'
@@ -75,7 +76,7 @@
     {{
       wmcadsContentCard({
         link: "#",
-        src: true,
+        
         isSrcDefault  : true,
         title: 'Contact us',
         copy: 'Get in touch if you want to know more about the budget.'
@@ -84,7 +85,7 @@
     {{
       wmcadsContentCard({
         link: "#",
-        src: true,
+        
         isDoubleCard: true,
         title: 'Pharetra Sollicitudin Bibendum',
         copy: 'Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.'
@@ -93,5 +94,6 @@
   </div>
   
 </div>
+</main>
 
 {% endblock %}

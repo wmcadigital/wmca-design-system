@@ -1,0 +1,112 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Content Two Columns" %}
+{% set section = "Templates" %}
+{% set ds = 'mc' %}
+
+{# Imports #} 
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
+{# Set array of tiles #} 
+{% block content %}
+
+<div class="template-content">
+
+  <div class="ds-container ds-hide-desktop">
+    <h1 id="ds-main-content">Roll &amp; Stroll</h1>
+  </div>
+
+  <div class="ds-page-header ds-m-b-lg">
+    <img src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&mode=crop&width=2500&height=800&rnd=132122595620000000" alt="header image"/>
+  </div>
+  <div class="ds-container">
+    <div class="ds-grid">
+      <aside class="ds-col-1 ds-col-md-1-3 ds-m-b-lg">
+      {{
+        wmcadsPageContents({
+          title: "Roll & Stroll",
+          rightMargin: true,
+          example: false
+        })
+      }}
+      </aside>
+
+      <div class="main ds-col-1 ds-col-md-2-3 ds-m-b-xl">
+        <h1 id="ds-main-content" class="ds-hide-mobile">Adult Education Budget</h1>
+        <p>From 2018, we’re responsible for the region's Adult Education Budget (AEB).</p>
+        <p>We target priority growth sectors from the Local Industrial Strategy. This improves skills and secure jobs in communities. It also helps to improve productivity in the region.</p>
+        <h2>What the budget is</h2>
+        <p>The budget helps residents and employers get the skills needed in the region. This helps people to get the jobs they need and increases the skills of current employees. It unlocks specialist training as well.</p> 
+        <p>It also allows for more flexible and tailored learning programmes in the region. This helps people to take part in learning, build confidence and their wellbeing. It unlocks opportunities for more people.</p>
+        <h2>Our challenges</h2>
+        <p>We set out the challenges for the labour market in our Regional Skills Plan:</p>
+        <p>High levels of unemployment in some parts of the region
+        Poverty is growing for people who are working because of low wages
+        Low skill levels with less people qualified to skill level 4, or no qualifications at all
+        Employers struggle to find people with the skills they need</p>
+        <p>We use the budget to help improve confidence and opportunities for residents. It helps business find staff with the skills they need too. </p>
+        <h2>Priorities for the budget</h2>
+        <p>We will fund adult education through a range of delivery partners. Through commissioning, the budget will focus on:</p>
+        <h3>Innovation</h3>
+        <p>Looking at new ways of delivering learning. These will align with our priorities in the construction and digital sectors. </p>
+        <h3>Talent & Progression</h3>
+        <p>We'll develop new job schemes, and help build the skills of people in employment.</p>
+        <h3>Collaboration</h3>
+        <p>Working with our provider partners, we'll create an agile skills system. It will align to the needs of businesses and residents.</p>
+        <h3>Sustainability</h3>
+        <p>We're developing agreements with providers. These will check delivery against our key priorities. It will also track the impact of this approach.</p>
+        <div class="ds-css-grid-2-col ds-m-b-xl">
+          {{
+            wmcadsContentCard({
+              link: "#",
+              
+              isSrcDefault: true,
+              title: 'Contact us',
+              copy: 'Get in touch if you want to know more about the budget.'
+            })
+          }}
+          {{
+            wmcadsContentCard({
+              link: "#",
+              
+              isSrcDefault: true,
+              title: 'Contact us',
+              copy: 'Get in touch if you want to know more about the budget.'
+            })
+          }}
+          {{
+            wmcadsContentCard({
+              link: "#",
+              
+              isSrcDefault: true,
+              title: 'Contact us',
+              copy: 'Get in touch if you want to know more about the budget.'
+            })
+          }}
+          {{
+            wmcadsContentCard({
+              link: "#",
+              
+              isSrcDefault: true,
+              title: 'Contact us',
+              copy: 'Get in touch if you want to know more about the budget.'
+            })
+          }}
+          {{
+            wmcadsContentCard({
+              link: "#",
+              
+              isDoubleCard: true,
+              title: 'Pharetra Sollicitudin Bibendum',
+              copy: 'Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.'
+            })
+          }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

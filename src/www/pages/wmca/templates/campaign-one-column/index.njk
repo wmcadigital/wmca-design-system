@@ -26,6 +26,7 @@
       large: true
     })
 }}
+<main class="ds-container--main {% if(params.tempCampaign) %} ds-m-r-lg {% endif %}">
 <div class="ds-container">
   <div class="ds-grid">
     <div class="ds-col-1 ds-col-md-3-4 ds-p-t-lg">
@@ -49,7 +50,7 @@
         {{
           wmcadsContentCard({
             link: "#",
-            src: true,
+            
             isThirdCard: false,
             title: 'Get Going Continue Rolling',
             isDefault: true,
@@ -61,7 +62,7 @@
         {{
           wmcadsContentCard({
             link: "#",
-            src: true,
+            
             isThirdCard: false,
             title: 'All things strolling',
             isDefault: true,
@@ -73,7 +74,7 @@
         {{
           wmcadsContentCard({
             link: "#",
-            src: true,
+            
             isThirdCard: false,
             title: 'Changes in your area',
             isDefault: true,
@@ -85,7 +86,7 @@
         {{
           wmcadsContentCard({
             link: "#",
-            src: true,
+            
             isThirdCard: false,
             title: 'Get active and travel safely',
             isDefault: true,
@@ -101,7 +102,7 @@
         <button aria-controls="accordion-01" class="ds-accordion__summary-wrapper" aria-expanded="false">
           <!-- accordion summary -->
           <div class="ds-accordion__summary">
-            <h4 class="ds-m-b-none">Love to Ride</h4>
+            <h3 class="ds-m-b-none ds-h4">Love to Ride</h3>
           </div>
           <!-- plus icon -->
           <svg class="ds-accordion__icon">
@@ -128,7 +129,7 @@
           <button aria-controls="accordion-01" class="ds-accordion__summary-wrapper" aria-expanded="false">
             <!-- accordion summary -->
             <div class="ds-accordion__summary">
-              <h4 class="ds-m-b-none">Love your bike</h4>
+              <h3 class="ds-m-b-none ds-h4">Love your bike</h3>
             </div>
             <!-- plus icon -->
             <svg class="ds-accordion__icon">
@@ -159,7 +160,7 @@
           {{
             wmcadsContentCard({
               link: "#",
-              src: true,
+              
               isThirdCard: false,
               title: 'Support for businesses',
               isDefault: true,
@@ -171,7 +172,7 @@
           {{
             wmcadsContentCard({
               link: "#",
-              src: true,
+              
               isThirdCard: false,
               title: 'Be Aware and Share',
               isDefault: true,
@@ -206,4 +207,5 @@
 </div>
 
 </div>
+</main>
 {% endblock %}

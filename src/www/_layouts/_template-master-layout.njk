@@ -60,6 +60,27 @@
 
 {% if (ds== "mc") %}
     {% set nav = templateNavItemsMc %}
+    {% set footerCol = 3 %}
+    {% set footerMenu1 = {
+        name: "Quick links",
+         menuItems: [{
+          name: "Contact us"
+        },{
+          name: "About us"
+        },{
+          name: "Events"
+        },{
+          name: "Projects"
+        },{
+          name: "Publications"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "Other links",
+         menuItems: [{
+          name: "The Engine Room - Podcast"
+        }]
+      } %}
 {% endif %}
 
 {% if (ds== "cia") %}
@@ -146,10 +167,8 @@
     {% block summaryContent %}{% endblock summaryContent %}
 
     {# main #}
-    <main class="ds-container--main {% if(params.tempCampaign) %} ds-m-r-lg {% endif %}">
       {% block body %}{% endblock %}
       {{params}}
-    </main>
     {# main #}
 
     <!-- footer -->
