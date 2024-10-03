@@ -15,10 +15,15 @@
 
 .ds-content-card {
   display: block;
+  height: fit-content;
   border-bottom: 5px solid get-color(primary);
   color: get-color(text);
   background-color: $white;
   text-decoration: none;
+
+  &--full-height {
+    height: auto;
+  }
 
   @at-root a#{&} {
     display: block;
