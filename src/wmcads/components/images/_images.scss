@@ -1,4 +1,13 @@
+.ds-col-img {
+  display: grid !important;
+  height: auto;
+  place-items: center;
+}
+
 .ds-image {
+  max-width: 100%;
+  height: auto;
+
   &__hex {
     display: inline-flex;
     height: 300px;

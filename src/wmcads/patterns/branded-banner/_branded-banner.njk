@@ -92,7 +92,6 @@
          {% endif %}
       </div>
 
-
       {% if ctaButton %}
          <div class="ds-col-1">
             {{
@@ -106,19 +105,7 @@
                })
             }}
          </div>
-      {% else %}
-         <div class="ds-col-1">
-            {{
-               wmcadsLinkAsButton({
-                  contentText: 'Find a ticket',
-                  iconRight: 'general-chevron-right',
-                  iconRight: 'general-chevron-right',
-                  classes: 'ds-btn--dark-bg'
-               })
-            }}
-         </div>
       {% endif %}
-
    </div>
 </div>
 {% endmacro %}
