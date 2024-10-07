@@ -11,11 +11,14 @@
 {# These variables are set after the if statement to make sure we get the fallback mode: bus if the user hasn't selected a mode or misstyped the mode param #}
 {% set _logo = "/img/examples/logos-mayor-of-the-west-midlands.png" if params.logo else null %} {# Set logo to the correct one based on if statements above. #}
 {% set title = params.title if params.title else "Hub Header" %} {# Set title else fallback to "mode in West Midlands") #}
+{% set class = params.class if params.class else "" %}
 {% set contentHTML = params.contentHTML | safe if params.contentHTML else null %}
 {% set image = params.image if params.image else "/img/examples/curzon-street.png" %}
 {# {% set _modeClass = " wmcads-hub-page-banner--" + mode | lower if mode %} #} {# Set correct modifier class #}
 
-<div class="wmcads-hub-page-banner{{_modeClass}}">
+
+{{mode}}
+<div class="wmcads-hub-page-banner{{_modeClass}} {{class}}">
   <div class="wmcads-container">
     <div class="wmcads-hub-page-banner__content">
       {% if _logo %}

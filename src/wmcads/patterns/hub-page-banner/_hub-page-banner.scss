@@ -7,6 +7,14 @@
     fill: get-color(primary);
   }
 
+  &--alt {
+    background-color: get-color(backgroundAlt);
+
+    .wmcads-hub-page-banner__svg-background {
+      fill: get-color(backgroundAlt);
+    }
+  }
+
   &__copy {
     position: relative;
     z-index: 999;
