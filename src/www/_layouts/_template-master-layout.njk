@@ -55,7 +55,28 @@
 {% endif %}
 
 {% if (ds == "st") %}
-    {% set nav = templateNavItemsSt %}
+     {% set nav = templateNavItemsSt %}
+        {% set footerCol = 2 %}
+     {% set footerMenu1 = {
+        name: "Advice and support",
+        menuItems: [{
+          name: "Report an incident"
+        },{
+          name: "Advice"
+        },{
+          name: "Education"
+        },{
+          name: "Useful information"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "About us",
+        menuItems: [{
+          name: "Who we are"
+        }, {
+          name: "What we do"
+        }]
+      } %}
 {% endif %}
 
 {% if (ds== "mc") %}
