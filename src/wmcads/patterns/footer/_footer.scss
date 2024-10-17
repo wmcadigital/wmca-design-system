@@ -83,12 +83,9 @@
         margin: 0;
         padding: $size-xsm 0;
         border: 0;
+        cursor: pointer;
       }
     }
-
-    // @media screen and (min-width: $breakpoint-md) {
-    //   padding-bottom: $size-md;
-    // }
   }
 
   //
@@ -119,13 +116,19 @@
     .ds-col-lg-1-3 {
       margin-bottom: $size-lg;
       padding: 0 $size-sm;
+    }
+  }
 
+  @media screen and (min-width: $breakpoint-lg) {
+    .ds-col-lg-1-2,
+    .ds-col-lg-1-3 {
       &:first-child {
         margin-left: -$size-sm;
       }
 
       &:last-child {
         margin-right: -$size-sm;
+        padding-right: 0;
       }
     }
   }
