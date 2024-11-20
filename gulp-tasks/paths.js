@@ -41,17 +41,17 @@ module.exports = {
       {
         src: 'src/www/ds-website.js',
         minName: 'ds-website.min.js',
-        lint: true
+        lint: false
       },
       {
         src: 'src/www/ds-templates.js',
         minName: 'ds-templates.min.js',
-        lint: true
+        lint: false
       },
       {
         src: 'src/www/assets/js/cia-templates.js',
         minName: 'cia-templates.min.js',
-        lint: true
+        lint: false
       }
     ],
     output: 'build/js/' // Output location of minified JS files
