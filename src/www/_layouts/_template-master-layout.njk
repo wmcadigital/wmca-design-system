@@ -55,11 +55,53 @@
 {% endif %}
 
 {% if (ds == "st") %}
-    {% set nav = templateNavItemsSt %}
+     {% set nav = templateNavItemsSt %}
+        {% set footerCol = 2 %}
+     {% set footerMenu1 = {
+        name: "Advice and support",
+        menuItems: [{
+          name: "Report an incident"
+        },{
+          name: "Advice"
+        },{
+          name: "Education"
+        },{
+          name: "Useful information"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "About us",
+        menuItems: [{
+          name: "Who we are"
+        }, {
+          name: "What we do"
+        }]
+      } %}
 {% endif %}
 
 {% if (ds== "mc") %}
     {% set nav = templateNavItemsMc %}
+    {% set footerCol = 3 %}
+    {% set footerMenu1 = {
+        name: "Quick links",
+         menuItems: [{
+          name: "Contact us"
+        },{
+          name: "About us"
+        },{
+          name: "Events"
+        },{
+          name: "Projects"
+        },{
+          name: "Publications"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "Other links",
+         menuItems: [{
+          name: "The Engine Room - Podcast"
+        }]
+      } %}
 {% endif %}
 
 {% if (ds== "cia") %}
@@ -75,6 +117,38 @@
       } %}
 {% endif %}
 
+{% if (ds == "wmre") %}
+    {% set nav = templateNavItemsWmre %}
+    {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "About us",
+        menuItems: [{
+          name: "Contact us"
+        },{
+          name: "Freedom of information"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "",
+        menuItems: ""
+      } %}
+{% endif %}
+
+{% if (ds == "rar") %}
+    {% set nav = templateNavItemsRar %}
+    {% set footerCol = 1 %}
+     {% set footerMenu1 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Register"
+        },{
+          name: "Book a journey"
+        },{
+          name: "Contact us"
+        }]
+      } %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en-gb" class="ds-html">
   <!-- Head -->
@@ -82,14 +156,6 @@
   <!-- end: Head -->
 
   <body class="ds-body">
-    <!--[if IE]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and
-        security.
-      </p>
-    <![endif]-->
-
     {# header #}
     {% from "wmcads/patterns/header-v2/_header-v2.njk" import wmcadsHeaderV2 %}
     {{
@@ -122,10 +188,8 @@
     {% block summaryContent %}{% endblock summaryContent %}
 
     {# main #}
-    <main class="ds-container--main {% if(params.tempCampaign) %} ds-m-r-lg {% endif %}">
       {% block body %}{% endblock %}
       {{params}}
-    </main>
     {# main #}
 
     <!-- footer -->
@@ -151,7 +215,7 @@
     <!-- footer -->
 
     <!-- Scripts -->
-    {% include "www/_partials/_scripts.njk" %}
+    {% include "www/_partials/_template_scripts.njk" %}
     <!-- end: Scripts -->
   </body>
 

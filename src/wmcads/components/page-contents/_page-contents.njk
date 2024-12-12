@@ -3,7 +3,7 @@
 {% set title = params.title if params.title else "Page title" %}
 
   <div class="ds-page-contents {% if(params.dynamic) %} ds-dynamic-page-contents {% endif %}  {% if(params.rightMargin) %} ds-m-r-lg {% endif %} {% if(params.sections) %}ds-page-contents--with-accordion{% endif %}">
-      <h3>Page contents</h3>
+      <h2 class="ds-h3">Page contents</h2>
       <div class="{% if(params.sections) %}current{% endif %}">{{title}}</div>
       {% if(params.example) %}
         <a>link 1</a>

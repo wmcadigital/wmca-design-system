@@ -7,6 +7,7 @@
 {% set link = params.link if params.link else "#" %}
 {% set linkTitle = params.linkTitle if params.linkTitle else "" %}
 {% set _attributes = " href=\"" + link + "\" title=\""+ linkTitle +"\" target=\"_self\"" if params.link else "" %}
+{% set isNews = params.isNews if params.isNews else false %}
 
 {# HTML content #}
 {% set contentHTML = params.contentHTML if params.contentHTML else "

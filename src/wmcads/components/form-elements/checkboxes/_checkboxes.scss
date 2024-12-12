@@ -56,6 +56,10 @@
     &:checked ~ .ds-fe-checkboxes__checkmark > .ds-fe-checkboxes__icon {
       display: block;
     }
+
+    &[type="checkbox"][aria-invalid="true"] ~ .ds-fe-checkboxes__checkmark > .ds-fe-checkboxes__icon {
+      display: block;
+    }
   }
 
   // Create a custom checkbox box

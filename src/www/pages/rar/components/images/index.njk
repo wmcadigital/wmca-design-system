@@ -1,0 +1,70 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle = "Images" %}
+{% set ds = 'rar' %}
+{% from "www/_partials/component-example/component-example.njk" import compExample %}
+
+{% block content %}
+  {# Image with hexagon mask #}
+  <h2>Image with hexagon mask</h2>
+  <h3>
+      What does it do?
+  </h3>
+    <ul>
+        <li>
+            Add a hexagon mask around an image
+        </li>
+    </ul>
+    <h3>
+        When to use it?
+    </h3>
+    <ul>
+        <li>
+            Only within html documents for bio pictures
+        </li>
+    </ul>
+    <h3>
+        When not to use it?
+    </h3>
+    <ul>
+        <li>Any images showing statistics</li>
+    </ul>
+  {% from "wmcads/components/images/_images.njk" import wmcadsImages %}
+  {{
+    compExample([wmcadsImages({
+        
+    })])
+  }}
+<br><br>
+  {# Image with summary #}
+  <h2>Image with summary</h2>
+  <h3>
+      What does it do?
+  </h3>
+    <ul>
+        <li>
+            Add a hexagon mask around an image
+        </li>
+    </ul>
+    <h3>
+        When to use it?
+    </h3>
+    <ul>
+        <li>
+            Only within html documents for bio pictures
+        </li>
+    </ul>
+    <h3>
+        When not to use it?
+    </h3>
+    <ul>
+        <li>Any images showing statistics</li>
+    </ul>
+  {% from "wmcads/components/images/_image-with-summary.njk" import wmcadsImageWithSummary %}
+  {{
+    compExample([wmcadsImageWithSummary({
+        
+    })])
+  }}
+  {# End label #}
+
+{% endblock %}

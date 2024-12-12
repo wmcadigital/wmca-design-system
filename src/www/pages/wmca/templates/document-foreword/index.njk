@@ -9,17 +9,19 @@
 {% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
 {% from "wmcads/components/file-download/_file-download.njk" import wmcadsFileDownload %}
 {% from "wmcads/components/video-embed/_video-embed.njk" import wmcadsVideoEmbed %}
-{% from "wmcads/components/hub-header/_hub-header.njk" import wmcadsHubHeader %}
+{% from "wmcads/patterns/hub-page-banner/_hub-page-banner.njk" import wmcadsHubPageBanner %}
+
+
 {% from "wmcads/patterns/search/pagination/_pagination.njk" import wmcadsPagination %}
 {# Set array of tiles #} 
 {% block content %}
 
 <div>
 {{
-wmcadsHubHeader({
-      image: false,
-      title: "Local Transport Plan Green Paper"
-    })
+  wmcadsHubPageBanner({
+    title: "Local Transport Plan Green Paper",
+    image: "/img/examples/curzon-street.png"
+  })
 }}
   <div class="ds-container ds-m-t-xl">
     <div class="ds-grid ds-grid--justify-between ds-grid--spacing-2-lg ds-grid--spacing-md-2-lg">
@@ -113,14 +115,14 @@ network that will</p>
     <div class="ds-image__hex">
       <img src="https://www.wmca.org.uk/media/1862/andy-street-september-2016-1-002.jpg?anchor=center&mode=crop&width=700&height=700&rnd=131547073580000000" alt="" />
     </div>
-    <h3>Andy Street</h3>
+    <h2 class="ds-h3">Andy Street</h2>
     <p>Mayor of the West Midlands</p>
   </div>
   <div class="ds-col-1 ds-col-md-1-2">
     <div class="ds-image__hex">
       <img src="https://www.wmca.org.uk/media/1862/andy-street-september-2016-1-002.jpg?anchor=center&mode=crop&width=700&height=700&rnd=131547073580000000" alt="" />
     </div>
-    <h3>Councillor Ian Ward</h3>
+    <h2 class="ds-h3">Councillor Ian Ward</h2>
     <p>Leader of Birmingham City Council</p>
   </div>
 </div>

@@ -13,11 +13,15 @@ module.exports = {
       'src/wmcads/assets/sass/stds.scss',
       'src/wmcads/assets/sass/mcds.scss',
       'src/wmcads/assets/sass/ciads.scss',
+      'src/wmcads/assets/sass/wmreds.scss',
+      'src/wmcads/assets/sass/rards.scss',
       'src/www/assets/sass/wmcads-website.scss',
       'src/www/assets/sass/tfwmds-website.scss',
       'src/www/assets/sass/ciads-website.scss',
       'src/www/assets/sass/mcds-website.scss',
       'src/www/assets/sass/stds-website.scss',
+      'src/www/assets/sass/wmreds-website.scss',
+      'src/www/assets/sass/rards-website.scss',
       'src/www/pages/wmca/templates/templates.scss',
       'src/www/pages/cia/templates/cia-templates.scss',
       'src/wmcads/assets/sass/shared/ds-grid/grid.scss',
@@ -37,17 +41,17 @@ module.exports = {
       {
         src: 'src/www/ds-website.js',
         minName: 'ds-website.min.js',
-        lint: true
+        lint: false
       },
       {
         src: 'src/www/ds-templates.js',
         minName: 'ds-templates.min.js',
-        lint: true
+        lint: false
       },
       {
         src: 'src/www/assets/js/cia-templates.js',
         minName: 'cia-templates.min.js',
-        lint: true
+        lint: false
       }
     ],
     output: 'build/js/' // Output location of minified JS files

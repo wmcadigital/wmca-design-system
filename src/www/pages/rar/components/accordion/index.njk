@@ -1,0 +1,13 @@
+{% extends "www/_layouts/layout-left-pane.njk" %}
+{% set pageTitle="Accordion" %}
+{% set ds = 'rar' %}
+
+{% block content %}
+
+{% from "www/pages/shared/components/accordion/index.njk" import dsAccordionContent %}
+
+{{
+  dsAccordionContent({})
+}}
+
+{% endblock %}

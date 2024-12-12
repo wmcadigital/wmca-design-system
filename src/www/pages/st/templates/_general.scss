@@ -1,0 +1,7 @@
+.ds-html {
+  .ds-page-contents {
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 0 !important;
+    }
+  }
+}

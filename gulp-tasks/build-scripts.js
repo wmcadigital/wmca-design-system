@@ -2,6 +2,7 @@
 const { src, dest } = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
+const terser = require('gulp-terser');
 // Local requires
 const paths = require('./paths');
 const { packageJson, build } = require('./utils');
@@ -51,6 +52,7 @@ function minifyJS(jsFile) {
         }
       })
     )
+    .pipe(terser())
     .pipe(plugins.plumber.stop())
     .pipe(dest(paths.scripts.output)); // Spit out concat + minified file in ./build/
 }

@@ -15,16 +15,25 @@
 
 .ds-content-card {
   display: block;
+  height: fit-content;
   border-bottom: 5px solid get-color(primary);
   color: get-color(text);
   background-color: $white;
   text-decoration: none;
+
+  &--full-height {
+    height: auto;
+  }
 
   @at-root a#{&} {
     display: block;
     color: get-color(text);
     text-decoration: none;
     @include accessibility-hover;
+  }
+
+  .ds-buttons {
+    margin-top: $size-md;
   }
 
   // Modifiers
@@ -99,7 +108,25 @@
     font-size: 5rem;
   }
 
+  .ds__icon {
+    width: 5rem;
+    height: 5rem;
+    color: get-color(primary);
+    fill: get-color(primary);
+    text-align: left;
+  }
+
   .ds-btn {
     width: 100%;
+  }
+}
+
+.ds-logo-card {
+  display: flex;
+
+  img {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: $size-sm;
   }
 }

@@ -1,0 +1,101 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="Content Page Template" %}
+{% set section = "Templates" %}
+{% set ds = 'rar' %}
+
+{# Imports #}
+{% from "wmcads/patterns/banner/_banner.njk" import wmcadsBanner %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{% from "wmcads/components/warning-text/_warning-text.njk" import wmcadsWarningText %}
+{% from "wmcads/components/in-text-step/_in-text-step.njk" import wmcadsInTextStep %}
+
+{% block summaryContent %}
+   <div class="ds-page-header ds-m-b-lg" style="background-image:url('https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&amp;mode=crop&amp;width=2500&amp;height=800&amp;rnd=132122595620000000');background-position:"></div>
+{% endblock summaryContent %}
+
+{% block content %} 
+<div class="ds-container ">
+<div class="ds-grid ds-grid--spacing-md-2-lg">
+  <div class="ds-col-1 ds-col-md-2-3">
+    <h1 id="ds-main-content">{{ pageTitle | safe}}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <img src="/img/component-images/banner/homepage-banner-img.jpg" alt="Example image">
+
+    <div class="ds-css-grid-2-col ds-m-t-lg ds-m-b-lg">
+      {{
+        wmcadsContentCard({
+          contentHTML: "<div class=\"ds-p-sm\"><h2>Lorem ipsum dolor</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          contentHTML: "<div class=\"ds-p-sm\"><h2>Lorem ipsum dolor</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          contentHTML: "<div class=\"ds-p-sm\"><h2>Lorem ipsum dolor</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>"
+        })
+      }}
+    </div>
+    <h2>Sub heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    {{
+      wmcadsInsetText({
+        html: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      })
+    }}
+    <br /><br />
+    {{
+      wmcadsWarningText({
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        icon: "general-info"
+    })
+    }}
+
+    {{
+      wmcadsInTextStep({
+        items: [
+         {
+            contentText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            contentHTML: null
+         },
+         {
+            contentText: null,
+            contentHTML: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+         },
+         {
+            contentText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            contentHTML: null
+         }
+      ]
+   })
+}}
+
+  <h2>Sub heading</h2>
+  <div class="ds-css-grid-2-col ds-m-t-lg ds-m-b-lg">
+      {{
+        wmcadsContentCard({
+          contentHTML: "<div class=\"ds-p-sm\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          contentHTML: "<div class=\"ds-p-sm\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>"
+        })
+      }}
+    </div>
+  </div>
+  <div class="ds-col-1 ds-col-md-1-3">
+    {{
+      wmcadsContentCard({
+        contentHTML: "<div class=\"ds-p-sm\"><h2>Lorem ipsum dolor sit amet</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+      })
+    }}
+  </div>
+</div>
+{% endblock %}

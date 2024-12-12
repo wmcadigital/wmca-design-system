@@ -1,0 +1,109 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %}
+{% set pageTitle="Homepage Template" %}
+{% set section = "Templates" %}
+{% set section="Templates" %}
+{% set ds = 'wmre' %}
+
+{# Imports #}
+{% from "wmcads/patterns/banner/homepage-banner/_homepage-banner.njk" import wmcadsHomepageBanner %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{# Set array of tiles #} 
+
+{% block summaryContent %}
+{{
+    wmcadsHomepageBanner({
+      title: "Driving a revolution in rail for West Midlanders",
+      ds: ds
+    })
+}}
+{% endblock summaryContent %}
+
+{% block content %} 
+<div class="ds-container ds-m-t-lg homepage">
+        <div class="ds-css-grid-2-col ds-m-b-lg">
+        {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: 'Coronavirus support',
+                copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+                clickable: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: '2021 Mayoral election',
+                copy: 'Find out what the Mayor is reponsible for and how to vote.',
+                clickable: true
+            })
+        }}
+        </div>
+        <h2>Latest News</h2>
+        <div class="ds-css-grid-4-col ds-m-b-lg">
+        {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: 'Coronavirus support',
+                copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+                clickable: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: '2021 Mayoral election',
+                copy: 'Find out what the Mayor is reponsible for and how to vote.',
+                clickable: true
+            })
+        }}
+                {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: 'Coronavirus support',
+                copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+                clickable: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: '2021 Mayoral election',
+                copy: 'Find out what the Mayor is reponsible for and how to vote.',
+                clickable: true
+            })
+        }}
+        </div>
+        <a href="" title="WMRE Newsroom" class="wmre-link wmre-m-t-lg wmre-m-b-lg see-more">See all news stories</a>
+        <h2>Latest station projects</h2>
+        <div class="ds-css-grid-3-col ds-m-b-lg">
+        {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: 'Coronavirus support',
+                copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+                clickable: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: '2021 Mayoral election',
+                copy: 'Find out what the Mayor is reponsible for and how to vote.',
+                clickable: true
+            })
+        }}
+                {{
+            wmcadsContentCard({
+                isSrcDefault: true,
+                title: 'Coronavirus support',
+                copy: 'Get advice and support during the pandemic such as finding a new job and applying for business grants.',
+                clickable: true
+            })
+        }}
+        </div>
+        <a href="/west-midlands-rail-programme/" class="wmre-link wmre-m-b-xl see-more">See all our station projects</a>
+{% endblock %}

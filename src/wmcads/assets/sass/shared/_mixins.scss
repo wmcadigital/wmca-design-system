@@ -47,7 +47,7 @@
   @if $level == 4 {
     margin-top: 1.5rem * $multiplier;
     margin-bottom: 0.75rem * $multiplier;
-    font-size: 1.125rem * $multiplier;
+    font-size: 1.125rem * $multiplier !important;
     line-height: 1.5rem * $multiplier;
   }
   // Heading 5 (16px)

@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   padding: $size-sm;
-  background-color: help;
+  background-color: get-color(secondary, 70%);
 
   &__close-btn {
     margin-top: $size-xs;

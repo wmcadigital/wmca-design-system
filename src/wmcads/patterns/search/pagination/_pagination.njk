@@ -22,11 +22,11 @@
     {% endfor -%}
     </ol>
     {% if(params.activePage > 1) %}
-    <a href="#" target="_self" class="ds-pagination__prev ds-link ds-link--with-chevron" >
+    <button href="#" target="_self" class="ds-btn ds-btn--link ds-pagination__prev ds-link ds-link--with-chevron" >
         <svg class="ds-link__chevron ds-link__chevron--left">
             <use xlink:href="#ds-general-chevron-right" href="#ds-general-chevron-right"></use>
         </svg> Previous page
-    </a>
+    </button>
     {% endif %}
     {% if(params.activePage < params.pageCount) %}
     <a href="#" target="_self" class="ds-pagination__next ds-link ds-link--with-chevron" >

@@ -48,9 +48,6 @@
 					"name": "Details"
 				},
 				{
-					"name": "Document"
-				},
-				{
 					"name": "Divider"
 				},				
 				{
@@ -58,9 +55,6 @@
 				},
 				{
 					"name": "Form elements"
-				},
-				{
-					"name": "Hub header"
 				},
 				{
 					"name": "Inset text"

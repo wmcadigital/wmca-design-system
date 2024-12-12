@@ -69,6 +69,14 @@
       flex-basis: 27%;
     }
 
+    &__prev {
+      justify-content: flex-start;
+    }
+
+    &__next {
+      justify-content: flex-end;
+    }
+
     // keep numbers centered when prev/next buttons are hidden
     &__item--active:first-child {
       margin-left: 36.5%;
@@ -76,6 +84,13 @@
 
     &__item--active:last-child {
       margin-right: 36.5%;
+    }
+
+    a > .ds-pagination__prev,
+    a > .ds-pagination__next {
+      flex-grow: 0;
+      flex-basis: 27%;
+      justify-content: center !important;
     }
   }
 }
