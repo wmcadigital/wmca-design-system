@@ -135,6 +135,12 @@
           },
           {
             "name": "Search"
+          },
+          {
+            "name": "In My Area"
+          },
+          {
+            "name": "Area"
           }
         ]
       },

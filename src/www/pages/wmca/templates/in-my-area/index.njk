@@ -1,0 +1,70 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="In My Area" %}
+{% set section = "Templates" %}
+{% set ds = 'wmca' %}
+
+{# Imports #} 
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+{# Set array of tiles #} 
+{% block content %}
+
+<main id="ds-main-content" class="ds-container ds-container--main">
+    <div class="ds-container">
+        <h1>In My Area</h1>
+        <div class="ds-css-grid-6-col">
+        {{
+            wmcadsContentCard({
+                title: 'WMCA donates computers to school children to tackle digital divide',
+                copy: '150 old staff laptops will be donated to Wowdot',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                title: 'WMCA donates computers to school children to tackle digital divide',
+                copy: '150 old staff laptops will be donated to Wowdot',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+                {{
+            wmcadsContentCard({
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+        {{
+            wmcadsContentCard({
+                title: 'Historic devolution agreement reached',
+                copy: 'The Government will contribute 40 million over the next 30 years',
+                isNews: true,
+                isNewsSub: true
+            })
+        }}
+</div>
+    </div>
+</main>
+
+{% endblock %}

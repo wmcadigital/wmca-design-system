@@ -1,0 +1,58 @@
+<head>
+  <meta charset="utf-8" />
+  <title>
+  {# If homepage #}
+  {% if section == "Home" %}
+    Home - {{pageTitle}}
+  {% else %}
+  {# Else any other pages #}
+    {{ pageTitle | striptags}} - West Midlands Combined Authority Design System
+  {% endif %}
+  </title>
+  <meta name="description" content="Your one stop shop for travel in the West Midlands" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {# Favicons #}
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/config/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/config/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/config/favicons/favicon-16x16.png">
+  <link rel="manifest" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/config/favicons/site.webmanifest">
+  <link rel="mask-icon" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/config/favicons/safari-pinned-tab.svg" color="#3c1053">
+  <link rel="shortcut icon" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/config/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#3c1053">
+  <meta name="msapplication-config" content="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/config/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#3c1053">
+
+  <!-- Website Styles -->
+  {% if ds == "wmca" %}
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/CSS/wmcaDS.min.css" />
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staGing/wmcaassets/ds/2.0.0/css/wmcads-websiTE.min.css" />
+  {% endif %}
+  {% if ds == "tfwm" %}
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/tfwmds.min.css" />
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/tfwmds-website.min.css" />
+  {% endif %}
+  {% if ds == "st" %}
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/stds.min.css" />
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/stds-website.min.css" />
+  {% endif %}
+  {% if ds == "mc" %}
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/mcds.min.css" />
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/mcds-website.min.css" />
+  {% endif %}
+  {% if ds == "cia" %}
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/ciads.min.css" />
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/ciads-website.min.css" />
+  {% endif %}
+  {% if ds == "wmre" %}
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/wmreds.min.css" />
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/wmreds-website.min.css" />
+  {% endif %}
+  {% if ds == "rar" %}
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/rards.min.css" />
+  <link rel="stylesheet" href="https://wmca-ep-cdn-akf3gsawasaqesez.a02.azurefd.net/cdn/staging/wmcaassets/ds/2.0.0/css/rards-website.min.css" />
+  {% endif %}
+
+  <!-- Highlight JS - display HTML blocks as coloured text -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/a11y-dark.min.css"/>
+</head>

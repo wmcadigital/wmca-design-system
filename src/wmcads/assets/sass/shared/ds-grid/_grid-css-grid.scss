@@ -2,6 +2,12 @@
 .ds-css-grid {
   display: inline;
 
+  &-6-col {
+    display: grid;
+    grid-gap: $size-md;
+    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
+  }
+
   &-4-col {
     display: grid;
     grid-gap: $size-lg;

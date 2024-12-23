@@ -1,0 +1,222 @@
+{% if (ds == "wmca") %}
+    {% set nav = templateNavItems %}
+    {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "Governance",
+        menuItems: [{
+          name: "Committee meetings"
+        },{
+          name: "Freedom of information"
+        },{
+          name: "Procurement"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Contact us"
+        }, {
+          name: "Media assets"
+        }, {
+          name: "Careers"
+        }, {
+          name: "Documents"
+        }]
+      } %}
+{% endif %}
+
+{% if (ds== "tfwm") %}
+    {% set nav = templateNavItemsTfwm %}
+        {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Businesses"
+        },{
+          name: "Education"
+        },{
+          name: "Job centres"
+        },{
+          name: "Young people"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "About us",
+        menuItems: [{
+          name: "Who we are"
+        }, {
+          name: "What we do"
+        }, {
+          name: "Our strategy"
+        }, {
+          name: "Our apps"
+        }]
+      } %}
+{% endif %}
+
+{% if (ds == "st") %}
+     {% set nav = templateNavItemsSt %}
+        {% set footerCol = 2 %}
+     {% set footerMenu1 = {
+        name: "Advice and support",
+        menuItems: [{
+          name: "Report an incident"
+        },{
+          name: "Advice"
+        },{
+          name: "Education"
+        },{
+          name: "Useful information"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "About us",
+        menuItems: [{
+          name: "Who we are"
+        }, {
+          name: "What we do"
+        }]
+      } %}
+{% endif %}
+
+{% if (ds== "mc") %}
+    {% set nav = templateNavItemsMc %}
+    {% set footerCol = 3 %}
+    {% set footerMenu1 = {
+        name: "Quick links",
+         menuItems: [{
+          name: "Contact us"
+        },{
+          name: "About us"
+        },{
+          name: "Events"
+        },{
+          name: "Projects"
+        },{
+          name: "Publications"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "Other links",
+         menuItems: [{
+          name: "The Engine Room - Podcast"
+        }]
+      } %}
+{% endif %}
+
+{% if (ds== "cia") %}
+    {% set nav = templateNavItemsCia %}
+    {% set footerCol = 2 %}
+    {% set footerMenu1 = {
+        name: "Partners",
+        menuItems: []
+      } %}
+      {% set footerMenu2 = {
+        name: "Change your area",
+        menuItems: []
+      } %}
+{% endif %}
+
+{% if (ds == "wmre") %}
+    {% set nav = templateNavItemsWmre %}
+    {% set footerCol = 3 %}
+     {% set footerMenu1 = {
+        name: "About us",
+        menuItems: [{
+          name: "Contact us"
+        },{
+          name: "Freedom of information"
+        }]
+      } %}
+      {% set footerMenu2 = {
+        name: "",
+        menuItems: ""
+      } %}
+{% endif %}
+
+{% if (ds == "rar") %}
+    {% set nav = templateNavItemsRar %}
+    {% set footerCol = 1 %}
+     {% set footerMenu1 = {
+        name: "Resources and support",
+        menuItems: [{
+          name: "Register"
+        },{
+          name: "Book a journey"
+        },{
+          name: "Contact us"
+        }]
+      } %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en-gb" class="ds-html">
+  <!-- Head -->
+  {% include "www/_partials/_head-cdn.njk" %}
+  <!-- end: Head -->
+
+  <body class="ds-body">
+    {# header #}
+    {% from "wmcads/patterns/header-v2/_header-v2.njk" import wmcadsHeaderV2 %}
+    {{
+      wmcadsHeaderV2 ({
+        id: "mega-menu",
+        navItems: nav,
+        banner: false,
+        linkTopLevel: true,
+        ciaArea: true,
+        ds: ds,
+        breadcrumbs: {
+          section: section,
+          pageTitle: pageTitle,
+          hideBreadcrumb: hideBreadcrumb
+        },
+        search: true,
+        wmcadsSearch: {
+          id: "wmcadsMegaMenuSearch",
+          placeholder: 'Search...',
+          hideLabel: true
+        }
+      })
+    }}
+    {# header #}
+
+    {# summary #}
+    {% block summary %}{% endblock %}
+    {# end:summary #}
+
+    {% block summaryContent %}{% endblock summaryContent %}
+
+    {# main #}
+      {% block body %}{% endblock %}
+      {{params}}
+    {# main #}
+
+    <!-- footer -->
+    {% from "wmcads/patterns/footer/_footer.njk" import wmcadsFooter %}
+    {{
+      wmcadsFooter({
+      columns: footerCol,
+      social: true,
+      ds: ds,
+      menu1: footerMenu1,
+      menu2: footerMenu2,
+      bottomMenu: [{
+        name: "Accessibility"
+      },
+      {
+        name: "Terms and Conditions"
+      },
+      {
+        name: "Policies"
+      }]
+    })
+    }}
+    <!-- footer -->
+
+    <!-- Scripts -->
+    {% include "www/_partials/_scripts-cdn.njk" %}
+    <!-- end: Scripts -->
+  </body>
+
+</html>
