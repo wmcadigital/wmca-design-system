@@ -83,6 +83,12 @@
     }
   }
 
+  &--slimline {
+    p {
+      margin: $size-sm 0;
+    }
+  }
+
   img {
     display: inline;
     position: relative;

@@ -1,0 +1,142 @@
+{% extends "www/_layouts/template-layout-fullwidth.njk" %} 
+{% set pageTitle="In my area region projects" %}
+{% set section = "Templates" %}
+{% set ds = 'wmca' %}
+
+{# Imports #} 
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/inset-text/_inset-text.njk" import wmcadsInsetText %} 
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+{% from "wmcads/components/page-contents/_page-contents.njk" import wmcadsPageContents %}
+
+{% from "wmcads/patterns/hub-page-banner/_hub-page-banner.njk" import wmcadsHubPageBanner %}
+{% from "wmcads/components/portfolio-leads/_portfolio-leads.njk" import wmcadsPortfolioLeads %}
+{% from "wmcads/components/content-card/_content-card.njk" import wmcadsContentCard %}
+
+{# Set array of tiles #} 
+{% block content %}
+
+<div class="template-content">
+
+  <div class="ds-container ds-hide-desktop">
+    <h1 id="ds-main-content">Roll &amp; Stroll</h1>
+  </div>
+
+  {{
+    wmcadsHubPageBanner({
+      title: "Birmingham",
+      contentHTML: "Transport Projects & News"
+    })
+  }}
+
+  <main class="ds-container--main ds-p-t-lg {% if(params.tempCampaign) %} ds-m-r-lg {% endif %}">
+  <div class="ds-container">
+    <h2>Projects</h2>
+    <p>Find latest projects and programmes we are delivering in transport.</p>
+    <div class="ds-css-grid-3-col ds-m-b-xl">
+      {{
+        wmcadsContentCard({
+          classes: 'ds-content-card--full-height',
+          link: '/wmca/templates/in-my-area-region-project/',
+          linkTitle: "Pineapple Road station",
+          contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Pineapple Road station</h2>
+          </div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          classes: 'ds-content-card--full-height',
+          link: '/wmca/templates/in-my-area-region-project/',
+          linkTitle: "Metro Extension - West",
+          contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Metro Extension - West</h2>
+          </div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          classes: 'ds-content-card--full-height',
+          link: '/wmca/templates/in-my-area-region-project/',
+          linkTitle: "Park and Ride Longbridge",
+          contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Park and Ride Longbridge</h2>
+          </div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          classes: 'ds-content-card--full-height',
+          link: '/wmca/templates/in-my-area-region-project/',
+          linkTitle: "Park and Ride Longbridge",
+          contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Park and Ride Longbridge</h2>
+          </div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          classes: 'ds-content-card--full-height',
+          link: '/wmca/templates/in-my-area-region-project/',
+          linkTitle: "Interchange Station",
+          contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Interchange Station</h2>
+          </div>"
+        })
+      }}
+      {{
+        wmcadsContentCard({
+          classes: 'ds-content-card--full-height',
+          link: '/wmca/templates/in-my-area-region-project/',
+          linkTitle: "Sprint A34 Route",
+          contentHTML: "<div class=\"ds-p-sm\">
+          <h2>Sprint A34 Route</h2>
+          </div>"
+        })
+      }}
+    </div>
+    <a href="#" class="ds-link ds-m-b-lg">View all transport projects in birmingham</a>
+    <h2>Latest Transport news in Birmingham</h2>
+    <div class="ds-css-grid-4-col ds-m-b-xl">
+     {{
+        wmcadsContentCard({classes: "ds-content-card--news",
+          contentHTML: ' <img src=\"https://fakeimg.pl/480x360\" alt=\"Image alt text\">
+          <p>14 March 2024</p>
+          <h3><a href=\"/#\">News article title</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>'
+
+        })
+      }}
+       {{
+        wmcadsContentCard({classes: "ds-content-card--news",
+          contentHTML: ' <img src=\"https://fakeimg.pl/480x360\" alt=\"Image alt text\">
+          <p>14 March 2024</p>
+          <h3><a href=\"/#\">News article title</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>'
+
+        })
+      }}
+       {{
+        wmcadsContentCard({classes: "ds-content-card--news",
+          contentHTML: ' <img src=\"https://fakeimg.pl/480x360\" alt=\"Image alt text\">
+          <p>14 March 2024</p>
+          <h3><a href=\"/#\">News article title</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>'
+
+        })
+      }}
+       {{
+        wmcadsContentCard({classes: "ds-content-card--news",
+          contentHTML: ' <img src=\"https://fakeimg.pl/480x360\" alt=\"Image alt text\">
+          <p>14 March 2024</p>
+          <h3><a href=\"/#\">News article title</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>'
+
+        })
+      }}
+    </div>
+    <a href="#" class="ds-link ds-m-b-lg">View all transport news in birmingham</a>
+  </div>
+  </main>
+</div>
+{% endblock %}
