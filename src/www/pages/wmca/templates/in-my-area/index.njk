@@ -11,59 +11,89 @@
 {# Set array of tiles #} 
 {% block content %}
 
-<main id="ds-main-content" class="ds-container ds-container--main">
+<main id="ds-main-content" cclass="ds-container--main">
     <div class="ds-container">
         <h1>In My Area</h1>
-        <div class="ds-css-grid-6-col">
-        {{
-            wmcadsContentCard({
-                title: 'WMCA donates computers to school children to tackle digital divide',
-                copy: '150 old staff laptops will be donated to Wowdot',
-                isNews: true,
-                isNewsSub: true
-            })
-        }}
-        {{
-            wmcadsContentCard({
-                title: 'WMCA donates computers to school children to tackle digital divide',
-                copy: '150 old staff laptops will be donated to Wowdot',
-                isNews: true,
-                isNewsSub: true
-            })
-        }}
-        {{
-            wmcadsContentCard({
-                title: 'Historic devolution agreement reached',
-                copy: 'The Government will contribute 40 million over the next 30 years',
-                isNews: true,
-                isNewsSub: true
-            })
-        }}
-        {{
-            wmcadsContentCard({
-                title: 'Historic devolution agreement reached',
-                copy: 'The Government will contribute 40 million over the next 30 years',
-                isNews: true,
-                isNewsSub: true
-            })
-        }}
-                {{
-            wmcadsContentCard({
-                title: 'Historic devolution agreement reached',
-                copy: 'The Government will contribute 40 million over the next 30 years',
-                isNews: true,
-                isNewsSub: true
-            })
-        }}
-        {{
-            wmcadsContentCard({
-                title: 'Historic devolution agreement reached',
-                copy: 'The Government will contribute 40 million over the next 30 years',
-                isNews: true,
-                isNewsSub: true
-            })
-        }}
-</div>
+        <h2>Choose your area</h2>
+        <div class="ds-css-grid-3-col ds-m-b-md">
+            {{
+                wmcadsContentCard({
+                classes: 'ds-content-card--full-height',
+                link: '/wmca/templates/in-my-area-region/',
+                linkTitle: "Birmingham",
+                contentHTML: "<div class=\"ds-p-sm\">
+                <img src=\"https://www.wmca.org.uk/media/d5mc0g1l/wmg-bham-78.jpg?anchor=center&mode=crop&width=640&height=360&rnd=133773524193770000\" alt=\"\" />
+                <h2>Birmingham</h2>
+                </div>"
+                })
+            }}
+            {{
+                wmcadsContentCard({
+                classes: 'ds-content-card--full-height',
+                link: '/wmca/templates/in-my-area-region/',
+                linkTitle: "Coventry",
+                contentHTML: "<div class=\"ds-p-sm\">
+                <img src=\"https://www.wmca.org.uk/media/ypndlxg2/wmg-cov.jpg?anchor=center&mode=crop&width=640&height=360&rnd=133773524195800000\" alt=\"\" />
+                <h2>Coventry</h2>
+                </div>"
+                })
+            }}
+            {{
+                wmcadsContentCard({
+                classes: 'ds-content-card--full-height',
+                link: '/wmca/templates/in-my-area-region/',
+                linkTitle: "Dudley",
+                contentHTML: "<div class=\"ds-p-sm\">
+                <img src=\"https://www.wmca.org.uk/media/yjkdszhb/dudley-canal.jpg?anchor=center&mode=crop&width=640&height=360&rnd=133773524194870000\" alt=\"\" />
+                <h2>Dudley</h2>
+                </div>"
+                })
+            }}
+            {{
+                wmcadsContentCard({
+                classes: 'ds-content-card--full-height',
+                link: '/wmca/templates/in-my-area-region/',
+                linkTitle: "Sandwell",
+                contentHTML: "<div class=\"ds-p-sm\">
+                <img src=\"https://www.wmca.org.uk/media/xnpbo1ly/new-square-shopping-centre-west-bromwich.jpg?anchor=center&mode=crop&width=640&height=360&rnd=133773524197070000\" alt=\"\" />
+                <h2>Sandwell</h2>
+                </div>"
+                })
+            }}
+            {{
+                wmcadsContentCard({
+                classes: 'ds-content-card--full-height',
+                link: '/wmca/templates/in-my-area-region/',
+                linkTitle: "Solihull",
+                contentHTML: "<div class=\"ds-p-sm\">
+                <img src=\"https://www.wmca.org.uk/media/p3amyhtz/birmingham-airport.jpg?anchor=center&mode=crop&width=640&height=360&rnd=133773524194230000\" alt=\"\" />
+                <h2>Solihull</h2>
+                </div>"
+                })
+            }}
+            {{
+                wmcadsContentCard({
+                classes: 'ds-content-card--full-height',
+                link: '/wmca/templates/in-my-area-region/',
+                linkTitle: "Walsall",
+                contentHTML: "<div class=\"ds-p-sm\">
+                <img src=\"https://www.wmca.org.uk/media/bynirusz/walsall-art-gallery.jpg?anchor=center&mode=crop&width=640&height=360&rnd=133773524195500000\" alt=\"\" />
+                <h2>Walsall</h2>
+                </div>"
+                })
+            }}
+            {{
+                wmcadsContentCard({
+                classes: 'ds-content-card--full-height',
+                link: '/wmca/templates/in-my-area-region/',
+                linkTitle: "Wolverhampton",
+                contentHTML: "<div class=\"ds-p-sm\">
+                <img src=\"https://www.wmca.org.uk/media/wpjfxi1f/statue-of-lady-wulfruna.jpg?anchor=center&mode=crop&width=640&height=360&rnd=133773524195170000\" alt=\"\" />
+                <h2>Wolverhampton</h2>
+                </div>"
+                })
+            }}
+        </div>
     </div>
 </main>
 
