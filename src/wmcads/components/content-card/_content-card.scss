@@ -2,7 +2,7 @@
 @mixin accessibility-hover {
   h2,
   h3 {
-    color: get-color(primary);
+    color: get-color(cta);
     text-decoration: underline;
   }
 
