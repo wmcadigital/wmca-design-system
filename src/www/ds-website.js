@@ -8,6 +8,7 @@ import accordionsJS from '../wmcads/components/accordion/_example';
 import boardMembersJS from '../wmcads/patterns/board-members/_example';
 import searchFilterJs from '../wmcads/patterns/search/search-filter/_example';
 import feedbackLoopsJS from '../wmcads/patterns/feedback-loop/_example';
+import cardsJs from '../wmcads/components/content-card/_example';
 
 import { componentExample, componentExampleIframe } from './_partials/component-example';
 
@@ -38,5 +39,6 @@ window.addEventListener(
   searchFilterJs(),
   feedbackLoopsJS(),
   componentExampleIframe(),
+  cardsJs(),
   componentExample)
 );
