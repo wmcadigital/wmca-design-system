@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-tag {
   display: inline-block;
   position: relative;

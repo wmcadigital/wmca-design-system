@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-inset-text {
   box-sizing: border-box;
   display: inline-block;

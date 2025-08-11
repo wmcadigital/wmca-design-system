@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-portfolio-leads {
   display: block;
   padding: 15px;

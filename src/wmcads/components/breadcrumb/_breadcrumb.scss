@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-breadcrumb {
   padding: $size-md 0;
   background: transparent;

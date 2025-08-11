@@ -1,3 +1,6 @@
+@use "../../sass/shared/mixins" as *;
+@use "../../sass/shared/vars" as *;
+
 // Get rid of margin for the first header item in main content
 [class*="ds-"] {
   div,

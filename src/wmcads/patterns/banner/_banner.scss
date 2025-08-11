@@ -1,4 +1,6 @@
-@import "./homepage-banner/homepage-banner";
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+@use "./homepage-banner/homepage-banner";
 
 .ds-banner-container {
   $self: &;

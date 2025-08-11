@@ -1,29 +1,29 @@
 // This file is imported from ./assets/sass/ds-components.scss
 
-@import "accordion/accordion"; // accordion
-@import "breadcrumb/breadcrumb"; // breadcrumb
-@import "button/button"; // buttons
-@import "content-card/content-card"; // content cards
-@import "details/details"; // details
-@import "divider/divider"; // divider
-@import "file-download/file-download"; // File download
-@import "form-elements/form-elements"; // Form elements
-@import "inset-text/inset-text"; // Inset text
-@import "images/images"; // images
-@import "inclusive-growth-doughnut/inclusive-growth-doughnut"; // Inclusive growth doughnut
-@import "in-text-step/in-text-step"; // In-text step
-@import "link/link"; // Link elements
-@import "lists/bare-list/bare-list"; // Bare list elements
-@import "lists/ordered-list/ordered-list"; // Ordered list elements
-@import "lists/unordered-list/unordered-list"; // Unordered list elements
-@import "loader/loader"; // Loader
-@import "message/message"; // Messages
-@import "page-contents/page-contents"; // Page contents
-@import "page-header/page-header"; // Page header
-@import "phase-indicator/phase-indicator"; // Phase indicator
-@import "portfolio-leads/portfolio-leads"; // Portfolio leads
-@import "share/share"; // Share
-@import "table/table"; // Table
-@import "tag/tag"; // Tag
-@import "video-embed/video-embed"; // Video embed
-@import "warning-text/warning-text"; // Warning Text
+@use "accordion/accordion"; // accordion
+@use "breadcrumb/breadcrumb"; // breadcrumb
+@use "button/button"; // buttons
+@use "content-card/content-card"; // content cards
+@use "details/details"; // details
+@use "divider/divider"; // divider
+@use "file-download/file-download"; // File download
+@use "form-elements/form-elements"; // Form elements
+@use "inset-text/inset-text"; // Inset text
+@use "images/images"; // images
+@use "inclusive-growth-doughnut/inclusive-growth-doughnut"; // Inclusive growth doughnut
+@use "in-text-step/in-text-step"; // In-text step
+@use "link/link"; // Link elements
+@use "lists/bare-list/bare-list"; // Bare list elements
+@use "lists/ordered-list/ordered-list"; // Ordered list elements
+@use "lists/unordered-list/unordered-list"; // Unordered list elements
+@use "loader/loader"; // Loader
+@use "message/message"; // Messages
+@use "page-contents/page-contents"; // Page contents
+@use "page-header/page-header"; // Page header
+@use "phase-indicator/phase-indicator"; // Phase indicator
+@use "portfolio-leads/portfolio-leads"; // Portfolio leads
+@use "share/share"; // Share
+@use "table/table"; // Table
+@use "tag/tag"; // Tag
+@use "video-embed/video-embed"; // Video embed
+@use "warning-text/warning-text"; // Warning Text

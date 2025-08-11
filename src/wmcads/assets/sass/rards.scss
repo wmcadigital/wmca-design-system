@@ -1,21 +1,20 @@
 // Vars
 $ds: "rards";
-@import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
-@import "shared/vars";
-@import "rar/vars";
+@use "shared/vars" as *;
+@use "rar/rar-vars" as *;
 // Mixins
-@import "shared/mixins";
+@use "shared/mixins" as *;
 
 // Global styles
-@import "shared/utilities";
-@import "shared/typography";
-@import "shared/general";
+@use "shared/utilities" as *;
+@use "shared/typography" as *;
+@use "shared/general" as *;
 
 // Grid
-@import "shared/ds-grid/ds-grid";
+@use "shared/ds-grid/ds-grid" as *;
 
 // Component Styles
-@import "../../components/components"; // Import all pattern styles
+@use "../../components/components" as *; // Import all pattern styles
 
 // Pattern Styles
-@import "../../patterns/patterns"; // Import all pattern styles
+@use "../../patterns/patterns" as *; // Import all pattern styles

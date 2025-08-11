@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-autocomplete {
   // The container for autocomplete
   display: inline-block;

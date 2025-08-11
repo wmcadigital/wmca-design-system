@@ -1,3 +1,5 @@
+@use "shared/vars" as *;
+
 .ds-bare-list {
   list-style: none;
   padding-inline-start: $size-xs;

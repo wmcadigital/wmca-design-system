@@ -1,13 +1,12 @@
 // Vars
-@import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
-@import "../shared/vars";
-@import "../wmca/vars";
+@use "../shared/vars";
+@use "../wmca/vars";
 
 // Mixins
-@import "../shared/mixins";
+@use "../shared/mixins";
 
 
 // Accorddion Styles
 .umb-grid {
-  @import "../../../components/accordion/accordion";
+  @use "../../../components/accordion/accordion";
 }

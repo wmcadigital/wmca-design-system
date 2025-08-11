@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-video-embed {
   position: relative;
   max-width: 100%;

@@ -1,3 +1,5 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
 $border: #979797;
 
 .ds-table {

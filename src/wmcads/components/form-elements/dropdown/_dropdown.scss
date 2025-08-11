@@ -1,3 +1,7 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+$ds: null !default;
+
 .ds-fe-dropdown {
   position: relative;
 

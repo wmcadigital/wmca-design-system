@@ -1,3 +1,17 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+@use "label/label";
+@use "checkboxes/checkboxes";
+@use "date-input/date-input";
+@use "dropdown/dropdown";
+@use "error-message/error-message";
+@use "file-upload/file-upload";
+@use "form-label/form-label";
+@use "input/input";
+@use "question/question";
+@use "radios/radios";
+@use "textarea/textarea";
+
 .ds-fe {
   &-group {
     margin-bottom: $size-xl;
@@ -25,15 +39,3 @@
     }
   }
 }
-
-@import "label/label";
-@import "checkboxes/checkboxes";
-@import "date-input/date-input";
-@import "dropdown/dropdown";
-@import "error-message/error-message";
-@import "file-upload/file-upload";
-@import "form-label/form-label";
-@import "input/input";
-@import "question/question";
-@import "radios/radios";
-@import "textarea/textarea";

@@ -1,11 +1,11 @@
 // Vars
-@import "../shared/vars";
-@import "../wmca/vars";
+@use "../shared/vars";
+@use "../wmca/vars";
 
 // Mixins
-@import "../shared/mixins";
+@use "../shared/mixins";
 
 // Image Styles
 .umb-grid {
-  @import "../../../components/file-download/file-download"; // Import file download styles
+  @use "../../../components/file-download/file-download"; // Import file download styles
 }

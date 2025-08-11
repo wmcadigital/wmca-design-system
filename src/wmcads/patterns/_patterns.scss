@@ -1,12 +1,12 @@
 // This file is imported from ./assets/sass/ds-components.scss
 
-@import "autocomplete/autocomplete"; // Autocomplete
-@import "banner/banner"; // Banner styles
-@import "hub-page-banner/hub-page-banner"; // Hub page banner
-@import "board-members/board-members"; // Board members
-@import "branded-banner/branded-banner";
-@import "cookies/cookies"; // Cookies styles
-@import "feedback-loop/feedback-loop"; // Feedback loop
-@import "footer/footer"; // Footer styles
-@import "header-v2/header-v2"; // Header styles
-@import "search/search"; // Search pattern styles
+@use "autocomplete/autocomplete"; // Autocomplete
+@use "banner/banner"; // Banner styles
+@use "hub-page-banner/hub-page-banner"; // Hub page banner
+@use "board-members/board-members"; // Board members
+@use "branded-banner/branded-banner";
+@use "cookies/cookies"; // Cookies styles
+@use "feedback-loop/feedback-loop"; // Feedback loop
+@use "footer/footer"; // Footer styles
+@use "header-v2/header-v2"; // Header styles
+@use "search/search"; // Search pattern styles

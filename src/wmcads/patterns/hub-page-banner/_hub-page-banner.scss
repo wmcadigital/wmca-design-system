@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-hub-page-banner {
   position: relative;
   color: $white;
@@ -5,6 +8,22 @@
 
   .ds-hub-page-banner__svg-background {
     fill: get-color(primary);
+  }
+
+  &--alt {
+    background-color: get-color(backgroundAlt);
+
+    .ds-hub-page-banner__svg-background {
+      fill: get-color(backgroundAlt);
+    }
+  }
+
+  &--alt-steel-blue {
+    background-color: get-color(backgroundSteelBlue);
+
+    .ds-hub-page-banner__svg-background {
+      fill: get-color(backgroundSteelBlue);
+    }
   }
 
   &__copy {

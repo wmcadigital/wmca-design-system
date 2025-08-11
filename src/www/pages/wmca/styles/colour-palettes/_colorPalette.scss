@@ -1,3 +1,7 @@
+@use "../../../../../wmcads/assets/sass/shared/vars" as *;
+@use "../../../../../wmcads/assets/sass/wmca/wmca-vars" as *;
+@use "../../../../../wmcads/assets/sass/shared/mixins" as *;
+
 $cp-swatch-height: 50px;
 
 .ds-website-color-swatch {

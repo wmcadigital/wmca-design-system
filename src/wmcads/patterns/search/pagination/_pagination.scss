@@ -1,3 +1,6 @@
+@use "shared/vars" as *;
+@use "shared/mixins" as *;
+
 .ds-pagination {
   display: flex;
   justify-content: space-between;
