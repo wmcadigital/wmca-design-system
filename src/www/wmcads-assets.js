@@ -1,6 +1,4 @@
 import * as polyfills from './assets/vendor/js/polyfills/polyfills';
-import colorPalettes from './pages/styles/colour-palettes/_color-palettes';
-import aToZContentStyleGuide from './pages/styles/a-to-z-content-style-guide/_a-to-z-content-style-guide';
 import headerJs from '../wmcads/patterns/header-v2/_example';
 import footerJs from '../wmcads/patterns/footer/_example';
 import accordionsJS from '../wmcads/components/accordion/_example';
@@ -26,13 +24,5 @@ const icons = () => {
 
 window.addEventListener(
   'DOMContentLoaded',
-  (polyfills,
-  icons(),
-  aToZContentStyleGuide(),
-  colorPalettes(),
-  headerJs(),
-  footerJs(),
-  accordionsJS(),
-  boardMembersJS(),
-  searchFilterJs())
+  (polyfills, icons(), headerJs(), footerJs(), accordionsJS(), boardMembersJS(), searchFilterJs())
 );
