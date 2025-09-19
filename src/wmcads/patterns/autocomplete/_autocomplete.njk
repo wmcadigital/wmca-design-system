@@ -15,6 +15,8 @@
 {% set isRequired = params.isRequired if params.isRequired else false %}
 {% set selected = params.selected if params.selected else false %}
 {% set selectedItem = params.selectedItem if params.selectedItem else 'Selected item' %}
+{% set hideLabel = params.hideLabel if params.hideLabel else false %}
+{% set hideLabelClass = true if hideLabel else "" %}
 
 {# Label #}
 {% if not params.hideLabel %}
@@ -22,7 +24,7 @@
   wmcadsFormLabel({
     for: id,
     contentText: label,
-    classes: params.label.classes
+    classes: hideLabelClass
   })
 }}
 {% endif %}
