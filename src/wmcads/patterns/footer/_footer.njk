@@ -51,7 +51,7 @@
   <div class="wmcads-footer{{appClass}} wmcads-footer--v2">
     <div class="wmcads-container wmcads-grid">
       <div class="wmcads-col-1 wmcads-col-lg-1-3 wmcads-footer__updates-col">
-        <h3 class="wmcads-footer__heading">Stay up to date</h3>
+        <h2 class="wmcads-footer__heading h3">Stay up to date</h2>
         <p>Don’t miss out on vital information, subscribe today and be in the know at all times.</p>
         <a href="#" class="wmcads-btn wmcads-footer__btn wmcads-footer__btn--block">Sign up to updates</a>
       </div>
@@ -59,12 +59,12 @@
       {% if(params.menu1) %}
       {% set menu1Name = params.menu1.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
         <div class="wmcads-col-1 wmcads-col-lg-1-3">
-          <h3 class="wmcads-footer__heading wmcads-collapse-heading" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
+          <h2 class="wmcads-footer__heading wmcads-collapse-heading h3" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
             {{params.menu1.name}}
             <button class="wmcads-footer__collapse-button">
               {{wmcadsIcon({class: 'wmcads-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
             </button>
-          </h3>
+          </h2>
           <ul class="wmcads-footer__menu wmcads-collapse-panel" id="footer-menu-{{menu2Name}}">
           {% for menuItem in params.menu1.menuItems-%}
             <li><a class="wmcads-footer__link" href="#">{{menuItem.name}}</a></li>
@@ -75,18 +75,18 @@
       {% if(params.menu2) %}
       {% set menu2Name = params.menu2.name | replace(r/[^\w\ ]/gi, '') | replace(' ', '-') | lower %}
         <div class="wmcads-col-1 wmcads-col-lg-1-3">
-          <h3 class="wmcads-footer__heading wmcads-collapse-heading" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
+          <h2 class="wmcads-footer__heading wmcads-collapse-heading h3" aria-controls="footer-menu-{{menu2Name}}" aria-expanded="true">
             {{params.menu2.name}}
             <button class="wmcads-footer__collapse-button">
               {{wmcadsIcon({class: 'wmcads-collapse-heading__indicator', icon: 'general-chevron-right'}) | trim}}
             </button>
-          </h3>
+          </h2>
           <ul class="wmcads-footer__menu wmcads-collapse-panel" id="footer-menu-{{menu2Name}}">
           {% for menuItem in params.menu2.menuItems-%}
             <li><a class="wmcads-footer__link" href="#">{{menuItem.name}}</a></li>
           {% endfor -%}
           </ul>
-          <h3 class="wmcads-footer__heading">Social media</h3>
+          <h2 class="wmcads-footer__heading h3">Social media</h2>
           <ul class="wmcads-footer__social-media">
             <li><a href="https://www.facebook.com/westmidlandsnetwork/" title="Facebook">{{wmcadsIcon({icon: 'social-facebook'}) | trim}}</a></li>
             <li><a href="https://twitter.com/WMNetwork" title="Twitter">{{wmcadsIcon({icon: 'social-twitter'}) | trim}}</a></li>
