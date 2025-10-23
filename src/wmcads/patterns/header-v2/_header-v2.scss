@@ -65,10 +65,14 @@ $header-height-mobile: 4rem;
 
     &:focus {
       position: static;
+      z-index: 1000;
       width: auto;
       height: auto;
       clip: auto;
-      box-shadow: none;
+      // outline: none;
+      color: $white;
+      background-color: get-color(cta);
+      box-shadow: 0 0 0 4px get-color(cta, 60%);
     }
   }
 

@@ -7,6 +7,7 @@ import footerJs from '../wmcads/patterns/footer/_example';
 import accordionsJS from '../wmcads/components/accordion/_example';
 import boardMembersJS from '../wmcads/patterns/board-members/_example';
 import searchFilterJs from '../wmcads/patterns/search/search-filter/_example';
+import htmlCleanup from './assets/js/htmlCleanup';
 
 import {
   componentExample,
@@ -41,5 +42,6 @@ window.addEventListener(
   searchFilterJs(),
   componentExampleIframe(),
   componentExampleScript(),
+  htmlCleanup(),
   componentExample)
 );
