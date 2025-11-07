@@ -1,10 +1,11 @@
-import * as polyfills from './assets/vendor/js/polyfills/polyfills';
+import './assets/vendor/js/polyfills/polyfills';
 import headerJs from '../wmcads/patterns/header-v2/_example';
 import footerJs from '../wmcads/patterns/footer/_example';
 import accordionsJS from '../wmcads/components/accordion/_example';
 import boardMembersJS from '../wmcads/patterns/board-members/_example';
 import searchFilterJs from '../wmcads/patterns/search/search-filter/_example';
 import htmlCleanup from './assets/js/htmlCleanup';
+import tableJS from '../wmcads/components/table/_example';
 
 const icons = () => {
   // Ajax SVG in, SVGS are referenced in app (Icon component)
@@ -23,14 +24,18 @@ const icons = () => {
   };
 };
 
-window.addEventListener(
-  'DOMContentLoaded',
-  (polyfills,
-  icons(),
-  headerJs(),
-  footerJs(),
-  accordionsJS(),
-  boardMembersJS(),
-  searchFilterJs(),
-  htmlCleanup())
-);
+window.addEventListener('DOMContentLoaded', () => {
+  try {
+    icons();
+    headerJs();
+    footerJs();
+    accordionsJS();
+    boardMembersJS();
+    searchFilterJs();
+    htmlCleanup();
+    tableJS();
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error('Error during DOMContentLoaded initialisation in wmcads-assets:', e);
+  }
+});

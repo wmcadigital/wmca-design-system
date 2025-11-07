@@ -115,11 +115,32 @@ const htmlCleanup = () => {
     }
   }
 
+  /**
+   * Replace non-breaking spaces (\u00A0 / &nbsp;) in all text nodes with regular spaces.
+   * This helps avoid layout and trimming issues caused by NBSP characters.
+   */
+  function removeNbsp(root = document) {
+    const treeWalker = document.createTreeWalker(
+      root.body || root,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+    let node = treeWalker.nextNode();
+    for (; node !== null; node = treeWalker.nextNode()) {
+      if (node.nodeValue && node.nodeValue.indexOf('\u00A0') !== -1) {
+        node.nodeValue = node.nodeValue.replace(/\u00A0/g, ' ');
+      }
+    }
+  }
+
   // Example usage: remove from entire document
+  removeNbsp();
   removeEmojis();
   removeEmptyHtmlAttributes();
   removeEmptyParagraphs();
   removeEmptyHeadings();
 };
 
-export default htmlCleanup();
+// Export the function itself so callers can decide when to run it
+export default htmlCleanup;
