@@ -1,12 +1,10 @@
 // Vars
 @use "../shared/vars";
-@use "../wmca/vars";
+@use "../wmca/wmca-vars";
 
 // Mixins
 @use "../shared/mixins";
 
 
 // Accorddion Styles
-.umb-grid {
-  @use "../../../components/accordion/accordion";
-}
+@use "../../../components/accordion/accordion";

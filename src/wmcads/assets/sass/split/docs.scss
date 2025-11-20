@@ -5,7 +5,6 @@
 // Mixins
 @use "../shared/mixins";
 
-// Image Styles
-.umb-grid {
-  @use "../../../components/file-download/file-download"; // Import file download styles
-}
+// Image Styles.umb-grid {
+@use "../../../components/file-download/file-download"; // Import file download styles
+

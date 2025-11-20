@@ -6,10 +6,8 @@
 @use "../shared/mixins";
 
 // Image Styles
-.umb-grid {
-  @use "../../../components/images/images"; // Import image styles
-  // Import grid components
-  @use "../shared/ds-grid/grid";
-  @use "../shared/ds-grid/grid-cols";
-  @use "../shared/ds-grid/grid-spacing";
-}
+@use "../../../components/images/images"; // Import image styles
+// Import grid components
+@use "../shared/ds-grid/grid";
+@use "../shared/ds-grid/grid-cols";
+@use "../shared/ds-grid/grid-spacing";

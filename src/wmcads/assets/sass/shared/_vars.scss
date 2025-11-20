@@ -1,27 +1,6 @@
 $white: #ffffff;
 $black: #000000;
 
-// FONT-FACE
-@font-face {
-  font-family: "Noto Sans Display";
-  font-style: normal;
-  font-weight: normal;
-  // sass-lint:disable-block indentation
-  src: url("../fonts/notosansdisplay-regular-webfont.woff2") format("woff2"),
-    url("../fonts/notosansdisplay-regular-webfont.woff") format("woff");
-  // sass-lint:enable indentation
-}
-
-@font-face {
-  font-family: "Noto Sans Display Bold";
-  font-style: normal;
-  font-weight: bold;
-  // sass-lint:disable-block indentation
-  src: url("../fonts/notosansdisplay-bold-webfont.woff2") format("woff2"),
-    url("../fonts/notosansdisplay-bold-webfont.woff") format("woff");
-  // sass-lint:enable indentation
-}
-
 // TEXT
 $text-color: $black;
 $x-font-family: "Noto Sans Display", sans-serif;

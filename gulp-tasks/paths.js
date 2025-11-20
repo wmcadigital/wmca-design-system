@@ -24,15 +24,17 @@ module.exports = {
       'src/www/assets/sass/rards-website.scss',
       'src/www/pages/wmca/templates/templates.scss',
       'src/www/pages/cia/templates/cia-templates.scss',
-      'src/wmcads/assets/sass/shared/ds-grid/grid.scss',
-      'src/wmcads/assets/sass/split/buttons.scss',
-      'src/wmcads/assets/sass/split/accordion.scss',
-      'src/wmcads/assets/sass/split/typography.scss',
-      'src/wmcads/assets/sass/split/images.scss',
-      'src/wmcads/assets/sass/split/docs.scss'
+      'src/wmcads/assets/sass/shared/ds-grid/grid.scss'
     ], // List of scss file(s) which should be processed, linted & minified
     output: 'build/css/', // output location of minified styles
-    reactNativeSrc: 'src/wmcads/assets/sass/wmcads.scss'
+    reactNativeSrc: 'src/wmcads/assets/sass/wmcads.scss',
+    // Individual component source files (each component partial is named with a leading underscore)
+    componentsSrc: 'src/wmcads/components/**/_*.scss',
+    componentsOutput: 'build/css/components'
+    ,
+    // Patterns (individual pattern partials)
+    patternsSrc: 'src/wmcads/patterns/**/_*.scss',
+    patternsOutput: 'build/css/patterns'
   },
   scripts: {
     src: ['src/**/*.js'], // Src of JS files to watch

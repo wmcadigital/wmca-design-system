@@ -4,7 +4,12 @@ const paths = require('./gulp-tasks/paths'); // List of all paths in a config
 
 // STYLES
 const lintStyles = require('./gulp-tasks/lint-styles'); // Lint styles
-const { buildStyles, buildReactNativeStyles } = require('./gulp-tasks/build-styles'); // Build Styles
+const {
+  buildStyles,
+  buildReactNativeStyles,
+  buildComponentStyles,
+  buildPatternStyles
+} = require('./gulp-tasks/build-styles'); // Build Styles
 
 const buildFonts = () => src(paths.fonts.src).pipe(dest(paths.fonts.output)); // move font files to build
 
@@ -44,7 +49,7 @@ function watchFiles() {
   // watch(paths.nunjucks.output, formatNjk); // Format Nunjucks src files if change is detected in build folder (this is to stop watch looping, if inserted in above watcher)
   watch(paths.images.src, series(moveImages, reload)); // If new images are found, move to build folder
   watch(paths.svgs.src, series(buildSprites, reload));
-  watch(paths.styles.src, series(buildStyles, lintStyles)); // run buildStyles function on scss change(s)
+  watch(paths.styles.src, series(buildStyles, buildComponentStyles, buildPatternStyles, lintStyles)); // run buildStyles and individual component/pattern builds on scss change(s)
   watch(paths.config.src, series(buildConfig, reload)); // Reload when config folder changes
 }
 
@@ -57,6 +62,8 @@ const buildAll = series(
   moveImages,
   minImages,
   buildStyles,
+    buildComponentStyles,
+    buildPatternStyles,
   buildFonts,
   buildReactNativeStyles,
   buildJSONForTemplates,
@@ -79,6 +86,8 @@ const serve = series(
   buildJSONForTemplates,
   parallel(
     buildStyles,
+  buildComponentStyles,
+  buildPatternStyles,
     buildFonts,
     buildReactNativeStyles,
     buildTemplates,
@@ -110,3 +119,7 @@ exports.buildConfig = buildConfig;
 exports.buildSprites = buildSprites;
 exports.minImages = series(minImages, moveImages);
 exports.buildAll = buildAll;
+// Export component styles task so it can be run individually
+exports.buildComponentStyles = buildComponentStyles;
+// Export pattern styles task so it can be run individually
+exports.buildPatternStyles = buildPatternStyles;
