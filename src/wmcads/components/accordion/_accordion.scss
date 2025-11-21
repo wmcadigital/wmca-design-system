@@ -28,8 +28,10 @@
     padding-right: $size-md;
     vertical-align: middle;
 
+    h2,
     h4 {
       margin-top: 0;
+      color: get-color(text);
     }
   }
 
