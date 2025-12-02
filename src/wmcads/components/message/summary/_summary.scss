@@ -1,6 +1,3 @@
-@use "shared/vars" as *;
-@use "shared/mixins" as *;
-
 // These vars control icon size and the margin right from the icon. By setting here we can ensure the message_info stays indented by same amount as title.
 $ds-msg-icon-size: 35px;
 $ds-msg-icon-margin-right: $size-sm;

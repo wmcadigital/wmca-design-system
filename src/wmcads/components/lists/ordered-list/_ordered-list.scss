@@ -1,6 +1,3 @@
-@use "shared/vars" as *;
-@use "shared/mixins" as *;
-
 // Included the ol tag too incase dev forgets to add .ds-ordered-list class.
 // The ol:not([class*="ds-"]) line makes sure we don't target any wmcads components that are using the a tag such as the breadcrumbs
 

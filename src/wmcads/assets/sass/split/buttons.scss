@@ -1,11 +1,13 @@
 // Vars
-@use "../shared/vars" as *; // This makes all variables available without a namespace
-@use "../wmca/wmca-vars" as *;
+@import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
+@import "../shared/vars";
+@import "../wmca/vars";
 
 // Mixins
-@use "../shared/mixins";
+@import "../shared/mixins";
 
 
 // Button Styles
-@use "../../../components/button/button";
-
+.umb-grid {
+  @import "../../../components/button/button"; // Import all pattern styles
+}

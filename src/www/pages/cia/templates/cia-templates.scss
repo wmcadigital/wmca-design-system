@@ -1,15 +1,15 @@
 // Vars
-@use "../../../../wmcads/assets/sass/shared/vars" as *;
-@use "../../../../wmcads/assets/sass/cia/cia-vars" as *;
+@import "../../../../wmcads/assets/sass/shared/vars";
+@import "../../../../wmcads/assets/sass/cia/vars";
 
 // Mixins
-@use "../../../../wmcads/assets/sass/shared/mixins" as *;
+@import "../../../../wmcads/assets/sass/shared/mixins";
 
 // General styles
-@use "general";
+@import "general";
 
 // Template specific styles
-@use "area-selection/area"; // Area selection page
-@use "homepage/homepage"; // Homepage
-@use "search/search"; // Search page
-@use "newsroom/newsroom"; // Newsroom Search page
+@import "area-selection/area"; // Area selection page
+@import "homepage/homepage"; // Homepage
+@import "search/search"; // Search page
+@import "newsroom/newsroom"; // Newsroom Search page

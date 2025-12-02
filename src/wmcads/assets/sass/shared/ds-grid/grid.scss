@@ -1,11 +1,4 @@
-@use "../vars" as *;
-// Import grid components
-@use "grid-css-grid";
-@use "grid-cols";
-@use "grid-spacing";
-
-// Import utilities
-@use "../utilities";
+@import "../vars";
 
 // When setting the primary font stack, apply it to the Pure grid units along
 // with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
@@ -43,4 +36,12 @@
       vertical-align: top;
     }
   }
+
+  // Import grid components
+  @import "grid-css-grid";
+  @import "grid-cols";
+  @import "grid-spacing";
+
+  // Import utilities
+  @import "../utilities";
 }

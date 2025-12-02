@@ -32,7 +32,7 @@ const componentExampleIframe = () => {
           <head>
             <base href="${host}" target="_blank">
             <link rel="stylesheet" type="text/css" href="${host}/css/${brand}ds.min.css" />
-            <!-- <link rel="stylesheet" type="text/css" href="${host}/css/ds-website.min.css" /> -->
+            <link rel="stylesheet" type="text/css" href="${host}/css/ds-website.min.css" />
           </head>
           <body>
             <div class="ds-p-md ds-iframe-content">
@@ -40,6 +40,7 @@ const componentExampleIframe = () => {
               ${html || ''}
             </div>
             <script src="https://unpkg.com/iframe-resizer@3.5.7/js/iframeResizer.contentWindow.min.js"></script>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CObject.assign%2CString.prototype.includes%2CNumber.isNaN"></script>
             <script src="${host}/js/ds-website.min.js"></script>
           </body>
         </html>

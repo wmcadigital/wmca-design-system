@@ -1,6 +1,3 @@
-@use "shared/vars" as *;
-@use "shared/mixins" as *;
-
 .ds-feedback-loop {
   // Add full-width blue border on desktop large display
   @media all and (min-width: $breakpoint-xl) {

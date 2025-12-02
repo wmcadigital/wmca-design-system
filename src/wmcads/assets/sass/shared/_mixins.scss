@@ -1,7 +1,3 @@
-@use "../wmca/wmca-vars" as *;
-@use "vars" as *;
-@use "sass:color";
-@use "sass:map";
 // This is a helper which will spit out the correct height/width for any svgs within a heading tag
 // This is used to overwrite .wmnds-n-icon__svg class defaults in _n-icon.scss
 @mixin n-icon-styling($height-and-font-size: 1rem) {
@@ -71,12 +67,12 @@
 // get-color(primary, 50); by default it mixes with white
 // If you add dark to the end it will mix black instead of white
 // e.g. get-color(primary, 50, dark);
-
 @function get-color($color, $percent: 0%, $shade: $white) {
+  // If shade is null, then by default set to white else set to shade selected
   $shade: if($shade == dark, $black, $white);
-  $color: map.get($palettes, $color);
+  $color: map-get($palettes, $color);
 
-  @return color.mix($shade, $color, $percent);
+  @return mix($shade, $color, $percent);
 }
 
 // repeater() notes

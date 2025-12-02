@@ -1,11 +1,12 @@
 // Vars
-@use "../shared/vars";
-@use "../wmca/vars";
+@import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
+@import "../shared/vars";
+@import "../wmca/vars";
 
 // Mixins
-@use "../shared/mixins";
+@import "../shared/mixins";
 
 // Typography Styles
 .umb-grid {
-  @use "../shared/typography";
+  @import "../shared/typography";
 }

@@ -1,13 +1,15 @@
 // Vars
-@use "../shared/vars";
-@use "../wmca/vars";
+@import "../shared/vars";
+@import "../wmca/vars";
 
 // Mixins
-@use "../shared/mixins";
+@import "../shared/mixins";
 
 // Image Styles
-@use "../../../components/images/images"; // Import image styles
-// Import grid components
-@use "../shared/ds-grid/grid";
-@use "../shared/ds-grid/grid-cols";
-@use "../shared/ds-grid/grid-spacing";
+.umb-grid {
+  @import "../../../components/images/images"; // Import image styles
+  // Import grid components
+  @import "../shared/ds-grid/grid";
+  @import "../shared/ds-grid/grid-cols";
+  @import "../shared/ds-grid/grid-spacing";
+}

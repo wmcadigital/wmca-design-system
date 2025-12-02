@@ -1,5 +1,3 @@
-@use "../shared/vars" as *; // This makes all variables available without a namespace
-
 .ds-grid {
   & > * {
     box-sizing: border-box;

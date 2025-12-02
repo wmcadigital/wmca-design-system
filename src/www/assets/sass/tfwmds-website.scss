@@ -1,16 +1,16 @@
 // Vars
-@use "../../../wmcads/assets/sass/shared/vars" as *;
-@use "../../../wmcads/assets/sass/tfwm/tfwm-vars" as *;
+@import "../../../wmcads/assets/sass/shared/vars";
+@import "../../../wmcads/assets/sass/tfwm/vars";
 
 // Mixins
-@use "../../../wmcads/assets/sass/shared/mixins" as *;
+@import "../../../wmcads/assets/sass/shared/mixins";
 
-@use "../../_partials/component-example/component-example";
+@import "../../_partials/component-example/component-example";
 
 // Styleguide page specific styles
-@use "../../pages/home";
-@use "../../pages/wmca/styles/colour-palettes/colorPalette";
-@use "../../pages/wmca/styles/icons/icons";
+@import "../../pages/home";
+@import "../../pages/wmca/styles/colour-palettes/colorPalette";
+@import "../../pages/wmca/styles/icons/icons";
 
 .ds-website-inline-code {
   padding: $size-xs;

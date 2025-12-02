@@ -1,20 +1,21 @@
 // Vars
 $ds: "tfwmds";
-@use "shared/vars" as *;
-@use "tfwm/tfwm-vars" as *;
+@import "https://fonts.googleapis.com/css?family=DM+Sans:700&display=swap"; // Google Fonts
+@import "shared/vars";
+@import "tfwm/vars";
 // Mixins
-@use "shared/mixins" as *;
+@import "shared/mixins";
 
 // Global styles
-@use "shared/utilities" as *;
-@use "shared/typography" as *;
-@use "shared/general" as *;
+@import "shared/utilities";
+@import "shared/typography";
+@import "shared/general";
 
 // Grid
-@use "shared/ds-grid/ds-grid" as *;
+@import "shared/ds-grid/ds-grid";
 
 // Component Styles
-@use "../../components/components" as *; // Import all pattern styles
+@import "../../components/components"; // Import all pattern styles
 
 // Pattern Styles
-@use "../../patterns/patterns" as *; // Import all pattern styles
+@import "../../patterns/patterns"; // Import all pattern styles

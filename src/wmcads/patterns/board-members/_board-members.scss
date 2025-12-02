@@ -1,6 +1,3 @@
-@use "shared/vars" as *;
-@use "shared/mixins" as *;
-
 .ds-board-members {
   &-contents {
     border-right: 1px solid get-color(text);

@@ -1,17 +1,17 @@
 // Vars
-@use "../../../../wmcads/assets/sass/shared/vars" as *;
-@use "../../../../wmcads/assets/sass/wmca/wmca-vars" as *;
+@import "../../../../wmcads/assets/sass/shared/vars";
+@import "../../../../wmcads/assets/sass/wmca/vars";
 
 // Mixins
-@use "../../../../wmcads/assets/sass/shared/mixins" as *;
+@import "../../../../wmcads/assets/sass/shared/mixins";
 
 // General styles
-@use "general";
+@import "general";
 
 // Template specific styles
-@use "homepage/homepage"; // Homepage
-@use "campaign-one-column/campaign-template"; // Campaign page
-@use "content-one-column/content-template"; // Content page
-@use "content-two-columns/two-content-template"; // Content page
-@use "search/search"; // Search page
-@use "newsroom/newsroom"; // Newsroom Search page
+@import "homepage/homepage"; // Homepage
+@import "campaign-one-column/campaign-template"; // Campaign page
+@import "content-one-column/content-template"; // Content page
+@import "content-two-columns/content-template"; // Content page
+@import "search/search"; // Search page
+@import "newsroom/newsroom"; // Newsroom Search page

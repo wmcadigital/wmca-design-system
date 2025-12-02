@@ -1,6 +1,3 @@
-@use "shared/vars" as *;
-@use "shared/mixins" as *;
-
 .ds-search-result {
   border-bottom: 1px solid get-color(text, 40%);
 
