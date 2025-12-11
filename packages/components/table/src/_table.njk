@@ -1,0 +1,21 @@
+{# Nunjucks macro for table component #}
+{% macro table(columns, rows) %}
+<table class="wmc-table" role="table">
+  <thead>
+    <tr>
+    {% for col in columns %}
+      <th scope="col">{{ col }}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in rows %}
+      <tr>
+        {% for c in r %}
+          <td>{{ c }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endmacro %}

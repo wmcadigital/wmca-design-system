@@ -1,0 +1,92 @@
+// Page contents component styles (copied and trimmed from src)
+.wmc-page-contents {
+  margin: 0;
+  padding: 0;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  &__item {
+    padding: 0.25rem 0;
+    color: get-color(text);
+    font-size: $size-sm;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .wmc-page-contents {
+      &__item { font-size: $size-md; }
+    }
+  }
+}
+.ds-page-contents {
+  position: sticky;
+  top: 0;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom: 3px solid $black;
+  background: $white;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: get-color(cta);
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  div {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid get-color(primary);
+  }
+
+  a {
+    display: block;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: wrap;
+  }
+
+  &--with-accordion {
+    div {
+      margin-bottom: 0;
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .current {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 3px solid get-color(primary);
+    }
+
+    .ds-accordion__summary-wrapper {
+      padding-top: 0.5rem;
+      padding-right: 0;
+      padding-bottom: 0.5rem;
+
+      .ds-accordion__icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .ds-accordion__content {
+      padding: 0;
+    }
+
+    ul {
+      li {
+        padding-left: $size-lg;
+
+        &.current {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Simplified phase-indicator styles for standalone package
+.wmc-phase-indicator {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-family: $font-family-base;
+
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &--complete { color: get-color(success); }
+    &--current { color: get-color(primary); font-weight: 600; }
+    &--upcoming { color: get-color(neutral); }
+
+    &__dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background: currentColor;
+      flex: 0 0 auto;
+    }
+
+    &__label { font-size: $size-sm; }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .wmc-phase-indicator { gap: 1rem; }
+  }
+}

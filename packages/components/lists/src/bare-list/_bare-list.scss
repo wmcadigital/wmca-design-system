@@ -1,0 +1,10 @@
+.ds-bare-list {
+  list-style: none;
+  padding-inline-start: $size-xs;
+
+  a,
+  .ds-link {
+    display: inline;
+  }
+
+}

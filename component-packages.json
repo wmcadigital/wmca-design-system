@@ -1,0 +1,199 @@
+{
+  "button": {
+    "files": [
+      "src/wmcads/components/button/_button.scss"
+    ],
+    "description": "Button styles (SCSS source) from WMCA design system"
+  }
+  ,
+  "accordion": {
+    "files": [
+      "src/wmcads/components/accordion/_accordion.scss",
+      "src/wmcads/components/accordion/_example.js"
+    ],
+    "description": "Accordion styles and JS from WMCA design system"
+  }
+  ,
+  "breadcrumb": {
+    "files": [
+      "src/wmcads/components/breadcrumb/_breadcrumb.scss"
+    ],
+    "description": "Breadcrumb styles (SCSS source) from WMCA design system"
+  }
+  ,
+  "content-card": {
+    "files": [
+      "src/wmcads/components/content-card/_content-card.scss",
+      "src/wmcads/components/content-card/_example.js"
+    ],
+    "description": "Content card styles and example JS from WMCA design system"
+  }
+  ,
+  "details": {
+    "files": [
+      "src/wmcads/components/details/_details.scss"
+    ],
+    "description": "Details styles (SCSS source) from WMCA design system"
+  }
+  ,
+  "disruption-indicator": {
+    "files": [
+      "src/wmcads/components/disruption-indicator/_disruption-indicator.scss",
+      "src/wmcads/components/disruption-indicator/small/_small.scss",
+      "src/wmcads/components/disruption-indicator/medium/_medium.scss",
+      "src/wmcads/components/disruption-indicator/large/_large.scss"
+    ],
+    "description": "Disruption indicator component partials (small, medium, large)"
+  }
+  ,
+  "divider": {
+    "files": [
+      "src/wmcads/components/divider/_divider.scss"
+    ],
+    "description": "Divider styles (SCSS source) from WMCA design system"
+  }
+  ,
+  "file-download": {
+    "files": [
+      "src/wmcads/components/file-download/_file-download.scss"
+    ],
+    "description": "File download component styles (SCSS source) from WMCA design system"
+  }
+  ,
+  "form-elements": {
+    "files": [
+      "src/wmcads/components/form-elements/_form-elements.scss",
+      "src/wmcads/components/form-elements/label/_label.scss",
+      "src/wmcads/components/form-elements/checkboxes/_checkboxes.scss",
+      "src/wmcads/components/form-elements/date-input/_date-input.scss",
+      "src/wmcads/components/form-elements/dropdown/_dropdown.scss",
+      "src/wmcads/components/form-elements/error-message/_error-message.scss",
+      "src/wmcads/components/form-elements/file-upload/_file-upload.scss",
+      "src/wmcads/components/form-elements/form-label/_form-label.scss",
+      "src/wmcads/components/form-elements/input/_input.scss",
+      "src/wmcads/components/form-elements/question/_question.scss",
+      "src/wmcads/components/form-elements/radios/_radios.scss",
+      "src/wmcads/components/form-elements/textarea/_textarea.scss"
+    ],
+    "description": "Form elements collection (label, inputs, radios, checkboxes, etc.)"
+  }
+  ,
+    "page-contents": {
+      "package": "packages/components/page-contents",
+      "src": "src/wmcads/components/page-contents/_page-contents.scss",
+      "njk": "src/wmcads/components/page-contents/_page-contents.njk"
+    },
+    "page-header": {
+      "package": "packages/components/page-header",
+      "src": "src/wmcads/components/page-header/_page-header.scss",
+      "njk": "src/wmcads/components/page-header/_page-header.njk"
+    },
+  "hub-header": {
+    "files": [
+      "src/wmcads/components/hub-header/_hub-header.scss",
+      "src/wmcads/components/hub-header/_hub-header.njk"
+    ],
+    "description": "Hub header component (SCSS and Nunjucks partial)"
+  }
+  ,
+  "file-download": {
+    "files": [
+      "src/wmcads/components/file-download/_file-download.scss"
+    ],
+    "description": "File download component styles (SCSS source) from WMCA design system"
+  }
+  ,
+  "icon": {
+    "files": [
+      "src/wmcads/components/icon/_icon.njk"
+    ],
+    "description": "Icon macro (Nunjucks) used across components"
+  }
+  ,
+  "images": {
+    "files": [
+      "src/wmcads/components/images/_images.scss",
+      "src/wmcads/components/images/_images.njk",
+      "src/wmcads/components/images/_image-with-summary.njk"
+    ],
+    "description": "Images component styles and Nunjucks macros"
+  }
+  ,
+  "in-text-step": {
+    "files": [
+      "src/wmcads/components/in-text-step/_in-text-step.scss",
+      "src/wmcads/components/in-text-step/_in-text-step.njk"
+    ],
+    "description": "In-text step component (SCSS and Nunjucks macro)"
+  }
+  ,
+  "link": {
+    "files": [
+      "src/wmcads/components/link/_link.scss",
+      "src/wmcads/components/link/link/_link.scss",
+      "src/wmcads/components/link/link/_link.njk"
+    ],
+    "description": "Link component styles and Nunjucks macro"
+  }
+  ,
+  "lists": {
+    "files": [
+      "src/wmcads/components/lists/bare-list/_bare-list.scss",
+      "src/wmcads/components/lists/bare-list/_bare-list.njk",
+      "src/wmcads/components/lists/unordered-list/_unordered-list.scss",
+      "src/wmcads/components/lists/unordered-list/_unordered-list.njk",
+      "src/wmcads/components/lists/ordered-list/_ordered-list.scss",
+      "src/wmcads/components/lists/ordered-list/_ordered-list.njk"
+    ],
+    "description": "Lists components (bare, unordered, ordered)"
+  }
+  ,
+  "loader": {
+    "files": [
+      "src/wmcads/components/loader/_loader.scss",
+      "src/wmcads/components/loader/_loader.njk"
+    ],
+    "description": "Loader component (SCSS and Nunjucks macro)"
+  }
+  ,
+  "message": {
+    "files": [
+      "src/wmcads/components/message/_message.scss",
+      "src/wmcads/components/message/summary/_summary.scss",
+      "src/wmcads/components/message/summary/_summary.njk",
+      "src/wmcads/components/message/help/_help.scss",
+      "src/wmcads/components/message/help/_help.njk"
+    ],
+    "description": "Message components (summary, help)"
+  }
+  ,
+  "phase-indicator": {
+    "package": "packages/components/phase-indicator",
+    "src": "src/wmcads/components/phase-indicator/_phase-indicator.scss",
+    "njk": "src/wmcads/components/phase-indicator/_phase-indicator.njk"
+  }
+  ,
+  "share": {
+    "package": "packages/components/share",
+    "src": "src/wmcads/components/share/_share.scss",
+    "njk": "src/wmcads/components/share/_share.njk"
+  }
+  ,
+  "tag": {
+    "package": "packages/components/tag",
+    "src": "src/wmcads/components/tag/_tag.scss",
+    "njk": "src/wmcads/components/tag/_tag.njk"
+  }
+  ,
+  "video-embed": {
+    "package": "packages/components/video-embed",
+    "src": "src/wmcads/components/video-embed/_video-embed.scss",
+    "njk": "src/wmcads/components/video-embed/_video-embed.njk"
+  }
+  ,
+  "warning-text": {
+    "package": "packages/components/warning-text",
+    "src": "src/wmcads/components/warning-text/_warning-text.scss",
+    "njk": "src/wmcads/components/warning-text/_warning-text.njk"
+  }
+}

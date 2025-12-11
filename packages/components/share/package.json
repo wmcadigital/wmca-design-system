@@ -1,0 +1,22 @@
+{
+  "name": "@wmcadigital/components/share",
+  "version": "0.1.0",
+  "description": "Share component (SCSS and Nunjucks) from WMCA design system",
+  "main": "dist/share.min.css",
+  "style": "dist/share.min.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build:css": "sass src/_package.scss dist/share.min.css --no-source-map --style=compressed --load-path=../../src/wmcads/assets/sass/shared --load-path=../../src/wmcads/assets/sass/wmca",
+    "build:njk": "mkdir -p dist && cp src/_share.njk dist/share.njk || true",
+    "build": "npm run build:css && npm run build:njk",
+    "prepare": "npm run build"
+  },
+  "keywords": ["wmca","design-system","share","css","nunjucks"],
+  "author": "WMCA",
+  "license": "MIT",
+  "publishConfig": {"access":"public"},
+  "devDependencies": {"sass":"^1.32.0"}
+}

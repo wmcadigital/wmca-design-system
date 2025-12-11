@@ -1,0 +1,22 @@
+{
+  "name": "@wmcadigital/components/page-contents",
+  "version": "0.1.0",
+  "description": "Page contents component (SCSS and Nunjucks) from WMCA design system",
+  "main": "dist/page-contents.min.css",
+  "style": "dist/page-contents.min.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build:css": "sass src/_package.scss dist/page-contents.min.css --no-source-map --style=compressed --load-path=../../src/wmcads/assets/sass/shared --load-path=../../src/wmcads/assets/sass/wmca",
+    "build:njk": "mkdir -p dist && cp src/_page-contents.njk dist/page-contents.njk || true",
+    "build": "npm run build:css && npm run build:njk",
+    "prepare": "npm run build"
+  },
+  "keywords": ["wmca","design-system","page-contents","css","nunjucks"],
+  "author": "WMCA",
+  "license": "MIT",
+  "publishConfig": {"access":"public"},
+  "devDependencies": {"sass":"^1.32.0"}
+}

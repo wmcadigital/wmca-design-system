@@ -1,0 +1,21 @@
+{
+  "name": "@wmcadigital/components/button",
+  "version": "1.5.0",
+  "description": "Button styles from WMCA design system",
+  "main": "dist/buttons.min.css",
+  "style": "dist/buttons.min.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "sass src/_package.scss dist/buttons.min.css --no-source-map --style=compressed --load-path=../../src/wmcads/assets/sass/shared --load-path=../../src/wmcads/assets/sass/wmca",
+    "prepare": "npm run build"
+  },
+  "keywords": ["wmca", "design-system", "button", "css"],
+  "author": "WMCA",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}

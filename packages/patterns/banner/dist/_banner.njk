@@ -1,0 +1,90 @@
+{% raw %}
+{% macro wmcadsBanner(params) %}
+{# Imports #}
+{% from "wmcads/components/phase-indicator/_phase-indicator.njk" import wmcadsPhaseIndicator %}
+{% from "wmcads/components/link/link/_link.njk" import wmcadsLink %}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+
+{# Set vars #}
+{% set link = params.link if params.link %}
+{% set linkTitle = params.linkTitle if params.linkTitle %}
+{% set contentText = params.contentText if params.contentText else "This is a new service - your feedback will help us to improve it." %}
+{% set contentHTML = params.contentHTML if params.contentHTML else null %}
+{% set _content = contentHTML | safe if contentHTML else contentText %} {# change content based on what user has input #}
+{# Emergency vars #}
+{% set emergencyModifier = " ds-banner-container--emergency" if params.emergency %}
+{% set emergencyTitle = params.emergencyTitle or "Emergency notification title" %}
+{% set titleColClass = "ds-col-xl-20-24" if params.onPage else "ds-col-xl-10-24" %}
+
+
+<div class="ds-banner-container{{emergencyModifier}}">
+   {% if params.emergency -%}
+   <div class="ds-container ds-grid ds-grid--align-center">
+      <div class="ds-col-xl-1-24 ds-col-1-2 ds-banner-container__emergency-icon-col">
+      {{
+         wmcadsIcon({
+            class: "ds-banner-container__emergency-icon-error",
+            icon: "general-warning-triangle"
+         })
+      }}
+      </div>
+      <div class="{{titleColClass}} ds-col-1 ds-banner-container__emergency-title-col">
+         <h2 class="ds-h4 ds-m-b-none">{{_content}}</h2>
+      </div>
+      {% if not params.onPage -%}
+      <div class="ds-col-xl-10-24 ds-col-1 ds-banner-container__emergency-link-col">
+         <a href="#" target="_self" class="ds-link ds-banner-container__emergency-link">
+            Read our latest advice
+            {{
+               wmcadsIcon({
+                  class: "ds-banner-container__emergency-icon ds-m-l-sm",
+                  icon: "general-chevron-right"
+               })
+            }}
+         </a>
+      </div>
+      {%- endif %}
+      <div class="ds-col-xl-3-24 ds-col-1-2 ds-banner-container__emergency-close-col">
+         <button class="ds-banner-container__emergency-close">
+         Close
+         {{
+            wmcadsIcon({
+               class: "ds-banner-container__emergency-icon ds-m-l-sm",
+               icon: "general-cross"
+            })
+         }}
+         </button>
+      </div>
+   </div>
+   {% else -%}
+   <div class="ds-col-1">
+      {% if params.phase -%}
+      <div class="ds-banner-container__phase-wrapper">
+         {{
+            wmcadsPhaseIndicator({
+               indicatorText: params.phaseText
+            })
+         }}
+      </div>
+      {% endif -%}
+      {#- Banner content -#}
+      {% if params.html -%}
+      {{- html | safe -}}
+      {%- else -%}
+      <p class="ds-banner-container__text">
+         This is a new service - your
+         {{ wmcadsLink({
+               contentText: 'feedback',
+               link: link,
+               linkTitle: linkTitle,
+               linkTarget: '_blank'
+            })
+         }}
+         will help us to improve it.
+      </p>
+      {%- endif %}
+   </div>
+   {%- endif %}
+</div>
+{% endmacro %}
+{% endraw %}

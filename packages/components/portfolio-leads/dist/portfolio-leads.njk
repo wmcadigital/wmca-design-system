@@ -1,0 +1,14 @@
+{# Nunjucks macro for portfolio leads #}
+{% macro portfolio_leads(leads) %}
+<div class="wmc-portfolio-leads">
+  {% for l in leads %}
+    <article class="wmc-portfolio-leads__card">
+      <div class="wmc-portfolio-leads__avatar" aria-hidden="true"></div>
+      <div class="wmc-portfolio-leads__body">
+        <h3 class="wmc-portfolio-leads__name">{{ l.name }}</h3>
+        <div class="wmc-portfolio-leads__meta">{{ l.role }}{% if l.contact %} — <a href="{{ l.contact }}">Contact</a>{% endif %}</div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+{% endmacro %}

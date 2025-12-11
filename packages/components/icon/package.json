@@ -1,0 +1,20 @@
+{
+  "name": "@wmcadigital/components/icon",
+  "version": "1.0.0",
+  "description": "Icon Nunjucks macro from WMCA design system",
+  "main": "dist/icon.njk",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "mkdir -p dist && cp src/_icon.njk dist/icon.njk",
+    "prepare": "npm run build"
+  },
+  "keywords": ["wmca", "design-system", "icon", "nunjucks"],
+  "author": "WMCA",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,57 @@
+{% macro wmcadsMsgSummary(params) %} 
+{# Set vars and defaults #} 
+{# Success #} 
+{% if params.type === "success" %} 
+{% set iconName = 'general-success' %} 
+{# Success #} 
+{% elseif params.type === "success-fill" %}
+{% set iconName = 'general-success' %} 
+{# Success #} 
+{% elseif params.type === "success-fill-no-icon" %} 
+{% set iconName = '' %} 
+{# Warning #} 
+{% elseif params.type === "warning" %} 
+{% set iconName = 'general-warning-circle' %} 
+{# Error #} 
+{% elseif params.type === "error" %} 
+{% set iconName = 'general-warning-triangle' %}
+{# Info (default) #}
+{% else %}
+{% set iconName = 'general-info' %} 
+{% endif %}
+{# Set classes #}
+{% set classes = " " + params.classes if params.classes %}
+{% from "wmcads/components/icon/_icon.njk" import wmcadsIcon %}
+
+<div class="ds-msg-summary ds-msg-summary--{{ params.type }} {{ classes }}">
+  {%- if params.dismissable %}
+  <button class="ds-msg-summary__close ds-link">
+    Close
+    <svg><use xlink:href="#ds-general-cross" href="#ds-general-cross"></use></svg>
+  </button>
+  {%- endif %}
+  <div class="ds-msg-summary__header">
+    {# Get SVG icon and pass class #} 
+    {%- if iconName !== "" -%}
+    {{-
+      wmcadsIcon({
+        icon: iconName,
+        class: 'ds-msg-summary__icon'
+      }) | trim
+    -}}
+    {%- endif %}
+    {%- if params.title %}
+    <h3 class="ds-msg-summary__title">{{ params.title }}</h3>
+    {%- endif %}
+    {%- if params.subtitle %}
+    <h3>{{ params.subtitle }}</h3>
+    {% endif %}
+  </div>
+  <div class="ds-msg-summary__info">
+   {%- if params.title %}
+    <span></span>
+    {%- endif %}
+    {{ params.message | safe }}
+  </div>
+</div>
+{% endmacro %}

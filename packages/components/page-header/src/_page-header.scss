@@ -1,0 +1,21 @@
+// Simplified page-header styles for standalone package
+.wmc-page-header {
+  background: get-color(background);
+  color: get-color(text);
+  padding: 1rem;
+  font-family: $font-family-base;
+
+  &__title {
+    margin: 0;
+    font-size: $size-md;
+  }
+
+  &__meta {
+    font-size: $size-sm;
+    color: lighten(get-color(text), 20%);
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .wmc-page-header { padding: 1.5rem; }
+  }
+}

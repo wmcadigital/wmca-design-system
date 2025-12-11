@@ -1,0 +1,22 @@
+{
+  "name": "@wmcadigital/components/details",
+  "version": "1.0.0",
+  "description": "Details component styles from WMCA design system",
+  "main": "dist/details.min.css",
+  "style": "dist/details.min.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build:css": "sass src/_package.scss dist/details.min.css --no-source-map --style=compressed --load-path=../../src/wmcads/assets/sass/shared --load-path=../../src/wmcads/assets/sass/wmca",
+    "build": "npm run build:css",
+    "prepare": "npm run build"
+  },
+  "keywords": ["wmca", "design-system", "details", "css"],
+  "author": "WMCA",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}

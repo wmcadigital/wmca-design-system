@@ -1,0 +1,12 @@
+{
+  "name": "@wmcadigital/patterns/search",
+  "version": "1.0.0",
+  "description": "Search pattern package (search bar, filter, results, sort, pagination)",
+  "main": "dist",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && rsync -a --exclude='*.scss' src/ dist/ && cp ../../../src/wmcads/assets/sass/shared/_vars.scss src/_vars.scss && cp ../../../src/wmcads/assets/sass/shared/_mixins.scss src/_mixins.scss && cp ../../../src/wmcads/assets/sass/wmca/_vars.scss src/_wmca_vars.scss && echo \"@import 'vars';@import 'mixins';@import 'wmca_vars';@import '_search';\" > src/_package.scss && sass src/_package.scss dist/search.min.css --no-source-map --style=compressed --load-path=src --load-path=../../../src/wmcads/assets/sass/wmca && node ../../../scripts/render-packages-njk.js dist"
+  },
+  "author": "WMCA Digital",
+  "license": "MIT"
+}

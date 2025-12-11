@@ -1,0 +1,13 @@
+{
+  "name": "@wmca/page-header",
+  "version": "0.1.0",
+  "description": "Page header component package",
+  "main": "dist/page-header.min.css",
+  "scripts": {
+    "build:css": "sass src/_package.scss dist/page-header.min.css --no-source-map --style=compressed",
+    "build:njk": "mkdir -p dist && cp src/_page-header.njk dist/page-header.njk",
+    "build": "npm run build:css && npm run build:njk"
+  },
+  "author": "wmca",
+  "license": "MIT"
+}

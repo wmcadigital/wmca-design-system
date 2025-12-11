@@ -1,0 +1,22 @@
+{
+  "name": "@wmcadigital/components/hub-header",
+  "version": "1.0.0",
+  "description": "Hub header component styles from WMCA design system",
+  "main": "dist/hub-header.min.css",
+  "style": "dist/hub-header.min.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build:css": "sass src/_package.scss dist/hub-header.min.css --no-source-map --style=compressed --load-path=../../src/wmcads/assets/sass/shared --load-path=../../src/wmcads/assets/sass/wmca",
+    "build": "npm run build:css",
+    "prepare": "npm run build"
+  },
+  "keywords": ["wmca", "design-system", "hub-header", "css"],
+  "author": "WMCA",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}

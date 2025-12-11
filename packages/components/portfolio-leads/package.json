@@ -1,0 +1,22 @@
+{
+  "name": "@wmcadigital/components/portfolio-leads",
+  "version": "0.1.0",
+  "description": "Portfolio leads component (SCSS and Nunjucks) from WMCA design system",
+  "main": "dist/portfolio-leads.min.css",
+  "style": "dist/portfolio-leads.min.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build:css": "sass src/_package.scss dist/portfolio-leads.min.css --no-source-map --style=compressed --load-path=../../src/wmcads/assets/sass/shared --load-path=../../src/wmcads/assets/sass/wmca",
+    "build:njk": "mkdir -p dist && cp src/_portfolio-leads.njk dist/portfolio-leads.njk || true",
+    "build": "npm run build:css && npm run build:njk",
+    "prepare": "npm run build"
+  },
+  "keywords": ["wmca","design-system","portfolio-leads","css","nunjucks"],
+  "author": "WMCA",
+  "license": "MIT",
+  "publishConfig": {"access":"public"},
+  "devDependencies": {"sass":"^1.32.0"}
+}

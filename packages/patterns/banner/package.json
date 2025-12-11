@@ -1,0 +1,16 @@
+{
+  "name": "@wmcadigital/patterns/banner",
+  "version": "1.0.0",
+  "description": "Banner pattern from WMCA design system",
+  "main": "dist/_banner.scss",
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "mkdir -p dist && cp -R src/* dist/"
+  },
+  "keywords": ["wmca", "design-system", "banner", "pattern"],
+  "author": "WMCA",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}

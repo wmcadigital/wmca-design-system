@@ -1,0 +1,1 @@
+.ds-col-img{display:grid !important;height:auto;place-items:center}.ds-image{max-width:100%;height:auto}.ds-image__hex{display:inline-flex;height:300px}.ds-image__hex img{display:block;width:100%;mask-position:center;mask-repeat:no-repeat;mask-size:100%;mask-image:url("../img/mask/hexagon.svg");mask-mode:alpha}.ds-image__summary{margin-bottom:2rem;padding:.75rem;background:#fff}

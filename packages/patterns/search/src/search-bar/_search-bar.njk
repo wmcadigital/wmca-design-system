@@ -1,0 +1,12 @@
+{% macro wmcadsSearchbar(params) %}
+
+{% set id = params.id if params.id else "searchBar" %}
+{% set placeholder = params.placeholder if params.placeholder else "Search for news, campaigns, events…" %}
+
+<form id="{{id}}_form" class="ds-search-bar">
+    <input id="{{id}}_input" aria-label="Search" type="text" class="ds-search-bar__input ds-fe-input" placeholder="{{placeholder}}">
+    <button class="ds-search-bar__btn" type="submit">
+        <svg><title>Search</title><use xlink:href="#ds-general-search" href="#ds-general-search"></use></svg>
+    </button>
+</form>
+{% endmacro %}

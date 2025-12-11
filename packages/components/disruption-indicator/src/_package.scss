@@ -1,0 +1,8 @@
+// Package entry for @wmcadigital/disruption-indicator
+// Import local copies of project variables and mixins (packaged)
+@import "./_vars.scss";
+@import "./_wmca_vars.scss";
+@import "./_mixins.scss";
+
+// Import the component SCSS (packaged partials)
+@import "./_disruption-indicator.scss";

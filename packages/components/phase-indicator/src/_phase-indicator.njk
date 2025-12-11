@@ -1,0 +1,11 @@
+{# Nunjucks macro for phase indicator #}
+{% macro phase_indicator(steps) %}
+<nav class="wmc-phase-indicator" aria-label="Progress">
+  {% for s in steps %}
+    <div class="wmc-phase-indicator__step wmc-phase-indicator__step--{{ s.state }}">
+      <span class="wmc-phase-indicator__step__dot" aria-hidden="true"></span>
+      <span class="wmc-phase-indicator__step__label">{{ s.label }}</span>
+    </div>
+  {% endfor %}
+</nav>
+{% endmacro %}

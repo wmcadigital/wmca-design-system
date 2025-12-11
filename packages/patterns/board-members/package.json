@@ -1,0 +1,16 @@
+{
+  "name": "@wmcadigital/patterns/board-members",
+  "version": "1.0.0",
+  "description": "Board members pattern from WMCA design system",
+  "main": "dist/_board-members.scss",
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "mkdir -p dist && cp -R src/* dist/"
+  },
+  "keywords": ["wmca", "design-system", "board-members", "pattern"],
+  "author": "WMCA",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}

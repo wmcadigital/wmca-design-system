@@ -1,0 +1,14 @@
+{
+  "name": "@wmcadigital/patterns/content-cards",
+  "version": "1.0.0",
+  "description": "Content card patterns packaged for distribution",
+  "main": "dist",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp -R src/* dist/"
+  },
+  "author": "WMCA Digital",
+  "license": "MIT"
+}

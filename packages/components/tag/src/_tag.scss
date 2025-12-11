@@ -1,0 +1,14 @@
+// Simplified tag styles for standalone package
+.wmc-tag {
+  display: inline-block;
+  font-family: $font-family-base;
+  font-size: $size-sm;
+  color: get-color(text);
+  background: get-color(background);
+  padding: $tag-padding-y $tag-padding-x;
+  border-radius: 2rem;
+
+  &--primary { background: get-color(primary); color: #fff; }
+  &--muted { background: get-color(muted); color: #fff; }
+  &--accent { background: get-color(accent); color: #fff; }
+}
