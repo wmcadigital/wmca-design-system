@@ -4,12 +4,13 @@
 {% set placeholder = params.placeholder if params.placeholder else "Search for news, campaigns, events…" %}
 {% set label = params.label if params.label else "Search" %}
 
-<form id="{{id}}_form">
-    <label for="{{id}}_input" class="wmcads-search-bar__label visible-hidden">{{ label }}</label>
+<form id="{{id}}_form" class="wmcads-search-bar__form" role="search" method="get" action="" aria-label="Site search">
+    <label for="{{id}}_input" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">{{ label }}</label>
     <div class="wmcads-search-bar">
-        <input id="{{id}}_input" aria-label="{{ label }}" type="text" class="wmcads-search-bar__input wmcads-fe-input" placeholder="{{placeholder}}">
-        <button class="wmcads-search-bar__btn" type="submit">
-            <svg><title>Search</title><use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use></svg>
+        <input id="{{id}}_input" name="q" aria-label="{{ label }}" type="search" class="wmcads-search-bar__input wmcads-fe-input" placeholder="{{placeholder}}" autocomplete="on">
+        <button class="wmcads-search-bar__btn" type="submit" aria-label="Search">
+            <svg role="img" aria-hidden="true"><title>Search</title><use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use></svg>
+            <span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">Search</span>
         </button>
     </div>
 </form>
