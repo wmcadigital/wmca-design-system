@@ -1,8 +1,0 @@
-// Package entry for @wmcadigital/patterns/feedback-loop
-// Import shared project variables and mixins via load-path
-@import "vars";
-@import "mixins";
-@import "wmca_vars";
-
-// Import the pattern stylesheet
-@import "_feedback-loop.scss";

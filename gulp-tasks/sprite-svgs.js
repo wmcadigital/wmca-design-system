@@ -1,12 +1,12 @@
 // Gulp requires
 const { src, dest } = require('gulp');
 const plugins = require('gulp-load-plugins')();
-
 // Local requires
-const path = require('./paths');
+const path = require('path');
+const paths = require('./paths.js');
 
 const spritingSVGs = () => {
-  return src(path.svgs.src)
+  return src(paths.svgs.src)
     .pipe(
       plugins.rename(file => {
         const newName = file;
@@ -37,7 +37,7 @@ const spritingSVGs = () => {
     )
     .pipe(plugins.svgstore())
     .pipe(plugins.rename({ basename: 'ds-icons', extname: '.min.svg' }))
-    .pipe(dest(path.svgs.dest));
+    .pipe(dest(paths.svgs.dest));
 };
 
 module.exports = spritingSVGs;

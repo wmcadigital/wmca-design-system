@@ -40,7 +40,6 @@ const componentExampleIframe = () => {
               ${html || ''}
             </div>
             <script src="https://unpkg.com/iframe-resizer@3.5.7/js/iframeResizer.contentWindow.min.js"></script>
-            <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CObject.assign%2CString.prototype.includes%2CNumber.isNaN"></script>
             <script src="${host}/js/ds-website.min.js"></script>
           </body>
         </html>

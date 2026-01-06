@@ -1,8 +1,0 @@
-// Package entry for @wmcadigital/images
-// Import local copies of project variables and mixins (packaged)
-@import "./_vars.scss";
-@import "./_wmca_vars.scss";
-@import "./_mixins.scss";
-
-// Import the component SCSS (copied into this package by the packaging script)
-@import "./_images.scss";

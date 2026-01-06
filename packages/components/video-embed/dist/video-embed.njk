@@ -1,9 +1,0 @@
-{# Nunjucks macro for video embed #}
-{% macro video_embed(src, caption='') %}
-<div class="wmc-video-embed">
-  <iframe class="wmc-video-embed__iframe" src="{{ src }}" allowfullscreen title="Video"></iframe>
-  {% if caption %}
-    <div class="wmc-video-embed__caption">{{ caption }}</div>
-  {% endif %}
-</div>
-{% endmacro %}
