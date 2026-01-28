@@ -45,6 +45,9 @@
       "@semantic-release/github"
     ]
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "upgrade-packages": "ncu -u",
     "start": "gulp",
@@ -63,6 +66,10 @@
     "build:sprites": "gulp buildSprites",
     "build:config": "gulp buildConfig",
     "build:netlify": "npm run build:all --build=netlify"
+    ,
+    "bootstrap": "npm install",
+    "build:packages": "node ./scripts/package-component.js --all",
+    "package:button": "node ./scripts/package-component.js button"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",

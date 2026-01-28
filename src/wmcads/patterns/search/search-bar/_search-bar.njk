@@ -2,11 +2,16 @@
 
 {% set id = params.id if params.id else "searchBar" %}
 {% set placeholder = params.placeholder if params.placeholder else "Search for news, campaigns, events…" %}
+{% set label = params.label if params.label else "Search" %}
 
-<form id="{{id}}_form" class="ds-search-bar">
-    <input id="{{id}}_input" aria-label="Search" type="text" class="ds-search-bar__input ds-fe-input" placeholder="{{placeholder}}">
-    <button class="ds-search-bar__btn" type="submit">
-        <svg><title>Search</title><use xlink:href="#ds-general-search" href="#ds-general-search"></use></svg>
-    </button>
+<form id="{{id}}_form" class="wmcads-search-bar__form" role="search" method="get" action="" aria-label="Site search">
+    <label for="{{id}}_input" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">{{ label }}</label>
+    <div class="wmcads-search-bar">
+        <input id="{{id}}_input" name="q" aria-label="{{ label }}" type="search" class="wmcads-search-bar__input wmcads-fe-input" placeholder="{{placeholder}}" autocomplete="on">
+        <button class="wmcads-search-bar__btn" type="submit" aria-label="Search">
+            <svg role="img" aria-hidden="true"><title>Search</title><use xlink:href="#wmcads-general-search" href="#wmcads-general-search"></use></svg>
+            <span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">Search</span>
+        </button>
+    </div>
 </form>
 {% endmacro %}

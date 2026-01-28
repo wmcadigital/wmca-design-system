@@ -9,7 +9,7 @@ const beautifyJS = require('js-beautify');
 
 // Local requires
 const markdown = require('nunjucks-markdown');
-const marked = require('marked');
+let marked; // will be dynamically imported because `marked` is an ESM-only package
 const paths = require('./paths');
 const { packageJson, build } = require('./utils');
 // Check for upcoming version number in node env (will be set during release workflow)
@@ -70,27 +70,37 @@ const manageEnv = env => {
     return beautifyJavascript(compiledJS);
   });
 
-  // Enable the use of markdown when used within {% markdown %} {% endmarkdown %}
-  marked.setOptions({
-    renderer: new marked.Renderer(),
-    gfm: true,
-    tables: true,
-    breaks: false,
-    pedantic: false,
-    sanitizer: markdownString =>
-      DOMPurify.sanitize(markdownString, {
-        USE_PROFILES: { svg: true, svgFilters: true, html: true },
-        SAFE_FOR_TEMPLATES: true
-      }),
-    smartLists: true,
-    smartypants: false
-  });
-
+  // The `marked` package is ESM-only. We import it dynamically before rendering
+  // templates to avoid `ERR_REQUIRE_ESM` when running under CommonJS.
+  // `buildingTemplates` ensures `marked` is loaded before `manageEnv` is called,
+  // so here we assume `marked` is already available.
   markdown.register(env, marked);
 };
 
 // Build nunjucks templates with compiled data above
-const buildingTemplates = () => {
+const buildingTemplates = async () => {
+  // Ensure `marked` is loaded (ESM) before we attempt to configure or use it.
+  if (!marked) {
+    const mod = await import('marked');
+    marked = mod.default || mod;
+
+    // Configure marked after import
+    marked.setOptions({
+      renderer: new marked.Renderer(),
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitizer: markdownString =>
+        DOMPurify.sanitize(markdownString, {
+          USE_PROFILES: { svg: true, svgFilters: true, html: true },
+          SAFE_FOR_TEMPLATES: true
+        }),
+      smartLists: true,
+      smartypants: false
+    });
+  }
+
   // De-caching for Data files
   return (
     src(paths.nunjucks.websiteSrc)

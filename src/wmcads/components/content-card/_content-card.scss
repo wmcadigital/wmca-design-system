@@ -106,6 +106,25 @@
     margin-top: 0;
   }
 
+  // Ensure headings don't overflow or overlap their parent container
+  h2,
+  h3 {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+    margin: 0 0 $size-sm 0;
+    line-height: 1.2;
+    // Keep normal word-break so hyphenation can work where supported
+    word-break: normal;
+    // Enable automatic hyphenation when browser and language support it
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    // Allow breaks at convenient points; `anywhere` offers better break opportunities
+    // while allowing browsers to still insert hyphens when available.
+    overflow-wrap: anywhere;
+  }
+
   .material-symbols-outlined {
     display: inline-block;
     margin-top: $size-lg;
