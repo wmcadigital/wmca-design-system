@@ -46,14 +46,14 @@
   @if $level == 3 {
     margin-top: 1.5rem * $multiplier;
     margin-bottom: 1.5rem * $multiplier;
-    font-size: 1.4375rem * $multiplier !important;
+    font-size: 1.4375rem * $multiplier;
     line-height: 1.5rem * $multiplier;
   }
   // Heading 4 (18px)
   @if $level == 4 {
     margin-top: 1.5rem * $multiplier;
     margin-bottom: 0.75rem * $multiplier;
-    font-size: 1.125rem * $multiplier !important;
+    font-size: 1.125rem * $multiplier;
     line-height: 1.5rem * $multiplier;
   }
   // Heading 5 (16px)
@@ -73,18 +73,12 @@
 // get-color(primary, 50); by default it mixes with white
 // If you add dark to the end it will mix black instead of white
 // e.g. get-color(primary, 50, dark);
-@function get-color($color, $percent: 0%, $shade: null) {
-  @if $shade == dark {
-    $shade-color: vars.$black;
-  } @else if $shade == null {
-    $shade-color: vars.$white;
-  } @else {
-    $shade-color: $shade;
-  }
+@function get-color($color, $percent: 0%, $shade: $white) {
+  // If shade is null, then by default set to white else set to shade selected
+  $shade: if($shade == dark, $black, $white);
+  $color: map-get($palettes, $color);
 
-  $color-value: map.get(vars.$palettes, $color);
-
-  @return color.mix($shade-color, $color-value, $percent);
+  @return mix($shade, $color, $percent);
 }
 
 // repeater() notes
