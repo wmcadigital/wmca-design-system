@@ -2,13 +2,18 @@
 {# Set #}
 {% set classes = " " + params.classes if params.classes else "" %}
 {% set yellowModifier = " ds-content-card--yellow" if params.yellow else "" %}
+{% set bannerModifier = " ds-content-card--banner" if params.isBanner else "" %}
+{% set newsModifier = " ds-content-card--news" if params.isNews else "" %}
+{% set ctaModifier = " ds-content-card--cta" if params.isCta else "" %}
+{% set eventModifier = " ds-content-card--event" if params.isEvent else "" %}
+{% set srcDefaultModifier = " ds-content-card--src-default" if params.isSrcDefault else "" %}
+{% set clickableModifier = " ds-content-card--clickable" if params.clickable else "" %}
+{% set variantModifier = " " + params.variant if params.variant else "" %}
 {# Opening & closing tags #}
 {% set _tag = "a" if params.link else "div" %}
 {% set link = params.link if params.link else "#" %}
 {% set linkTitle = params.linkTitle if params.linkTitle else "" %}
 {% set _attributes = " href=\"" + link + "\" title=\""+ linkTitle +"\" target=\"_self\"" if params.link else "" %}
-{% set isNews = params.isNews if params.isNews else false %}
-{% set withButton = params.withButton if params.withButton else false %}
 
 {# HTML content #}
 {% set contentHTML = params.contentHTML if params.contentHTML else "
@@ -20,7 +25,7 @@
 
 {# This macro checks if it's being called inside a {% call %} tag #}
 {# It's an easier way to pass in larger html content  #}
-<{{_tag}}{{_attributes | safe}} {% if params.id %}id="{{ params.id }}"{% endif %} class="ds-content-card{{classes + yellowModifier}}">
+<{{_tag}}{{_attributes | safe}} {% if params.id %}id="{{ params.id }}"{% endif %} class="ds-content-card{{classes + yellowModifier + bannerModifier + newsModifier + ctaModifier + eventModifier + srcDefaultModifier + clickableModifier + variantModifier}}">
 {%- if caller -%}
     {{ caller() }}
     {%- else -%}

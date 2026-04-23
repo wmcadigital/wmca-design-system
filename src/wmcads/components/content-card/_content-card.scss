@@ -89,6 +89,27 @@
     }
   }
 
+  &--banner {
+    display: block;
+    width: 100%;
+    margin-top: -$size-lg;
+    padding: $size-lg;
+    padding-bottom: $size-sm;
+    border-bottom: 0;
+    color: $white;
+    background: (#145889);
+
+    h2,
+    h3 {
+      color: $white;
+    }
+
+    .wmcads-link {
+      color: $white;
+      font-weight: 700;
+    }
+  }
+
   img {
     display: inline;
     position: relative;

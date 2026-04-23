@@ -26,6 +26,41 @@
       "description": "Displays the content card with a highlighted (yellow) background. Default value is <code class='wmcads-website-inline-code'>false</code>"
     },
     {
+      "name": "isBanner",
+      "type": "boolean",
+      "description": "Displays the content card as a banner. Default value is <code class='wmcads-website-inline-code'>false</code>"
+    },
+    {
+      "name": "isNews",
+      "type": "boolean",
+      "description": "Displays the content card as a news card. Default value is <code class='wmcads-website-inline-code'>false</code>"
+    },
+    {
+      "name": "isCta",
+      "type": "boolean",
+      "description": "Displays the content card as a call to action card. Default value is <code class='wmcads-website-inline-code'>false</code>"
+    },
+    {
+      "name": "isEvent",
+      "type": "boolean",
+      "description": "Displays the content card as an event card. Default value is <code class='wmcads-website-inline-code'>false</code>"
+    },
+    {
+      "name": "isSrcDefault",
+      "type": "boolean",
+      "description": "Displays the content card with default source styling. Default value is <code class='wmcads-website-inline-code'>false</code>"
+    },
+    {
+      "name": "clickable",
+      "type": "boolean",
+      "description": "Makes the content card clickable. Default value is <code class='wmcads-website-inline-code'>false</code>"
+    },
+    {
+      "name": "variant",
+      "type": "string",
+      "description": "Additional variant class for the content card."
+    },
+    {
       "name": "contentHTML",
       "type": "string",
       "description": "HTML to use within the content card."
