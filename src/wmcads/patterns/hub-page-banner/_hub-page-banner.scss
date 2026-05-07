@@ -14,7 +14,7 @@
 
     h1 {
       margin-bottom: $size-md;
-      color: $white;
+      color: $white !important;
     }
 
     & > * {
