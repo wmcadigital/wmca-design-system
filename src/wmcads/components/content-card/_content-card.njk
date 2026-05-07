@@ -14,6 +14,10 @@
 {% set link = params.link if params.link else "#" %}
 {% set linkTitle = params.linkTitle if params.linkTitle else "" %}
 {% set _attributes = " href=\"" + link + "\" title=\""+ linkTitle +"\" target=\"_self\"" if params.link else "" %}
+{% set _lang = params.lang if params.lang else "en-gb" %}
+{% set _attributes = " href=\"" + link + "\" title=\""+ linkTitle +"\" target=\"_self\" lang=\"" + _lang + "\"" if params.link else " lang=\"" + _lang + "\"" %}
+{% set isNews = params.isNews if params.isNews else false %}
+{% set withButton = params.withButton if params.withButton else false %}
 
 {# HTML content #}
 {% set contentHTML = params.contentHTML if params.contentHTML else "

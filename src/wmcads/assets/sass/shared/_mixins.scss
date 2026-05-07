@@ -1,3 +1,9 @@
+@use "sass:color" as color;
+@use "sass:map" as map;
+
+// Import variables as a namespaced module to avoid duplicate global definitions
+@use "vars" as vars;
+
 // This is a helper which will spit out the correct height/width for any svgs within a heading tag
 // This is used to overwrite .wmnds-n-icon__svg class defaults in _n-icon.scss
 @mixin n-icon-styling($height-and-font-size: 1rem) {
@@ -40,14 +46,14 @@
   @if $level == 3 {
     margin-top: 1.5rem * $multiplier;
     margin-bottom: 1.5rem * $multiplier;
-    font-size: 1.4375rem * $multiplier !important;
+    font-size: 1.4375rem * $multiplier;
     line-height: 1.5rem * $multiplier;
   }
   // Heading 4 (18px)
   @if $level == 4 {
     margin-top: 1.5rem * $multiplier;
     margin-bottom: 0.75rem * $multiplier;
-    font-size: 1.125rem * $multiplier !important;
+    font-size: 1.125rem * $multiplier;
     line-height: 1.5rem * $multiplier;
   }
   // Heading 5 (16px)

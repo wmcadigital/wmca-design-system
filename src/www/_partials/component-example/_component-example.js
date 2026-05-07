@@ -1,10 +1,11 @@
 const seeExampleFullScreen = () => {
   const fullScreenBtns = document.querySelectorAll('.ds-website-code-example__view-fullscreen');
-  const { style } = document.documentElement;
+  const style =
+    document.body && document.body.style ? document.body.style : document.documentElement.style;
 
   fullScreenBtns.forEach(btn => {
     const btnEle = btn; // Grab ele of btn and map to const to avoid mutation
-    const codeExampleDiv = btnEle.parentElement; // Get parent div of button (inner wrap)
+    const codeExampleDiv = btnEle.closest('.ds-website-code-example') || btnEle.parentElement; // Get nearest example wrapper or fallback to parent
 
     // Func on what to do when closing full screen
     const closeFullScreen = () => {
