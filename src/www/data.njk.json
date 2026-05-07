@@ -148,29 +148,53 @@
     "colors": {
         "brand": [
 			{ 
-				"varName": "brandFurnaceOrange", 
-				"name": "Furnace Orange" 
+				"varName": "wmFurnaceOrange",
+				"name": "WM Furnace Orange" 
 			},
 			{ 
-				"varName": "brandCoolGrey", 
-				"name": "Cool Grey" 
+				"varName": "steelBlueBg", 
+				"name": "Steel Blue" 
 			},
 			{ 
-				"varName": "brandWmGreen", 
-				"name": "WM Green" 
+				"varName": "primaryDudleyBrick", 
+				"name": "Dudley Brick - Primary" 
 			},
 			{ 
-				"varName": "brandWmRed", 
-				"name": "WM Red" 
+				"varName": "primaryAcocksGreen", 
+				"name": "Acocks Green - Primary" 
 			},
 			{ 
-				"varName": "brandWmPurple", 
-				"name": "WM Purple" 
+				"varName": "primaryCoventrySky", 
+				"name": "Coventry Sky - Primary" 
 			},
 			{ 
-				"varName": "brandWmBlue", 
-				"name": "WM Blue" 
-			}
+				"varName": "primaryRowleyRouge", 
+				"name": "Rowley Rouge - Primary" 
+			},
+      { 
+        "varName": "secondaryDudleyBrick", 
+        "name": "Dudley Brick - Secondary" 
+      },
+      { 
+        "varName": "secondaryAcocksGreen", 
+        "name": "Acocks Green - Secondary" 
+      },
+      { 
+        "varName": "secondaryCoventrySky", 
+        "name": "Coventry Sky - Secondary" 
+      },
+      { 
+        "varName": "secondaryRowleyRouge", 
+        "name": "Rowley Rouge - Secondary"
+			},
+      {
+        "varName": "gunmetalGrey",
+        "name": "Gunmetal Grey"
+      },
+      {
+        "varName": "carbonBlack",
+        "name": "Carbon Black"
+      }
 		],
         "web": [
 			{
@@ -181,6 +205,10 @@
 				"varName": "secondary",
 				"name": "Secondary Grey"
 			},
+      {
+        "varName": "primaryDark",
+        "name": "Primary Orange (50% Darker)"
+      },
 			{
 				"varName": "text",
 				"name": "Text"
@@ -202,11 +230,75 @@
 				"name": "Success"
 			}
 		],
-        "backgroundOnly": [
+    "backgroundOnly": [
 			{
 				"varName": "background",
 				"name": "Background"
 			}
+		],
+    "priorities": [
+			{
+				"varName": "priorityJobs",
+				"name": "Priority Jobs"
+			},
+      {
+        "varName": "priorityHomes",
+        "name": "Priority Homes"
+      },
+      {
+        "varName": "priorityGrowth",
+        "name": "Priority Growth"
+      },
+      {
+        "varName": "priorityJourneys",
+        "name": "Priority Journeys"
+      },
+      {
+        "varName": "priorityBannerText",
+        "name": "Priority Banner Text"
+      },
+      {
+        "varName": "priorityComplementaryJobs",
+				"name": "Priority Complementary Jobs"
+      },
+      {
+        "varName": "priorityComplementaryHomes",
+        "name": "Priority Complementary Homes"
+      },
+      {
+        "varName": "priorityComplementaryGrowth",
+        "name": "Priority Complementary Growth"
+      },
+      {
+        "varName": "priorityComplementaryJourneys",
+        "name": "Priority Complementary Journeys"
+      },
+      {
+        "varName": "prioritySecondaryJobs",
+        "name": "Priority Secondary Jobs"
+      },
+      {
+        "varName": "prioritySecondaryHomes",
+        "name": "Priority Secondary Homes"
+      },
+      {
+        "varName": "prioritySecondaryGrowth",
+        "name": "Priority Secondary Growth"
+      },
+      {
+        "varName": "prioritySecondaryJourneys",
+        "name": "Priority Secondary Journeys"
+      }
+		],
+    "programmes": [
+			{
+				"varName": "mayoralRegionsProgramme",
+				"name": "Mayoral Regions Programme"
+			},
+      {
+        "varName": "greenerTogether",
+        "name": "Greener Together"
+      }
 		]
     }
   }  

@@ -73,4 +73,32 @@
   {% endfor %}
 </div>
 
+{# Priorities Brand Colours #}
+<hr>
+<h2>Priorities Brand Colours</h2>
+<div class="wmcads-grid">
+  {% for color in colors.priorities %}
+    {{
+      colorPalette({
+        varName: color.varName,
+        name: color.name
+      })
+    }}
+  {% endfor %}
+</div>
+
+{# WMCA Programme colours #}
+<hr>
+<h2>WMCA Programme colours</h2>
+<div class="wmcads-grid">
+  {% for color in colors.programmes %}
+    {{
+      colorPalette({
+        varName: color.varName,
+        name: color.name
+      })
+    }}
+  {% endfor %}
+</div>
+
 {% endblock %}
