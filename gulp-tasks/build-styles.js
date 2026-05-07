@@ -74,5 +74,57 @@ const buildingReactNativeStyles = async () => {
   return stream;
 };
 
+const buildingComponentStyles = async () => {
+  const autoprefixerFn = await ensureAutoprefixer();
+
+  let stream = src(paths.styles.componentsSrc).pipe(plugins.sourcemaps.init());
+  stream = stream.pipe(sass().on('error', sass.logError)); // Compile Sass
+  stream = stream.pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn));
+
+  if (autoprefixerFn) {
+    stream = stream.pipe(autoprefixerFn());
+  }
+
+  stream = stream.pipe(plugins.cleanCss({ level: 2 })); // Minify css
+  stream = stream.pipe(
+    plugins.rename({
+      extname: '.min.css'
+    })
+  );
+
+  stream = stream.pipe(plugins.sourcemaps.write(getRoot(paths.styles.componentsOutput) + paths.logs.sourcemaps));
+  stream = stream.pipe(dest(paths.styles.componentsOutput));
+  stream = stream.pipe(browserSync.stream());
+
+  return stream;
+};
+
+const buildingPatternStyles = async () => {
+  const autoprefixerFn = await ensureAutoprefixer();
+
+  let stream = src(paths.styles.patternsSrc).pipe(plugins.sourcemaps.init());
+  stream = stream.pipe(sass().on('error', sass.logError)); // Compile Sass
+  stream = stream.pipe(plugins.replace('$*cdn', packageJson.buildDirs[build].cdn));
+
+  if (autoprefixerFn) {
+    stream = stream.pipe(autoprefixerFn());
+  }
+
+  stream = stream.pipe(plugins.cleanCss({ level: 2 })); // Minify css
+  stream = stream.pipe(
+    plugins.rename({
+      extname: '.min.css'
+    })
+  );
+
+  stream = stream.pipe(plugins.sourcemaps.write(getRoot(paths.styles.patternsOutput) + paths.logs.sourcemaps));
+  stream = stream.pipe(dest(paths.styles.patternsOutput));
+  stream = stream.pipe(browserSync.stream());
+
+  return stream;
+};
+
 module.exports.buildStyles = buildingStyles;
 module.exports.buildReactNativeStyles = buildingReactNativeStyles;
+module.exports.buildComponentStyles = buildingComponentStyles;
+module.exports.buildPatternStyles = buildingPatternStyles;
