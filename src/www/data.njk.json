@@ -194,46 +194,6 @@
       {
         "varName": "carbonBlack",
         "name": "Carbon Black"
-      },
-      {
-        "varName": "brandWmGreen",
-        "name": "Brand WM Green"
-      },
-      {
-        "varName": "brandWmRed",
-        "name": "Brand WM Red"
-      },
-      {
-        "varName": "brandWmBlue",
-        "name": "Brand WM Blue"
-      },
-      {
-        "varName": "brandWmPurple",
-        "name": "Brand WM Purple"
-      },
-      {
-        "varName": "brandWmTintGreen",
-        "name": "Brand WM Tint Green"
-      },
-      {
-        "varName": "brandWmTintBrown",
-        "name": "Brand WM Tint Brown"
-      },
-      {
-        "varName": "brandCoolGrey",
-        "name": "Brand Cool Grey"
-      },
-      {
-        "varName": "brandFurnaceOrange",
-        "name": "Brand Furnace Orange"
-      },
-      {
-        "varName": "brandTfwmPink",
-        "name": "Brand TFWM Pink"
-      },
-      {
-        "varName": "brandTfwmYellow",
-        "name": "Brand TFWM Yellow"
       }
 		],
         "web": [
@@ -359,38 +319,6 @@
         "varName": "greenerTogether",
         "name": "Greener Together"
       }
-		],
-    "transport": [
-      {
-        "varName": "bus",
-        "name": "Bus"
-      },
-      {
-        "varName": "metro",
-        "name": "Metro"
-      },
-      {
-        "varName": "railway",
-        "name": "Railway"
-      },
-      {
-        "varName": "roads",
-        "name": "Roads"
-      },
-      {
-        "varName": "taxi",
-        "name": "Taxi"
-      },
-      {
-        "varName": "susTravel",
-        "name": "Sustainable Travel"
-      }
-    ],
-    "planning": [
-      {
-        "varName": "plannedDisruption",
-        "name": "Planned Disruption"
-      }
-    ]
+		]
     }
   }
