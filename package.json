@@ -111,10 +111,14 @@
     "prettier": "^2.2.1",
     "sass": "^1.54.4",
     "semantic-release": "^17.4.2",
+    "undici": "^6.0.0",
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
     "iframe-resizer": "^4.3.1",
     "path": "^0.12.7"
+  },
+  "overrides": {
+    "undici": "^6.0.0"
   }
 }
