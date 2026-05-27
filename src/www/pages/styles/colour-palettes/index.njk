@@ -101,4 +101,32 @@
   {% endfor %}
 </div>
 
+{# Transport Mode colours #}
+<hr>
+<h2>Transport Mode colours</h2>
+<div class="wmcads-grid">
+  {% for color in colors.transport %}
+    {{
+      colorPalette({
+        varName: color.varName,
+        name: color.name
+      })
+    }}
+  {% endfor %}
+</div>
+
+{# Planning colours #}
+<hr>
+<h2>Planning colours</h2>
+<div class="wmcads-grid">
+  {% for color in colors.planning %}
+    {{
+      colorPalette({
+        varName: color.varName,
+        name: color.name
+      })
+    }}
+  {% endfor %}
+</div>
+
 {% endblock %}
