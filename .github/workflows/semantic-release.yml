@@ -13,12 +13,12 @@ jobs:
     steps:
       # Checkout branch
       - name: Checkout branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
       # Setup node environment
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '14.x'
       # Dry run a release to check if one if necessary
@@ -35,7 +35,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       # Get modules from cache
       - name: Cache Node.js modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
