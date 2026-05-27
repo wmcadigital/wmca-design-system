@@ -7,76 +7,14 @@
     fill: get-color(primary);
   }
 
-  &--alt {
-    background-color: get-color(backgroundAlt);
-
-    .wmcads-hub-page-banner__svg-background {
-      fill: get-color(backgroundAlt);
-    }
-  }
-
-  &--alt-steel-blue {
-    background-color: get-color(backgroundSteelBlue);
-
-    .wmcads-hub-page-banner__svg-background {
-      fill: get-color(backgroundSteelBlue);
-    }
-  }
-
-  &--priority-jobs {
-    background-color: get-color(priorityJobs);
-
-    .wmcads-hub-page-banner__svg-background {
-      fill: get-color(priorityJobs);
-    }
-
-    .wmcads-hub-page-banner__copy {
-      &>* {
-        color: get-color(priorityBannerText);
-      }
-    }
-  }
-
-  &--priority-growth {
-    background-color: get-color(priorityGrowth);
-
-    .wmcads-hub-page-banner__svg-background {
-      fill: get-color(priorityGrowth);
-    }
-
-    .wmcads-hub-page-banner__copy {
-      &>* {
-        color: get-color(priorityBannerText);
-      }
-    }
-  }
-
-  &--priority-homes {
-    background-color: get-color(priorityHomes);
-
-    .wmcads-hub-page-banner__svg-background {
-      fill: get-color(priorityHomes);
-    }
-  }
-
-  &--priority-journeys {
-    background-color: get-color(priorityJourneys);
-
-    .wmcads-hub-page-banner__svg-background {
-      fill: get-color(priorityJourneys);
-    }
-  }
-
   &__copy {
-    position: relative;
-    z-index: 999;
     max-width: 100%;
 
     h1 {
       margin-bottom: $size-md;
     }
 
-    &>* {
+    & > * {
       color: $white;
     }
   }
