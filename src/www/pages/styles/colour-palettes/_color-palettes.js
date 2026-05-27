@@ -5,7 +5,7 @@ function colorPalettes() {
   function rgb2hex(rgb) {
     // Handle both rgb() and rgba() formats
     const rgbMatch = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-    
+
     if (!rgbMatch) {
       // If it's already a hex color, return it as-is
       if (rgb.startsWith('#')) {
@@ -18,7 +18,7 @@ function colorPalettes() {
     function hex(x) {
       return `0${parseInt(x, 10).toString(16)}`.slice(-2);
     }
-    
+
     return `#${hex(rgbMatch[1])}${hex(rgbMatch[2])}${hex(rgbMatch[3])}`;
   }
 
