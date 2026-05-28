@@ -22,16 +22,26 @@ function colorPalettes() {
     return `#${hex(rgbMatch[1])}${hex(rgbMatch[2])}${hex(rgbMatch[3])}`;
   }
 
-  colors.forEach(swatch => {
-    const ele = swatch;
-    const rgbColor = getComputedStyle(swatch).backgroundColor;
-    const hexColor = rgb2hex(rgbColor);
+  const updateColors = () => {
+    colors.forEach(swatch => {
+      const ele = swatch;
+      const rgbColor = getComputedStyle(swatch).backgroundColor;
+      const hexColor = rgb2hex(rgbColor);
 
-    const colorHexElement = ele.nextElementSibling?.querySelector('pre code .color-hex');
-    if (colorHexElement) {
-      colorHexElement.innerText = `color: '${hexColor}'`;
-    }
-  });
+      const colorHexElement = ele.nextElementSibling?.querySelector('pre code .color-hex');
+      if (colorHexElement) {
+        colorHexElement.innerText = `color: '${hexColor}'`;
+      }
+    });
+  };
+
+  // Wait for stylesheets to load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateColors);
+  } else {
+    // Use setTimeout to ensure CSS is applied
+    setTimeout(updateColors, 100);
+  }
 }
 
 export default colorPalettes;
