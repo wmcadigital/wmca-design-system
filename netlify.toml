@@ -1,4 +1,6 @@
 [build]
+  command = "npm install && gulp buildAll"
+  publish = "build"
   ignore = "git log -1 --pretty=%B | grep dependabot"
 
 [[headers]]
