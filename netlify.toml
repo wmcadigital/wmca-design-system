@@ -2,6 +2,16 @@
   ignore = "git log -1 --pretty=%B | grep dependabot"
 
 [[headers]]
+  for = "*.min.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "*.min.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
     [headers.values]
