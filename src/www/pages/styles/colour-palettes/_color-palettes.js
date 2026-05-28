@@ -28,9 +28,12 @@ function colorPalettes() {
       const rgbColor = getComputedStyle(swatch).backgroundColor;
       const hexColor = rgb2hex(rgbColor);
 
-      const colorHexElement = ele.nextElementSibling?.querySelector('pre code .color-hex');
-      if (colorHexElement) {
-        colorHexElement.innerText = `color: '${hexColor}'`;
+      const nextElement = ele.nextElementSibling;
+      if (nextElement) {
+        const colorHexElement = nextElement.querySelector('pre code .color-hex');
+        if (colorHexElement) {
+          colorHexElement.innerText = `color: '${hexColor}'`;
+        }
       }
     });
   };
