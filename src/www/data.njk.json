@@ -228,19 +228,7 @@
 			{
 				"varName": "success",
 				"name": "Success"
-			},
-      {
-        "varName": "help",
-        "name": "Help"
-      },
-      {
-        "varName": "disable",
-        "name": "Disable"
-      },
-      {
-        "varName": "information",
-        "name": "Information"
-      }
+			}
 		],
     "backgroundOnly": [
 			{
