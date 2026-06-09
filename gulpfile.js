@@ -72,7 +72,8 @@ const buildAll = series(
   lintScripts,
   moveOldCSS,
   moveOldReactNative,
-  moveOldIcons
+  moveOldIcons,
+  cacheBust
 );
 
 // run buildStyles, buildFonts,& minifyJS on start, series so () => run in an order and parallel so () => can run at same time

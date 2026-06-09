@@ -3,7 +3,7 @@ const { src, dest } = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
 // Local requires
-const paths = require('./paths.js');
+const paths = require('./paths');
 const { packageJson, build } = require('./utils');
 
 const buildMode = build !== 'local' ? 'production' : 'development'; // If the build isn't local then set the buildMode of webpack to production (it will hide sourcemaps and minify code)

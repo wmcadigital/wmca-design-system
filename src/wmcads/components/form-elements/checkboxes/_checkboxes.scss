@@ -19,7 +19,7 @@
 
     // On mouse-over, add a grey background color
     &:hover .wmcads-fe-checkboxes__checkmark {
-      background-color: get-color(secondary, 70);
+      background-color: get-color(secondary, 70%);
     }
   }
 
@@ -49,7 +49,7 @@
     color: get-color(text);
 
     &:focus ~ .wmcads-fe-checkboxes__checkmark {
-      background-color: get-color(secondary, 70);
+      background-color: get-color(secondary, 70%);
     }
 
     // Show the checkmark when checked

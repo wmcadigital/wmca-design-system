@@ -1,0 +1,733 @@
+{
+"font-size": {
+	"1": {
+	  "$value": "16",
+	  "$type": "fontsizes",
+	  "$description": "body copy"
+	},
+	"2": {
+	  "$value": "18",
+	  "$type": "fontsizes"
+	},
+	"3": {
+	  "$value": "23",
+	  "$type": "fontsizes"
+	},
+	"4": {
+	  "$value": "32",
+	  "$type": "fontsizes"
+	},
+	"5": {
+	  "$value": "39",
+	  "$type": "fontsizes"
+	},
+	"6": {
+	  "$value": "46",
+	  "$type": "fontsizes"
+	}
+  },
+  "color": {
+	"global": {
+	  "white": {
+		"$value": "#ffffff",
+		"$type": "color"
+	  },
+	  "off-white": {
+		"$value": "#f5f5f5",
+		"$type": "color",
+		"$description": "Date picker weekends"
+	  },
+	  "light-grey": {
+		"$value": "#87898c",
+		"$type": "color",
+		"$description": "Rules"
+	  },
+	  "mid-grey": {
+		"$value": "#6e7172",
+		"$type": "color",
+		"$description": "Date picker text"
+	  },
+	  "dark-grey": {
+		"$value": "#54565b",
+		"$type": "color",
+		"$description": "Logo text"
+	  },
+	  "black": {
+		"$value": "#000000",
+		"$type": "color"
+	  },
+	  "blue": {
+		"$value": "#2c498a",
+		"$type": "color",
+		"$description": "Park and Ride"
+	  }
+	},
+	"global-tints": {
+	  "green": {
+		"$value": "#004e2a",
+		"$type": "color",
+		"$description": "Start hover"
+	  },
+	  "dark-green": {
+		"$value": "#00381e",
+		"$type": "color",
+		"$description": "Start active"
+	  },
+	  "red": {
+		"$value": "#942514",
+		"$type": "color",
+		"$description": "Destructive hover"
+	  },
+	  "dark-red": {
+		"$value": "#6a1b0e",
+		"$type": "color",
+		"$description": "Destructive active"
+	  }
+	},
+	"global-alert": {
+	  "purple": {
+		"$value": "#84329b",
+		"$type": "color",
+		"$description": "Information"
+	  },
+	  "orange": {
+		"$value": "#b75e00",
+		"$type": "color",
+		"$description": "Warning"
+	  },
+	  "red": {
+		"$value": "#d4351c",
+		"$type": "color",
+		"$description": "Error"
+	  },
+	  "green": {
+		"$value": "#00703c",
+		"$type": "color",
+		"$description": "Success"
+	  },
+	  "grey": {
+		"$value": "#676869",
+		"$type": "color",
+		"$description": "Disabled"
+	  }
+	},
+	"tfwm": {
+	  "purple": {
+		"$value": "#3c1053",
+		"$type": "color",
+		"$description": "Primary"
+	  },
+	  "lilac": {
+		"$value": "#9d5baf",
+		"$type": "color",
+		"$description": "Secondary"
+	  },
+	  "blue": {
+		"$value": "#1d7bbf",
+		"$type": "color",
+		"$description": "CTA"
+	  },
+	  "black": {
+		"$value": "#080607",
+		"$type": "color",
+		"$description": "Text"
+	  },
+	  "off-white": {
+		"$value": "#f3f2f1",
+		"$type": "color",
+		"$description": "Background"
+	  }
+	},
+	"tfwm-tints": {
+	  "purple": {
+		"$value": "#5c236e",
+		"$type": "color",
+		"$description": "Primary hover"
+	  },
+	  "dark-purple": {
+		"$value": "#42194f",
+		"$type": "color",
+		"$description": "Primary active"
+	  },
+	  "purple-30": {
+		"$value": "#e2cee7",
+		"$type": "color",
+		"$description": "Secondary hover"
+	  },
+	  "purple-50": {
+		"$value": "#ceadd8",
+		"$type": "color",
+		"$description": "Secondary active"
+	  },
+	  "teal": {
+		"$value": "#145889",
+		"$type": "color",
+		"$description": "CTA hover"
+	  },
+	  "dark-teal": {
+		"$value": "#0f3f62",
+		"$type": "color",
+		"$description": "CTA active"
+	  }
+	},
+	"tfwm-network": {
+	  "dark-purple": {
+		"$value": "#1e082a",
+		"$type": "color",
+		"$description": "50% darker primary purple"
+	  },
+	  "yellow": {
+		"$value": "#ffdd00",
+		"$type": "color",
+		"$description": "Planned disruptions"
+	  }
+	},
+	"tfwm-mode": {
+	  "red": {
+		"$value": "#ea0029",
+		"$type": "color",
+		"$description": "Bus"
+	  },
+	  "orange": {
+		"$value": "#e07709",
+		"$type": "color",
+		"$description": "Train"
+	  },
+	  "blue": {
+		"$value": "#0075c9",
+		"$type": "color",
+		"$description": "Metro"
+	  },
+	  "green": {
+		"$value": "#658d1b",
+		"$type": "color",
+		"$description": "Sustainable travel"
+	  },
+	  "pink": {
+		"$value": "#df1683",
+		"$type": "color",
+		"$description": "Roads"
+	  },
+	  "ultramarine": {
+		"$value": "#0072ff",
+		"$type": "color",
+		"$description": "Electric transport"
+	  }
+	},
+	"wmca": {
+	  "orange": {
+		"$value": "#c05701",
+		"$type": "color",
+		"$description": "Primary"
+	  },
+	  "grey": {
+		"$value": "#231f20",
+		"$type": "color",
+		"$description": "Secondary"
+	  },
+	  "blue": {
+		"$value": "#007da8",
+		"$type": "color",
+		"$description": "CTA"
+	  },
+	  "black": {
+		"$value": "#080607",
+		"$type": "color",
+		"$description": "Text"
+	  },
+	  "off-white": {
+		"$value": "#f3f2f1",
+		"$type": "color",
+		"$description": "Background"
+	  }
+	},
+	"wmca-tints": {
+	  "brown": {
+		"$value": "#843b00",
+		"$type": "color",
+		"$description": "Primary hover"
+	  },
+	  "dark-brown": {
+		"$value": "#5f2b00",
+		"$type": "color",
+		"$description": "Primary active"
+	  },
+	  "orange-30": {
+		"$value": "#f8f0e5",
+		"$type": "color",
+		"$description": "Secondary hover"
+	  },
+	  "orange-50": {
+		"$value": "#f2e1cc",
+		"$type": "color",
+		"$description": "Secondary active"
+	  },
+	  "teal": {
+		"$value": "#005775",
+		"$type": "color",
+		"$description": "CTA hover"
+	  },
+	  "dark-teal": {
+		"$value": "#003e53",
+		"$type": "color",
+		"$description": "CTA active"
+	  }
+	},
+	"wmca-brand": {
+	  "grey": {
+		"$value": "#54565b",
+		"$type": "color",
+		"$description": "WM Gunmetal grey"
+	  },
+	  "orange": {
+		"$value": "#f58025",
+		"$type": "color",
+		"$description": "WM Furnace orange"
+	  },
+	  "blue": {
+		"$value": "#008fbf",
+		"$type": "color",
+		"$description": "WM Blue"
+	  },
+	  "green": {
+		"$value": "#00a19c",
+		"$type": "color",
+		"$description": "WM Green"
+	  },
+	  "purple": {
+		"$value": "#94368d",
+		"$type": "color",
+		"$description": "WM Purple"
+	  },
+	  "red": {
+		"$value": "#d60037",
+		"$type": "color",
+		"$description": "WM Red"
+	  }
+	}
+  },
+  "line-heights": {
+	"0": {
+	  "$value": "48",
+	  "$type": "lineheights"
+	},
+	"1": {
+	  "$value": "35.6",
+	  "$type": "lineheights"
+	},
+	"2": {
+	  "$value": "24",
+	  "$type": "lineheights"
+	},
+	"3": {
+	  "$value": "AUTO",
+	  "$type": "lineheights"
+	},
+	"4": {
+	  "$value": "23",
+	  "$type": "lineheights"
+	},
+	"5": {
+	  "$value": "40.8",
+	  "$type": "lineheights"
+	},
+	"6": {
+	  "$value": "28.9",
+	  "$type": "lineheights"
+	}
+  },
+  "font-weight": {
+	"regular": {
+	  "$value": "Regular",
+	  "$type": "fontweights"
+	},
+	"bold": {
+	  "$value": "Bold",
+	  "$type": "fontweights"
+	}
+  },
+  "letter-spacing": {
+	"0": {
+	  "$value": "0",
+	  "$type": "letterspacing"
+	}
+  },
+  "paragraph-spacing": {
+	"0": {
+	  "$value": "0",
+	  "$type": "paragraphspacing"
+	},
+	"1": {
+	  "$value": "1",
+	  "$type": "paragraphspacing"
+	},
+	"2": {
+	  "$value": "15",
+	  "$type": "paragraphspacing"
+	}
+  },
+  "heading 1": {
+	"$value": {
+	  "fontfamily": "{font-family.dm-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.0}",
+	  "fontsize": "{font-size.6}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.0}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Primary Purple or White"
+  },
+  "heading 2": {
+	"$value": {
+	  "fontfamily": "{font-family.dm-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.1}",
+	  "fontsize": "{font-size.4}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.0}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Primary Purple, White or Call to Action"
+  },
+  "heading 3": {
+	"$value": {
+	  "fontfamily": "{font-family.dm-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.2}",
+	  "fontsize": "{font-size.3}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.0}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Text or White"
+  },
+  "heading 4": {
+	"$value": {
+	  "fontfamily": "{font-family.dm-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.2}",
+	  "fontsize": "{font-size.2}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.0}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Text or White"
+  },
+  "heading 5": {
+	"$value": {
+	  "fontfamily": "{font-family.noto-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.3}",
+	  "fontsize": "{font-size.1}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.1}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Text or White"
+  },
+  "body": {
+	"$value": {
+	  "fontfamily": "{font-family.noto-sans}",
+	  "fontweight": "{font-weight.regular}",
+	  "lineheight": "{line-heights.2}",
+	  "fontsize": "{font-size.1}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.2}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Text or White"
+  },
+  "link": {
+	"$value": {
+	  "fontfamily": "{font-family.noto-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.2}",
+	  "fontsize": "{font-size.1}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.2}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.underline}"
+	},
+	"$type": "typography",
+	"$description": "Call to Action or White"
+  },
+  "button": {
+	"$value": {
+	  "fontfamily": "{font-family.noto-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.4}",
+	  "fontsize": "{font-size.1}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.2}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Text, White or Secondary Purple"
+  },
+  "form label": {
+	"$value": {
+	  "fontfamily": "{font-family.noto-sans}",
+	  "fontweight": "{font-weight.regular}",
+	  "lineheight": "{line-heights.2}",
+	  "fontsize": "{font-size.1}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.2}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "Text or White"
+  },
+  "navigation link": {
+	"$value": {
+	  "fontfamily": "{font-family.dm-sans}",
+	  "fontweight": "{font-weight.bold}",
+	  "lineheight": "{line-heights.3}",
+	  "fontsize": "{font-size.1}",
+	  "letterspacing": "{letter-spacing.0}",
+	  "paragraphspacing": "{paragraph-spacing.0}",
+	  "textcase": "{text-case.none}",
+	  "textdecoration": "{text-decoration.none}"
+	},
+	"$type": "typography",
+	"$description": "White"
+  },
+  "mobile": {
+	"heading 1": {
+	  "$value": {
+		"fontfamily": "{font-family.dm-sans}",
+		"fontweight": "{font-weight.bold}",
+		"lineheight": "{line-heights.5}",
+		"fontsize": "{font-size.5}",
+		"letterspacing": "{letter-spacing.0}",
+		"paragraphspacing": "{paragraph-spacing.1}",
+		"textcase": "{text-case.none}",
+		"textdecoration": "{text-decoration.none}"
+	  },
+	  "$type": "typography",
+	  "$description": "Primary Purple or White"
+	},
+	"heading 2": {
+	  "$value": {
+		"fontfamily": "{font-family.dm-sans}",
+		"fontweight": "{font-weight.bold}",
+		"lineheight": "{line-heights.6}",
+		"fontsize": "{font-size.3}",
+		"letterspacing": "{letter-spacing.0}",
+		"paragraphspacing": "{paragraph-spacing.1}",
+		"textcase": "{text-case.none}",
+		"textdecoration": "{text-decoration.none}"
+	  },
+	  "$type": "typography",
+	  "$description": "Primary Purple, White or Call to Action"
+	}
+  },
+  "text-case": {
+	"none": {
+	  "$value": "none",
+	  "$type": "textcase"
+	}
+  },
+  "text-decoration": {
+	"none": {
+	  "$value": "none",
+	  "$type": "textdecoration"
+	},
+	"underline": {
+	  "$value": "underline",
+	  "$type": "textdecoration"
+	}
+  },
+  "font-family": {
+	"dm-sans": {
+	  "$value": "DM Sans",
+	  "$type": "fontFamilies"
+	},
+	"noto-sans": {
+	  "$value": "Noto Sans Display",
+	  "$type": "fontFamilies"
+	}
+  },
+  "space": {
+	"0": {
+	  "$value": "0",
+	  "$type": "spacing"
+	},
+	"25": {
+	  "$value": "2",
+	  "$type": "spacing"
+	},
+	"50": {
+	  "$value": "4",
+	  "$type": "spacing"
+	},
+	"75": {
+	  "$value": "6",
+	  "$type": "spacing"
+	},
+	"100": {
+	  "$value": "8",
+	  "$type": "spacing"
+	},
+	"125": {
+	  "$value": "10",
+	  "$type": "spacing"
+	},
+	"150": {
+	  "$value": "12",
+	  "$type": "spacing"
+	},
+	"175": {
+	  "$value": "14",
+	  "$type": "spacing"
+	},
+	"200": {
+	  "$value": "16",
+	  "$type": "spacing"
+	},
+	"225": {
+	  "$value": "18",
+	  "$type": "spacing"
+	},
+	"250": {
+	  "$value": "20",
+	  "$type": "spacing"
+	},
+	"275": {
+	  "$value": "22",
+	  "$type": "spacing"
+	},
+	"300": {
+	  "$value": "24",
+	  "$type": "spacing"
+	},
+	"350": {
+	  "$value": "28",
+	  "$type": "spacing"
+	},
+	"400": {
+	  "$value": "32",
+	  "$type": "spacing"
+	},
+	"500": {
+	  "$value": "40",
+	  "$type": "spacing"
+	},
+	"600": {
+	  "$value": "48",
+	  "$type": "spacing"
+	},
+	"700": {
+	  "$value": "56",
+	  "$type": "spacing"
+	},
+	"800": {
+	  "$value": "64",
+	  "$type": "spacing"
+	},
+	"900": {
+	  "$value": "72",
+	  "$type": "spacing"
+	},
+	"1000": {
+	  "$value": "80",
+	  "$type": "spacing"
+	},
+	"1200": {
+	  "$value": "96",
+	  "$type": "spacing"
+	},
+	"1400": {
+	  "$value": "112",
+	  "$type": "spacing"
+	},
+	"1600": {
+	  "$value": "128",
+	  "$type": "spacing"
+	},
+	"1800": {
+	  "$value": "144",
+	  "$type": "spacing"
+	},
+	"2000": {
+	  "$value": "160",
+	  "$type": "spacing"
+	},
+	"2200": {
+	  "$value": "176",
+	  "$type": "spacing"
+	},
+	"2400": {
+	  "$value": "192",
+	  "$type": "spacing"
+	},
+	"2600": {
+	  "$value": "208",
+	  "$type": "spacing"
+	},
+	"2800": {
+	  "$value": "224",
+	  "$type": "spacing"
+	},
+	"3000": {
+	  "$value": "240",
+	  "$type": "spacing"
+	},
+	"3200": {
+	  "$value": "256",
+	  "$type": "spacing"
+	},
+	"3400": {
+	  "$value": "288",
+	  "$type": "spacing"
+	},
+	"3600": {
+	  "$value": "320",
+	  "$type": "spacing"
+	},
+	"3800": {
+	  "$value": "384",
+	  "$type": "spacing"
+	},
+	"10px": {
+	  "$value": "10px",
+	  "$type": "spacing"
+	},
+	"14px": {
+	  "$value": "14px",
+	  "$type": "spacing"
+	},
+	"20px": {
+	  "$value": "20px",
+	  "$type": "spacing"
+	},
+	"40px": {
+	  "$value": "40px",
+	  "$type": "spacing"
+	},
+	"66px": {
+	  "$value": "66px",
+	  "$type": "spacing"
+	}
+  },
+  "other": {
+	"auto-layout": {
+	  "$value": "hug",
+	  "$type": "other"
+	}
+  }
+}

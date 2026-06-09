@@ -65,10 +65,14 @@ $header-height-mobile: 4rem;
 
     &:focus {
       position: static;
+      z-index: 1000;
       width: auto;
       height: auto;
       clip: auto;
-      box-shadow: none;
+      // outline: none;
+      color: $white;
+      background-color: get-color(cta);
+      box-shadow: 0 0 0 4px get-color(cta, 60%);
     }
   }
 
@@ -81,7 +85,7 @@ $header-height-mobile: 4rem;
     overflow: hidden;
     vertical-align: middle;
 
-    @media screen and(min-width: $breakpoint-md) {
+    @media screen and (min-width: $breakpoint-md) {
       width: auto;
     }
   }
@@ -105,7 +109,7 @@ $header-height-mobile: 4rem;
     margin-bottom: 0;
     color: $white;
 
-    @media all and(min-width: $breakpoint-sm) {
+    @media all and (min-width: $breakpoint-sm) {
       max-width: calc(100% - 12.5rem); // Give some padding for the logos on the left
       margin: 0;
       text-align: right;
@@ -119,7 +123,7 @@ $header-height-mobile: 4rem;
     padding: 0;
     float: right;
 
-    @media screen and(min-width: $breakpoint-md) {
+    @media screen and (min-width: $breakpoint-md) {
       text-align: right;
     }
   }
@@ -128,7 +132,7 @@ $header-height-mobile: 4rem;
     display: inline-block;
     margin: 0 $size-xs;
 
-    @media screen and(min-width: $breakpoint-sm) {
+    @media screen and (min-width: $breakpoint-sm) {
       margin: 0 $size-sm;
     }
 
@@ -142,13 +146,13 @@ $header-height-mobile: 4rem;
     .wmcads-header__main-links {
       display: none;
 
-      @media screen and(min-width: $breakpoint-md) {
+      @media screen and (min-width: $breakpoint-md) {
         display: inline-block;
       }
     }
 
     .wmcads-header__back-btn {
-      @media screen and(min-width: $breakpoint-md) {
+      @media screen and (min-width: $breakpoint-md) {
         display: none;
       }
     }
@@ -223,7 +227,7 @@ $header-height-mobile: 4rem;
 
 // mobile only mega menu styles
 @media screen and (max-width: $breakpoint-md - 1) {
-  &.wmcads-mega-menu {
+  .wmcads-mega-menu {
     padding: $size-xs 0;
     align-items: center;
 
@@ -425,7 +429,7 @@ $header-height-mobile: 4rem;
         top: 0;
         left: 0;
         height: calc(100% - #{$size-sm});
-        border-left: 1px solid get-color(text, 80);
+        border-left: 1px solid get-color(text, 80%);
       }
     }
 
@@ -635,7 +639,7 @@ $header-height-mobile: 4rem;
       flex-grow: 0;
 
       &:not(:nth-child(4n)) {
-        border-right: 1px solid get-color(text, 80);
+        border-right: 1px solid get-color(text, 80%);
       }
     }
 
@@ -795,7 +799,7 @@ $header-height-mobile: 4rem;
   display: flex;
   height: 50vh;
   min-height: 400px;
-  background-color: get-color(secondary, 80);
+  background-color: get-color(secondary, 80%);
   justify-content: center;
   align-items: center;
 }

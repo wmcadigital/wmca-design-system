@@ -29,6 +29,27 @@ const headerJs = () => {
     return menuLink;
   };
 
+  /**
+   * Hide a target div on desktop if any .wmcads-top-level-link includes "Profile"
+   * @param {string} divSelector - CSS selector for the div to hide
+   */
+  const hideDivIfProfileOnDesktop = divSelector => {
+    const links = document.querySelectorAll(divSelector);
+    links.forEach(link => {
+      if (link.textContent.trim().includes('Profile')) {
+        link.classList.add('wmcads-hide-desktop');
+      } else {
+        link.classList.remove('wmcads-hide-desktop');
+      }
+    });
+  };
+
+  // Example usage: hide a div with class .profile-target-div on desktop if Profile link exists
+  // Call on load and on resize to ensure correct behavior
+  const callHideDivIfProfile = () => hideDivIfProfileOnDesktop('.wmcads-top-level-link');
+  callHideDivIfProfile();
+  window.addEventListener('resize', callHideDivIfProfile);
+
   // takes a menu element and allows moving between focus via tabbing/arrows
   const setKeyboardNavigation = (subMenuContainer, subMenuQuery, onFirst, onLast) => {
     // array of all links in menu container
@@ -105,7 +126,6 @@ const headerJs = () => {
     // handle setting the active class on menu and list items
     const setMenuActive = (element, active = true, onCloseFocusElement) => {
       if (active) {
-        console.log(element);
         menu.classList.add('active');
         clearActiveListItems();
         // add active class to current item
@@ -147,34 +167,54 @@ const headerJs = () => {
           }
         });
 
+        const showSearch = () => {
+          mobileMenuIsOpen.search = !mobileMenuIsOpen.search;
+          if (mobileMenuIsOpen.search) {
+            mobileMenuIsOpen.menu = false;
+            headerEl.classList.remove(
+              'wmcads-header--mega-menu-open',
+              'wmcads-header--mega-menu-submenu-open'
+            );
+            document.querySelector('html').classList.remove('mobile-menu-open');
+            headerEl.classList.add('wmcads-header--search-open');
+          } else {
+            headerEl.classList.remove('wmcads-header--search-open');
+          }
+        };
+
         if (searchBtn) {
           searchBtn.addEventListener('click', () => {
-            mobileMenuIsOpen.search = !mobileMenuIsOpen.search;
-            if (mobileMenuIsOpen.search) {
-              mobileMenuIsOpen.menu = false;
-              headerEl.classList.remove(
-                'wmcads-header--mega-menu-open',
-                'wmcads-header--mega-menu-submenu-open'
-              );
-              document.querySelector('html').classList.remove('mobile-menu-open');
-              headerEl.classList.add('wmcads-header--search-open');
-            } else {
-              headerEl.classList.remove('wmcads-header--search-open');
+            showSearch();
+          });
+          searchBtn.addEventListener('keyup', event => {
+            if (event.key === 'Enter' || event.key === 32) {
+              showSearch();
             }
           });
         }
 
         // handle sub menu open/close
         topLevelMenuBtn.forEach(menuBtn => {
+          // Ensure aria-expanded is set initially
+          menuBtn.setAttribute('aria-expanded', 'false');
           const handleSubMenus = () => {
-            mobileMenuIsOpen.primary = !mobileMenuIsOpen.primary;
             const targetListItem = menuBtn.parentNode;
-            if (mobileMenuIsOpen.primary) {
-              targetListItem.classList.add('open');
-              targetListItem.querySelector('.wmcads-mega-menu__sub-menu-link').focus();
+            const isOpen = targetListItem.classList.toggle('open');
+            // Set aria-expanded on the button for mobile accordion
+            menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            // Optionally close other open menus if only one should be open at a time
+            topLevelMenuBtn.forEach(otherBtn => {
+              if (otherBtn !== menuBtn) {
+                otherBtn.parentNode.classList.remove('open');
+                otherBtn.setAttribute('aria-expanded', 'false');
+              }
+            });
+            // Focus first submenu link if opening
+            const subMenu = targetListItem.querySelector('.wmcads-mega-menu__sub-menu-link');
+            if (isOpen && subMenu) subMenu.focus();
+            if (isOpen) {
               headerEl.classList.add('wmcads-header--mega-menu-submenu-open');
             } else {
-              targetListItem.classList.remove('open');
               headerEl.classList.remove('wmcads-header--mega-menu-submenu-open');
             }
           };
@@ -190,6 +230,12 @@ const headerJs = () => {
           const handleThirdLevelMenus = () => {
             const panel = collapseToggle.nextElementSibling;
             collapseToggle.classList.toggle('open');
+            // Set aria-expanded based on open state
+            if (collapseToggle.classList.contains('open')) {
+              collapseToggle.setAttribute('aria-expanded', 'true');
+            } else {
+              collapseToggle.setAttribute('aria-expanded', 'false');
+            }
             if (panel.style.maxHeight) {
               panel.style.maxHeight = null;
             } else {
@@ -252,28 +298,33 @@ const headerJs = () => {
 
       const handleKeydown = (e, key) => {
         e.stopPropagation();
-        // if key pressed is enter, space bar or down arrow
-        if (key === 13 || key === 32 || key === 40) {
-          // enter
-          // check if link exists
-          if (key === 13) {
-            if (!topLevelLink.tagName === 'a' || !topLevelLink.getAttribute('href')) {
+        const searchInput = document.querySelector('.wmcads-search-bar__input');
+        if (searchInput !== document.activeElement) {
+          if (key === 13 || key === 32 || key === 40) {
+            // Enter, Spacebar, or Down Arrow
+            if (key === 13 || key === 32) {
+              // Enter or Spacebar
+              if (topLevelLink.tagName === 'A' && topLevelLink.getAttribute('href')) {
+                // Trigger the link's default behavior
+                topLevelLink.click();
+              } else {
+                openSubMenu(e);
+              }
+            } else {
               openSubMenu(e);
             }
-          } else {
-            openSubMenu(e);
+          } else if (key === 37) {
+            // Left Arrow
+            const prevLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'prev');
+            if (prevLink) prevLink.focus();
+          } else if (key === 39) {
+            // Right Arrow
+            const nextLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'next');
+            if (nextLink) nextLink.focus();
+          } else if (key === 27) {
+            // Escape
+            setMenuActive(topLevelListItem, false, topLevelLink);
           }
-        } else if (key === 37) {
-          // left arrow
-          const prevLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'prev');
-          if (prevLink) prevLink.focus();
-        } else if (key === 39) {
-          // right arrow
-          const nextLink = getMenuLink(topLevelLinkIndex, topLevelLinks, 'next');
-          if (nextLink) nextLink.focus();
-        } else if (key === 27) {
-          // if escape pressed
-          setMenuActive(topLevelListItem, false, topLevelLink);
         }
       };
 
@@ -284,27 +335,42 @@ const headerJs = () => {
       ).length;
 
       if (isTopLevelWithMenu) {
+        // Show the megamenu when the top level nav is rolled over (mouseover), not just on click
         topLevelLink.addEventListener('mouseover', () => {
           if (!menuDelay) {
-            // if no menuDelay is active just open the menu
             setMenuActive(topLevelListItem);
           } else {
-            // if menuDelay is active, clear all timeouts and start a new one
             clearTimeout(enterTimeOut);
             clearTimeout(leaveTimeOut);
 
             enterTimeOut = setTimeout(() => {
-              // enter timeout completed, open menu and kill delay
               menuDelay = false;
               setMenuActive(topLevelListItem);
             }, delayTime);
           }
+          // Set aria-expanded="true" on the nearest button if the link is rolled over and active
+          const button = topLevelListItem.querySelector(
+            'button, .wmcads-mega-menu__link-arrow-icon-btn'
+          );
+          if (topLevelListItem.classList.contains('active') && button) {
+            button.setAttribute('aria-expanded', 'true');
+          }
         });
+
+        topLevelLink.addEventListener('mouseout', () => {
+          // Set aria-expanded="false" on the nearest button if the link is not rolled over
+          const button = topLevelListItem.querySelector(
+            'button, .wmcads-mega-menu__link-arrow-icon-btn'
+          );
+          if (button) {
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
+
         topLevelListItem
           .querySelector('.wmcads-mega-menu__container')
           .addEventListener('mouseover', () => {
             if (menuDelay) {
-              // if container is rehovered before timeout is done, clear all timeouts kill the delay
               clearTimeout(enterTimeOut);
               clearTimeout(leaveTimeOut);
               menuDelay = false;
@@ -312,10 +378,15 @@ const headerJs = () => {
           });
         topLevelListItem.addEventListener('mouseleave', () => {
           menuDelay = true;
-          // leave timeout is active
           leaveTimeOut = setTimeout(() => {
-            // leave timeout completed, close menu
             setMenuActive(topLevelListItem, false);
+            // Set aria-expanded="false" on the nearest button when menu is closed
+            const button = topLevelListItem.querySelector(
+              'button, .wmcads-mega-menu__link-arrow-icon-btn'
+            );
+            if (button) {
+              button.setAttribute('aria-expanded', 'false');
+            }
             menuDelay = false;
           }, delayTime);
         });
@@ -375,6 +446,26 @@ const headerJs = () => {
           )
       );
     }
+
+    // open links with enter and space keys
+    document.querySelectorAll('[role="link"]').forEach(el => {
+      el.addEventListener('keydown', function handleKeydown(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault(); // Prevent scrolling on Space
+          const url = this.getAttribute('href');
+          if (url) {
+            window.location.href = url;
+          }
+        }
+      });
+
+      el.addEventListener('click', function handleClick() {
+        const url = this.getAttribute('href');
+        if (url) {
+          window.location.href = url;
+        }
+      });
+    });
   });
 };
 

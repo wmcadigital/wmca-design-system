@@ -26,6 +26,11 @@ module.exports = {
     // List of JS folders to concatenate, lint and minified to one file (DON'T LINT ASSETS AS IT WILL TAKE TOO LONG TO SCAN MINIFIED LIBS)
     minifySrc: [
       {
+        src: 'src/www/wmcads-assets.js',
+        minName: 'wmcads-assets.min.js',
+        lint: true
+      },
+      {
         src: 'src/www/wmcads-website.js',
         minName: 'wmcads-website.min.js',
         lint: true

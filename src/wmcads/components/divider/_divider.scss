@@ -4,6 +4,15 @@ hr,
   border: 0;
   background-color: get-color(primary);
 
+  &-half {
+    width: 50%;
+    margin-left: 0;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
+  }
+
   &-grey {
     background-color: get-color(brandCoolGrey);
   }
@@ -22,6 +31,26 @@ hr,
 
   &-wmblue {
     background-color: get-color(brandWmBlue);
+  }
+
+  &-wmfurnaceorange {
+    background-color: get-color(brandFurnaceOrange);
+  }
+
+  &-wmtintsbrown {
+    background-color: get-color(brandWmTintBrown);
+  }
+
+  &-wmtintsgreen {
+    background-color: get-color(brandWmTintGreen);
+  }
+
+  &-tfwmpink {
+    background-color: get-color(brandTfwmPink);
+  }
+
+  &-tfwmyellow {
+    background-color: get-color(brandTfwmYellow);
   }
 
 }
