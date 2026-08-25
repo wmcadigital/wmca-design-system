@@ -10,6 +10,7 @@ const beautifyJS = require('js-beautify');
 // Local requires
 const markdown = require('nunjucks-markdown');
 let marked; // will be dynamically imported because `marked` is an ESM-only package
+let renderMarkdown;
 const paths = require('./paths');
 const { packageJson, build } = require('./utils');
 // Check for upcoming version number in node env (will be set during release workflow)
@@ -74,7 +75,7 @@ const manageEnv = env => {
   // templates to avoid `ERR_REQUIRE_ESM` when running under CommonJS.
   // `buildingTemplates` ensures `marked` is loaded before `manageEnv` is called,
   // so here we assume `marked` is already available.
-  markdown.register(env, marked);
+  markdown.register(env, renderMarkdown);
 };
 
 // Build nunjucks templates with compiled data above
@@ -82,7 +83,18 @@ const buildingTemplates = async () => {
   // Ensure `marked` is loaded (ESM) before we attempt to configure or use it.
   if (!marked) {
     const mod = await import('marked');
-    marked = mod.default || mod;
+    marked = mod.marked || mod.default || mod;
+
+    // `nunjucks-markdown` expects a function; modern `marked` can be namespaced.
+    renderMarkdown = markdownString => {
+      if (typeof marked.parse === 'function') {
+        return marked.parse(markdownString);
+      }
+      if (typeof marked === 'function') {
+        return marked(markdownString);
+      }
+      throw new TypeError('marked renderer could not be resolved as a function');
+    };
 
     // Configure marked after import
     marked.setOptions({

@@ -274,166 +274,6 @@
 			}
 		]
 	},
-	"wmcadsBreadcrumbProps": [
-		{
-			"name": "items",
-			"type": "array",
-			"description": "<strong>Required.</strong> Array of breadcrumbs item objects. See <code class='wmcads-website-inline-code'>items</code> below.",
-			"arrayOptions": [
-				{
-					"name": "contentText",
-					"type": "string",
-					"description": "<strong>Required.</strong> Text to use within the breadcrumbs item."
-				},
-				{
-					"name": "href",
-					"type": "string",
-					"description": "Link for the breadcrumbs item. If not specified, breadcrumb link will be automatically generated from the <code class='wmcads-website-inline-code'>contentText</code> strings from the items in the array."
-				},
-				{
-					"name": "unlinkedItem",
-					"type": "boolean",
-					"description": "If set to true, breadcrumbs item is a normal list item."
-				}
-			]
-		},
-		{
-			"name": "classes",
-			"type": "string",
-			"description": "Classes to add to the breadcrumbs container."
-		},
-		{
-			"name": "label",
-			"type": "string",
-			"description": "The accessibility label for the breadcrumb component. If not provided, this will default to 'Breadcrumbs'"
-		},
-		{
-			"name": "isMobileApp",
-			"type": "boolean",
-			"description": "If true, breadcrumb will only show on devices with a screen resolution bigger than 768px"
-		}
-	],
-	"dsAccordionProps": [
-		{
-			"name": "id",
-			"type": "string",
-			"description": "<strong>Required.</strong> Must be unique. Used as an id in the HTML for the accordion as a whole, and also as a prefix for the ids of the section contents and the buttons that open them, so that those ids can be the target of aria-labelledby and aria-control attributes."
-		},
-		{
-			"name": "headingText",
-			"type": "string",
-			"description": "<strong>Required.</strong> Text content for heading line. If <code class='wmnds-website-inline-code'>headingHTML</code> is supplied, this is ignored."
-		},
-		{
-			"name": "headingHTML",
-			"type": "string",
-			"description": "<strong>Required.</strong> HTML content for heading line."
-		},
-		{
-			"name": "contentText",
-			"type": "string",
-			"description": "<strong>Required.</strong> The text content of each section, which is hidden when the section is closed. If <code class='wmnds-website-inline-code'>contentHTML</code> is supplied, this is ignored."
-		},
-		{
-			"name": "contentHTML",
-			"type": "string",
-			"description": "<strong>Required.</strong> The HTML content of each section, which is hidden when the section is closed."
-		},
-		{
-			"name": "isOpen",
-			"type": "boolean",
-			"description": "If true, accordion element will be expanded upon initial load. Defaults to <code class='wmnds-website-inline-code'>false</code>."
-		}
-	],
-	"wmcadsButtonProps": [
-		{
-			"name": "type",
-			"type": "string",
-			"description": "Type of the button. As default it is <code class='wmcads-website-inline-code'>null</code>. Available types: <code class='wmcads-website-inline-code'>link</code>, <code class='wmcads-website-inline-code'>primary</code>, <code class='wmcads-website-inline-code'>secondary</code>, <code class='wmcads-website-inline-code'>destructive</code>, <code class='wmcads-website-inline-code'>start</code>, <code class='wmcads-website-inline-code'>mode</code>, <code class='wmcads-website-inline-code'>favourite</code> "
-		},
-		{
-			"name": "contentText",
-			"type": "string",
-			"description": "<strong>Required.</strong> Specifies the content that will be part of the button. If <code class='wmcads-website-inline-code'>contentHTML</code> is supplied, this is ignored."
-		},
-		{
-			"name": "contentHTML",
-			"type": "string",
-			"description": "<strong>Required.</strong> Uses HTML to specifies what content is going to be shown in the button."
-		},
-		{
-			"name": "isActive",
-			"type": "boolean",
-			"description": "It true, button will assume active state. Defaults to <code class='wmcads-website-inline-code'>false</code>."
-		},
-		{
-			"name": "isDarkBg",
-			"type": "boolean",
-			"description": "It true, button colours will adjust to work over a dark background. Defaults to <code class='wmcads-website-inline-code'>false</code>."
-		},
-		{
-			"name": "isDisabled",
-			"type": "boolean",
-			"description": "It true, button will assume disabled state. Defaults to <code class='wmcads-website-inline-code'>false</code>."
-		},
-		{
-			"name": "isLoading",
-			"type": "boolean",
-			"description": "It true, button will assume a loading state and will show a spinner. Defaults to <code class='wmcads-website-inline-code'>false</code>."
-		},
-		{
-			"name": "classes",
-			"type": "string",
-			"description": "List of aditional classes which will be added to the button. Usually not related with the button component itself. A margin definition could be an example use case."
-		},
-		{
-			"name": "iconLeft",
-			"type": "string",
-			"description": "Name of the left icon, which will be used to import icon and place it on the left side of the button, before text. Icon names can be found on the <a href='/styles/icons/#icons' title='icons page'>icons page</a>."
-		},
-		{
-			"name": "iconRight",
-			"type": "string",
-			"description": "Name of the right icon, which will be used to import icon and place it on the right side of the button, after text. Icon names can be found on the <a href='/styles/icons/#icons' title='icons page'>icons page</a>."
-		},
-		{
-			"name": "role",
-			"type": "string",
-			"description": "Button role by default is <code class='wmcads-website-inline-code'>button</code>. Other valid values are: <code class='wmcads-website-inline-code'>submit</code> and <code class='wmcads-website-inline-code'>reset</code>."
-		}
-	],
-	"wmcadsContentCardProps": [
-		{
-			"name": "id",
-			"type": "string",
-			"description": "The id of the content card"
-		},
-		{
-			"name": "link",
-			"type": "string",
-			"description": "Specifies the link to display the content card component as a clickable navigation card."
-		},
-		{
-			"name": "linkTitle",
-			"type": "string",
-			"description": "Specifies the title of the link to display the content card component as a clickable navigation card."
-		},
-		{
-			"name": "classes",
-			"type": "string",
-			"description": "Classes to add to the content card component."
-		},
-		{
-			"name": "yellow",
-			"type": "boolean",
-			"description": "Displays the content card with a highlighted (yellow) background. Default value is <code class='wmcads-website-inline-code'>false</code>"
-		},
-		{
-			"name": "contentHTML",
-			"type": "string",
-			"description": "HTML to use within the content card."
-		}
-	],
 	"navItemsCia": [
 		{
 			"name": "Styles",
@@ -2368,6 +2208,201 @@
 		},
 		{
 			"name": "Contact us"
+		}
+	],
+	"dsAccordionProps": [
+		{
+			"name": "id",
+			"type": "string",
+			"description": "<strong>Required.</strong> Must be unique. Used as an id in the HTML for the accordion as a whole, and also as a prefix for the ids of the section contents and the buttons that open them, so that those ids can be the target of aria-labelledby and aria-control attributes."
+		},
+		{
+			"name": "headingText",
+			"type": "string",
+			"description": "<strong>Required.</strong> Text content for heading line. If <code class='wmnds-website-inline-code'>headingHTML</code> is supplied, this is ignored."
+		},
+		{
+			"name": "headingHTML",
+			"type": "string",
+			"description": "<strong>Required.</strong> HTML content for heading line."
+		},
+		{
+			"name": "contentText",
+			"type": "string",
+			"description": "<strong>Required.</strong> The text content of each section, which is hidden when the section is closed. If <code class='wmnds-website-inline-code'>contentHTML</code> is supplied, this is ignored."
+		},
+		{
+			"name": "contentHTML",
+			"type": "string",
+			"description": "<strong>Required.</strong> The HTML content of each section, which is hidden when the section is closed."
+		},
+		{
+			"name": "isOpen",
+			"type": "boolean",
+			"description": "If true, accordion element will be expanded upon initial load. Defaults to <code class='wmnds-website-inline-code'>false</code>."
+		}
+	],
+	"wmcadsButtonProps": [
+		{
+			"name": "type",
+			"type": "string",
+			"description": "Type of the button. As default it is <code class='wmcads-website-inline-code'>null</code>. Available types: <code class='wmcads-website-inline-code'>link</code>, <code class='wmcads-website-inline-code'>primary</code>, <code class='wmcads-website-inline-code'>secondary</code>, <code class='wmcads-website-inline-code'>destructive</code>, <code class='wmcads-website-inline-code'>start</code>, <code class='wmcads-website-inline-code'>mode</code>, <code class='wmcads-website-inline-code'>favourite</code> "
+		},
+		{
+			"name": "contentText",
+			"type": "string",
+			"description": "<strong>Required.</strong> Specifies the content that will be part of the button. If <code class='wmcads-website-inline-code'>contentHTML</code> is supplied, this is ignored."
+		},
+		{
+			"name": "contentHTML",
+			"type": "string",
+			"description": "<strong>Required.</strong> Uses HTML to specifies what content is going to be shown in the button."
+		},
+		{
+			"name": "isActive",
+			"type": "boolean",
+			"description": "It true, button will assume active state. Defaults to <code class='wmcads-website-inline-code'>false</code>."
+		},
+		{
+			"name": "isDarkBg",
+			"type": "boolean",
+			"description": "It true, button colours will adjust to work over a dark background. Defaults to <code class='wmcads-website-inline-code'>false</code>."
+		},
+		{
+			"name": "isDisabled",
+			"type": "boolean",
+			"description": "It true, button will assume disabled state. Defaults to <code class='wmcads-website-inline-code'>false</code>."
+		},
+		{
+			"name": "isLoading",
+			"type": "boolean",
+			"description": "It true, button will assume a loading state and will show a spinner. Defaults to <code class='wmcads-website-inline-code'>false</code>."
+		},
+		{
+			"name": "classes",
+			"type": "string",
+			"description": "List of aditional classes which will be added to the button. Usually not related with the button component itself. A margin definition could be an example use case."
+		},
+		{
+			"name": "iconLeft",
+			"type": "string",
+			"description": "Name of the left icon, which will be used to import icon and place it on the left side of the button, before text. Icon names can be found on the <a href='/styles/icons/#icons' title='icons page'>icons page</a>."
+		},
+		{
+			"name": "iconRight",
+			"type": "string",
+			"description": "Name of the right icon, which will be used to import icon and place it on the right side of the button, after text. Icon names can be found on the <a href='/styles/icons/#icons' title='icons page'>icons page</a>."
+		},
+		{
+			"name": "role",
+			"type": "string",
+			"description": "Button role by default is <code class='wmcads-website-inline-code'>button</code>. Other valid values are: <code class='wmcads-website-inline-code'>submit</code> and <code class='wmcads-website-inline-code'>reset</code>."
+		}
+	],
+	"wmcadsBreadcrumbProps": [
+		{
+			"name": "items",
+			"type": "array",
+			"description": "<strong>Required.</strong> Array of breadcrumbs item objects. See <code class='wmcads-website-inline-code'>items</code> below.",
+			"arrayOptions": [
+				{
+					"name": "contentText",
+					"type": "string",
+					"description": "<strong>Required.</strong> Text to use within the breadcrumbs item."
+				},
+				{
+					"name": "href",
+					"type": "string",
+					"description": "Link for the breadcrumbs item. If not specified, breadcrumb link will be automatically generated from the <code class='wmcads-website-inline-code'>contentText</code> strings from the items in the array."
+				},
+				{
+					"name": "unlinkedItem",
+					"type": "boolean",
+					"description": "If set to true, breadcrumbs item is a normal list item."
+				}
+			]
+		},
+		{
+			"name": "classes",
+			"type": "string",
+			"description": "Classes to add to the breadcrumbs container."
+		},
+		{
+			"name": "label",
+			"type": "string",
+			"description": "The accessibility label for the breadcrumb component. If not provided, this will default to 'Breadcrumbs'"
+		},
+		{
+			"name": "isMobileApp",
+			"type": "boolean",
+			"description": "If true, breadcrumb will only show on devices with a screen resolution bigger than 768px"
+		}
+	],
+	"wmcadsContentCardProps": [
+		{
+			"name": "id",
+			"type": "string",
+			"description": "The id of the content card"
+		},
+		{
+			"name": "link",
+			"type": "string",
+			"description": "Specifies the link to display the content card component as a clickable navigation card."
+		},
+		{
+			"name": "linkTitle",
+			"type": "string",
+			"description": "Specifies the title of the link to display the content card component as a clickable navigation card."
+		},
+		{
+			"name": "classes",
+			"type": "string",
+			"description": "Classes to add to the content card component."
+		},
+		{
+			"name": "yellow",
+			"type": "boolean",
+			"description": "Displays the content card with a highlighted (yellow) background. Default value is <code class='wmcads-website-inline-code'>false</code>"
+		},
+		{
+			"name": "isBanner",
+			"type": "boolean",
+			"description": "Displays the content card as a banner. Default value is <code class='wmcads-website-inline-code'>false</code>"
+		},
+		{
+			"name": "isNews",
+			"type": "boolean",
+			"description": "Displays the content card as a news card. Default value is <code class='wmcads-website-inline-code'>false</code>"
+		},
+		{
+			"name": "isCta",
+			"type": "boolean",
+			"description": "Displays the content card as a call to action card. Default value is <code class='wmcads-website-inline-code'>false</code>"
+		},
+		{
+			"name": "isEvent",
+			"type": "boolean",
+			"description": "Displays the content card as an event card. Default value is <code class='wmcads-website-inline-code'>false</code>"
+		},
+		{
+			"name": "isSrcDefault",
+			"type": "boolean",
+			"description": "Displays the content card with default source styling. Default value is <code class='wmcads-website-inline-code'>false</code>"
+		},
+		{
+			"name": "clickable",
+			"type": "boolean",
+			"description": "Makes the content card clickable. Default value is <code class='wmcads-website-inline-code'>false</code>"
+		},
+		{
+			"name": "variant",
+			"type": "string",
+			"description": "Additional variant class for the content card."
+		},
+		{
+			"name": "contentHTML",
+			"type": "string",
+			"description": "HTML to use within the content card."
 		}
 	],
 	"wmcadsInTextStepProps": [
