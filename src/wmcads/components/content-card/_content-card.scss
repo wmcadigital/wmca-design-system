@@ -73,6 +73,55 @@
     }
   }
 
+  // Two-column split card: image in a 1/3 column, content in a 2/3 column.
+  // Columns stack on small screens and sit side by side from md upwards.
+  // Uses @at-root so the a variant keeps specificity over the base a rule.
+  @at-root {
+    #{&}--split,
+    a#{&}--split {
+      display: flex;
+      padding-bottom: $size-lg;
+      border-bottom: 1px solid get-color(text);
+      flex-direction: column;
+
+      @media screen and (min-width: $breakpoint-md) {
+        flex-direction: row;
+      }
+
+      .wmcads-content-card__col--image {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-md) {
+          max-width: 33.3333%;
+          flex: 0 0 33.3333%;
+        }
+
+        img {
+          display: block;
+          position: static;
+          width: 100%;
+
+          object-fit: cover;
+        }
+      }
+
+      .wmcads-content-card__col--body {
+        flex: 1 1 auto;
+
+        h2,
+        h3 {
+          margin-top: 0;
+        }
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
   img {
     display: inline;
     position: relative;

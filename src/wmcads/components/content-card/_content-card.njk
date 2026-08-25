@@ -8,11 +8,27 @@
 {% set eventTitle = params.eventTitle if params.eventTitle else "Event" %} {# set eventTitle text #}
 {% set copy = params.copy if params.copy else "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %} {# set copy text #}
 {% set eventCopy = params.eventCopy if params.eventCopy else "A short sentence explaining what this is, it can be 2 lines." %} {# set copy text #}
+{% set altText = params.alt if params.alt else "content image" %} {# set image alt text #}
+{% set splitImgSrc = params.src if params.src is string else "https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png?anchor=center&mode=crop&width=480&height=357&rnd=132122595620000000" %} {# split card image src #}
 
 
 {# This macro checks if it's being called inside a {% call %} tag #}
 {# It's an easier way to pass in larger html content  #}
-<{{tag}}{{attributes | safe}} class="wmcads-content-card{{"--blue" if params.isCta else "" }} {{"wmcads-content-card--event" if params.isEvent else "" }} {{"wmcads-content-card--news" if params.isNews else "" }} {{"wmcads-css-grid-block--double" if params.isDoubleCard else "" }} ">
+<{{tag}}{{attributes | safe}} class="wmcads-content-card{{"--blue" if params.isCta else "" }} {{"wmcads-content-card--event" if params.isEvent else "" }} {{"wmcads-content-card--news" if params.isNews else "" }} {{"wmcads-content-card--split" if params.isSplit else "" }} {{"wmcads-css-grid-block--double" if params.isDoubleCard else "" }} ">
+    {% if(params.isSplit) %}
+        {# Split card: image column (1/3) + content column (2/3) #}
+        <div class="wmcads-content-card__col wmcads-content-card__col--image">
+            <img src="{{splitImgSrc}}" alt="{{altText}}">
+        </div>
+        <div class="wmcads-content-card__col wmcads-content-card__col--body wmcads-p-sm">
+            {%- if caller -%}
+                {{ caller() }}
+            {%- else -%}
+                <h3>{{title}}</h3>
+                <p>{{copy}}</p>
+            {%- endif -%}
+        </div>
+    {% else %}
     {% if(params.src) %}
         <img 
         src="https://www.wmca.org.uk/media/112jxcbb/wmca-centenary-square-77-edited.png{{"?anchor=center&mode=crop&width=920&height=300&rnd=132122595620000000" if params.isNewsFirst else "" }}{{"?anchor=center&mode=crop&width=480&height=357&rnd=132122595620000000" if params.isNewsSub else "" }}{{"?anchor=center&mode=crop&width=896&height=334&rnd=132122595620000000" if params.isSrcDefault else "" }}{{"?anchor=center&mode=crop&width=1500&height=393&rnd=132122595620000000" if params.isDoubleCard else "" }}{{"?anchor=center&mode=crop&width=600&height=334&rnd=132122595620000000" if params.isThirdCard else "" }}{{"?anchor=center&mode=crop&width=700&height=334&rnd=132122595620000000" if params.isDefault else "" }}" alt="content image">
@@ -47,6 +63,7 @@
     {%- endif -%}
     {%- endif -%}
     {%- endif -%}
+    {% endif %}
     {% endif %}
 </{{tag}}>
 {% endmacro %}
