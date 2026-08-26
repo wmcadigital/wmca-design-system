@@ -82,9 +82,10 @@
       display: flex;
       padding-bottom: $size-lg;
       border-bottom: 1px solid get-color(text);
+      background-color: transparent;
       flex-direction: column;
 
-      @media screen and (min-width: $breakpoint-md) {
+      @media screen and (min-width: 601px) {
         flex-direction: row;
       }
 
@@ -92,10 +93,12 @@
         display: flex;
         overflow: hidden;
         align-items: center;
+        order: -1;
 
-        @media screen and (min-width: $breakpoint-md) {
+        @media screen and (min-width: 601px) {
           max-width: 33.3333%;
           flex: 0 0 33.3333%;
+          order: initial;
         }
 
         img {
